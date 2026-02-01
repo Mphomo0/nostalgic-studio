@@ -48,22 +48,24 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           </div>
 
           {/* Hover content (Visible on hover for desktop, always visible on mobile/touch) */}
-          <div className="absolute inset-x-0 bottom-0 p-6 transition-all duration-300
+          <div
+            className="absolute inset-x-0 bottom-0 p-6 transition-all duration-300
             opacity-100 translate-y-0
             lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0
             bg-linear-to-t from-background/95 via-background/60 to-transparent lg:bg-none
-          ">
-            <span className="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">
+          "
+          >
+            {/* <span className="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">
               {project.category}
-            </span>
+            </span> */}
 
-            <h3 className="mt-2 mb-2 text-xl sm:text-2xl font-bold text-white leading-tight">
+            <h3 className="mt-2 mb-2 text-xl sm:text-2xl font-bold text-white leading-tight [text-shadow:0_2px_4px_rgba(0,0,0,0.6)]">
               {project.title}
             </h3>
 
-            <p className="mb-4 text-sm text-muted-foreground/80 line-clamp-2 max-w-[95%] font-medium">
+            {/* <p className="mb-4 text-sm text-muted-foreground/80 line-clamp-2 max-w-[95%] font-medium">
               {project.description}
-            </p>
+            </p> */}
           </div>
         </div>
       </Link>
