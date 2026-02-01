@@ -27,7 +27,7 @@ const CTASection = () => {
               Let&apos;s discuss how we can help bring your vision to life.
             </p>
 
-            <Button asChild variant="hero" size="xl">
+            <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
               <Link href="/contact" className="flex items-center gap-2">
                 Get a Free Quote <ArrowUpRight size={20} />
               </Link>

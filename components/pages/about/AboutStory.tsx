@@ -24,8 +24,8 @@ export default function AboutStory() {
               modern digital innovation.
             </p>
             <p>
-              Today, we've helped over 150 businesses transform their digital
-              presence. And we're just getting started.
+              Today, we&apos;ve helped over 150 businesses transform their digital
+              presence. And we&apos;re just getting started.
             </p>
           </MotionWrapper>
         </div>

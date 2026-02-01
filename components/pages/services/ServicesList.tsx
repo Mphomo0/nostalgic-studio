@@ -10,7 +10,7 @@ interface Props {
 const ServicesList = ({ services }: Props) => {
   return (
     <section className="section-padding bg-card">
-      <div className="container-wide mx-auto space-y-24">
+      <div className="container-wide mx-auto space-y-12 md:space-y-24">
         {services.map((service, index) => (
           <ServiceSection
             key={service.id}

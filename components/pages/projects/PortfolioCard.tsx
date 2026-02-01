@@ -33,7 +33,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
             alt={project.title}
             width={1200}
             height={900}
-            className="w-ful h-full object-cover transition-transform duration-700 group-hover:scale-[1.15]"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.15]"
             priority
           />
 
@@ -47,17 +47,21 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
             </div>
           </div>
 
-          {/* Hover content */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="text-primary text-xs uppercase tracking-wider">
+          {/* Hover content (Visible on hover for desktop, always visible on mobile/touch) */}
+          <div className="absolute inset-x-0 bottom-0 p-6 transition-all duration-300
+            opacity-100 translate-y-0
+            lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0
+            bg-linear-to-t from-background/95 via-background/60 to-transparent lg:bg-none
+          ">
+            <span className="text-primary text-[10px] font-bold uppercase tracking-[0.2em]">
               {project.category}
             </span>
 
-            <h3 className="mt-2 mb-2 text-2xl font-bold text-white">
+            <h3 className="mt-2 mb-2 text-xl sm:text-2xl font-bold text-white leading-tight">
               {project.title}
             </h3>
 
-            <p className="mb-4 text-sm text-muted-foreground line-clamp-2 max-w-[90%]">
+            <p className="mb-4 text-sm text-muted-foreground/80 line-clamp-2 max-w-[95%] font-medium">
               {project.description}
             </p>
           </div>

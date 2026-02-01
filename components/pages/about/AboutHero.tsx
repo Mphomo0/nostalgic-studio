@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 
 export default function AboutHero() {
   return (
-    <section className="pb-20 px-4 md:px-8">
+    <section className="pb-12 md:pb-20 px-4 md:px-8">
       <div className="container-wide mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
@@ -26,7 +26,7 @@ export default function AboutHero() {
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              We're <span className="text-gradient">Nostalgic Studio</span>
+              We&apos;re <span className="text-gradient">Nostalgic Studio</span>
             </motion.h1>
 
             <motion.p
@@ -45,7 +45,7 @@ export default function AboutHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Button asChild variant="hero" size="lg">
+              <Button asChild variant="hero" size="lg" className="w-full sm:w-auto">
                 <Link href="/contact" className="flex items-center gap-2">
                   Work With Us <ArrowRight size={18} />
                 </Link>

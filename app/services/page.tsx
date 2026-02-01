@@ -6,7 +6,7 @@ import { services, process } from '@/components/pages/services/data'
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
-      <main className="pt-32">
+      <main className="pt-24 md:pt-32">
         <ServicesList services={services} />
         <ProcessSection steps={process} />
         <CTASection />

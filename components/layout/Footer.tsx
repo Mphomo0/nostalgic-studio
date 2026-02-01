@@ -120,7 +120,7 @@ const Footer = () => {
               Start a Project
             </h4>
             <p className="text-muted-foreground text-sm mb-6">
-              Ready to bring your vision to life? Let's create something amazing
+              Ready to bring your vision to life? Let&apos;s create something amazing
               together.
             </p>
             <Link

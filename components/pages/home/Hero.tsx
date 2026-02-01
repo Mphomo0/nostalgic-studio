@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center overflow-hidden pt-24 pb-12 md:pt-20 md:min-h-screen">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.7_0.25_145/0.08)_0%,transparent_70%)]" />
       <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
@@ -64,13 +64,13 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button asChild variant="hero" size="xl">
+            <Button asChild variant="hero" size="lg" className="w-full sm:w-auto md:h-14 md:px-8">
               <Link href="/contact" className="flex items-center gap-2">
                 Start a Project <ArrowRight size={20} />
               </Link>
             </Button>
 
-            <Button asChild variant="heroOutline" size="xl">
+            <Button asChild variant="heroOutline" size="lg" className="w-full sm:w-auto md:h-14 md:px-8">
               <Link href="/portfolio">View Our Work</Link>
             </Button>
           </motion.div>
@@ -80,7 +80,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12"
+            className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12"
           >
             {[
               { value: '150+', label: 'Projects Delivered' },
@@ -89,10 +89,10 @@ export default function Hero() {
               { value: '25+', label: 'Team Members' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold mb-2">
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-xs md:text-sm text-muted-foreground">
                   {stat.label}
                 </div>
               </div>

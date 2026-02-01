@@ -48,7 +48,7 @@ const socialLinks = [
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 md:space-y-6">
       {infoItems.map((info, index) => (
         <motion.a
           key={info.title}

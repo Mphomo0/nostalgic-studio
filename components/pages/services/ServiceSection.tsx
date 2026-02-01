@@ -43,7 +43,7 @@ const ServiceSection = ({ service, reverse }: Props) => {
           {service.description}
         </p>
 
-        <ul className="grid grid-cols-2 gap-3 mb-8">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
           {service.features.map((feature) => (
             <li key={feature} className="flex items-center gap-2">
               <Check className="w-5 h-5 text-primary" />
@@ -52,7 +52,7 @@ const ServiceSection = ({ service, reverse }: Props) => {
           ))}
         </ul>
 
-        <Button asChild size="lg">
+        <Button asChild size="lg" className="w-full sm:w-auto">
           <Link href="/contact" className="flex items-center gap-2">
             Get Started <ArrowRight size={18} />
           </Link>

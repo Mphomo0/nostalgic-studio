@@ -36,14 +36,14 @@ export default function CTA() {
               asChild
               variant="hero"
               size="xl"
-              className="animate-pulse-glow"
+              className="animate-pulse-glow w-full sm:w-auto"
             >
               <Link href="/contact" className="flex items-center gap-2">
                 Start Your Project <ArrowRight size={20} />
               </Link>
             </Button>
 
-            <Button asChild variant="heroOutline" size="xl">
+            <Button asChild variant="heroOutline" size="xl" className="w-full sm:w-auto">
               <Link href="/projects">View Our Work</Link>
             </Button>
           </div>

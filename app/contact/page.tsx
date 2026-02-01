@@ -4,8 +4,8 @@ import ContactInfo from '@/components/pages/contact/ContactInfo'
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
-      <main className="pt-32 pb-20 container mx-auto px-4 md:px-8">
-        <header className="text-center mb-16">
+      <main className="pt-24 pb-12 md:pt-32 md:pb-20 container mx-auto px-4 md:px-8">
+        <header className="text-center mb-10 md:mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-tighter mb-4 block">
             Get In Touch
           </span>
@@ -18,7 +18,7 @@ export default function ContactPage() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
           <div className="lg:col-span-1">
             <ContactInfo />
           </div>

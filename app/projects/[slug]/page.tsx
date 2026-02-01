@@ -21,9 +21,8 @@ export default async function ProjectDetailPage({
   }
 
   return (
-    <div className="min-w-lvh bg-background">
+    <div className="min-h-screen bg-background">
       <ProjectHero slug={slug} />
-      {/* <ProjectInfo project={project} /> */}
       <ProjectCTA />
     </div>
   )

@@ -22,15 +22,15 @@ export default function PortfolioGrid() {
       : projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section className="pt-20 pb-20">
+    <section className="pb-12 md:pb-20">
       <div className="container-wide mx-auto px-4 md:px-8">
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 md:mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+              className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
                 activeCategory === category
                   ? 'bg-primary text-primary-foreground shadow-[0_0_20px_hsl(122_85%_50%/0.3)]'
                   : 'bg-secondary hover:bg-secondary/80'

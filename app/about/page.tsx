@@ -8,7 +8,7 @@ import Testimonials from '@/components/pages/home/Testimonials'
 export default function page() {
   return (
     <div className="min-h-screen bg-background">
-      <main className="pt-32">
+      <main className="pt-24 md:pt-32">
         <AboutHero />
         <AboutStory />
         <AboutValues />

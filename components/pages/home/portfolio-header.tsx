@@ -34,7 +34,7 @@ export function PortfolioHeader() {
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
       >
-        <Button variant="outline" size="lg" asChild>
+        <Button variant="outline" size="lg" asChild className="w-full md:w-auto">
           <Link href="/portfolio">View All Projects</Link>
         </Button>
       </motion.div>

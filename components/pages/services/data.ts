@@ -12,7 +12,7 @@ export const services: Service[] = [
       'Mobile-first approach',
       'SEO optimization',
       'Performance focused',
-      'CMS integration',
+      'API integration',
       'Analytics setup',
     ],
     image:
