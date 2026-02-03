@@ -53,17 +53,16 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: 'SaaS Platform',
+    title: 'Jiyology New Website',
     category: 'Web Design',
-    client: 'CollabWork',
-    timeline: '4 months',
-    role: 'Lead Designer',
+    client: 'Jiyology Building & Construction',
+    timeline: '1 week',
+    role: 'Web Developer',
     description:
-      'Enterprise project management platform with real-time collaboration.',
-    image:
-      'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1600&h=900&fit=crop',
-    liveUrl: '#',
-    slug: 'saas-platform',
+      'Jiyology is a South African building construction and plumbing company, founded by Vusi and Lerato Jiya, that offers professional services like roofing, plumbing, tiling, painting and home renovations with a focus on quality workmanship and customer care.',
+    image: '/images/projects/jiyology.webp',
+    liveUrl: 'www.jiyology.co.za',
+    slug: 'jiyology-website',
   },
   {
     id: 5,
@@ -90,31 +89,5 @@ export const projects: Project[] = [
     image: '/images/projects/bidco.webp',
     liveUrl: '#',
     slug: 'bidco-trucks',
-  },
-  {
-    id: 7,
-    title: 'Social Media Campaign',
-    category: 'Digital Design',
-    client: 'TechStart',
-    timeline: '4 weeks',
-    role: 'Visual Designer',
-    description: 'Visual campaign assets for a tech product launch.',
-    image:
-      'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1600&h=900&fit=crop',
-    liveUrl: '#',
-    slug: 'social-campaign',
-  },
-  {
-    id: 8,
-    title: 'EdTech Platform',
-    category: 'Web Design',
-    client: 'LearnLogic',
-    timeline: '6 months',
-    role: 'UX Researcher',
-    description: 'Learning management system with gamification elements.',
-    image:
-      'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=1600&h=900&fit=crop',
-    liveUrl: '#',
-    slug: 'edtech-platform',
   },
 ]

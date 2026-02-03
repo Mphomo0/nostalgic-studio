@@ -64,13 +64,23 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button asChild variant="hero" size="lg" className="w-full sm:w-auto md:h-14 md:px-8">
+            <Button
+              asChild
+              variant="hero"
+              size="lg"
+              className="w-full sm:w-auto md:h-14 md:px-8"
+            >
               <Link href="/contact" className="flex items-center gap-2">
                 Start a Project <ArrowRight size={20} />
               </Link>
             </Button>
 
-            <Button asChild variant="heroOutline" size="lg" className="w-full sm:w-auto md:h-14 md:px-8">
+            <Button
+              asChild
+              variant="heroOutline"
+              size="lg"
+              className="w-full sm:w-auto md:h-14 md:px-8"
+            >
               <Link href="/portfolio">View Our Work</Link>
             </Button>
           </motion.div>
@@ -83,10 +93,10 @@ export default function Hero() {
             className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12"
           >
             {[
-              { value: '150+', label: 'Projects Delivered' },
+              { value: '70+', label: 'Projects Delivered' },
               { value: '50+', label: 'Happy Clients' },
-              { value: '8+', label: 'Years Experience' },
-              { value: '25+', label: 'Team Members' },
+              { value: '13+', label: 'Years Experience' },
+              { value: '3+', label: 'Team Members' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">

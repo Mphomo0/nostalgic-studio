@@ -15,8 +15,7 @@ export const services: Service[] = [
       'API integration',
       'Analytics setup',
     ],
-    image:
-      'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
+    image: '/images/web-design.png',
   },
   {
     id: 'ui-ux',
@@ -32,8 +31,7 @@ export const services: Service[] = [
       'Mobile app design',
       'Design handoff',
     ],
-    image:
-      'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+    image: '/images/ui-ux-design.png',
   },
   {
     id: 'branding',
@@ -49,8 +47,7 @@ export const services: Service[] = [
       'Marketing collateral',
       'Brand positioning',
     ],
-    image:
-      'https://images.unsplash.com/photo-1634942537034-2531766767d1?w=600&h=400&fit=crop',
+    image: '/images/branding.png',
   },
   {
     id: 'digital',
@@ -64,10 +61,9 @@ export const services: Service[] = [
       'Presentation design',
       'Digital ads',
       'Infographics',
-      'Motion graphics',
+      'Banner design',
     ],
-    image:
-      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop',
+    image: '/images/digital-design.png',
   },
 ]
 

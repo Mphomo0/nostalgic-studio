@@ -105,9 +105,10 @@ export default function ContactForm() {
               <SelectValue placeholder="Select a range" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="5k-10k">$5k - $10k</SelectItem>
-              <SelectItem value="10k-25k">$10k - $25k</SelectItem>
-              <SelectItem value="25k+">$25k+</SelectItem>
+              <SelectItem value="3k-5k">R3k - R5k</SelectItem>
+              <SelectItem value="5k-10k">R5k - R10k</SelectItem>
+              <SelectItem value="10k-20k">R10k - R20k</SelectItem>
+              <SelectItem value="20k+">R20k+</SelectItem>
             </SelectContent>
           </Select>
         </div>
