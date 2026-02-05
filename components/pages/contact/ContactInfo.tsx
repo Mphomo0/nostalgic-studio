@@ -17,8 +17,8 @@ const infoItems = [
   {
     icon: Phone,
     title: 'Call Us',
-    value: '079 367 6883',
-    link: 'tel:+27793676883',
+    value: '082 448 3273',
+    link: 'tel:+27824483273',
   },
   {
     icon: MapPin,
