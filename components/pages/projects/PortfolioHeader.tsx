@@ -4,7 +4,10 @@ import { motion } from 'motion/react'
 
 export default function PortfolioHeader() {
   return (
-    <section className="pt-24 pb-12 md:pt-32 md:pb-16">
+    <section
+      className="pt-24 pb-12 md:pt-32 md:pb-16"
+      aria-label="Portfolio header section showcasing featured projects of Nostalgic Studio"
+    >
       <div className="container-wide mx-auto px-4 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

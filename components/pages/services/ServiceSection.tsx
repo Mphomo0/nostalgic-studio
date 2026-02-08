@@ -1,9 +1,7 @@
 'use client'
 
 import { motion } from 'motion/react'
-import Link from 'next/link'
-import { ArrowRight, Check, Layout, Sparkles, Palette, Monitor } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Check, Layout, Sparkles, Palette, Monitor } from 'lucide-react'
 import { Service } from './types'
 
 interface Props {
@@ -51,12 +49,6 @@ const ServiceSection = ({ service, reverse }: Props) => {
             </li>
           ))}
         </ul>
-
-        <Button asChild size="lg" className="w-full sm:w-auto">
-          <Link href="/contact" className="flex items-center gap-2">
-            Get Started <ArrowRight size={18} />
-          </Link>
-        </Button>
       </div>
 
       {/* Image */}

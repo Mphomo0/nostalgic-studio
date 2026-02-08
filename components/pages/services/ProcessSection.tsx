@@ -9,7 +9,10 @@ interface Props {
 
 const ProcessSection = ({ steps }: Props) => {
   return (
-    <section className="section-padding">
+    <section
+      className="section-padding"
+      aria-label="Step-by-step process of how Nostalgic Studio works"
+    >
       <div className="container-wide mx-auto">
         <div className="text-center mb-16">
           <motion.span
@@ -31,9 +34,9 @@ const ProcessSection = ({ steps }: Props) => {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <motion.div
+            <motion.li
               key={step.step}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -41,14 +44,17 @@ const ProcessSection = ({ steps }: Props) => {
               transition={{ delay: index * 0.1 }}
               className="relative"
             >
-              <div className="text-6xl font-bold text-primary/20 mb-4">
+              <div
+                className="text-6xl font-bold text-primary/20 mb-4"
+                aria-hidden="true"
+              >
                 {step.step}
               </div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-muted-foreground">{step.description}</p>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )

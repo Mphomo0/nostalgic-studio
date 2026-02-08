@@ -16,16 +16,23 @@ export default function AboutStory() {
             className="space-y-6 text-xl text-muted-foreground"
           >
             <p>
-              Founded in 2016, Nostalgic Studio began with a simple belief:
-              great design should be accessible to businesses of all sizes.
+              Founded in 2016 and based in Johannesburg, South Africa, Nostalgic
+              Studio started with a simple belief: exceptional digital design
+              should be accessible to startups and growing businesses.
             </p>
+
             <p>
-              Our name reflects our approach—combining timeless principles with
-              modern digital innovation.
+              Our name reflects our philosophy—blending timeless design
+              principles with modern digital innovation to create websites,
+              UI/UX, branding, and other digital products that help businesses
+              succeed online.
             </p>
+
             <p>
-              Today, we&apos;ve helped over 150 businesses transform their digital
-              presence. And we&apos;re just getting started.
+              Since our founding, we have partnered with over 50+ businesses,
+              helping them craft memorable brands, user-friendly websites, and
+              engaging digital experiences. Today, we continue to serve clients
+              locally and worldwide.
             </p>
           </MotionWrapper>
         </div>

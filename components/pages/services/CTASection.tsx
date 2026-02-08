@@ -7,7 +7,10 @@ import { Button } from '@/components/ui/button'
 
 const CTASection = () => {
   return (
-    <section className="section-padding bg-card">
+    <section
+      className="section-padding bg-card"
+      aria-label="Call to action section to get a free quote from Nostalgic Studio"
+    >
       <div className="container-wide mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,8 +30,17 @@ const CTASection = () => {
               Let&apos;s discuss how we can help bring your vision to life.
             </p>
 
-            <Button asChild variant="hero" size="xl" className="w-full sm:w-auto">
-              <Link href="/contact" className="flex items-center gap-2">
+            <Button
+              asChild
+              variant="hero"
+              size="xl"
+              className="w-full sm:w-auto"
+            >
+              <Link
+                href="/contact"
+                className="flex items-center gap-2"
+                aria-label="Get a free quote from Nostalgic Studio"
+              >
                 Get a Free Quote <ArrowUpRight size={20} />
               </Link>
             </Button>

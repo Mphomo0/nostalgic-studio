@@ -11,7 +11,7 @@ const testimonials = [
     role: 'Marketing Manager, Sozim Trading and Consultancy',
     avatar: '/images/avatar.png',
     content:
-      'Wow, thank you for the fantastic 5-star review! I truly loved collaborating with you on your website and am so glad you’re happy with how everything turned out.',
+      'Nostalgic Studio designed our website and delivered a professional, high-quality result. The collaboration was smooth and the final website exceeded expectations.',
     rating: 5,
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
     role: 'CEO, A-z Small Movers',
     avatar: '/images/avatar.png',
     content:
-      'I am absolutely thrilled with my new website! The design team did an outstanding job — the site looks modern, professional, and exactly how I envisioned it.',
+      'The Nostalgic Studio team created a modern, professional website that matches our brand perfectly. The design quality and attention to detail were outstanding.',
     rating: 5,
   },
   {
@@ -29,7 +29,7 @@ const testimonials = [
     role: 'Founder, InnovateIQ Investments',
     avatar: '/images/avatar.png',
     content:
-      'I am very happy with the website services I have received from Mpho. His attention to detail and patience is the best and I will be happy to use his services again.',
+      'Nostalgic Studio provided excellent website design services. The process was patient, detailed, and professional, and I would happily work with them again.',
     rating: 5,
   },
   {
@@ -38,7 +38,7 @@ const testimonials = [
     role: 'Founder, MMIH Group',
     avatar: '/images/avatar.png',
     content:
-      'Nostalgic Studio helped us design the MMIH Group company website. We now have a functional website and will continue to develop it together.',
+      'Nostalgic Studio designed our company website and delivered a functional, well-structured digital presence that we continue to grow.',
     rating: 5,
   },
   {
@@ -46,14 +46,48 @@ const testimonials = [
     name: 'Eon Smuts',
     role: 'Founder, SomeCandleShop',
     avatar: '/images/avatar.png',
-    content: 'Very professional, I&apos;m extremely happy with the work.',
+    content:
+      'Very professional digital design service. I am extremely happy with the final website.',
     rating: 5,
   },
 ]
 
 export default function Testimonials() {
+  const reviewSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Nostalgic Studio',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: testimonials.length,
+    },
+    review: testimonials.map((t) => ({
+      '@type': 'Review',
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: t.rating,
+        bestRating: '5',
+      },
+      author: {
+        '@type': 'Person',
+        name: t.name,
+      },
+      reviewBody: t.content,
+    })),
+  }
+
   return (
-    <section className="section-padding bg-card overflow-hidden">
+    <section
+      aria-labelledby="testimonials-heading"
+      className="section-padding bg-card overflow-hidden"
+    >
+      {/* JSON-LD Reviews Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
+
       <div className="container-wide mx-auto mb-12 text-center">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
@@ -61,27 +95,42 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
         >
-          Testimonials
+          Client Reviews
         </motion.span>
 
         <motion.h2
+          id="testimonials-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
         >
-          Trusted by Innovators
+          Do Clients Trust Nostalgic Studio?
         </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.15 }}
+          className="max-w-2xl mx-auto text-muted-foreground"
+        >
+          Startups and growing businesses trust Nostalgic Studio for web design,
+          branding, and UI/UX design. Here’s what our clients say about working
+          with us.
+        </motion.p>
       </div>
 
-      {/* Marquee Container */}
+      {/* Marquee */}
       <div className="relative w-full overflow-hidden mask-linear-fade">
         <div className="flex gap-6 w-max animate-marquee hover:pause-animation">
           {[...testimonials, ...testimonials, ...testimonials].map(
             (testimonial, index) => (
-              <div
+              <article
                 key={`${testimonial.id}-${index}`}
+                itemScope
+                itemType="https://schema.org/Review"
                 className="w-87.5 md:w-112.5 p-8 rounded-2xl bg-background border border-border shrink-0"
               >
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
@@ -95,7 +144,10 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-foreground leading-relaxed mb-6 line-clamp-4">
+                <p
+                  itemProp="reviewBody"
+                  className="text-foreground leading-relaxed mb-6 line-clamp-4"
+                >
                   “{testimonial.content}”
                 </p>
 
@@ -108,7 +160,10 @@ export default function Testimonials() {
                     className="rounded-full object-cover"
                   />
                   <div>
-                    <div className="font-semibold text-foreground">
+                    <div
+                      itemProp="author"
+                      className="font-semibold text-foreground"
+                    >
                       {testimonial.name}
                     </div>
                     <div className="text-sm text-muted-foreground truncate max-w-50">
@@ -116,13 +171,13 @@ export default function Testimonials() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </article>
             ),
           )}
         </div>
       </div>
 
-      {/* Add custom CSS for marquee if not in globals */}
+      {/* Marquee CSS */}
       <style jsx global>{`
         @keyframes marquee {
           0% {

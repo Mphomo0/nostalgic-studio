@@ -7,7 +7,10 @@ import { Button } from '@/components/ui/button'
 
 export default function AboutHero() {
   return (
-    <section className="pb-12 md:pb-20 px-4 md:px-8">
+    <section
+      aria-labelledby="about-heading"
+      className="pb-12 md:pb-20 px-4 md:px-8"
+    >
       <div className="container-wide mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
@@ -17,16 +20,17 @@ export default function AboutHero() {
               animate={{ opacity: 1, y: 0 }}
               className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
             >
-              About Us
+              About Nostalgic Studio
             </motion.span>
 
             <motion.h1
+              id="about-heading"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              We&apos;re <span className="text-gradient">Nostalgic Studio</span>
+              What Is <span className="text-gradient">Nostalgic Studio?</span>
             </motion.h1>
 
             <motion.p
@@ -35,9 +39,10 @@ export default function AboutHero() {
               transition={{ delay: 0.2 }}
               className="text-muted-foreground text-lg mb-8"
             >
-              A digital design agency helping startups and businesses create
-              memorable experiences. We blend creativity with strategy to build
-              brands that stand out and convert.
+              Nostalgic Studio is a digital design agency based in South Africa
+              that helps startups and growing businesses design websites, build
+              strong brand identities, and create user-focused digital products
+              through web design, UI/UX design, and branding services.
             </motion.p>
 
             <motion.div
@@ -45,7 +50,12 @@ export default function AboutHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Button asChild variant="hero" size="lg" className="w-full sm:w-auto">
+              <Button
+                asChild
+                variant="hero"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
                 <Link href="/contact" className="flex items-center gap-2">
                   Work With Us <ArrowRight size={18} />
                 </Link>
@@ -63,7 +73,7 @@ export default function AboutHero() {
             <div className="aspect-square rounded-3xl overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
-                alt="Nostalgic Studio Team"
+                alt="Nostalgic Studio digital design team collaborating on a project"
                 className="w-full h-full object-cover"
               />
             </div>

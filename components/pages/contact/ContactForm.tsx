@@ -39,12 +39,17 @@ export default function ContactForm() {
 
   async function onSubmit(data: ContactFormValues) {
     try {
+      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1500))
-      console.log(data)
+      console.log('ContactForm submission:', data)
       setIsSubmitted(true)
-      toast.success('Message sent successfully!')
+      toast.success(
+        'Your message was sent! Nostalgic Studio will respond within 24 hours.',
+      )
     } catch {
-      toast.error('Something went wrong. Please try again.')
+      toast.error(
+        'Unable to send message. Please try again or email hello@nostalgicstudio.com',
+      )
     }
   }
 
@@ -52,12 +57,14 @@ export default function ContactForm() {
     return (
       <div className="text-center py-12">
         <CheckCircle className="w-16 h-16 text-primary mx-auto mb-6" />
-        <h3 className="text-2xl font-bold mb-3">Thank You!</h3>
+        <h3 className="text-2xl font-bold mb-3">Thank You for Reaching Out!</h3>
         <p className="text-muted-foreground mb-6">
-          We&apos;ll get back to you within 24 hours.
+          Nostalgic Studio will review your project and respond within 24 hours.
+          If you have urgent inquiries, email us at{' '}
+          <strong>hello@nostalgicstudio.com</strong>.
         </p>
         <Button onClick={() => setIsSubmitted(false)} variant="outline">
-          Send Another Message
+          Submit Another Project Request
         </Button>
       </div>
     )
@@ -71,38 +78,54 @@ export default function ContactForm() {
       transition={{ delay: 0.2 }}
       onSubmit={handleSubmit(onSubmit)}
       className="space-y-6 p-8 md:p-10 rounded-3xl bg-card border border-border"
+      aria-label="Contact Nostalgic Studio form"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium mb-2">Your Name *</label>
-          <Input placeholder="John Doe" {...register('name')} />
+          <label htmlFor="name" className="block text-sm font-medium mb-2">
+            Your Name *
+          </label>
+          <Input
+            id="name"
+            placeholder="John Doe"
+            {...register('name')}
+            aria-required="true"
+          />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label htmlFor="email" className="block text-sm font-medium mb-2">
             Email Address *
           </label>
           <Input
+            id="email"
             type="email"
             placeholder="john@company.com"
             {...register('email')}
+            aria-required="true"
           />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-medium mb-2">Company Name</label>
-          <Input placeholder="Your Company" {...register('company')} />
+          <label htmlFor="company" className="block text-sm font-medium mb-2">
+            Company Name
+          </label>
+          <Input
+            id="company"
+            placeholder="Your Company"
+            {...register('company')}
+          />
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label htmlFor="budget" className="block text-sm font-medium mb-2">
             Project Budget
           </label>
           <Select onValueChange={(value) => setValue('budget', value)}>
-            <SelectTrigger>
-              <SelectValue placeholder="Select a range" />
+            <SelectTrigger id="budget">
+              <SelectValue placeholder="Select a budget range" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="3k-5k">R3k - R5k</SelectItem>
@@ -115,13 +138,15 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">
-          Tell Us About Your Project *
+        <label htmlFor="message" className="block text-sm font-medium mb-2">
+          Describe Your Project *
         </label>
         <Textarea
+          id="message"
           rows={6}
-          placeholder="Describe your project..."
+          placeholder="Tell us what you want to build..."
           {...register('message')}
+          aria-required="true"
         />
       </div>
 
@@ -134,10 +159,15 @@ export default function ContactForm() {
         ) : (
           <>
             <Send className="mr-2 h-4 w-4" />
-            Send Message
+            Send Project Request
           </>
         )}
       </Button>
+
+      <p className="mt-2 text-sm text-muted-foreground max-w-md text-center mx-auto">
+        By submitting this form, you agree to have Nostalgic Studio contact you
+        regarding your project.
+      </p>
     </motion.form>
   )
 }

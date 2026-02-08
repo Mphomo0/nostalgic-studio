@@ -32,23 +32,28 @@ const socialLinks = [
   {
     icon: FacebookIcon,
     href: 'https://www.facebook.com/webengineers',
-    label: 'facebook',
+    label: 'Facebook page of Nostalgic Studio',
   },
   {
     icon: LinkedinIcon,
     href: 'https://www.linkedin.com/company/110356396/',
-    label: 'LinkedIn',
+    label: 'LinkedIn profile of Nostalgic Studio',
   },
   {
     icon: InstagramIcon,
     href: 'https://www.instagram.com/studionostalgic',
-    label: 'Instagram',
+    label: 'Instagram profile of Nostalgic Studio',
   },
 ]
 
 export default function ContactInfo() {
   return (
-    <div className="space-y-4 md:space-y-6">
+    <section
+      aria-label="Contact information of Nostalgic Studio"
+      className="space-y-4 md:space-y-6"
+    >
+      <h2 className="sr-only">Contact Nostalgic Studio</h2>
+
       {infoItems.map((info, index) => (
         <motion.a
           key={info.title}
@@ -57,11 +62,12 @@ export default function ContactInfo() {
           viewport={{ once: true }}
           transition={{ delay: index * 0.1 }}
           href={info.link}
+          aria-label={info.title}
           className="block p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all group"
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <info.icon className="w-5 h-5 text-primary" />
+              <info.icon className="w-5 h-5 text-primary" aria-hidden="true" />
             </div>
             <div>
               <h3 className="font-semibold text-foreground">{info.title}</h3>
@@ -77,23 +83,25 @@ export default function ContactInfo() {
         viewport={{ once: true }}
         transition={{ delay: 0.3 }}
         className="p-6 rounded-2xl bg-card border border-border"
+        aria-label="Social media links for Nostalgic Studio"
       >
         <h3 className="font-semibold mb-4">Follow Us</h3>
-        <div className="flex gap-3">
+        <ul className="flex gap-3">
           {socialLinks.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all"
-            >
-              <social.icon size={18} />
-            </a>
+            <li key={social.label}>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all"
+              >
+                <social.icon size={18} aria-hidden="true" />
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </motion.div>
-    </div>
+    </section>
   )
 }

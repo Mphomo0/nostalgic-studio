@@ -70,7 +70,7 @@ const Footer = () => {
                   key={social.label}
                   href={social.href}
                   target="_blank"
-          rel="noopener noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                   className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                 >
@@ -120,8 +120,8 @@ const Footer = () => {
               Start a Project
             </h4>
             <p className="text-muted-foreground text-sm mb-6">
-              Ready to bring your vision to life? Let&apos;s create something amazing
-              together.
+              Ready to bring your vision to life? Let&apos;s create something
+              amazing together.
             </p>
             <Link
               href="/contact"
@@ -145,7 +145,7 @@ const Footer = () => {
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              href="/terms-conditions"
               className="text-muted-foreground hover:text-foreground text-sm transition-colors"
             >
               Terms of Service
