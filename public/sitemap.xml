@@ -30,6 +30,20 @@
     <priority>0.6</priority>
     <lastmod>2024-02-06</lastmod>
   </url>
+  
+  <url>
+    <loc>https://nostalgic-studio.co.za/terms-conditions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+  <url>
+    <loc>https://nostalgic-studio.co.za/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <lastmod>2026-02-09</lastmod>
+  </url>
+
   <url>
     <loc>https://nostalgic-studio.co.za/projects/sozim-consultancy</loc>
     <changefreq>never</changefreq>

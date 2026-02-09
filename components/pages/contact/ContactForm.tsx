@@ -17,6 +17,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { toast } from 'react-toastify'
+import { sendContactEmail } from '@/app/actions/sendEmail'
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -39,16 +40,18 @@ export default function ContactForm() {
 
   async function onSubmit(data: ContactFormValues) {
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500))
-      console.log('ContactForm submission:', data)
-      setIsSubmitted(true)
-      toast.success(
-        'Your message was sent! Nostalgic Studio will respond within 24 hours.',
-      )
+      // Call the Server Action
+      const response = await sendContactEmail(data)
+
+      if (response.success) {
+        setIsSubmitted(true)
+        toast.success(
+          'Your message was sent! Nostalgic Studio will respond within 24 hours.',
+        )
+      }
     } catch {
       toast.error(
-        'Unable to send message. Please try again or email hello@nostalgicstudio.com',
+        'Unable to send message. Please try again or email info@nostalgic-studio.co.za',
       )
     }
   }
@@ -61,7 +64,7 @@ export default function ContactForm() {
         <p className="text-muted-foreground mb-6">
           Nostalgic Studio will review your project and respond within 24 hours.
           If you have urgent inquiries, email us at{' '}
-          <strong>hello@nostalgicstudio.com</strong>.
+          <strong>info@nostalgic-studio.co.za</strong>.
         </p>
         <Button onClick={() => setIsSubmitted(false)} variant="outline">
           Submit Another Project Request
