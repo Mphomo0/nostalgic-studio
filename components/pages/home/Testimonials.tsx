@@ -64,6 +64,10 @@ export default function Testimonials() {
     },
     review: testimonials.map((t) => ({
       '@type': 'Review',
+      itemReviewed: {
+        '@type': 'Organization',
+        name: 'Nostalgic Studio',
+      },
       reviewRating: {
         '@type': 'Rating',
         ratingValue: t.rating,
@@ -133,9 +137,12 @@ export default function Testimonials() {
                 itemType="https://schema.org/Review"
                 className="w-87.5 md:w-112.5 p-8 rounded-2xl bg-background border border-border shrink-0"
               >
+                <meta itemProp="itemReviewed" content="Nostalgic Studio" />
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
 
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-4" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
+                  <meta itemProp="ratingValue" content={testimonial.rating.toString()} />
+                  <meta itemProp="bestRating" content="5" />
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
                       key={i}
@@ -159,14 +166,14 @@ export default function Testimonials() {
                     height={48}
                     className="rounded-full object-cover"
                   />
-                  <div>
+                  <div itemScope itemType="https://schema.org/Person" itemProp="author">
                     <div
-                      itemProp="author"
+                      itemProp="name"
                       className="font-semibold text-foreground"
                     >
                       {testimonial.name}
                     </div>
-                    <div className="text-sm text-muted-foreground truncate max-w-50">
+                    <div itemProp="jobTitle" className="text-sm text-muted-foreground truncate max-w-50">
                       {testimonial.role}
                     </div>
                   </div>
