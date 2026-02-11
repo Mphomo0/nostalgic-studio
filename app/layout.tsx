@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono, Inter } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -33,7 +34,8 @@ export const metadata: Metadata = {
     default: 'Nostalgic Studio | Digital Design Agency for Startups',
     template: '%s | Nostalgic Studio',
   },
-  description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses. Web design, UI/UX, and branding services.',
+  description:
+    'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses. Web design, UI/UX, and branding services.',
   keywords: [
     'digital design agency',
     'web design company',
@@ -45,8 +47,11 @@ export const metadata: Metadata = {
     'South Africa web design',
     'Johannesburg design agency',
     'creative studio',
+    'local business web design',
   ],
-  authors: [{ name: 'Mpho Moipolai', url: 'https://nostalgic-studio.co.za/about' }],
+  authors: [
+    { name: 'Mpho Moipolai', url: 'https://nostalgic-studio.co.za/about' },
+  ],
   creator: 'Nostalgic Studio',
   publisher: 'Nostalgic Studio',
   robots: {
@@ -66,7 +71,8 @@ export const metadata: Metadata = {
     url: 'https://nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
     title: 'Nostalgic Studio | Digital Design Agency for Startups',
-    description: 'Crafting stunning websites, brands, and digital products for startups and growing businesses.',
+    description:
+      'Crafting stunning websites, brands, and digital products for startups and growing businesses.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -79,7 +85,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Nostalgic Studio | Digital Design Agency',
-    description: 'Crafting stunning websites, brands, and digital products for startups.',
+    description:
+      'Crafting stunning websites, brands, and digital products for startups.',
     images: ['/images/og-image.jpg'],
     creator: '@studionostalgic',
   },
@@ -100,7 +107,8 @@ export default function RootLayout({
     name: 'Nostalgic Studio',
     url: 'https://nostalgic-studio.co.za',
     logo: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
-    description: 'Digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses.',
+    description:
+      'Digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses.',
     foundingDate: '2016',
     founder: {
       '@type': 'Person',
@@ -113,7 +121,7 @@ export default function RootLayout({
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+27-XXX-XXXX',
+      telephone: '+27-82-448-3273',
       contactType: 'customer service',
       availableLanguage: 'English',
     },
@@ -133,6 +141,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BYEL2HLX78"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BYEL2HLX78');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
