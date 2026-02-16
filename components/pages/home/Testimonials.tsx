@@ -55,30 +55,71 @@ const testimonials = [
 export default function Testimonials() {
   const reviewSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Nostalgic Studio',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: testimonials.length,
-    },
-    review: testimonials.map((t) => ({
-      '@type': 'Review',
-      itemReviewed: {
-        '@type': 'Organization',
+    '@graph': [
+      {
+        '@type': 'LocalBusiness',
+        '@id': 'https://nostalgic-studio.co.za/#business',
         name: 'Nostalgic Studio',
+        url: 'https://nostalgic-studio.co.za',
+        logo: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
+        image: 'https://nostalgic-studio.co.za/images/og-image.jpg',
+        description:
+          'Nostalgic Studio is a Johannesburg-based digital design agency crafting high-performing websites, branding, and UI/UX design for startups and growing businesses across South Africa.',
+        telephone: '+27-82-448-3273',
+        priceRange: '$$',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Johannesburg',
+          addressRegion: 'Gauteng',
+          addressCountry: 'ZA',
+        },
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Johannesburg',
+          },
+          {
+            '@type': 'City',
+            name: 'Bloemfontein',
+          },
+          {
+            '@type': 'Country',
+            name: 'South Africa',
+          },
+        ],
+        sameAs: [
+          'https://www.facebook.com/webengineers',
+          'https://www.linkedin.com/company/110356396',
+          'https://www.instagram.com/studionostalgic',
+        ],
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: testimonials.length.toString(),
+          bestRating: '5',
+          worstRating: '1',
+        },
       },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: t.rating,
-        bestRating: '5',
-      },
-      author: {
-        '@type': 'Person',
-        name: t.name,
-      },
-      reviewBody: t.content,
-    })),
+
+      ...testimonials.map((t, index) => ({
+        '@type': 'Review',
+        '@id': `https://nostalgic-studio.co.za/#review-${index + 1}`,
+        itemReviewed: {
+          '@id': 'https://nostalgic-studio.co.za/#business',
+        },
+        author: {
+          '@type': 'Person',
+          name: t.name,
+        },
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: t.rating.toString(),
+          bestRating: '5',
+          worstRating: '1',
+        },
+        reviewBody: t.content,
+      })),
+    ],
   }
 
   return (
@@ -133,16 +174,11 @@ export default function Testimonials() {
             (testimonial, index) => (
               <article
                 key={`${testimonial.id}-${index}`}
-                itemScope
-                itemType="https://schema.org/Review"
                 className="w-87.5 md:w-112.5 p-8 rounded-2xl bg-background border border-border shrink-0"
               >
-                <meta itemProp="itemReviewed" content="Nostalgic Studio" />
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
 
-                <div className="flex gap-1 mb-4" itemProp="reviewRating" itemScope itemType="https://schema.org/Rating">
-                  <meta itemProp="ratingValue" content={testimonial.rating.toString()} />
-                  <meta itemProp="bestRating" content="5" />
+                <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star
                       key={i}
@@ -151,10 +187,7 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                <p
-                  itemProp="reviewBody"
-                  className="text-foreground leading-relaxed mb-6 line-clamp-4"
-                >
+                <p className="text-foreground leading-relaxed mb-6 line-clamp-4">
                   “{testimonial.content}”
                 </p>
 
@@ -166,14 +199,11 @@ export default function Testimonials() {
                     height={48}
                     className="rounded-full object-cover"
                   />
-                  <div itemScope itemType="https://schema.org/Person" itemProp="author">
-                    <div
-                      itemProp="name"
-                      className="font-semibold text-foreground"
-                    >
+                  <div>
+                    <div className="font-semibold text-foreground">
                       {testimonial.name}
                     </div>
-                    <div itemProp="jobTitle" className="text-sm text-muted-foreground truncate max-w-50">
+                    <div className="text-sm text-muted-foreground truncate max-w-50">
                       {testimonial.role}
                     </div>
                   </div>

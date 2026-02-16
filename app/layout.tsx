@@ -54,93 +54,188 @@ export const metadata: Metadata = {
   ],
   creator: 'Nostalgic Studio',
   publisher: 'Nostalgic Studio',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_ZA',
-    url: 'https://nostalgic-studio.co.za',
-    siteName: 'Nostalgic Studio',
-    title: 'Nostalgic Studio | Digital Design Agency for Startups',
-    description:
-      'Crafting stunning websites, brands, and digital products for startups and growing businesses.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Nostalgic Studio - Digital Design Agency',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Nostalgic Studio | Digital Design Agency',
-    description:
-      'Crafting stunning websites, brands, and digital products for startups.',
-    images: ['/images/og-image.jpg'],
-    creator: '@studionostalgic',
-  },
-  alternates: {
-    canonical: 'https://nostalgic-studio.co.za',
-  },
-  category: 'Design',
+  robots: { index: true, follow: true },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  const schemaOrg = {
+}: Readonly<{ children: React.ReactNode }>) {
+  const enterpriseSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Nostalgic Studio',
-    url: 'https://nostalgic-studio.co.za',
-    logo: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
-    description:
-      'Digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses.',
-    foundingDate: '2016',
-    founder: {
-      '@type': 'Person',
-      name: 'Mpho Moipolai',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'ZA',
-      addressLocality: 'Johannesburg',
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+27-82-448-3273',
-      contactType: 'customer service',
-      availableLanguage: 'English',
-    },
-    sameAs: [
-      'https://www.facebook.com/webengineers',
-      'https://www.linkedin.com/company/110356396',
-      'https://www.instagram.com/studionostalgic',
+    '@graph': [
+      // 1️⃣ Organization Entity
+      {
+        '@type': 'Organization',
+        '@id': 'https://nostalgic-studio.co.za/#organization',
+        name: 'Nostalgic Studio',
+        url: 'https://nostalgic-studio.co.za',
+        logo: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
+        sameAs: [
+          'https://www.facebook.com/webengineers',
+          'https://www.linkedin.com/company/110356396',
+          'https://www.instagram.com/studionostalgic',
+        ],
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: '+27-82-448-3273',
+            contactType: 'customer service',
+            availableLanguage: ['English'],
+          },
+        ],
+      },
+
+      // 2️⃣ Local Business Entity (with geo + service area) — recommended for local SEO pages:contentReference[oaicite:2]{index=2}
+      {
+        '@type': 'LocalBusiness',
+        '@id': 'https://nostalgic-studio.co.za/#localbusiness',
+        name: 'Nostalgic Studio',
+        branchOf: {
+          '@id': 'https://nostalgic-studio.co.za/#organization',
+        },
+        description:
+          'Nostalgic Studio is a Johannesburg and Bloemfontein based digital design agency offering web design, UI/UX, and branding services across South Africa.',
+        url: 'https://nostalgic-studio.co.za',
+        telephone: '+27-82-448-3273',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Johannesburg',
+          addressRegion: 'Gauteng',
+          addressCountry: 'ZA',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '-26.2041',
+          longitude: '28.0473',
+        },
+        areaServed: [
+          { '@type': 'City', name: 'Johannesburg' },
+          { '@type': 'City', name: 'Bloemfontein' },
+          { '@type': 'Country', name: 'South Africa' },
+        ],
+        image: 'https://nostalgic-studio.co.za/images/og-image.jpg',
+        priceRange: '$$',
+      },
+
+      // 3️⃣ Services as separate entities for SEO clarity — best practice for service businesses:contentReference[oaicite:3]{index=3}
+      {
+        '@type': 'Service',
+        '@id': 'https://nostalgic-studio.co.za/#service-web-design',
+        name: 'Web Design Services',
+        description:
+          'Custom web design services tailored for startups and growing businesses.',
+        provider: { '@id': 'https://nostalgic-studio.co.za/#localbusiness' },
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://nostalgic-studio.co.za/#service-branding',
+        name: 'Branding Services',
+        description:
+          'Professional branding services including logo & visual identity design.',
+        provider: { '@id': 'https://nostalgic-studio.co.za/#localbusiness' },
+      },
+      {
+        '@type': 'Service',
+        '@id': 'https://nostalgic-studio.co.za/#service-uiux',
+        name: 'UI/UX Design Services',
+        description:
+          'User interface & experience design optimized for conversion and usability.',
+        provider: { '@id': 'https://nostalgic-studio.co.za/#localbusiness' },
+      },
+
+      // 4️⃣ Example Reviews (attach to LocalBusiness):contentReference[oaicite:4]{index=4}
+      {
+        '@type': 'Review',
+        '@id': 'https://nostalgic-studio.co.za/#review-1',
+        itemReviewed: {
+          '@id': 'https://nostalgic-studio.co.za/#localbusiness',
+        },
+        author: { '@type': 'Person', name: 'Ohentse Diseko' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody:
+          'Nostalgic Studio delivered a professional, high-quality website with great collaboration.',
+      },
+      {
+        '@type': 'Review',
+        '@id': 'https://nostalgic-studio.co.za/#review-2',
+        itemReviewed: {
+          '@id': 'https://nostalgic-studio.co.za/#localbusiness',
+        },
+        author: { '@type': 'Person', name: 'Stefan Mills' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody:
+          'The team created a modern, professional site that matched our brand.',
+      },
+
+      // 5️⃣ FAQ Page Schema — answers visible FAQs on site (higher CTR often seen):contentReference[oaicite:5]{index=5}
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://nostalgic-studio.co.za/#faq',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'What services does Nostalgic Studio offer?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Web design, branding, UI/UX design and custom digital product services.',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Do you serve clients in Bloemfontein?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Yes — we provide design services to clients in Bloemfontein, Johannesburg, and across South Africa.',
+            },
+          },
+        ],
+      },
+
+      // 6️⃣ Breadcrumb Navigation Schema (important for SERP structure):contentReference[oaicite:6]{index=6}
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://nostalgic-studio.co.za/#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://nostalgic-studio.co.za/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Services',
+            item: 'https://nostalgic-studio.co.za/services',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Web Design Services',
+            item: 'https://nostalgic-studio.co.za/services/web-design',
+          },
+        ],
+      },
     ],
-    areaServed: 'Worldwide',
-    serviceType: 'Web Design, UI/UX Design, Branding',
   }
 
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <meta
+          name="ahrefs-site-verification"
+          content="a0470f69c33928b32f9839d4b0a5b876bb9703a10a5a1fdd7d79c12d10f28f8c"
+        />
+
+        {/* 🚀 Enterprise SEO Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(enterpriseSchema),
+          }}
         />
+
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BYEL2HLX78"
           strategy="afterInteractive"
