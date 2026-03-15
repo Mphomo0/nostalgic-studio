@@ -233,6 +233,10 @@ export default function RootLayout({
           name="ahrefs-site-verification"
           content="a0470f69c33928b32f9839d4b0a5b876bb9703a10a5a1fdd7d79c12d10f28f8c"
         />
+        <meta
+          name="google-site-verification"
+          content="Z9mBnLyDFOUn6nKgbjCnnmKZupnoVrWjQtfYCEdy_f8"
+        />
 
         {/* 🚀 Enterprise SEO Structured Data */}
         <script
