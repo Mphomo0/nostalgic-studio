@@ -1,81 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://nostalgic-studio.co.za/</loc>
+    <loc>https://www.nostalgic-studio.co.za/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <lastmod>2024-02-06</lastmod>
+    <lastmod>2026-03-15</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/about</loc>
+    <loc>https://www.nostalgic-studio.co.za/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2024-02-06</lastmod>
+    <lastmod>2026-03-15</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/services</loc>
+    <loc>https://www.nostalgic-studio.co.za/services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <lastmod>2024-02-06</lastmod>
+    <lastmod>2026-03-15</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/projects</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <lastmod>2024-02-06</lastmod>
+    <lastmod>2026-03-15</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/contact</loc>
+    <loc>https://www.nostalgic-studio.co.za/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
-    <lastmod>2024-02-06</lastmod>
+    <lastmod>2026-03-15</lastmod>
   </url>
   
+  <!-- New SEO Pages Under /services -->
   <url>
-    <loc>https://nostalgic-studio.co.za/terms-conditions</loc>
+    <loc>https://www.nostalgic-studio.co.za/services/web-design-johannesburg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/seo-services-johannesburg</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/nextjs-website-design</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/ecommerce-website-development</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/branding-design</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/social-media-marketing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/social-media-ads</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/web-hosting</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/ux-ui-design</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/services/web-maintenance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-03-15</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.nostalgic-studio.co.za/terms-conditions</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-02-09</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/privacy-policy</loc>
+    <loc>https://www.nostalgic-studio.co.za/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <lastmod>2026-02-09</lastmod>
   </url>
 
+  <!-- Projects -->
   <url>
-    <loc>https://nostalgic-studio.co.za/projects/sozim-consultancy</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects/sozim-consultancy</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-01-15</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/projects/didee-holdings</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects/didee-holdings</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-01-20</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/projects/tanosa-group</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects/tanosa-group</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-01-22</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/projects/jiyology-website</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects/jiyology-website</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-01-25</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/projects/az-truck-dealership</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects/az-truck-dealership</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-01-28</lastmod>
   </url>
   <url>
-    <loc>https://nostalgic-studio.co.za/projects/bidco-trucks</loc>
+    <loc>https://www.nostalgic-studio.co.za/projects/bidco-trucks</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
     <lastmod>2024-01-30</lastmod>

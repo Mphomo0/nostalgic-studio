@@ -7,30 +7,30 @@ import { ArrowUpRight, Palette, Layout, Sparkles, Monitor } from 'lucide-react'
 const services = [
   {
     icon: Layout,
-    title: 'Web Design',
+    title: 'Web Design Johannesburg',
     description:
-      'Custom websites that captivate visitors and drive conversions. Built for performance and user experience.',
+      'Custom Next.js websites built for performance, speed, and high conversion rates in the South African market.',
     link: '/services#web-design',
   },
   {
     icon: Sparkles,
-    title: 'UI/UX Design',
+    title: 'UI/UX Design Agency',
     description:
-      'Intuitive interfaces and seamless user journeys that delight users and achieve business goals.',
+      'User-centric interfaces and seamless digital experiences that drive engagement and business growth.',
     link: '/services#ui-ux',
   },
   {
     icon: Palette,
-    title: 'Branding',
+    title: 'Branding & Identity',
     description:
-      'Memorable brand identities that tell your story and connect with your target audience.',
+      'Iconic brand identities, logos, and visual systems that make your business memorable and trustworthy.',
     link: '/services#branding',
   },
   {
     icon: Monitor,
-    title: 'Digital Design',
+    title: 'Digital Marketing & SEO',
     description:
-      'From presentations to social media, we create cohesive digital assets for all platforms.',
+      'Dominating search results in Johannesburg with technical SEO, content strategy, and social media ads.',
     link: '/services#digital',
   },
 ]
@@ -47,7 +47,7 @@ export default function ServicesPreview() {
             viewport={{ once: true }}
             className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
           >
-            What We Do
+            Our Expertise
           </motion.span>
 
           <motion.h2
@@ -57,7 +57,7 @@ export default function ServicesPreview() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           >
-            Services That Drive Growth
+            Digital Services That Drive Growth in South Africa
           </motion.h2>
 
           <motion.p
@@ -67,8 +67,8 @@ export default function ServicesPreview() {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground text-lg max-w-2xl mx-auto"
           >
-            We offer comprehensive digital solutions tailored for startups and
-            growing businesses.
+            We offer premium digital solutions tailored for startups and established businesses 
+            looking to scale in Johannesburg and beyond.
           </motion.p>
         </div>
 

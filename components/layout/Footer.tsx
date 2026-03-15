@@ -24,6 +24,13 @@ const Footer = () => {
       { name: 'Branding', path: '/services#branding' },
       { name: 'Digital Design', path: '/services#digital' },
     ],
+    specialized: [
+      { name: 'Web Design Johannesburg', path: '/services/web-design-johannesburg' },
+      { name: 'SEO Services Johannesburg', path: '/services/seo-services-johannesburg' },
+      { name: 'Next.js Website Design', path: '/services/nextjs-website-design' },
+      { name: 'Ecommerce Development', path: '/services/ecommerce-website-development' },
+      { name: 'Branding Design', path: '/services/branding-design' },
+    ],
   }
 
   const socialLinks = [
@@ -48,7 +55,7 @@ const Footer = () => {
     <footer className="bg-card border-t border-border">
       <div className="container-wide mx-auto px-4 md:px-8">
         {/* Main Footer */}
-        <div className="py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
@@ -102,6 +109,23 @@ const Footer = () => {
             <h4 className="text-foreground font-semibold mb-6">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    href={link.path}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Specialized */}
+          <div>
+            <h4 className="text-foreground font-semibold mb-6">Specialized</h4>
+            <ul className="space-y-3">
+              {footerLinks.specialized.map((link) => (
                 <li key={link.path}>
                   <Link
                     href={link.path}

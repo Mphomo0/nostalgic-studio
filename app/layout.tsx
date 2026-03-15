@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nostalgic-studio.co.za'),
+  metadataBase: new URL('https://www.nostalgic-studio.co.za'),
   title: {
     default: 'Nostalgic Studio | Digital Design Agency for Startups',
     template: '%s | Nostalgic Studio',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     'local business web design',
   ],
   authors: [
-    { name: 'Mpho Moipolai', url: 'https://nostalgic-studio.co.za/about' },
+    { name: 'Mpho Moipolai', url: 'https://www.nostalgic-studio.co.za/about' },
   ],
   creator: 'Nostalgic Studio',
   publisher: 'Nostalgic Studio',
@@ -66,10 +66,10 @@ export default function RootLayout({
       // 1️⃣ Organization Entity
       {
         '@type': 'Organization',
-        '@id': 'https://nostalgic-studio.co.za/#organization',
+        '@id': 'https://www.nostalgic-studio.co.za/#organization',
         name: 'Nostalgic Studio',
-        url: 'https://nostalgic-studio.co.za',
-        logo: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
+        url: 'https://www.nostalgic-studio.co.za',
+        logo: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
         sameAs: [
           'https://www.facebook.com/webengineers',
           'https://www.linkedin.com/company/110356396',
@@ -88,15 +88,16 @@ export default function RootLayout({
       // 2️⃣ Local Business Entity (with geo + service area) — recommended for local SEO pages:contentReference[oaicite:2]{index=2}
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://nostalgic-studio.co.za/#localbusiness',
+        '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
         name: 'Nostalgic Studio',
         branchOf: {
-          '@id': 'https://nostalgic-studio.co.za/#organization',
+          '@id': 'https://www.nostalgic-studio.co.za/#organization',
         },
         description:
           'Nostalgic Studio is a Johannesburg and Bloemfontein based digital design agency offering web design, UI/UX, and branding services across South Africa.',
-        url: 'https://nostalgic-studio.co.za',
+        url: 'https://www.nostalgic-studio.co.za',
         telephone: '+27-82-448-3273',
+
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Johannesburg',
@@ -113,42 +114,48 @@ export default function RootLayout({
           { '@type': 'City', name: 'Bloemfontein' },
           { '@type': 'Country', name: 'South Africa' },
         ],
-        image: 'https://nostalgic-studio.co.za/images/og-image.jpg',
+        image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         priceRange: '$$',
       },
 
       // 3️⃣ Services as separate entities for SEO clarity — best practice for service businesses:contentReference[oaicite:3]{index=3}
       {
         '@type': 'Service',
-        '@id': 'https://nostalgic-studio.co.za/#service-web-design',
+        '@id': 'https://www.nostalgic-studio.co.za/#service-web-design',
         name: 'Web Design Services',
         description:
           'Custom web design services tailored for startups and growing businesses.',
-        provider: { '@id': 'https://nostalgic-studio.co.za/#localbusiness' },
+        provider: {
+          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+        },
       },
       {
         '@type': 'Service',
-        '@id': 'https://nostalgic-studio.co.za/#service-branding',
+        '@id': 'https://www.nostalgic-studio.co.za/#service-branding',
         name: 'Branding Services',
         description:
           'Professional branding services including logo & visual identity design.',
-        provider: { '@id': 'https://nostalgic-studio.co.za/#localbusiness' },
+        provider: {
+          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+        },
       },
       {
         '@type': 'Service',
-        '@id': 'https://nostalgic-studio.co.za/#service-uiux',
+        '@id': 'https://www.nostalgic-studio.co.za/#service-uiux',
         name: 'UI/UX Design Services',
         description:
           'User interface & experience design optimized for conversion and usability.',
-        provider: { '@id': 'https://nostalgic-studio.co.za/#localbusiness' },
+        provider: {
+          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+        },
       },
 
       // 4️⃣ Example Reviews (attach to LocalBusiness):contentReference[oaicite:4]{index=4}
       {
         '@type': 'Review',
-        '@id': 'https://nostalgic-studio.co.za/#review-1',
+        '@id': 'https://www.nostalgic-studio.co.za/#review-1',
         itemReviewed: {
-          '@id': 'https://nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
         },
         author: { '@type': 'Person', name: 'Ohentse Diseko' },
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -157,9 +164,9 @@ export default function RootLayout({
       },
       {
         '@type': 'Review',
-        '@id': 'https://nostalgic-studio.co.za/#review-2',
+        '@id': 'https://www.nostalgic-studio.co.za/#review-2',
         itemReviewed: {
-          '@id': 'https://nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
         },
         author: { '@type': 'Person', name: 'Stefan Mills' },
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -170,7 +177,7 @@ export default function RootLayout({
       // 5️⃣ FAQ Page Schema — answers visible FAQs on site (higher CTR often seen):contentReference[oaicite:5]{index=5}
       {
         '@type': 'FAQPage',
-        '@id': 'https://nostalgic-studio.co.za/#faq',
+        '@id': 'https://www.nostalgic-studio.co.za/#faq',
         mainEntity: [
           {
             '@type': 'Question',
@@ -194,25 +201,25 @@ export default function RootLayout({
       // 6️⃣ Breadcrumb Navigation Schema (important for SERP structure):contentReference[oaicite:6]{index=6}
       {
         '@type': 'BreadcrumbList',
-        '@id': 'https://nostalgic-studio.co.za/#breadcrumb',
+        '@id': 'https://www.nostalgic-studio.co.za/#breadcrumb',
         itemListElement: [
           {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://nostalgic-studio.co.za/',
+            item: 'https://www.nostalgic-studio.co.za/',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Services',
-            item: 'https://nostalgic-studio.co.za/services',
+            item: 'https://www.nostalgic-studio.co.za/services',
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Web Design Services',
-            item: 'https://nostalgic-studio.co.za/services/web-design',
+            item: 'https://www.nostalgic-studio.co.za/services/web-design',
           },
         ],
       },

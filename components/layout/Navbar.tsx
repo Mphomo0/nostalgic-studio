@@ -5,19 +5,39 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'motion/react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown, Globe, Search, Zap, ShoppingBag, Palette, Share2, Megaphone, Server, Layout, Settings } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+const serviceLinks = [
+  { title: 'Web Design Johannesburg', href: '/services/web-design-johannesburg', icon: Globe },
+  { title: 'SEO Services Johannesburg', href: '/services/seo-services-johannesburg', icon: Search },
+  { title: 'Next.js Website Design', href: '/services/nextjs-website-design', icon: Zap },
+  { title: 'Ecommerce Development', href: '/services/ecommerce-website-development', icon: ShoppingBag },
+  { title: 'Branding Design', href: '/services/branding-design', icon: Palette },
+  { title: 'Social Media Marketing', href: '/services/social-media-marketing', icon: Share2 },
+  { title: 'Social Media Ads', href: '/services/social-media-ads', icon: Megaphone },
+  { title: 'Web Hosting', href: '/services/web-hosting', icon: Server },
+  { title: 'UX/UI Design', href: '/services/ux-ui-design', icon: Layout },
+  { title: 'Web Maintenance', href: '/services/web-maintenance', icon: Settings },
+]
 
 const navLinks = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
+  { name: 'Services', path: '/services', dropdown: true },
   { name: 'Projects', path: '/projects' },
   { name: 'Contact', path: '/contact' },
 ]
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const pathname = usePathname()
 
   return (
@@ -38,17 +58,41 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className={`link-underline text-sm font-medium transition-colors duration-300 ${
-                  pathname === link.path
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                {link.name}
-              </Link>
+              link.dropdown ? (
+                <DropdownMenu key={link.path}>
+                  <DropdownMenuTrigger className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none ${
+                    pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+                  }`}>
+                    {link.name} <ChevronDown size={14} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-64 p-2 bg-background/95 backdrop-blur-xl border-border/50">
+                    <DropdownMenuItem asChild className="focus:bg-primary/10">
+                      <Link href="/services" className="w-full font-bold text-primary">All Services</Link>
+                    </DropdownMenuItem>
+                    <div className="h-px bg-border/50 my-1" />
+                    {serviceLinks.map((service) => (
+                      <DropdownMenuItem key={service.href} asChild className="focus:bg-primary/10 cursor-pointer">
+                        <Link href={service.href} className="flex items-center gap-3 w-full py-2">
+                          <service.icon size={16} className="text-primary" />
+                          <span className="text-xs">{service.title}</span>
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className={`link-underline text-sm font-medium transition-colors duration-300 ${
+                    pathname === link.path
+                      ? 'text-primary'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 
@@ -77,22 +121,56 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border"
+            className="lg:hidden bg-background border-b border-border overflow-hidden"
           >
-            <div className="container-wide mx-auto px-4 py-6 flex flex-col gap-4">
+            <div className="container-wide mx-auto px-4 py-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
               {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  href={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-lg font-medium py-2 transition-colors ${
-                    pathname === link.path
-                      ? 'text-primary'
-                      : 'text-muted-foreground'
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                <div key={link.path}>
+                  {link.dropdown ? (
+                    <div className="flex flex-col gap-2">
+                      <button 
+                        onClick={() => setIsServicesOpen(!isServicesOpen)}
+                        className={`flex items-center justify-between text-lg font-medium py-2 transition-colors w-full ${
+                          pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground'
+                        }`}
+                      >
+                        {link.name} <ChevronDown size={20} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      <AnimatePresence>
+                        {isServicesOpen && (
+                          <motion.div 
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="flex flex-col gap-2 pl-4 border-l border-border"
+                          >
+                            <Link href="/services" onClick={() => setIsOpen(false)} className="text-sm py-2 text-primary font-bold">All Services</Link>
+                            {serviceLinks.map((service) => (
+                              <Link
+                                key={service.href}
+                                href={service.href}
+                                onClick={() => setIsOpen(false)}
+                                className="text-sm py-2 text-muted-foreground hover:text-primary"
+                              >
+                                {service.title}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={link.path}
+                      onClick={() => setIsOpen(false)}
+                      className={`text-lg font-medium py-2 block transition-colors ${
+                        pathname === link.path ? 'text-primary' : 'text-muted-foreground'
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               <Button asChild variant="hero" size="lg" className="mt-4">
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
