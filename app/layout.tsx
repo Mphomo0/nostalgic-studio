@@ -55,6 +55,13 @@ export const metadata: Metadata = {
   creator: 'Nostalgic Studio',
   publisher: 'Nostalgic Studio',
   robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za',
+    languages: {
+      'en': 'https://www.nostalgic-studio.co.za',
+      'en-ZA': 'https://www.nostalgic-studio.co.za',
+    },
+  },
 }
 
 export default function RootLayout({
@@ -174,31 +181,7 @@ export default function RootLayout({
           'The team created a modern, professional site that matched our brand.',
       },
 
-      // 5️⃣ FAQ Page Schema — answers visible FAQs on site (higher CTR often seen):contentReference[oaicite:5]{index=5}
-      {
-        '@type': 'FAQPage',
-        '@id': 'https://www.nostalgic-studio.co.za/#faq',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'What services does Nostalgic Studio offer?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Web design, branding, UI/UX design and custom digital product services.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Do you serve clients in Bloemfontein?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes — we provide design services to clients in Bloemfontein, Johannesburg, and across South Africa.',
-            },
-          },
-        ],
-      },
-
-      // 6️⃣ Breadcrumb Navigation Schema (important for SERP structure):contentReference[oaicite:6]{index=6}
+      // 5️⃣ Breadcrumb Navigation Schema (important for SERP structure):
       {
         '@type': 'BreadcrumbList',
         '@id': 'https://www.nostalgic-studio.co.za/#breadcrumb',

@@ -3,8 +3,8 @@ import PortfolioHeader from '@/components/pages/projects/PortfolioHeader'
 import PortfolioGrid from '@/components/pages/projects/PortfolioGrid'
 
 export const metadata: Metadata = {
-  title: 'Our Work',
-  description: 'Explore our portfolio of stunning websites, brands, and digital products. View case studies showcasing our web design, UI/UX, and branding work for startups and businesses.',
+  title: 'Our Work | Portfolio Johannesburg | Nostalgic Studio',
+  description: 'Explore our portfolio of stunning websites, brands, and digital products. View case studies showcasing our web design, UI/UX, and branding work for South African businesses.',
   keywords: [
     'portfolio',
     'web design portfolio',
@@ -13,10 +13,11 @@ export const metadata: Metadata = {
     'UI UX design examples',
     'digital design work',
     'website gallery',
+    'Johannesburg web design portfolio',
   ],
   openGraph: {
-    title: 'Our Work | Nostalgic Studio',
-    description: 'Explore our portfolio of stunning websites, brands, and digital products.',
+    title: 'Our Work | Portfolio | Nostalgic Studio',
+    description: 'Explore our portfolio of stunning websites, brands, and digital products from Johannesburg.',
   },
 }
 

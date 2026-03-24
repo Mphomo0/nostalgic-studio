@@ -3,18 +3,19 @@ import ContactForm from '@/components/pages/contact/ContactForm'
 import ContactInfo from '@/components/pages/contact/ContactInfo'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Ready to transform your digital presence? Contact Nostalgic Studio for a free consultation on web design, branding, and digital design services. We respond within 24 hours.',
+  title: 'Contact Us | Web Design Quote Johannesburg | Nostalgic Studio',
+  description: 'Contact Nostalgic Studio for a free consultation on web design, SEO, and branding services. Based in Johannesburg, South Africa. We respond within 24 hours.',
   keywords: [
     'contact Nostalgic Studio',
     'get a quote web design',
     'hire digital design agency',
     'startup web design consultation',
     'contact form South Africa',
+    'web design quote Johannesburg',
   ],
   openGraph: {
-    title: 'Contact Us | Nostalgic Studio',
-    description: 'Ready to transform your digital presence? Contact us for a free consultation.',
+    title: 'Contact Nostalgic Studio | Get a Free Quote',
+    description: 'Ready to transform your digital presence? Contact us for a free consultation on web design and digital services.',
   },
 }
 

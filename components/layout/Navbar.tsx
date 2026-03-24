@@ -45,10 +45,10 @@ const Navbar = () => {
       <div className="container-wide mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-2 group" aria-label="Nostalgic Studio - Home">
             <Image
               src="/images/logo/Logo.webp"
-              alt="Logo"
+              alt="Nostalgic Studio - Digital Design Agency Johannesburg"
               width={150}
               height={100}
               className="w-full h-full object-contain"

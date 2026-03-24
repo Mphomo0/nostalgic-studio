@@ -19,10 +19,11 @@ const Footer = () => {
       { name: 'Contact', path: '/contact' },
     ],
     services: [
-      { name: 'Web Design', path: '/services#web-design' },
-      { name: 'UI/UX Design', path: '/services#ui-ux' },
-      { name: 'Branding', path: '/services#branding' },
-      { name: 'Digital Design', path: '/services#digital' },
+      { name: 'Web Design', path: '/services/web-design-johannesburg' },
+      { name: 'SEO Services', path: '/services/seo-services-johannesburg' },
+      { name: 'UI/UX Design', path: '/services/ux-ui-design' },
+      { name: 'Branding', path: '/services/branding-design' },
+      { name: 'Ecommerce', path: '/services/ecommerce-website-development' },
     ],
     specialized: [
       { name: 'Web Design Johannesburg', path: '/services/web-design-johannesburg' },
@@ -30,6 +31,9 @@ const Footer = () => {
       { name: 'Next.js Website Design', path: '/services/nextjs-website-design' },
       { name: 'Ecommerce Development', path: '/services/ecommerce-website-development' },
       { name: 'Branding Design', path: '/services/branding-design' },
+      { name: 'Social Media Marketing', path: '/services/social-media-marketing' },
+      { name: 'Web Hosting', path: '/services/web-hosting' },
+      { name: 'Web Maintenance', path: '/services/web-maintenance' },
     ],
   }
 
@@ -58,10 +62,10 @@ const Footer = () => {
         <div className="py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-6">
+            <Link href="/" className="flex items-center gap-2 mb-6" aria-label="Nostalgic Studio - Home">
               <Image
                 src="/images/logo/Logo.webp"
-                alt="Logo"
+                alt="Nostalgic Studio - Digital Design Agency Johannesburg"
                 width={150}
                 height={100}
                 className="w-auto h-auto"
