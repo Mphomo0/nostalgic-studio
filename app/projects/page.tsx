@@ -4,7 +4,7 @@ import PortfolioGrid from '@/components/pages/projects/PortfolioGrid'
 
 export const metadata: Metadata = {
   title: 'Our Work | Portfolio Johannesburg',
-  description: 'Explore our portfolio of stunning websites, brands, and digital products. View case studies showcasing our web design, UI/UX, and branding work.',
+  description: 'Explore our portfolio of stunning websites and brands. View case studies showcasing our web design and branding work.',
   keywords: [
     'portfolio',
     'web design portfolio',

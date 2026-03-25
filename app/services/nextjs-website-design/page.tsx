@@ -6,7 +6,7 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Next.js Website Design | High-Performance Web Development',
+  title: 'Next.js Website Design | Fast & Scalable',
   description: 'Specialized Next.js website design in Johannesburg. We build blazing-fast, SEO-ready, and scalable web applications.',
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites', 'Modern Web Design'],
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Next.js Website Design',
-    description: 'Specialized Next.js website design in Johannesburg. We build blazing-fast, SEO-ready, and scalable web applications.',
+    description: 'Specialized Next.js website design in Johannesburg. We build blazing-fast, SEO-ready web applications.',
     url: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
     siteName: 'Nostalgic Studio',
     type: 'website',

@@ -9,7 +9,7 @@ import Testimonials from '@/components/pages/home/Testimonials'
 export const metadata: Metadata = {
   title: 'About Us | Digital Design Agency Johannesburg',
   description:
-    'Learn about Nostalgic Studio - a digital design agency founded in 2016 in Johannesburg. We blend timeless design principles with modern Next.js innovation to create memorable digital experiences for startups.',
+    'Nostalgic Studio is a Johannesburg digital design agency founded in 2016. We blend timeless design with modern Next.js innovation.',
   keywords: [
     'about Nostalgic Studio',
     'digital design agency Johannesburg',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Nostalgic Studio | Johannesburg Digital Agency',
     description:
-      'Learn about Nostalgic Studio - a digital design agency blending timeless principles with modern innovation.',
+      'Nostalgic Studio is a Johannesburg digital design agency founded in 2016. We blend timeless design with modern Next.js innovation.',
     url: 'https://www.nostalgic-studio.co.za/about',
     siteName: 'Nostalgic Studio',
     type: 'website',

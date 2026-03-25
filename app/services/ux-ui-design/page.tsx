@@ -6,7 +6,7 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'UX/UI Design Johannesburg | User-Centric Digital Experiences',
+  title: 'UX/UI Design Johannesburg | Intuitive Interfaces',
   description: 'Elevate your digital product with professional UX/UI design in Johannesburg. We create intuitive, engaging interfaces.',
   keywords: ['UX/UI Design Johannesburg', 'User Experience Design South Africa', 'Interface Design Johannesburg', 'Mobile App Design South Africa', 'Web Design Agency'],
   alternates: {

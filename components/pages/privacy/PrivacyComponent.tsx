@@ -4,7 +4,7 @@ export default function PrivacyComponent() {
   return (
     <section className="container px-6 py-12 bg-card">
       <div className="container-wide px-6 mx-auto text-white leading-relaxed">
-        <h1 className="text-4xl font-bold mb-6">Privacy Policy</h1>
+        <h2 className="text-4xl font-bold mb-6">Privacy Policy</h2>
 
         <p className="mb-6 text-gray-300">
           Nostalgic Studio welcomes you (“Nostalgic Studio,” “we,” “us,” or

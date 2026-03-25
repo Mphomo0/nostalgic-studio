@@ -60,6 +60,7 @@ export const metadata: Metadata = {
     languages: {
       'en': 'https://www.nostalgic-studio.co.za',
       'en-ZA': 'https://www.nostalgic-studio.co.za',
+      'x-default': 'https://www.nostalgic-studio.co.za',
     },
   },
   openGraph: {

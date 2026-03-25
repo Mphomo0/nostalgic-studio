@@ -33,7 +33,7 @@ export const projects: Project[] = [
     timeline: '2 weeks',
     role: 'Web Developer',
     description:
-      'A South African construction and civil engineering company offering building, infrastructure, roads, and earthworks services backed by experienced management professionals.',
+      'Didee Holdings is a South African construction and civil engineering company offering building, infrastructure, roads and earthworks services.',
     image: '/images/projects/didee.webp',
     liveUrl: '#',
     slug: 'didee-holdings',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     timeline: '1 week',
     role: 'Web Developer',
     description:
-      'Consulting and professional services firm that provides governance, operational improvement, business development, training, branding, and project management solutions to help organizations — especially municipalities — enhance efficiency and drive growth.',
+      'Tanosa Group provides consulting, governance, business development, training, branding and project management solutions for organizations.',
     image: '/images/projects/tanosa.webp',
     liveUrl: 'www.tanosagroup.com',
     slug: 'tanosa-group',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     timeline: '1 week',
     role: 'Web Developer',
     description:
-      'Jiyology is a South African building construction and plumbing company, founded by Vusi and Lerato Jiya, that offers professional services like roofing, plumbing, tiling, painting and home renovations with a focus on quality workmanship and customer care.',
+      'Jiyology is a South African building construction and plumbing company offering roofing, plumbing, tiling, painting and home renovations.',
     image: '/images/projects/jiyology.webp',
     liveUrl: 'www.jiyology.co.za',
     slug: 'jiyology-website',
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     timeline: '6 weeks',
     role: 'Web Developer',
     description:
-      'Commercial vehicle dealer in Gauteng specialising in quality pre-owned trucks (rigid trucks from about 1.5 t to 18 t), with in-house servicing and restoration and over 25 years of experience in the industry.',
+      'A-Z Truck Sales is a Gauteng commercial vehicle dealer specializing in quality pre-owned trucks with in-house servicing.',
     image: '/images/projects/aztrucks.webp',
     liveUrl: 'www.a-ztrucksales.com',
     slug: 'az-truck-dealership',
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     timeline: '8 weeks',
     role: 'Web Developer',
     description:
-      'South African dealer based in Pretoria that specialises in buying and selling quality second-hand trucks, trailers and plant equipment for transport and construction use, with services and sales extending to several African countries.',
+      'Bidco Trucks is a Pretoria-based dealer specializing in quality second-hand trucks, trailers and plant equipment across Africa.',
     image: '/images/projects/bidco.webp',
     liveUrl: '#',
     slug: 'bidco-trucks',

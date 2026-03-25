@@ -6,7 +6,7 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Social Media Marketing Johannesburg | Grow Your Online Community',
+  title: 'Social Media Marketing | Grow Your Community',
   description: 'Expert social media marketing in Johannesburg. We help startups and small businesses build engaged communities and drive sales.',
   keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency'],
   alternates: {

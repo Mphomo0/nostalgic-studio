@@ -6,7 +6,7 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Web Maintenance Johannesburg | Proactive Website Support',
+  title: 'Web Maintenance | Proactive Website Support',
   description: 'Keep your website running smoothly with professional web maintenance in Johannesburg. We provide security updates and performance optimization.',
   keywords: ['Web Maintenance Johannesburg', 'Website Support South Africa', 'Next.js Maintenance Services', 'Managed Website Updates', 'Digital Agency Support'],
   alternates: {

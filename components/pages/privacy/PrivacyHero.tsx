@@ -23,7 +23,7 @@ export default function PrivacyHero() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
         >
-          Terms &amp; Conditions
+          Privacy Policy
         </motion.h1>
 
         <motion.p

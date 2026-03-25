@@ -4,9 +4,16 @@ import TermsHero from '@/components/pages/terms/TermsHero'
 
 export const metadata: Metadata = {
   title: 'Terms and Conditions | Nostalgic Studio',
-  description: 'Terms and conditions for Nostalgic Studio digital design services. Read our service agreement, refund policy, and client responsibilities.',
+  description: 'Terms and conditions for Nostalgic Studio digital design services. Read our service agreement and client responsibilities.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/terms-conditions',
+  },
+  openGraph: {
+    title: 'Terms and Conditions | Nostalgic Studio',
+    description: 'Terms and conditions for Nostalgic Studio digital design services.',
+    url: 'https://www.nostalgic-studio.co.za/terms-conditions',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
   },
 }
 
