@@ -27,9 +27,15 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.description,
+    alternates: {
+      canonical: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
+    },
     openGraph: {
       title: `${project.title} | Nostalgic Studio`,
       description: project.description,
+      url: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
+      siteName: 'Nostalgic Studio',
+      type: 'website',
       images: [
         {
           url: project.image,

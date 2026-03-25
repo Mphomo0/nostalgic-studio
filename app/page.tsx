@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     'SEO Services Johannesburg',
     'Ecommerce Website Development ZA',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za',
+  },
   openGraph: {
     title: 'Nostalgic Studio | Expert Web Design Johannesburg',
     description: 'Transform your digital presence with high-performance Next.js websites and iconic branding from Johannesburg\'s top design agency.',

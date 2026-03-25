@@ -15,9 +15,15 @@ export const metadata: Metadata = {
     'website gallery',
     'Johannesburg web design portfolio',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/projects',
+  },
   openGraph: {
     title: 'Our Work | Portfolio | Nostalgic Studio',
     description: 'Explore our portfolio of stunning websites, brands, and digital products from Johannesburg.',
+    url: 'https://www.nostalgic-studio.co.za/projects',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
   },
 }
 

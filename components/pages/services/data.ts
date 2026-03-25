@@ -15,7 +15,7 @@ export const services: Service[] = [
       'API integration',
       'Analytics setup',
     ],
-    image: '/images/web-design.png',
+    image: '/images/web-design.webp',
   },
   {
     id: 'ui-ux',
@@ -47,7 +47,7 @@ export const services: Service[] = [
       'Marketing collateral',
       'Brand positioning',
     ],
-    image: '/images/branding.png',
+    image: '/images/branding.webp',
   },
   {
     id: 'digital',
@@ -63,7 +63,7 @@ export const services: Service[] = [
       'Infographics',
       'Banner design',
     ],
-    image: '/images/digital-design.png',
+    image: '/images/digital-design.webp',
   },
 ]
 

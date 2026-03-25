@@ -10,4 +10,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://nostalgic-studio.co.za/sitemap.xml
+Sitemap: https://www.nostalgic-studio.co.za/sitemap.xml

@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: 'Social Media Ads Johannesburg | High-ROI Advertising',
   description: 'Scale your business with expert social media ads in Johannesburg. We specialize in Meta and LinkedIn advertising that drives leads and sales for South African startups.',
   keywords: ['Social Media Ads Johannesburg', 'Facebook Ads South Africa', 'Instagram Advertising Johannesburg', 'LinkedIn Ads Agency South Africa', 'Paid Social Media Marketing'],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
+  },
+  openGraph: {
+    title: 'Social Media Ads Johannesburg | Nostalgic Studio',
+    description: 'Scale your business with expert social media ads in Johannesburg. We specialize in Meta and LinkedIn advertising.',
+    url: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+  },
 }
 
 export default function SocialMediaAds() {

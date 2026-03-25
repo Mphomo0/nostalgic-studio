@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     'Next.js SEO Experts',
     'Google Ranking Services',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
+  },
+  openGraph: {
+    title: 'SEO Services Johannesburg | Nostalgic Studio',
+    description: 'Professional SEO services in Johannesburg. Boost your Google rankings with technical SEO, local SEO, and Next.js optimization.',
+    url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+  },
 }
 
 export default function SEOServicesJohannesburg() {

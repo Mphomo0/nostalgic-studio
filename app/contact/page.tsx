@@ -13,9 +13,15 @@ export const metadata: Metadata = {
     'contact form South Africa',
     'web design quote Johannesburg',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/contact',
+  },
   openGraph: {
     title: 'Contact Nostalgic Studio | Get a Free Quote',
     description: 'Ready to transform your digital presence? Contact us for a free consultation on web design and digital services.',
+    url: 'https://www.nostalgic-studio.co.za/contact',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
   },
 }
 

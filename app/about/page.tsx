@@ -18,10 +18,16 @@ export const metadata: Metadata = {
     'Mpho Moipolai designer',
     'Johannesburg web design agency',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/about',
+  },
   openGraph: {
     title: 'About Nostalgic Studio | Johannesburg Digital Agency',
     description:
       'Learn about Nostalgic Studio - a digital design agency blending timeless principles with modern innovation.',
+    url: 'https://www.nostalgic-studio.co.za/about',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
   },
 }
 

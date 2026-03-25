@@ -35,10 +35,16 @@ export const metadata: Metadata = {
     'brand identity design',
     'SEO services South Africa',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services',
+  },
   openGraph: {
     title: 'Web Design Services Johannesburg | Nostalgic Studio',
     description:
       'Expert web design, UI/UX, branding, and digital services. Next.js development and SEO for South African businesses.',
+    url: 'https://www.nostalgic-studio.co.za/services',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
   },
 }
 

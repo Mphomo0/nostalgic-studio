@@ -62,6 +62,28 @@ export const metadata: Metadata = {
       'en-ZA': 'https://www.nostalgic-studio.co.za',
     },
   },
+  openGraph: {
+    type: 'website',
+    locale: 'en_ZA',
+    url: 'https://www.nostalgic-studio.co.za',
+    siteName: 'Nostalgic Studio',
+    title: 'Nostalgic Studio | Digital Design Agency for Startups',
+    description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses.',
+    images: [
+      {
+        url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Nostalgic Studio - Digital Design Agency',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nostalgic Studio | Digital Design Agency for Startups',
+    description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function RootLayout({

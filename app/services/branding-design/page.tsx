@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: 'Branding Design Johannesburg | Visual Identity for Startups',
   description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities that help South African startups stand out.',
   keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design'],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services/branding-design',
+  },
+  openGraph: {
+    title: 'Branding Design Johannesburg | Nostalgic Studio',
+    description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities.',
+    url: 'https://www.nostalgic-studio.co.za/services/branding-design',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+  },
 }
 
 export default function BrandingDesign() {

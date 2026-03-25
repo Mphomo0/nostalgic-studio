@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: 'Ecommerce Website Development | Sell Online South Africa',
   description: 'Expert ecommerce website development in Johannesburg. We build high-converting online stores using Next.js, integrated with South African payment gateways like PayFast and Peach Payments.',
   keywords: ['Ecommerce Website Development Johannesburg', 'Online Store Builder South Africa', 'Next.js Ecommerce Development', 'Shopify Alternatives South Africa', 'Custom Ecommerce Solutions'],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
+  },
+  openGraph: {
+    title: 'Ecommerce Website Development | Nostalgic Studio',
+    description: 'Expert ecommerce website development in Johannesburg. We build high-converting online stores using Next.js.',
+    url: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+  },
 }
 
 export default function EcommerceWebsiteDevelopment() {

@@ -17,6 +17,16 @@ export const metadata: Metadata = {
     'Next.js Development Johannesburg',
     'SEO Website Design',
   ],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
+  },
+  openGraph: {
+    title: 'Web Design Johannesburg | Nostalgic Studio',
+    description: 'Professional web design in Johannesburg. Expert Next.js development, SEO-optimized websites, and branding for South African businesses.',
+    url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+  },
 }
 
 export default function WebDesignJohannesburg() {

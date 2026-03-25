@@ -9,6 +9,16 @@ export const metadata: Metadata = {
   title: 'Next.js Website Design | High-Performance Web Development',
   description: 'Specialized Next.js website design in Johannesburg. We build blazing-fast, SEO-ready, and scalable web applications for modern startups in South Africa.',
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites', 'Modern Web Design'],
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
+  },
+  openGraph: {
+    title: 'Next.js Website Design | Nostalgic Studio',
+    description: 'Specialized Next.js website design in Johannesburg. We build blazing-fast, SEO-ready, and scalable web applications.',
+    url: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+  },
 }
 
 export default function NextjsWebsiteDesign() {
