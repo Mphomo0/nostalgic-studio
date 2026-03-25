@@ -72,7 +72,9 @@ export default function page() {
     '@type': 'Person',
     name: 'Mpho Moipolai',
     jobTitle: 'Founder & Creative Director',
-    company: 'Nostalgic Studio',
+    worksFor: {
+      '@id': 'https://www.nostalgic-studio.co.za/#organization',
+    },
     url: 'https://nostalgic-studio.co.za',
     sameAs: ['https://www.linkedin.com/in/mphomoipolai'],
   }

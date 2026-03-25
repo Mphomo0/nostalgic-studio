@@ -115,19 +115,18 @@ export default function RootLayout({
         ],
       },
 
-      // 2️⃣ Local Business Entity (with geo + service area) — recommended for local SEO pages:contentReference[oaicite:2]{index=2}
+      // 2️⃣ Local Business Entity (merged with Organization)
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+        '@id': 'https://www.nostalgic-studio.co.za/#business',
         name: 'Nostalgic Studio',
-        branchOf: {
+        parentOrganization: {
           '@id': 'https://www.nostalgic-studio.co.za/#organization',
         },
         description:
           'Nostalgic Studio is a Johannesburg and Bloemfontein based digital design agency offering web design, UI/UX, and branding services across South Africa.',
         url: 'https://www.nostalgic-studio.co.za',
         telephone: '+27-82-448-3273',
-
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Johannesburg',
@@ -146,9 +145,15 @@ export default function RootLayout({
         ],
         image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         priceRange: '$$',
+        openingHoursSpecification: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '08:00',
+          closes: '17:00',
+        },
       },
 
-      // 3️⃣ Services as separate entities for SEO clarity — best practice for service businesses:contentReference[oaicite:3]{index=3}
+      // 3️⃣ Services as separate entities for SEO clarity
       {
         '@type': 'Service',
         '@id': 'https://www.nostalgic-studio.co.za/#service-web-design',
@@ -156,7 +161,7 @@ export default function RootLayout({
         description:
           'Custom web design services tailored for startups and growing businesses.',
         provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
       },
       {
@@ -166,7 +171,7 @@ export default function RootLayout({
         description:
           'Professional branding services including logo & visual identity design.',
         provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
       },
       {
@@ -176,16 +181,16 @@ export default function RootLayout({
         description:
           'User interface & experience design optimized for conversion and usability.',
         provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
       },
 
-      // 4️⃣ Example Reviews (attach to LocalBusiness):contentReference[oaicite:4]{index=4}
+      // 4️⃣ Reviews (attached to LocalBusiness)
       {
         '@type': 'Review',
         '@id': 'https://www.nostalgic-studio.co.za/#review-1',
         itemReviewed: {
-          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
         author: { '@type': 'Person', name: 'Ohentse Diseko' },
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -196,7 +201,7 @@ export default function RootLayout({
         '@type': 'Review',
         '@id': 'https://www.nostalgic-studio.co.za/#review-2',
         itemReviewed: {
-          '@id': 'https://www.nostalgic-studio.co.za/#localbusiness',
+          '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
         author: { '@type': 'Person', name: 'Stefan Mills' },
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -204,7 +209,7 @@ export default function RootLayout({
           'The team created a modern, professional site that matched our brand.',
       },
 
-      // 5️⃣ Breadcrumb Navigation Schema (important for SERP structure):
+      // 5️⃣ Breadcrumb Navigation Schema
       {
         '@type': 'BreadcrumbList',
         '@id': 'https://www.nostalgic-studio.co.za/#breadcrumb',
