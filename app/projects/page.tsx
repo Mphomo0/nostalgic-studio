@@ -3,8 +3,8 @@ import PortfolioHeader from '@/components/pages/projects/PortfolioHeader'
 import PortfolioGrid from '@/components/pages/projects/PortfolioGrid'
 
 export const metadata: Metadata = {
-  title: 'Our Work | Portfolio Johannesburg | Nostalgic Studio',
-  description: 'Explore our portfolio of stunning websites, brands, and digital products. View case studies showcasing our web design, UI/UX, and branding work for South African businesses.',
+  title: 'Our Work | Portfolio Johannesburg',
+  description: 'Explore our portfolio of stunning websites, brands, and digital products. View case studies showcasing our web design, UI/UX, and branding work.',
   keywords: [
     'portfolio',
     'web design portfolio',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.nostalgic-studio.co.za/projects',
   },
   openGraph: {
-    title: 'Our Work | Portfolio | Nostalgic Studio',
+    title: 'Our Work | Portfolio',
     description: 'Explore our portfolio of stunning websites, brands, and digital products from Johannesburg.',
     url: 'https://www.nostalgic-studio.co.za/projects',
     siteName: 'Nostalgic Studio',

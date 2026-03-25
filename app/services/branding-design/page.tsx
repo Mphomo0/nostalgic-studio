@@ -6,14 +6,14 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Branding Design Johannesburg | Visual Identity for Startups',
-  description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities that help South African startups stand out.',
+  title: 'Branding Design Johannesburg | Visual Identity',
+  description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities.',
   keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/branding-design',
   },
   openGraph: {
-    title: 'Branding Design Johannesburg | Nostalgic Studio',
+    title: 'Branding Design Johannesburg',
     description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities.',
     url: 'https://www.nostalgic-studio.co.za/services/branding-design',
     siteName: 'Nostalgic Studio',

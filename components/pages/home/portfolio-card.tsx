@@ -24,7 +24,7 @@ export function PortfolioCard({ project, index }: PortfolioCardProps) {
       transition={{ delay: index * 0.1 }}
     >
       <Link
-        href={`/portfolio/${project.slug}`}
+        href={`/projects/${project.slug}`}
         className="group relative block overflow-hidden rounded-2xl bg-card"
       >
         {/* Image */}

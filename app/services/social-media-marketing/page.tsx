@@ -7,14 +7,14 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Social Media Marketing Johannesburg | Grow Your Online Community',
-  description: 'Expert social media marketing in Johannesburg. We help startups and small businesses in South Africa build engaged communities and drive sales through strategic content.',
+  description: 'Expert social media marketing in Johannesburg. We help startups and small businesses build engaged communities and drive sales.',
   keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
   },
   openGraph: {
-    title: 'Social Media Marketing Johannesburg | Nostalgic Studio',
-    description: 'Expert social media marketing in Johannesburg. We help startups and small businesses in South Africa build engaged communities.',
+    title: 'Social Media Marketing Johannesburg',
+    description: 'Expert social media marketing in Johannesburg. We help startups and small businesses build engaged communities.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
     siteName: 'Nostalgic Studio',
     type: 'website',

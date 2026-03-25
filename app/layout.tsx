@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     locale: 'en_ZA',
     url: 'https://www.nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
-    title: 'Nostalgic Studio | Digital Design Agency for Startups',
+    title: 'Nostalgic Studio | Digital Design Agency',
     description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses.',
     images: [
       {
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nostalgic Studio | Digital Design Agency for Startups',
+    title: 'Nostalgic Studio | Digital Design Agency',
     description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },

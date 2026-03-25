@@ -20,9 +20,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Web Design Services Johannesburg | Digital Agency | Nostalgic Studio',
+  title: 'Web Design Services Johannesburg | Digital Agency',
   description:
-    'Expert web design services in Johannesburg. Next.js development, UI/UX design, branding, SEO, and ecommerce solutions for South African businesses.',
+    'Expert web design services in Johannesburg. Next.js development, UI/UX design, branding, SEO, and ecommerce solutions.',
   keywords: [
     'web design services',
     'web design Johannesburg',
@@ -30,16 +30,12 @@ export const metadata: Metadata = {
     'branding services',
     'digital design company',
     'website development',
-    'responsive web design',
-    'logo design services',
-    'brand identity design',
-    'SEO services South Africa',
   ],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services',
   },
   openGraph: {
-    title: 'Web Design Services Johannesburg | Nostalgic Studio',
+    title: 'Web Design Services Johannesburg',
     description:
       'Expert web design, UI/UX, branding, and digital services. Next.js development and SEO for South African businesses.',
     url: 'https://www.nostalgic-studio.co.za/services',

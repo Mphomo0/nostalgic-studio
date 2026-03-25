@@ -6,14 +6,14 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Web Hosting Johannesburg | Fast & Reliable Hosting Services',
-  description: 'Experience blazing-fast web hosting in Johannesburg. We provide secure, scalable, and optimized hosting solutions for Next.js websites and South African businesses.',
+  title: 'Web Hosting Johannesburg | Fast & Reliable Hosting',
+  description: 'Experience blazing-fast web hosting in Johannesburg. We provide secure, scalable, and optimized hosting solutions.',
   keywords: ['Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-hosting',
   },
   openGraph: {
-    title: 'Web Hosting Johannesburg | Nostalgic Studio',
+    title: 'Web Hosting Johannesburg',
     description: 'Experience blazing-fast web hosting in Johannesburg. We provide secure, scalable, and optimized hosting solutions.',
     url: 'https://www.nostalgic-studio.co.za/services/web-hosting',
     siteName: 'Nostalgic Studio',

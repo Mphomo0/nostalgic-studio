@@ -3,8 +3,8 @@ import ContactForm from '@/components/pages/contact/ContactForm'
 import ContactInfo from '@/components/pages/contact/ContactInfo'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Web Design Quote Johannesburg | Nostalgic Studio',
-  description: 'Contact Nostalgic Studio for a free consultation on web design, SEO, and branding services. Based in Johannesburg, South Africa. We respond within 24 hours.',
+  title: 'Contact Us | Get a Free Quote',
+  description: 'Contact Nostalgic Studio for a free consultation on web design, SEO, and branding services. Based in Johannesburg, South Africa.',
   keywords: [
     'contact Nostalgic Studio',
     'get a quote web design',

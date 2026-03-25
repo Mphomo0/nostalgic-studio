@@ -6,7 +6,7 @@ import Testimonials from '@/components/pages/home/Testimonials'
 import CTA from '@/components/pages/home/CTA'
 
 export const metadata: Metadata = {
-  title: 'Web Design Johannesburg | Digital Agency | Nostalgic Studio',
+  title: 'Web Design Johannesburg | Digital Agency',
   description: 'Premier web design agency in Johannesburg. Expert Next.js websites, UI/UX design, and branding for South African businesses.',
   keywords: [
     'Web Design Johannesburg',

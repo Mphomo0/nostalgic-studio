@@ -7,13 +7,13 @@ import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'UX/UI Design Johannesburg | User-Centric Digital Experiences',
-  description: 'Elevate your digital product with professional UX/UI design in Johannesburg. We create intuitive, engaging, and high-converting interfaces for South African startups.',
+  description: 'Elevate your digital product with professional UX/UI design in Johannesburg. We create intuitive, engaging interfaces.',
   keywords: ['UX/UI Design Johannesburg', 'User Experience Design South Africa', 'Interface Design Johannesburg', 'Mobile App Design South Africa', 'Web Design Agency'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
   },
   openGraph: {
-    title: 'UX/UI Design Johannesburg | Nostalgic Studio',
+    title: 'UX/UI Design Johannesburg',
     description: 'Elevate your digital product with professional UX/UI design in Johannesburg. We create intuitive, engaging interfaces.',
     url: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
     siteName: 'Nostalgic Studio',

@@ -7,7 +7,7 @@ import AboutTeam from '@/components/pages/about/AboutTeam'
 import Testimonials from '@/components/pages/home/Testimonials'
 
 export const metadata: Metadata = {
-  title: 'About Us | Digital Design Agency Johannesburg | Nostalgic Studio',
+  title: 'About Us | Digital Design Agency Johannesburg',
   description:
     'Learn about Nostalgic Studio - a digital design agency founded in 2016 in Johannesburg. We blend timeless design principles with modern Next.js innovation to create memorable digital experiences for startups.',
   keywords: [

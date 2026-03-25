@@ -6,8 +6,8 @@ import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg | Expert SEO Agency | Nostalgic Studio',
-  description: 'Professional SEO services in Johannesburg. Boost your Google rankings with technical SEO, local SEO, and Next.js optimization for South African businesses.',
+  title: 'SEO Services Johannesburg | Expert SEO Agency',
+  description: 'Professional SEO services in Johannesburg. Boost your Google rankings with technical SEO, local SEO, and Next.js optimization.',
   keywords: [
     'SEO Services Johannesburg',
     'Search Engine Optimization Johannesburg',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
   },
   openGraph: {
-    title: 'SEO Services Johannesburg | Nostalgic Studio',
+    title: 'SEO Services Johannesburg',
     description: 'Professional SEO services in Johannesburg. Boost your Google rankings with technical SEO, local SEO, and Next.js optimization.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
     siteName: 'Nostalgic Studio',
