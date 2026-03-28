@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Next.js Website Design | Fast & Scalable',
@@ -51,33 +54,28 @@ export default function NextjsWebsiteDesign() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Why should I choose Next.js for my website?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Next.js offers unparalleled speed, excellent SEO capabilities, and a great developer experience, making it the ideal choice for modern, scalable websites and applications.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Is Next.js good for small businesses in South Africa?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely. Next.js provides a competitive edge by ensuring your website loads instantly even on slower mobile connections, which is crucial for the South African market.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'Why should I choose Next.js for my website?',
+      answer: 'Next.js offers unparalleled speed, excellent SEO capabilities, and a great developer experience, making it the ideal choice for modern, scalable websites and applications.'
+    },
+    {
+      question: 'Is Next.js good for small businesses in South Africa?',
+      answer: 'Absolutely. Next.js provides a competitive edge by ensuring your website loads instantly even on slower mobile connections, which is crucial for the South African market.'
+    },
+    {
+      question: 'How is Next.js different from WordPress?',
+      answer: 'Next.js provides a much faster and more secure environment than WordPress. It allows for custom-built features and better SEO, as it does not rely on heavy plugins.'
+    },
+    {
+      question: 'Can you migrate my current site to Next.js?',
+      answer: 'Yes, we specialize in migrating legacy websites to modern Next.js architectures, improving performance and user experience in the process.'
+    }
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -142,25 +140,23 @@ export default function NextjsWebsiteDesign() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Next.js Development FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">How is Next.js different from standard WordPress?</h3>
-              <p className="text-muted-foreground">
-                Next.js provides a much faster and more secure environment than WordPress. It allows for 
-                custom-built features and better SEO, as it doesn't rely on heavy plugins.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Can you migrate my current site to Next.js?</h3>
-              <p className="text-muted-foreground">
-                Yes, we specialize in migrating legacy websites to modern Next.js architectures, 
-                improving performance and user experience in the process.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Next.js Development FAQ" />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Next.js is ideal for South Africa', detail: 'instant load times give a competitive edge on slower mobile networks' },
+            { point: 'Better than WordPress', detail: 'faster, more secure, and no reliance on heavy plugins' },
+            { point: 'SSR and SSG built-in', detail: 'server-side rendering and static generation for maximum SEO' },
+            { point: 'Migration support', detail: 'we specialize in migrating legacy sites to modern Next.js architectures' },
+            { point: 'Passes Core Web Vitals', detail: 'every site is optimized for Google performance scoring' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's Next.js website design and development services in Johannesburg, South Africa. We build blazing-fast, SEO-ready web applications for startups across Gauteng."
+          covers={['Next.js Development', 'Server-Side Rendering', 'Static Site Generation', 'Performance Optimization', 'Legacy Migration']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Experience the Next.js Advantage</h2>

@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Branding Design Johannesburg | Visual Identity',
@@ -51,33 +54,28 @@ export default function BrandingDesign() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is included in a branding package?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our branding packages typically include logo design, color palette selection, typography, and brand guidelines to ensure consistency across all your marketing materials.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does the branding process take?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A comprehensive branding project usually takes 3-6 weeks, from initial research and concepts to final delivery of assets.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'What is included in a branding package?',
+      answer: 'Our branding packages include logo design, color palette selection, typography, and brand guidelines to ensure consistency across all your marketing materials.'
+    },
+    {
+      question: 'How long does the branding process take?',
+      answer: 'A comprehensive branding project usually takes 3–6 weeks, from initial research and concepts to final delivery of assets.'
+    },
+    {
+      question: 'Can you rebrand my existing business?',
+      answer: 'Absolutely. We specialize in refreshing and revitalizing established brands to better align with modern market expectations and business goals.'
+    },
+    {
+      question: 'Do I own the final designs?',
+      answer: 'Yes, upon completion and full payment, you will have 100% ownership of all final branding assets and files.'
+    }
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -149,25 +147,23 @@ export default function BrandingDesign() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Branding FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Can you rebrand my existing business?</h3>
-              <p className="text-muted-foreground">
-                Absolutely. We specialize in refreshing and revitalizing established brands to 
-                better align with modern market expectations and business goals.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Do I own the final designs?</h3>
-              <p className="text-muted-foreground">
-                Yes, upon completion and full payment, you will have 100% ownership of all 
-                final branding assets and files.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Branding Design FAQ" />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Strong brand identity', detail: 'increases trust and recognition with South African customers' },
+            { point: 'Professional logo and colour systems', detail: 'ensure consistent presence across all platforms' },
+            { point: 'Brand style guides', detail: 'help your team maintain design consistency as your business grows' },
+            { point: 'Nostalgic Studio', detail: 'has designed brands for 70+ Johannesburg startups since 2016' },
+            { point: 'Full ownership', detail: 'all final branding assets are handed over upon project completion' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page was written by the Nostalgic Studio design team in Johannesburg, South Africa. We have delivered branding and visual identity projects for startups across Gauteng since 2016."
+          covers={['Logo Design', 'Visual Identity', 'Brand Strategy', 'Style Guides', 'Marketing Assets']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Build a Brand That Matters</h2>

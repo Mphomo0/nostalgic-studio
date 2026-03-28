@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Web Maintenance | Proactive Website Support',
@@ -168,6 +170,22 @@ export default function WebMaintenance() {
             </div>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Proactive monitoring', detail: 'we detect and fix issues before your customers even notice them' },
+            { point: 'Dependency updates prevent security vulnerabilities', detail: 'outdated packages are the most common attack vector for websites' },
+            { point: 'Performance audits included', detail: 'we regularly check Core Web Vitals and fix regressions' },
+            { point: 'Priority content updates', detail: 'maintenance plan clients get priority scheduling for content changes' },
+            { point: 'Flexible plans', detail: 'cancel or change your subscription with one month\'s notice' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's web maintenance services in Johannesburg, South Africa. We provide security monitoring, software updates, performance optimization, and daily backups."
+          covers={['Web Maintenance Johannesburg', 'Security Monitoring', 'Software Updates', 'Performance Optimization', 'Website Support']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Secure Your Website's Future</h2>

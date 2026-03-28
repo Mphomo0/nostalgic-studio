@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'SEO Services Johannesburg | Expert SEO Agency',
@@ -58,57 +61,44 @@ export default function SEOServicesJohannesburg() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What are the benefits of SEO for my Johannesburg business?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'SEO increases your visibility in local search results, driving more organic traffic to your website, and helping you reach potential customers in Johannesburg and across South Africa.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How does Next.js improve SEO?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Next.js provides superior SEO through server-side rendering (SSR) and static site generation (SSG), making it easier for search engine bots to crawl and index your content quickly.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does SEO take to show results?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'SEO is a long-term strategy. Initial improvements appear in 3-4 months, with significant results typically achieved after 6-12 months of consistent optimization.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'What is local SEO?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Local SEO optimizes your online presence to attract more customers from local searches. It includes Google Business Profile optimization, local keywords, and location-specific content.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does SEO cost in South Africa?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'SEO services in South Africa typically range from R3,000-R15,000 per month depending on competitiveness, scope, and goals. We offer tailored packages for businesses of all sizes.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'What are the benefits of SEO for my Johannesburg business?',
+      answer: 'SEO increases your visibility in local search results, driving more organic traffic to your website and helping you reach potential customers in Johannesburg and across South Africa.'
+    },
+    {
+      question: 'How does Next.js improve SEO?',
+      answer: 'Next.js provides superior SEO through server-side rendering (SSR) and static site generation (SSG), making it easier for search engine bots to crawl and index your content quickly.'
+    },
+    {
+      question: 'How long does SEO take to show results?',
+      answer: 'SEO is a long-term strategy. Initial improvements appear in 3–4 months, with significant results typically achieved after 6–12 months of consistent optimization.'
+    },
+    {
+      question: 'What is local SEO?',
+      answer: 'Local SEO optimizes your online presence to attract more customers from local searches. It includes Google Business Profile optimization, local keywords, and location-specific content.'
+    },
+    {
+      question: 'How much does SEO cost in South Africa?',
+      answer: 'SEO services in South Africa typically range from R3,000–R15,000 per month depending on competitiveness, scope, and goals. We offer tailored packages for businesses of all sizes.'
+    },
+    {
+      question: 'Do you focus on local Johannesburg search?',
+      answer: 'Yes, our local SEO strategies are specifically designed to help businesses in Johannesburg and surrounding areas rank for location-based search terms.'
+    },
+    {
+      question: 'What technical SEO do you offer?',
+      answer: 'We offer comprehensive technical SEO including site speed optimization, XML sitemaps, robots.txt configuration, schema markup, canonical tags, and Core Web Vitals improvement.'
+    },
+    {
+      question: 'Do you guarantee Google rankings?',
+      answer: 'No ethical SEO provider can guarantee specific rankings. We promise transparent reporting, white-hat techniques, and measurable improvements in traffic and conversions.'
+    }
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -190,39 +180,7 @@ export default function SEOServicesJohannesburg() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-16">
-          <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">How long does it take to see SEO results?</h3>
-              <p className="text-muted-foreground">
-                SEO is a long-term strategy. While some improvements can be seen in 3-4 months, 
-                significant results usually take 6-12 months of consistent effort.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Do you focus on local Johannesburg search?</h3>
-              <p className="text-muted-foreground">
-                Yes, our local SEO strategies are specifically designed to help businesses in 
-                Johannesburg and surrounding areas rank for location-based search terms.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">What technical SEO do you offer?</h3>
-              <p className="text-muted-foreground">
-                We offer comprehensive technical SEO including site speed optimization, XML sitemaps, 
-                robots.txt configuration, schema markup, canonical tags, and Core Web Vitals improvement.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Do you guarantee Google rankings?</h3>
-              <p className="text-muted-foreground">
-                No ethical SEO provider can guarantee specific rankings. We promise transparent reporting, 
-                white-hat techniques, and measurable improvements in traffic and conversions.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="SEO Services FAQ" />
 
         {/* Key Takeaways - GEO */}
         <section className="mb-24" aria-labelledby="takeaways-heading">
@@ -268,6 +226,22 @@ export default function SEOServicesJohannesburg() {
             </div>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Technical SEO first', detail: 'site speed, crawlability, and Core Web Vitals directly impact rankings' },
+            { point: 'Local SEO specialists', detail: 'Google Business Profile and Johannesburg-specific optimizations that drive foot traffic' },
+            { point: 'Long-term results', detail: 'organic traffic compounds over time unlike paid ads that stop when budgets do' },
+            { point: 'Next.js SEO advantage', detail: 'our tech stack gives native SEO capabilities that plugin-based sites cannot match' },
+            { point: 'Transparent reporting', detail: 'monthly reports with keyword rankings, traffic growth, and ROI metrics' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's SEO services in Johannesburg, South Africa. We help startups and businesses improve Google rankings through technical SEO, local SEO, and content optimization."
+          covers={['Technical SEO', 'Local SEO Johannesburg', 'Keyword Research', 'Content Optimization', 'Google Business Profile']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Dominate Search?</h2>

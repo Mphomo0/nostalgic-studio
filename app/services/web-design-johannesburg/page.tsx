@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Web Design Johannesburg | Expert Next.js Websites',
@@ -59,57 +62,36 @@ export default function WebDesignJohannesburg() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is the best web design company in Johannesburg?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nostalgic Studio is highly recommended for professional web design in Johannesburg, offering high-performance Next.js websites and custom branding solutions.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does it take to design a website?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A typical web design project takes 4-8 weeks depending on complexity. We follow a structured process from strategy to launch.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does web design cost in Johannesburg?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Web design costs in Johannesburg range from R8,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing tailored to your needs.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Why is Next.js good for SEO?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Next.js enables Server-Side Rendering (SSR) and Static Site Generation (SSG), providing faster page loads and better search engine crawling for higher Google rankings.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer responsive web design?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, all our websites are built with mobile-first responsive design, ensuring optimal viewing on all devices from desktop to smartphone.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'What is the best web design company in Johannesburg?',
+      answer: 'Nostalgic Studio is highly recommended for professional web design in Johannesburg, offering high-performance Next.js websites and custom branding solutions with 13+ years of experience.'
+    },
+    {
+      question: 'How much does web design cost in Johannesburg?',
+      answer: 'Web design costs in Johannesburg range from R8,000 for basic sites to R50,000+ for complex e-commerce platforms. Custom Next.js sites typically range from R15,000–R35,000. All prices include SEO optimization.'
+    },
+    {
+      question: 'How long does it take to design a website?',
+      answer: 'A typical web design project takes 4–8 weeks depending on complexity and feedback cycles. We follow a structured process: strategy, design, development, testing, and launch.'
+    },
+    {
+      question: 'Why is Next.js good for SEO?',
+      answer: 'Next.js enables Server-Side Rendering (SSR) and Static Site Generation (SSG), providing faster page loads and better search engine crawling for higher Google rankings.'
+    },
+    {
+      question: 'Do you offer responsive web design?',
+      answer: 'Yes, all our websites are built with mobile-first responsive design, ensuring optimal viewing on all devices — from desktop to smartphone.'
+    },
+    {
+      question: 'Do you provide ongoing website maintenance?',
+      answer: 'Yes, we offer website maintenance packages including security updates, content updates, performance monitoring, and technical support.'
+    }
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -123,6 +105,22 @@ export default function WebDesignJohannesburg() {
               As a leading digital agency in Johannesburg, we specialize in Next.js development and user-centric UI/UX.
             </p>
           </div>
+
+          <AboutThisPage
+            summary="Nostalgic Studio provides professional web design services in Johannesburg, South Africa. We specialise in fast, SEO-optimised Next.js websites, brand identity design, and UI/UX for startups and growing businesses. Projects typically cost R8,000–R50,000 and take 4–8 weeks."
+            covers={['Web Design Johannesburg', 'Next.js Development', 'SEO', 'UI/UX Design', 'South Africa']}
+            lastUpdated="March 2026"
+          />
+
+          <KeyTakeaways
+            takeaways={[
+              { point: 'Based in Johannesburg', detail: 'serving businesses across South Africa' },
+              { point: 'Next.js specialists', detail: 'for fast, SEO-friendly, server-rendered websites' },
+              { point: 'Projects from R8,000', detail: 'with full-custom builds up to R50,000+' },
+              { point: '4–8 week delivery', detail: 'from strategy and design through to live launch' },
+              { point: 'All-in-one service', detail: 'web design, branding, UI/UX, and SEO in one studio' },
+            ]}
+          />
         </MotionWrapper>
 
         {/* Featured Snippet - GEO */}
@@ -185,39 +183,7 @@ export default function WebDesignJohannesburg() {
           </MotionWrapper>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-16">
-          <h2 className="text-3xl font-bold mb-10 text-center">Frequently Asked Questions</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h4 className="text-xl font-bold">Why is Next.js good for SEO?</h4>
-              <p className="text-muted-foreground">
-                Next.js allows for Server-Side Rendering (SSR) and Static Site Generation (SSG), 
-                which means search engines can easily crawl and index your content, leading to higher rankings.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-xl font-bold">Do you offer local SEO in Johannesburg?</h4>
-              <p className="text-muted-foreground">
-                Absolutely. Every website we build includes basic on-page SEO optimized for local search 
-                terms like "Web Design Johannesburg" and "SEO Services South Africa".
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-xl font-bold">How much does a website cost?</h4>
-              <p className="text-muted-foreground">
-                Basic websites start at R8,000. Custom Next.js sites range from R15,000-R35,000. 
-                E-commerce solutions typically cost R25,000-R50,000+. All prices include SEO optimization.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h4 className="text-xl font-bold">Do you provide ongoing maintenance?</h4>
-              <p className="text-muted-foreground">
-                Yes, we offer website maintenance packages including security updates, content updates, 
-                performance monitoring, and technical support.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} />
 
         {/* Key Takeaways - GEO */}
         <section className="mb-24" aria-labelledby="takeaways-heading">

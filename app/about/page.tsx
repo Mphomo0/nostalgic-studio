@@ -5,6 +5,7 @@ import AboutStory from '@/components/pages/about/AboutStory'
 import AboutValues from '@/components/pages/about/AboutValues'
 import AboutTeam from '@/components/pages/about/AboutTeam'
 import Testimonials from '@/components/pages/home/Testimonials'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'About Us | Digital Design Agency Johannesburg',
@@ -39,7 +40,7 @@ export default function page() {
     image: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
     '@id': 'https://nostalgic-studio.co.za/about',
     url: 'https://nostalgic-studio.co.za',
-    telephone: '+27-XXX-XXXX',
+    telephone: '+27-82-448-3273',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Johannesburg',
@@ -75,8 +76,25 @@ export default function page() {
     worksFor: {
       '@id': 'https://www.nostalgic-studio.co.za/#organization',
     },
-    url: 'https://nostalgic-studio.co.za',
-    sameAs: ['https://www.linkedin.com/in/mphomoipolai'],
+    url: 'https://nostalgic-studio.co.za/about',
+    sameAs: [
+      'https://www.linkedin.com/in/mphomoipolai',
+      'https://www.instagram.com/studionostalgic',
+    ],
+    knowsAbout: [
+      'Web Design',
+      'UI/UX Design',
+      'Brand Identity',
+      'Next.js Development',
+      'SEO',
+      'Digital Strategy',
+    ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Central University of Technology',
+    },
+    description:
+      'Mpho Moipolai is a Johannesburg-based designer and developer with 10+ years of experience building digital products for startups across South Africa.',
   }
 
   return (
@@ -93,6 +111,17 @@ export default function page() {
           />
         </>
         <AboutHero />
+        <AboutThisPage
+          summary="Nostalgic Studio is a Johannesburg digital design agency founded in 2016 by Mpho Moipolai. We build fast, modern websites and brand identities for startups and growing businesses across South Africa using Next.js and Tailwind CSS."
+          covers={[
+            'Johannesburg Web Design',
+            'Brand Identity',
+            'UI/UX Design',
+            'Next.js Development',
+            'South Africa',
+          ]}
+          lastUpdated="March 2026"
+        />
         <AboutStory />
         <AboutValues />
         <Testimonials />

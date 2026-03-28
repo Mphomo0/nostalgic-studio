@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import { ArrowRight, CheckCircle2, ShoppingCart, CreditCard, Box } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
 
@@ -167,6 +170,22 @@ export default function EcommerceWebsiteDevelopment() {
             </div>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Next.js ecommerce', detail: 'delivers faster load times and higher Google rankings than WordPress stores' },
+            { point: 'South African payment gateways', detail: 'including PayFast, Peach Payments, Yoco, and Ozow are fully integrated' },
+            { point: 'CMS included', detail: 'manage your own products without any technical knowledge' },
+            { point: 'Mobile-optimized', detail: 'shopping cart and checkout experience reduces cart abandonment' },
+            { point: 'Logistics integration', detail: 'automated shipping rates and tracking with local couriers' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's ecommerce website development services in Johannesburg, South Africa. We build custom Next.js online stores with South African payment gateways for businesses ready to sell online."
+          covers={['Ecommerce Development', 'Next.js Online Stores', 'Payment Gateway Integration', 'Inventory Management', 'CMS']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Start Selling Online Today</h2>

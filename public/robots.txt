@@ -1,13 +1,38 @@
 User-agent: *
 Allow: /
 
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Google AI Training (Gemini)
+User-agent: Google-Extended
+Allow: /
+
+# AI Answer Engines
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 User-agent: CCBot
+Allow: /
+
+# ByteDance / TikTok AI
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://www.nostalgic-studio.co.za/sitemap.xml

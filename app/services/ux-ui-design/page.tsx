@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'UX/UI Design Johannesburg | Intuitive Interfaces',
@@ -51,33 +54,28 @@ export default function UXUIDesign() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is the difference between UX and UI design?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'UX (User Experience) design focuses on the overall feel of the experience and how easy it is for users to achieve their goals, while UI (User Interface) design focuses on the look and layout of the product.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you design for mobile apps as well?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, we specialize in responsive web design as well as dedicated mobile app interfaces, ensuring a seamless experience across all devices.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'What is the difference between UX and UI design?',
+      answer: 'UX (User Experience) focuses on the overall feel and usability, while UI (User Interface) focuses on the visual layout and look of the product.'
+    },
+    {
+      question: 'Do you design for mobile apps as well?',
+      answer: 'Yes, we specialize in responsive web design as well as dedicated mobile app interfaces, ensuring a seamless experience across all devices.'
+    },
+    {
+      question: 'Why is UX design important for my startup?',
+      answer: 'Good UX design reduces user frustration, increases retention, and can significantly improve your conversion rates, giving your startup a better chance of success.'
+    },
+    {
+      question: 'What tools do you use for design?',
+      answer: 'We primarily use Figma for our design work, allowing for real-time collaboration and easy handoff to our Next.js development team.'
+    }
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -151,25 +149,23 @@ export default function UXUIDesign() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">UX/UI FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Why is UX design important for my startup?</h3>
-              <p className="text-muted-foreground">
-                Good UX design reduces user frustration, increases retention, and can significantly 
-                improve your conversion rates, giving your startup a better chance of success.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">What tools do you use for design?</h3>
-              <p className="text-muted-foreground">
-                We primarily use Figma for our design work, allowing for real-time collaboration 
-                and easy handoff to our Next.js development team.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="UX/UI Design FAQ" />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Research-driven design', detail: 'we build user personas and conduct research before creating a single screen' },
+            { point: 'Figma collaboration', detail: 'you can review and comment on designs in real-time before any code is written' },
+            { point: 'Mobile-first in South Africa', detail: 'most SA users are on mobile so we design small-screen first' },
+            { point: 'Design systems for scalability', detail: 'reusable component libraries mean future development is faster and cheaper' },
+            { point: 'Conversion-focused', detail: 'every design decision aims to move users toward your business goals' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's UX/UI design services in Johannesburg. We research, prototype, and design intuitive interfaces for startups and digital products across South Africa."
+          covers={['UX Research', 'UI Design', 'Wireframing', 'Prototyping', 'Design Systems', 'Mobile App Design']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Build a Better Experience</h2>

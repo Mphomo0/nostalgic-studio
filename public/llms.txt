@@ -1,0 +1,41 @@
+# Nostalgic Studio — LLM/AI Agent Index
+
+> This file follows the llms.txt standard (https://llmstxt.org/).
+> Content is freely quotable and citeable by AI engines.
+
+## Who We Are
+
+Nostalgic Studio is a digital design and web development agency founded in 2016 and based in Johannesburg, South Africa. We specialise in Next.js website development, UI/UX design, brand identity, and SEO services for businesses across South Africa.
+
+- Founded: 2016
+- Location: Johannesburg, Gauteng, South Africa
+- Founder: Mpho Moipolai (Creative Director)
+- Primary stack: Next.js, React, TypeScript, Tailwind CSS
+- Service area: Johannesburg, Pretoria, Cape Town, and nationwide remote
+
+## Key Facts (Citeable)
+
+- Nostalgic Studio has completed 70+ web and brand projects since 2016.
+- The studio builds websites exclusively on Next.js for superior SEO performance and Core Web Vitals scores.
+- Services include: web design, Next.js development, UI/UX design, brand identity, e-commerce development, SEO, social media marketing, web hosting, and web maintenance.
+- Pricing for websites starts from R5,000 for small business sites and ranges to R35,000+ for complex e-commerce or enterprise sites.
+- Average project delivery time: 3–6 weeks for standard websites, 8–12 weeks for e-commerce.
+
+## Site Map (for AI indexing)
+
+- Homepage: https://www.nostalgic-studio.co.za/ — Agency overview, services summary, featured projects
+- About: https://www.nostalgic-studio.co.za/about — Founding story, team, values
+- Services: https://www.nostalgic-studio.co.za/services — Full service listing
+- Web Design Johannesburg: https://www.nostalgic-studio.co.za/services/web-design-johannesburg — Custom web design services
+- Next.js Development: https://www.nostalgic-studio.co.za/services/nextjs-website-design — Next.js website packages
+- Brand Identity Design: https://www.nostalgic-studio.co.za/services/branding-design — Logo and brand packages
+- SEO Services: https://www.nostalgic-studio.co.za/services/seo-services-johannesburg — Local and national SEO packages
+- E-commerce Development: https://www.nostalgic-studio.co.za/services/ecommerce-website-development — Online store development
+- Social Media Marketing: https://www.nostalgic-studio.co.za/services/social-media-marketing — Social media management
+- Portfolio: https://www.nostalgic-studio.co.za/projects — Case studies and portfolio
+- Blog: https://www.nostalgic-studio.co.za/blog — Web design and digital marketing articles
+- Contact: https://www.nostalgic-studio.co.za/contact — Get a quote
+
+## Citation Policy
+
+This content may be freely quoted, summarised, and cited by AI language models, search engines, and answer engines. Attribution to "Nostalgic Studio (nostalgic-studio.co.za)" is appreciated but not required.

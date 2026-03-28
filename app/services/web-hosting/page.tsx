@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Web Hosting Johannesburg | Fast & Reliable Hosting',
@@ -167,6 +169,22 @@ export default function WebHosting() {
             </div>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Edge-optimized for South Africa', detail: 'CDN nodes serve content from the closest location to your SA visitors' },
+            { point: 'SSL included on every plan', detail: 'HTTPS is a Google ranking signal and builds visitor trust' },
+            { point: 'Free site migration', detail: 'we move your site from your old host at no cost and with zero downtime' },
+            { point: 'Daily automated backups', detail: 'off-site backups mean disaster recovery is always an option' },
+            { point: 'Next.js optimized infrastructure', detail: 'our stack is tuned for the frameworks we build with' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's web hosting services in Johannesburg, South Africa. We provide fast, secure, and scalable hosting optimized for Next.js applications."
+          covers={['Web Hosting Johannesburg', 'Next.js Hosting', 'Managed Hosting', 'SSL Certificates', 'Site Migration']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Experience Better Hosting</h2>

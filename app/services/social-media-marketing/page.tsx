@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Social Media Marketing | Grow Your Community',
@@ -156,6 +158,22 @@ export default function SocialMediaMarketing() {
             </div>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Platform-specific strategies', detail: 'we match content formats to where your audience spends time in South Africa' },
+            { point: 'Community management included', detail: 'we handle engagement and replies so your audience feels heard' },
+            { point: 'Influencer partnerships', detail: 'we connect brands with local South African influencers that match your niche' },
+            { point: 'Consistent posting calendar', detail: 'frequency is customized per platform and business goal' },
+            { point: 'Metrics that matter', detail: 'engagement, reach, follower growth, and leads — not vanity metrics' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's social media marketing services in Johannesburg, South Africa. We manage organic content, community, and influencer partnerships for startups and SMEs."
+          covers={['Social Media Management', 'Content Creation', 'Community Management', 'Influencer Marketing', 'Platform Strategy']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Social?</h2>

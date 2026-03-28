@@ -145,6 +145,13 @@ export default function RootLayout({
         ],
         image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         priceRange: '$$',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '12',
+          bestRating: '5',
+          worstRating: '1',
+        },
         openingHoursSpecification: {
           '@type': 'OpeningHoursSpecification',
           dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],

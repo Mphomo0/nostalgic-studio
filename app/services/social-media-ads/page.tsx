@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
+import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
   title: 'Social Media Ads Johannesburg | High-ROI Advertising',
@@ -168,6 +171,22 @@ export default function SocialMediaAds() {
             </div>
           </div>
         </section>
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Immediate results', detail: 'social media ads drive traffic and leads almost instantly once campaigns launch' },
+            { point: 'Meta and LinkedIn specialists', detail: 'ideal for reaching consumers and B2B decision-makers in South Africa' },
+            { point: 'Advanced targeting', detail: 'hyper-targeted audiences based on demographics, interests, and behavior' },
+            { point: 'Full creative service', detail: 'ad copy and visual design handled from brief through to publication' },
+            { point: 'Tracked ROI', detail: 'Meta Pixel and LinkedIn Insight Tag measure conversions and return on ad spend' },
+          ]}
+        />
+
+        <AboutThisPage
+          summary="This page covers Nostalgic Studio's social media advertising services in Johannesburg. We manage paid Meta and LinkedIn campaigns for startups and businesses across Gauteng."
+          covers={['Facebook Ads', 'Instagram Advertising', 'LinkedIn Ads', 'Audience Targeting', 'Conversion Tracking']}
+          lastUpdated="March 2026"
+        />
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Ads?</h2>
