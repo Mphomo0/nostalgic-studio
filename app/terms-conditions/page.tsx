@@ -3,7 +3,7 @@ import TermsAndConditions from '@/components/pages/terms/termsandconditions'
 import TermsHero from '@/components/pages/terms/TermsHero'
 
 export const metadata: Metadata = {
-  title: 'Terms and Conditions | Nostalgic Studio',
+  title: 'Terms and Conditions',
   description: 'Terms and conditions for Nostalgic Studio digital design services. Read our service agreement and client responsibilities.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/terms-conditions',

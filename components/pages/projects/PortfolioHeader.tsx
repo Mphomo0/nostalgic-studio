@@ -32,15 +32,35 @@ export default function PortfolioHeader() {
             Featured Projects
           </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-muted-foreground text-lg md:text-xl"
-          >
-            Explore our portfolio of innovative designs and digital solutions
-            that help businesses thrive in the modern world.
-          </motion.p>
+<motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="text-muted-foreground text-lg md:text-xl mb-6"
+        >
+          Explore our portfolio of innovative designs and digital solutions
+          that help businesses thrive in the modern world.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-center"
+        >
+          <div className="p-4">
+            <p className="text-3xl font-bold text-foreground">70+</p>
+            <p className="text-sm text-muted-foreground">Projects Delivered</p>
+          </div>
+          <div className="p-4">
+            <p className="text-3xl font-bold text-foreground">8+</p>
+            <p className="text-sm text-muted-foreground">Years Experience</p>
+          </div>
+          <div className="p-4">
+            <p className="text-3xl font-bold text-foreground">50+</p>
+            <p className="text-sm text-muted-foreground">Happy Clients</p>
+          </div>
+        </motion.div>
         </motion.div>
       </div>
     </section>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.nostalgic-studio.co.za/blog',
   },
   openGraph: {
-    title: 'Blog | Nostalgic Studio',
+    title: 'Blog',
     description:
       'Web design, SEO, and digital marketing insights from Johannesburg\'s leading Next.js agency.',
     url: 'https://www.nostalgic-studio.co.za/blog',

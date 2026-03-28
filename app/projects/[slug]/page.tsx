@@ -31,7 +31,7 @@ export async function generateMetadata({
       canonical: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
     },
     openGraph: {
-      title: `${project.title} | Nostalgic Studio`,
+      title: project.title,
       description: project.description,
       url: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
       siteName: 'Nostalgic Studio',
@@ -101,6 +101,47 @@ export default async function ProjectDetailPage({
         />
       </>
       <ProjectHero slug={slug} />
+      
+      <section className="pb-16 md:pb-24">
+        <div className="container-wide mx-auto px-4 md:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 text-foreground">Project Overview</h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              {project.description}
+            </p>
+            
+            <h3 className="text-xl font-bold mb-4 text-foreground">What We Delivered</h3>
+            <ul className="space-y-3 mb-8">
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                <span className="text-muted-foreground">Custom website design tailored to brand identity</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                <span className="text-muted-foreground">Responsive layout optimized for all devices</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                <span className="text-muted-foreground">SEO-optimized structure for better search visibility</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                <span className="text-muted-foreground">Fast loading times with optimized performance</span>
+              </li>
+            </ul>
+            
+            <h3 className="text-xl font-bold mb-4 text-foreground">Technologies Used</h3>
+            <div className="flex flex-wrap gap-2">
+              {['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'].map((tech) => (
+                <span key={tech} className="px-3 py-1 bg-secondary rounded-full text-sm text-muted-foreground">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <ProjectCTA />
     </div>
   )
