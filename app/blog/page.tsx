@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Blog | Web Design & Digital Marketing Tips | Nostalgic Studio',
+  title: 'Blog | Web Design & Digital Marketing Tips',
   description:
     'Expert articles on web design, Next.js development, SEO, and digital marketing from the Nostalgic Studio team in Johannesburg.',
   alternates: {

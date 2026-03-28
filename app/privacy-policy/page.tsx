@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.nostalgic-studio.co.za/privacy-policy',
   },
   openGraph: {
-    title: 'Privacy Policy | Nostalgic Studio',
+title: 'Privacy Policy',
     description: 'Privacy policy for Nostalgic Studio. Learn how we collect, use, and protect your personal information.',
     url: 'https://www.nostalgic-studio.co.za/privacy-policy',
     siteName: 'Nostalgic Studio',

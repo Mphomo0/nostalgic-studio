@@ -4,7 +4,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 
 export const metadata: Metadata = {
-  title: 'How Much Does a Website Cost in South Africa? (2026 Guide) | Nostalgic Studio',
+  title: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
   description:
     'A transparent, up-to-date breakdown of website design and development pricing in South Africa — from R5,000 basic sites to R50,000+ e-commerce platforms.',
   alternates: {

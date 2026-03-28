@@ -6,7 +6,7 @@ import { CitationBlock } from '@/components/geo/CitationBlock'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Why Next.js Is the Best Framework for SEO in 2026 | Nostalgic Studio',
+  title: 'Why Next.js Is the Best Framework for SEO in 2026',
   description:
     'Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google in 2026.',
   alternates: {

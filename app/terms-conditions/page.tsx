@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.nostalgic-studio.co.za/terms-conditions',
   },
   openGraph: {
-    title: 'Terms and Conditions | Nostalgic Studio',
+title: 'Terms and Conditions',
     description: 'Terms and conditions for Nostalgic Studio digital design services.',
     url: 'https://www.nostalgic-studio.co.za/terms-conditions',
     siteName: 'Nostalgic Studio',

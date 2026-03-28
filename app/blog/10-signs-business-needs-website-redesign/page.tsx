@@ -4,7 +4,7 @@ import { AlertTriangle, CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
 
 export const metadata: Metadata = {
-  title: '10 Signs Your Business Website Needs a Redesign | Nostalgic Studio',
+  title: '10 Signs Your Business Website Needs a Redesign',
   description:
     'Is your website costing you customers? These 10 warning signs indicate it\'s time to invest in a professional redesign — from slow loading to outdated design.',
   alternates: {
