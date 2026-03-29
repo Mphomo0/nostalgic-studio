@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
+import AuthorBio from '@/components/geo/AuthorBio'
+import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
   title: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
@@ -62,39 +64,31 @@ const pricingTiers = [
 ]
 
 export default function WebsiteCostSAArticle() {
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-headline: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
-  datePublished: '2026-03-22',
-  dateModified: '2026-03-22',
-  author: {
-    '@type': 'Person',
-    name: 'Mpho Moipolai',
-    url: 'https://www.nostalgic-studio.co.za/about',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Nostalgic Studio',
-    url: 'https://www.nostalgic-studio.co.za',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-    },
-  },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
-  },
-    description:
-      'A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms.',
-  }
+  const schema = articleSchema({
+    url: '/blog/website-cost-south-africa-2026',
+    headline: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
+    description: 'A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms.',
+    datePublished: '2026-03-22',
+    dateModified: '2026-03-29',
+    wordCount: 1200,
+    articleSection: 'Pricing',
+  })
+
+  const breadcrumb = breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Website Cost South Africa 2026', url: '/blog/website-cost-south-africa-2026' },
+  ])
 
   return (
     <main className="pt-32 pb-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       <article className="container-wide mx-auto px-4 max-w-3xl">
@@ -196,6 +190,8 @@ headline: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
         </div>
 
         <FaqSection faqs={faqs} title="Website Cost FAQs" />
+
+        <AuthorBio />
       </article>
     </main>
   )

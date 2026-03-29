@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AlertTriangle, CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
+import AuthorBio from '@/components/geo/AuthorBio'
+import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
   title: '10 Signs Your Business Website Needs a Redesign',
@@ -102,39 +104,31 @@ const faqs = [
 ]
 
 export default function RedesignSignsArticle() {
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+  const schema = articleSchema({
+    url: '/blog/10-signs-business-needs-website-redesign',
     headline: '10 Signs Your Business Website Needs a Redesign',
+    description: 'Is your website costing you customers? These 10 warning signs indicate it\'s time to invest in a professional redesign.',
     datePublished: '2026-03-24',
-    dateModified: '2026-03-24',
-    author: {
-      '@type': 'Person',
-      name: 'Mpho Moipolai',
-      url: 'https://www.nostalgic-studio.co.za/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      url: 'https://www.nostalgic-studio.co.za',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-      },
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
-    },
-    description:
-      'Is your website costing you customers? These 10 warning signs indicate it\'s time to invest in a professional redesign.',
-  }
+    dateModified: '2026-03-29',
+    wordCount: 1100,
+    articleSection: 'Strategy',
+  })
+
+  const breadcrumb = breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: '10 Signs You Need a Redesign', url: '/blog/10-signs-business-needs-website-redesign' },
+  ])
 
   return (
     <main className="pt-32 pb-20">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       <article className="container-wide mx-auto px-4 max-w-3xl">
@@ -196,6 +190,8 @@ export default function RedesignSignsArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Website Redesign FAQs" />
+
+        <AuthorBio />
       </article>
     </main>
   )

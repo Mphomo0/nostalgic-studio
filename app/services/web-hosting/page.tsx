@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 
@@ -53,33 +54,32 @@ export default function WebHosting() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Where are your hosting servers located?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We utilize edge computing and global CDN networks, ensuring your website is served from the closest possible server to your visitors in Johannesburg and across South Africa for maximum speed.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Is SSL included with your hosting?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, every hosting plan includes a free SSL certificate to ensure your website is secure and trusted by both users and search engines.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'Where are your hosting servers located?',
+      answer: 'We utilise edge computing and global CDN networks, ensuring your website is served from the closest possible server to your visitors in Johannesburg and across South Africa for maximum speed.',
+    },
+    {
+      question: 'Is SSL included with your hosting?',
+      answer: 'Yes, every hosting plan includes a free SSL certificate to ensure your website is secure and trusted by both users and search engines. HTTPS is also a Google ranking signal.',
+    },
+    {
+      question: 'Will you migrate my site for me?',
+      answer: 'Yes, we offer free migration services for all new hosting clients. Our team handles the entire process, ensuring a smooth transition from your old provider with zero downtime.',
+    },
+    {
+      question: 'What kind of support do you offer?',
+      answer: 'We provide dedicated technical support via email and WhatsApp during business hours (8am–5pm SAST, Monday to Friday). Emergency support is available 24/7 for critical issues affecting your live website.',
+    },
+    {
+      question: 'How much does web hosting cost?',
+      answer: 'Our managed hosting packages start from R500 per month for basic sites and scale up to R3,000+ per month for high-traffic ecommerce stores. All plans include SSL, CDN, daily backups, and security monitoring.',
+    },
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -96,6 +96,25 @@ export default function WebHosting() {
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Managed Web Hosting?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Managed web hosting is a service where the hosting provider handles all technical aspects 
+              of running a website — including server maintenance, security updates, backups, and performance 
+              optimisation — so the business owner can focus on their core operations.
+            </p>
+            <p className="text-muted-foreground">
+              Website downtime costs South African businesses an average of R5,000–R50,000 per hour depending on 
+              the business type. Managed hosting with 99.9% uptime guarantees reduces this risk to less than 
+              8.7 hours of downtime per year, compared to 43+ hours with budget hosting providers.
+            </p>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
@@ -150,25 +169,7 @@ export default function WebHosting() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Web Hosting FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Will you migrate my site for me?</h3>
-              <p className="text-muted-foreground">
-                Yes, we offer free migration services for all new hosting clients, 
-                ensuring a smooth transition from your old provider.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">What kind of support do you offer?</h3>
-              <p className="text-muted-foreground">
-                We provide dedicated technical support via email and WhatsApp, 
-                helping you resolve any hosting-related issues quickly.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Web Hosting FAQ" />
 
         <KeyTakeaways
           takeaways={[

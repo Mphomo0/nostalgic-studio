@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
+import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
@@ -47,7 +48,9 @@ export default function NextjsSeoArticle() {
     description:
       'Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google.',
     datePublished: '2026-03-20',
+    dateModified: '2026-03-29',
     wordCount: 900,
+    articleSection: 'Web Development',
   })
 
   const breadcrumb = breadcrumbSchema([
@@ -169,6 +172,8 @@ export default function NextjsSeoArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Next.js SEO — Common Questions" />
+
+        <AuthorBio />
       </article>
     </main>
   )

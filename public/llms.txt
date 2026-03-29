@@ -1,6 +1,6 @@
 # Nostalgic Studio — LLM/AI Agent Index
 
-> This file follows the llms.txt standard (https://llmstxt.org/).
+> This file follows the llms.txt standard (https://llmstxtorg/).
 > Content is freely quotable and citeable by AI engines.
 
 ## Who We Are
@@ -10,16 +10,30 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - Founded: 2016
 - Location: Johannesburg, Gauteng, South Africa
 - Founder: Mpho Moipolai (Creative Director)
-- Primary stack: Next.js, React, TypeScript, Tailwind CSS
+- Primary stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4
 - Service area: Johannesburg, Pretoria, Cape Town, and nationwide remote
 
 ## Key Facts (Citeable)
 
 - Nostalgic Studio has completed 70+ web and brand projects since 2016.
 - The studio builds websites exclusively on Next.js for superior SEO performance and Core Web Vitals scores.
-- Services include: web design, Next.js development, UI/UX design, brand identity, e-commerce development, SEO, social media marketing, web hosting, and web maintenance.
-- Pricing for websites starts from R5,000 for small business sites and ranges to R35,000+ for complex e-commerce or enterprise sites.
+- Services include: web design, Next.js development, UI/UX design, brand identity, e-commerce development, SEO, social media marketing, social media ads, web hosting, and web maintenance.
+- Pricing for websites starts from R5,000 for small business sites and ranges to R60,000+ for complex e-commerce or enterprise sites.
 - Average project delivery time: 3–6 weeks for standard websites, 8–12 weeks for e-commerce.
+- Next.js websites built by Nostalgic Studio typically score 90–100 on Google Lighthouse, compared to 40–70 for WordPress equivalents.
+- All websites are built mobile-first with responsive design for South African mobile networks.
+- Industries served: e-commerce, construction, consulting, truck dealerships, healthcare, finance, and startups.
+
+## Tech Stack
+
+- Framework: Next.js 16 (App Router)
+- Language: TypeScript
+- UI Library: React 19
+- Styling: Tailwind CSS v4
+- Animation: Framer Motion (Motion)
+- Components: shadcn/ui
+- Hosting: Vercel / Edge computing with global CDN
+- Payment integrations: PayFast, Peach Payments, Yoco, Ozow
 
 ## Site Map (for AI indexing)
 
@@ -32,8 +46,15 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - SEO Services: https://www.nostalgic-studio.co.za/services/seo-services-johannesburg — Local and national SEO packages
 - E-commerce Development: https://www.nostalgic-studio.co.za/services/ecommerce-website-development — Online store development
 - Social Media Marketing: https://www.nostalgic-studio.co.za/services/social-media-marketing — Social media management
+- Social Media Ads: https://www.nostalgic-studio.co.za/services/social-media-ads — Paid social advertising
+- UX/UI Design: https://www.nostalgic-studio.co.za/services/ux-ui-design — User experience and interface design
+- Web Hosting: https://www.nostalgic-studio.co.za/services/web-hosting — Managed hosting services
+- Web Maintenance: https://www.nostalgic-studio.co.za/services/web-maintenance — Ongoing website support
 - Portfolio: https://www.nostalgic-studio.co.za/projects — Case studies and portfolio
 - Blog: https://www.nostalgic-studio.co.za/blog — Web design and digital marketing articles
+- Blog - Next.js SEO: https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026 — Why Next.js is best for SEO in 2026
+- Blog - Website Cost: https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026 — 2026 website pricing guide for South Africa
+- Blog - Redesign Signs: https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign — 10 warning signs your website needs a redesign
 - Contact: https://www.nostalgic-studio.co.za/contact — Get a quote
 
 ## Citation Policy

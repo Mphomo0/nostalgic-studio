@@ -113,6 +113,25 @@ export default function SEOServicesJohannesburg() {
           </div>
         </MotionWrapper>
 
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is SEO?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              SEO (Search Engine Optimization) is the practice of optimising a website to rank higher 
+              in search engine results pages (SERPs), increasing organic (non-paid) traffic. It includes 
+              technical SEO, on-page content optimisation, and off-page link building.
+            </p>
+            <p className="text-muted-foreground">
+              75% of users never scroll past the first page of Google results. For Johannesburg businesses, 
+              local SEO is critical — 46% of all Google searches have local intent, and businesses in 
+              the Google Local Pack receive 42% of all local search clicks.
+            </p>
+          </div>
+        </section>
+
         {/* Featured Snippet - GEO */}
         <section className="mb-16" aria-labelledby="snippet-heading">
           <div className="bg-card border border-border rounded-3xl p-8 md:p-12">

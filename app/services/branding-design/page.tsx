@@ -93,6 +93,25 @@ export default function BrandingDesign() {
           </div>
         </MotionWrapper>
 
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Brand Identity Design?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Brand identity design is the process of creating a visual system — including logo, colours, 
+              typography, and style guidelines — that represents a business's values and differentiates it in the market. 
+              A strong brand identity increases customer trust and recognition.
+            </p>
+            <p className="text-muted-foreground">
+              Research shows that consistent brand presentation across all platforms increases revenue by up to 23%. 
+              For Johannesburg startups, professional branding establishes credibility from day one, 
+              making it easier to attract investors, partners, and customers in a competitive South African market.
+            </p>
+          </div>
+        </section>
+
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Create a Lasting Impression</h2>

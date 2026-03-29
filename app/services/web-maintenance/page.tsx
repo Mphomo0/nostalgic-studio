@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 
@@ -53,33 +54,32 @@ export default function WebMaintenance() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Why do I need a web maintenance plan?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Regular maintenance ensures your website remains secure, fast, and up-to-date with the latest technology, preventing potential issues before they affect your business.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'What is included in your maintenance services?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our services include regular security scans, software updates, performance optimization, monthly backups, and dedicated time for content updates or small design changes.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'Why do I need a web maintenance plan?',
+      answer: 'Regular maintenance ensures your website remains secure, fast, and up-to-date with the latest technology. Outdated websites are the number one target for hackers, and slow sites lose Google rankings. A maintenance plan prevents these issues before they affect your business.',
+    },
+    {
+      question: 'What is included in your maintenance services?',
+      answer: 'Our services include regular security scans, software updates, performance optimization, monthly backups, and dedicated time for content updates or small design changes. Higher-tier plans include SEO auditing and Core Web Vitals monitoring.',
+    },
+    {
+      question: 'What happens if my site goes down?',
+      answer: 'With our 24/7 monitoring, we are often aware of issues before you are. Our team will work immediately to restore your site as quickly as possible. Critical downtime issues are escalated to senior developers within 30 minutes.',
+    },
+    {
+      question: 'Can I cancel my plan at any time?',
+      answer: 'Yes, our maintenance plans are flexible. You can upgrade, downgrade, or cancel your subscription with one month\'s notice. There are no long-term contracts or cancellation fees.',
+    },
+    {
+      question: 'How much does website maintenance cost in South Africa?',
+      answer: 'Website maintenance in South Africa typically costs R500–R3,000 per month depending on the complexity of your site and the level of support required. Nostalgic Studio offers three tiers: Starter (R500/month), Professional (R1,500/month), and Enterprise (R3,000/month).',
+    },
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -96,6 +96,25 @@ export default function WebMaintenance() {
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Website Maintenance?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Website maintenance is the ongoing process of checking, updating, and optimising a website 
+              to ensure it remains secure, fast, and functional. It includes software updates, security 
+              monitoring, performance optimisation, content updates, and regular backups.
+            </p>
+            <p className="text-muted-foreground">
+              According to industry data, 60% of small business websites have at least one critical vulnerability. 
+              Regular maintenance reduces security risks by 95% and ensures websites maintain their Google rankings. 
+              The average cost of a website hack for a South African small business is R15,000–R75,000 in recovery costs.
+            </p>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
@@ -151,25 +170,7 @@ export default function WebMaintenance() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Maintenance FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">What happens if my site goes down?</h3>
-              <p className="text-muted-foreground">
-                With our 24/7 monitoring, we're often aware of issues before you are. 
-                Our team will work immediately to restore your site as quickly as possible.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Can I cancel my plan at any time?</h3>
-              <p className="text-muted-foreground">
-                Yes, our maintenance plans are flexible. You can upgrade, downgrade, or 
-                cancel your subscription with one month's notice.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Web Maintenance FAQ" />
 
         <KeyTakeaways
           takeaways={[

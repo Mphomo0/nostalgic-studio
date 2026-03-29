@@ -93,6 +93,25 @@ export default function NextjsWebsiteDesign() {
           </div>
         </MotionWrapper>
 
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Next.js?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Next.js is an open-source React framework developed by Vercel that enables server-side rendering, 
+              static site generation, and incremental static regeneration. It is the leading framework for building 
+              high-performance, SEO-friendly websites and web applications.
+            </p>
+            <p className="text-muted-foreground">
+              Next.js websites typically achieve 90–100 Lighthouse performance scores, compared to 40–70 for WordPress. 
+              For South African businesses, this means faster load times on mobile networks — a critical advantage 
+              given that 60%+ of web traffic in South Africa comes from mobile devices.
+            </p>
+          </div>
+        </section>
+
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Why We Specialize in Next.js</h2>

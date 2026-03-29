@@ -74,7 +74,7 @@ export function webPageSchema(opts: {
 }
 
 /**
- * Build an Article schema for blog posts.
+ * Build a BlogPosting schema for blog posts.
  */
 export function articleSchema(opts: {
   url: string
@@ -84,10 +84,11 @@ export function articleSchema(opts: {
   dateModified?: string
   wordCount?: number
   authorName?: string
+  articleSection?: string
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'BlogPosting',
     '@id': `${BASE_URL}${opts.url}`,
     url: `${BASE_URL}${opts.url}`,
     headline: opts.headline,
@@ -95,6 +96,7 @@ export function articleSchema(opts: {
     datePublished: opts.datePublished,
     dateModified: opts.dateModified ?? opts.datePublished,
     wordCount: opts.wordCount ?? 1000,
+    articleSection: opts.articleSection ?? 'Web Design',
     author: {
       '@type': 'Person',
       name: opts.authorName ?? 'Mpho Moipolai',
@@ -103,6 +105,7 @@ export function articleSchema(opts: {
     publisher: {
       '@type': 'Organization',
       name: 'Nostalgic Studio',
+      url: BASE_URL,
       logo: {
         '@type': 'ImageObject',
         url: `${BASE_URL}/images/logo/Logo.webp`,

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 
@@ -52,33 +53,32 @@ export default function SocialMediaMarketing() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Which social media platforms do you manage?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We specialize in Instagram, Facebook, LinkedIn, and TikTok, tailoring our approach to each platform to reach your specific target audience in Johannesburg.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How do you measure social media success?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We track key metrics such as engagement rates, reach, follower growth, and most importantly, conversions and leads generated for your business.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'Which social media platforms do you manage?',
+      answer: 'We specialize in Instagram, Facebook, LinkedIn, and TikTok, tailoring our approach to each platform to reach your specific target audience in Johannesburg and across South Africa.',
+    },
+    {
+      question: 'How do you measure social media success?',
+      answer: 'We track key metrics such as engagement rates, reach, follower growth, and most importantly, conversions and leads generated for your business. Monthly reports include all KPIs with trend analysis.',
+    },
+    {
+      question: 'Do I need to be on every platform?',
+      answer: 'Not necessarily. We help you identify which platforms your target audience in South Africa uses most and focus our efforts where they will have the biggest impact. Most South African businesses see the best ROI from Instagram and Facebook.',
+    },
+    {
+      question: 'How often will you post?',
+      answer: 'Posting frequency depends on your goals and the specific platform. We typically recommend 3–5 posts per week on Instagram, 2–3 on Facebook, and 2–3 on LinkedIn. We create a customized content calendar that ensures consistent presence.',
+    },
+    {
+      question: 'How much does social media marketing cost in Johannesburg?',
+      answer: 'Social media marketing packages in South Africa typically range from R3,000 to R15,000 per month depending on the number of platforms, posting frequency, and whether content creation or paid advertising management is included.',
+    },
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -95,6 +95,25 @@ export default function SocialMediaMarketing() {
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Social Media Marketing?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Social media marketing is the use of platforms like Instagram, Facebook, LinkedIn, and TikTok 
+              to build brand awareness, engage with customers, and drive business growth. It includes organic 
+              content creation, community management, and paid advertising.
+            </p>
+            <p className="text-muted-foreground">
+              South Africa has 25.8 million social media users as of 2026, with Instagram and Facebook being 
+              the most popular platforms for consumer engagement. Businesses that post consistently see 
+              3–5x higher engagement rates than those that post sporadically.
+            </p>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
@@ -139,25 +158,7 @@ export default function SocialMediaMarketing() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Social Media FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Do I need to be on every platform?</h3>
-              <p className="text-muted-foreground">
-                Not necessarily. We help you identify which platforms your target audience in 
-                South Africa uses most and focus our efforts where they will have the biggest impact.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">How often will you post?</h3>
-              <p className="text-muted-foreground">
-                Posting frequency depends on your goals and the specific platform. We'll create a 
-                customized content calendar that ensures a consistent and effective presence.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Social Media Marketing FAQ" />
 
         <KeyTakeaways
           takeaways={[

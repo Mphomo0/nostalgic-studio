@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   ],
   creator: 'Nostalgic Studio',
   publisher: 'Nostalgic Studio',
-  robots: { index: true, follow: true },
+  robots: { index: true, follow: true, 'max-image-preview': 'large' },
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',
     languages: {
@@ -81,6 +81,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@mphomoipolai',
     title: 'Nostalgic Studio | Digital Design Agency',
     description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
@@ -237,7 +239,7 @@ export default function RootLayout({
             '@type': 'ListItem',
             position: 3,
             name: 'Web Design Services',
-            item: 'https://www.nostalgic-studio.co.za/services/web-design',
+            item: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
           },
         ],
       },

@@ -112,6 +112,26 @@ export default function WebDesignJohannesburg() {
             lastUpdated="March 2026"
           />
 
+          {/* Definition Block - GEO Optimised */}
+          <section className="mb-16" aria-labelledby="definition-heading">
+            <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+              <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+                What Is Web Design?
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Web design is the process of planning, creating, and building websites that are visually appealing, 
+                functional, and optimized for user experience and search engines. Professional web design in Johannesburg 
+                combines UI/UX principles, responsive layouts, and technical SEO to create websites that convert visitors into customers.
+              </p>
+              <p className="text-muted-foreground">
+                A well-designed website typically includes strategic information architecture, mobile-first responsive layouts, 
+                fast-loading pages (under 2.5 seconds), accessible navigation, and conversion-optimized call-to-action elements. 
+                At Nostalgic Studio, every website is built on Next.js, which delivers 90–100 Lighthouse performance scores 
+                compared to 40–70 for typical WordPress sites.
+              </p>
+            </div>
+          </section>
+
           <KeyTakeaways
             takeaways={[
               { point: 'Based in Johannesburg', detail: 'serving businesses across South Africa' },
@@ -146,6 +166,56 @@ export default function WebDesignJohannesburg() {
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Comparison Table - GEO Optimised */}
+        <section className="mb-24" aria-labelledby="comparison-heading">
+          <h2 id="comparison-heading" className="text-3xl font-bold mb-10 text-center">
+            Next.js vs WordPress: Which Is Better for Johannesburg Businesses?
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-border">
+                  <th className="text-left py-4 px-4 font-semibold text-foreground">Feature</th>
+                  <th className="text-center py-4 px-4 font-semibold text-primary">Next.js (Nostalgic Studio)</th>
+                  <th className="text-center py-4 px-4 font-semibold text-muted-foreground">WordPress</th>
+                </tr>
+              </thead>
+              <tbody className="text-muted-foreground">
+                <tr className="border-b border-border">
+                  <td className="py-3 px-4">Lighthouse Score</td>
+                  <td className="py-3 px-4 text-center font-medium text-foreground">90–100</td>
+                  <td className="py-3 px-4 text-center">40–70</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 px-4">Page Load Time</td>
+                  <td className="py-3 px-4 text-center font-medium text-foreground">Under 1.5s</td>
+                  <td className="py-3 px-4 text-center">3–6s</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 px-4">Security</td>
+                  <td className="py-3 px-4 text-center font-medium text-foreground">No plugin vulnerabilities</td>
+                  <td className="py-3 px-4 text-center">Frequent plugin exploits</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 px-4">SEO Performance</td>
+                  <td className="py-3 px-4 text-center font-medium text-foreground">Server-side rendering built-in</td>
+                  <td className="py-3 px-4 text-center">Requires SEO plugins</td>
+                </tr>
+                <tr className="border-b border-border">
+                  <td className="py-3 px-4">Mobile Performance</td>
+                  <td className="py-3 px-4 text-center font-medium text-foreground">Optimised for SA networks</td>
+                  <td className="py-3 px-4 text-center">Often slow on mobile</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4">Maintenance Cost</td>
+                  <td className="py-3 px-4 text-center font-medium text-foreground">R500–R1,500/month</td>
+                  <td className="py-3 px-4 text-center">R1,000–R3,000/month</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>

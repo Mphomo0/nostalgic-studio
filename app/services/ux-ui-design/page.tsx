@@ -88,10 +88,29 @@ export default function UXUIDesign() {
               improve usability and drive conversions for your South African digital products.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
-              <Link href="/contact">Enhance Your UX <ArrowRight className="ml-2" /></Link>
+              <Link href="/contact">Start Your UX Project <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is UX/UI Design?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              UX (User Experience) design focuses on how a product works and feels, while UI (User Interface) 
+              design focuses on how it looks. Together, UX/UI design ensures digital products are intuitive, 
+              accessible, and visually compelling for users.
+            </p>
+            <p className="text-muted-foreground">
+              Studies show that every R1 invested in UX returns R100 — a 9,900% ROI. For South African startups, 
+              professional UX/UI design reduces user abandonment by up to 40% and increases conversion rates 
+              by 200–400% compared to poorly designed interfaces.
+            </p>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>

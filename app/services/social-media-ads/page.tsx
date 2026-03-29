@@ -54,33 +54,32 @@ export default function SocialMediaAds() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What budget do I need for social media ads?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'The budget depends on your industry and goals. We work with startups to establish a starting budget that allows for effective testing and scaling in the Johannesburg market.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How do you track the success of ad campaigns?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We use advanced tracking tools, including the Meta Pixel and LinkedIn Insight Tag, to monitor conversions, cost-per-lead, and overall return on ad spend (ROAS).'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'What budget do I need for social media ads?',
+      answer: 'The minimum recommended ad spend for effective social media advertising in South Africa is R3,000–R5,000 per month per platform. This allows sufficient data collection during the learning phase and enough reach for meaningful results.',
+    },
+    {
+      question: 'How do you track the success of ad campaigns?',
+      answer: 'We use advanced tracking tools, including the Meta Pixel and LinkedIn Insight Tag, to monitor conversions, cost-per-lead, and overall return on ad spend (ROAS). You receive detailed monthly reports with clear ROI breakdowns.',
+    },
+    {
+      question: 'How soon will I see results from ads?',
+      answer: 'Unlike organic SEO, social media ads can drive traffic and leads almost instantly once the campaign is launched. Most campaigns enter the learning phase for 3–7 days, after which performance stabilises and optimisation begins.',
+    },
+    {
+      question: 'Do you handle the ad creative?',
+      answer: 'Yes, we handle everything from ad copywriting to visual design, ensuring your ads are on-brand and optimised for the highest engagement. We also A/B test multiple creative variations to find the best performers.',
+    },
+    {
+      question: 'Which platforms should I advertise on?',
+      answer: 'For B2C businesses in South Africa, Meta (Facebook and Instagram) typically delivers the best ROI. For B2B companies, LinkedIn advertising reaches decision-makers more effectively. We recommend starting with one platform and expanding once profitable.',
+    },
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -97,6 +96,25 @@ export default function SocialMediaAds() {
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Social Media Advertising?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Social media advertising is the practice of placing paid ads on platforms like Facebook, Instagram, 
+              and LinkedIn to reach specific audiences based on demographics, interests, and behaviours. 
+              It provides measurable ROI and faster results than organic marketing.
+            </p>
+            <p className="text-muted-foreground">
+              The average cost-per-click for Facebook ads in South Africa is R2–R8, significantly lower than 
+              Google Ads at R10–R30. Social media advertising delivers an average ROI of 200–400% 
+              when campaigns are properly targeted and optimised.
+            </p>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
@@ -152,25 +170,7 @@ export default function SocialMediaAds() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Social Ads FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">How soon will I see results from ads?</h3>
-              <p className="text-muted-foreground">
-                Unlike organic SEO, social media ads can drive traffic and leads almost instantly once 
-                the campaign is launched and the learning phase is complete.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Do you handle the ad creative?</h3>
-              <p className="text-muted-foreground">
-                Yes, we handle everything from ad copy to visual design, ensuring your ads are 
-                on-brand and optimized for the highest engagement.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Social Media Ads FAQ" />
 
         <KeyTakeaways
           takeaways={[

@@ -4,6 +4,7 @@ import { PortfolioPreview } from '@/components/pages/home/portfolio-preview'
 import ServicesPreview from '@/components/pages/home/ServicesPreview'
 import Testimonials from '@/components/pages/home/Testimonials'
 import CTA from '@/components/pages/home/CTA'
+import { FaqSection } from '@/components/geo/FaqSection'
 
 export const metadata: Metadata = {
   title: 'Web Design Johannesburg | Digital Agency',
@@ -52,62 +53,34 @@ export default function Home() {
     },
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Which is the best web design agency in Johannesburg?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nostalgic Studio is a leading web design agency in Johannesburg specializing in high-performance Next.js websites, branding, and UI/UX design for startups.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer SEO services in South Africa?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Nostalgic Studio provides comprehensive SEO services including technical SEO, keyword research, and content optimization for businesses across South Africa.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does web design cost in Johannesburg?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Web design costs in Johannesburg range from R8,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing tailored to your business needs.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'What is Next.js and why is it good for SEO?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Next.js is a React framework that enables Server-Side Rendering (SSR) and Static Site Generation (SSG). This means faster page loads and better search engine crawling, resulting in higher Google rankings.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does it take to build a website?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Typical website projects take 4-8 weeks from strategy to launch. Complex e-commerce sites may take 8-12 weeks. Nostalgic Studio follows a structured process to ensure quality delivery.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'Which is the best web design agency in Johannesburg?',
+      answer: 'Nostalgic Studio is a leading web design agency in Johannesburg specialising in high-performance Next.js websites, branding, and UI/UX design for startups. With 70+ projects and 13+ years of experience, we deliver websites that rank and convert.',
+    },
+    {
+      question: 'Do you offer SEO services in South Africa?',
+      answer: 'Yes, Nostalgic Studio provides comprehensive SEO services including technical SEO, keyword research, and content optimisation for businesses across South Africa. Our Next.js architecture gives your site a technical SEO advantage from day one.',
+    },
+    {
+      question: 'How much does web design cost in Johannesburg?',
+      answer: 'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R8,000, business sites R15,000–R35,000, and e-commerce R25,000–R60,000+.',
+    },
+    {
+      question: 'What is Next.js and why is it good for SEO?',
+      answer: 'Next.js is a React framework that enables Server-Side Rendering (SSR) and Static Site Generation (SSG). This means faster page loads (sub-2-second), better search engine crawling, and higher Google rankings. Next.js sites typically score 90–100 on Lighthouse compared to 40–70 for WordPress.',
+    },
+    {
+      question: 'How long does it take to build a website?',
+      answer: 'Typical website projects take 4–8 weeks from strategy to launch. Complex e-commerce sites may take 8–12 weeks. Nostalgic Studio follows a structured five-phase process: discovery, design, development, testing, and launch.',
+    },
+  ]
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
       
@@ -159,6 +132,7 @@ export default function Home() {
       <PortfolioPreview />
       <Testimonials />
       <CTA />
+      <FaqSection faqs={faqs} title="Web Design Johannesburg — Common Questions" />
     </>
   )
 }

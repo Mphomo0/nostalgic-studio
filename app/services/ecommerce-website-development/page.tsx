@@ -54,33 +54,32 @@ export default function EcommerceWebsiteDevelopment() {
     }
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Which payment gateways do you support for ecommerce?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We integrate with all major South African payment gateways, including PayFast, Peach Payments, Yoco, and Ozow, ensuring a smooth checkout experience for your customers.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Why use Next.js for an ecommerce store?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Next.js is perfect for ecommerce because of its speed and SEO capabilities. Faster load times lead to higher conversion rates and better rankings on Google.'
-        }
-      }
-    ]
-  }
+  const faqs = [
+    {
+      question: 'Which payment gateways do you support for ecommerce?',
+      answer: 'We integrate with all major South African payment gateways, including PayFast, Peach Payments, Yoco, and Ozow, ensuring a smooth checkout experience for your customers.',
+    },
+    {
+      question: 'Why use Next.js for an ecommerce store?',
+      answer: 'Next.js is ideal for ecommerce because it delivers sub-2-second load times, which directly increases conversion rates. Studies show a 1-second delay in page load reduces conversions by 7%. Next.js also provides superior SEO through server-side rendering, helping your products rank higher on Google.',
+    },
+    {
+      question: 'Can I manage my own products?',
+      answer: 'Yes, we provide a user-friendly Content Management System (CMS) that allows you to easily add, edit, and remove products without any technical knowledge. We also offer training sessions to get your team up to speed.',
+    },
+    {
+      question: 'Is my ecommerce site secure?',
+      answer: 'Security is our top priority. By using Next.js and modern serverless architectures, we significantly reduce the attack surface compared to platforms like WordPress. All stores include SSL encryption, PCI-compliant payment processing, and automated security patches.',
+    },
+    {
+      question: 'How long does it take to build an ecommerce website?',
+      answer: 'A typical ecommerce website takes 8–12 weeks from kickoff to launch. This includes strategy, design, development, payment gateway integration, product loading, and testing. Simpler stores with fewer products can be completed in 4–6 weeks.',
+    },
+  ]
 
   return (
     <main className="pt-32 pb-20">
       <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
@@ -97,6 +96,26 @@ export default function EcommerceWebsiteDevelopment() {
             </Button>
           </div>
         </MotionWrapper>
+
+        {/* Definition Block - GEO Optimised */}
+        <section className="mb-16" aria-labelledby="definition-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="definition-heading" className="text-2xl font-bold mb-4">
+              What Is Ecommerce Website Development?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Ecommerce website development is the process of building online stores that allow businesses 
+              to sell products or services over the internet. It includes product catalogues, shopping carts, 
+              payment gateway integration, and order management systems.
+            </p>
+            <p className="text-muted-foreground">
+              In South Africa, ecommerce grew by 66% between 2020 and 2025, with online retail reaching R71 billion in 2025. 
+              A professionally built ecommerce website on Next.js loads 2–3x faster than traditional platforms, 
+              which directly impacts conversion rates — studies show every 1-second improvement in load time 
+              increases conversions by 7%.
+            </p>
+          </div>
+        </section>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
           <MotionWrapper delay={0.2}>
@@ -151,25 +170,7 @@ export default function EcommerceWebsiteDevelopment() {
           </div>
         </div>
 
-        <section className="bg-primary/5 rounded-3xl p-12 mb-24">
-          <h2 className="text-3xl font-bold mb-10 text-center">Ecommerce FAQ</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Can I manage my own products?</h3>
-              <p className="text-muted-foreground">
-                Yes, we provide a user-friendly Content Management System (CMS) that allows you to easily 
-                add, edit, and remove products without any technical knowledge.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Is my ecommerce site secure?</h3>
-              <p className="text-muted-foreground">
-                Security is our top priority. By using Next.js and modern serverless architectures, 
-                we significantly reduce the attack surface compared to platforms like WordPress.
-              </p>
-            </div>
-          </div>
-        </section>
+        <FaqSection faqs={faqs} title="Ecommerce FAQ" />
 
         <KeyTakeaways
           takeaways={[
