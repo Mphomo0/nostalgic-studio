@@ -51,6 +51,7 @@ const Navbar = () => {
               alt="Nostalgic Studio - Digital Design Agency Johannesburg"
               width={150}
               height={100}
+              loading="eager"
               className="w-full h-full object-contain"
             />
           </Link>

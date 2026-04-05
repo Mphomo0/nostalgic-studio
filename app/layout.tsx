@@ -30,72 +30,81 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.nostalgic-studio.co.za'),
+
   title: {
-    default: 'Nostalgic Studio | Digital Design Agency for Startups',
+    default:
+      'Custom Web Development & Web Design Johannesburg | Nostalgic Studio',
     template: '%s | Nostalgic Studio',
   },
+
   description:
-    'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses. Web design, UI/UX, and branding services.',
+    'Custom web development and web design agency in Johannesburg. We build high-performance Next.js websites for startups and growing businesses in South Africa.',
+
+  // Keywords not critical but kept for minor engines
   keywords: [
-    'digital design agency',
-    'web design company',
-    'UI/UX design studio',
-    'branding agency',
-    'startup web design',
-    'website design services',
-    'responsive website design',
-    'South Africa web design',
-    'Johannesburg design agency',
-    'creative studio',
-    'local business web design',
+    'web development Johannesburg',
+    'web design South Africa',
+    'Next.js agency South Africa',
+    'custom website development',
+    'Johannesburg web designer',
+    'startup web development',
   ],
+
   authors: [
     { name: 'Mpho Moipolai', url: 'https://www.nostalgic-studio.co.za/about' },
   ],
+
   creator: 'Nostalgic Studio',
   publisher: 'Nostalgic Studio',
-  robots: { index: true, follow: true, 'max-image-preview': 'large' },
+
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large',
+  },
+
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',
-    languages: {
-      'en': 'https://www.nostalgic-studio.co.za',
-      'en-ZA': 'https://www.nostalgic-studio.co.za',
-      'x-default': 'https://www.nostalgic-studio.co.za',
-    },
   },
+
   openGraph: {
     type: 'website',
     locale: 'en_ZA',
     url: 'https://www.nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
-    title: 'Nostalgic Studio | Digital Design Agency',
-    description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products for startups and growing businesses.',
+    title:
+      'Custom Web Development & Web Design Johannesburg | Nostalgic Studio',
+    description:
+      'We build high-performance Next.js websites for startups and businesses in South Africa. Custom, scalable, and SEO-optimized.',
+
     images: [
       {
         url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Nostalgic Studio - Digital Design Agency',
+        alt: 'Custom Web Development Johannesburg - Nostalgic Studio',
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
-    site: '@studionostalgic',
-    creator: '@mphomoipolai',
-    title: 'Nostalgic Studio | Digital Design Agency',
-    description: 'Nostalgic Studio is a digital design agency crafting stunning websites, brands, and digital products.',
+    title:
+      'Custom Web Development & Web Design Johannesburg | Nostalgic Studio',
+    description:
+      'High-performance websites built with Next.js for startups and growing businesses in South Africa.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
-  const enterpriseSchema = {
+}: {
+  children: React.ReactNode
+}) {
+  const schema = {
     '@context': 'https://schema.org',
     '@graph': [
-      // 1️⃣ Organization Entity
       {
         '@type': 'Organization',
         '@id': 'https://www.nostalgic-studio.co.za/#organization',
@@ -107,17 +116,8 @@ export default function RootLayout({
           'https://www.linkedin.com/company/110356396',
           'https://www.instagram.com/studionostalgic',
         ],
-        contactPoint: [
-          {
-            '@type': 'ContactPoint',
-            telephone: '+27-82-448-3273',
-            contactType: 'customer service',
-            availableLanguage: ['English'],
-          },
-        ],
       },
 
-      // 2️⃣ Local Business Entity (merged with Organization)
       {
         '@type': 'LocalBusiness',
         '@id': 'https://www.nostalgic-studio.co.za/#business',
@@ -126,144 +126,96 @@ export default function RootLayout({
           '@id': 'https://www.nostalgic-studio.co.za/#organization',
         },
         description:
-          'Nostalgic Studio is a Johannesburg and Bloemfontein based digital design agency offering web design, UI/UX, and branding services across South Africa.',
+          'Custom web development and web design agency in Johannesburg, South Africa specializing in Next.js websites.',
         url: 'https://www.nostalgic-studio.co.za',
         telephone: '+27-82-448-3273',
+
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Johannesburg',
           addressRegion: 'Gauteng',
           addressCountry: 'ZA',
         },
+
         geo: {
           '@type': 'GeoCoordinates',
           latitude: '-26.2041',
           longitude: '28.0473',
         },
-        areaServed: [
-          { '@type': 'City', name: 'Johannesburg' },
-          { '@type': 'City', name: 'Bloemfontein' },
-          { '@type': 'Country', name: 'South Africa' },
-        ],
+
+        areaServed: {
+          '@type': 'Country',
+          name: 'South Africa',
+        },
+
         image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+
         priceRange: '$$',
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '5',
-          reviewCount: '12',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        openingHoursSpecification: {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '08:00',
-          closes: '17:00',
-        },
       },
 
-      // 3️⃣ Services as separate entities for SEO clarity
       {
         '@type': 'Service',
-        '@id': 'https://www.nostalgic-studio.co.za/#service-web-design',
-        name: 'Web Design Services',
+        name: 'Web Development',
         description:
-          'Custom web design services tailored for startups and growing businesses.',
-        provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#business',
-        },
-      },
-      {
-        '@type': 'Service',
-        '@id': 'https://www.nostalgic-studio.co.za/#service-branding',
-        name: 'Branding Services',
-        description:
-          'Professional branding services including logo & visual identity design.',
-        provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#business',
-        },
-      },
-      {
-        '@type': 'Service',
-        '@id': 'https://www.nostalgic-studio.co.za/#service-uiux',
-        name: 'UI/UX Design Services',
-        description:
-          'User interface & experience design optimized for conversion and usability.',
+          'Custom Next.js web development for startups and businesses.',
         provider: {
           '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
       },
 
-      // 4️⃣ Reviews (attached to LocalBusiness)
       {
-        '@type': 'Review',
-        '@id': 'https://www.nostalgic-studio.co.za/#review-1',
-        itemReviewed: {
+        '@type': 'Service',
+        name: 'Web Design',
+        description: 'Conversion-focused web design services in Johannesburg.',
+        provider: {
           '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
-        author: { '@type': 'Person', name: 'Ohentse Diseko' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody:
-          'Nostalgic Studio delivered a professional, high-quality website with great collaboration.',
       },
-      {
-        '@type': 'Review',
-        '@id': 'https://www.nostalgic-studio.co.za/#review-2',
-        itemReviewed: {
-          '@id': 'https://www.nostalgic-studio.co.za/#business',
-        },
-        author: { '@type': 'Person', name: 'Stefan Mills' },
-        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-        reviewBody:
-          'The team created a modern, professional site that matched our brand.',
-      },
+    ],
+  }
 
-      // 5️⃣ Breadcrumb Navigation Schema
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
       {
-        '@type': 'BreadcrumbList',
-        '@id': 'https://www.nostalgic-studio.co.za/#breadcrumb',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Home',
-            item: 'https://www.nostalgic-studio.co.za/',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Services',
-            item: 'https://www.nostalgic-studio.co.za/services',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Web Design Services',
-            item: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
-          },
-        ],
+        '@type': 'Question',
+        name: 'How much does web design cost in South Africa?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Web design in South Africa typically ranges from R5,000 to R50,000+ depending on complexity, features, and whether the website is custom-built or template-based.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why use Next.js for web development?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Next.js improves website performance through server-side rendering and faster load times, which helps with SEO rankings and user experience.',
+        },
       },
     ],
   }
 
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} data-scroll-behavior="smooth">
       <head>
-        <meta
-          name="ahrefs-site-verification"
-          content="a0470f69c33928b32f9839d4b0a5b876bb9703a10a5a1fdd7d79c12d10f28f8c"
-        />
+        {/* Verification */}
         <meta
           name="google-site-verification"
           content="Z9mBnLyDFOUn6nKgbjCnnmKZupnoVrWjQtfYCEdy_f8"
         />
 
-        {/* 🚀 Enterprise SEO Structured Data */}
+        {/* Main Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(enterpriseSchema),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+
+        {/* FAQ Schema (AEO Boost) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
 
         {/* Google Analytics */}
@@ -280,6 +232,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

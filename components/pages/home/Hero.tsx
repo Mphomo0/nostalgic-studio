@@ -40,7 +40,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            Expert <span className="text-gradient">Web Design Johannesburg</span>
+            Expert{' '}
+            <span className="text-gradient">Web Design Johannesburg</span>
             <br />
             for Ambitious Startups
           </motion.h1>
@@ -52,9 +53,10 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
           >
-            Nostalgic Studio is a premier digital design agency in Johannesburg, South Africa. 
-            We specialize in high-performance **Next.js website design**, conversion-driven **UI/UX design**, 
-            and iconic **branding** that helps businesses stand out in the digital landscape.
+            Web design Johannesburg Agency specializing in custom web
+            development and high-performance Next.js websites. We build fast,
+            SEO-optimized websites that convert visitors into clients across
+            South Africa.
           </motion.p>
 
           {/* CTAs */}
