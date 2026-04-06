@@ -69,8 +69,8 @@ export default function WebsiteCostSAArticle() {
     headline: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
     description: 'A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms.',
     datePublished: '2026-03-22',
-    dateModified: '2026-03-29',
-    wordCount: 1200,
+    dateModified: '2026-04-06',
+    wordCount: 1550,
     articleSection: 'Pricing',
   })
 

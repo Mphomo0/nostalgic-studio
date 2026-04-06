@@ -36,3 +36,4 @@ User-agent: Bytespider
 Allow: /
 
 Sitemap: https://www.nostalgic-studio.co.za/sitemap.xml
+IndexNow: https://www.bing.com/indexnow?url=https://www.nostalgic-studio.co.za&key=6017f70986854a2c82e65c1c7263a178

@@ -48,8 +48,8 @@ export default function NextjsSeoArticle() {
     description:
       'Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google.',
     datePublished: '2026-03-20',
-    dateModified: '2026-03-29',
-    wordCount: 900,
+    dateModified: '2026-04-06',
+    wordCount: 1520,
     articleSection: 'Web Development',
   })
 

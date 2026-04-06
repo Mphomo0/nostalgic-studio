@@ -164,6 +164,10 @@ const Footer = () => {
         <div className="py-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
             © {currentYear} Nostalgic Studio. All rights reserved.
+            <span className="mx-2 hidden md:inline opacity-30">|</span>
+            <span className="block md:inline mt-1 md:mt-0 font-medium opacity-80 uppercase tracking-tighter text-[10px]">
+              Last Updated: April 06, 2026
+            </span>
           </p>
           <div className="flex gap-6">
             <Link

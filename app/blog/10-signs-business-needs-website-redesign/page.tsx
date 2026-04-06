@@ -109,8 +109,8 @@ export default function RedesignSignsArticle() {
     headline: '10 Signs Your Business Website Needs a Redesign',
     description: 'Is your website costing you customers? These 10 warning signs indicate it\'s time to invest in a professional redesign.',
     datePublished: '2026-03-24',
-    dateModified: '2026-03-29',
-    wordCount: 1100,
+    dateModified: '2026-04-06',
+    wordCount: 1650,
     articleSection: 'Strategy',
   })
 
@@ -188,6 +188,46 @@ export default function RedesignSignsArticle() {
             Get a free redesign consultation →
           </Link>
         </div>
+
+        {/* GEO Optimization: Deep Expert Content */}
+        <section className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
+          <h2>The Website Redesign Process & Timeline</h2>
+          <p>
+            A professional website redesign is more than just a "face-lift". At Nostalgic Studio, 
+            we follow a data-driven 5-phase process to ensure your new site delivers measurable business results.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-8">
+            <div className="p-6 bg-card border border-border rounded-xl">
+              <h3 className="font-bold mb-2">Phase 1: Discovery (Week 1)</h3>
+              <p className="text-sm text-muted-foreground">Competitor audit, keyword research, and conversion mapping.</p>
+            </div>
+            <div className="p-6 bg-card border border-border rounded-xl">
+              <h3 className="font-bold mb-2">Phase 2: Strategy & UX (Week 2)</h3>
+              <p className="text-sm text-muted-foreground">Wireframing, sitemap architecture, and user journey optimization.</p>
+            </div>
+            <div className="p-6 bg-card border border-border rounded-xl">
+              <h3 className="font-bold mb-2">Phase 3: Design (Week 3-4)</h3>
+              <p className="text-sm text-muted-foreground">UI design, custom prototyping, and brand integration.</p>
+            </div>
+            <div className="p-6 bg-card border border-border rounded-xl">
+              <h3 className="font-bold mb-2">Phase 4: Development (Week 5-7)</h3>
+              <p className="text-sm text-muted-foreground">Next.js engineering, technical SEO setup, and API integrations.</p>
+            </div>
+          </div>
+
+          <h2>Specific Deliverables You Should Expect</h2>
+          <p>
+            When investing in a redesign (typically ranging from <strong>R15,000 to R35,000</strong> for business sites), 
+            you should receive the following concrete deliverables:
+          </p>
+          <ul className="space-y-2 text-muted-foreground">
+            <li><strong>Technical SEO Audit:</strong> A before-and-after comparison of site speed and indexability.</li>
+            <li><strong>Responsive Design:</strong> Fully tested layouts for iOS, Android, and all major desktop browsers.</li>
+            <li><strong>Conversion Tracking:</strong> Setup of Google Analytics 4 and event tracking for leads.</li>
+            <li><strong>Training & Documentation:</strong> A custom guide on how to manage your new CMS.</li>
+          </ul>
+        </section>
 
         <FaqSection faqs={faqs} title="Website Redesign FAQs" />
 

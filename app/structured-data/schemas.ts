@@ -36,6 +36,8 @@ export function serviceSchema(opts: {
   description: string
   url: string
   areaServed?: string
+  priceRange?: string
+  deliveryTime?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -47,6 +49,16 @@ export function serviceSchema(opts: {
     provider: bizRef(),
     areaServed: opts.areaServed ?? 'South Africa',
     serviceType: opts.name,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'ZAR',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        price: opts.priceRange?.split('-')[0].replace(/[^0-9]/g, '') || '5000',
+        priceCurrency: 'ZAR',
+        description: `Pricing starting from ${opts.priceRange || 'R5,000'}`
+      }
+    }
   }
 }
 
@@ -95,15 +107,21 @@ export function articleSchema(opts: {
     description: opts.description,
     datePublished: opts.datePublished,
     dateModified: opts.dateModified ?? opts.datePublished,
-    wordCount: opts.wordCount ?? 1000,
+    wordCount: opts.wordCount ?? 1500,
     articleSection: opts.articleSection ?? 'Web Design',
     author: {
       '@type': 'Person',
+      '@id': `${BASE_URL}/about#person`,
       name: opts.authorName ?? 'Mpho Moipolai',
       url: `${BASE_URL}/about`,
+      jobTitle: 'Founder & Lead Developer',
+      sameAs: [
+        'https://www.linkedin.com/private/moipolai-mpho-110356396/'
+      ]
     },
     publisher: {
       '@type': 'Organization',
+      '@id': ORG_ID,
       name: 'Nostalgic Studio',
       url: BASE_URL,
       logo: {

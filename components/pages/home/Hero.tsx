@@ -46,17 +46,17 @@ export default function Hero() {
             for Ambitious Startups
           </motion.h1>
 
-          {/* Direct Answer Paragraph */}
+          {/* Direct Answer Paragraph - GEO Definition Pattern */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
           >
-            Web design Johannesburg Agency specializing in custom web
-            development and high-performance Next.js websites. We build fast,
-            SEO-optimized websites that convert visitors into clients across
-            South Africa.
+            Nostalgic Studio is a custom web development and web design agency
+            in Johannesburg. We specialize in building high-performance Next.js
+            websites that are SEO-optimized and conversion-focused for startups
+            and growing businesses in South Africa.
           </motion.p>
 
           {/* CTAs */}

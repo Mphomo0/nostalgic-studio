@@ -111,6 +111,12 @@ export default function RootLayout({
         name: 'Nostalgic Studio',
         url: 'https://www.nostalgic-studio.co.za',
         logo: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Johannesburg',
+          addressRegion: 'Gauteng',
+          addressCountry: 'ZA',
+        },
         sameAs: [
           'https://www.facebook.com/webengineers',
           'https://www.linkedin.com/company/110356396',
@@ -143,33 +149,49 @@ export default function RootLayout({
           longitude: '28.0473',
         },
 
-        areaServed: {
-          '@type': 'Country',
-          name: 'South Africa',
-        },
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Johannesburg'
+          },
+          {
+            '@type': 'Country',
+            name: 'South Africa'
+          }
+        ],
 
         image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
 
-        priceRange: '$$',
+        priceRange: 'R5000 - R35000',
       },
 
       {
         '@type': 'Service',
-        name: 'Web Development',
+        name: 'Web Design Johannesburg',
         description:
-          'Custom Next.js web development for startups and businesses.',
+          'Custom web design agency Johannesburg. We build high-performance, responsive websites for startups.',
         provider: {
           '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
+        offers: {
+            "@type": "Offer",
+            "priceCurrency": "ZAR",
+            "price": "5000"
+        }
       },
 
       {
         '@type': 'Service',
-        name: 'Web Design',
-        description: 'Conversion-focused web design services in Johannesburg.',
+        name: 'Next.js Web Development',
+        description: 'Specialist Next.js development for fast, SEO-optimized business websites.',
         provider: {
           '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
+        offers: {
+            "@type": "Offer",
+            "priceCurrency": "ZAR",
+            "price": "15000"
+        }
       },
     ],
   }
@@ -180,10 +202,18 @@ export default function RootLayout({
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'Which is the best web design agency in Johannesburg?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Nostalgic Studio is recognized as a top web design agency in Johannesburg, specializing in Next.js development, high-performance SEO-optimized websites, and conversion-focused UX design.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'How much does web design cost in South Africa?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Web design in South Africa typically ranges from R5,000 to R50,000+ depending on complexity, features, and whether the website is custom-built or template-based.',
+          text: 'Web design in South Africa typically ranges from R5,000 for standard websites to R35,000+ for custom business solutions and complex e-commerce platforms.',
         },
       },
       {
@@ -192,6 +222,22 @@ export default function RootLayout({
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Next.js improves website performance through server-side rendering and faster load times, which helps with SEO rankings and user experience.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer SEO services in South Africa?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Nostalgic Studio provides comprehensive SEO services including technical SEO, keyword research, and content optimisation for South African businesses.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to build a website?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Typical website projects take 4–8 weeks from strategy to launch, depending on the complexity of the design and content requirements.',
         },
       },
     ],

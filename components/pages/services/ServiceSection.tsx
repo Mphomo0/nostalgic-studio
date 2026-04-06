@@ -49,6 +49,18 @@ const ServiceSection = ({ service, reverse }: Props) => {
             </li>
           ))}
         </ul>
+
+        {/* GEO Optimization: Concrete Data (Pricing & Timeline) */}
+        <div className="flex flex-wrap gap-4 mb-8">
+          <div className="px-4 py-2 bg-primary/5 border border-primary/10 rounded-lg">
+            <span className="text-xs text-muted-foreground block uppercase tracking-wider font-semibold">Pricing</span>
+            <span className="font-bold text-foreground">{service.pricing}</span>
+          </div>
+          <div className="px-4 py-2 bg-primary/5 border border-primary/10 rounded-lg">
+            <span className="text-xs text-muted-foreground block uppercase tracking-wider font-semibold">Delivery</span>
+            <span className="font-bold text-foreground">{service.timeline}</span>
+          </div>
+        </div>
       </div>
 
       {/* Image */}

@@ -131,38 +131,46 @@ export default function ServicesPage() {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Web Design',
-                    description:
-                      'Custom web design solutions focused on responsive layouts, user experience, and conversion optimization.',
+                    name: 'Web Design Johannesburg',
+                    description: 'Custom web design solutions in Johannesburg focused on conversion.',
+                    offers: { '@type': 'Offer', 'price': '8000', 'priceCurrency': 'ZAR' }
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'UI/UX Design',
-                    description:
-                      'User interface and user experience design to ensure intuitive and engaging digital products.',
+                    name: 'SEO Services Johannesburg',
+                    description: 'Technical and on-page SEO services for Johannesburg businesses.',
+                    offers: { '@type': 'Offer', 'price': '5000', 'priceCurrency': 'ZAR' }
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Branding',
-                    description:
-                      'Complete branding solutions, including visual identity, logo design, and brand guidelines.',
+                    name: 'Next.js Website Design',
+                    description: 'High-performance Next.js development with sub-2s load times.',
+                    offers: { '@type': 'Offer', 'price': '15000', 'priceCurrency': 'ZAR' }
                   },
                 },
                 {
                   '@type': 'Offer',
                   itemOffered: {
                     '@type': 'Service',
-                    name: 'Digital Design',
-                    description:
-                      'Creative digital designs for marketing, social media, and online campaigns to boost engagement.',
+                    name: 'Ecommerce Website Development',
+                    description: 'Custom online stores built with Next.js and Shopify/Stripe.',
+                    offers: { '@type': 'Offer', 'price': '25000', 'priceCurrency': 'ZAR' }
                   },
                 },
+                {
+                    '@type': 'Offer',
+                    itemOffered: {
+                      '@type': 'Service',
+                      name: 'UX/UI Design',
+                      description: 'User-centric design systems and interactive prototypes.',
+                    }
+                }
               ],
             },
           }),
