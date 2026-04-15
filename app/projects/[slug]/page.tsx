@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ProjectCTA } from '@/components/pages/projects/Detail/ProjectCTA'
 import ProjectHero from '@/components/pages/projects/Detail/ProjectHero'
 import { projects } from '@/lib/portfolio-data'
@@ -201,6 +202,48 @@ export default async function ProjectDetailPage({
         </div>
       </section>
       
+      {/* More Projects — server-rendered for full crawlability */}
+      <section className="py-16 border-t border-border" aria-label="More projects">
+        <div className="container-wide mx-auto px-4 md:px-8">
+          <h2 className="text-2xl font-bold mb-8 text-center">More Projects</h2>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects
+              .filter((p) => p.slug !== slug)
+              .slice(0, 3)
+              .map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/projects/${p.slug}`}
+                    className="group block overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/50 transition-colors duration-300"
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={p.image}
+                        alt={p.title}
+                        width={600}
+                        height={400}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <p className="text-xs text-primary font-medium mb-1">{p.category}</p>
+                      <h3 className="font-semibold text-sm text-foreground leading-snug">{p.title}</h3>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+          </ul>
+          <div className="text-center mt-8">
+            <Link
+              href="/projects"
+              className="text-sm text-primary font-medium hover:underline"
+            >
+              View all projects →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <ProjectCTA />
     </div>
   )

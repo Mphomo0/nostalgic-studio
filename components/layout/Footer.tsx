@@ -33,6 +33,7 @@ const Footer = () => {
       { name: 'Ecommerce Development', path: '/services/ecommerce-website-development' },
       { name: 'Branding Design', path: '/services/branding-design' },
       { name: 'Social Media Marketing', path: '/services/social-media-marketing' },
+      { name: 'Social Media Ads', path: '/services/social-media-ads' },
       { name: 'Web Hosting', path: '/services/web-hosting' },
       { name: 'Web Maintenance', path: '/services/web-maintenance' },
     ],
