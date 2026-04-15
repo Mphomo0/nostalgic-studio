@@ -99,15 +99,25 @@ export default function BrandingDesign() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is Brand Identity Design?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Brand identity design is the process of creating a visual system — including logo, colours, 
-              typography, and style guidelines — that represents a business's values and differentiates it in the market. 
-              A strong brand identity increases customer trust and recognition.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                Brand identity design is the process of creating a visual system — including logo, colours, 
+                typography, and style guidelines — that represents a business's values and differentiates it in the market. 
+                A strong brand identity increases customer trust and recognition.
+              </p>
+              <p>
+                Research shows that consistent brand presentation across all platforms increases revenue by up to 23%. 
+                For Johannesburg startups, professional branding establishes credibility from day one, 
+                making it easier to attract investors, partners, and customers in a competitive South African market.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">Beyond the Logo: Why Strategic Branding Matters</h3>
+            <p className="text-muted-foreground mb-6">
+              In the vibrant and diverse Johannesburg market, your brand is the bridge between your business and your community. It's not just about a pretty symbol; it's about the <strong>emotional connection</strong> you build with your audience. At Nostalgic Studio, we look at the psychology behind colors, the history behind typography, and the cultural context of your industry to build a brand that is both modern and timeless.
             </p>
             <p className="text-muted-foreground">
-              Research shows that consistent brand presentation across all platforms increases revenue by up to 23%. 
-              For Johannesburg startups, professional branding establishes credibility from day one, 
-              making it easier to attract investors, partners, and customers in a competitive South African market.
+              A well-defined visual identity acts as a silent salesperson. It tells your story when you aren't there to speak. Whether you are a fintech startup in Sandton or a boutique cafe in Maboneng, having a cohesive brand strategy ensures that every touchpoint — from your Next.js website to your packaging — reinforces your market position and value proposition.
             </p>
           </div>
         </section>

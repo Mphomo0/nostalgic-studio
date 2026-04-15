@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'motion/react'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -20,52 +17,34 @@ export default function Hero() {
       <div className="container-wide mx-auto px-4 md:px-8 relative z-10 py-12">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8"
-          >
+          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Sparkles size={16} className="text-primary" />
             <span className="text-sm font-medium text-primary">
               Digital Design Agency for Startups
             </span>
-          </motion.div>
+          </div>
 
           {/* AEO-First H1 */}
-          <motion.h1
+          <h1
             id="hero-heading"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="animate-fade-up animate-delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
             Expert{' '}
             <span className="text-gradient">Web Design Johannesburg</span>
             <br />
             for Ambitious Startups
-          </motion.h1>
+          </h1>
 
           {/* Direct Answer Paragraph - GEO Definition Pattern */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10"
-          >
+          <p className="animate-fade-up animate-delay-200 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
             Nostalgic Studio is a custom web development and web design agency
             in Johannesburg. We specialize in building high-performance Next.js
             websites that are SEO-optimized and conversion-focused for startups
             and growing businesses in South Africa.
-          </motion.p>
+          </p>
 
           {/* CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
+          <div className="animate-fade-up animate-delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               asChild
               variant="hero"
@@ -85,15 +64,10 @@ export default function Hero() {
             >
               <Link href="/projects">View Our Work</Link>
             </Button>
-          </motion.div>
+          </div>
 
           {/* Credibility Signals */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12"
-          >
+          <div className="animate-fade-up animate-delay-400 mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
             {[
               { value: '70+', label: 'Projects Completed' },
               { value: '50+', label: 'Clients Worldwide' },
@@ -109,7 +83,7 @@ export default function Hero() {
                 </div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

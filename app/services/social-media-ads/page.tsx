@@ -103,15 +103,25 @@ export default function SocialMediaAds() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is Social Media Advertising?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Social media advertising is the practice of placing paid ads on platforms like Facebook, Instagram, 
-              and LinkedIn to reach specific audiences based on demographics, interests, and behaviours. 
-              It provides measurable ROI and faster results than organic marketing.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                Social media advertising is the practice of placing paid ads on platforms like Facebook, Instagram, 
+                and LinkedIn to reach specific audiences based on demographics, interests, and behaviours. 
+                It provides measurable ROI and faster results than organic marketing.
+              </p>
+              <p>
+                The average cost-per-click for Facebook ads in South Africa is R2–R8, significantly lower than 
+                Google Ads at R10–R30. Social media advertising delivers an average ROI of 200–400% 
+                when campaigns are properly targeted and optimised.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">Maximizing Ad Performance for South African Growth</h3>
+            <p className="text-muted-foreground mb-6">
+              In Johannesburg's highly competitive digital landscape, successful advertising isn't just about showing up; it's about <strong>relevance and technical precision</strong>. We understand that your ad spend is an investment, not an expense. That's why we focus on high-conversion creative and sophisticated A/B testing. We analyze the cultural nuances of the Gauteng market to ensure your messaging resonates deeply with local consumers, whether they are in the heart of Sandton or the growing hubs of Midrand.
             </p>
             <p className="text-muted-foreground">
-              The average cost-per-click for Facebook ads in South Africa is R2–R8, significantly lower than 
-              Google Ads at R10–R30. Social media advertising delivers an average ROI of 200–400% 
-              when campaigns are properly targeted and optimised.
+              By leverage the <strong>Meta Pixel and LinkedIn Insight Tag</strong>, we create a data loop that constantly improves your performance. This isn't just about driving traffic; it's about driving the <em>right</em> traffic to your high-performance Next.js website. We specialize in retargeting strategies that capture users who have previously shown interest, ensuring that your brand stays top-of-mind and moves potential customers through your sales funnel with maximum efficiency.
             </p>
           </div>
         </section>

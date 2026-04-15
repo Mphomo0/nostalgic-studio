@@ -78,13 +78,25 @@ export default function BlogIndex() {
       <div className="container-wide mx-auto px-4 max-w-4xl">
         <div className="mb-16 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Web Design &amp; Digital Marketing{' '}
+            Web Design & Digital Marketing{' '}
             <span className="text-gradient">Insights</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Practical advice on building websites, improving SEO, and growing
             your business online — from our Johannesburg team.
           </p>
+          
+          <section className="bg-card border border-border rounded-3xl p-8 md:p-12 text-left mb-16 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">Our Editorial Philosophy</h2>
+            <div className="prose prose-lg prose-invert max-w-none text-muted-foreground">
+              <p>
+                In the rapidly evolving digital landscape of South Africa, staying informed is a competitive necessity. The Nostalgic Studio blog is dedicated to decoding complex technical trends into actionable business strategies. We focus on the intersection of <strong>performance engineering</strong> (Next.js, SSR, Core Web Vitals) and <strong>user-centric design</strong>.
+              </p>
+              <p>
+                Our team shares insights gained from building high-growth startups and modernizing established brands in Johannesburg. From deep dives into <strong>Generative Engine Optimization (GEO)</strong> to transparent guides on website costs in the local market, our content is designed to empower South African entrepreneurs with the knowledge they need to dominate their digital niches.
+              </p>
+            </div>
+          </section>
         </div>
 
         <div className="space-y-8">

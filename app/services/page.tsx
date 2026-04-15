@@ -232,6 +232,27 @@ export default function ServicesPage() {
 
       <main className="pt-24 md:pt-32">
         <ServicesHero />
+        
+        {/* Server-rendered content for SEO and text-to-HTML ratio */}
+        <section className="py-16 md:py-24 border-b border-border" aria-labelledby="philosophy-heading">
+          <div className="container-wide mx-auto px-4 md:px-8">
+            <div className="max-w-4xl mx-auto">
+              <h2 id="philosophy-heading" className="text-3xl font-bold mb-8">Our Approach to Digital Excellence</h2>
+              <div className="prose prose-lg max-w-none text-muted-foreground mb-12">
+                <p>
+                  In the rapidly evolving digital landscape of South Africa, a website is no longer just a digital business card. It is a critical engine for growth, customer acquisition, and brand authority. At Nostalgic Studio, our services are structured around the principle that <strong>design must be as functional as it is aesthetic</strong>. 
+                </p>
+                <p>
+                  Every project we undertake in our Johannesburg studio begins with a deep dive into your business objectives. Whether we are crafting a new brand identity from scratch or engineering a complex e-commerce platform, our focus remains on delivering <strong>measurable ROI</strong>. We leverage the power of Next.js to ensure that your digital assets are ahead of the technical curve, providing you with a competitive advantage that lasts for years.
+                </p>
+                <p>
+                  Our services are integrated. We understand that great UI/UX design is ineffective without proper SEO optimization, and a fast website is meaningless if it doesn't resonate with your brand's unique story. That's why we offer a 360-degree digital service suite tailored specifically for the unique challenges of startups and established businesses in the South African market.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <ServicesList services={services} />
 
         <section className="py-20 bg-primary/5">

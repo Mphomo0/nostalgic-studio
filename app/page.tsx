@@ -1,11 +1,14 @@
 import type { Metadata } from 'next'
+import dynamic from 'next/dynamic'
 import Hero from '@/components/pages/home/Hero'
-import { PortfolioPreview } from '@/components/pages/home/portfolio-preview'
-import ServicesPreview from '@/components/pages/home/ServicesPreview'
-import Testimonials from '@/components/pages/home/Testimonials'
-import CTA from '@/components/pages/home/CTA'
-import { FaqSection } from '@/components/geo/FaqSection'
 import Link from 'next/link'
+
+// Dynamically import below-the-fold components to defer JS execution and improve TTI
+const PortfolioPreview = dynamic(() => import('@/components/pages/home/portfolio-preview').then(mod => mod.PortfolioPreview))
+const ServicesPreview = dynamic(() => import('@/components/pages/home/ServicesPreview'))
+const Testimonials = dynamic(() => import('@/components/pages/home/Testimonials'))
+const CTA = dynamic(() => import('@/components/pages/home/CTA'))
+const FaqSection = dynamic(() => import('@/components/geo/FaqSection').then(mod => mod.FaqSection))
 
 export const metadata: Metadata = {
   title: 'Web Design Johannesburg | Custom Web Development & Next.js Agency',

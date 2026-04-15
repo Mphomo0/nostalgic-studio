@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ProjectCTA } from '@/components/pages/projects/Detail/ProjectCTA'
+import dynamic from 'next/dynamic'
 import ProjectHero from '@/components/pages/projects/Detail/ProjectHero'
 import { projects } from '@/lib/portfolio-data'
+
+const ProjectCTA = dynamic(() => import('@/components/pages/projects/Detail/ProjectCTA').then(mod => mod.ProjectCTA))
 import { breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export function generateStaticParams() {
@@ -200,8 +202,32 @@ export default async function ProjectDetailPage({
             </div>
           </div>
         </div>
+        </section>
+      {/* Project Philosophy Section - SEO Hydration */}
+      <section className="container-wide mx-auto px-4 py-20 border-t border-border/50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center md:text-left">Methodology & Technical Execution</h2>
+          <div className="grid md:grid-cols-2 gap-12 text-muted-foreground leading-relaxed">
+            <div>
+              <p className="mb-6">
+                Every project at Nostalgic Studio begins with a deep dive into user psychology and technical performance. For <strong>{project.title}</strong>, we focused on creating a seamless digital journey that translates complex brand values into intuitive user interfaces. Our approach combines the high-speed rendering of Next.js with meticulously crafted design systems that ensure brand consistency across all touchpoints.
+              </p>
+              <p>
+                We believe that a website should be more than just a digital brochure; it should be a high-performance engine for business growth. By optimizing for Core Web Vitals and implementing advanced SEO strategies, we ensure that projects like this not only look beautiful but also deliver measurable results and stay visible in an increasingly competitive digital landscape.
+              </p>
+            </div>
+            <div>
+              <p className="mb-6">
+                The technical architecture of this project leverages the latest in web standards. From server-side rendering (SSR) for instant perceived performance to atomic design principles for scalable component libraries, every line of code is written with longevity and scalability in mind. We prioritize accessibility (WCAG) and responsive design, ensuring a premium experience for every user, regardless of their device.
+              </p>
+              <p>
+                Our commitment to excellence extends beyond the launch. We continuously monitor and refine the digital experiences we build, ensuring they evolve alongside the brands they represent. This project stands as a testament to our vision of combining nostalgic design sensibilities with the cutting-edge capabilities of modern web engineering. 
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
-      
+
       {/* More Projects — server-rendered for full crawlability */}
       <section className="py-16 border-t border-border" aria-label="More projects">
         <div className="container-wide mx-auto px-4 md:px-8">

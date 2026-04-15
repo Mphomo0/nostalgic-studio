@@ -103,15 +103,25 @@ export default function WebMaintenance() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is Website Maintenance?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Website maintenance is the ongoing process of checking, updating, and optimising a website 
-              to ensure it remains secure, fast, and functional. It includes software updates, security 
-              monitoring, performance optimisation, content updates, and regular backups.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                Website maintenance is the ongoing process of checking, updating, and optimising a website 
+                to ensure it remains secure, fast, and functional. It includes software updates, security 
+                monitoring, performance optimisation, content updates, and regular backups.
+              </p>
+              <p>
+                According to industry data, 60% of small business websites have at least one critical vulnerability. 
+                Regular maintenance reduces security risks by 95% and ensures websites maintain their Google rankings. 
+                The average cost of a website hack for a South African small business is R15,000–R75,000 in recovery costs.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">Proactive Care: Protecting Your Digital Equity</h3>
+            <p className="text-muted-foreground mb-6">
+              A website is a living digital asset, not a static brochure. In the fast-moving tech environment of Johannesburg, staying relevant means staying updated. At Nostalgic Studio, we view maintenance as <strong>proactive value preservation</strong>. We don't just wait for things to break; we actively monitor your Next.js application for dependency vulnerabilities, performance regressions, and SEO health. Our goal is to ensure that the high-performance site we built for you continues to deliver ROI years after launch.
             </p>
             <p className="text-muted-foreground">
-              According to industry data, 60% of small business websites have at least one critical vulnerability. 
-              Regular maintenance reduces security risks by 95% and ensures websites maintain their Google rankings. 
-              The average cost of a website hack for a South African small business is R15,000–R75,000 in recovery costs.
+              Our maintenance plans are more than just a safety net—they are a <strong>competitive advantage</strong>. By ensuring your Core Web Vitals remain in the "green" and your security patches are always current, we keep your business ahead of competitors who neglect their digital presence. We understand the South African business landscape, where reliability and trust are paramount. With our team handling the technical heavy lifting, you can focus on scaling your operations, confident that your digital foundation is solid, secure, and performing at its peak.
             </p>
           </div>
         </section>

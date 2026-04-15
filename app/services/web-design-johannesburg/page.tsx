@@ -118,16 +118,26 @@ export default function WebDesignJohannesburg() {
               <h2 id="definition-heading" className="text-2xl font-bold mb-4">
                 What Is Web Design?
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Web design is the process of planning, creating, and building websites that are visually appealing, 
-                functional, and optimized for user experience and search engines. Professional web design in Johannesburg 
-                combines UI/UX principles, responsive layouts, and technical SEO to create websites that convert visitors into customers.
+              <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+                <p>
+                  Web design is the process of planning, creating, and building websites that are visually appealing, 
+                  functional, and optimized for user experience and search engines. Professional web design in Johannesburg 
+                  combines UI/UX principles, responsive layouts, and technical SEO to create websites that convert visitors into customers.
+                </p>
+                <p>
+                  A well-designed website typically includes strategic information architecture, mobile-first responsive layouts, 
+                  fast-loading pages (under 2.5 seconds), accessible navigation, and conversion-optimized call-to-action elements. 
+                  At Nostalgic Studio, every website is built on Next.js, which delivers 90–100 Lighthouse performance scores 
+                  compared to 40–70 for typical WordPress sites.
+                </p>
+              </div>
+
+              <h3 className="text-xl font-bold mb-4 text-foreground">The ROI of Premium Web Design in Johannesburg</h3>
+              <p className="text-muted-foreground mb-6">
+                Investing in professional web design is an investment in your business's future. In Gauteng's competitive digital marketplace, your website is often the first and only chance you have to make an impression. A high-performance site built with <strong>Next.js</strong> doesn't just look better; it performs better. It reduces bounce rates by loading instantly, improves trust through professional visual signals, and ultimately lowers your <strong>customer acquisition cost (CAC)</strong> by converting more traffic into actionable leads.
               </p>
               <p className="text-muted-foreground">
-                A well-designed website typically includes strategic information architecture, mobile-first responsive layouts, 
-                fast-loading pages (under 2.5 seconds), accessible navigation, and conversion-optimized call-to-action elements. 
-                At Nostalgic Studio, every website is built on Next.js, which delivers 90–100 Lighthouse performance scores 
-                compared to 40–70 for typical WordPress sites.
+                We've seen businesses across Johannesburg double their conversion rates simply by migrating from a slow, template-based site to a custom-engineered solution. By focusing on <strong>Core Web Vitals</strong> and user intent, we ensure that your digital presence is a reliable asset that produces results month after month.
               </p>
             </div>
           </section>

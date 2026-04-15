@@ -3,7 +3,6 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { motion } from 'motion/react'
 import { ArrowLeft, Calendar, User, Tag, Briefcase } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -23,11 +22,7 @@ export default function ProjectHero({ slug }: { slug: string }) {
     <section className="relative w-full bg-background pt-16 md:pt-24">
       <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back */}
-        <motion.div
-          initial={{ opacity: 0, x: -8 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="mb-6 mt-16"
-        >
+        <div className="animate-fade-up mb-6 mt-16">
           <Button
             variant="ghost"
             onClick={() => router.push('/projects')}
@@ -36,14 +31,10 @@ export default function ProjectHero({ slug }: { slug: string }) {
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Projects
           </Button>
-        </motion.div>
+        </div>
 
         {/* Header */}
-        <motion.header
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="w-full mb-8 md:mb-12"
-        >
+        <header className="animate-fade-up animate-delay-100 w-full mb-8 md:mb-12">
           <span className="mb-3 block text-xs font-bold uppercase tracking-[0.2em] text-primary">
             {project.category}
           </span>
@@ -55,17 +46,12 @@ export default function ProjectHero({ slug }: { slug: string }) {
           <p className="text-lg text-muted-foreground/90 sm:text-xl lg:text-2xl max-w-2xl leading-relaxed whitespace-normal wrap-break-words">
             {project.description}
           </p>
-        </motion.header>
+        </header>
 
         {/* Main content */}
         <div className="grid gap-8 lg:grid-cols-[1fr_320px] lg:gap-12 mb-20">
           {/* Media */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15, duration: 0.6 }}
-            className="group relative aspect-16/10 sm:aspect-video w-full overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl transition-all hover:border-primary/50"
-          >
+          <div className="animate-fade-up animate-delay-200 group relative aspect-16/10 sm:aspect-video w-full overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl transition-all hover:border-primary/50">
             <Image
               src={project.image}
               alt={project.title}
@@ -75,15 +61,10 @@ export default function ProjectHero({ slug }: { slug: string }) {
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-linear-to-t from-background/20 to-transparent pointer-events-none" />
-          </motion.div>
+          </div>
 
           {/* Meta */}
-          <motion.aside
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.25 }}
-            className="grid grid-cols-1 gap-y-6 gap-x-12 border-t pt-8 sm:grid-cols-2 lg:flex lg:flex-col lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0"
-          >
+          <aside className="animate-fade-up animate-delay-300 grid grid-cols-1 gap-y-6 gap-x-12 border-t pt-8 sm:grid-cols-2 lg:flex lg:flex-col lg:border-t-0 lg:border-l lg:pl-10 lg:pt-0">
             <MetaItem icon={User} label="Client" value={project.client} />
             <MetaItem
               icon={Calendar}
@@ -95,7 +76,7 @@ export default function ProjectHero({ slug }: { slug: string }) {
             {project.role && (
               <MetaItem icon={Briefcase} label="Role" value={project.role} />
             )}
-          </motion.aside>
+          </aside>
         </div>
       </div>
     </section>

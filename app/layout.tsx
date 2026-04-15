@@ -165,81 +165,6 @@ export default function RootLayout({
         priceRange: 'R5000 - R35000',
       },
 
-      {
-        '@type': 'Service',
-        name: 'Web Design Johannesburg',
-        description:
-          'Custom web design agency Johannesburg. We build high-performance, responsive websites for startups.',
-        provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#business',
-        },
-        offers: {
-            "@type": "Offer",
-            "priceCurrency": "ZAR",
-            "price": "5000"
-        }
-      },
-
-      {
-        '@type': 'Service',
-        name: 'Next.js Web Development',
-        description: 'Specialist Next.js development for fast, SEO-optimized business websites.',
-        provider: {
-          '@id': 'https://www.nostalgic-studio.co.za/#business',
-        },
-        offers: {
-            "@type": "Offer",
-            "priceCurrency": "ZAR",
-            "price": "15000"
-        }
-      },
-    ],
-  }
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Which is the best web design agency in Johannesburg?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Nostalgic Studio is recognized as a top web design agency in Johannesburg, specializing in Next.js development, high-performance SEO-optimized websites, and conversion-focused UX design.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How much does web design cost in South Africa?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Web design in South Africa typically ranges from R5,000 for standard websites to R35,000+ for custom business solutions and complex e-commerce platforms.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Why use Next.js for web development?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Next.js improves website performance through server-side rendering and faster load times, which helps with SEO rankings and user experience.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer SEO services in South Africa?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, Nostalgic Studio provides comprehensive SEO services including technical SEO, keyword research, and content optimisation for South African businesses.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does it take to build a website?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Typical website projects take 4–8 weeks from strategy to launch, depending on the complexity of the design and content requirements.',
-        },
-      },
     ],
   }
 
@@ -256,12 +181,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-
-        {/* FAQ Schema (AEO Boost) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
 
         {/* Google Analytics */}

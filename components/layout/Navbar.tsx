@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { motion, AnimatePresence } from 'motion/react'
 import { Menu, X, ChevronDown, Globe, Search, Zap, ShoppingBag, Palette, Share2, Megaphone, Server, Layout, Settings } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -117,72 +116,63 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border overflow-hidden"
-          >
-            <div className="container-wide mx-auto px-4 py-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
-              {navLinks.map((link) => (
-                <div key={link.path}>
-                  {link.dropdown ? (
-                    <div className="flex flex-col gap-2">
-                      <button 
-                        onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className={`flex items-center justify-between text-lg font-medium py-2 transition-colors w-full ${
-                          pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground'
-                        }`}
+      <div
+        className={`lg:hidden bg-background border-b border-border overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="container-wide mx-auto px-4 py-6 flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
+          {navLinks.map((link) => (
+            <div key={link.path}>
+              {link.dropdown ? (
+                <div className="flex flex-col gap-2">
+                  <button 
+                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    className={`flex items-center justify-between text-lg font-medium py-2 transition-colors w-full ${
+                      pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground'
+                    }`}
+                  >
+                    {link.name} <ChevronDown size={20} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  <div 
+                    className={`flex flex-col gap-2 pl-4 border-l border-border overflow-hidden transition-all duration-300 ease-in-out ${
+                      isServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <Link href="/services" onClick={() => setIsOpen(false)} className="text-sm py-2 text-primary font-bold">All Services</Link>
+                    {serviceLinks.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        onClick={() => setIsOpen(false)}
+                        className="text-sm py-2 text-muted-foreground hover:text-primary"
                       >
-                        {link.name} <ChevronDown size={20} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                      </button>
-                      <AnimatePresence>
-                        {isServicesOpen && (
-                          <motion.div 
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="flex flex-col gap-2 pl-4 border-l border-border"
-                          >
-                            <Link href="/services" onClick={() => setIsOpen(false)} className="text-sm py-2 text-primary font-bold">All Services</Link>
-                            {serviceLinks.map((service) => (
-                              <Link
-                                key={service.href}
-                                href={service.href}
-                                onClick={() => setIsOpen(false)}
-                                className="text-sm py-2 text-muted-foreground hover:text-primary"
-                              >
-                                {service.title}
-                              </Link>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      href={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className={`text-lg font-medium py-2 block transition-colors ${
-                        pathname === link.path ? 'text-primary' : 'text-muted-foreground'
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                  )}
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              ))}
-              <Button asChild variant="hero" size="lg" className="mt-4">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Start a Project
+              ) : (
+                <Link
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-lg font-medium py-2 block transition-colors ${
+                    pathname === link.path ? 'text-primary' : 'text-muted-foreground'
+                  }`}
+                >
+                  {link.name}
                 </Link>
-              </Button>
+              )}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          ))}
+          <Button asChild variant="hero" size="lg" className="mt-4">
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              Start a Project
+            </Link>
+          </Button>
+        </div>
+      </div>
     </nav>
   )
 }

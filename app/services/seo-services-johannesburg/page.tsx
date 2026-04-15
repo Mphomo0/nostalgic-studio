@@ -119,15 +119,25 @@ export default function SEOServicesJohannesburg() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is SEO?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              SEO (Search Engine Optimization) is the practice of optimising a website to rank higher 
-              in search engine results pages (SERPs), increasing organic (non-paid) traffic. It includes 
-              technical SEO, on-page content optimisation, and off-page link building.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                SEO (Search Engine Optimization) is the practice of optimising a website to rank higher 
+                in search engine results pages (SERPs), increasing organic (non-paid) traffic. It includes 
+                technical SEO, on-page content optimisation, and off-page link building.
+              </p>
+              <p>
+                75% of users never scroll past the first page of Google results. For Johannesburg businesses, 
+                local SEO is critical — 46% of all Google searches have local intent, and businesses in 
+                the Google Local Pack receive 42% of all local search clicks.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">SEO for the Next Generation of Search</h3>
+            <p className="text-muted-foreground mb-6">
+              Search is fundamentally changing. It's no longer just about blue links on a page; it's about being the <strong>definitive answer</strong> for AI search engines and answer engines like Perplexity, ChatGPT, and Google SGE. At Nostalgic Studio, we prioritize <strong>Generative Engine Optimization (GEO)</strong> alongside traditional SEO practices. This means structuring your content with precise data points, clear definitions, and semantic HTML that search engines can easily parse and cite.
             </p>
             <p className="text-muted-foreground">
-              75% of users never scroll past the first page of Google results. For Johannesburg businesses, 
-              local SEO is critical — 46% of all Google searches have local intent, and businesses in 
-              the Google Local Pack receive 42% of all local search clicks.
+              Our Johannesburg studio combines local market research with global technical standards. We don't just "do SEO"; we build a digital moat around your brand. By optimizing your <strong>Entity Authority</strong> and focusing on E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness), we ensure that your business remains visible not just in search results today, but in the AI-driven search world of tomorrow.
             </p>
           </div>
         </section>

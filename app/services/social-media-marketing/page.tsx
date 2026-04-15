@@ -102,15 +102,25 @@ export default function SocialMediaMarketing() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is Social Media Marketing?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Social media marketing is the use of platforms like Instagram, Facebook, LinkedIn, and TikTok 
-              to build brand awareness, engage with customers, and drive business growth. It includes organic 
-              content creation, community management, and paid advertising.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                Social media marketing is the use of platforms like Instagram, Facebook, LinkedIn, and TikTok 
+                to build brand awareness, engage with customers, and drive business growth. It includes organic 
+                content creation, community management, and paid advertising.
+              </p>
+              <p>
+                South Africa has 25.8 million social media users as of 2026, with Instagram and Facebook being 
+                the most popular platforms for consumer engagement. Businesses that post consistently see 
+                3–5x higher engagement rates than those that post sporadically.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">Content Strategy and Local Relevance</h3>
+            <p className="text-muted-foreground mb-6">
+              Successful social media marketing in Johannesburg goes beyond global trends; it's about localized storytelling. We understand that a LinkedIn audience in Sandton requires a different tone and aesthetic than an Instagram community in Rosebank. At Nostalgic Studio, we help you navigate these nuances by crafting <strong>platform-specific content</strong> that resonates with the South African cultural context.
             </p>
             <p className="text-muted-foreground">
-              South Africa has 25.8 million social media users as of 2026, with Instagram and Facebook being 
-              the most popular platforms for consumer engagement. Businesses that post consistently see 
-              3–5x higher engagement rates than those that post sporadically.
+              Social media is no longer just a broadcast channel; it's a <strong>conversion catalyst</strong>. By integrating your social strategy with your high-performance Next.js website, we create a seamless journey from "Like" to "Buy". Whether we are managing your daily community engagement or collaborating with local influencers, our focus remains on building a digital community that translates into tangible business results and long-term brand loyalty.
             </p>
           </div>
         </section>

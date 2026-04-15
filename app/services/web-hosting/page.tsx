@@ -103,15 +103,25 @@ export default function WebHosting() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is Managed Web Hosting?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Managed web hosting is a service where the hosting provider handles all technical aspects 
-              of running a website — including server maintenance, security updates, backups, and performance 
-              optimisation — so the business owner can focus on their core operations.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                Managed web hosting is a service where the hosting provider handles all technical aspects 
+                of running a website — including server maintenance, security updates, backups, and performance 
+                optimisation — so the business owner can focus on their core operations.
+              </p>
+              <p>
+                Website downtime costs South African businesses an average of R5,000–R50,000 per hour depending on 
+                the business type. Managed hosting with 99.9% uptime guarantees reduces this risk to less than 
+                8.7 hours of downtime per year, compared to 43+ hours with budget hosting providers.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">Reliability at the Edge: Why Hosting Location Matters</h3>
+            <p className="text-muted-foreground mb-6">
+              In the world of high-performance web design, your choice of hosting is your foundation. At Nostalgic Studio, we don't just provide server space; we provide a <strong>globally distributed infrastructure</strong> optimized specifically for the frameworks we use. By utilizing Edge computing and local CDN nodes, we ensure that your website loads instantly for users in Johannesburg, Cape Town, and beyond. This reduction in latency isn't just a luxury—it's a critical factor in your Core Web Vitals and overall SEO performance.
             </p>
             <p className="text-muted-foreground">
-              Website downtime costs South African businesses an average of R5,000–R50,000 per hour depending on 
-              the business type. Managed hosting with 99.9% uptime guarantees reduces this risk to less than 
-              8.7 hours of downtime per year, compared to 43+ hours with budget hosting providers.
+              Our managed hosting solutions are designed for <strong>zero-friction growth</strong>. As your South African startup scales, our infrastructure automatically adjusts to your traffic needs without manual intervention. We prioritize deep security, from automated SSL provisioning to pro-active DDoS mitigation, ensuring that your digital asset is protected against the unique threats of the modern web. When you host with us, you're not just buying a service; you're securing peace of mind and technical excellence.
             </p>
           </div>
         </section>

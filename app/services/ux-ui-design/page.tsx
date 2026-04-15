@@ -99,15 +99,25 @@ export default function UXUIDesign() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is UX/UI Design?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              UX (User Experience) design focuses on how a product works and feels, while UI (User Interface) 
-              design focuses on how it looks. Together, UX/UI design ensures digital products are intuitive, 
-              accessible, and visually compelling for users.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                UX (User Experience) design focuses on how a product works and feels, while UI (User Interface) 
+                design focuses on how it looks. Together, UX/UI design ensures digital products are intuitive, 
+                accessible, and visually compelling for users.
+              </p>
+              <p>
+                Studies show that every R1 invested in UX returns R100 — a 9,900% ROI. For South African startups, 
+                professional UX/UI design reduces user abandonment by up to 40% and increases conversion rates 
+                by 200–400% compared to poorly designed interfaces.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">Designing for the South African Audience</h3>
+            <p className="text-muted-foreground mb-6">
+              UX/UI design in South Africa requires a unique understanding of our local digital habits. With a significant portion of our population accessing the internet via mobile devices and often on high-cost data plans, "good design" means <strong>efficiency</strong>. At Nostalgic Studio, we prioritize light-weight interfaces and intuitive navigation that doesn't waste user time or bandwidth.
             </p>
             <p className="text-muted-foreground">
-              Studies show that every R1 invested in UX returns R100 — a 9,900% ROI. For South African startups, 
-              professional UX/UI design reduces user abandonment by up to 40% and increases conversion rates 
-              by 200–400% compared to poorly designed interfaces.
+              By applying <strong>accessibility standards (WCAG)</strong> and cultural design principles, we ensure that your digital products are usable by every South African, regardless of their device or location. From high-speed fiber users in Sandton to mobile users on-the-go, we design interfaces that feel secondary to the task at hand — making the journey from discovery to conversion as seamless as possible.
             </p>
           </div>
         </section>

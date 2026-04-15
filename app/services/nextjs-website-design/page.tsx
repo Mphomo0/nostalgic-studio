@@ -99,15 +99,25 @@ export default function NextjsWebsiteDesign() {
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
               What Is Next.js?
             </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Next.js is an open-source React framework developed by Vercel that enables server-side rendering, 
-              static site generation, and incremental static regeneration. It is the leading framework for building 
-              high-performance, SEO-friendly websites and web applications.
+            <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
+              <p>
+                Next.js is an open-source React framework developed by Vercel that enables server-side rendering, 
+                static site generation, and incremental static regeneration. It is the leading framework for building 
+                high-performance, SEO-friendly websites and web applications.
+              </p>
+              <p>
+                Next.js websites typically achieve 90–100 Lighthouse performance scores, compared to 40–70 for WordPress. 
+                For South African businesses, this means faster load times on mobile networks — a critical advantage 
+                given that 60%+ of web traffic in South Africa comes from mobile devices.
+              </p>
+            </div>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">The Next.js Advantage for South African Businesses</h3>
+            <p className="text-muted-foreground mb-6">
+              In a digital landscape where every millisecond counts, Next.js provides a technical moat for your business. In Johannesburg, where mobile data costs are high and network speeds can vary from high-speed fiber in Sandton to 3G in outlying areas, having a website that is <strong>statically pre-rendered</strong> ensures your customers aren't left waiting for a blank screen. It's the difference between capturing a lead and losing them to a faster competitor.
             </p>
             <p className="text-muted-foreground">
-              Next.js websites typically achieve 90–100 Lighthouse performance scores, compared to 40–70 for WordPress. 
-              For South African businesses, this means faster load times on mobile networks — a critical advantage 
-              given that 60%+ of web traffic in South Africa comes from mobile devices.
+              Beyond speed, the SEO benefits are built directly into the core of how we develop. Unlike traditional React apps that can be difficult for search engines to crawl, Next.js provides <strong>server-side rendering (SSR)</strong>. This means that Google's bots see your full content immediately, leading to better indexing and higher organic rankings for your target keywords in the Gauteng region.
             </p>
           </div>
         </section>
