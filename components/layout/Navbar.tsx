@@ -32,6 +32,7 @@ const navLinks = [
   { name: 'About', path: '/about' },
   { name: 'Services', path: '/services', dropdown: true },
   { name: 'Projects', path: '/projects' },
+  { name: 'Blog', path: '/blog' },
   { name: 'Contact', path: '/contact' },
 ]
 

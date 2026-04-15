@@ -16,6 +16,7 @@ const Footer = () => {
       { name: 'About', path: '/about' },
       { name: 'Services', path: '/services' },
       { name: 'Projects', path: '/projects' },
+      { name: 'Blog', path: '/blog' },
       { name: 'Contact', path: '/contact' },
     ],
     services: [
@@ -166,7 +167,7 @@ const Footer = () => {
             © {currentYear} Nostalgic Studio. All rights reserved.
             <span className="mx-2 hidden md:inline opacity-30">|</span>
             <span className="block md:inline mt-1 md:mt-0 font-medium opacity-80 uppercase tracking-tighter text-[10px]">
-              Last Updated: April 06, 2026
+              Last Updated: April 15, 2026
             </span>
           </p>
           <div className="flex gap-6">
