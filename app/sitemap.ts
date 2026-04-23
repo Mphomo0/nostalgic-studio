@@ -77,7 +77,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projectPages: MetadataRoute.Sitemap = [
     { slug: 'sozim-consultancy', date: '2024-01-15' },
     { slug: 'didee-holdings', date: '2024-01-20' },
-    { slug: 'tanosa-group', date: '2024-01-22' },
     { slug: 'jiyology-website', date: '2024-01-25' },
     { slug: 'az-truck-dealership', date: '2024-01-28' },
     { slug: 'bidco-trucks', date: '2024-01-30' },

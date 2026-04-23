@@ -36,7 +36,7 @@ export default function ProjectsPage() {
     url: 'https://www.nostalgic-studio.co.za/projects',
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: 6,
+      numberOfItems: 5,
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -53,24 +53,18 @@ export default function ProjectsPage() {
         {
           '@type': 'ListItem',
           position: 3,
-          name: 'Tanosa Group Website Redesign',
-          url: 'https://www.nostalgic-studio.co.za/projects/tanosa-group',
-        },
-        {
-          '@type': 'ListItem',
-          position: 4,
           name: 'Jiyology Building & Construction Website',
           url: 'https://www.nostalgic-studio.co.za/projects/jiyology-website',
         },
         {
           '@type': 'ListItem',
-          position: 5,
+          position: 4,
           name: 'A-Z Truck Sales Dealership Website',
           url: 'https://www.nostalgic-studio.co.za/projects/az-truck-dealership',
         },
         {
           '@type': 'ListItem',
-          position: 6,
+          position: 5,
           name: 'Bidco Trucks Website',
           url: 'https://www.nostalgic-studio.co.za/projects/bidco-trucks',
         },
