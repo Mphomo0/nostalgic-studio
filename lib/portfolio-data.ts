@@ -54,12 +54,12 @@ export const projects: Project[] = [
     timeline: '2 weeks',
     role: 'Web Developer',
     description:
-      'Didee Holdings is a South African construction and civil engineering company offering building, infrastructure, roads, and earthworks, with a professional website showcasing projects.',
+      'Didee Holdings is a South African construction and civil engineering company offering building, infrastructure, roads, and earthworks, showcasing projects.',
     image: '/images/projects/didee.webp',
     liveUrl: '#',
     slug: 'didee-holdings',
     challenge:
-      'Didee Holdings had no web presence and relied entirely on word-of-mouth for new business. They needed a professional website to establish credibility and attract government and corporate construction contracts.',
+      'Didee Holdings is a South African construction and civil engineering company offering building, infrastructure, roads, and earthworks, showcasing projects.',
     approach:
       'We delivered a clean, trust-focused design in just 2 weeks. The site emphasises safety certifications, completed project gallery, and clear service categories. Every page is optimised for local SEO targeting Johannesburg construction companies.',
     results: [
@@ -76,36 +76,36 @@ export const projects: Project[] = [
       'Framer Motion',
     ],
   },
-  {
-    id: 3,
-    title: 'Tanosa Group Website Redesign',
-    category: 'Web Design',
-    client: 'Tanosa Group',
-    timeline: '1 week',
-    role: 'Web Developer',
-    description:
-      'Tanosa Group provides comprehensive consulting, governance, business development, training, branding and project management solutions for organizations across South Africa. We developed a sleek, professional website that effectively communicates their multidisciplinary services and expertise. The site features optimized performance and mobile-first design.',
-    image: '/images/projects/tanosa.webp',
-    liveUrl: 'https://www.tanosagroup.com',
-    slug: 'tanosa-group',
-    challenge:
-      'Tanosa Group needed a website that could clearly communicate their diverse range of consulting services without overwhelming visitors. Their multidisciplinary approach required careful information architecture.',
-    approach:
-      'We created a streamlined site architecture with dedicated service sections, a professional leadership page, and clear navigation pathways. The design uses a sophisticated colour palette that conveys trust and expertise.',
-    results: [
-      'Clear service categorisation improved user navigation by 60%',
-      'Professional design enhanced corporate credibility',
-      'Site loads in under 1.5 seconds on mobile networks',
-      'Google-indexed for consulting services in Johannesburg',
-    ],
-    technologies: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'Framer Motion',
-    ],
-  },
+  // {
+  //   id: 3,
+  //   title: 'Tanosa Group Website Redesign',
+  //   category: 'Web Design',
+  //   client: 'Tanosa Group',
+  //   timeline: '1 week',
+  //   role: 'Web Developer',
+  //   description:
+  //     'Tanosa Group provides comprehensive consulting, governance, business development, training, branding and project management solutions for organizations across South Africa. We developed a sleek, professional website that effectively communicates their multidisciplinary services and expertise. The site features optimized performance and mobile-first design.',
+  //   image: '/images/projects/tanosa.webp',
+  //   liveUrl: 'https://www.tanosagroup.com',
+  //   slug: 'tanosa-group',
+  //   challenge:
+  //     'Tanosa Group needed a website that could clearly communicate their diverse range of consulting services without overwhelming visitors. Their multidisciplinary approach required careful information architecture.',
+  //   approach:
+  //     'We created a streamlined site architecture with dedicated service sections, a professional leadership page, and clear navigation pathways. The design uses a sophisticated colour palette that conveys trust and expertise.',
+  //   results: [
+  //     'Clear service categorisation improved user navigation by 60%',
+  //     'Professional design enhanced corporate credibility',
+  //     'Site loads in under 1.5 seconds on mobile networks',
+  //     'Google-indexed for consulting services in Johannesburg',
+  //   ],
+  //   technologies: [
+  //     'Next.js',
+  //     'React',
+  //     'TypeScript',
+  //     'Tailwind CSS',
+  //     'Framer Motion',
+  //   ],
+  // },
   {
     id: 4,
     title: 'Jiyology New Website',
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     timeline: '1 week',
     role: 'Web Developer',
     description:
-      'Jiyology is a South African construction and plumbing company offering roofing, tiling, painting, and renovations, with a website showcasing services and projects.',
+      'Jiyology is a South African construction and plumbing company offering roofing, tiling, painting, and renovations, showcasing services and projects.',
     image: '/images/projects/jiyology.webp',
     liveUrl: 'https://www.jiyology.co.za',
     slug: 'jiyology-website',
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     timeline: '6 weeks',
     role: 'Web Developer',
     description:
-      'A-Z Truck Sales is a Gauteng dealer of quality pre-owned trucks, offering inventory, specs, financing, spare parts, and a website designed to drive leads.',
+      'A-Z Truck Sales is a Gauteng dealer of quality pre-owned trucks, offering inventory, specs, financing, spare parts, and a website built to drive leads.',
     image: '/images/projects/aztrucks.webp',
     liveUrl: 'https://www.a-ztrucksales.com',
     slug: 'az-truck-dealership',
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     timeline: '8 weeks',
     role: 'Web Developer',
     description:
-      'Bidco Trucks is a Pretoria dealer of quality used trucks, trailers, and plant equipment, with a website featuring inventory, listings, and inquiry tools for buyers.',
+      'Bidco Trucks is a Pretoria dealer of quality used trucks, trailers, and plant equipment, with a website featuring inventory, listings, and inquiries.',
     image: '/images/projects/bidco.webp',
     liveUrl: '#',
     slug: 'bidco-trucks',
