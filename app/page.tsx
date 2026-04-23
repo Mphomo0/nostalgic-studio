@@ -4,17 +4,27 @@ import Hero from '@/components/pages/home/Hero'
 import Link from 'next/link'
 
 // Dynamically import below-the-fold components to defer JS execution and improve TTI
-const PortfolioPreview = dynamic(() => import('@/components/pages/home/portfolio-preview').then(mod => mod.PortfolioPreview))
-const ServicesPreview = dynamic(() => import('@/components/pages/home/ServicesPreview'))
-const Testimonials = dynamic(() => import('@/components/pages/home/Testimonials'))
+const PortfolioPreview = dynamic(() =>
+  import('@/components/pages/home/portfolio-preview').then(
+    (mod) => mod.PortfolioPreview,
+  ),
+)
+const ServicesPreview = dynamic(
+  () => import('@/components/pages/home/ServicesPreview'),
+)
+const Testimonials = dynamic(
+  () => import('@/components/pages/home/Testimonials'),
+)
 const CTA = dynamic(() => import('@/components/pages/home/CTA'))
-const FaqSection = dynamic(() => import('@/components/geo/FaqSection').then(mod => mod.FaqSection))
+const FaqSection = dynamic(() =>
+  import('@/components/geo/FaqSection').then((mod) => mod.FaqSection),
+)
 
 export const metadata: Metadata = {
   title: 'Web Design Johannesburg | Custom Web Development & Next.js Agency',
 
   description:
-    'Web design Johannesburg agency specializing in custom web development and high-performance Next.js websites. We build fast, SEO-optimized websites that convert visitors into clients across South Africa.',
+    'Web design Johannesburg agency building custom, high-performance Next.js websites that are fast, SEO-optimized, and convert visitors into clients across South Africa.',
 
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',

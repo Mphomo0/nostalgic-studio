@@ -92,7 +92,7 @@ export default function ContactInfo() {
               <a
                 href={social.href}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 aria-label={social.label}
                 className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all"
               >
