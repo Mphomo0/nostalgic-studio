@@ -6,6 +6,9 @@ export const contactSchema = z.object({
   company: z.string().optional(),
   budget: z.string().optional(),
   message: z.string().min(10, 'Message must be at least 10 characters'),
+  num1: z.number(),
+  num2: z.number(),
+  captchaAnswer: z.string().min(1, 'Please answer the math question'),
 })
 
 export type ContactFormValues = z.infer<typeof contactSchema>

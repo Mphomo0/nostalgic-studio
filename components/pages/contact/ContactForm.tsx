@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'motion/react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -21,6 +21,16 @@ import { sendContactEmail } from '@/app/actions/sendEmail'
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [captchaNums, setCaptchaNums] = useState({ n1: 0, n2: 0 })
+
+  useEffect(() => {
+    // Generate numbers on client to avoid hydration mismatch
+    const n1 = Math.floor(Math.random() * 10) + 1
+    const n2 = Math.floor(Math.random() * 10) + 1
+    setCaptchaNums({ n1, n2 })
+    setValue('num1', n1)
+    setValue('num2', n2)
+  }, [])
 
   const {
     register,
@@ -35,6 +45,9 @@ export default function ContactForm() {
       company: '',
       budget: '',
       message: '',
+      num1: 0,
+      num2: 0,
+      captchaAnswer: '',
     },
   })
 
@@ -48,6 +61,8 @@ export default function ContactForm() {
         toast.success(
           'Your message was sent! Nostalgic Studio will respond within 24 hours.',
         )
+      } else {
+        toast.error(response.error || 'Unable to send message.')
       }
     } catch {
       toast.error(
@@ -151,6 +166,22 @@ export default function ContactForm() {
           {...register('message')}
           aria-required="true"
         />
+      </div>
+      
+      <div className="bg-muted/30 p-4 rounded-xl border border-border">
+        <label htmlFor="captchaAnswer" className="block text-sm font-medium mb-2">
+          Security Check: What is {captchaNums.n1} + {captchaNums.n2}? *
+        </label>
+        <Input
+          id="captchaAnswer"
+          placeholder="Enter the result"
+          {...register('captchaAnswer')}
+          className="max-w-[200px]"
+          aria-required="true"
+        />
+        <p className="mt-1 text-xs text-muted-foreground">
+          Enter the sum of the two numbers to verify you're human.
+        </p>
       </div>
 
       <Button type="submit" className="w-full h-12" disabled={isSubmitting}>
