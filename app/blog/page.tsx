@@ -21,6 +21,42 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'how-to-choose-web-design-company-johannesburg',
+    title: 'How to Choose a Web Design Company in Johannesburg (2026 Guide)',
+    excerpt:
+      "Don't get scammed. Learn the 7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack, and SEO expertise explained.",
+    readTime: '8 min read',
+    date: '2026-05-13',
+    category: 'Strategy',
+  },
+  {
+    slug: 'what-is-local-seo-south-africa',
+    title: 'What is Local SEO? A Guide for South African Businesses (2026)',
+    excerpt:
+      'Learn how to dominate local search in Johannesburg and South Africa. Everything you need to know about Google Maps, local citations, and geo-targeted content.',
+    readTime: '9 min read',
+    date: '2026-05-13',
+    category: 'SEO',
+  },
+  {
+    slug: 'how-long-to-build-website-2026',
+    title: 'How Long Does it Take to Build a Website? (2026 Timeline)',
+    excerpt:
+      'From discovery to launch: A realistic breakdown of how long it takes to build a professional website in South Africa. Timeline for brochure, business, and e-commerce sites.',
+    readTime: '7 min read',
+    date: '2026-05-13',
+    category: 'Process',
+  },
+  {
+    slug: 'social-media-strategy-south-african-businesses',
+    title: 'Social Media Strategy for South African Businesses (2026)',
+    excerpt:
+      'Stop wasting money on social media. Learn the most effective social media strategies for South African businesses in 2026. WhatsApp, TikTok, and LinkedIn insights.',
+    readTime: '8 min read',
+    date: '2026-05-13',
+    category: 'Marketing',
+  },
+  {
     slug: 'what-is-nextjs-seo-2026',
     title: 'Why Next.js Is the Best Framework for SEO in 2026',
     excerpt:
@@ -42,7 +78,7 @@ const posts = [
     slug: '10-signs-business-needs-website-redesign',
     title: '10 Signs Your Business Website Needs a Redesign',
     excerpt:
-      'Is your website hurting your conversions? Here are 10 clear signals it\'s time to invest in a professional redesign.',
+      "Is your website hurting your conversions? Here are 10 clear signals it's time to invest in a professional redesign.",
     readTime: '5 min read',
     date: '2026-03-24',
     category: 'Strategy',

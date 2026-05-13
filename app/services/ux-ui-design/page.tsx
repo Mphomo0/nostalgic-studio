@@ -7,52 +7,44 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'UX/UI Design Johannesburg | Intuitive Interfaces',
-  description: 'Elevate your digital product with professional UX/UI design in Johannesburg. We create intuitive, engaging interfaces.',
-  keywords: ['UX/UI Design Johannesburg', 'User Experience Design South Africa', 'Interface Design Johannesburg', 'Mobile App Design South Africa', 'Web Design Agency'],
+  title: 'UX/UI Design Johannesburg | User-Centred Interface Design | Nostalgic Studio',
+  description:
+    'Expert UX/UI design in Johannesburg. Research-driven, Figma-based interface design that reduces abandonment by 40% and boosts conversions. Get a free UX audit.',
+  keywords: ['UX UI Design Johannesburg', 'User Experience Design South Africa', 'Interface Design Johannesburg', 'Mobile App Design South Africa', 'Figma Design Agency Johannesburg', 'UX Research South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/ux-ui-design' },
   },
   openGraph: {
-    title: 'UX/UI Design Johannesburg',
-    description: 'Elevate your digital product with professional UX/UI design in Johannesburg. We create intuitive, engaging interfaces.',
+    title: 'UX/UI Design Johannesburg | Nostalgic Studio',
+    description: 'Research-driven UX/UI design for Johannesburg startups. Figma prototyping, user research, and mobile-first design.',
     url: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'UX/UI Design Johannesburg — Nostalgic Studio' }],
   },
 }
 
 export default function UXUIDesign() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/ux-ui-design/#webpage',
-    url: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
-    name: 'UX/UI Design Johannesburg',
-    description: 'Expert user experience and interface design services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      '@id': 'https://www.nostalgic-studio.co.za/#organization'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'UX/UI Design',
-      areaServed: 'South Africa',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+  const schemas = [
+    serviceSchema({
+      id: 'ux-ui-design',
+      name: 'UX/UI Design Johannesburg',
+      description: 'Research-driven user experience and interface design services in Johannesburg. Figma prototyping, user research, and mobile-first design for startups.',
+      url: '/services/ux-ui-design',
+      areaServed: 'Johannesburg, South Africa',
+      priceRange: 'R8000-R35000',
+      deliveryTime: '3-8 weeks',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'UX/UI Design', url: '/services/ux-ui-design' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -75,7 +67,15 @@ export default function UXUIDesign() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+        }) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

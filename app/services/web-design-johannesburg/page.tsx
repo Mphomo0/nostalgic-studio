@@ -7,10 +7,12 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, faqPageSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Design Johannesburg | Expert Next.js Websites',
-  description: 'Professional web design in Johannesburg. Expert Next.js development, SEO-optimized websites, and branding.',
+  title: 'Web Design Johannesburg | Expert Next.js Websites | Nostalgic Studio',
+  description:
+    'Professional web design in Johannesburg. Custom Next.js websites built for speed, SEO, and conversions. Transparent pricing from R3,500. Free quote.',
   keywords: [
     'Web Design Johannesburg',
     'Website Design Johannesburg',
@@ -19,48 +21,47 @@ export const metadata: Metadata = {
     'Custom Web Design South Africa',
     'Next.js Development Johannesburg',
     'SEO Website Design',
+    'Affordable Web Design Johannesburg',
+    'Responsive Web Design South Africa',
   ],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg' },
   },
   openGraph: {
-    title: 'Web Design Johannesburg',
-    description: 'Professional web design in Johannesburg. Expert Next.js development, SEO-optimized websites, and branding.',
+    title: 'Web Design Johannesburg | Expert Next.js Websites | Nostalgic Studio',
+    description:
+      'Custom Next.js websites for Johannesburg businesses. Fast, SEO-optimised, and built to convert. Pricing from R3,500.',
     url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{
+      url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Web Design Johannesburg — Nostalgic Studio',
+    }],
   },
 }
 
 export default function WebDesignJohannesburg() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
-    url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
-    name: 'Web Design Johannesburg',
-    description: 'Expert website design services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      url: 'https://www.nostalgic-studio.co.za'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Web Design Services',
-      areaServed: 'Johannesburg',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+  const schemas = [
+    serviceSchema({
+      id: 'web-design-johannesburg',
+      name: 'Web Design Johannesburg',
+      description:
+        'Professional web design and development services in Johannesburg, South Africa. Custom Next.js websites built for speed, SEO, and high conversion rates.',
+      url: '/services/web-design-johannesburg',
+      areaServed: 'Johannesburg, South Africa',
+      priceRange: 'R8000-R50000',
+      deliveryTime: '4-8 weeks',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Web Design Johannesburg', url: '/services/web-design-johannesburg' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -91,7 +92,27 @@ export default function WebDesignJohannesburg() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            (() => ({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.question,
+                acceptedAnswer: { '@type': 'Answer', text: f.answer },
+              })),
+            }))()
+          ),
+        }}
+      />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

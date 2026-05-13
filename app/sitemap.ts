@@ -91,6 +91,10 @@ const blogPages: MetadataRoute.Sitemap = [
   'what-is-nextjs-seo-2026',
   'website-cost-south-africa-2026',
   '10-signs-business-needs-website-redesign',
+  'how-to-choose-web-design-company-johannesburg',
+  'what-is-local-seo-south-africa',
+  'how-long-to-build-website-2026',
+  'social-media-strategy-south-african-businesses',
 ].map((slug) => ({
     url: `${BASE_URL}/blog/${slug}`,
     lastModified: now,

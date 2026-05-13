@@ -7,52 +7,44 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 import Script from 'next/script'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Website Development | Sell Online',
-  description: 'Expert ecommerce website development in Johannesburg. We build high-converting online stores using Next.js with payment gateway integration.',
-  keywords: ['Ecommerce Website Development Johannesburg', 'Online Store Builder South Africa', 'Next.js Ecommerce Development', 'Shopify Alternatives South Africa', 'Custom Ecommerce Solutions'],
+  title: 'Ecommerce Website Development South Africa | Next.js Online Stores | Nostalgic Studio',
+  description:
+    'Custom ecommerce website development in Johannesburg. Next.js online stores with PayFast, Yoco & Ozow integration. From R25,000. Built to rank and convert.',
+  keywords: ['Ecommerce Website Development Johannesburg', 'Online Store Builder South Africa', 'Next.js Ecommerce Development', 'PayFast Integration South Africa', 'Custom Ecommerce Solutions', 'WooCommerce Alternative South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development' },
   },
   openGraph: {
-    title: 'Ecommerce Website Development',
-    description: 'Expert ecommerce website development in Johannesburg. We build high-converting online stores using Next.js.',
+    title: 'Ecommerce Website Development South Africa | Nostalgic Studio',
+    description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow integrated. From R25,000.',
     url: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Ecommerce Development South Africa — Nostalgic Studio' }],
   },
 }
 
 export default function EcommerceWebsiteDevelopment() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
-    url: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
-    name: 'Ecommerce Website Development',
-    description: 'Professional ecommerce website development services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      url: 'https://www.nostalgic-studio.co.za'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Ecommerce Development',
+  const schemas = [
+    serviceSchema({
+      id: 'ecommerce-website-development',
+      name: 'Ecommerce Website Development South Africa',
+      description: 'Custom Next.js ecommerce development in Johannesburg with South African payment gateways including PayFast, Yoco, and Ozow.',
+      url: '/services/ecommerce-website-development',
       areaServed: 'South Africa',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+      priceRange: 'R25000-R60000',
+      deliveryTime: '8-12 weeks',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Ecommerce Development', url: '/services/ecommerce-website-development' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -79,7 +71,15 @@ export default function EcommerceWebsiteDevelopment() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+        }) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

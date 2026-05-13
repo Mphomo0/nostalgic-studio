@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /dashboard/
 
 # Search Engine Crawlers
 User-agent: Googlebot
@@ -12,11 +15,17 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-# AI Answer Engines
+# AI Answer Engines (GEO — Generative Engine Optimization)
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
 Allow: /
 
 User-agent: ClaudeBot

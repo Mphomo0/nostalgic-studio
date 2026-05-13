@@ -7,52 +7,43 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Maintenance | Proactive Website Support',
-  description: 'Keep your website running smoothly with professional web maintenance in Johannesburg. We provide security updates and performance optimization.',
-  keywords: ['Web Maintenance Johannesburg', 'Website Support South Africa', 'Next.js Maintenance Services', 'Managed Website Updates', 'Digital Agency Support'],
+  title: 'Web Maintenance South Africa | Proactive Website Support | Nostalgic Studio',
+  description:
+    'Professional website maintenance in Johannesburg. Security updates, performance optimisation & 24/7 monitoring from R500/month. Keep your Next.js site secure.',
+  keywords: ['Web Maintenance Johannesburg', 'Website Support South Africa', 'Next.js Maintenance Services', 'Managed Website Updates South Africa', 'Website Security Monitoring SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-maintenance',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-maintenance' },
   },
   openGraph: {
-    title: 'Web Maintenance Johannesburg',
-    description: 'Keep your website running smoothly with professional web maintenance in Johannesburg.',
+    title: 'Web Maintenance South Africa | Nostalgic Studio',
+    description: 'Keep your website secure and performing. Monthly maintenance plans from R500/month. 24/7 monitoring.',
     url: 'https://www.nostalgic-studio.co.za/services/web-maintenance',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Maintenance South Africa — Nostalgic Studio' }],
   },
 }
 
 export default function WebMaintenance() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/web-maintenance/#webpage',
-    url: 'https://www.nostalgic-studio.co.za/services/web-maintenance',
-    name: 'Web Maintenance Johannesburg',
-    description: 'Proactive web maintenance and support services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      '@id': 'https://www.nostalgic-studio.co.za/#organization'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Web Maintenance',
+  const schemas = [
+    serviceSchema({
+      id: 'web-maintenance',
+      name: 'Web Maintenance South Africa',
+      description: 'Proactive website maintenance and support in Johannesburg. Security monitoring, Next.js updates, performance optimisation, and daily backups.',
+      url: '/services/web-maintenance',
       areaServed: 'South Africa',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+      priceRange: 'R500-R3000',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Web Maintenance', url: '/services/web-maintenance' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -79,7 +70,15 @@ export default function WebMaintenance() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+        }) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

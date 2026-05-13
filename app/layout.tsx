@@ -33,21 +33,29 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      'Custom Web Development & Web Design Johannesburg | Nostalgic Studio',
+      'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
     template: '%s | Nostalgic Studio',
   },
 
   description:
-    'Custom web development and web design agency in Johannesburg. We build high-performance Next.js websites for startups and growing businesses in South Africa.',
+    "Nostalgic Studio — Johannesburg's Next.js web design agency. Custom, SEO-optimised websites for startups & small businesses in South Africa from R8,000.",
 
-  // Keywords not critical but kept for minor engines
   keywords: [
-    'web development Johannesburg',
-    'web design South Africa',
-    'Next.js agency South Africa',
-    'custom website development',
-    'Johannesburg web designer',
-    'startup web development',
+    'Web Design Johannesburg',
+    'Website Design Johannesburg',
+    'Web Design South Africa',
+    'Next.js Website Design',
+    'UI/UX Design Agency Johannesburg',
+    'Branding and Graphic Design Johannesburg',
+    'SEO Services Johannesburg',
+    'Social Media Marketing Johannesburg',
+    'Social Media Ads Johannesburg',
+    'Ecommerce Website Development South Africa',
+    'Web Hosting South Africa',
+    'UX UI Design Services',
+    'Digital Agency Johannesburg',
+    'Startup Web Design South Africa',
+    'Affordable Web Design Johannesburg',
   ],
 
   authors: [
@@ -110,18 +118,38 @@ export default function RootLayout({
         '@id': 'https://www.nostalgic-studio.co.za/#organization',
         name: 'Nostalgic Studio',
         url: 'https://www.nostalgic-studio.co.za',
-        logo: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+        foundingDate: '2013',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+          width: 200,
+          height: 60,
+        },
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Johannesburg',
           addressRegion: 'Gauteng',
           addressCountry: 'ZA',
         },
+        areaServed: [
+          { '@type': 'City', name: 'Johannesburg' },
+          { '@type': 'City', name: 'Sandton' },
+          { '@type': 'City', name: 'Midrand' },
+          { '@type': 'City', name: 'Pretoria' },
+          { '@type': 'Country', name: 'South Africa' },
+        ],
         sameAs: [
           'https://www.facebook.com/webengineers',
           'https://www.linkedin.com/company/110356396',
           'https://www.instagram.com/studionostalgic',
         ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+27-82-448-3273',
+          contactType: 'customer service',
+          availableLanguage: 'English',
+          areaServed: 'ZA',
+        },
       },
 
       {
@@ -132,9 +160,14 @@ export default function RootLayout({
           '@id': 'https://www.nostalgic-studio.co.za/#organization',
         },
         description:
-          'Custom web development and web design agency in Johannesburg, South Africa specializing in Next.js websites.',
+          'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
         url: 'https://www.nostalgic-studio.co.za',
         telephone: '+27-82-448-3273',
+        foundingDate: '2013',
+        currenciesAccepted: 'ZAR',
+        paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
+        openingHours: 'Mo-Fr 08:00-17:00',
+        priceRange: 'R8,000–R60,000',
 
         address: {
           '@type': 'PostalAddress',
@@ -150,21 +183,36 @@ export default function RootLayout({
         },
 
         areaServed: [
-          {
-            '@type': 'City',
-            name: 'Johannesburg'
-          },
-          {
-            '@type': 'Country',
-            name: 'South Africa'
-          }
+          { '@type': 'City', name: 'Johannesburg' },
+          { '@type': 'City', name: 'Sandton' },
+          { '@type': 'City', name: 'Midrand' },
+          { '@type': 'City', name: 'Randburg' },
+          { '@type': 'City', name: 'Soweto' },
+          { '@type': 'City', name: 'Pretoria' },
+          { '@type': 'AdministrativeArea', name: 'Gauteng' },
+          { '@type': 'Country', name: 'South Africa' },
         ],
 
-        image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+        image: [
+          'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+          'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+        ],
 
-        priceRange: 'R5000 - R35000',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Web Design & Digital Services',
+          itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Johannesburg' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services Johannesburg' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Next.js Website Design' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Graphic Design' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ecommerce Development' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Hosting South Africa' } },
+          ],
+        },
       },
-
     ],
   }
 

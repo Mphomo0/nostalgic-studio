@@ -7,59 +7,59 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg | Expert SEO Agency',
-  description: 'Professional SEO services in Johannesburg. Boost your Google rankings with technical SEO, local SEO, and Next.js optimization.',
+  title: 'SEO Services Johannesburg | Expert SEO Agency | Nostalgic Studio',
+  description:
+    'Professional SEO services in Johannesburg. Technical SEO, local SEO & Next.js optimisation to rank on Google. From R3,500/month. Free SEO audit.',
   keywords: [
     'SEO Services Johannesburg',
     'Search Engine Optimization Johannesburg',
     'SEO Agency South Africa',
     'Local SEO Johannesburg',
     'Next.js SEO Experts',
-    'Google Ranking Services',
+    'Google Ranking Services South Africa',
+    'Technical SEO Johannesburg',
+    'Digital Marketing SEO South Africa',
   ],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg' },
   },
   openGraph: {
-    title: 'SEO Services Johannesburg',
-    description: 'Professional SEO services in Johannesburg. Boost your Google rankings with technical SEO, local SEO, and Next.js optimization.',
+    title: 'SEO Services Johannesburg | Expert SEO Agency | Nostalgic Studio',
+    description:
+      'Rank higher on Google with our expert SEO services in Johannesburg. Technical SEO, local SEO, and content optimisation from R3,500/month.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{
+      url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'SEO Services Johannesburg — Nostalgic Studio',
+    }],
   },
 }
 
 export default function SEOServicesJohannesburg() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
-    url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
-    name: 'SEO Services Johannesburg',
-    description: 'Expert search engine optimization services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      url: 'https://www.nostalgic-studio.co.za'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'SEO Services',
-      areaServed: 'Johannesburg',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+  const schemas = [
+    serviceSchema({
+      id: 'seo-services-johannesburg',
+      name: 'SEO Services Johannesburg',
+      description:
+        'Expert search engine optimisation services in Johannesburg, South Africa. Technical SEO, local SEO, keyword research, and content strategy for startups and SMEs.',
+      url: '/services/seo-services-johannesburg',
+      areaServed: 'Johannesburg, South Africa',
+      priceRange: 'R3500-R15000',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'SEO Services Johannesburg', url: '/services/seo-services-johannesburg' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -98,7 +98,25 @@ export default function SEOServicesJohannesburg() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+            })),
+          }),
+        }}
+      />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

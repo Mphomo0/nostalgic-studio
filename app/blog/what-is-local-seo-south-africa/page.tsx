@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { FaqSection } from '@/components/geo/FaqSection'
+import { CitationBlock } from '@/components/geo/CitationBlock'
+import AuthorBio from '@/components/geo/AuthorBio'
+import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+
+export const metadata: Metadata = {
+  title: 'What is Local SEO? A Guide for South African Businesses (2026)',
+  description:
+    'Learn how to dominate local search in Johannesburg and South Africa. Everything you need to know about Google Maps, local citations, and geo-targeted content.',
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
+  },
+  openGraph: {
+    title: 'What is Local SEO? Guide for South African Businesses | Nostalgic Studio',
+    description:
+      'The ultimate guide to local SEO in South Africa. How to rank on Google Maps and capture local customers in your city.',
+    url: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
+    siteName: 'Nostalgic Studio',
+    type: 'article',
+  },
+}
+
+const faqs = [
+  {
+    question: 'How long does it take for local SEO to work?',
+    answer:
+      'Typically, you will see initial results in 3–6 months. However, for highly competitive areas like "Web Design Johannesburg," it can take 6–12 months of consistent optimization to reach the top 3 positions.',
+  },
+  {
+    question: 'Is Google Business Profile free?',
+    answer:
+      'Yes, creating a Google Business Profile is completely free. However, optimizing it and maintaining high rankings through updates, reviews, and local content often requires professional management.',
+  },
+  {
+    question: 'What are local citations?',
+    answer:
+      'Local citations are mentions of your business\'s Name, Address, and Phone number (NAP) on other websites like directories, social media, and local news sites. Consistent NAP data is a key ranking factor.',
+  },
+]
+
+export default function LocalSEOArticle() {
+  const schema = articleSchema({
+    url: '/blog/what-is-local-seo-south-africa',
+    headline: 'What is Local SEO? A Guide for South African Businesses (2026)',
+    description: 'Master local search engine optimization to attract more customers in your specific South African city or suburb.',
+    datePublished: '2026-05-13',
+    wordCount: 1600,
+    articleSection: 'SEO',
+  })
+
+  const breadcrumb = breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'What is Local SEO South Africa', url: '/blog/what-is-local-seo-south-africa' },
+  ])
+
+  return (
+    <main className="pt-32 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+
+      <article className="container-wide mx-auto px-4 max-w-3xl">
+        <nav className="mb-8 text-sm text-muted-foreground" aria-label="Breadcrumb">
+          <Link href="/blog" className="hover:underline">Blog</Link>
+          <span className="mx-2" aria-hidden="true">›</span>
+          <span>What is Local SEO South Africa</span>
+        </nav>
+
+        <header className="mb-12">
+          <div className="flex gap-3 mb-4">
+            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">SEO</span>
+            <time dateTime="2026-05-13" className="text-xs text-muted-foreground self-center">May 13, 2026</time>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            What is Local SEO? A Guide for South African Businesses
+          </h1>
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            If your customers are in Johannesburg, Pretoria, or Cape Town, general SEO isn't enough. 
+            You need Local SEO to ensure your business appears when people search for "services near me."
+          </p>
+        </header>
+
+        <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
+          
+          <h2>The Definition of Local SEO</h2>
+          <p>
+            Local SEO is the practice of optimizing your online presence to attract more business from 
+            relevant local searches. These searches take place on Google and other search engines, 
+            but critically, they often trigger the "Map Pack" — the top three local business listings 
+            on the search results page.
+          </p>
+          
+          <CitationBlock
+            stat="46%"
+            context="of all Google searches have 'local intent,' meaning the user is looking for information or services within their immediate vicinity."
+            source="Google Search Statistics (2025)"
+          />
+
+          <h2>Why Local SEO Matters in South Africa</h2>
+          <p>
+            In South Africa, mobile penetration is exceptionally high. Most people search for services 
+            on their smartphones while on the go. If your "Web Design Sandton" page isn't optimized, 
+            you're handing customers to your competitors on a silver platter.
+          </p>
+
+          <h2>The 3 Pillars of Local SEO Success</h2>
+          <h3>1. Google Business Profile (GBP)</h3>
+          <p>
+            Your GBP is your digital storefront. It needs high-quality photos, accurate opening hours, 
+            and most importantly, consistent reviews. Encourage your happy customers in Johannesburg 
+             to leave feedback — it's the strongest signal for local rankings.
+          </p>
+
+          <h3>2. On-Page Local Optimization</h3>
+          <p>
+            This involves including your city and suburb names naturally in your content, titles, and 
+            meta descriptions. Using structured data (JSON-LD) to tell search engines exactly where 
+            you are located and what areas you serve is non-negotiable in 2026.
+          </p>
+
+          <h3>3. Local Citations and Backlinks</h3>
+          <p>
+            Getting mentioned on South African directories like Brabys, Hotfrog, or local news sites 
+            builds your "Local Authority." These citations confirm to Google that your business is 
+            legitimate and physically present in the area you claim.
+          </p>
+
+          <CitationBlock
+            stat="76%"
+            context="of people who search on their smartphone for something nearby visit a business within a day."
+            source="Think with Google"
+          />
+
+          <h2>Conclusion</h2>
+          <p>
+            Local SEO is the most cost-effective way for small businesses in South Africa to compete 
+            with larger national brands. By winning the local search battle, you capture high-intent 
+            leads right when they are ready to buy.
+          </p>
+          
+          <p>
+            <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">
+              Need help dominating local search? Explore our SEO services →
+            </Link>
+          </p>
+        </div>
+
+        <FaqSection faqs={faqs} title="Local SEO FAQs" />
+
+        <AuthorBio />
+      </article>
+    </main>
+  )
+}

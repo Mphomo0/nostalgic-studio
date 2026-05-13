@@ -7,52 +7,43 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Hosting Johannesburg | Fast & Reliable Hosting',
-  description: 'Experience blazing-fast web hosting in Johannesburg. We provide secure, scalable, and optimized hosting solutions.',
-  keywords: ['Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting'],
+  title: 'Web Hosting South Africa | Managed Next.js Hosting | Nostalgic Studio',
+  description:
+    'Managed web hosting in South Africa optimised for Next.js. 99.9% uptime, SSL, CDN & daily backups from R500/month. Free site migration.',
+  keywords: ['Web Hosting South Africa', 'Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-hosting',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-hosting' },
   },
   openGraph: {
-    title: 'Web Hosting Johannesburg',
-    description: 'Experience blazing-fast web hosting in Johannesburg. We provide secure, scalable, and optimized hosting solutions.',
+    title: 'Web Hosting South Africa | Managed Next.js Hosting | Nostalgic Studio',
+    description: 'Fast, secure managed hosting for Next.js websites in South Africa. From R500/month. SSL, CDN & 99.9% uptime.',
     url: 'https://www.nostalgic-studio.co.za/services/web-hosting',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Hosting South Africa — Nostalgic Studio' }],
   },
 }
 
 export default function WebHosting() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/web-hosting/#webpage',
-    url: 'https://www.nostalgic-studio.co.za/services/web-hosting',
-    name: 'Web Hosting Johannesburg',
-    description: 'Reliable and high-performance web hosting services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      '@id': 'https://www.nostalgic-studio.co.za/#organization'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Web Hosting',
+  const schemas = [
+    serviceSchema({
+      id: 'web-hosting',
+      name: 'Web Hosting South Africa',
+      description: 'Managed web hosting in South Africa optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
+      url: '/services/web-hosting',
       areaServed: 'South Africa',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+      priceRange: 'R500-R3000',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Web Hosting', url: '/services/web-hosting' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -79,7 +70,15 @@ export default function WebHosting() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+        }) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

@@ -21,23 +21,47 @@ const FaqSection = dynamic(() =>
 )
 
 export const metadata: Metadata = {
-  title: 'Web Design Johannesburg | Custom Web Development & Next.js Agency',
+  title:
+    'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
 
   description:
-    'Web design Johannesburg agency building custom, high-performance Next.js websites that are fast, SEO-optimized, and convert visitors into clients across South Africa.',
+    "Nostalgic Studio — Johannesburg's Next.js web design agency. We build fast, SEO-optimised websites for startups & small businesses from R3,500. Get a free quote today.",
+
+  keywords: [
+    'Web Design Johannesburg',
+    'Website Design Johannesburg',
+    'Web Design South Africa',
+    'Next.js Website Design',
+    'UI/UX Design Agency Johannesburg',
+    'SEO Services Johannesburg',
+    'Digital Agency Johannesburg',
+    'Startup Web Design South Africa',
+    'Affordable Web Design Johannesburg',
+    'Custom Website Development South Africa',
+  ],
 
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za' },
   },
 
   openGraph: {
-    title: 'Web Design Johannesburg | Custom Web Development & Next.js Agency',
+    title:
+      'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
     description:
-      'Custom web development and Next.js websites for Johannesburg businesses. Fast, scalable, and built to rank on Google.',
+      'Fast, SEO-optimised Next.js websites for Johannesburg startups & small businesses. Transparent pricing from R3,500. Built to rank on Google.',
     url: 'https://www.nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
     locale: 'en_ZA',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Web Design Johannesburg — Nostalgic Studio | Next.js Agency',
+      },
+    ],
   },
 }
 
@@ -80,7 +104,7 @@ export default function Home() {
     {
       question: 'How much does web design cost in Johannesburg?',
       answer:
-        'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R8,000, business sites R15,000–R35,000, and e-commerce R25,000–R60,000+.',
+        'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R3,500, business sites R8,000–R15,000, and e-commerce R10,000–R25,000+.',
     },
     {
       question: 'What is Next.js and why is it good for SEO?',
@@ -190,6 +214,76 @@ export default function Home() {
           </p>
         </div>
       </section>
+      {/* Pricing Section — Featured Snippet for "how much does web design cost in Johannesburg" */}
+      <section className="py-16" aria-labelledby="pricing-heading" id="pricing">
+        <div className="container-wide mx-auto px-4">
+          <div className="max-w-3xl mx-auto mb-10 text-center">
+            <h2 id="pricing-heading" className="text-3xl font-bold mb-4">
+              How Much Does Web Design Cost in Johannesburg?
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Transparent, fixed pricing — no hidden fees. All packages include hosting setup,
+              SSL, and a 30-day post-launch support period.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              {
+                name: 'Starter Website',
+                price: 'From R3,500',
+                note: 'Once-off',
+                desc: 'Perfect for freelancers, service providers, and landing pages.',
+                features: ['3–5 pages', 'Mobile responsive', 'Contact form', 'Basic SEO setup', 'Google Analytics'],
+              },
+              {
+                name: 'Business Website',
+                price: 'R8,000 – R15,000',
+                note: 'Once-off',
+                desc: 'For startups and SMEs that need a professional online presence.',
+                features: ['8–15 pages', 'Custom UI/UX design', 'Blog / CMS integration', 'Advanced SEO package', 'Speed optimisation'],
+                highlight: true,
+              },
+              {
+                name: 'E-Commerce Store',
+                price: 'R10,000 – R25,000+',
+                note: 'Once-off',
+                desc: 'Full online stores with SA payment gateways and inventory management.',
+                features: ['Unlimited products', 'PayFast / Yoco / Ozow', 'Inventory management', 'Mobile checkout', 'SEO product pages'],
+              },
+            ].map((tier) => (
+              <div
+                key={tier.name}
+                className={`rounded-3xl border p-8 flex flex-col ${tier.highlight ? 'border-primary bg-primary/5' : 'border-border bg-card'}`}
+              >
+                <h3 className="text-xl font-bold mb-1">{tier.name}</h3>
+                <p className="text-muted-foreground text-sm mb-4">{tier.desc}</p>
+                <div className="mb-6">
+                  <span className="text-2xl font-bold text-primary">{tier.price}</span>
+                  <span className="text-xs text-muted-foreground ml-2">{tier.note}</span>
+                </div>
+                <ul className="space-y-2 mb-8 flex-1">
+                  {tier.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/contact"
+                  className="text-center text-sm font-semibold border border-primary text-primary rounded-xl py-3 hover:bg-primary hover:text-primary-foreground transition-colors"
+                >
+                  Get a Free Quote
+                </Link>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-8">
+            Monthly SEO plans from <strong>R1,500/month</strong> · Web hosting from <strong>R200/month</strong> · Maintenance from <strong>R500/month</strong>
+          </p>
+        </div>
+      </section>
+
       <ServicesPreview />
       <PortfolioPreview />
       <Testimonials />

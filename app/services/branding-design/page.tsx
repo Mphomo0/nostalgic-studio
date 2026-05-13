@@ -7,52 +7,44 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Branding Design Johannesburg | Visual Identity',
-  description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities.',
-  keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design'],
+  title: 'Branding Design Johannesburg | Visual Identity & Logo Design | Nostalgic Studio',
+  description:
+    'Professional branding & logo design in Johannesburg for startups & SMEs. Visual identity systems from R5,000. Brand style guides & marketing assets included.',
+  keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design', 'Graphic Design Johannesburg', 'Brand Strategy South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/branding-design',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/branding-design' },
   },
   openGraph: {
-    title: 'Branding Design Johannesburg',
-    description: 'Elevate your brand with professional branding design in Johannesburg. We create memorable logos and visual identities.',
+    title: 'Branding Design Johannesburg | Visual Identity | Nostalgic Studio',
+    description: 'Logo design and brand identity systems for Johannesburg startups. Full ownership of all assets. From R5,000.',
     url: 'https://www.nostalgic-studio.co.za/services/branding-design',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Branding Design Johannesburg — Nostalgic Studio' }],
   },
 }
 
 export default function BrandingDesign() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/branding-design',
-    url: 'https://www.nostalgic-studio.co.za/services/branding-design',
-    name: 'Branding Design Johannesburg',
-    description: 'Expert branding and visual identity design services in Johannesburg.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      url: 'https://www.nostalgic-studio.co.za'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Branding Design',
-      areaServed: 'Johannesburg',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+  const schemas = [
+    serviceSchema({
+      id: 'branding-design',
+      name: 'Branding Design Johannesburg',
+      description: 'Professional brand identity design in Johannesburg. Custom logos, colour palettes, typography, and brand style guides for startups and SMEs.',
+      url: '/services/branding-design',
+      areaServed: 'Johannesburg, South Africa',
+      priceRange: 'R5000-R25000',
+      deliveryTime: '3-6 weeks',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Branding Design', url: '/services/branding-design' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -75,7 +67,15 @@ export default function BrandingDesign() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script id="faq-schema" type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
+        }) }} />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

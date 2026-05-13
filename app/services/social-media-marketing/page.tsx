@@ -7,51 +7,50 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Marketing | Grow Your Community',
-  description: 'Expert social media marketing in Johannesburg. We help startups and small businesses build engaged communities and drive sales.',
-  keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency'],
+  title: 'Social Media Marketing Johannesburg | Community & Growth | Nostalgic Studio',
+  description:
+    'Expert social media marketing in Johannesburg. We build engaged communities on Instagram, Facebook & LinkedIn for SA startups. From R3,000/month.',
+  keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency', 'Instagram Marketing SA', 'Facebook Marketing Johannesburg'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-marketing' },
   },
   openGraph: {
-    title: 'Social Media Marketing Johannesburg',
-    description: 'Expert social media marketing in Johannesburg. We help startups and small businesses build engaged communities.',
+    title: 'Social Media Marketing Johannesburg | Nostalgic Studio',
+    description:
+      'Build an engaged community in South Africa. Strategic social media marketing for startups & SMEs from R3,000/month.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{
+      url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Social Media Marketing Johannesburg — Nostalgic Studio',
+    }],
   },
 }
 
 export default function SocialMediaMarketing() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/social-media-marketing/#webpage',
-    url: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
-    name: 'Social Media Marketing Johannesburg',
-    description: 'Professional social media marketing and management services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      '@id': 'https://www.nostalgic-studio.co.za/#organization'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Social Media Marketing',
-      areaServed: 'South Africa',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+  const schemas = [
+    serviceSchema({
+      id: 'social-media-marketing',
+      name: 'Social Media Marketing Johannesburg',
+      description:
+        'Strategic social media marketing services in Johannesburg, South Africa. Content creation, community management, and influencer partnerships for startups and SMEs.',
+      url: '/services/social-media-marketing',
+      areaServed: 'Johannesburg, South Africa',
+      priceRange: 'R3000-R15000',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Social Media Marketing', url: '/services/social-media-marketing' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -78,7 +77,25 @@ export default function SocialMediaMarketing() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+            })),
+          }),
+        }}
+      />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>

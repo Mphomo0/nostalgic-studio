@@ -7,52 +7,50 @@ import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Ads Johannesburg | High-ROI Advertising',
-  description: 'Scale your business with expert social media ads in Johannesburg. We specialize in Meta and LinkedIn advertising.',
-  keywords: ['Social Media Ads Johannesburg', 'Facebook Ads South Africa', 'Instagram Advertising Johannesburg', 'LinkedIn Ads Agency South Africa', 'Paid Social Media Marketing'],
+  title: 'Social Media Ads Johannesburg | Meta & LinkedIn Advertising | Nostalgic Studio',
+  description:
+    'Expert social media ads in Johannesburg. Facebook, Instagram & LinkedIn campaigns that convert. Ad spend from R3,000/month. Free strategy session.',
+  keywords: ['Social Media Ads Johannesburg', 'Facebook Ads South Africa', 'Instagram Advertising Johannesburg', 'LinkedIn Ads Agency South Africa', 'Paid Social Media Marketing', 'Meta Ads Johannesburg', 'Social Media Advertising South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
+    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-ads' },
   },
   openGraph: {
-    title: 'Social Media Ads Johannesburg',
-    description: 'Scale your business with expert social media ads in Johannesburg. We specialize in Meta and LinkedIn advertising.',
+    title: 'Social Media Ads Johannesburg | Meta & LinkedIn Advertising | Nostalgic Studio',
+    description:
+      'High-ROI Facebook, Instagram & LinkedIn ad campaigns for Johannesburg businesses. From R3,000/month ad spend.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{
+      url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Social Media Ads Johannesburg — Nostalgic Studio',
+    }],
   },
 }
 
 export default function SocialMediaAds() {
-  const pageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://www.nostalgic-studio.co.za/services/social-media-ads/#webpage',
-    url: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
-    name: 'Social Media Ads Johannesburg',
-    description: 'Professional social media advertising services in Johannesburg, South Africa.',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      '@id': 'https://www.nostalgic-studio.co.za/#organization'
-    },
-    mainEntity: {
-      '@type': 'Service',
-      name: 'Social Media Advertising',
-      areaServed: 'South Africa',
-      provider: {
-        '@type': 'LocalBusiness',
-        name: 'Nostalgic Studio',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA'
-        }
-      }
-    }
-  }
+  const schemas = [
+    serviceSchema({
+      id: 'social-media-ads',
+      name: 'Social Media Ads Johannesburg',
+      description:
+        'Professional social media advertising services in Johannesburg. Facebook, Instagram and LinkedIn paid campaigns for startups and SMEs across South Africa.',
+      url: '/services/social-media-ads',
+      areaServed: 'Johannesburg, South Africa',
+      priceRange: 'R3000-R20000',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Services', url: '/services' },
+      { name: 'Social Media Ads', url: '/services/social-media-ads' },
+    ]),
+  ]
 
   const faqs = [
     {
@@ -79,7 +77,25 @@ export default function SocialMediaAds() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="page-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+      {schemas.map((s, i) => (
+        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((f) => ({
+              '@type': 'Question',
+              name: f.question,
+              acceptedAnswer: { '@type': 'Answer', text: f.answer },
+            })),
+          }),
+        }}
+      />
       
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
