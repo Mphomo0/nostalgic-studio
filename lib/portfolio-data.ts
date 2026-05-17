@@ -18,33 +18,27 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Sozim Trading & Consultancy Website Redesign',
-    category: 'Web Design',
+    title: 'Sozim SEO & Digital Marketing Campaign',
+    category: 'SEO & Digital Marketing',
     client: 'Sozim Trading & Consultancy',
     timeline: '8 weeks',
-    role: 'Web Developer',
+    role: 'SEO Specialist',
     description:
-      'Sozim Trading and Consultancy is a South African provider of training, skills development, and accredited programmes, with a modern, SEO-optimized website.',
+      'Sozim Trading & Consultancy is a South African training and skills development provider. We implemented a focused SEO and digital marketing strategy that generated over 163 clicks in just 28 days, improving online visibility and lead generation for accredited programmes in Bloemfontein and across South Africa.',
     image: '/images/projects/sozim.webp',
     liveUrl: 'https://www.sozim.co.za',
     slug: 'sozim-consultancy',
     challenge:
-      'Sozim needed a modern website to replace their outdated online presence. Their previous site was slow, not mobile-friendly, and failed to communicate the breadth of their accredited training programmes to potential corporate clients.',
+      'Sozim needed to increase their online visibility and generate more interest from prospective students and corporate clients seeking accredited training programmes. Their previous online presence lacked search engine visibility, clear conversion paths, and failed to connect with their target audience effectively.',
     approach:
-      'We built a Next.js website with server-side rendering for maximum SEO visibility. The design showcases their accreditations prominently, features a structured course catalogue, and includes clear calls-to-action for corporate enquiries.',
+      'We implemented a comprehensive digital strategy focused on search visibility and conversion optimization. This included technical SEO improvements using Next.js for server-side rendering and fast load times, on-page SEO with targeted keywords for Bloemfontein and South Africa training markets, clear messaging for prospective students, optimized landing pages with strong calls-to-action, mobile-first design for students on the go, and structured data markup to improve AI search visibility. Every element was designed for both traditional search engines and AI-powered answer engines.',
     results: [
-      'Lighthouse performance score improved from 35 to 96',
-      'Mobile traffic increased by 45% within 3 months',
-      'Organic search visibility improved for 15+ target keywords',
-      'Corporate enquiry form submissions doubled in the first quarter',
+      '163 clicks in 28 days',
+      'Improved organic search visibility for training-related keywords in Bloemfontein',
+      'Optimized landing pages driving more corporate enquiries',
+      'Mobile-friendly experience reaching students on all devices',
     ],
-    technologies: [
-      'Next.js',
-      'React',
-      'TypeScript',
-      'Tailwind CSS',
-      'Framer Motion',
-    ],
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
   },
   {
     id: 2,
