@@ -10,17 +10,17 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'UX/UI Design Johannesburg | User-Centred Interface Design | Nostalgic Studio',
+  title: 'UX/UI Design Johannesburg',
   description:
-    'Expert UX/UI design in Johannesburg. Research-driven, Figma-based interface design that reduces abandonment by 40% and boosts conversions. Get a free UX audit.',
+    'UX/UI design for Johannesburg startups. Research-driven Figma interfaces that boost conversions.',
   keywords: ['UX UI Design Johannesburg', 'User Experience Design South Africa', 'Interface Design Johannesburg', 'Mobile App Design South Africa', 'Figma Design Agency Johannesburg', 'UX Research South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/ux-ui-design' },
   },
   openGraph: {
-    title: 'UX/UI Design Johannesburg | Nostalgic Studio',
-    description: 'Research-driven UX/UI design for Johannesburg startups. Figma prototyping, user research, and mobile-first design.',
+    title: 'UX/UI Design Johannesburg',
+    description: 'Research-driven UX/UI for Johannesburg startups. Figma, user research, mobile-first design.',
     url: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
     siteName: 'Nostalgic Studio',
     type: 'website',

@@ -6,16 +6,16 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'What is Local SEO? A Guide for South African Businesses (2026)',
+  title: 'Local SEO Guide SA 2026',
   description:
-    'Learn how to dominate local search in Johannesburg and South Africa. Everything you need to know about Google Maps, local citations, and geo-targeted content.',
+    'Dominate local search in South Africa. Google Maps, citations, and geo-targeted content strategies.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
   },
   openGraph: {
-    title: 'What is Local SEO? Guide for South African Businesses | Nostalgic Studio',
+    title: 'Local SEO Guide SA 2026',
     description:
-      'The ultimate guide to local SEO in South Africa. How to rank on Google Maps and capture local customers in your city.',
+      'How to rank on Google Maps and capture local customers in South Africa. Local SEO strategies that work.',
     url: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
     siteName: 'Nostalgic Studio',
     type: 'article',

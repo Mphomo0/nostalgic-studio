@@ -10,18 +10,18 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Marketing Johannesburg | Community & Growth | Nostalgic Studio',
+  title: 'Social Media Marketing JHB',
   description:
-    'Expert social media marketing in Johannesburg. We build engaged communities on Instagram, Facebook & LinkedIn for SA startups. From R3,000/month.',
+    'Social media marketing for startups in Johannesburg. Instagram, Facebook & LinkedIn. From R3,000/month.',
   keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency', 'Instagram Marketing SA', 'Facebook Marketing Johannesburg'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-marketing' },
   },
   openGraph: {
-    title: 'Social Media Marketing Johannesburg | Nostalgic Studio',
+    title: 'Social Media Marketing JHB',
     description:
-      'Build an engaged community in South Africa. Strategic social media marketing for startups & SMEs from R3,000/month.',
+      'Strategic social media marketing for SA startups. Instagram, Facebook & LinkedIn. From R3,000/month.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
     siteName: 'Nostalgic Studio',
     type: 'website',

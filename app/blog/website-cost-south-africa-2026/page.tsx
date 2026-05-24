@@ -6,16 +6,16 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
+  title: 'Website Cost SA 2026 Guide',
   description:
-    'A transparent, up-to-date breakdown of website design and development pricing in South Africa — from R5,000 basic sites to R50,000+ e-commerce platforms.',
+    'Transparent web design pricing in South Africa. From R5,000 basic sites to R50,000+ e-commerce.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
   },
   openGraph: {
-    title: 'How Much Does a Website Cost in South Africa? (2026 Price Guide)',
+    title: 'Website Cost SA 2026 Guide',
     description:
-      'Transparent pricing for web design in South Africa. Compare packages from R5,000 to R50,000+.',
+      'Transparent web design pricing in SA. Compare packages from R5,000 to R50,000+ e-commerce platforms.',
     url: 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',

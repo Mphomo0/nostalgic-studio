@@ -6,16 +6,16 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Strategy for South African Businesses (2026)',
+  title: 'Social Media Strategy SA 2026',
   description:
-    'Stop wasting money on social media. Learn the most effective social media strategies for South African businesses in 2026. WhatsApp, TikTok, and LinkedIn insights.',
+    'Effective social media strategies for South African businesses. WhatsApp, TikTok & LinkedIn insights.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
   },
   openGraph: {
-    title: 'Social Media Strategy for SA Businesses (2026) | Nostalgic Studio',
+    title: 'Social Media Strategy SA 2026',
     description:
-      'The definitive guide to social media marketing in South Africa. Which platforms matter most for your business in 2026.',
+      'The guide to social media marketing in South Africa. Which platforms matter most for your business.',
     url: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
     siteName: 'Nostalgic Studio',
     type: 'article',

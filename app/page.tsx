@@ -21,11 +21,10 @@ const FaqSection = dynamic(() =>
 )
 
 export const metadata: Metadata = {
-  title:
-    'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
+  title: 'Web Design for Startups Johannesburg',
 
   description:
-    "Nostalgic Studio — Johannesburg's Next.js web design agency. We build fast, SEO-optimised websites for startups & small businesses from R3,500. Get a free quote today.",
+    'Web design agency for startups in Johannesburg. Custom Next.js websites, SEO & branding. From R3,500. Free quote.',
 
   keywords: [
     'Web Design Johannesburg',
@@ -46,10 +45,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title:
-      'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
+    title: 'Web Design for Startups Johannesburg | Nostalgic Studio',
     description:
-      'Fast, SEO-optimised Next.js websites for Johannesburg startups & small businesses. Transparent pricing from R3,500. Built to rank on Google.',
+      'Custom Next.js websites for startups in Johannesburg. SEO-optimized, fast, and conversion-focused. From R3,500.',
     url: 'https://www.nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
     locale: 'en_ZA',
@@ -59,7 +57,7 @@ export const metadata: Metadata = {
         url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Web Design Johannesburg — Nostalgic Studio | Next.js Agency',
+        alt: 'Web Design for Startups Johannesburg — Nostalgic Studio',
       },
     ],
   },

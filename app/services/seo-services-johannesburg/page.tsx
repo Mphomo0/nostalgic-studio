@@ -10,9 +10,9 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg | Expert SEO Agency | Nostalgic Studio',
+  title: 'SEO Services Johannesburg',
   description:
-    'Professional SEO services in Johannesburg. Technical SEO, local SEO & Next.js optimisation to rank on Google. From R3,500/month. Free SEO audit.',
+    'SEO agency in Johannesburg. Technical SEO, local SEO & content strategy for SA businesses. Free audit.',
   keywords: [
     'SEO Services Johannesburg',
     'Search Engine Optimization Johannesburg',

@@ -20,9 +20,9 @@ import {
 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Web Design Services Johannesburg | Digital Agency',
+  title: 'Web Design Services Johannesburg',
   description:
-    'Expert web design services in Johannesburg. Next.js development, UI/UX design, branding, SEO, and ecommerce solutions.',
+    'Web design, UI/UX, branding & SEO services in Johannesburg for startups. Custom Next.js development.',
   keywords: [
     'web design services',
     'web design Johannesburg',

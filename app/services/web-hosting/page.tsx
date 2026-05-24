@@ -10,17 +10,17 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Hosting South Africa | Managed Next.js Hosting | Nostalgic Studio',
+  title: 'Web Hosting South Africa',
   description:
-    'Managed web hosting in South Africa optimised for Next.js. 99.9% uptime, SSL, CDN & daily backups from R500/month. Free site migration.',
+    'Managed hosting for Next.js websites in SA. 99.9% uptime, SSL, CDN & backups. From R500/month.',
   keywords: ['Web Hosting South Africa', 'Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-hosting',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-hosting' },
   },
   openGraph: {
-    title: 'Web Hosting South Africa | Managed Next.js Hosting | Nostalgic Studio',
-    description: 'Fast, secure managed hosting for Next.js websites in South Africa. From R500/month. SSL, CDN & 99.9% uptime.',
+    title: 'Web Hosting South Africa',
+    description: 'Fast managed Next.js hosting in SA. SSL, CDN, 99.9% uptime. From R500/month.',
     url: 'https://www.nostalgic-studio.co.za/services/web-hosting',
     siteName: 'Nostalgic Studio',
     type: 'website',

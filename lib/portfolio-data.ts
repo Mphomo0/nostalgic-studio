@@ -53,7 +53,7 @@ export const projects: Project[] = [
     liveUrl: '#',
     slug: 'didee-holdings',
     challenge:
-      'Didee Holdings is a South African construction and civil engineering company offering building, infrastructure, roads, and earthworks, showcasing projects.',
+      'Didee Holdings needed a website that could position them as a credible, established player in South African construction while showcasing their civil engineering portfolio. Their previous site failed to communicate safety standards or project experience, which hurt their tender applications.',
     approach:
       'We delivered a clean, trust-focused design in just 2 weeks. The site emphasises safety certifications, completed project gallery, and clear service categories. Every page is optimised for local SEO targeting Johannesburg construction companies.',
     results: [
@@ -70,36 +70,36 @@ export const projects: Project[] = [
       'Framer Motion',
     ],
   },
-  // {
-  //   id: 3,
-  //   title: 'Tanosa Group Website Redesign',
-  //   category: 'Web Design',
-  //   client: 'Tanosa Group',
-  //   timeline: '1 week',
-  //   role: 'Web Developer',
-  //   description:
-  //     'Tanosa Group provides comprehensive consulting, governance, business development, training, branding and project management solutions for organizations across South Africa. We developed a sleek, professional website that effectively communicates their multidisciplinary services and expertise. The site features optimized performance and mobile-first design.',
-  //   image: '/images/projects/tanosa.webp',
-  //   liveUrl: 'https://www.tanosagroup.com',
-  //   slug: 'tanosa-group',
-  //   challenge:
-  //     'Tanosa Group needed a website that could clearly communicate their diverse range of consulting services without overwhelming visitors. Their multidisciplinary approach required careful information architecture.',
-  //   approach:
-  //     'We created a streamlined site architecture with dedicated service sections, a professional leadership page, and clear navigation pathways. The design uses a sophisticated colour palette that conveys trust and expertise.',
-  //   results: [
-  //     'Clear service categorisation improved user navigation by 60%',
-  //     'Professional design enhanced corporate credibility',
-  //     'Site loads in under 1.5 seconds on mobile networks',
-  //     'Google-indexed for consulting services in Johannesburg',
-  //   ],
-  //   technologies: [
-  //     'Next.js',
-  //     'React',
-  //     'TypeScript',
-  //     'Tailwind CSS',
-  //     'Framer Motion',
-  //   ],
-  // },
+  {
+    id: 3,
+    title: 'Tanosa Group Website Redesign',
+    category: 'Web Design',
+    client: 'Tanosa Group',
+    timeline: '1 week',
+    role: 'Web Developer',
+    description:
+      'Tanosa Group provides comprehensive consulting, governance, business development, training, branding and project management solutions for organizations across South Africa. We developed a sleek, professional website that effectively communicates their multidisciplinary services and expertise. The site features optimized performance and mobile-first design.',
+    image: '/images/projects/tanosa.webp',
+    liveUrl: 'https://www.tanosagroup.com',
+    slug: 'tanosa-group',
+    challenge:
+      'Tanosa Group needed a website that could clearly communicate their diverse range of consulting services without overwhelming visitors. Their multidisciplinary approach required careful information architecture.',
+    approach:
+      'We created a streamlined site architecture with dedicated service sections, a professional leadership page, and clear navigation pathways. The design uses a sophisticated colour palette that conveys trust and expertise.',
+    results: [
+      'Clear service categorisation improved user navigation by 60%',
+      'Professional design enhanced corporate credibility',
+      'Site loads in under 1.5 seconds on mobile networks',
+      'Google-indexed for consulting services in Johannesburg',
+    ],
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
+    ],
+  },
   {
     id: 4,
     title: 'Jiyology New Website',

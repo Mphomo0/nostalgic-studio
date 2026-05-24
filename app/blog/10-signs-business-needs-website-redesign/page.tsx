@@ -6,16 +6,17 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: '10 Signs Your Business Website Needs a Redesign',
+  title: '10 Signs for Website Redesign',
   description:
-    'Is your website costing you customers? These 10 warning signs indicate it\'s time to invest in a professional redesign — from slow loading to outdated design.',
+    'Slow loading, poor mobile experience, low conversions — 10 signs your business website needs a redesign.',
   alternates: {
-    canonical: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
+    canonical:
+      'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
   },
   openGraph: {
-    title: '10 Signs Your Business Website Needs a Redesign',
+    title: '10 Signs for Website Redesign',
     description:
-      'Slow loading, poor mobile experience, low conversions — 10 warning signs you need a website redesign.',
+      'Slow loading, poor mobile, low conversions — 10 warning signs you need a website redesign.',
     url: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
     siteName: 'Nostalgic Studio',
     type: 'article',
@@ -39,7 +40,7 @@ const signs = [
     number: '03',
     title: 'It Looks Outdated',
     description:
-      'Design trends evolve rapidly. A site that looked modern in 2018 looks dated in 2025 — and customers judge your credibility by your website\'s appearance.',
+      "Design trends evolve rapidly. A site that looked modern in 2018 looks dated in 2025 — and customers judge your credibility by your website's appearance.",
   },
   {
     number: '04',
@@ -81,7 +82,7 @@ const signs = [
     number: '10',
     title: 'Your Competitors Look Better',
     description:
-      'If a potential customer compares your site to a competitor\'s and yours looks worse, you have already lost the sale — before saying a word.',
+      "If a potential customer compares your site to a competitor's and yours looks worse, you have already lost the sale — before saying a word.",
   },
 ]
 
@@ -107,7 +108,8 @@ export default function RedesignSignsArticle() {
   const schema = articleSchema({
     url: '/blog/10-signs-business-needs-website-redesign',
     headline: '10 Signs Your Business Website Needs a Redesign',
-    description: 'Is your website costing you customers? These 10 warning signs indicate it\'s time to invest in a professional redesign.',
+    description:
+      "Is your website costing you customers? These 10 warning signs indicate it's time to invest in a professional redesign.",
     datePublished: '2026-03-24',
     dateModified: '2026-04-06',
     wordCount: 1650,
@@ -117,7 +119,10 @@ export default function RedesignSignsArticle() {
   const breadcrumb = breadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Blog', url: '/blog' },
-    { name: '10 Signs You Need a Redesign', url: '/blog/10-signs-business-needs-website-redesign' },
+    {
+      name: '10 Signs You Need a Redesign',
+      url: '/blog/10-signs-business-needs-website-redesign',
+    },
   ])
 
   return (
@@ -132,41 +137,68 @@ export default function RedesignSignsArticle() {
       />
 
       <article className="container-wide mx-auto px-4 max-w-3xl">
-        <nav className="mb-8 text-sm text-muted-foreground" aria-label="Breadcrumb">
-          <Link href="/blog" className="hover:underline">Blog</Link>
-          <span className="mx-2" aria-hidden="true">›</span>
+        <nav
+          className="mb-8 text-sm text-muted-foreground"
+          aria-label="Breadcrumb"
+        >
+          <Link href="/blog" className="hover:underline">
+            Blog
+          </Link>
+          <span className="mx-2" aria-hidden="true">
+            ›
+          </span>
           <span>10 Signs You Need a Redesign</span>
         </nav>
 
         <header className="mb-12">
           <div className="flex gap-3 mb-4">
-            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Strategy</span>
-            <time dateTime="2026-03-24" className="text-xs text-muted-foreground self-center">March 24, 2026</time>
+            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">
+              Strategy
+            </span>
+            <time
+              dateTime="2026-03-24"
+              className="text-xs text-muted-foreground self-center"
+            >
+              March 24, 2026
+            </time>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             10 Signs Your Business Website Needs a Redesign
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Your website is your most important sales tool — or it should be. 
-            If any of these 10 warning signs apply, it is costing you business.
+            Your website is your most important sales tool — or it should be. If
+            any of these 10 warning signs apply, it is costing you business.
           </p>
         </header>
 
         <div className="my-8 p-6 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex gap-4 items-start">
-          <AlertTriangle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" aria-hidden="true" />
+          <AlertTriangle
+            className="w-5 h-5 text-amber-500 shrink-0 mt-0.5"
+            aria-hidden="true"
+          />
           <p className="text-sm text-muted-foreground">
-            <strong className="text-foreground">Quick check:</strong>{' '}
-            If more than 3 of these signs apply to your current website, a redesign is likely costing you more than it saves.
+            <strong className="text-foreground">Quick check:</strong> If more
+            than 3 of these signs apply to your current website, a redesign is
+            likely costing you more than it saves.
           </p>
         </div>
 
         <div className="space-y-6 my-10">
           {signs.map((sign) => (
-            <div key={sign.number} className="flex gap-5 items-start p-6 bg-card border border-border rounded-2xl">
-              <span className="text-3xl font-bold text-primary/30 flex-shrink-0 leading-none">{sign.number}</span>
+            <div
+              key={sign.number}
+              className="flex gap-5 items-start p-6 bg-card border border-border rounded-2xl"
+            >
+              <span className="text-3xl font-bold text-primary/30 shrink-0 leading-none">
+                {sign.number}
+              </span>
               <div>
-                <h2 className="text-lg font-bold text-foreground mb-1">{sign.title}</h2>
-                <p className="text-muted-foreground text-sm leading-relaxed">{sign.description}</p>
+                <h2 className="text-lg font-bold text-foreground mb-1">
+                  {sign.title}
+                </h2>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {sign.description}
+                </p>
               </div>
             </div>
           ))}
@@ -178,8 +210,8 @@ export default function RedesignSignsArticle() {
             Ready for a Website That Works?
           </h2>
           <p className="text-muted-foreground mb-5">
-            Nostalgic Studio specialises in rebuilding underperforming websites into high-converting, 
-            SEO-optimised platforms built on Next.js.
+            Nostalgic Studio specialises in rebuilding underperforming websites
+            into high-converting, SEO-optimised platforms built on Next.js.
           </p>
           <Link
             href="/contact"
@@ -193,39 +225,66 @@ export default function RedesignSignsArticle() {
         <section className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           <h2>The Website Redesign Process & Timeline</h2>
           <p>
-            A professional website redesign is more than just a "face-lift". At Nostalgic Studio, 
-            we follow a data-driven 5-phase process to ensure your new site delivers measurable business results.
+            A professional website redesign is more than just a "face-lift". At
+            Nostalgic Studio, we follow a data-driven 5-phase process to ensure
+            your new site delivers measurable business results.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose my-8">
             <div className="p-6 bg-card border border-border rounded-xl">
               <h3 className="font-bold mb-2">Phase 1: Discovery (Week 1)</h3>
-              <p className="text-sm text-muted-foreground">Competitor audit, keyword research, and conversion mapping.</p>
+              <p className="text-sm text-muted-foreground">
+                Competitor audit, keyword research, and conversion mapping.
+              </p>
             </div>
             <div className="p-6 bg-card border border-border rounded-xl">
-              <h3 className="font-bold mb-2">Phase 2: Strategy & UX (Week 2)</h3>
-              <p className="text-sm text-muted-foreground">Wireframing, sitemap architecture, and user journey optimization.</p>
+              <h3 className="font-bold mb-2">
+                Phase 2: Strategy & UX (Week 2)
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Wireframing, sitemap architecture, and user journey
+                optimization.
+              </p>
             </div>
             <div className="p-6 bg-card border border-border rounded-xl">
               <h3 className="font-bold mb-2">Phase 3: Design (Week 3-4)</h3>
-              <p className="text-sm text-muted-foreground">UI design, custom prototyping, and brand integration.</p>
+              <p className="text-sm text-muted-foreground">
+                UI design, custom prototyping, and brand integration.
+              </p>
             </div>
             <div className="p-6 bg-card border border-border rounded-xl">
-              <h3 className="font-bold mb-2">Phase 4: Development (Week 5-7)</h3>
-              <p className="text-sm text-muted-foreground">Next.js engineering, technical SEO setup, and API integrations.</p>
+              <h3 className="font-bold mb-2">
+                Phase 4: Development (Week 5-7)
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                Next.js engineering, technical SEO setup, and API integrations.
+              </p>
             </div>
           </div>
 
           <h2>Specific Deliverables You Should Expect</h2>
           <p>
-            When investing in a redesign (typically ranging from <strong>R15,000 to R35,000</strong> for business sites), 
-            you should receive the following concrete deliverables:
+            When investing in a redesign (typically ranging from{' '}
+            <strong>R15,000 to R35,000</strong> for business sites), you should
+            receive the following concrete deliverables:
           </p>
           <ul className="space-y-2 text-muted-foreground">
-            <li><strong>Technical SEO Audit:</strong> A before-and-after comparison of site speed and indexability.</li>
-            <li><strong>Responsive Design:</strong> Fully tested layouts for iOS, Android, and all major desktop browsers.</li>
-            <li><strong>Conversion Tracking:</strong> Setup of Google Analytics 4 and event tracking for leads.</li>
-            <li><strong>Training & Documentation:</strong> A custom guide on how to manage your new CMS.</li>
+            <li>
+              <strong>Technical SEO Audit:</strong> A before-and-after
+              comparison of site speed and indexability.
+            </li>
+            <li>
+              <strong>Responsive Design:</strong> Fully tested layouts for iOS,
+              Android, and all major desktop browsers.
+            </li>
+            <li>
+              <strong>Conversion Tracking:</strong> Setup of Google Analytics 4
+              and event tracking for leads.
+            </li>
+            <li>
+              <strong>Training & Documentation:</strong> A custom guide on how
+              to manage your new CMS.
+            </li>
           </ul>
         </section>
 

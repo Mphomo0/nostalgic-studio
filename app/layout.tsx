@@ -32,13 +32,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.nostalgic-studio.co.za'),
 
   title: {
-    default:
-      'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
+    default: 'Web Design for Startups Johannesburg',
     template: '%s | Nostalgic Studio',
   },
 
   description:
-    "Nostalgic Studio — Johannesburg's Next.js web design agency. Custom, SEO-optimised websites for startups & small businesses in South Africa from R8,000.",
+    'Web design agency for startups in Johannesburg. Custom Next.js websites, branding & SEO. 70+ projects delivered. From R3,500.',
 
   keywords: [
     'Web Design Johannesburg',
@@ -80,27 +79,25 @@ export const metadata: Metadata = {
     locale: 'en_ZA',
     url: 'https://www.nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
-    title:
-      'Custom Web Development & Web Design Johannesburg | Nostalgic Studio',
+    title: 'Web Design for Startups Johannesburg | Nostalgic Studio',
     description:
-      'We build high-performance Next.js websites for startups and businesses in South Africa. Custom, scalable, and SEO-optimized.',
+      'Web design agency for startups in Johannesburg. Custom Next.js websites, branding & SEO. 70+ projects delivered. From R3,500.',
 
     images: [
       {
         url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Custom Web Development Johannesburg - Nostalgic Studio',
+        alt: 'Web Design for Startups Johannesburg - Nostalgic Studio',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title:
-      'Custom Web Development & Web Design Johannesburg | Nostalgic Studio',
+    title: 'Web Design for Startups Johannesburg | Nostalgic Studio',
     description:
-      'High-performance websites built with Next.js for startups and growing businesses in South Africa.',
+      'Custom Next.js websites for startups in Johannesburg. SEO-optimized, fast, and conversion-focused.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -114,11 +111,22 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'Person',
+        '@id': 'https://www.nostalgic-studio.co.za/about#person',
+        name: 'Mpho Moipolai',
+        url: 'https://www.nostalgic-studio.co.za/about',
+        jobTitle: 'Founder & Lead Developer',
+        worksFor: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
+        sameAs: [
+          'https://www.linkedin.com/private/moipolai-mpho-110356396/',
+        ],
+      },
+      {
         '@type': 'Organization',
         '@id': 'https://www.nostalgic-studio.co.za/#organization',
         name: 'Nostalgic Studio',
         url: 'https://www.nostalgic-studio.co.za',
-        foundingDate: '2013',
+        foundingDate: '2016',
         logo: {
           '@type': 'ImageObject',
           url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',

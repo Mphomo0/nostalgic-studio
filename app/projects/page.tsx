@@ -36,7 +36,7 @@ export default function ProjectsPage() {
     url: 'https://www.nostalgic-studio.co.za/projects',
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: 5,
+      numberOfItems: 6,
       itemListElement: [
         {
           '@type': 'ListItem',

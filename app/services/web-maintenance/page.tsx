@@ -10,17 +10,17 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Maintenance South Africa | Proactive Website Support | Nostalgic Studio',
+  title: 'Web Maintenance South Africa',
   description:
-    'Professional website maintenance in Johannesburg. Security updates, performance optimisation & 24/7 monitoring from R500/month. Keep your Next.js site secure.',
+    'Website maintenance for SA businesses. Security updates, performance & 24/7 monitoring. From R500/month.',
   keywords: ['Web Maintenance Johannesburg', 'Website Support South Africa', 'Next.js Maintenance Services', 'Managed Website Updates South Africa', 'Website Security Monitoring SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-maintenance',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-maintenance' },
   },
   openGraph: {
-    title: 'Web Maintenance South Africa | Nostalgic Studio',
-    description: 'Keep your website secure and performing. Monthly maintenance plans from R500/month. 24/7 monitoring.',
+    title: 'Web Maintenance South Africa',
+    description: 'Keep your website secure and performing. Monthly plans from R500/month. 24/7 monitoring.',
     url: 'https://www.nostalgic-studio.co.za/services/web-maintenance',
     siteName: 'Nostalgic Studio',
     type: 'website',

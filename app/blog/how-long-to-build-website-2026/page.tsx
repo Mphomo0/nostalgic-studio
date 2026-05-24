@@ -6,16 +6,16 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'How Long Does it Take to Build a Website? (2026 Timeline)',
+  title: 'Website Build Timeline 2026',
   description:
-    'From discovery to launch: A realistic breakdown of how long it takes to build a professional website in South Africa. Timeline for brochure, business, and e-commerce sites.',
+    'Realistic website development timeline in South Africa. Brochure, business & e-commerce sites from 2-12 weeks.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
   },
   openGraph: {
-    title: 'How Long to Build a Website? (2026 Timeline Guide) | Nostalgic Studio',
+    title: 'Website Build Timeline 2026',
     description:
-      'Realistic website development timelines for 2026. Learn what happens during each phase and how to speed up your launch.',
+      'Realistic timelines for building a website in SA. Learn each phase and how to speed up your launch.',
     url: 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',

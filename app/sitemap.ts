@@ -80,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'jiyology-website', date: '2024-01-25' },
     { slug: 'az-truck-dealership', date: '2024-01-28' },
     { slug: 'bidco-trucks', date: '2024-01-30' },
+    { slug: 'tanosa-group', date: '2024-02-01' },
   ].map(({ slug, date }) => ({
     url: `${BASE_URL}/projects/${slug}`,
     lastModified: new Date(date),

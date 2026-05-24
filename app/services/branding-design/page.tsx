@@ -10,17 +10,17 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Branding Design Johannesburg | Visual Identity & Logo Design | Nostalgic Studio',
+  title: 'Branding Design Johannesburg',
   description:
-    'Professional branding & logo design in Johannesburg for startups & SMEs. Visual identity systems from R5,000. Brand style guides & marketing assets included.',
+    'Brand identity and logo design for startups in Johannesburg. Visual systems, guides & assets. From R5,000.',
   keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design', 'Graphic Design Johannesburg', 'Brand Strategy South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/branding-design',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/branding-design' },
   },
   openGraph: {
-    title: 'Branding Design Johannesburg | Visual Identity | Nostalgic Studio',
-    description: 'Logo design and brand identity systems for Johannesburg startups. Full ownership of all assets. From R5,000.',
+    title: 'Branding Design Johannesburg',
+    description: 'Logo design and brand identity systems for Johannesburg startups. Full asset ownership. From R5,000.',
     url: 'https://www.nostalgic-studio.co.za/services/branding-design',
     siteName: 'Nostalgic Studio',
     type: 'website',

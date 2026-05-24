@@ -10,18 +10,18 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Ads Johannesburg | Meta & LinkedIn Advertising | Nostalgic Studio',
+  title: 'Social Media Ads Johannesburg',
   description:
-    'Expert social media ads in Johannesburg. Facebook, Instagram & LinkedIn campaigns that convert. Ad spend from R3,000/month. Free strategy session.',
+    'Facebook, Instagram & LinkedIn ad campaigns for Johannesburg businesses. From R3,000/month.',
   keywords: ['Social Media Ads Johannesburg', 'Facebook Ads South Africa', 'Instagram Advertising Johannesburg', 'LinkedIn Ads Agency South Africa', 'Paid Social Media Marketing', 'Meta Ads Johannesburg', 'Social Media Advertising South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-ads' },
   },
   openGraph: {
-    title: 'Social Media Ads Johannesburg | Meta & LinkedIn Advertising | Nostalgic Studio',
+    title: 'Social Media Ads Johannesburg',
     description:
-      'High-ROI Facebook, Instagram & LinkedIn ad campaigns for Johannesburg businesses. From R3,000/month ad spend.',
+      'High-ROI Facebook, Instagram & LinkedIn ad campaigns for JHB businesses. From R3,000/month.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
     siteName: 'Nostalgic Studio',
     type: 'website',

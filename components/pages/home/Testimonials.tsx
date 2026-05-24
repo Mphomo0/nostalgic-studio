@@ -58,11 +58,11 @@ export default function Testimonials() {
     '@graph': [
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://nostalgic-studio.co.za/#business',
+        '@id': 'https://www.nostalgic-studio.co.za/#business',
         name: 'Nostalgic Studio',
-        url: 'https://nostalgic-studio.co.za',
-        logo: 'https://nostalgic-studio.co.za/images/logo/Logo.webp',
-        image: 'https://nostalgic-studio.co.za/images/og-image.jpg',
+        url: 'https://www.nostalgic-studio.co.za',
+        logo: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+        image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
         description:
           'Nostalgic Studio is a Johannesburg-based digital design agency crafting high-performing websites, branding, and UI/UX design for startups and growing businesses across South Africa.',
         telephone: '+27-82-448-3273',
@@ -103,9 +103,9 @@ export default function Testimonials() {
 
       ...testimonials.map((t, index) => ({
         '@type': 'Review',
-        '@id': `https://nostalgic-studio.co.za/#review-${index + 1}`,
+        '@id': `https://www.nostalgic-studio.co.za/#review-${index + 1}`,
         itemReviewed: {
-          '@id': 'https://nostalgic-studio.co.za/#business',
+          '@id': 'https://www.nostalgic-studio.co.za/#business',
         },
         author: {
           '@type': 'Person',

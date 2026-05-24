@@ -6,16 +6,16 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'How to Choose a Web Design Company in Johannesburg (2026 Guide)',
+  title: 'Choose a Web Design Co. JHB',
   description:
-    'Don\'t get scammed. Learn the 7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack, and SEO expertise explained.',
+    '7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack & SEO explained.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
   },
   openGraph: {
-    title: 'How to Choose a Web Design Company in Johannesburg | Nostalgic Studio',
+    title: 'Choose a Web Design Co. JHB',
     description:
-      'Learn how to evaluate Johannesburg web design agencies. 7 critical questions to ask before you sign a contract.',
+      'Learn how to evaluate Johannesburg web design agencies. 7 critical questions to ask before signing.',
     url: 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'article',

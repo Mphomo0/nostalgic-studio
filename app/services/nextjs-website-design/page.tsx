@@ -10,17 +10,17 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Next.js Website Design South Africa | Fast & SEO-Ready | Nostalgic Studio',
+  title: 'Next.js Development South Africa',
   description:
-    'Specialist Next.js website design in Johannesburg. Server-side rendering, 90-100 Lighthouse scores & native SEO. The modern alternative to WordPress in South Africa.',
+    'Next.js development in South Africa. SSR, SSG, 90-100 Lighthouse scores. Modern WordPress alternative.',
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites South Africa', 'Next.js Agency Johannesburg', 'Modern Web Design South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/nextjs-website-design' },
   },
   openGraph: {
-    title: 'Next.js Website Design South Africa | Nostalgic Studio',
-    description: 'Next.js websites for Johannesburg businesses. 90-100 Lighthouse scores, sub-1.5s load times. The modern WordPress alternative.',
+    title: 'Next.js Development South Africa',
+    description: 'Next.js websites for SA businesses. 90-100 Lighthouse scores, sub-1.5s load times. Modern WordPress alt.',
     url: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
     siteName: 'Nostalgic Studio',
     type: 'website',
