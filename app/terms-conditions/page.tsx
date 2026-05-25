@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
+
 import TermsAndConditions from '@/components/pages/terms/termsandconditions'
 import TermsHero from '@/components/pages/terms/TermsHero'
 

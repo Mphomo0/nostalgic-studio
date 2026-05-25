@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
+
 import PortfolioHeader from '@/components/pages/projects/PortfolioHeader'
 import PortfolioGrid from '@/components/pages/projects/PortfolioGrid'
 

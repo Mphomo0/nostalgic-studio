@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+
+export const dynamic = 'force-static'
 import { ArrowRight, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {

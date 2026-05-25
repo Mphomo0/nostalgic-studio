@@ -4,26 +4,72 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Menu, X, ChevronDown, Globe, Search, Zap, ShoppingBag, Palette, Share2, Megaphone, Server, Layout, Settings } from 'lucide-react'
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  Search,
+  Zap,
+  ShoppingBag,
+  Palette,
+  Share2,
+  Megaphone,
+  Server,
+  Layout,
+  Settings,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from '@/components/ui/dropdown-menu'
 
 const serviceLinks = [
-  { title: 'Web Design Johannesburg', href: '/services/web-design-johannesburg', icon: Globe },
-  { title: 'SEO Services Johannesburg', href: '/services/seo-services-johannesburg', icon: Search },
-  { title: 'Next.js Website Design', href: '/services/nextjs-website-design', icon: Zap },
-  { title: 'Ecommerce Development', href: '/services/ecommerce-website-development', icon: ShoppingBag },
-  { title: 'Branding Design', href: '/services/branding-design', icon: Palette },
-  { title: 'Social Media Marketing', href: '/services/social-media-marketing', icon: Share2 },
-  { title: 'Social Media Ads', href: '/services/social-media-ads', icon: Megaphone },
+  {
+    title: 'Web Design Johannesburg',
+    href: '/services/web-design-johannesburg',
+    icon: Globe,
+  },
+  {
+    title: 'SEO Services Johannesburg',
+    href: '/services/seo-services-johannesburg',
+    icon: Search,
+  },
+  {
+    title: 'Next.js Website Design',
+    href: '/services/nextjs-website-design',
+    icon: Zap,
+  },
+  {
+    title: 'Ecommerce Development',
+    href: '/services/ecommerce-website-development',
+    icon: ShoppingBag,
+  },
+  {
+    title: 'Branding Design',
+    href: '/services/branding-design',
+    icon: Palette,
+  },
+  {
+    title: 'Social Media Marketing',
+    href: '/services/social-media-marketing',
+    icon: Share2,
+  },
+  {
+    title: 'Social Media Ads',
+    href: '/services/social-media-ads',
+    icon: Megaphone,
+  },
   { title: 'Web Hosting', href: '/services/web-hosting', icon: Server },
   { title: 'UX/UI Design', href: '/services/ux-ui-design', icon: Layout },
-  { title: 'Web Maintenance', href: '/services/web-maintenance', icon: Settings },
+  {
+    title: 'Web Maintenance',
+    href: '/services/web-maintenance',
+    icon: Settings,
+  },
 ]
 
 const navLinks = [
@@ -45,12 +91,17 @@ const Navbar = () => {
       <div className="container-wide mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group" aria-label="Nostalgic Studio - Home">
+          <Link
+            href="/"
+            className="flex items-center gap-2 group"
+            aria-label="Nostalgic Studio - Home"
+          >
             <Image
               src="/images/logo/Logo.webp"
               alt="Nostalgic Studio - Digital Design Agency Johannesburg"
               width={150}
               height={100}
+              sizes="150px"
               loading="eager"
               className="w-full h-full object-contain"
             />
@@ -58,22 +109,41 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link) =>
               link.dropdown ? (
                 <DropdownMenu key={link.path}>
-                  <DropdownMenuTrigger className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none ${
-                    pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
-                  }`}>
+                  <DropdownMenuTrigger
+                    className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none ${
+                      pathname.startsWith('/services')
+                        ? 'text-primary'
+                        : 'text-muted-foreground hover:text-foreground'
+                    }`}
+                  >
                     {link.name} <ChevronDown size={14} />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-64 p-2 bg-background/95 backdrop-blur-xl border-border/50">
+                  <DropdownMenuContent
+                    align="start"
+                    className="w-64 p-2 bg-background/95 backdrop-blur-xl border-border/50"
+                  >
                     <DropdownMenuItem asChild className="focus:bg-primary/10">
-                      <Link href="/services" className="w-full font-bold text-primary">All Services</Link>
+                      <Link
+                        href="/services"
+                        className="w-full font-bold text-primary"
+                      >
+                        All Services
+                      </Link>
                     </DropdownMenuItem>
                     <div className="h-px bg-border/50 my-1" />
                     {serviceLinks.map((service) => (
-                      <DropdownMenuItem key={service.href} asChild className="focus:bg-primary/10 cursor-pointer">
-                        <Link href={service.href} className="flex items-center gap-3 w-full py-2">
+                      <DropdownMenuItem
+                        key={service.href}
+                        asChild
+                        className="focus:bg-primary/10 cursor-pointer"
+                      >
+                        <Link
+                          href={service.href}
+                          className="flex items-center gap-3 w-full py-2"
+                        >
                           <service.icon size={16} className="text-primary" />
                           <span className="text-xs">{service.title}</span>
                         </Link>
@@ -93,8 +163,8 @@ const Navbar = () => {
                 >
                   {link.name}
                 </Link>
-              )
-            ))}
+              ),
+            )}
           </div>
 
           {/* CTA Button */}
@@ -126,21 +196,35 @@ const Navbar = () => {
             <div key={link.path}>
               {link.dropdown ? (
                 <div className="flex flex-col gap-2">
-                  <button 
+                  <button
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
                     className={`flex items-center justify-between text-lg font-medium py-2 transition-colors w-full ${
-                      pathname.startsWith('/services') ? 'text-primary' : 'text-muted-foreground'
+                      pathname.startsWith('/services')
+                        ? 'text-primary'
+                        : 'text-muted-foreground'
                     }`}
                   >
-                    {link.name} <ChevronDown size={20} className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                    {link.name}{' '}
+                    <ChevronDown
+                      size={20}
+                      className={`transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
+                    />
                   </button>
-                  
-                  <div 
+
+                  <div
                     className={`flex flex-col gap-2 pl-4 border-l border-border overflow-hidden transition-all duration-300 ease-in-out ${
-                      isServicesOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                      isServicesOpen
+                        ? 'max-h-125 opacity-100'
+                        : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <Link href="/services" onClick={() => setIsOpen(false)} className="text-sm py-2 text-primary font-bold">All Services</Link>
+                    <Link
+                      href="/services"
+                      onClick={() => setIsOpen(false)}
+                      className="text-sm py-2 text-primary font-bold"
+                    >
+                      All Services
+                    </Link>
                     {serviceLinks.map((service) => (
                       <Link
                         key={service.href}
@@ -158,7 +242,9 @@ const Navbar = () => {
                   href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`text-lg font-medium py-2 block transition-colors ${
-                    pathname === link.path ? 'text-primary' : 'text-muted-foreground'
+                    pathname === link.path
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
                   }`}
                 >
                   {link.name}

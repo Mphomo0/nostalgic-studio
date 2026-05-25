@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
+
 import AboutCTA from '@/components/pages/about/AboutCTA'
 import AboutHero from '@/components/pages/about/AboutHero'
 import AboutStory from '@/components/pages/about/AboutStory'

@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
+
 import PrivacyComponent from '@/components/pages/privacy/PrivacyComponent'
 import PrivacyHero from '@/components/pages/privacy/PrivacyHero'
 

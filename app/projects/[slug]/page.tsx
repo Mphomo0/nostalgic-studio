@@ -1,11 +1,17 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
+import lazyLoad from 'next/dynamic'
 import ProjectHero from '@/components/pages/projects/Detail/ProjectHero'
 import { projects } from '@/lib/portfolio-data'
 
-const ProjectCTA = dynamic(() => import('@/components/pages/projects/Detail/ProjectCTA').then(mod => mod.ProjectCTA))
+export const dynamic = 'force-static'
+
+const ProjectCTA = lazyLoad(() =>
+  import('@/components/pages/projects/Detail/ProjectCTA').then(
+    (mod) => mod.ProjectCTA,
+  ),
+)
 import { breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export function generateStaticParams() {
@@ -116,25 +122,36 @@ export default async function ProjectDetailPage({
         />
       </>
       <ProjectHero slug={slug} />
-      
+
       <section className="pb-16 md:pb-24">
         <div className="container-wide mx-auto px-4 md:px-8">
           <div className="max-w-3xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="mb-8 text-sm text-muted-foreground" aria-label="Breadcrumb">
-              <Link href="/projects" className="hover:underline">Projects</Link>
-              <span className="mx-2" aria-hidden="true">/</span>
+            <nav
+              className="mb-8 text-sm text-muted-foreground"
+              aria-label="Breadcrumb"
+            >
+              <Link href="/projects" className="hover:underline">
+                Projects
+              </Link>
+              <span className="mx-2" aria-hidden="true">
+                /
+              </span>
               <span>{project.client}</span>
             </nav>
 
-            <h2 className="text-2xl font-bold mb-6 text-foreground">Project Overview</h2>
+            <h2 className="text-2xl font-bold mb-6 text-foreground">
+              Project Overview
+            </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
               {project.description}
             </p>
-            
+
             {project.challenge && (
               <>
-                <h3 className="text-xl font-bold mb-4 text-foreground">The Challenge</h3>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  The Challenge
+                </h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {project.challenge}
                 </p>
@@ -143,7 +160,9 @@ export default async function ProjectDetailPage({
 
             {project.approach && (
               <>
-                <h3 className="text-xl font-bold mb-4 text-foreground">Our Approach</h3>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Our Approach
+                </h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   {project.approach}
                 </p>
@@ -152,11 +171,13 @@ export default async function ProjectDetailPage({
 
             {project.results && project.results.length > 0 ? (
               <>
-                <h3 className="text-xl font-bold mb-4 text-foreground">Results</h3>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  Results
+                </h3>
                 <ul className="space-y-3 mb-8">
                   {project.results.map((result) => (
                     <li key={result} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
                       <span className="text-muted-foreground">{result}</span>
                     </li>
                   ))}
@@ -164,32 +185,55 @@ export default async function ProjectDetailPage({
               </>
             ) : (
               <>
-                <h3 className="text-xl font-bold mb-4 text-foreground">What We Delivered</h3>
+                <h3 className="text-xl font-bold mb-4 text-foreground">
+                  What We Delivered
+                </h3>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                    <span className="text-muted-foreground">Custom website design tailored to brand identity</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                    <span className="text-muted-foreground">
+                      Custom website design tailored to brand identity
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                    <span className="text-muted-foreground">Responsive layout optimized for all devices</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                    <span className="text-muted-foreground">
+                      Responsive layout optimized for all devices
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                    <span className="text-muted-foreground">SEO-optimized structure for better search visibility</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                    <span className="text-muted-foreground">
+                      SEO-optimized structure for better search visibility
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2" />
-                    <span className="text-muted-foreground">Fast loading times with optimized performance</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-2" />
+                    <span className="text-muted-foreground">
+                      Fast loading times with optimized performance
+                    </span>
                   </li>
                 </ul>
               </>
             )}
-            
-            <h3 className="text-xl font-bold mb-4 text-foreground">Technologies Used</h3>
+
+            <h3 className="text-xl font-bold mb-4 text-foreground">
+              Technologies Used
+            </h3>
             <div className="flex flex-wrap gap-2">
-              {(project.technologies || ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion']).map((tech) => (
-                <span key={tech} className="px-3 py-1 bg-secondary rounded-full text-sm text-muted-foreground">
+              {(
+                project.technologies || [
+                  'Next.js',
+                  'React',
+                  'TypeScript',
+                  'Tailwind CSS',
+                  'Framer Motion',
+                ]
+              ).map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 bg-secondary rounded-full text-sm text-muted-foreground"
+                >
                   {tech}
                 </span>
               ))}
@@ -197,31 +241,58 @@ export default async function ProjectDetailPage({
 
             <div className="mt-8 p-6 bg-card border border-border rounded-2xl">
               <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Timeline:</strong> {project.timeline} · <strong className="text-foreground">Client:</strong> {project.client}
+                <strong className="text-foreground">Timeline:</strong>{' '}
+                {project.timeline} ·{' '}
+                <strong className="text-foreground">Client:</strong>{' '}
+                {project.client}
               </p>
             </div>
           </div>
         </div>
-        </section>
+      </section>
       {/* Project Philosophy Section - SEO Hydration */}
       <section className="container-wide mx-auto px-4 py-20 border-t border-border/50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center md:text-left">Methodology & Technical Execution</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center md:text-left">
+            Methodology & Technical Execution
+          </h2>
           <div className="grid md:grid-cols-2 gap-12 text-muted-foreground leading-relaxed">
             <div>
               <p className="mb-6">
-                Every project at Nostalgic Studio begins with a deep dive into user psychology and technical performance. For <strong>{project.title}</strong>, we focused on creating a seamless digital journey that translates complex brand values into intuitive user interfaces. Our approach combines the high-speed rendering of Next.js with meticulously crafted design systems that ensure brand consistency across all touchpoints.
+                Every project at Nostalgic Studio begins with a deep dive into
+                user psychology and technical performance. For{' '}
+                <strong>{project.title}</strong>, we focused on creating a
+                seamless digital journey that translates complex brand values
+                into intuitive user interfaces. Our approach combines the
+                high-speed rendering of Next.js with meticulously crafted design
+                systems that ensure brand consistency across all touchpoints.
               </p>
               <p>
-                We believe that a website should be more than just a digital brochure; it should be a high-performance engine for business growth. By optimizing for Core Web Vitals and implementing advanced SEO strategies, we ensure that projects like this not only look beautiful but also deliver measurable results and stay visible in an increasingly competitive digital landscape.
+                We believe that a website should be more than just a digital
+                brochure; it should be a high-performance engine for business
+                growth. By optimizing for Core Web Vitals and implementing
+                advanced SEO strategies, we ensure that projects like this not
+                only look beautiful but also deliver measurable results and stay
+                visible in an increasingly competitive digital landscape.
               </p>
             </div>
             <div>
               <p className="mb-6">
-                The technical architecture of this project leverages the latest in web standards. From server-side rendering (SSR) for instant perceived performance to atomic design principles for scalable component libraries, every line of code is written with longevity and scalability in mind. We prioritize accessibility (WCAG) and responsive design, ensuring a premium experience for every user, regardless of their device.
+                The technical architecture of this project leverages the latest
+                in web standards. From server-side rendering (SSR) for instant
+                perceived performance to atomic design principles for scalable
+                component libraries, every line of code is written with
+                longevity and scalability in mind. We prioritize accessibility
+                (WCAG) and responsive design, ensuring a premium experience for
+                every user, regardless of their device.
               </p>
               <p>
-                Our commitment to excellence extends beyond the launch. We continuously monitor and refine the digital experiences we build, ensuring they evolve alongside the brands they represent. This project stands as a testament to our vision of combining nostalgic design sensibilities with the cutting-edge capabilities of modern web engineering. 
+                Our commitment to excellence extends beyond the launch. We
+                continuously monitor and refine the digital experiences we
+                build, ensuring they evolve alongside the brands they represent.
+                This project stands as a testament to our vision of combining
+                nostalgic design sensibilities with the cutting-edge
+                capabilities of modern web engineering.
               </p>
             </div>
           </div>
@@ -229,7 +300,10 @@ export default async function ProjectDetailPage({
       </section>
 
       {/* More Projects — server-rendered for full crawlability */}
-      <section className="py-16 border-t border-border" aria-label="More projects">
+      <section
+        className="py-16 border-t border-border"
+        aria-label="More projects"
+      >
         <div className="container-wide mx-auto px-4 md:px-8">
           <h2 className="text-2xl font-bold mb-8 text-center">More Projects</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -248,12 +322,17 @@ export default async function ProjectDetailPage({
                         alt={p.title}
                         width={600}
                         height={400}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-4">
-                      <p className="text-xs text-primary font-medium mb-1">{p.category}</p>
-                      <h3 className="font-semibold text-sm text-foreground leading-snug">{p.title}</h3>
+                      <p className="text-xs text-primary font-medium mb-1">
+                        {p.category}
+                      </p>
+                      <h3 className="font-semibold text-sm text-foreground leading-snug">
+                        {p.title}
+                      </h3>
                     </div>
                   </Link>
                 </li>

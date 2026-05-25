@@ -1,5 +1,3 @@
-'use client'
-
 import { projects } from '@/lib/portfolio-data'
 import { PortfolioCard } from './portfolio-card'
 

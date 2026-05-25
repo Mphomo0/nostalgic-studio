@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, ShoppingCart, CreditCard, Box } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'

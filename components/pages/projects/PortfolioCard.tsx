@@ -33,6 +33,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
             alt={project.title}
             width={1200}
             height={900}
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.15]"
             priority
           />

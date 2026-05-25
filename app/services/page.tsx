@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
+
 import ServicesList from '@/components/pages/services/ServicesList'
 import ProcessSection from '@/components/pages/services/ProcessSection'
 import CTASection from '@/components/pages/services/CTASection'

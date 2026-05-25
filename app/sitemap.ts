@@ -1,9 +1,12 @@
 import type { MetadataRoute } from 'next'
 
+export const revalidate = 86400 // regenerate sitemap at most once per day
+
 const BASE_URL = 'https://www.nostalgic-studio.co.za'
+const STABLE_DATE = new Date('2026-05-25')
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+  const now = STABLE_DATE
 
   const corePages: MetadataRoute.Sitemap = [
     {

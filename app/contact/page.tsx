@@ -1,4 +1,7 @@
 import type { Metadata } from 'next'
+
+export const dynamic = 'force-static'
+
 import ContactForm from '@/components/pages/contact/ContactForm'
 import ContactInfo from '@/components/pages/contact/ContactInfo'
 
