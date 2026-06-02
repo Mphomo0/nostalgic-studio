@@ -79,6 +79,7 @@ export function webPageSchema(opts: {
     url: `${BASE_URL}${opts.url}`,
     name: opts.name,
     description: opts.description,
+    isPartOf: { '@id': `${BASE_URL}/#website` },
     publisher: orgRef(),
     datePublished: opts.datePublished ?? '2026-01-01',
     dateModified: opts.dateModified ?? new Date().toISOString().split('T')[0],
@@ -127,6 +128,8 @@ export function articleSchema(opts: {
       logo: {
         '@type': 'ImageObject',
         url: `${BASE_URL}/images/logo/Logo.webp`,
+        width: 200,
+        height: 60,
       },
     },
     mainEntityOfPage: { '@id': `${BASE_URL}${opts.url}` },
