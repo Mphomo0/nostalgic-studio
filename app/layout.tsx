@@ -95,6 +95,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
     title: 'Web Design for Startups Johannesburg | Nostalgic Studio',
     description:
       'Custom Next.js websites for startups in Johannesburg. SEO-optimized, fast, and conversion-focused.',
@@ -171,11 +173,11 @@ export default function RootLayout({
           'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
         url: 'https://www.nostalgic-studio.co.za',
         telephone: '+27-82-448-3273',
-        foundingDate: '2013',
+        foundingDate: '2016',
         currenciesAccepted: 'ZAR',
         paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
         openingHours: 'Mo-Fr 08:00-17:00',
-        priceRange: 'R8,000–R60,000',
+        priceRange: 'R3,500–R60,000',
 
         address: {
           '@type': 'PostalAddress',
@@ -225,7 +227,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={inter.variable} data-scroll-behavior="smooth">
+    <html lang="en-ZA" className={inter.variable} data-scroll-behavior="smooth">
       <head>
         {/* Verification */}
         <meta
