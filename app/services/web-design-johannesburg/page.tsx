@@ -254,9 +254,9 @@ export default function WebDesignJohannesburg() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Why Choose Our Website Design Services?</h2>
             <p className="text-muted-foreground mb-6">
-              In today's competitive digital market, having a "pretty" website isn't enough. 
-              You need a site that is fast, accessible, and optimized for search engines. 
-              Our **Web Design Johannesburg** team focuses on:
+              In today&apos;s competitive digital market, having a &quot;pretty&quot; website isn&apos;t enough.
+              You need a site that is fast, accessible, and optimized for search engines.
+              Our <strong>Web Design Johannesburg</strong> team focuses on:
             </p>
             <ul className="space-y-4">
               {[

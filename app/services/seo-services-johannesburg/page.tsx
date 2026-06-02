@@ -154,7 +154,7 @@ export default function SEOServicesJohannesburg() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">SEO for the Next Generation of Search</h3>
             <p className="text-muted-foreground mb-6">
-              Search is fundamentally changing. It's no longer just about blue links on a page; it's about being the <strong>definitive answer</strong> for AI search engines and answer engines like Perplexity, ChatGPT, and Google SGE. At Nostalgic Studio, we prioritize <strong>Generative Engine Optimization (GEO)</strong> alongside traditional SEO practices. This means structuring your content with precise data points, clear definitions, and semantic HTML that search engines can easily parse and cite.
+              Search is fundamentally changing. It's no longer just about blue links on a page; it's about being the <strong>definitive answer</strong> for AI search engines and answer engines like Perplexity, ChatGPT, and Google AI Overviews. At Nostalgic Studio, we prioritize <strong>Generative Engine Optimization (GEO)</strong> alongside traditional SEO practices. This means structuring your content with precise data points, clear definitions, and semantic HTML that search engines can easily parse and cite.
             </p>
             <p className="text-muted-foreground">
               Our Johannesburg studio combines local market research with global technical standards. We don't just "do SEO"; we build a digital moat around your brand. By optimizing your <strong>Entity Authority</strong> and focusing on E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness), we ensure that your business remains visible not just in search results today, but in the AI-driven search world of tomorrow.
@@ -190,9 +190,9 @@ export default function SEOServicesJohannesburg() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Rank Higher, Grow Faster</h2>
             <p className="text-muted-foreground mb-6">
-              In Johannesburg's competitive market, being on the first page of Google is non-negotiable. 
-              We combine technical SEO with local insights to help your business stand out. 
-              Our **SEO Services Johannesburg** focus on:
+              In Johannesburg&apos;s competitive market, being on the first page of Google is non-negotiable.
+              We combine technical SEO with local insights to help your business stand out.
+              Our <strong>SEO Services Johannesburg</strong> focus on:
             </p>
             <ul className="space-y-4">
               {[
