@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 import { CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
@@ -61,11 +62,11 @@ export default function NextjsSeoArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <script
+      <Script id="schema-article"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <script
+      <Script id="schema-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />

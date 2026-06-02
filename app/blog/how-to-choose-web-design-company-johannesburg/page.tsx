@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import Link from 'next/link'
@@ -60,11 +61,11 @@ export default function ChooseAgencyArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <script
+      <Script id="schema-article"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <script
+      <Script id="schema-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />

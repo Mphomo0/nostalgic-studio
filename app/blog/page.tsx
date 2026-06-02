@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import { ArrowRight, Clock } from 'lucide-react'
@@ -108,7 +109,7 @@ export default function BlogIndex() {
 
   return (
     <main className="pt-32 pb-20">
-      <script
+      <Script id="schema-blog"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
       />
