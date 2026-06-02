@@ -12,9 +12,9 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg',
+  title: 'SEO Services Johannesburg | Technical & Local SEO Services',
   description:
-    'SEO agency in Johannesburg. Technical SEO, local SEO & content strategy for SA businesses. Free audit.',
+    'Expert SEO services in Johannesburg — technical SEO, local SEO, and content strategy for South African startups. Free audit. Plans from R1,500/month.',
   keywords: [
     'SEO Services Johannesburg',
     'Search Engine Optimization Johannesburg',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg' },
   },
   openGraph: {
-    title: 'SEO Services Johannesburg | Expert SEO Agency | Nostalgic Studio',
+    title: 'SEO Services Johannesburg | Technical & Local SEO | Nostalgic Studio',
     description:
       'Rank higher on Google with our expert SEO services in Johannesburg. Technical SEO, local SEO, and content optimisation from R3,500/month.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',

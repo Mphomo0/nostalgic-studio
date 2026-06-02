@@ -7,14 +7,14 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Next.js Best for SEO 2026',
+  title: 'Why Next.js Is the Best Framework for SEO Rankings in 2026',
   description:
-    'Why Next.js outranks WordPress on Google. SSR, SSG, Core Web Vitals explained for SA businesses.',
+    'Next.js outperforms WordPress on Google with SSR, static generation, and superior Core Web Vitals. A framework guide for South African businesses.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
   },
   openGraph: {
-    title: 'Next.js Best for SEO 2026',
+    title: 'Why Next.js Is the Best Framework for SEO in 2026 | Nostalgic Studio',
     description:
       'Next.js SSR, SSG, and Core Web Vitals explained with real performance comparisons against WordPress.',
     url: 'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',

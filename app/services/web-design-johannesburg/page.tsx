@@ -12,9 +12,9 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, faqPageSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Design JHB | Next.js Experts',
+  title: 'Web Design Johannesburg | Next.js Websites for Startups',
   description:
-    'Professional web design in Johannesburg. Custom Next.js websites for startups. SEO-optimized. From R3,500.',
+    'Professional web design in Johannesburg by Next.js specialists. Custom, SEO-optimized websites for startups and SMEs. From R3,500. Free quote available.',
   keywords: [
     'Web Design Johannesburg',
     'Website Design Johannesburg',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg' },
   },
   openGraph: {
-    title: 'Web Design JHB | Next.js Experts',
+    title: 'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
     description:
       'Custom Next.js websites for Johannesburg startups. SEO-optimized, fast, conversion-focused. From R3,500.',
     url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
