@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import lazyLoad from 'next/dynamic'
+import { faqPageSchema } from '@/app/structured-data/schemas'
 
 export const dynamic = 'force-static'
 import Hero from '@/components/pages/home/Hero'
@@ -69,24 +70,14 @@ export default function Home() {
   const homepageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://www.nostalgic-studio.co.za/#website',
     inLanguage: 'en-ZA',
     name: 'Nostalgic Studio',
     url: 'https://www.nostalgic-studio.co.za',
     description:
       'Top-rated web design agency in Johannesburg offering Next.js development, UI/UX, and branding services.',
     publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-      },
-    },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target:
-        'https://www.nostalgic-studio.co.za/services?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
+      '@id': 'https://www.nostalgic-studio.co.za/#organization',
     },
   }
 
@@ -118,11 +109,17 @@ export default function Home() {
     },
   ]
 
+  const faqSchema = faqPageSchema(faqs)
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
 
