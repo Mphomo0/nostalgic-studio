@@ -50,7 +50,7 @@ export default function page() {
       '@type': 'Person',
       '@id': 'https://www.nostalgic-studio.co.za/about#person',
       name: 'Mpho Moipolai',
-      jobTitle: 'Founder & Creative Director',
+      jobTitle: 'Founder & Lead Developer',
       worksFor: orgRef(),
       url: 'https://www.nostalgic-studio.co.za/about',
       sameAs: [
