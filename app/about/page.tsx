@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
 }
 
-import { webPageSchema, orgRef } from '@/app/structured-data/schemas'
+import { webPageSchema, orgRef, breadcrumbSchema } from '@/app/structured-data/schemas'
 import Script from 'next/script'
 
 export default function page() {
@@ -45,6 +45,10 @@ export default function page() {
       name: 'About Nostalgic Studio | Johannesburg Digital Agency',
       description: 'Nostalgic Studio is a Johannesburg digital design agency founded in 2016 by Mpho Moipolai. We blend timeless design with modern Next.js innovation.',
     }),
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'About', url: '/about' },
+    ]),
     {
       '@context': 'https://schema.org',
       '@type': 'Person',

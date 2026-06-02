@@ -4,6 +4,8 @@ export const dynamic = 'force-static'
 
 import ContactForm from '@/components/pages/contact/ContactForm'
 import ContactInfo from '@/components/pages/contact/ContactInfo'
+import Script from 'next/script'
+import { breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Get a Free Quote',
@@ -29,22 +31,31 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
-  const contactPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ContactPage',
-    name: 'Contact Nostalgic Studio',
-    description: 'Get in touch with Nostalgic Studio for web design, branding, and digital design services.',
-    url: 'https://nostalgic-studio.co.za/contact',
-  }
+  const schemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
+      '@id': 'https://www.nostalgic-studio.co.za/contact',
+      url: 'https://www.nostalgic-studio.co.za/contact',
+      name: 'Contact Nostalgic Studio | Get a Free Quote',
+      description: 'Contact Nostalgic Studio for a free consultation on web design, SEO, and branding services. Based in Johannesburg, South Africa.',
+      isPartOf: { '@id': 'https://www.nostalgic-studio.co.za/#website' },
+      publisher: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
+    },
+    breadcrumbSchema([
+      { name: 'Home', url: '/' },
+      { name: 'Contact', url: '/contact' },
+    ]),
+  ]
 
   return (
     <div className="min-h-screen bg-background">
       <main className="pt-24 pb-12 md:pt-32 md:pb-20 container mx-auto px-4 md:px-8">
         <>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
-          />
+          {schemas.map((s, i) => (
+            <Script key={i} id={`schema-contact-${i}`} type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+          ))}
         </>
 <header className="text-center mb-10 md:mb-16">
         <span className="text-primary font-medium text-sm uppercase tracking-tighter mb-4 block">
