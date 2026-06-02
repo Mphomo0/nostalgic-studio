@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import lazyLoad from 'next/dynamic'
 import { faqPageSchema } from '@/app/structured-data/schemas'
 
@@ -113,11 +114,13 @@ export default function Home() {
 
   return (
     <>
-      <script
+      <Script
+        id="schema-website"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
       />
-      <script
+      <Script
+        id="schema-faq"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

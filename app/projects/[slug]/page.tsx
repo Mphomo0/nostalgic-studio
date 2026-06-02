@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import Link from 'next/link'
 import Image from 'next/image'
 import lazyLoad from 'next/dynamic'
@@ -112,11 +113,13 @@ export default async function ProjectDetailPage({
   return (
     <div className="min-h-screen bg-background">
       <>
-        <script
+        <Script
+          id="schema-project"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
         />
-        <script
+        <Script
+          id="schema-breadcrumb"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
         />
