@@ -131,9 +131,9 @@ export default function WebMaintenance() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Proactive Care for Your Digital Asset</h2>
             <p className="text-muted-foreground mb-6">
-              A website is never truly "finished". It requires ongoing care to perform at its best. 
-              We offer comprehensive support packages tailored to your needs. 
-              Our **web maintenance** services include:
+              A website is never truly "finished". It requires ongoing care to perform at its best.
+              We offer comprehensive support packages tailored to your needs.
+              Our <strong>web maintenance</strong> services include:
             </p>
             <ul className="space-y-4">
               {[

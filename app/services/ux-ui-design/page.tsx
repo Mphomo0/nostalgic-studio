@@ -128,9 +128,9 @@ export default function UXUIDesign() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">User-First Design Philosophy</h2>
             <p className="text-muted-foreground mb-6">
-              We don't just make things look pretty. We use research and testing to ensure 
-              your digital product is easy to use and meets your business goals. 
-              Our **UX/UI design** process includes:
+              We don't just make things look pretty. We use research and testing to ensure
+              your digital product is easy to use and meets your business goals.
+              Our <strong>UX/UI design</strong> process includes:
             </p>
             <ul className="space-y-4">
               {[

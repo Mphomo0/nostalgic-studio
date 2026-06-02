@@ -148,9 +148,9 @@ export default function SocialMediaMarketing() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Content That Connects</h2>
             <p className="text-muted-foreground mb-6">
-              In the age of scrolling, you need content that stops people in their tracks. 
-              We combine creative storytelling with data-driven insights to manage your presence. 
-              Our **social media marketing** services include:
+              In the age of scrolling, you need content that stops people in their tracks.
+              We combine creative storytelling with data-driven insights to manage your presence.
+              Our <strong>social media marketing</strong> services include:
             </p>
             <ul className="space-y-4">
               {[

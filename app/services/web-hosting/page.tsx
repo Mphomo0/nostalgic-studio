@@ -131,8 +131,8 @@ export default function WebHosting() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Reliable Infrastructure for Your Growth</h2>
             <p className="text-muted-foreground mb-6">
-              We provide more than just server space. Our managed hosting includes everything you need 
-               to run a successful online business in South Africa. Our **web hosting** features:
+              We provide more than just server space. Our managed hosting includes everything you need
+               to run a successful online business in South Africa. Our <strong>web hosting</strong> features:
             </p>
             <ul className="space-y-4">
               {[

@@ -148,9 +148,9 @@ export default function SocialMediaAds() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Precision Advertising for Real Results</h2>
             <p className="text-muted-foreground mb-6">
-              In Johannesburg's competitive digital landscape, you need more than just "likes". 
-              Our ad campaigns are built on deep audience research and continuous optimization. 
-              Our **social media ads** services include:
+              In Johannesburg's competitive digital landscape, you need more than just "likes".
+              Our ad campaigns are built on deep audience research and continuous optimization.
+              Our <strong>social media ads</strong> services include:
             </p>
             <ul className="space-y-4">
               {[

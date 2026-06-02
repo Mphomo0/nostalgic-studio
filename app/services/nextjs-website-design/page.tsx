@@ -126,9 +126,9 @@ export default function NextjsWebsiteDesign() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Why We Specialize in Next.js</h2>
             <p className="text-muted-foreground mb-6">
-              At Nostalgic Studio, we believe in using the best tools for the job. Next.js is the leading 
-              React framework that allows us to deliver high-performance websites without compromise. 
-              Our **Next.js website design** process includes:
+              At Nostalgic Studio, we believe in using the best tools for the job. Next.js is the leading
+              React framework that allows us to deliver high-performance websites without compromise.
+              Our <strong>Next.js website design</strong> process includes:
             </p>
             <ul className="space-y-4">
               {[

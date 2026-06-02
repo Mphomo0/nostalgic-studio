@@ -128,9 +128,9 @@ export default function BrandingDesign() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Create a Lasting Impression</h2>
             <p className="text-muted-foreground mb-6">
-              In a crowded marketplace, a strong brand identity is your most valuable asset. 
-              We combine strategy and creativity to deliver designs that work. 
-              Our **branding design** services include:
+              In a crowded marketplace, a strong brand identity is your most valuable asset.
+              We combine strategy and creativity to deliver designs that work.
+              Our <strong>branding design</strong> services include:
             </p>
             <ul className="space-y-4">
               {[
