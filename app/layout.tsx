@@ -104,14 +104,9 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@graph': [
+const SITE_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@graph': [
       {
         '@type': 'Person',
         '@id': 'https://www.nostalgic-studio.co.za/about#person',
@@ -224,8 +219,13 @@ export default function RootLayout({
         },
       },
     ],
-  }
+}
 
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en-ZA" className={inter.variable} data-scroll-behavior="smooth">
       <head>
@@ -238,7 +238,7 @@ export default function RootLayout({
         {/* Main Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_SCHEMA) }}
         />
 
         {/* Google Analytics */}

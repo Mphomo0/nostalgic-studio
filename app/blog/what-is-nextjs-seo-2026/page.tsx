@@ -7,6 +7,8 @@ import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'Why Next.js Is the Best Framework for SEO Rankings in 2026',
   description:

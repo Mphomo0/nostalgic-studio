@@ -9,6 +9,8 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'Next.js Development South Africa',
   description:
