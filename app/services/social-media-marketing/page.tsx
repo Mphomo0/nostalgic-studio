@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency', 'Instagram Marketing SA', 'Facebook Marketing Johannesburg'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-marketing' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
+    },
   },
   openGraph: {
     title: 'Social Media Marketing JHB',

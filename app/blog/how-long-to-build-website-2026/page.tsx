@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     'Realistic website development timeline in South Africa. Brochure, business & e-commerce sites from 2-12 weeks.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
+    },
   },
   openGraph: {
     title: 'Website Build Timeline 2026',
@@ -22,6 +26,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Website Build Timeline 2026 — Nostalgic Studio' }],
   },
 }
 
@@ -178,6 +183,14 @@ export default function TimelineArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Timeline FAQs" />
+
+        <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
+          <h2 className="text-xl font-bold mb-4">Related Articles</h2>
+          <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+            <li><Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">Website Cost South Africa 2026: Full Pricing Guide</Link></li>
+            <li><Link href="/blog/10-signs-business-needs-website-redesign" className="text-primary hover:underline">10 Signs Your Business Website Needs a Redesign</Link></li>
+          </ul>
+        </section>
 
         <AuthorBio />
       </article>

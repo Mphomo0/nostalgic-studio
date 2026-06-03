@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   keywords: ['Web Maintenance Johannesburg', 'Website Support South Africa', 'Next.js Maintenance Services', 'Managed Website Updates South Africa', 'Website Security Monitoring SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-maintenance',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-maintenance' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-maintenance',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/web-maintenance',
+    },
   },
   openGraph: {
     title: 'Web Maintenance South Africa',

@@ -14,11 +14,14 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Social Media Ads Johannesburg',
   description:
-    'Facebook, Instagram & LinkedIn ad campaigns for Johannesburg businesses. From R3,000/month.',
+    'Facebook, Instagram & LinkedIn ad campaigns for Johannesburg startups. Drive leads and sales with targeted social media advertising from R3,000/month.',
   keywords: ['Social Media Ads Johannesburg', 'Facebook Ads South Africa', 'Instagram Advertising Johannesburg', 'LinkedIn Ads Agency South Africa', 'Paid Social Media Marketing', 'Meta Ads Johannesburg', 'Social Media Advertising South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-ads' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/social-media-ads',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/social-media-ads',
+    },
   },
   openGraph: {
     title: 'Social Media Ads Johannesburg',

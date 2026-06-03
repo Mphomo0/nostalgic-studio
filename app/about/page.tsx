@@ -11,9 +11,9 @@ import Testimonials from '@/components/pages/home/Testimonials'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
-  title: 'About Nostalgic Studio | Johannesburg Web Design Agency',
+  title: 'About Us | Web Design Agency Johannesburg',
   description:
-    'Nostalgic Studio is a Johannesburg web design agency founded in 2016 by Mpho Moipolai. We build fast Next.js websites for startups across South Africa.',
+    'Nostalgic Studio is a Johannesburg web design agency founded in 2016. We build fast, SEO-optimized Next.js websites for startups across South Africa.',
   keywords: [
     'about Nostalgic Studio',
     'digital design agency Johannesburg',
@@ -24,6 +24,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/about',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/about',
+      'x-default': 'https://www.nostalgic-studio.co.za/about',
+    },
   },
   openGraph: {
     title: 'About Nostalgic Studio | Johannesburg Web Design Agency',
@@ -32,6 +36,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/about',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Agency Johannesburg — Nostalgic Studio' }],
   },
 }
 

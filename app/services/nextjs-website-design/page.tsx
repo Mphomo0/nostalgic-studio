@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites South Africa', 'Next.js Agency Johannesburg', 'Modern Web Design South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/nextjs-website-design' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
+    },
   },
   openGraph: {
     title: 'Next.js Development South Africa',

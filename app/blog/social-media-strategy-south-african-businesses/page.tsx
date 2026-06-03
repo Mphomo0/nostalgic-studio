@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     'Effective social media strategies for South African businesses. WhatsApp, TikTok & LinkedIn insights.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
+    },
   },
   openGraph: {
     title: 'Social Media Strategy SA 2026',
@@ -22,6 +26,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Social Media Strategy South Africa 2026 — Nostalgic Studio' }],
   },
 }
 
@@ -169,6 +174,14 @@ export default function SocialMediaArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Social Media FAQs" />
+
+        <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
+          <h2 className="text-xl font-bold mb-4">Related Articles</h2>
+          <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+            <li><Link href="/blog/what-is-nextjs-seo-2026" className="text-primary hover:underline">Why Next.js Wins for SEO Rankings in 2026</Link></li>
+            <li><Link href="/blog/how-to-choose-web-design-company-johannesburg" className="text-primary hover:underline">How to Choose a Web Design Company in Johannesburg</Link></li>
+          </ul>
+        </section>
 
         <AuthorBio />
       </article>

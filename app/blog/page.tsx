@@ -11,14 +11,19 @@ export const metadata: Metadata = {
     'Expert articles on web design, Next.js development, SEO, and digital marketing from the Nostalgic Studio team in Johannesburg.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog',
+    },
   },
   openGraph: {
-    title: 'Blog',
+    title: 'Blog | Web Design & Digital Marketing Tips',
     description:
       'Web design, SEO, and digital marketing insights from Johannesburg\'s leading Next.js agency.',
     url: 'https://www.nostalgic-studio.co.za/blog',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design & Digital Marketing Blog — Nostalgic Studio' }],
   },
 }
 

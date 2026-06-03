@@ -11,9 +11,13 @@ import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Website Cost SA 2026 Guide',
   description:
-    'Transparent web design pricing in South Africa. From R5,000 basic sites to R50,000+ e-commerce.',
+    'Transparent web design pricing guide for South Africa 2026. Compare costs from R5,000 for basic sites to R50,000+ for custom e-commerce platforms.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
+    },
   },
   openGraph: {
     title: 'Website Cost SA 2026 Guide',
@@ -22,6 +26,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Website Cost South Africa 2026 — Nostalgic Studio' }],
   },
 }
 
@@ -193,6 +198,14 @@ export default function WebsiteCostSAArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Website Cost FAQs" />
+
+        <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
+          <h2 className="text-xl font-bold mb-4">Related Articles</h2>
+          <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+            <li><Link href="/blog/how-long-to-build-website-2026" className="text-primary hover:underline">How Long Does it Take to Build a Website? (2026 Timeline)</Link></li>
+            <li><Link href="/blog/10-signs-business-needs-website-redesign" className="text-primary hover:underline">10 Signs Your Business Website Needs a Redesign</Link></li>
+          </ul>
+        </section>
 
         <AuthorBio />
       </article>

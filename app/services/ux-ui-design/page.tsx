@@ -14,11 +14,14 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'UX/UI Design Johannesburg',
   description:
-    'UX/UI design for Johannesburg startups. Research-driven Figma interfaces that boost conversions.',
+    'UX/UI design for Johannesburg startups. Research-driven Figma prototyping and mobile-first interfaces that improve usability and boost conversions.',
   keywords: ['UX UI Design Johannesburg', 'User Experience Design South Africa', 'Interface Design Johannesburg', 'Mobile App Design South Africa', 'Figma Design Agency Johannesburg', 'UX Research South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/ux-ui-design' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/ux-ui-design',
+    },
   },
   openGraph: {
     title: 'UX/UI Design Johannesburg',

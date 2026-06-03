@@ -14,11 +14,14 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Ecommerce Dev South Africa',
   description:
-    'Custom ecommerce websites in Johannesburg. Next.js stores with PayFast, Yoco & Ozow. From R25,000.',
+    'Custom Next.js ecommerce websites in Johannesburg with SA payment gateways: PayFast, Yoco and Ozow. Fast, secure online stores from R25,000.',
   keywords: ['Ecommerce Website Development Johannesburg', 'Online Store Builder South Africa', 'Next.js Ecommerce Development', 'PayFast Integration South Africa', 'Custom Ecommerce Solutions', 'WooCommerce Alternative South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
+    },
   },
   openGraph: {
     title: 'Ecommerce Dev South Africa',

@@ -14,6 +14,10 @@ export const metadata: Metadata = {
     '7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack & SEO explained.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
+    },
   },
   openGraph: {
     title: 'Choose a Web Design Co. JHB',
@@ -22,6 +26,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'How to Choose a Web Design Company Johannesburg — Nostalgic Studio' }],
   },
 }
 
@@ -153,6 +158,14 @@ export default function ChooseAgencyArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Hiring a Web Designer FAQs" />
+
+        <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
+          <h2 className="text-xl font-bold mb-4">Related Articles</h2>
+          <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+            <li><Link href="/blog/what-is-local-seo-south-africa" className="text-primary hover:underline">What is Local SEO? A Guide for South African Businesses (2026)</Link></li>
+            <li><Link href="/blog/social-media-strategy-south-african-businesses" className="text-primary hover:underline">Social Media Strategy for South African Businesses 2026</Link></li>
+          </ul>
+        </section>
 
         <AuthorBio />
       </article>

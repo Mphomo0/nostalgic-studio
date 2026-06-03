@@ -10,13 +10,18 @@ export const metadata: Metadata = {
   description: 'Terms and conditions for Nostalgic Studio digital design services. Read our service agreement and client responsibilities.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/terms-conditions',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/terms-conditions',
+      'x-default': 'https://www.nostalgic-studio.co.za/terms-conditions',
+    },
   },
   openGraph: {
-title: 'Terms and Conditions',
+    title: 'Terms and Conditions',
     description: 'Terms and conditions for Nostalgic Studio digital design services.',
     url: 'https://www.nostalgic-studio.co.za/terms-conditions',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Terms and Conditions — Nostalgic Studio' }],
   },
 }
 

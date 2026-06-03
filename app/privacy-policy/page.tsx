@@ -10,13 +10,18 @@ export const metadata: Metadata = {
   description: 'Privacy policy for Nostalgic Studio. Learn how we collect, use, and protect your personal information when you use our services.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/privacy-policy',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/privacy-policy',
+      'x-default': 'https://www.nostalgic-studio.co.za/privacy-policy',
+    },
   },
   openGraph: {
-title: 'Privacy Policy',
+    title: 'Privacy Policy',
     description: 'Privacy policy for Nostalgic Studio. Learn how we collect, use, and protect your personal information.',
     url: 'https://www.nostalgic-studio.co.za/privacy-policy',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Privacy Policy — Nostalgic Studio' }],
   },
 }
 

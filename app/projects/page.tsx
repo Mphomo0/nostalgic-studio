@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/projects',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/projects',
+      'x-default': 'https://www.nostalgic-studio.co.za/projects',
+    },
   },
   openGraph: {
     title: 'Our Work | Portfolio',
@@ -28,6 +32,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/projects',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Portfolio Johannesburg — Nostalgic Studio' }],
   },
 }
 

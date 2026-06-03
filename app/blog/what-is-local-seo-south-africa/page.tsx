@@ -11,9 +11,13 @@ import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Local SEO Guide SA 2026',
   description:
-    'Dominate local search in South Africa. Google Maps, citations, and geo-targeted content strategies.',
+    'Dominate local search results in South Africa. Learn Google Maps optimisation, local citations, and geo-targeted content strategies for 2026.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
+    },
   },
   openGraph: {
     title: 'Local SEO Guide SA 2026',
@@ -22,6 +26,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Local SEO Guide South Africa 2026 — Nostalgic Studio' }],
   },
 }
 
@@ -157,6 +162,14 @@ export default function LocalSEOArticle() {
         </div>
 
         <FaqSection faqs={faqs} title="Local SEO FAQs" />
+
+        <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
+          <h2 className="text-xl font-bold mb-4">Related Articles</h2>
+          <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+            <li><Link href="/blog/how-to-choose-web-design-company-johannesburg" className="text-primary hover:underline">How to Choose a Web Design Company in Johannesburg (2026 Guide)</Link></li>
+            <li><Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">Website Cost South Africa 2026: What to Budget for Your Website</Link></li>
+          </ul>
+        </section>
 
         <AuthorBio />
       </article>

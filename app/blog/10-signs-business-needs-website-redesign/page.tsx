@@ -13,8 +13,11 @@ export const metadata: Metadata = {
   description:
     'Slow loading, poor mobile experience, low conversions — 10 signs your business website needs a redesign.',
   alternates: {
-    canonical:
-      'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
+    canonical: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
+    },
   },
   openGraph: {
     title: '10 Signs for Website Redesign',
@@ -23,6 +26,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: '10 Signs Your Business Needs a Website Redesign — Nostalgic Studio' }],
   },
 }
 
@@ -292,6 +296,14 @@ export default function RedesignSignsArticle() {
         </section>
 
         <FaqSection faqs={faqs} title="Website Redesign FAQs" />
+
+        <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
+          <h2 className="text-xl font-bold mb-4">Related Articles</h2>
+          <ul className="space-y-2 list-disc list-inside text-muted-foreground">
+            <li><Link href="/blog/how-long-to-build-website-2026" className="text-primary hover:underline">How Long Does it Take to Build a Website? (2026 Timeline)</Link></li>
+            <li><Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">Website Cost South Africa 2026: Full Pricing Guide</Link></li>
+          </ul>
+        </section>
 
         <AuthorBio />
       </article>

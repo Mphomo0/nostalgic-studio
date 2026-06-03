@@ -45,7 +45,10 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za',
+      'x-default': 'https://www.nostalgic-studio.co.za',
+    },
   },
 
   openGraph: {

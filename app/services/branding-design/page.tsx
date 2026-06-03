@@ -18,7 +18,10 @@ export const metadata: Metadata = {
   keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design', 'Graphic Design Johannesburg', 'Brand Strategy South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/branding-design',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/branding-design' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/branding-design',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/branding-design',
+    },
   },
   openGraph: {
     title: 'Branding Design Johannesburg',

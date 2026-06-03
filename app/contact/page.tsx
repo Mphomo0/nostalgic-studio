@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/contact',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/contact',
+      'x-default': 'https://www.nostalgic-studio.co.za/contact',
+    },
   },
   openGraph: {
     title: 'Contact Nostalgic Studio | Get a Free Quote',
@@ -27,6 +31,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/contact',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Contact Nostalgic Studio — Web Design Agency Johannesburg' }],
   },
 }
 

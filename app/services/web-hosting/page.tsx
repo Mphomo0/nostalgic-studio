@@ -14,11 +14,14 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Web Hosting South Africa',
   description:
-    'Managed hosting for Next.js websites in SA. 99.9% uptime, SSL, CDN & backups. From R500/month.',
+    'Managed Next.js web hosting in South Africa. 99.9% uptime, free SSL, global CDN, and daily backups included. Secure, fast websites from R500/month.',
   keywords: ['Web Hosting South Africa', 'Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-hosting',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-hosting' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/services/web-hosting',
+      'x-default': 'https://www.nostalgic-studio.co.za/services/web-hosting',
+    },
   },
   openGraph: {
     title: 'Web Hosting South Africa',
