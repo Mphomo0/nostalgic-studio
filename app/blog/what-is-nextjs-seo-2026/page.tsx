@@ -10,7 +10,7 @@ import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Why Next.js Wins for SEO Rankings in 2026',
+  title: 'Why Next.js Is the Best Framework for SEO in 2026',
   description:
     'Next.js outperforms WordPress on Google with SSR, static generation, and superior Core Web Vitals. A framework guide for South African businesses.',
   alternates: {

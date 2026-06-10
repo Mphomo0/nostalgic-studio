@@ -158,7 +158,7 @@ const SITE_SCHEMA = {
       },
 
       {
-        '@type': 'LocalBusiness',
+        '@type': 'ProfessionalService',
         '@id': 'https://www.nostalgic-studio.co.za/#business',
         name: 'Nostalgic Studio',
         parentOrganization: {
@@ -188,13 +188,27 @@ const SITE_SCHEMA = {
         },
 
         areaServed: [
-          { '@type': 'City', name: 'Johannesburg' },
-          { '@type': 'City', name: 'Sandton' },
-          { '@type': 'City', name: 'Midrand' },
-          { '@type': 'City', name: 'Randburg' },
-          { '@type': 'City', name: 'Soweto' },
-          { '@type': 'City', name: 'Pretoria' },
-          { '@type': 'AdministrativeArea', name: 'Gauteng' },
+          { '@type': 'City', name: 'Johannesburg, South Africa' },
+          { '@type': 'City', name: 'Sandton, South Africa' },
+          { '@type': 'City', name: 'Soweto, South Africa' },
+          { '@type': 'City', name: 'Midrand, South Africa' },
+          { '@type': 'City', name: 'Mbombela, South Africa' },
+          { '@type': 'City', name: 'Pretoria, South Africa' },
+          { '@type': 'City', name: 'Randburg, South Africa' },
+          { '@type': 'City', name: 'Thembisa, South Africa' },
+          { '@type': 'City', name: 'Cape Town, South Africa' },
+          { '@type': 'City', name: 'Centurion, South Africa' },
+          { '@type': 'City', name: 'Kimberley, South Africa' },
+          { '@type': 'City', name: 'Polokwane, South Africa' },
+          { '@type': 'City', name: 'Roodepoort, South Africa' },
+          { '@type': 'City', name: 'Randfontein, South Africa' },
+          { '@type': 'City', name: 'Bloemfontein, South Africa' },
+          { '@type': 'City', name: 'Hammanskraal, South Africa' },
+          { '@type': 'City', name: 'Potchefstroom, South Africa' },
+          { '@type': 'City', name: 'Durban, South Africa' },
+          { '@type': 'Place', name: 'Bryanston, Sandton, 2191, South Africa' },
+          { '@type': 'Place', name: 'Century City, Cape Town, 7441, South Africa' },
+          { '@type': 'AdministrativeArea', name: 'Gauteng, South Africa' },
           { '@type': 'Country', name: 'South Africa' },
         ],
 

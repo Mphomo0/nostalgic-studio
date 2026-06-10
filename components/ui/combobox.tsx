@@ -79,7 +79,7 @@ function ComboboxInput({
             <ComboboxTrigger />
           </InputGroupButton>
         )}
-        {showClear && <ComboboxClear disabled={disabled} />}
+        {showClear ? <ComboboxClear disabled={disabled} /> : null}
       </InputGroupAddon>
       {children}
     </InputGroup>

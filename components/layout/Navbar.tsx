@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -81,7 +81,7 @@ const navLinks = [
   { name: 'Contact', path: '/contact' },
 ]
 
-const Navbar = () => {
+const Navbar = memo(function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const pathname = usePathname()
@@ -261,6 +261,6 @@ const Navbar = () => {
       </div>
     </nav>
   )
-}
+})
 
 export default Navbar

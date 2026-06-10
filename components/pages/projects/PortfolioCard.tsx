@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'motion/react'
@@ -10,7 +11,7 @@ interface PortfolioCardProps {
   project: Project
 }
 
-export default function PortfolioCard({ project }: PortfolioCardProps) {
+const PortfolioCard = memo(function PortfolioCard({ project }: PortfolioCardProps) {
   return (
     <motion.div
       layout
@@ -72,4 +73,6 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
       </Link>
     </motion.div>
   )
-}
+})
+
+export default PortfolioCard

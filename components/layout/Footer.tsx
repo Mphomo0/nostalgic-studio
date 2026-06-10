@@ -5,55 +5,55 @@ import { FacebookIcon } from '@/components/ui/facebook'
 import { InstagramIcon } from '@/components/ui/instagram'
 import { LinkedinIcon } from '@/components/ui/linkedin'
 
+const footerLinks = {
+  navigation: [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' },
+  ],
+  services: [
+    { name: 'Web Design', path: '/services/web-design-johannesburg' },
+    { name: 'SEO Services', path: '/services/seo-services-johannesburg' },
+    { name: 'UI/UX Design', path: '/services/ux-ui-design' },
+    { name: 'Branding', path: '/services/branding-design' },
+    { name: 'Ecommerce', path: '/services/ecommerce-website-development' },
+  ],
+  specialized: [
+    { name: 'Web Design Johannesburg', path: '/services/web-design-johannesburg' },
+    { name: 'SEO Services Johannesburg', path: '/services/seo-services-johannesburg' },
+    { name: 'Next.js Website Design', path: '/services/nextjs-website-design' },
+    { name: 'Ecommerce Development', path: '/services/ecommerce-website-development' },
+    { name: 'Branding Design', path: '/services/branding-design' },
+    { name: 'Social Media Marketing', path: '/services/social-media-marketing' },
+    { name: 'Social Media Ads', path: '/services/social-media-ads' },
+    { name: 'Web Hosting', path: '/services/web-hosting' },
+    { name: 'Web Maintenance', path: '/services/web-maintenance' },
+  ],
+}
+
+const socialLinks = [
+  {
+    icon: FacebookIcon,
+    href: 'https://www.facebook.com/webengineers',
+    label: 'facebook',
+  },
+  {
+    icon: LinkedinIcon,
+    href: 'https://www.linkedin.com/company/110356396/',
+    label: 'LinkedIn',
+  },
+  {
+    icon: InstagramIcon,
+    href: 'https://www.instagram.com/studionostalgic',
+    label: 'Instagram',
+  },
+]
+
 const Footer = () => {
   const currentYear = new Date().getFullYear()
-
-  const footerLinks = {
-    navigation: [
-      { name: 'Home', path: '/' },
-      { name: 'About', path: '/about' },
-      { name: 'Services', path: '/services' },
-      { name: 'Projects', path: '/projects' },
-      { name: 'Blog', path: '/blog' },
-      { name: 'Contact', path: '/contact' },
-    ],
-    services: [
-      { name: 'Web Design', path: '/services/web-design-johannesburg' },
-      { name: 'SEO Services', path: '/services/seo-services-johannesburg' },
-      { name: 'UI/UX Design', path: '/services/ux-ui-design' },
-      { name: 'Branding', path: '/services/branding-design' },
-      { name: 'Ecommerce', path: '/services/ecommerce-website-development' },
-    ],
-    specialized: [
-      { name: 'Web Design Johannesburg', path: '/services/web-design-johannesburg' },
-      { name: 'SEO Services Johannesburg', path: '/services/seo-services-johannesburg' },
-      { name: 'Next.js Website Design', path: '/services/nextjs-website-design' },
-      { name: 'Ecommerce Development', path: '/services/ecommerce-website-development' },
-      { name: 'Branding Design', path: '/services/branding-design' },
-      { name: 'Social Media Marketing', path: '/services/social-media-marketing' },
-      { name: 'Social Media Ads', path: '/services/social-media-ads' },
-      { name: 'Web Hosting', path: '/services/web-hosting' },
-      { name: 'Web Maintenance', path: '/services/web-maintenance' },
-    ],
-  }
-
-  const socialLinks = [
-    {
-      icon: FacebookIcon,
-      href: 'https://www.facebook.com/webengineers',
-      label: 'facebook',
-    },
-    {
-      icon: LinkedinIcon,
-      href: 'https://www.linkedin.com/company/110356396/',
-      label: 'LinkedIn',
-    },
-    {
-      icon: InstagramIcon,
-      href: 'https://www.instagram.com/studionostalgic',
-      label: 'Instagram',
-    },
-  ]
 
   return (
     <footer className="bg-card border-t border-border">
