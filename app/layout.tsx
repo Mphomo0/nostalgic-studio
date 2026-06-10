@@ -104,135 +104,125 @@ export const metadata: Metadata = {
   },
 }
 
-const SITE_SCHEMA = {
+const SCHEMA_PERSON = {
   '@context': 'https://schema.org',
-  '@graph': [
-      {
-        '@type': 'Person',
-        '@id': 'https://www.nostalgic-studio.co.za/about#person',
-        name: 'Mpho Moipolai',
-        url: 'https://www.nostalgic-studio.co.za/about',
-        jobTitle: 'Founder & Lead Developer',
-        worksFor: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
-        sameAs: [
-          'https://www.linkedin.com/private/moipolai-mpho-110356396/',
-        ],
-      },
-      {
-        '@type': 'Organization',
-        '@id': 'https://www.nostalgic-studio.co.za/#organization',
-        name: 'Nostalgic Studio',
-        url: 'https://www.nostalgic-studio.co.za',
-        foundingDate: '2016',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-          width: 200,
-          height: 60,
-        },
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA',
-        },
-        areaServed: [
-          { '@type': 'City', name: 'Johannesburg' },
-          { '@type': 'City', name: 'Sandton' },
-          { '@type': 'City', name: 'Midrand' },
-          { '@type': 'City', name: 'Pretoria' },
-          { '@type': 'Country', name: 'South Africa' },
-        ],
-        sameAs: [
-          'https://www.facebook.com/webengineers',
-          'https://www.linkedin.com/company/110356396',
-          'https://www.instagram.com/studionostalgic',
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+27-82-448-3273',
-          contactType: 'customer service',
-          availableLanguage: 'English',
-          areaServed: 'ZA',
-        },
-      },
+  '@type': 'Person',
+  '@id': 'https://www.nostalgic-studio.co.za/about#person',
+  name: 'Mpho Moipolai',
+  url: 'https://www.nostalgic-studio.co.za/about',
+  jobTitle: 'Founder & Lead Developer',
+  worksFor: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
+  sameAs: ['https://www.linkedin.com/private/moipolai-mpho-110356396/'],
+}
 
-      {
-        '@type': 'ProfessionalService',
-        '@id': 'https://www.nostalgic-studio.co.za/#business',
-        name: 'Nostalgic Studio',
-        parentOrganization: {
-          '@id': 'https://www.nostalgic-studio.co.za/#organization',
-        },
-        description:
-          'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
-        url: 'https://www.nostalgic-studio.co.za',
-        telephone: '+27-82-448-3273',
-        foundingDate: '2016',
-        currenciesAccepted: 'ZAR',
-        paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
-        openingHours: 'Mo-Fr 08:00-17:00',
-        priceRange: 'R3,500–R60,000',
+const SCHEMA_ORGANIZATION = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://www.nostalgic-studio.co.za/#organization',
+  name: 'Nostalgic Studio',
+  url: 'https://www.nostalgic-studio.co.za',
+  foundingDate: '2016',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+    width: 200,
+    height: 60,
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Johannesburg',
+    addressRegion: 'Gauteng',
+    addressCountry: 'ZA',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Johannesburg' },
+    { '@type': 'City', name: 'Sandton' },
+    { '@type': 'City', name: 'Midrand' },
+    { '@type': 'City', name: 'Pretoria' },
+    { '@type': 'Country', name: 'South Africa' },
+  ],
+  sameAs: [
+    'https://www.facebook.com/webengineers',
+    'https://www.linkedin.com/company/110356396',
+    'https://www.instagram.com/studionostalgic',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+27-82-448-3273',
+    contactType: 'customer service',
+    availableLanguage: 'English',
+    areaServed: 'ZA',
+  },
+}
 
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA',
-        },
-
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: '-26.2041',
-          longitude: '28.0473',
-        },
-
-        areaServed: [
-          { '@type': 'City', name: 'Johannesburg, South Africa' },
-          { '@type': 'City', name: 'Sandton, South Africa' },
-          { '@type': 'City', name: 'Soweto, South Africa' },
-          { '@type': 'City', name: 'Midrand, South Africa' },
-          { '@type': 'City', name: 'Mbombela, South Africa' },
-          { '@type': 'City', name: 'Pretoria, South Africa' },
-          { '@type': 'City', name: 'Randburg, South Africa' },
-          { '@type': 'City', name: 'Thembisa, South Africa' },
-          { '@type': 'City', name: 'Cape Town, South Africa' },
-          { '@type': 'City', name: 'Centurion, South Africa' },
-          { '@type': 'City', name: 'Kimberley, South Africa' },
-          { '@type': 'City', name: 'Polokwane, South Africa' },
-          { '@type': 'City', name: 'Roodepoort, South Africa' },
-          { '@type': 'City', name: 'Randfontein, South Africa' },
-          { '@type': 'City', name: 'Bloemfontein, South Africa' },
-          { '@type': 'City', name: 'Hammanskraal, South Africa' },
-          { '@type': 'City', name: 'Potchefstroom, South Africa' },
-          { '@type': 'City', name: 'Durban, South Africa' },
-          { '@type': 'Place', name: 'Bryanston, Sandton, 2191, South Africa' },
-          { '@type': 'Place', name: 'Century City, Cape Town, 7441, South Africa' },
-          { '@type': 'AdministrativeArea', name: 'Gauteng, South Africa' },
-          { '@type': 'Country', name: 'South Africa' },
-        ],
-
-        image: [
-          'https://www.nostalgic-studio.co.za/images/og-image.jpg',
-          'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-        ],
-
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Web Design & Digital Services',
-          itemListElement: [
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Johannesburg' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services Johannesburg' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Next.js Website Design' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Graphic Design' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ecommerce Development' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Hosting South Africa' } },
-          ],
-        },
-      },
+const SCHEMA_BUSINESS = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': 'https://www.nostalgic-studio.co.za/#business',
+  name: 'Nostalgic Studio',
+  parentOrganization: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
+  description:
+    'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
+  url: 'https://www.nostalgic-studio.co.za',
+  telephone: '+27-82-448-3273',
+  foundingDate: '2016',
+  currenciesAccepted: 'ZAR',
+  paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
+  openingHours: 'Mo-Fr 08:00-17:00',
+  priceRange: 'R3,500–R60,000',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Johannesburg',
+    addressRegion: 'Gauteng',
+    addressCountry: 'ZA',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '-26.2041',
+    longitude: '28.0473',
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Johannesburg, South Africa' },
+    { '@type': 'City', name: 'Sandton, South Africa' },
+    { '@type': 'City', name: 'Soweto, South Africa' },
+    { '@type': 'City', name: 'Midrand, South Africa' },
+    { '@type': 'City', name: 'Mbombela, South Africa' },
+    { '@type': 'City', name: 'Pretoria, South Africa' },
+    { '@type': 'City', name: 'Randburg, South Africa' },
+    { '@type': 'City', name: 'Thembisa, South Africa' },
+    { '@type': 'City', name: 'Cape Town, South Africa' },
+    { '@type': 'City', name: 'Centurion, South Africa' },
+    { '@type': 'City', name: 'Kimberley, South Africa' },
+    { '@type': 'City', name: 'Polokwane, South Africa' },
+    { '@type': 'City', name: 'Roodepoort, South Africa' },
+    { '@type': 'City', name: 'Randfontein, South Africa' },
+    { '@type': 'City', name: 'Bloemfontein, South Africa' },
+    { '@type': 'City', name: 'Hammanskraal, South Africa' },
+    { '@type': 'City', name: 'Potchefstroom, South Africa' },
+    { '@type': 'City', name: 'Durban, South Africa' },
+    { '@type': 'Place', name: 'Bryanston, Sandton, 2191, South Africa' },
+    { '@type': 'Place', name: 'Century City, Cape Town, 7441, South Africa' },
+    { '@type': 'AdministrativeArea', name: 'Gauteng, South Africa' },
+    { '@type': 'Country', name: 'South Africa' },
+  ],
+  image: [
+    'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+    'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Web Design & Digital Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Johannesburg' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services Johannesburg' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Next.js Website Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Graphic Design' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ecommerce Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Hosting South Africa' } },
     ],
+  },
 }
 
 export default function RootLayout({
@@ -249,11 +239,10 @@ export default function RootLayout({
           content="Z9mBnLyDFOUn6nKgbjCnnmKZupnoVrWjQtfYCEdy_f8"
         />
 
-        {/* Main Schema */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(SITE_SCHEMA) }}
-        />
+        {/* Site-wide Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PERSON) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_ORGANIZATION) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BUSINESS) }} />
 
         {/* Google Analytics */}
         <Script

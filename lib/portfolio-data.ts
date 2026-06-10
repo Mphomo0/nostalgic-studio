@@ -24,7 +24,7 @@ export const projects: Project[] = [
     timeline: '8 weeks',
     role: 'SEO Specialist',
     description:
-      'Sozim Trading & Consultancy is a South African training and skills development provider. We implemented a focused SEO and digital marketing strategy that generated over 163 clicks in just 28 days, improving online visibility and lead generation for accredited programmes in Bloemfontein and across South Africa.',
+      'Sozim delivers accredited skills development across South Africa. A 28-day SEO campaign we managed generated 163+ organic clicks and boosted enquiries.',
     image: '/images/projects/sozim.webp',
     liveUrl: 'https://www.sozim.co.za',
     slug: 'sozim-consultancy',
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     timeline: '1 week',
     role: 'Web Developer',
     description:
-      'Tanosa Group provides comprehensive consulting, governance, business development, training, branding and project management solutions for organizations across South Africa. We developed a sleek, professional website that effectively communicates their multidisciplinary services and expertise. The site features optimized performance and mobile-first design.',
+      'Tanosa Group offers consulting, governance, training, and project management across South Africa. We built their professional, mobile-first business website.',
     image: '/images/projects/tanosa.webp',
     liveUrl: 'https://www.tanosagroup.com',
     slug: 'tanosa-group',
