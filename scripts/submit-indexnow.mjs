@@ -67,12 +67,12 @@ async function submitIndexNow() {
       console.log(`IndexNow submission successful (HTTP ${response.status})`)
     } else {
       const body = await response.text()
-      console.error(`IndexNow submission failed (HTTP ${response.status}): ${body}`)
-      process.exit(1)
+      console.warn(`IndexNow submission failed (HTTP ${response.status}): ${body}`)
+      console.warn('Skipping IndexNow — site may not yet be live at this deployment.')
     }
   } catch (error) {
-    console.error('IndexNow submission error:', error)
-    process.exit(1)
+    console.warn('IndexNow submission error:', error.message)
+    console.warn('Skipping IndexNow — continuing build.')
   }
 }
 
