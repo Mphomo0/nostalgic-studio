@@ -21,6 +21,13 @@ export function generateStaticParams() {
   }))
 }
 
+function truncateMeta(text: string, max = 160): string {
+  if (text.length <= max) return text
+  const trimmed = text.slice(0, max - 3)
+  const lastSpace = trimmed.lastIndexOf(' ')
+  return (lastSpace > 0 ? trimmed.slice(0, lastSpace) : trimmed) + '...'
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -36,15 +43,17 @@ export async function generateMetadata({
     }
   }
 
+  const metaDesc = truncateMeta(project.description)
+
   return {
     title: project.title,
-    description: project.description,
+    description: metaDesc,
     alternates: {
       canonical: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
     },
     openGraph: {
       title: project.title,
-      description: project.description,
+      description: metaDesc,
       url: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
       siteName: 'Nostalgic Studio',
       type: 'website',

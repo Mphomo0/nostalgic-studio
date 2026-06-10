@@ -14,7 +14,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Next.js Development South Africa',
   description:
-    'Next.js development in South Africa. SSR, SSG, 90-100 Lighthouse scores. Modern WordPress alternative.',
+    'Next.js development in South Africa. SSR, SSG, 90-100 Lighthouse scores. Fast, modern WordPress alternative from R8,500.',
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites South Africa', 'Next.js Agency Johannesburg', 'Modern Web Design South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',

@@ -11,7 +11,7 @@ import Testimonials from '@/components/pages/home/Testimonials'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 
 export const metadata: Metadata = {
-  title: 'About Nostalgic Studio | Web Design Agency Johannesburg',
+  title: 'About Us | Web Design Agency Johannesburg',
   description:
     'Nostalgic Studio is a Johannesburg web design agency founded in 2016. We build fast, SEO-optimized Next.js websites for startups across South Africa.',
   keywords: [

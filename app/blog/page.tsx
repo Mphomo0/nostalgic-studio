@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Blog | Web Design & Digital Marketing Tips',
+  title: 'Blog | Web Design & Digital Tips',
     description:
       'Web design, SEO, and digital marketing insights from Johannesburg\'s leading Next.js agency.',
     url: 'https://www.nostalgic-studio.co.za/blog',

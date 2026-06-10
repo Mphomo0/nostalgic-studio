@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Branding Design Johannesburg',
   description:
-    'Brand identity and logo design for startups in Johannesburg. Visual systems, guides & assets. From R5,000.',
+    'Brand identity and logo design for startups in Johannesburg. Visual systems, guides & assets. Full ownership from R5,000. Free brand audit.',
   keywords: ['Branding Design Johannesburg', 'Logo Design South Africa', 'Corporate Identity Johannesburg', 'Startup Branding Agency', 'Visual Identity Design', 'Graphic Design Johannesburg', 'Brand Strategy South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/branding-design',

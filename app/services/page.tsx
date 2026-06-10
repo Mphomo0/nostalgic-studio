@@ -25,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: 'Web Design Services Johannesburg',
   description:
-    'Web design, UI/UX, branding & SEO services in Johannesburg for startups. Custom Next.js development.',
+    'Expert web design, UI/UX, branding & SEO services in Johannesburg for startups. Custom Next.js development from R3,500. Free consultation.',
   keywords: [
     'web design services',
     'web design Johannesburg',

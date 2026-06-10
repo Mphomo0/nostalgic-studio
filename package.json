@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node scripts/submit-indexnow.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.5.0",

@@ -12,7 +12,7 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg | Local SEO Agency',
+  title: 'SEO Services Johannesburg | Local SEO',
   description:
     'Expert SEO services in Johannesburg — technical SEO, local SEO, and content strategy for South African startups. Free audit. Plans from R1,500/month.',
   keywords: [

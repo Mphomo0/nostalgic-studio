@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Web Maintenance South Africa',
   description:
-    'Website maintenance for SA businesses. Security updates, performance & 24/7 monitoring. From R500/month.',
+    'Website maintenance for SA businesses. Security updates, performance optimisation & 24/7 monitoring. Keep your site fast from R500/month.',
   keywords: ['Web Maintenance Johannesburg', 'Website Support South Africa', 'Next.js Maintenance Services', 'Managed Website Updates South Africa', 'Website Security Monitoring SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-maintenance',

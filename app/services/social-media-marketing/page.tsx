@@ -14,7 +14,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Social Media Marketing JHB',
   description:
-    'Social media marketing for startups in Johannesburg. Instagram, Facebook & LinkedIn. From R3,000/month.',
+    'Social media marketing for startups in Johannesburg. Instagram, Facebook & LinkedIn management. Content creation from R3,000/month.',
   keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency', 'Instagram Marketing SA', 'Facebook Marketing Johannesburg'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',

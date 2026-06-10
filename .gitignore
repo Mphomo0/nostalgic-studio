@@ -25,6 +25,7 @@
 # misc
 .DS_Store
 *.pem
+seo_report.*
 
 # debug
 npm-debug.log*

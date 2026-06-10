@@ -35,7 +35,7 @@ export const services: Service[] = [
     ],
     pricing: 'From R15,000',
     timeline: '4-6 weeks',
-    image: '/images/ui-ux-design.png',
+    image: '/images/ui-ux-design.webp',
   },
   {
     id: 'branding',

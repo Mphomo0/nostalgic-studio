@@ -11,7 +11,7 @@ import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: '10 Signs for Website Redesign',
   description:
-    'Slow loading, poor mobile experience, low conversions — 10 signs your business website needs a redesign.',
+    'Slow loading, poor mobile experience, low conversions — 10 signs your business website needs a redesign in 2026. Free site audit included.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
     languages: {

@@ -11,7 +11,7 @@ import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Social Media Strategy SA 2026',
   description:
-    'Effective social media strategies for South African businesses. WhatsApp, TikTok & LinkedIn insights.',
+    'Effective social media strategies for South African businesses. WhatsApp, TikTok & LinkedIn insights for 2026. Grow your brand online today.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
     languages: {

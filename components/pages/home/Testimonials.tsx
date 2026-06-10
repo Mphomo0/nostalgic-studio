@@ -9,7 +9,7 @@ const testimonials = [
     id: 1,
     name: 'Ohentse Diseko',
     role: 'Marketing Manager, Sozim Trading and Consultancy',
-    avatar: '/images/avatar.png',
+    avatar: '/images/avatar.webp',
     content:
       'Nostalgic Studio designed our website and delivered a professional, high-quality result. The collaboration was smooth and the final website exceeded expectations.',
     rating: 5,
@@ -18,7 +18,7 @@ const testimonials = [
     id: 2,
     name: 'Stefan Mills',
     role: 'CEO, A-z Small Movers',
-    avatar: '/images/avatar.png',
+    avatar: '/images/avatar.webp',
     content:
       'The Nostalgic Studio team created a modern, professional website that matches our brand perfectly. The design quality and attention to detail were outstanding.',
     rating: 5,
@@ -27,7 +27,7 @@ const testimonials = [
     id: 3,
     name: 'Matebogo Dorothy Mokgatla',
     role: 'Founder, InnovateIQ Investments',
-    avatar: '/images/avatar.png',
+    avatar: '/images/avatar.webp',
     content:
       'Nostalgic Studio provided excellent website design services. The process was patient, detailed, and professional, and I would happily work with them again.',
     rating: 5,
@@ -36,7 +36,7 @@ const testimonials = [
     id: 4,
     name: 'LM MOLEPO',
     role: 'Founder, MMIH Group',
-    avatar: '/images/avatar.png',
+    avatar: '/images/avatar.webp',
     content:
       'Nostalgic Studio designed our company website and delivered a functional, well-structured digital presence that we continue to grow.',
     rating: 5,
@@ -45,7 +45,7 @@ const testimonials = [
     id: 5,
     name: 'Eon Smuts',
     role: 'Founder, SomeCandleShop',
-    avatar: '/images/avatar.png',
+    avatar: '/images/avatar.webp',
     content:
       'Very professional digital design service. I am extremely happy with the final website.',
     rating: 5,
