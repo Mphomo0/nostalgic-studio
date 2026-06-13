@@ -1,26 +1,15 @@
 import React from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface AuthorBioProps {
-  /** Author display name */
   name?: string
-  /** Short title or role */
   title?: string
-  /** Path to author photo */
   photoUrl?: string
-  /** Bio text — should include E-E-A-T signals */
   bio?: string
-  /** Link to author profile page */
   profileUrl?: string
 }
 
-/**
- * AuthorBio — E-E-A-T author attribution component.
- *
- * Renders a visible author card with credentials, photo, and link to
- * profile page. This provides on-page E-E-A-T signals that complement
- * the JSON-LD Person schema.
- */
 export default function AuthorBio({
   name = 'Mpho Moipolai',
   title = 'Creative Director & Lead Developer',
@@ -38,15 +27,16 @@ export default function AuthorBio({
         Written by
       </p>
       <div className="flex items-start gap-4">
-        <div className="h-14 w-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg">
-          {name.split(' ').map((n) => n[0]).join('')}
-        </div>
+        <Image
+          src={photoUrl}
+          alt={`${name} — author photo`}
+          width={56}
+          height={56}
+          className="h-14 w-14 shrink-0 rounded-full object-cover"
+        />
         <div>
           <p className="text-sm font-semibold text-foreground">
-            <Link
-              href={profileUrl}
-              className="hover:underline"
-            >
+            <Link href={profileUrl} className="hover:underline">
               {name}
             </Link>
           </p>
