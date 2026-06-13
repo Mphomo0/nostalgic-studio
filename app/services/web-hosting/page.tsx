@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, Server, ShieldCheck, Zap } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Server, ShieldCheck, Zap, Globe, Search, Wrench } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
@@ -43,49 +44,49 @@ export const metadata: Metadata = {
   },
 }
 
+const hostingSchemas = [
+  serviceSchema({
+    id: 'web-hosting',
+    name: 'Web Hosting South Africa',
+    description: 'Managed web hosting in South Africa optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
+    url: '/services/web-hosting',
+    areaServed: 'South Africa',
+    priceRange: 'R500-R3000',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Web Hosting', url: '/services/web-hosting' },
+  ]),
+]
+
+const hostingFaqs = [
+  {
+    question: 'Where are your hosting servers located?',
+    answer: 'We utilise edge computing and global CDN networks, ensuring your website is served from the closest possible server to your visitors in Johannesburg and across South Africa for maximum speed.',
+  },
+  {
+    question: 'Is SSL included with your hosting?',
+    answer: 'Yes, every hosting plan includes a free SSL certificate to ensure your website is secure and trusted by both users and search engines. HTTPS is also a Google ranking signal.',
+  },
+  {
+    question: 'Will you migrate my site for me?',
+    answer: 'Yes, we offer free migration services for all new hosting clients. Our team handles the entire process, ensuring a smooth transition from your old provider with zero downtime.',
+  },
+  {
+    question: 'What kind of support do you offer?',
+    answer: 'We provide dedicated technical support via email and WhatsApp during business hours (8am–5pm SAST, Monday to Friday). Emergency support is available 24/7 for critical issues affecting your live website.',
+  },
+  {
+    question: 'How much does web hosting cost?',
+    answer: 'Our managed hosting packages start from R500 per month for basic sites and scale up to R3,000+ per month for high-traffic ecommerce stores. All plans include SSL, CDN, daily backups, and security monitoring.',
+  },
+]
+
 export default function WebHosting() {
-  const schemas = [
-    serviceSchema({
-      id: 'web-hosting',
-      name: 'Web Hosting South Africa',
-      description: 'Managed web hosting in South Africa optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
-      url: '/services/web-hosting',
-      areaServed: 'South Africa',
-      priceRange: 'R500-R3000',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'Web Hosting', url: '/services/web-hosting' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'Where are your hosting servers located?',
-      answer: 'We utilise edge computing and global CDN networks, ensuring your website is served from the closest possible server to your visitors in Johannesburg and across South Africa for maximum speed.',
-    },
-    {
-      question: 'Is SSL included with your hosting?',
-      answer: 'Yes, every hosting plan includes a free SSL certificate to ensure your website is secure and trusted by both users and search engines. HTTPS is also a Google ranking signal.',
-    },
-    {
-      question: 'Will you migrate my site for me?',
-      answer: 'Yes, we offer free migration services for all new hosting clients. Our team handles the entire process, ensuring a smooth transition from your old provider with zero downtime.',
-    },
-    {
-      question: 'What kind of support do you offer?',
-      answer: 'We provide dedicated technical support via email and WhatsApp during business hours (8am–5pm SAST, Monday to Friday). Emergency support is available 24/7 for critical issues affecting your live website.',
-    },
-    {
-      question: 'How much does web hosting cost?',
-      answer: 'Our managed hosting packages start from R500 per month for basic sites and scale up to R3,000+ per month for high-traffic ecommerce stores. All plans include SSL, CDN, daily backups, and security monitoring.',
-    },
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {hostingSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -189,7 +190,7 @@ export default function WebHosting() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="Web Hosting FAQ" />
+        <FaqSection faqs={hostingFaqs} title="Web Hosting FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -206,6 +207,30 @@ export default function WebHosting() {
           covers={['Web Hosting Johannesburg', 'Next.js Hosting', 'Managed Hosting', 'SSL Certificates', 'Site Migration']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Fast hosting + strong SEO = better rankings. Get found on Google and AI engines.</p>
+            </Link>
+            <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Globe className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
+              <p className="text-sm text-muted-foreground">SEO-optimised, AI-friendly websites built with Next.js for maximum performance.</p>
+            </Link>
+            <Link href="/services/web-maintenance" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Wrench className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Maintenance</h3>
+              <p className="text-sm text-muted-foreground">Keep your site secure, fast and up-to-date with ongoing maintenance.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Experience Better Hosting</h2>

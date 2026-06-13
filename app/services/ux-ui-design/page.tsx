@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, LayoutTemplate, MousePointerClick, Smartphone } from 'lucide-react'
+import { ArrowRight, CheckCircle2, LayoutTemplate, MousePointerClick, Smartphone, Globe, Palette, Search } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
@@ -43,46 +44,46 @@ export const metadata: Metadata = {
   },
 }
 
+const uxSchemas = [
+  serviceSchema({
+    id: 'ux-ui-design',
+    name: 'UX/UI Design Johannesburg',
+    description: 'Research-driven user experience and interface design services in Johannesburg. Figma prototyping, user research, and mobile-first design for startups.',
+    url: '/services/ux-ui-design',
+    areaServed: 'Johannesburg, South Africa',
+    priceRange: 'R8000-R35000',
+    deliveryTime: '3-8 weeks',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'UX/UI Design', url: '/services/ux-ui-design' },
+  ]),
+]
+
+const uxFaqs = [
+  {
+    question: 'What is the difference between UX and UI design?',
+    answer: 'UX (User Experience) focuses on the overall feel and usability, while UI (User Interface) focuses on the visual layout and look of the product.'
+  },
+  {
+    question: 'Do you design for mobile apps as well?',
+    answer: 'Yes, we specialize in responsive web design as well as dedicated mobile app interfaces, ensuring a seamless experience across all devices.'
+  },
+  {
+    question: 'Why is UX design important for my startup?',
+    answer: 'Good UX design reduces user frustration, increases retention, and can significantly improve your conversion rates, giving your startup a better chance of success.'
+  },
+  {
+    question: 'What tools do you use for design?',
+    answer: 'We primarily use Figma for our design work, allowing for real-time collaboration and easy handoff to our Next.js development team.'
+  }
+]
+
 export default function UXUIDesign() {
-  const schemas = [
-    serviceSchema({
-      id: 'ux-ui-design',
-      name: 'UX/UI Design Johannesburg',
-      description: 'Research-driven user experience and interface design services in Johannesburg. Figma prototyping, user research, and mobile-first design for startups.',
-      url: '/services/ux-ui-design',
-      areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R8000-R35000',
-      deliveryTime: '3-8 weeks',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'UX/UI Design', url: '/services/ux-ui-design' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'What is the difference between UX and UI design?',
-      answer: 'UX (User Experience) focuses on the overall feel and usability, while UI (User Interface) focuses on the visual layout and look of the product.'
-    },
-    {
-      question: 'Do you design for mobile apps as well?',
-      answer: 'Yes, we specialize in responsive web design as well as dedicated mobile app interfaces, ensuring a seamless experience across all devices.'
-    },
-    {
-      question: 'Why is UX design important for my startup?',
-      answer: 'Good UX design reduces user frustration, increases retention, and can significantly improve your conversion rates, giving your startup a better chance of success.'
-    },
-    {
-      question: 'What tools do you use for design?',
-      answer: 'We primarily use Figma for our design work, allowing for real-time collaboration and easy handoff to our Next.js development team.'
-    }
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {uxSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -189,7 +190,7 @@ export default function UXUIDesign() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="UX/UI Design FAQ" />
+        <FaqSection faqs={uxFaqs} title="UX/UI Design FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -206,6 +207,30 @@ export default function UXUIDesign() {
           covers={['UX Research', 'UI Design', 'Wireframing', 'Prototyping', 'Design Systems', 'Mobile App Design']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Great design needs to be found — get visibility on Google and AI answer engines.</p>
+            </Link>
+            <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Globe className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
+              <p className="text-sm text-muted-foreground">SEO-optimised, AI-friendly websites built with Next.js for maximum performance.</p>
+            </Link>
+            <Link href="/services/branding-design" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Palette className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Branding Design</h3>
+              <p className="text-sm text-muted-foreground">Build a brand that customers trust and remember.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Build a Better Experience</h2>

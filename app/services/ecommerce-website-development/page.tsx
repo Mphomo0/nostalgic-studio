@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, ShoppingCart, CreditCard, Box } from 'lucide-react'
+import { ArrowRight, CheckCircle2, ShoppingCart, CreditCard, Box, Globe, Search, Server } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
@@ -43,50 +44,50 @@ export const metadata: Metadata = {
   },
 }
 
+const ecommerceSchemas = [
+  serviceSchema({
+    id: 'ecommerce-website-development',
+    name: 'Ecommerce Website Development South Africa',
+    description: 'Custom Next.js ecommerce development in Johannesburg with South African payment gateways including PayFast, Yoco, and Ozow.',
+    url: '/services/ecommerce-website-development',
+    areaServed: 'South Africa',
+    priceRange: 'R25000-R60000',
+    deliveryTime: '8-12 weeks',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Ecommerce Development', url: '/services/ecommerce-website-development' },
+  ]),
+]
+
+const ecommerceFaqs = [
+  {
+    question: 'Which payment gateways do you support for ecommerce?',
+    answer: 'We integrate with all major South African payment gateways, including PayFast, Peach Payments, Yoco, and Ozow, ensuring a smooth checkout experience for your customers.',
+  },
+  {
+    question: 'Why use Next.js for an ecommerce store?',
+    answer: 'Next.js is ideal for ecommerce because it delivers sub-2-second load times, which directly increases conversion rates. Studies show a 1-second delay in page load reduces conversions by 7%. Next.js also provides superior SEO through server-side rendering, helping your products rank higher on Google.',
+  },
+  {
+    question: 'Can I manage my own products?',
+    answer: 'Yes, we provide a user-friendly Content Management System (CMS) that allows you to easily add, edit, and remove products without any technical knowledge. We also offer training sessions to get your team up to speed.',
+  },
+  {
+    question: 'Is my ecommerce site secure?',
+    answer: 'Security is our top priority. By using Next.js and modern serverless architectures, we significantly reduce the attack surface compared to platforms like WordPress. All stores include SSL encryption, PCI-compliant payment processing, and automated security patches.',
+  },
+  {
+    question: 'How long does it take to build an ecommerce website?',
+    answer: 'A typical ecommerce website takes 8–12 weeks from kickoff to launch. This includes strategy, design, development, payment gateway integration, product loading, and testing. Simpler stores with fewer products can be completed in 4–6 weeks.',
+  },
+]
+
 export default function EcommerceWebsiteDevelopment() {
-  const schemas = [
-    serviceSchema({
-      id: 'ecommerce-website-development',
-      name: 'Ecommerce Website Development South Africa',
-      description: 'Custom Next.js ecommerce development in Johannesburg with South African payment gateways including PayFast, Yoco, and Ozow.',
-      url: '/services/ecommerce-website-development',
-      areaServed: 'South Africa',
-      priceRange: 'R25000-R60000',
-      deliveryTime: '8-12 weeks',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'Ecommerce Development', url: '/services/ecommerce-website-development' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'Which payment gateways do you support for ecommerce?',
-      answer: 'We integrate with all major South African payment gateways, including PayFast, Peach Payments, Yoco, and Ozow, ensuring a smooth checkout experience for your customers.',
-    },
-    {
-      question: 'Why use Next.js for an ecommerce store?',
-      answer: 'Next.js is ideal for ecommerce because it delivers sub-2-second load times, which directly increases conversion rates. Studies show a 1-second delay in page load reduces conversions by 7%. Next.js also provides superior SEO through server-side rendering, helping your products rank higher on Google.',
-    },
-    {
-      question: 'Can I manage my own products?',
-      answer: 'Yes, we provide a user-friendly Content Management System (CMS) that allows you to easily add, edit, and remove products without any technical knowledge. We also offer training sessions to get your team up to speed.',
-    },
-    {
-      question: 'Is my ecommerce site secure?',
-      answer: 'Security is our top priority. By using Next.js and modern serverless architectures, we significantly reduce the attack surface compared to platforms like WordPress. All stores include SSL encryption, PCI-compliant payment processing, and automated security patches.',
-    },
-    {
-      question: 'How long does it take to build an ecommerce website?',
-      answer: 'A typical ecommerce website takes 8–12 weeks from kickoff to launch. This includes strategy, design, development, payment gateway integration, product loading, and testing. Simpler stores with fewer products can be completed in 4–6 weeks.',
-    },
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {ecommerceSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -180,7 +181,7 @@ export default function EcommerceWebsiteDevelopment() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="Ecommerce FAQ" />
+        <FaqSection faqs={ecommerceFaqs} title="Ecommerce FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -197,6 +198,30 @@ export default function EcommerceWebsiteDevelopment() {
           covers={['Ecommerce Development', 'Next.js Online Stores', 'Payment Gateway Integration', 'Inventory Management', 'CMS']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Drive organic traffic to your store with classic SEO + AI search optimisation.</p>
+            </Link>
+            <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Globe className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
+              <p className="text-sm text-muted-foreground">SEO-optimised, AI-friendly websites built with Next.js for maximum performance.</p>
+            </Link>
+            <Link href="/services/web-hosting" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Server className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Hosting</h3>
+              <p className="text-sm text-muted-foreground">Fast, secure, scalable hosting optimised for Next.js and ecommerce stores.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Start Selling Online Today</h2>

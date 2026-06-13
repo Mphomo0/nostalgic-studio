@@ -1,22 +1,23 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, TrendingUp, Search, Globe, BarChart3, Target, Zap, Clock, Users, Shield, Layers, FileText, Link2, MessageSquare, DollarSign, Star, HelpCircle, Settings, Palette } from 'lucide-react'
+import { ArrowRight, CheckCircle2, TrendingUp, Search, Globe, BarChart3, Target, Zap, Clock, Users, Shield, Layers, FileText, Link2, MessageSquare, DollarSign, Star, HelpCircle, Settings, Palette, Megaphone } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import AuthorBio from '@/components/geo/AuthorBio'
-import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg | Local & Technical SEO Agency',
+  title: 'SEO & AI Search Visibility Johannesburg',
 
   description:
-    'Top SEO agency in Johannesburg offering technical SEO, local SEO & content strategy. Free audit available. Plans from R1,500/month. Rank #1 on Google.',
+    'SEO & AI search visibility services in Johannesburg. Technical SEO, local SEO, content strategy, and AI-ready optimisation. Free audit available.',
 
   keywords: [
     'SEO Services Johannesburg',
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'SEO Services Johannesburg | Technical & Local SEO | Nostalgic Studio',
+    title: 'SEO & AI Search Visibility Johannesburg | Nostalgic Studio',
     description:
-      'Rank higher on Google with expert SEO services in Johannesburg. Technical SEO, local SEO, and content optimisation for South African businesses. Free audit.',
+      'SEO & AI search visibility services in Johannesburg. Technical SEO, local SEO, content strategy, and AI-ready optimisation. Free audit available.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -60,9 +61,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'SEO Services Johannesburg | Local & Technical SEO Agency',
+    title: 'SEO & AI Search Visibility Johannesburg | Nostalgic Studio',
     description:
-      'Rank #1 on Google with expert SEO services in Johannesburg. Technical SEO, local SEO & content strategy. Free audit from R1,500/month.',
+      'SEO & AI search visibility services in Johannesburg. Technical SEO, local SEO, content strategy, and AI-ready optimisation. Free audit available.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -102,71 +103,71 @@ const faqs = [
   },
   {
     question: 'What is Generative Engine Optimization (GEO)?',
-    answer: 'Generative Engine Optimization (GEO) is the practice of optimizing content for AI-powered search engines like ChatGPT, Gemini, Claude, and Perplexity. It involves structuring content with clear definitions, entity signals, data points, and semantic HTML that AI engines can easily parse and cite.'
+    answer: 'Generative Engine Optimization (GEO) is the practice of optimizing content for AI-powered search engines like ChatGPT, Gemini, Claude, and Perplexity. It involves structuring content with clear definitions, entity signals, data points, and semantic HTML that AI engines can easily parse and cite. When combined with classic SEO, GEO ensures your business is visible in both traditional search results and AI-generated answers.'
   },
   {
     question: 'How is GEO different from traditional SEO?',
-    answer: 'Traditional SEO optimizes for search engine result pages (SERPs) with keywords and backlinks. GEO optimizes for AI answer engines by focusing on entity authority, structured data, direct answers, authoritative citations, and content that AI models can confidently reference as source material.'
+    answer: 'Traditional SEO optimizes for search engine result pages (SERPs) with keywords and backlinks. GEO optimizes for AI answer engines by focusing on entity authority, structured data, direct answers, authoritative citations, and content that AI models can confidently reference as source material. They complement each other — classic SEO drives Google traffic, GEO drives AI citation visibility.'
   },
 ]
 
+const seoSchemas = [
+  serviceSchema({
+    id: 'seo-services-johannesburg',
+    name: 'SEO Services Johannesburg',
+    description:
+      'Expert search engine optimisation services in Johannesburg, South Africa. Technical SEO, local SEO, keyword research, generative engine optimization, and content strategy for startups and SMEs.',
+    url: '/services/seo-services-johannesburg',
+    areaServed: 'Johannesburg, South Africa',
+    priceRange: 'R1500-R15000',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'SEO & AI Search Visibility', url: '/services/seo-services-johannesburg' },
+  ]),
+]
+
+const seoProcess = [
+    { icon: Search, title: 'Audit & Research', description: 'We analyse your current website, competitors, and target keywords — plus assess your GEO readiness and AI citation potential — to build a dual SEO + AI search strategy.' },
+    { icon: Target, title: 'On-Page + AI Content', description: 'We optimise title tags, meta descriptions, headings, and content for both Google ranking and AI answer extraction. Structured Q&A, entity signals, and citation-worthy copy built in.' },
+    { icon: Shield, title: 'Technical + Structured Data', description: 'We fix crawl errors, improve site speed, implement JSON-LD schema, optimise Core Web Vitals, and add AI-friendly structured data that helps models understand and cite your content.' },
+    { icon: Link2, title: 'Off-Page, Local & GEO', description: 'We build high-quality backlinks, optimise your Google Business Profile, manage citations — and build entity authority across the web so AI engines trust and reference your brand.' },
+    { icon: BarChart3, title: 'Reporting & Refinement', description: 'We provide monthly reports showing keyword rankings, organic traffic, conversions, and AI citation metrics. We continuously refine both classic SEO and GEO strategy based on data.' },
+  ]
+
+const localIndustries = [
+  { name: 'Service Businesses', description: 'SEO for plumbers, electricians, cleaners, and home service providers targeting Johannesburg suburbs.' },
+  { name: 'Construction Companies', description: 'Rank for building, renovation, and construction keywords in Gauteng and surrounding provinces.' },
+  { name: 'Trades Businesses', description: 'Local SEO for painters, carpenters, roofers, and tradespeople across Johannesburg and Pretoria.' },
+  { name: 'Professional Services', description: 'Lawyers, accountants, consultants, and financial advisors targeting high-intent local searches.' },
+  { name: 'Healthcare Providers', description: 'SEO for doctors, dentists, physiotherapists, and wellness practitioners in Johannesburg.' },
+  { name: 'E-Commerce Stores', description: 'Technical SEO and content optimisation for online stores selling to South African customers.' },
+]
+
+const geoFeatures = [
+  { icon: MessageSquare, title: 'ChatGPT Visibility', description: 'Optimise content so ChatGPT cites your business as a trusted source for SEO services in South Africa.' },
+  { icon: Zap, title: 'Gemini & Claude Ready', description: 'Structure data for Google Gemini and Anthropic Claude to extract and attribute your expertise.' },
+  { icon: Globe, title: 'Perplexity Optimised', description: 'Create authoritative, citation-worthy content that Perplexity surfaces in AI-generated answers.' },
+  { icon: Layers, title: 'Entity Signals', description: 'Build entity authority through structured data, topic clusters, and consistent NAP information across the web.' },
+]
+
+const commonMistakes = [
+  'Keyword stuffing instead of natural, valuable content',
+  'Ignoring local SEO and Google Business Profile optimization',
+  'Focusing only on rankings without considering conversion rate optimization',
+  'Using black-hat techniques like link farms and PBNs',
+  'Neglecting mobile optimization and Core Web Vitals',
+  'Not tracking or measuring SEO performance properly',
+  'Expecting overnight results and abandoning strategy too early',
+  'Copying competitor strategies without understanding context',
+  'Ignoring AI search — no structured data or GEO optimisation for ChatGPT and Gemini',
+]
+
 export default function SEOServicesJohannesburg() {
-  const schemas = [
-    serviceSchema({
-      id: 'seo-services-johannesburg',
-      name: 'SEO Services Johannesburg',
-      description:
-        'Expert search engine optimisation services in Johannesburg, South Africa. Technical SEO, local SEO, keyword research, generative engine optimization, and content strategy for startups and SMEs.',
-      url: '/services/seo-services-johannesburg',
-      areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R1500-R15000',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'SEO Services Johannesburg', url: '/services/seo-services-johannesburg' },
-    ]),
-    faqPageSchema(faqs),
-  ]
-
-  const seoProcess = [
-    { icon: Search, title: 'Audit & Research', description: 'We analyse your current website, competitors, and target keywords to identify opportunities and develop a data-driven SEO strategy.' },
-    { icon: Target, title: 'On-Page Optimisation', description: 'We optimise title tags, meta descriptions, headings, content, images, and internal links to align with target keywords and search intent.' },
-    { icon: Shield, title: 'Technical SEO', description: 'We fix crawl errors, improve site speed, implement structured data, optimise Core Web Vitals, and ensure mobile-first indexing readiness.' },
-    { icon: Link2, title: 'Off-Page & Local SEO', description: 'We build high-quality backlinks, optimise your Google Business Profile, manage local citations, and build local authority signals for Johannesburg.' },
-    { icon: BarChart3, title: 'Reporting & Refinement', description: 'We provide monthly reports showing keyword rankings, organic traffic, conversions, and ROI metrics. We continuously refine the strategy based on data.' },
-  ]
-
-  const localIndustries = [
-    { name: 'Service Businesses', description: 'SEO for plumbers, electricians, cleaners, and home service providers targeting Johannesburg suburbs.' },
-    { name: 'Construction Companies', description: 'Rank for building, renovation, and construction keywords in Gauteng and surrounding provinces.' },
-    { name: 'Trades Businesses', description: 'Local SEO for painters, carpenters, roofers, and tradespeople across Johannesburg and Pretoria.' },
-    { name: 'Professional Services', description: 'Lawyers, accountants, consultants, and financial advisors targeting high-intent local searches.' },
-    { name: 'Healthcare Providers', description: 'SEO for doctors, dentists, physiotherapists, and wellness practitioners in Johannesburg.' },
-    { name: 'E-Commerce Stores', description: 'Technical SEO and content optimisation for online stores selling to South African customers.' },
-  ]
-
-  const geoFeatures = [
-    { icon: MessageSquare, title: 'ChatGPT Visibility', description: 'Optimise content so ChatGPT cites your business as a trusted source for SEO services in South Africa.' },
-    { icon: Zap, title: 'Gemini & Claude Ready', description: 'Structure data for Google Gemini and Anthropic Claude to extract and attribute your expertise.' },
-    { icon: Globe, title: 'Perplexity Optimised', description: 'Create authoritative, citation-worthy content that Perplexity surfaces in AI-generated answers.' },
-    { icon: Layers, title: 'Entity Signals', description: 'Build entity authority through structured data, topic clusters, and consistent NAP information across the web.' },
-  ]
-
-  const commonMistakes = [
-    'Keyword stuffing instead of natural, valuable content',
-    'Ignoring local SEO and Google Business Profile optimization',
-    'Focusing only on rankings without considering conversion rate optimization',
-    'Using black-hat techniques like link farms and PBNs',
-    'Neglecting mobile optimization and Core Web Vitals',
-    'Not tracking or measuring SEO performance properly',
-    'Expecting overnight results and abandoning strategy too early',
-    'Copying competitor strategies without understanding context',
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {seoSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -176,11 +177,11 @@ export default function SEOServicesJohannesburg() {
         <MotionWrapper>
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expert <span className="text-gradient">SEO Services Johannesburg</span>
+              <span className="text-gradient">SEO & AI Search Visibility</span> Johannesburg
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              <strong>Nostalgic Studio provides technical and content SEO services in Johannesburg — including keyword research, on-page optimisation, and monthly ranking reports from R1,500/month.</strong>{' '}
-              Rank higher on Google, drive more organic traffic, and grow your business with South Africa&apos;s leading SEO agency. We combine technical SEO expertise with local market intelligence to deliver measurable results for Johannesburg businesses.
+              <strong>Classic SEO meets AI search optimisation. Nostalgic Studio helps Johannesburg businesses rank on Google and get cited by ChatGPT, Gemini, Claude and Perplexity — from R1,500/month.</strong>{' '}
+              Search is no longer just blue links. We combine proven technical SEO, local SEO and content strategy with Generative Engine Optimization (GEO) so your business is visible wherever customers search — traditional search engines and AI answer engines alike.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="h-14 px-8">
@@ -195,46 +196,42 @@ export default function SEOServicesJohannesburg() {
 
         {/* AboutThisPage - GEO */}
         <AboutThisPage
-          summary="Nostalgic Studio is a leading SEO agency in Johannesburg, South Africa, specialising in technical SEO, local SEO, content strategy, and Generative Engine Optimization (GEO) for startups and SMEs. We help businesses rank higher on Google and become visible in AI-powered search engines like ChatGPT, Gemini, and Perplexity."
+          summary="Nostalgic Studio provides classic SEO + AI search visibility services in Johannesburg, South Africa — combining technical SEO, local SEO, content strategy, and Generative Engine Optimization (GEO). We help businesses rank on Google and get cited by ChatGPT, Gemini, Claude, and Perplexity."
           covers={['Technical SEO Johannesburg', 'Local SEO', 'GEO Optimization', 'Keyword Research', 'Content Strategy', 'Google Business Profile', 'Link Building', 'SEO Audits']}
           lastUpdated="June 2026"
         />
 
-        {/* What Is SEO - Expanded */}
+        {/* What Is SEO in the AI Era */}
         <section className="mb-16" aria-labelledby="definition-heading">
           <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
             <h2 id="definition-heading" className="text-2xl font-bold mb-4">
-              What Is SEO?
+              What Is SEO in the AI Era?
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
               <p>
-                SEO (Search Engine Optimization) is the practice of optimising a website to rank higher 
-                in search engine results pages (SERPs), increasing organic (non-paid) traffic. It encompasses 
-                technical SEO, on-page content optimisation, off-page link building, and local SEO strategies 
-                designed to improve a website&apos;s visibility to search engines like Google, Bing, and Yahoo.
+                Search today means two things: <strong>classic search engine optimisation</strong> (ranking on Google, Bing, Yahoo) and <strong>AI search visibility</strong> (being cited by ChatGPT, Gemini, Claude and Perplexity). Both matter, and both require deliberate strategy.
               </p>
               <p>
-                <strong>Why SEO matters for Johannesburg businesses:</strong> 75% of users never scroll past the first page of Google results. 
-                46% of all Google searches have local intent. Businesses in the Google Local Pack receive 42% of all local search clicks. 
-                For Johannesburg-based companies, ranking on the first page means capturing high-intent customers actively searching for your services.
+                <strong>Classic SEO</strong> encompasses technical SEO, on-page content optimisation, off-page link building, and local SEO designed to improve a website&apos;s ranking in search engine results pages (SERPs). It&apos;s the foundation — site speed, crawlability, keyword targeting, and backlinks that have driven organic traffic for two decades.
               </p>
               <p>
-                SEO is not just about keywords — it&apos;s about creating a comprehensive digital presence that search engines trust. This includes 
-                technical infrastructure (site speed, mobile-friendliness, crawlability), content authority (relevant, valuable information), 
-                and external validation (backlinks, citations, reviews).
+                <strong>AI Search / GEO</strong> (Generative Engine Optimization) optimises your content for AI answer engines. These models pull from structured data, entity signals, authoritative citations, and clear answer-focused content to generate responses. Being cited by ChatGPT or appearing in Google AI Overviews is the new frontier of discoverability.
+              </p>
+              <p>
+                <strong>Why it matters for Johannesburg businesses:</strong> 75% of users never scroll past the first page of Google results. 46% of all Google searches have local intent. Meanwhile, ChatGPT processes over 1 billion queries daily. Your business needs visibility in both worlds to capture every potential customer.
               </p>
             </div>
           </div>
         </section>
 
-        {/* GEO & AI Search Optimization Section */}
+        {/* Classic SEO + AI Search Optimization */}
         <section className="mb-16" aria-labelledby="geo-heading">
           <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
             <h2 id="geo-heading" className="text-2xl font-bold mb-4">
-              AI Search Optimization (GEO)
+              Classic SEO + AI Search Optimization (GEO)
             </h2>
             <p className="text-muted-foreground mb-6">
-              Search is evolving beyond blue links. AI-powered answer engines like ChatGPT, Google Gemini, Anthropic Claude, and Perplexity are changing how people find information. Your business needs to be optimised for these new discovery channels through Generative Engine Optimization (GEO).
+              Search is evolving beyond blue links. AI-powered answer engines like ChatGPT, Google Gemini, Anthropic Claude, and Perplexity are changing how people find information — while Google remains the dominant traffic source. Your business needs to be optimised for both channels through a combined SEO + GEO strategy.
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {geoFeatures.map((feature) => (
@@ -265,14 +262,13 @@ export default function SEOServicesJohannesburg() {
         <section className="mb-16" aria-labelledby="snippet-heading">
           <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
             <h2 id="snippet-heading" className="text-2xl font-bold mb-4">
-              What is the Best SEO Agency in Johannesburg?
+              What is the Best SEO & AI Search Agency in Johannesburg?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Nostalgic Studio is a leading <strong>SEO agency in Johannesburg</strong>, specializing in 
+              Nostalgic Studio is a leading <strong>SEO and AI search agency in Johannesburg</strong>, specializing in 
               technical SEO, local SEO, Generative Engine Optimization (GEO), and <strong>Next.js website optimization</strong> for businesses 
-              across South Africa. Our data-driven approach combines proven SEO strategies with cutting-edge 
-              technology to deliver measurable results. We help businesses increase organic traffic, improve 
-              Google rankings, and grow their online presence through comprehensive SEO solutions tailored to the South African market.
+              across South Africa. Our dual approach combines proven classic SEO strategies with cutting-edge GEO techniques to deliver measurable results. We help businesses increase organic traffic, improve 
+              Google rankings, get cited by AI answer engines, and grow their online presence through comprehensive search solutions tailored to the South African market.
             </p>
           </div>
         </section>
@@ -295,19 +291,19 @@ export default function SEOServicesJohannesburg() {
           </div>
         </section>
 
-        {/* Why SEO Matters - Expanded */}
+        {/* Why SEO + AI Search Matters */}
         <section className="mb-16" aria-labelledby="why-seo-heading">
           <h2 id="why-seo-heading" className="text-3xl font-bold mb-8 text-center">
-            Why SEO Matters for Your Johannesburg Business
+            Why SEO + AI Search Matters for Your Johannesburg Business
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Search, title: 'Organic Traffic', description: 'SEO drives sustainable, cost-effective traffic. Unlike paid ads that stop when your budget does, organic traffic compounds over time, delivering ongoing ROI.' },
-              { icon: Target, title: 'Local Visibility', description: '46% of Google searches have local intent. Johannesburg customers searching for "near me" services are ready to buy. Local SEO puts your business in front of them.' },
-              { icon: TrendingUp, title: 'Competitive Advantage', description: 'Most Johannesburg businesses invest little in SEO. A well-optimised website gives you a significant edge over competitors who rely on outdated websites and word-of-mouth.' },
-              { icon: DollarSign, title: 'Cost-Effective Growth', description: 'SEO delivers 5:1 ROI on average. Compared to PPC advertising, organic traffic costs 80% less per acquisition over a 12-month period.' },
-              { icon: Globe, title: 'Brand Credibility', description: 'Ranking on the first page of Google signals trust and authority. Customers trust businesses that appear at the top of search results.' },
-              { icon: BarChart3, title: 'Measurable Results', description: 'SEO provides complete visibility into performance. Track keyword rankings, organic traffic, conversions, and revenue attributed to search.' },
+              { icon: Search, title: 'Organic + AI Traffic', description: 'Classic SEO drives sustainable Google traffic. GEO adds AI answer engine visibility. Together they capture customers across every search surface — from traditional SERPs to ChatGPT, Gemini and Perplexity.' },
+              { icon: Target, title: 'Local Visibility', description: '46% of Google searches have local intent. Johannesburg customers searching for "near me" services are ready to buy. Local SEO puts your business in front of them in both maps and AI answers.' },
+              { icon: TrendingUp, title: 'Competitive Advantage', description: 'Most Johannesburg businesses invest little in SEO and almost none in GEO. A dual strategy gives you a significant edge over competitors relying on outdated methods.' },
+              { icon: DollarSign, title: 'Cost-Effective Growth', description: 'SEO delivers 5:1 ROI on average. Organic traffic costs 80% less per acquisition than PPC over 12 months. GEO amplifies this by earning AI citations at no extra ad cost.' },
+              { icon: Globe, title: 'Brand Credibility', description: 'Ranking on Google and being cited by AI engines signals trust and authority. Customers trust businesses that appear at the top of both search results and AI answers.' },
+              { icon: BarChart3, title: 'Measurable Results', description: 'Track classic metrics — keyword rankings, organic traffic, conversions — alongside AI citation frequency and visibility in ChatGPT, Gemini, and Perplexity responses.' },
             ].map((item) => (
               <div key={item.title} className="bg-card p-6 rounded-2xl border border-border">
                 <item.icon className="w-8 h-8 text-primary mb-4" />
@@ -321,10 +317,10 @@ export default function SEOServicesJohannesburg() {
         {/* Our SEO Process */}
         <section className="mb-16" aria-labelledby="process-heading">
           <h2 id="process-heading" className="text-3xl font-bold mb-8 text-center">
-            Our SEO Process
+            Our SEO & AI Search Process
           </h2>
           <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-            We follow a proven, data-driven SEO process designed to deliver sustainable results for Johannesburg businesses.
+            We follow a proven, data-driven process that combines classic SEO with AI search optimisation — designed to deliver sustainable visibility across Google and AI answer engines for Johannesburg businesses.
           </p>
           <div className="grid md:grid-cols-5 gap-4">
             {seoProcess.map((step, index) => (
@@ -343,7 +339,7 @@ export default function SEOServicesJohannesburg() {
         {/* SEO Types - Details */}
         <section className="mb-16" aria-labelledby="seo-types-heading">
           <h2 id="seo-types-heading" className="text-3xl font-bold mb-8 text-center">
-            Our SEO Services in Detail
+            Our SEO & AI Search Services in Detail
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             {[
@@ -381,7 +377,7 @@ export default function SEOServicesJohannesburg() {
               Local SEO for Johannesburg Businesses
             </h2>
             <p className="text-muted-foreground mb-6">
-              Johannesburg is a competitive market with diverse suburbs and business districts. Effective local SEO ensures your business appears when potential customers search for your services in specific areas.
+              Johannesburg is a competitive market with diverse suburbs and business districts. Effective local SEO ensures your business appears when potential customers search for your services in specific areas — whether they search on Google, ask ChatGPT, or use AI Overviews.
             </p>
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               {localIndustries.map((industry) => (
@@ -401,9 +397,9 @@ export default function SEOServicesJohannesburg() {
         {/* CTA Section */}
         <section className="mb-16 text-center">
           <div className="bg-primary/5 border border-primary/20 rounded-3xl p-10 md:p-16">
-            <h2 className="text-3xl font-bold mb-4">Ready to Rank #1 on Google?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Rank on Google & AI Search?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Get a free SEO audit and discover exactly what your website needs to rank higher in Johannesburg and beyond.
+              Get a free SEO + GEO audit and discover exactly what your website needs to rank higher in Google and appear in AI answers across ChatGPT, Gemini, and Perplexity.
             </p>
             <Button asChild size="lg" className="h-14 px-10">
               <Link href="/contact">Claim Your Free SEO Audit <ArrowRight className="ml-2" /></Link>
@@ -414,7 +410,7 @@ export default function SEOServicesJohannesburg() {
         {/* SEO Pricing & Timeline */}
         <section className="mb-16" id="pricing" aria-labelledby="pricing-heading">
           <h2 id="pricing-heading" className="text-3xl font-bold mb-8 text-center">
-            SEO Pricing & Timeline Expectations
+            SEO & AI Search Pricing & Timeline
           </h2>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-card p-8 rounded-2xl border border-border">
@@ -468,7 +464,7 @@ export default function SEOServicesJohannesburg() {
             </div>
           </div>
           <div className="bg-card border border-border rounded-2xl p-8">
-            <h3 className="text-xl font-bold mb-4">SEO Timeline: What to Expect</h3>
+            <h3 className="text-xl font-bold mb-4">SEO & AI Search Timeline: What to Expect</h3>
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
                 <div className="font-bold text-primary mb-2">Month 1-3</div>
@@ -508,7 +504,7 @@ export default function SEOServicesJohannesburg() {
               Common SEO Mistakes to Avoid
             </h2>
             <p className="text-muted-foreground mb-6">
-              Many businesses waste time and money on SEO strategies that don&apos;t work. Here are the most common mistakes we see Johannesburg businesses make:
+              Many businesses waste time and money on SEO strategies that don&apos;t work. Here are the most common mistakes we see Johannesburg businesses make — including the new ones that hurt AI search visibility:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {commonMistakes.map((mistake) => (
@@ -524,7 +520,7 @@ export default function SEOServicesJohannesburg() {
         {/* CTA Section 2 */}
         <section className="mb-16">
           <div className="bg-card border border-border rounded-3xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold mb-4">Why Choose Nostalgic Studio for SEO?</h2>
+            <h2 className="text-3xl font-bold mb-4">Why Choose Nostalgic Studio for SEO & AI Search?</h2>
             <div className="grid md:grid-cols-3 gap-6 mt-8 mb-8 text-left">
               <div className="p-4">
                 <h3 className="font-bold mb-2">Experience & Expertise</h3>
@@ -541,6 +537,10 @@ export default function SEOServicesJohannesburg() {
               <div className="p-4">
                 <h3 className="font-bold mb-2">Data-Driven Decisions</h3>
                 <p className="text-sm text-muted-foreground">Every strategy is backed by data. We track keyword rankings, organic traffic, conversions, and ROI. You get monthly reports with actionable insights.</p>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold mb-2">AI-First Approach</h3>
+                <p className="text-sm text-muted-foreground">We don&apos;t just optimise for Google. Our GEO strategies ensure your business is visible in ChatGPT, Gemini, Claude, and Perplexity — the fastest-growing search surfaces.</p>
               </div>
               <div className="p-4">
                 <h3 className="font-bold mb-2">Full-Service Agency</h3>
@@ -560,11 +560,11 @@ export default function SEOServicesJohannesburg() {
         {/* Key Takeaways */}
         <KeyTakeaways
           takeaways={[
+            { point: 'Classic SEO + AI Search', detail: 'optimised for Google, ChatGPT, Gemini, Claude and Perplexity — dual visibility across every search surface' },
             { point: 'Technical SEO first', detail: 'site speed, crawlability, and Core Web Vitals directly impact rankings and user experience' },
             { point: 'Local SEO specialists', detail: 'Google Business Profile and Johannesburg-specific optimisations that drive foot traffic and local leads' },
-            { point: 'GEO / AI Search ready', detail: 'optimised for ChatGPT, Gemini, Claude, and Perplexity — the future of search discovery' },
             { point: 'Long-term results', detail: 'organic traffic compounds over time unlike paid ads that stop when budgets do' },
-            { point: 'Transparent reporting', detail: 'monthly reports with keyword rankings, traffic growth, conversions, and ROI metrics' },
+            { point: 'Transparent reporting', detail: 'monthly reports with keyword rankings, traffic growth, conversions, and AI citation metrics' },
             { point: 'White-hat only', detail: 'ethical SEO techniques that build lasting authority without risk of Google penalties' },
           ]}
         />
@@ -586,12 +586,12 @@ export default function SEOServicesJohannesburg() {
             <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
               <Globe className="w-6 h-6 text-primary mb-3" />
               <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
-              <p className="text-sm text-muted-foreground">SEO-optimised websites built with Next.js for maximum performance.</p>
+              <p className="text-sm text-muted-foreground">SEO-optimised, AI-friendly websites built with Next.js for maximum performance.</p>
             </Link>
-            <Link href="/services/nextjs-website-design" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
-              <Zap className="w-6 h-6 text-primary mb-3" />
-              <h3 className="font-bold mb-1">Next.js Website Design</h3>
-              <p className="text-sm text-muted-foreground">Lightning-fast websites with server-side rendering and 90+ Lighthouse scores.</p>
+            <Link href="/services/social-media-ads" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Megaphone className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Social Media & Paid Ads</h3>
+              <p className="text-sm text-muted-foreground">Paid campaigns that complement your organic SEO strategy for full-funnel growth.</p>
             </Link>
             <Link href="/services/branding-design" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
               <Palette className="w-6 h-6 text-primary mb-3" />
@@ -603,9 +603,9 @@ export default function SEOServicesJohannesburg() {
 
         {/* Final CTA */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Dominate Search?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Own Search — Classic & AI?</h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Get a tailored SEO strategy that drives real business growth for your South African business. Free, no-obligation consultation.
+            Get a tailored SEO + GEO strategy that drives real business growth across Google, ChatGPT, Gemini, and Perplexity. Free, no-obligation consultation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="h-14 px-8">

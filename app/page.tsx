@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import lazyLoad from 'next/dynamic'
-import { faqPageSchema } from '@/app/structured-data/schemas'
 
 export const dynamic = 'force-static'
 import Hero from '@/components/pages/home/Hero'
@@ -26,10 +25,10 @@ const FaqSection = lazyLoad(() =>
 const AuthorBio = lazyLoad(() => import('@/components/geo/AuthorBio'))
 
 export const metadata: Metadata = {
-  title: 'Web Design for Startups Johannesburg',
+  title: 'Johannesburg SEO, Branding & Web Design',
 
   description:
-    'Web design agency for startups in Johannesburg. Custom Next.js websites, SEO & branding. From R3,500. Free quote.',
+    'Johannesburg web design, SEO and branding studio. Fast websites, higher Google rankings and brands people remember. See our work and get a quote.',
 
   keywords: [
     'Web Design Johannesburg',
@@ -53,9 +52,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Web Design for Startups Johannesburg | Nostalgic Studio',
+    title: 'Johannesburg SEO, Branding & Web Design | Nostalgic Studio',
     description:
-      'Custom Next.js websites for startups in Johannesburg. SEO-optimized, fast, and conversion-focused. From R3,500.',
+      'Johannesburg web design, SEO and branding studio. Fast websites, higher Google rankings and brands people remember. See our work and get a quote.',
     url: 'https://www.nostalgic-studio.co.za',
     siteName: 'Nostalgic Studio',
     locale: 'en_ZA',
@@ -71,62 +70,55 @@ export const metadata: Metadata = {
   },
 }
 
+const homepageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://www.nostalgic-studio.co.za/#website',
+  inLanguage: 'en-ZA',
+  name: 'Nostalgic Studio',
+  url: 'https://www.nostalgic-studio.co.za',
+  description:
+    'Top-rated web design agency in Johannesburg offering Next.js development, UI/UX, and branding services.',
+  publisher: {
+    '@id': 'https://www.nostalgic-studio.co.za/#organization',
+  },
+}
+
+const faqs = [
+  {
+    question: 'Which is the best web design agency in Johannesburg?',
+    answer:
+      'Nostalgic Studio is a leading web design agency in Johannesburg specialising in high-performance Next.js websites, branding, and UI/UX design for startups. With 70+ projects and 13+ years of experience, we deliver websites that rank and convert.',
+  },
+  {
+    question: 'Do you offer SEO services in South Africa?',
+    answer:
+      'Yes, Nostalgic Studio provides comprehensive SEO services including technical SEO, keyword research, and content optimisation for businesses across South Africa. Our Next.js architecture gives your site a technical SEO advantage from day one.',
+  },
+  {
+    question: 'How much does web design cost in Johannesburg?',
+    answer:
+      'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R3,500, business sites R8,000–R15,000, and e-commerce R10,000–R25,000+.',
+  },
+  {
+    question: 'What is Next.js and why is it good for SEO?',
+    answer:
+      'Next.js is a React framework that enables Server-Side Rendering (SSR) and Static Site Generation (SSG). This means faster page loads (sub-2-second), better search engine crawling, and higher Google rankings. Next.js sites typically score 90–100 on Lighthouse compared to 40–70 for WordPress.',
+  },
+  {
+    question: 'How long does it take to build a website?',
+    answer:
+      'Typical website projects take 4–8 weeks from strategy to launch. Complex e-commerce sites may take 8–12 weeks. Nostalgic Studio follows a structured five-phase process: discovery, design, development, testing, and launch.',
+  },
+]
+
 export default function Home() {
-  const homepageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': 'https://www.nostalgic-studio.co.za/#website',
-    inLanguage: 'en-ZA',
-    name: 'Nostalgic Studio',
-    url: 'https://www.nostalgic-studio.co.za',
-    description:
-      'Top-rated web design agency in Johannesburg offering Next.js development, UI/UX, and branding services.',
-    publisher: {
-      '@id': 'https://www.nostalgic-studio.co.za/#organization',
-    },
-  }
-
-  const faqs = [
-    {
-      question: 'Which is the best web design agency in Johannesburg?',
-      answer:
-        'Nostalgic Studio is a leading web design agency in Johannesburg specialising in high-performance Next.js websites, branding, and UI/UX design for startups. With 70+ projects and 13+ years of experience, we deliver websites that rank and convert.',
-    },
-    {
-      question: 'Do you offer SEO services in South Africa?',
-      answer:
-        'Yes, Nostalgic Studio provides comprehensive SEO services including technical SEO, keyword research, and content optimisation for businesses across South Africa. Our Next.js architecture gives your site a technical SEO advantage from day one.',
-    },
-    {
-      question: 'How much does web design cost in Johannesburg?',
-      answer:
-        'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R3,500, business sites R8,000–R15,000, and e-commerce R10,000–R25,000+.',
-    },
-    {
-      question: 'What is Next.js and why is it good for SEO?',
-      answer:
-        'Next.js is a React framework that enables Server-Side Rendering (SSR) and Static Site Generation (SSG). This means faster page loads (sub-2-second), better search engine crawling, and higher Google rankings. Next.js sites typically score 90–100 on Lighthouse compared to 40–70 for WordPress.',
-    },
-    {
-      question: 'How long does it take to build a website?',
-      answer:
-        'Typical website projects take 4–8 weeks from strategy to launch. Complex e-commerce sites may take 8–12 weeks. Nostalgic Studio follows a structured five-phase process: discovery, design, development, testing, and launch.',
-    },
-  ]
-
-  const faqSchema = faqPageSchema(faqs)
-
   return (
     <>
       <Script
         id="schema-website"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
-      />
-      <Script
-        id="schema-faq"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
 
@@ -210,8 +202,15 @@ export default function Home() {
               className="underline"
             >
               web design services in Johannesburg
-            </Link>{' '}
-            and specialize in{' '}
+            </Link>
+            ,{' '}
+            <Link
+              href="/services/seo-services-johannesburg"
+              className="underline"
+            >
+              SEO & AI search services
+            </Link>
+            , and specialize in{' '}
             <Link href="/services/nextjs-website-design" className="underline">
               Next.js web development
             </Link>{' '}

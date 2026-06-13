@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, Users, Share2, BarChart3 } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Users, Share2, BarChart3, Megaphone, Palette, Search } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
@@ -49,50 +50,50 @@ export const metadata: Metadata = {
   },
 }
 
+const smmSchemas = [
+  serviceSchema({
+    id: 'social-media-marketing',
+    name: 'Social Media Marketing Johannesburg',
+    description:
+      'Strategic social media marketing services in Johannesburg, South Africa. Content creation, community management, and influencer partnerships for startups and SMEs.',
+    url: '/services/social-media-marketing',
+    areaServed: 'Johannesburg, South Africa',
+    priceRange: 'R3000-R15000',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Social Media Marketing', url: '/services/social-media-marketing' },
+  ]),
+]
+
+const smmFaqs = [
+  {
+    question: 'Which social media platforms do you manage?',
+    answer: 'We specialize in Instagram, Facebook, LinkedIn, and TikTok, tailoring our approach to each platform to reach your specific target audience in Johannesburg and across South Africa.',
+  },
+  {
+    question: 'How do you measure social media success?',
+    answer: 'We track key metrics such as engagement rates, reach, follower growth, and most importantly, conversions and leads generated for your business. Monthly reports include all KPIs with trend analysis.',
+  },
+  {
+    question: 'Do I need to be on every platform?',
+    answer: 'Not necessarily. We help you identify which platforms your target audience in South Africa uses most and focus our efforts where they will have the biggest impact. Most South African businesses see the best ROI from Instagram and Facebook.',
+  },
+  {
+    question: 'How often will you post?',
+    answer: 'Posting frequency depends on your goals and the specific platform. We typically recommend 3–5 posts per week on Instagram, 2–3 on Facebook, and 2–3 on LinkedIn. We create a customized content calendar that ensures consistent presence.',
+  },
+  {
+    question: 'How much does social media marketing cost in Johannesburg?',
+    answer: 'Social media marketing packages in South Africa typically range from R3,000 to R15,000 per month depending on the number of platforms, posting frequency, and whether content creation or paid advertising management is included.',
+  },
+]
+
 export default function SocialMediaMarketing() {
-  const schemas = [
-    serviceSchema({
-      id: 'social-media-marketing',
-      name: 'Social Media Marketing Johannesburg',
-      description:
-        'Strategic social media marketing services in Johannesburg, South Africa. Content creation, community management, and influencer partnerships for startups and SMEs.',
-      url: '/services/social-media-marketing',
-      areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R3000-R15000',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'Social Media Marketing', url: '/services/social-media-marketing' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'Which social media platforms do you manage?',
-      answer: 'We specialize in Instagram, Facebook, LinkedIn, and TikTok, tailoring our approach to each platform to reach your specific target audience in Johannesburg and across South Africa.',
-    },
-    {
-      question: 'How do you measure social media success?',
-      answer: 'We track key metrics such as engagement rates, reach, follower growth, and most importantly, conversions and leads generated for your business. Monthly reports include all KPIs with trend analysis.',
-    },
-    {
-      question: 'Do I need to be on every platform?',
-      answer: 'Not necessarily. We help you identify which platforms your target audience in South Africa uses most and focus our efforts where they will have the biggest impact. Most South African businesses see the best ROI from Instagram and Facebook.',
-    },
-    {
-      question: 'How often will you post?',
-      answer: 'Posting frequency depends on your goals and the specific platform. We typically recommend 3–5 posts per week on Instagram, 2–3 on Facebook, and 2–3 on LinkedIn. We create a customized content calendar that ensures consistent presence.',
-    },
-    {
-      question: 'How much does social media marketing cost in Johannesburg?',
-      answer: 'Social media marketing packages in South Africa typically range from R3,000 to R15,000 per month depending on the number of platforms, posting frequency, and whether content creation or paid advertising management is included.',
-    },
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {smmSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -186,7 +187,7 @@ export default function SocialMediaMarketing() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="Social Media Marketing FAQ" />
+        <FaqSection faqs={smmFaqs} title="Social Media Marketing FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -203,6 +204,30 @@ export default function SocialMediaMarketing() {
           covers={['Social Media Management', 'Content Creation', 'Community Management', 'Influencer Marketing', 'Platform Strategy']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Combine organic social with search visibility — get found on Google and AI engines.</p>
+            </Link>
+            <Link href="/services/social-media-ads" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Megaphone className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Social Media & Paid Ads</h3>
+              <p className="text-sm text-muted-foreground">Targeted paid campaigns that amplify your organic social strategy.</p>
+            </Link>
+            <Link href="/services/branding-design" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Palette className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Branding Design</h3>
+              <p className="text-sm text-muted-foreground">Build a brand that customers trust and remember across every channel.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Social?</h2>

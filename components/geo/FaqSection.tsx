@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState } from 'react'
+import { useState } from 'react'
+import Script from 'next/script'
 
 export interface FAQ {
   question: string
@@ -16,7 +17,10 @@ interface FaqSectionProps {
  * Reusable FAQ accordion with built-in FAQPage JSON-LD schema injection.
  * Renders accessible <details>/<summary> markup for AEO answer-box eligibility.
  */
-export function FaqSection({ faqs, title = 'Frequently Asked Questions' }: FaqSectionProps) {
+export function FaqSection({
+  faqs,
+  title = 'Frequently Asked Questions',
+}: FaqSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqSchema = {
@@ -34,7 +38,8 @@ export function FaqSection({ faqs, title = 'Frequently Asked Questions' }: FaqSe
 
   return (
     <section className="py-16 px-4 max-w-3xl mx-auto" aria-label={title}>
-      <script
+      <Script
+        id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
@@ -46,7 +51,7 @@ export function FaqSection({ faqs, title = 'Frequently Asked Questions' }: FaqSe
           const isOpen = openIndex === index
           return (
             <div
-              key={index}
+              key={faq.question}
               className="border border-border rounded-lg overflow-hidden"
             >
               <button
@@ -58,7 +63,7 @@ export function FaqSection({ faqs, title = 'Frequently Asked Questions' }: FaqSe
               >
                 <span>{faq.question}</span>
                 <span
-                  className={`text-muted-foreground transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                  className={`text-muted-foreground transition-transform duration-200 shrink-0 ${isOpen ? 'rotate-180' : ''}`}
                   aria-hidden="true"
                 >
                   ▼

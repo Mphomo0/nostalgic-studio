@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, Target, MousePointer2, Rocket } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Target, MousePointer2, Rocket, Globe, Search, Palette } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
@@ -13,9 +14,9 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Ads Johannesburg',
+  title: 'Social Media & Paid Ads Johannesburg',
   description:
-    'Facebook, Instagram & LinkedIn ad campaigns for Johannesburg startups. Drive leads and sales with targeted social media advertising from R3,000/month.',
+    'Social media & paid ads agency in Johannesburg. Facebook, Instagram & LinkedIn campaigns for startups. Drive leads and sales from R3,000/month.',
   keywords: ['Social Media Ads Johannesburg', 'Facebook Ads South Africa', 'Instagram Advertising Johannesburg', 'LinkedIn Ads Agency South Africa', 'Paid Social Media Marketing', 'Meta Ads Johannesburg', 'Social Media Advertising South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
@@ -25,9 +26,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Social Media Ads Johannesburg',
+    title: 'Social Media & Paid Ads Johannesburg | Nostalgic Studio',
     description:
-      'High-ROI Facebook, Instagram & LinkedIn ad campaigns for JHB businesses. From R3,000/month.',
+      'Social media & paid ads agency in Johannesburg. Facebook, Instagram & LinkedIn campaigns for startups. Drive leads and sales from R3,000/month.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-ads',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
       url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
       width: 1200,
       height: 630,
-      alt: 'Social Media Ads Johannesburg — Nostalgic Studio',
+      alt: 'Social Media & Paid Ads Johannesburg — Nostalgic Studio',
     }],
   },
 
@@ -43,56 +44,56 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Social Media Ads Johannesburg',
-    description: 'High-ROI Facebook, Instagram & LinkedIn ad campaigns for JHB businesses. From R3,000/month.',
+    title: 'Social Media & Paid Ads Johannesburg | Nostalgic Studio',
+    description: 'Social media & paid ads agency in Johannesburg. Facebook, Instagram & LinkedIn campaigns for startups. Drive leads and sales from R3,000/month.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
 
+const socialAdsSchemas = [
+  serviceSchema({
+    id: 'social-media-ads',
+    name: 'Social Media Ads Johannesburg',
+    description:
+      'Professional social media advertising services in Johannesburg. Facebook, Instagram and LinkedIn paid campaigns for startups and SMEs across South Africa.',
+    url: '/services/social-media-ads',
+    areaServed: 'Johannesburg, South Africa',
+    priceRange: 'R3000-R20000',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Social Media Ads', url: '/services/social-media-ads' },
+  ]),
+]
+
+const socialAdsFaqs = [
+  {
+    question: 'What budget do I need for social media ads?',
+    answer: 'The minimum recommended ad spend for effective social media advertising in South Africa is R3,000–R5,000 per month per platform. This allows sufficient data collection during the learning phase and enough reach for meaningful results.',
+  },
+  {
+    question: 'How do you track the success of ad campaigns?',
+    answer: 'We use advanced tracking tools, including the Meta Pixel and LinkedIn Insight Tag, to monitor conversions, cost-per-lead, and overall return on ad spend (ROAS). You receive detailed monthly reports with clear ROI breakdowns.',
+  },
+  {
+    question: 'How soon will I see results from ads?',
+    answer: 'Unlike organic SEO, social media ads can drive traffic and leads almost instantly once the campaign is launched. Most campaigns enter the learning phase for 3–7 days, after which performance stabilises and optimisation begins.',
+  },
+  {
+    question: 'Do you handle the ad creative?',
+    answer: 'Yes, we handle everything from ad copywriting to visual design, ensuring your ads are on-brand and optimised for the highest engagement. We also A/B test multiple creative variations to find the best performers.',
+  },
+  {
+    question: 'Which platforms should I advertise on?',
+    answer: 'For B2C businesses in South Africa, Meta (Facebook and Instagram) typically delivers the best ROI. For B2B companies, LinkedIn advertising reaches decision-makers more effectively. We recommend starting with one platform and expanding once profitable.',
+  },
+]
+
 export default function SocialMediaAds() {
-  const schemas = [
-    serviceSchema({
-      id: 'social-media-ads',
-      name: 'Social Media Ads Johannesburg',
-      description:
-        'Professional social media advertising services in Johannesburg. Facebook, Instagram and LinkedIn paid campaigns for startups and SMEs across South Africa.',
-      url: '/services/social-media-ads',
-      areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R3000-R20000',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'Social Media Ads', url: '/services/social-media-ads' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'What budget do I need for social media ads?',
-      answer: 'The minimum recommended ad spend for effective social media advertising in South Africa is R3,000–R5,000 per month per platform. This allows sufficient data collection during the learning phase and enough reach for meaningful results.',
-    },
-    {
-      question: 'How do you track the success of ad campaigns?',
-      answer: 'We use advanced tracking tools, including the Meta Pixel and LinkedIn Insight Tag, to monitor conversions, cost-per-lead, and overall return on ad spend (ROAS). You receive detailed monthly reports with clear ROI breakdowns.',
-    },
-    {
-      question: 'How soon will I see results from ads?',
-      answer: 'Unlike organic SEO, social media ads can drive traffic and leads almost instantly once the campaign is launched. Most campaigns enter the learning phase for 3–7 days, after which performance stabilises and optimisation begins.',
-    },
-    {
-      question: 'Do you handle the ad creative?',
-      answer: 'Yes, we handle everything from ad copywriting to visual design, ensuring your ads are on-brand and optimised for the highest engagement. We also A/B test multiple creative variations to find the best performers.',
-    },
-    {
-      question: 'Which platforms should I advertise on?',
-      answer: 'For B2C businesses in South Africa, Meta (Facebook and Instagram) typically delivers the best ROI. For B2B companies, LinkedIn advertising reaches decision-makers more effectively. We recommend starting with one platform and expanding once profitable.',
-    },
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {socialAdsSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -197,7 +198,7 @@ export default function SocialMediaAds() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="Social Media Ads FAQ" />
+        <FaqSection faqs={socialAdsFaqs} title="Social Media Ads FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -214,6 +215,30 @@ export default function SocialMediaAds() {
           covers={['Facebook Ads', 'Instagram Advertising', 'LinkedIn Ads', 'Audience Targeting', 'Conversion Tracking']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Globe className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
+              <p className="text-sm text-muted-foreground">SEO-optimised websites built with Next.js for maximum performance.</p>
+            </Link>
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Classic SEO meets AI search optimisation — get found everywhere customers search.</p>
+            </Link>
+            <Link href="/services/branding-design" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Palette className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Branding Design</h3>
+              <p className="text-sm text-muted-foreground">Build a brand that customers trust and remember across every channel.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Ads?</h2>

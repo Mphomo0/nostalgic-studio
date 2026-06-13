@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import AuthorBio from '@/components/geo/AuthorBio'
-import { ArrowRight, CheckCircle2, Zap, Layout, Shield } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Zap, Layout, Shield, Globe, Search } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
@@ -43,46 +44,46 @@ export const metadata: Metadata = {
   },
 }
 
+const nextjsSchemas = [
+  serviceSchema({
+    id: 'nextjs-website-design',
+    name: 'Next.js Website Design South Africa',
+    description: 'Expert Next.js website design and development in Johannesburg, South Africa. Server-side rendering, static site generation, and 90-100 Lighthouse scores.',
+    url: '/services/nextjs-website-design',
+    areaServed: 'South Africa',
+    priceRange: 'R8000-R50000',
+    deliveryTime: '4-8 weeks',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Next.js Website Design', url: '/services/nextjs-website-design' },
+  ]),
+]
+
+const nextjsFaqs = [
+  {
+    question: 'Why should I choose Next.js for my website?',
+    answer: 'Next.js offers unparalleled speed, excellent SEO capabilities, and a great developer experience, making it the ideal choice for modern, scalable websites and applications.'
+  },
+  {
+    question: 'Is Next.js good for small businesses in South Africa?',
+    answer: 'Absolutely. Next.js provides a competitive edge by ensuring your website loads instantly even on slower mobile connections, which is crucial for the South African market.'
+  },
+  {
+    question: 'How is Next.js different from WordPress?',
+    answer: 'Next.js provides a much faster and more secure environment than WordPress. It allows for custom-built features and better SEO, as it does not rely on heavy plugins.'
+  },
+  {
+    question: 'Can you migrate my current site to Next.js?',
+    answer: 'Yes, we specialize in migrating legacy websites to modern Next.js architectures, improving performance and user experience in the process.'
+  }
+]
+
 export default function NextjsWebsiteDesign() {
-  const schemas = [
-    serviceSchema({
-      id: 'nextjs-website-design',
-      name: 'Next.js Website Design South Africa',
-      description: 'Expert Next.js website design and development in Johannesburg, South Africa. Server-side rendering, static site generation, and 90-100 Lighthouse scores.',
-      url: '/services/nextjs-website-design',
-      areaServed: 'South Africa',
-      priceRange: 'R8000-R50000',
-      deliveryTime: '4-8 weeks',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'Next.js Website Design', url: '/services/nextjs-website-design' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'Why should I choose Next.js for my website?',
-      answer: 'Next.js offers unparalleled speed, excellent SEO capabilities, and a great developer experience, making it the ideal choice for modern, scalable websites and applications.'
-    },
-    {
-      question: 'Is Next.js good for small businesses in South Africa?',
-      answer: 'Absolutely. Next.js provides a competitive edge by ensuring your website loads instantly even on slower mobile connections, which is crucial for the South African market.'
-    },
-    {
-      question: 'How is Next.js different from WordPress?',
-      answer: 'Next.js provides a much faster and more secure environment than WordPress. It allows for custom-built features and better SEO, as it does not rely on heavy plugins.'
-    },
-    {
-      question: 'Can you migrate my current site to Next.js?',
-      answer: 'Yes, we specialize in migrating legacy websites to modern Next.js architectures, improving performance and user experience in the process.'
-    }
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {nextjsSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -179,7 +180,7 @@ export default function NextjsWebsiteDesign() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="Next.js Development FAQ" />
+        <FaqSection faqs={nextjsFaqs} title="Next.js Development FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -196,6 +197,30 @@ export default function NextjsWebsiteDesign() {
           covers={['Next.js Development', 'Server-Side Rendering', 'Static Site Generation', 'Performance Optimization', 'Legacy Migration']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Classic SEO meets AI search — get found everywhere customers search.</p>
+            </Link>
+            <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Globe className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
+              <p className="text-sm text-muted-foreground">SEO-optimised, AI-friendly websites built with Next.js for maximum performance.</p>
+            </Link>
+            <Link href="/services/ux-ui-design" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Layout className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">UX/UI Design</h3>
+              <p className="text-sm text-muted-foreground">User-centred design that turns visitors into loyal customers.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Experience the Next.js Advantage</h2>

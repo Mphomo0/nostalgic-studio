@@ -51,61 +51,59 @@ export const metadata: Metadata = {
   },
 }
 
+const contactFaqs = [
+  {
+    question: 'How much does a website cost in South Africa?',
+    answer: 'Our web design projects start from R3,500 for simple brochure sites and range to R35,000+ for custom e-commerce platforms. During your free consultation, we provide a fixed quote based on your specific requirements. There are no hourly rates — you get a clear, upfront price.'
+  },
+  {
+    question: 'How long does it take to build a website?',
+    answer: 'Most projects are completed within 4–8 weeks from the date of approval. Simple brochure websites can be delivered in as little as 2 weeks. E-commerce platforms and complex custom builds typically take 6–10 weeks. We always agree on a timeline before starting.'
+  },
+  {
+    question: 'Do you work with clients outside Johannesburg?',
+    answer: 'Yes. While we are based in Johannesburg, Gauteng, we work with clients across South Africa including Cape Town, Durban, and Pretoria. All project communication happens via video call and email, so location is never a barrier to working together.'
+  },
+  {
+    question: 'What information do I need to provide to get started?',
+    answer: 'To get a quote, we just need the basics: your business type, what the website needs to do (e.g. generate leads, sell products, showcase services), your target audience, and an approximate budget range. We handle everything else from there.'
+  },
+  {
+    question: 'Do you offer SEO services in Johannesburg?',
+    answer: 'Yes, we offer comprehensive SEO services including technical SEO, local SEO, content strategy, and GEO (Generative Engine Optimization) for businesses in Johannesburg and across South Africa.'
+  },
+  {
+    question: 'How quickly do you respond to enquiries?',
+    answer: 'We respond to all enquiries within 24 hours, usually much sooner. For urgent projects, we recommend calling us directly at 082 448 3273 for an immediate response.'
+  },
+]
+
+const contactSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': 'https://www.nostalgic-studio.co.za/contact',
+    url: 'https://www.nostalgic-studio.co.za/contact',
+    name: 'Get a Free Quote | Web Design & SEO Agency Johannesburg',
+    description: 'Free consultation for web design, SEO & branding in Johannesburg. Fast 24h response. Start from R3,500.',
+    isPartOf: { '@id': 'https://www.nostalgic-studio.co.za/#website' },
+    publisher: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
+  },
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Contact', url: '/contact' },
+  ]),
+  faqPageSchema(contactFaqs),
+]
+
 export default function ContactPage() {
-  const contactFaqs = [
-    {
-      question: 'How much does a website cost in South Africa?',
-      answer: 'Our web design projects start from R3,500 for simple brochure sites and range to R35,000+ for custom e-commerce platforms. During your free consultation, we provide a fixed quote based on your specific requirements. There are no hourly rates — you get a clear, upfront price.'
-    },
-    {
-      question: 'How long does it take to build a website?',
-      answer: 'Most projects are completed within 4–8 weeks from the date of approval. Simple brochure websites can be delivered in as little as 2 weeks. E-commerce platforms and complex custom builds typically take 6–10 weeks. We always agree on a timeline before starting.'
-    },
-    {
-      question: 'Do you work with clients outside Johannesburg?',
-      answer: 'Yes. While we are based in Johannesburg, Gauteng, we work with clients across South Africa including Cape Town, Durban, and Pretoria. All project communication happens via video call and email, so location is never a barrier to working together.'
-    },
-    {
-      question: 'What information do I need to provide to get started?',
-      answer: 'To get a quote, we just need the basics: your business type, what the website needs to do (e.g. generate leads, sell products, showcase services), your target audience, and an approximate budget range. We handle everything else from there.'
-    },
-    {
-      question: 'Do you offer SEO services in Johannesburg?',
-      answer: 'Yes, we offer comprehensive SEO services including technical SEO, local SEO, content strategy, and GEO (Generative Engine Optimization) for businesses in Johannesburg and across South Africa.'
-    },
-    {
-      question: 'How quickly do you respond to enquiries?',
-      answer: 'We respond to all enquiries within 24 hours, usually much sooner. For urgent projects, we recommend calling us directly at 082 448 3273 for an immediate response.'
-    },
-  ]
-
-  const schemas = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      '@id': 'https://www.nostalgic-studio.co.za/contact',
-      url: 'https://www.nostalgic-studio.co.za/contact',
-      name: 'Get a Free Quote | Web Design & SEO Agency Johannesburg',
-      description: 'Free consultation for web design, SEO & branding in Johannesburg. Fast 24h response. Start from R3,500.',
-      isPartOf: { '@id': 'https://www.nostalgic-studio.co.za/#website' },
-      publisher: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
-    },
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Contact', url: '/contact' },
-    ]),
-    faqPageSchema(contactFaqs),
-  ]
-
   return (
     <div className="min-h-screen bg-background">
       <main className="pt-24 pb-12 md:pt-32 md:pb-20 container mx-auto px-4 md:px-8">
-        <>
-          {schemas.map((s, i) => (
-            <Script key={i} id={`schema-contact-${i}`} type="application/ld+json"
-              dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
-          ))}
-        </>
+        {contactSchemas.map((s, i) => (
+          <Script key={i} id={`schema-contact-${i}`} type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+        ))}
 
         <header className="text-center mb-10 md:mb-16">
           <span className="text-primary font-medium text-sm uppercase tracking-tighter mb-4 block">
@@ -281,7 +279,7 @@ export default function ContactPage() {
             <a href="tel:+27824483273">Call 082 448 3273</a>
           </Button>
           <div className="mt-6 text-sm text-muted-foreground">
-            <Link href="/services/seo-services-johannesburg" className="underline hover:text-primary transition-colors">SEO Services Johannesburg</Link>
+            <Link href="/services/seo-services-johannesburg" className="underline hover:text-primary transition-colors">SEO & AI Search Visibility</Link>
             <span className="mx-2">|</span>
             <Link href="/services/web-design-johannesburg" className="underline hover:text-primary transition-colors">Web Design Johannesburg</Link>
             <span className="mx-2">|</span>

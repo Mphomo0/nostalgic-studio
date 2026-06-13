@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
-import { ArrowRight, CheckCircle2, Wrench, Shield, RefreshCw } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Wrench, Shield, RefreshCw, Globe, Search, Server } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import MotionWrapper from '@/components/layout/MotionWrapper'
+import lazyLoad from 'next/dynamic'
+const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
@@ -43,49 +44,49 @@ export const metadata: Metadata = {
   },
 }
 
+const maintenanceSchemas = [
+  serviceSchema({
+    id: 'web-maintenance',
+    name: 'Web Maintenance South Africa',
+    description: 'Proactive website maintenance and support in Johannesburg. Security monitoring, Next.js updates, performance optimisation, and daily backups.',
+    url: '/services/web-maintenance',
+    areaServed: 'South Africa',
+    priceRange: 'R500-R3000',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'Web Maintenance', url: '/services/web-maintenance' },
+  ]),
+]
+
+const maintenanceFaqs = [
+  {
+    question: 'Why do I need a web maintenance plan?',
+    answer: 'Regular maintenance ensures your website remains secure, fast, and up-to-date with the latest technology. Outdated websites are the number one target for hackers, and slow sites lose Google rankings. A maintenance plan prevents these issues before they affect your business.',
+  },
+  {
+    question: 'What is included in your maintenance services?',
+    answer: 'Our services include regular security scans, software updates, performance optimization, monthly backups, and dedicated time for content updates or small design changes. Higher-tier plans include SEO auditing and Core Web Vitals monitoring.',
+  },
+  {
+    question: 'What happens if my site goes down?',
+    answer: 'With our 24/7 monitoring, we are often aware of issues before you are. Our team will work immediately to restore your site as quickly as possible. Critical downtime issues are escalated to senior developers within 30 minutes.',
+  },
+  {
+    question: 'Can I cancel my plan at any time?',
+    answer: 'Yes, our maintenance plans are flexible. You can upgrade, downgrade, or cancel your subscription with one month\'s notice. There are no long-term contracts or cancellation fees.',
+  },
+  {
+    question: 'How much does website maintenance cost in South Africa?',
+    answer: 'Website maintenance in South Africa typically costs R500–R3,000 per month depending on the complexity of your site and the level of support required. Nostalgic Studio offers three tiers: Starter (R500/month), Professional (R1,500/month), and Enterprise (R3,000/month).',
+  },
+]
+
 export default function WebMaintenance() {
-  const schemas = [
-    serviceSchema({
-      id: 'web-maintenance',
-      name: 'Web Maintenance South Africa',
-      description: 'Proactive website maintenance and support in Johannesburg. Security monitoring, Next.js updates, performance optimisation, and daily backups.',
-      url: '/services/web-maintenance',
-      areaServed: 'South Africa',
-      priceRange: 'R500-R3000',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'Web Maintenance', url: '/services/web-maintenance' },
-    ]),
-  ]
-
-  const faqs = [
-    {
-      question: 'Why do I need a web maintenance plan?',
-      answer: 'Regular maintenance ensures your website remains secure, fast, and up-to-date with the latest technology. Outdated websites are the number one target for hackers, and slow sites lose Google rankings. A maintenance plan prevents these issues before they affect your business.',
-    },
-    {
-      question: 'What is included in your maintenance services?',
-      answer: 'Our services include regular security scans, software updates, performance optimization, monthly backups, and dedicated time for content updates or small design changes. Higher-tier plans include SEO auditing and Core Web Vitals monitoring.',
-    },
-    {
-      question: 'What happens if my site goes down?',
-      answer: 'With our 24/7 monitoring, we are often aware of issues before you are. Our team will work immediately to restore your site as quickly as possible. Critical downtime issues are escalated to senior developers within 30 minutes.',
-    },
-    {
-      question: 'Can I cancel my plan at any time?',
-      answer: 'Yes, our maintenance plans are flexible. You can upgrade, downgrade, or cancel your subscription with one month\'s notice. There are no long-term contracts or cancellation fees.',
-    },
-    {
-      question: 'How much does website maintenance cost in South Africa?',
-      answer: 'Website maintenance in South Africa typically costs R500–R3,000 per month depending on the complexity of your site and the level of support required. Nostalgic Studio offers three tiers: Starter (R500/month), Professional (R1,500/month), and Enterprise (R3,000/month).',
-    },
-  ]
-
   return (
     <main className="pt-32 pb-20">
-      {schemas.map((s, i) => (
+      {maintenanceSchemas.map((s, i) => (
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
@@ -190,7 +191,7 @@ export default function WebMaintenance() {
           </div>
         </div>
 
-        <FaqSection faqs={faqs} title="Web Maintenance FAQ" />
+        <FaqSection faqs={maintenanceFaqs} title="Web Maintenance FAQ" />
 
         <KeyTakeaways
           takeaways={[
@@ -207,6 +208,30 @@ export default function WebMaintenance() {
           covers={['Web Maintenance Johannesburg', 'Security Monitoring', 'Software Updates', 'Performance Optimization', 'Website Support']}
           lastUpdated="March 2026"
         />
+
+        {/* Internal Links */}
+        <section className="mb-16" aria-labelledby="related-heading">
+          <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">
+            Related Services
+          </h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link href="/services/seo-services-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Search className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">SEO & AI Search Visibility</h3>
+              <p className="text-sm text-muted-foreground">Maintenance keeps your site healthy — SEO ensures it gets found. Get both.</p>
+            </Link>
+            <Link href="/services/web-hosting" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Server className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Hosting</h3>
+              <p className="text-sm text-muted-foreground">Fast, secure, scalable hosting optimised for Next.js applications.</p>
+            </Link>
+            <Link href="/services/web-design-johannesburg" className="bg-card p-6 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <Globe className="w-6 h-6 text-primary mb-3" />
+              <h3 className="font-bold mb-1">Web Design Johannesburg</h3>
+              <p className="text-sm text-muted-foreground">SEO-optimised, AI-friendly websites built with Next.js for maximum performance.</p>
+            </Link>
+          </div>
+        </section>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Secure Your Website's Future</h2>
