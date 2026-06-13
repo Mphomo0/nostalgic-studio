@@ -1,29 +1,8 @@
 'use client'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import MotionWrapper from '@/components/layout/MotionWrapper'
-
-const team = [
-  {
-    name: 'Alex Rivera',
-    role: 'Founder & Creative Director',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400',
-  },
-  {
-    name: 'Jordan Lee',
-    role: 'Lead Designer',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400',
-  },
-  {
-    name: 'Sam Chen',
-    role: 'UX Strategist',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400',
-  },
-  {
-    name: 'Taylor Kim',
-    role: 'Brand Designer',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400',
-  },
-]
 
 export default function AboutTeam() {
   return (
@@ -32,29 +11,63 @@ export default function AboutTeam() {
         <div className="text-center mb-16">
           <MotionWrapper>
             <span className="text-primary text-sm uppercase block mb-4">
-              Our Team
+              Meet the Founder
             </span>
-            <h2 className="text-4xl font-bold">Meet the Creatives</h2>
+            <h2 className="text-4xl font-bold">The Person Behind the Studio</h2>
           </MotionWrapper>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {team.map((member, i) => (
-            <MotionWrapper key={member.name} delay={i * 0.1}>
-              <div className="group">
-                <div className="aspect-square rounded-2xl overflow-hidden mb-4">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition"
-                  />
-                </div>
-                <h3 className="font-semibold">{member.name}</h3>
-                <p className="text-sm text-muted-foreground">{member.role}</p>
+        <MotionWrapper>
+          <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-start gap-8">
+            <div className="shrink-0">
+              <Image
+                src="/images/team/mpho-moipolai.webp"
+                alt="Mpho Moipolai — Founder and Creative Director of Nostalgic Studio"
+                width={240}
+                height={240}
+                className="rounded-2xl object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-1">Mpho Moipolai</h3>
+              <p className="text-primary text-sm font-medium mb-3">
+                Founder &amp; Creative Director
+              </p>
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground mb-4">
+                <span>13+ years experience</span>
+                <span>·</span>
+                <span>70+ projects delivered</span>
+                <span>·</span>
+                <span>Next.js specialist</span>
               </div>
-            </MotionWrapper>
-          ))}
-        </div>
+              <p className="text-muted-foreground leading-relaxed mb-5">
+                Mpho founded Nostalgic Studio in 2016 with one mission: give South African
+                startups access to the same quality of digital work that large corporates take
+                for granted. He specialises in Next.js, React, UI/UX design, and brand
+                identity — and has delivered 70+ websites and brand systems for businesses
+                across Johannesburg, Gauteng, and beyond.
+              </p>
+              <div className="flex gap-4">
+                <Link
+                  href="https://www.linkedin.com/private/moipolai-mpho-110356396/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-primary hover:underline"
+                >
+                  LinkedIn ↗
+                </Link>
+                <Link
+                  href="https://www.instagram.com/studionostalgic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-primary hover:underline"
+                >
+                  Instagram ↗
+                </Link>
+              </div>
+            </div>
+          </div>
+        </MotionWrapper>
       </div>
     </section>
   )
