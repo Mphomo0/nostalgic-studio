@@ -144,10 +144,10 @@ export default function ContactPage() {
         </div>
 
         {/* Service Areas & Business Info - Server rendered for SEO */}
-        <section className="mt-20 border-t border-border pt-16" aria-labelledby="info-heading">
-          <div className="grid md:grid-cols-2 gap-12">
+        <section className="mt-20 border-t border-border pt-16 text-center" aria-labelledby="info-heading">
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto text-left">
             <div>
-              <h2 id="info-heading" className="text-2xl font-bold mb-6">Our Service Areas</h2>
+              <h2 id="info-heading" className="text-2xl font-bold mb-6 text-center md:text-left">Our Service Areas</h2>
               <p className="text-muted-foreground mb-6">
                 Based in Johannesburg, we serve clients across South Africa. Our team works remotely with clients
                 throughout Gauteng and beyond via video calls, email, and project management tools.
@@ -166,7 +166,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-2xl font-bold mb-6">Business Information</h2>
+              <h2 className="text-2xl font-bold mb-6 text-center md:text-left">Business Information</h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Clock className="w-5 h-5 text-primary mt-0.5" />
