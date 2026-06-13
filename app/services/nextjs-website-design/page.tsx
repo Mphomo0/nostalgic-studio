@@ -85,12 +85,6 @@ export default function NextjsWebsiteDesign() {
         <Script key={i} id={`schema-${i}`} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
-      <Script id="faq-schema" type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org', '@type': 'FAQPage',
-          mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
-        }) }} />
-      
       <div className="container-wide mx-auto px-4">
         <MotionWrapper>
           <div className="max-w-4xl mx-auto text-center mb-16">
