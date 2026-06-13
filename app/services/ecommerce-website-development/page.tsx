@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Ecommerce Development South Africa — Nostalgic Studio' }],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Ecommerce Dev South Africa',
+    description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R25,000.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function EcommerceWebsiteDevelopment() {

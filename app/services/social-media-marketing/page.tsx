@@ -37,6 +37,15 @@ export const metadata: Metadata = {
       alt: 'Social Media Marketing Johannesburg — Nostalgic Studio',
     }],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Social Media Marketing JHB',
+    description: 'Strategic social media marketing for SA startups. Instagram, Facebook & LinkedIn. From R3,000/month.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function SocialMediaMarketing() {

@@ -112,7 +112,40 @@ const SCHEMA_PERSON = {
   url: 'https://www.nostalgic-studio.co.za/about',
   jobTitle: 'Founder & Lead Developer',
   worksFor: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
-  sameAs: ['https://www.linkedin.com/private/moipolai-mpho-110356396/'],
+  sameAs: [
+    'https://www.linkedin.com/private/moipolai-mpho-110356396/',
+    'https://www.instagram.com/studionostalgic',
+  ],
+  knowsAbout: [
+    'Web Design',
+    'UI/UX Design',
+    'Brand Identity',
+    'Next.js Development',
+    'SEO',
+    'Digital Strategy',
+  ],
+}
+
+const SCHEMA_WEBSITE = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://www.nostalgic-studio.co.za/#website',
+  inLanguage: 'en-ZA',
+  name: 'Nostalgic Studio',
+  url: 'https://www.nostalgic-studio.co.za',
+  description:
+    'Top-rated web design agency in Johannesburg offering Next.js development, UI/UX, and branding services.',
+  publisher: {
+    '@id': 'https://www.nostalgic-studio.co.za/#organization',
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://www.nostalgic-studio.co.za/search?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
 }
 
 const SCHEMA_ORGANIZATION = {
@@ -240,8 +273,9 @@ export default function RootLayout({
         />
 
         {/* Site-wide Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PERSON) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_WEBSITE) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_ORGANIZATION) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PERSON) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BUSINESS) }} />
 
         {/* Google Analytics */}

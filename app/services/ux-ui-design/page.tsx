@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'UX/UI Design Johannesburg — Nostalgic Studio' }],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'UX/UI Design Johannesburg',
+    description: 'Research-driven UX/UI for Johannesburg startups. Figma, user research, mobile-first design.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function UXUIDesign() {

@@ -38,6 +38,15 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Agency Johannesburg — Nostalgic Studio' }],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'About Nostalgic Studio | Johannesburg Web Design Agency',
+    description: 'Founded in 2016 by Mpho Moipolai, Nostalgic Studio builds fast Next.js websites and brand identities for startups across South Africa.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 import { webPageSchema, orgRef, breadcrumbSchema } from '@/app/structured-data/schemas'

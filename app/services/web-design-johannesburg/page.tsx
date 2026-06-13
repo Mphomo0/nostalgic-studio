@@ -47,6 +47,16 @@ export const metadata: Metadata = {
       alt: 'Web Design Johannesburg — Nostalgic Studio',
     }],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Web Design Johannesburg | Custom Next.js Websites | Nostalgic Studio',
+    description:
+      'Custom Next.js websites for Johannesburg startups. SEO-optimized, fast, conversion-focused. From R3,500.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function WebDesignJohannesburg() {

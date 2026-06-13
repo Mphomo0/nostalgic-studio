@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export const revalidate = 86400 // regenerate sitemap at most once per day
 
 const BASE_URL = 'https://www.nostalgic-studio.co.za'
-const STABLE_DATE = new Date('2026-05-25')
+const STABLE_DATE = new Date('2026-06-13')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = STABLE_DATE
@@ -19,12 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${BASE_URL}/about`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/services`,
       lastModified: now,
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
@@ -36,14 +36,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/contact`,
       lastModified: now,
-      changeFrequency: 'yearly',
-      priority: 0.6,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/blog`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${BASE_URL}/terms-conditions`,
@@ -60,21 +60,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const servicePages: MetadataRoute.Sitemap = [
-    'web-design-johannesburg',
-    'nextjs-website-design',
-    'ecommerce-website-development',
-    'branding-design',
-    'ux-ui-design',
-    'seo-services-johannesburg',
-    'social-media-marketing',
-    'social-media-ads',
-    'web-hosting',
-    'web-maintenance',
-  ].map((slug) => ({
+    { slug: 'web-design-johannesburg', priority: 0.9 },
+    { slug: 'nextjs-website-design', priority: 0.9 },
+    { slug: 'ecommerce-website-development', priority: 0.9 },
+    { slug: 'branding-design', priority: 0.9 },
+    { slug: 'ux-ui-design', priority: 0.8 },
+    { slug: 'seo-services-johannesburg', priority: 0.9 },
+    { slug: 'social-media-marketing', priority: 0.8 },
+    { slug: 'social-media-ads', priority: 0.8 },
+    { slug: 'web-hosting', priority: 0.7 },
+    { slug: 'web-maintenance', priority: 0.7 },
+  ].map(({ slug, priority }) => ({
     url: `${BASE_URL}/services/${slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
-    priority: 0.9,
+    priority,
   }))
 
   const projectPages: MetadataRoute.Sitemap = [

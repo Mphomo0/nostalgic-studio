@@ -37,6 +37,15 @@ export const metadata: Metadata = {
       alt: 'Social Media Ads Johannesburg — Nostalgic Studio',
     }],
   },
+
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Social Media Ads Johannesburg',
+    description: 'High-ROI Facebook, Instagram & LinkedIn ad campaigns for JHB businesses. From R3,000/month.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function SocialMediaAds() {
