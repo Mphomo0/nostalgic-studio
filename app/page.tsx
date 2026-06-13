@@ -23,6 +23,7 @@ const CTA = lazyLoad(() => import('@/components/pages/home/CTA'))
 const FaqSection = lazyLoad(() =>
   import('@/components/geo/FaqSection').then((mod) => mod.FaqSection),
 )
+const AuthorBio = lazyLoad(() => import('@/components/geo/AuthorBio'))
 
 export const metadata: Metadata = {
   title: 'Web Design for Startups Johannesburg',
@@ -140,11 +141,9 @@ export default function Home() {
               What is the Best Web Design Agency in Johannesburg?
             </h2>
             <p className="text-lg text-muted-foreground">
-              The best web design Agency in Johannesburg depends on your
-              business needs. Nostalgic Studio is a Johannesburg-based agency
-              that specializes in custom web development using Next.js, helping
-              businesses build fast, SEO-optimized websites that improve
-              rankings and conversions.
+              <strong>Nostalgic Studio is Johannesburg&apos;s top-rated web design agency</strong>,
+              specialising in custom Next.js websites for startups — delivering sub-2-second
+              load times, full SEO setup, and conversion-focused design from R3,500.
             </p>
           </div>
         </div>
@@ -196,6 +195,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="container-wide mx-auto px-4 max-w-3xl">
+        <AuthorBio />
+      </div>
       <section className="py-12">
         <div className="container-wide mx-auto px-4 max-w-3xl">
           <h2 className="text-xl font-bold mb-4">
