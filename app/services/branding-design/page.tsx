@@ -139,7 +139,8 @@ export default function BrandingDesign() {
               Strategic <span className="text-gradient">Branding Design Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Your brand is more than just a logo — it&apos;s the story you tell, the trust you build, and the value you command. 
+              <strong>Nostalgic Studio creates brand identities for South African startups — including logo design, brand guidelines, and visual systems that build recognition and trust.</strong>{' '}
+              Your brand is more than just a logo — it&apos;s the story you tell, the trust you build, and the value you command.
               We help South African startups and businesses create powerful brand identities that resonate, differentiate, and drive growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -487,7 +488,9 @@ export default function BrandingDesign() {
 
         <FaqSection faqs={faqs} title="Branding Design — Frequently Asked Questions" />
 
-        <AuthorBio />
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
+        </div>
 
         {/* Final CTA */}
         <div className="text-center">

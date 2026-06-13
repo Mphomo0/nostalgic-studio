@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, Target, MousePointer2, Rocket } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
@@ -103,7 +104,8 @@ export default function SocialMediaAds() {
               Targeted <span className="text-gradient">Social Media Ads Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Stop wasting money on ads that don't convert. We create highly-targeted social media advertising 
+              <strong>Nostalgic Studio runs paid social media ad campaigns for South African businesses — targeting the right audience on Facebook and Instagram to generate measurable leads and sales.</strong>{' '}
+              Stop wasting money on ads that don't convert. We create highly-targeted social media advertising
               campaigns that reach your ideal customers and drive measurable growth for your South African startup.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -221,6 +223,10 @@ export default function SocialMediaAds() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Book an Ad Strategy Session</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

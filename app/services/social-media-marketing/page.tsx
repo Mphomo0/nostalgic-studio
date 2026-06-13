@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, Users, Share2, BarChart3 } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
@@ -103,7 +104,8 @@ export default function SocialMediaMarketing() {
               Effective <span className="text-gradient">Social Media Marketing Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Build a brand people love to follow. Our social media marketing strategies are designed to 
+              <strong>Nostalgic Studio manages social media marketing for South African businesses — building audience, engagement, and leads across Facebook, Instagram, and LinkedIn.</strong>{' '}
+              Build a brand people love to follow. Our social media marketing strategies are designed to
               engage your audience, build trust, and drive meaningful growth for your South African business.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -210,6 +212,10 @@ export default function SocialMediaMarketing() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Start Your Social Strategy</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

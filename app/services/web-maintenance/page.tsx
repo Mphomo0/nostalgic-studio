@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, Wrench, Shield, RefreshCw } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
@@ -96,7 +97,8 @@ export default function WebMaintenance() {
               Reliable <span className="text-gradient">Web Maintenance Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Focus on your business while we handle your website. Our proactive maintenance plans 
+              <strong>Nostalgic Studio offers website maintenance plans for South African businesses — keeping your site secure, updated, and performing with monthly reports from R500/month.</strong>{' '}
+              Focus on your business while we handle your website. Our proactive maintenance plans
               ensure your South African startup's online presence is always secure, fast, and functional.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -214,6 +216,10 @@ export default function WebMaintenance() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Choose a Maintenance Plan</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

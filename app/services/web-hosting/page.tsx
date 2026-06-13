@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, Server, ShieldCheck, Zap } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
@@ -96,7 +97,8 @@ export default function WebHosting() {
               Blazing-Fast <span className="text-gradient">Web Hosting Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Don't let a slow host hold your business back. Our hosting solutions are optimized for 
+              <strong>Nostalgic Studio provides managed web hosting for South African businesses — including SSL certificates, daily backups, uptime monitoring, and local servers from R200/month.</strong>{' '}
+              Don't let a slow host hold your business back. Our hosting solutions are optimized for
               Next.js and high-performance applications, ensuring your site stays fast, secure, and always online.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -213,6 +215,10 @@ export default function WebHosting() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Switch Your Hosting Today</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, LayoutTemplate, MousePointerClick, Smartphone } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
@@ -93,7 +94,8 @@ export default function UXUIDesign() {
               Intuitive <span className="text-gradient">UX/UI Design Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Design that works for your users. We create beautiful, functional interfaces that 
+              <strong>Nostalgic Studio delivers UX/UI design for web and mobile apps — combining user research, wireframes, and high-fidelity prototypes to improve conversion and usability.</strong>{' '}
+              Design that works for your users. We create beautiful, functional interfaces that
               improve usability and drive conversions for your South African digital products.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -213,6 +215,10 @@ export default function UXUIDesign() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Start Your Design Project</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

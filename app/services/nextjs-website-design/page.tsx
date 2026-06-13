@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import AuthorBio from '@/components/geo/AuthorBio'
 import { ArrowRight, CheckCircle2, Zap, Layout, Shield } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -92,7 +93,8 @@ export default function NextjsWebsiteDesign() {
               Modern <span className="text-gradient">Next.js Website Design</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Build the future of your business with Next.js development. We create ultra-fast, 
+              <strong>Nostalgic Studio builds Next.js websites for South African businesses — delivering 90–100 Lighthouse scores, server-side rendering, and sub-1.5-second load times from R8,500.</strong>{' '}
+              Build the future of your business with Next.js development. We create ultra-fast,
               SEO-optimized digital experiences that give your South African startup a competitive advantage.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -203,6 +205,10 @@ export default function NextjsWebsiteDesign() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Let's Talk Tech</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

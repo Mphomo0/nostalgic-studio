@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, Star } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
@@ -120,7 +121,8 @@ export default function WebDesignJohannesburg() {
               Professional <span className="text-gradient">Web Design Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Elevate your business with high-performance, SEO-optimized websites designed to convert. 
+              <strong>Nostalgic Studio builds custom websites for Johannesburg businesses using Next.js — delivering sub-2-second load times, full SEO setup, and mobile-first design from R3,500.</strong>{' '}
+              Elevate your business with high-performance, SEO-optimized websites designed to convert.
               As a leading digital agency in Johannesburg, we specialize in Next.js development and user-centric UI/UX.
             </p>
           </div>
@@ -337,6 +339,10 @@ export default function WebDesignJohannesburg() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/services">Explore All Services</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>

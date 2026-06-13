@@ -179,6 +179,7 @@ export default function SEOServicesJohannesburg() {
               Expert <span className="text-gradient">SEO Services Johannesburg</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
+              <strong>Nostalgic Studio provides technical and content SEO services in Johannesburg — including keyword research, on-page optimisation, and monthly ranking reports from R1,500/month.</strong>{' '}
               Rank higher on Google, drive more organic traffic, and grow your business with South Africa&apos;s leading SEO agency. We combine technical SEO expertise with local market intelligence to deliver measurable results for Johannesburg businesses.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -572,7 +573,9 @@ export default function SEOServicesJohannesburg() {
         <FaqSection faqs={faqs} title="SEO Services — Frequently Asked Questions" />
 
         {/* Author Bio - EEAT */}
-        <AuthorBio />
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
+        </div>
 
         {/* Internal Links */}
         <section className="mb-16" aria-labelledby="related-heading">

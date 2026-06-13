@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const dynamic = 'force-static'
 import { ArrowRight, CheckCircle2, ShoppingCart, CreditCard, Box } from 'lucide-react'
+import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { FaqSection } from '@/components/geo/FaqSection'
@@ -96,7 +97,8 @@ export default function EcommerceWebsiteDevelopment() {
               Scalable <span className="text-gradient">Ecommerce Website Development</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Turn your visitors into customers with a high-performance online store. 
+              <strong>Nostalgic Studio builds custom e-commerce websites for South African businesses — including PayFast/Yoco/Ozow integration, mobile checkout, and SEO product pages from R10,000.</strong>{' '}
+              Turn your visitors into customers with a high-performance online store.
               Our Next.js ecommerce solutions are designed for speed, security, and maximum ROI in the South African market.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -204,6 +206,10 @@ export default function EcommerceWebsiteDevelopment() {
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Get an Ecommerce Quote</Link>
           </Button>
+        </div>
+
+        <div className="mx-auto px-4 max-w-3xl">
+          <AuthorBio />
         </div>
       </div>
     </main>
