@@ -6,6 +6,16 @@ import { ContactFormValues } from '@/lib/validations'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { isGibberish, validateMathCaptcha } from '@/lib/bot-detection'
 
+const transporter = nodemailer.createTransport({
+  host: process.env.EMAIL_HOST,
+  port: 465,
+  secure: true,
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+})
+
 export async function sendContactEmail(data: ContactFormValues) {
   // 1. Rate Limiting
   const headersList = await headers()
@@ -29,15 +39,6 @@ export async function sendContactEmail(data: ContactFormValues) {
   if (isGibberish(data.message) || isGibberish(data.name)) {
     return { success: false, error: 'Your message was flagged as potential spam. Please ensure it is meaningful.' }
   }
-  const transporter = nodemailer.createTransport({
-    host: process.env.EMAIL_HOST, // e.g., smtp.gmail.com or your hosting provider
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  })
 
   const mailOptions = {
     from: `"${data.name}" <${process.env.EMAIL_USER}>`,

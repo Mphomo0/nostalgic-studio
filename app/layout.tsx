@@ -1,22 +1,11 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { ToastContainer } from 'react-toastify'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
 
 export const viewport: Viewport = {
   themeColor: [
@@ -72,6 +61,9 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za',
+    },
     types: {
       'application/rss+xml': [
         { url: 'https://www.nostalgic-studio.co.za/feed.xml', title: 'Nostalgic Studio Blog RSS Feed' },
@@ -200,7 +192,10 @@ const SCHEMA_BUSINESS = {
   foundingDate: '2016',
   currenciesAccepted: 'ZAR',
   paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
-  openingHours: 'Mo-Fr 08:00-17:00',
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:30', closes: '21:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '17:00' },
+  ],
   priceRange: 'R3,500–R60,000',
   address: {
     '@type': 'PostalAddress',
@@ -223,6 +218,9 @@ const SCHEMA_BUSINESS = {
     { '@type': 'City', name: 'Mbombela, South Africa' },
     { '@type': 'City', name: 'Pretoria, South Africa' },
     { '@type': 'City', name: 'Randburg, South Africa' },
+    { '@type': 'City', name: 'Fourways, South Africa' },
+    { '@type': 'City', name: 'Rosebank, South Africa' },
+    { '@type': 'City', name: 'Bryanston, South Africa' },
     { '@type': 'City', name: 'Thembisa, South Africa' },
     { '@type': 'City', name: 'Cape Town, South Africa' },
     { '@type': 'City', name: 'Centurion, South Africa' },
@@ -231,10 +229,7 @@ const SCHEMA_BUSINESS = {
     { '@type': 'City', name: 'Roodepoort, South Africa' },
     { '@type': 'City', name: 'Randfontein, South Africa' },
     { '@type': 'City', name: 'Bloemfontein, South Africa' },
-    { '@type': 'City', name: 'Hammanskraal, South Africa' },
-    { '@type': 'City', name: 'Potchefstroom, South Africa' },
     { '@type': 'City', name: 'Durban, South Africa' },
-    { '@type': 'Place', name: 'Bryanston, Sandton, 2191, South Africa' },
     { '@type': 'Place', name: 'Century City, Cape Town, 7441, South Africa' },
     { '@type': 'AdministrativeArea', name: 'Gauteng, South Africa' },
     { '@type': 'Country', name: 'South Africa' },
@@ -257,6 +252,53 @@ const SCHEMA_BUSINESS = {
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Hosting South Africa' } },
     ],
   },
+  review: [
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'Ohentse Diseko' },
+      reviewBody: 'Nostalgic Studio designed our website and delivered a professional, high-quality result. The collaboration was smooth and the final website exceeded expectations.',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'Stefan Mills' },
+      reviewBody: 'The Nostalgic Studio team created a modern, professional website that matches our brand perfectly. The design quality and attention to detail were outstanding.',
+    },
+  ],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    bestRating: '5',
+    ratingCount: '6',
+    reviewCount: '6',
+  },
+}
+
+const SCHEMA_PRODUCT_WEB = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Web Design Services Johannesburg',
+  description: 'Custom Next.js websites with 90+ Lighthouse scores, SEO optimization, and mobile-first design. For startups and businesses in South Africa.',
+  brand: { '@type': 'Brand', name: 'Nostalgic Studio' },
+  offers: [
+    { '@type': 'Offer', name: 'Starter Website', price: '3500', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', name: 'Business Website', price: '15000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', name: 'E-Commerce Store', price: '25000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+  ],
+}
+
+const SCHEMA_PRODUCT_SEO = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'SEO & AI Search Services Johannesburg',
+  description: 'Classic SEO combined with Generative Engine Optimization (GEO) for visibility on Google, ChatGPT, Gemini, Claude, and Perplexity.',
+  brand: { '@type': 'Brand', name: 'Nostalgic Studio' },
+  offers: [
+    { '@type': 'Offer', name: 'Starter SEO', price: '1500', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', name: 'Growth SEO', price: '5000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', name: 'Enterprise SEO', price: '10000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+  ],
 }
 
 export default function RootLayout({
@@ -278,6 +320,8 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_ORGANIZATION) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PERSON) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BUSINESS) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PRODUCT_WEB) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PRODUCT_SEO) }} />
 
         {/* Google Analytics */}
         <Script
@@ -295,12 +339,11 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="antialiased"
       >
         <Navbar />
         {children}
         <Footer />
-        <ToastContainer />
       </body>
     </html>
   )

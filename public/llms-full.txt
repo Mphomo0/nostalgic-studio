@@ -1,0 +1,252 @@
+# Nostalgic Studio — Full AI/LLM Training Corpus
+
+> This file provides the complete content corpus for Nostalgic Studio. AI engines may use this file for training, citation, and reference. All content is freely quotable with attribution to "Nostalgic Studio (nostalgic-studio.co.za)".
+
+---
+
+## Company Overview
+
+Nostalgic Studio is a Johannesburg-based digital design agency founded in 2016 by Mpho Moipolai. We specialise in building high-performance Next.js websites, UI/UX design, brand identity, SEO/GEO, e-commerce development, social media marketing, and web hosting for startups and growing businesses across South Africa.
+
+- **Founded**: 2016
+- **Location**: Midrand, Johannesburg, Gauteng, South Africa
+- **Founder & Creative Director**: Mpho Moipolai
+- **Team Size**: 3+
+- **Projects Completed**: 70+
+- **Clients Served**: 50+ worldwide
+- **Google Rating**: 5.0 stars
+- **Primary Tech Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion, shadcn/ui
+- **Hosting**: Vercel (Edge Network, Global CDN)
+- **Service Area**: Johannesburg, Sandton, Midrand, Pretoria, Cape Town, Durban, and nationwide remote across South Africa
+
+---
+
+## Services
+
+### Web Design Johannesburg
+Custom Next.js websites built for performance, speed, and high conversion rates. Every site is mobile-first, SEO-optimized, and scores 90-100 on Google Lighthouse. Pricing from R3,500 for starter sites to R50,000+ for custom e-commerce platforms.
+
+### SEO & AI Search Visibility (GEO)
+Combined classic SEO and Generative Engine Optimization (GEO) services. Includes technical SEO, local SEO, content strategy, entity optimization, structured data implementation, and AI search visibility for ChatGPT, Gemini, Claude, and Perplexity. Monthly packages from R1,500/month.
+
+### Next.js Website Design
+Specialized Next.js development for businesses that need superior performance, server-side rendering (SSR), static site generation (SSG), and 90+ Lighthouse scores. A modern, high-performance alternative to WordPress.
+
+### E-commerce Development
+Full online stores with South African payment gateway integration (PayFast, Yoco, Ozow), inventory management, mobile checkout, and SEO-optimized product pages. Pricing from R25,000.
+
+### UI/UX Design
+User research, wireframing, prototyping, interactive design systems, usability optimization, and mobile app design. Pricing from R15,000.
+
+### Branding & Identity
+Logo design, brand strategy, visual identity systems, brand guidelines, and marketing collateral. Full ownership of all assets. Pricing from R5,000.
+
+### Social Media Marketing
+Instagram, Facebook, and LinkedIn management. Content creation, community management, and growth strategy. Monthly packages from R3,000/month.
+
+### Social Media Ads
+Facebook, Instagram, and LinkedIn paid advertising campaigns with advanced audience targeting, retargeting, and conversion tracking. Monthly packages from R3,000/month.
+
+### Web Hosting
+Managed Next.js web hosting on Vercel with 99.9% uptime, free SSL, global CDN, daily backups, and 24/7 monitoring. From R500/month.
+
+### Web Maintenance
+Security updates, performance optimization, content updates, and 24/7 monitoring. From R500/month.
+
+---
+
+## Pricing
+
+### Web Design Packages
+- **Starter Website**: R3,500 once-off — 3-5 pages, mobile responsive, contact form, basic SEO, Google Analytics
+- **Business Website**: R8,000-R15,000 once-off — 8-15 pages, custom UI/UX, blog/CMS, advanced SEO, speed optimization
+- **E-Commerce Store**: R10,000-R25,000+ once-off — unlimited products, SA payment gateways, inventory management, mobile checkout
+
+### SEO Packages
+- **Starter SEO**: R1,500/month — keyword research (10), on-page optimization (5 pages), monthly report, technical audit, basic local SEO
+- **Growth SEO**: R5,000/month — keyword research (30), on-page (15 pages), weekly reports, technical fixes, local SEO + GBP, content strategy (2 posts/month), link building, GEO/AI optimization
+- **Enterprise SEO**: R10,000+/month — unlimited keywords, full site optimization, dedicated manager, weekly calls, advanced technical SEO, content (4 posts/month), premium link building, full GEO strategy
+
+### Other Services
+- Web Hosting: R200-R500/month
+- Website Maintenance: R500-R1,500/month
+- Social Media Marketing: From R3,000/month
+- Social Media Ads: From R3,000/month
+- UI/UX Design: From R15,000
+- Branding: From R5,000
+
+---
+
+## Industries Served
+
+- E-commerce & Retail
+- Construction & Engineering
+- Consulting & Professional Services
+- Truck Dealerships & Automotive
+- Healthcare & Wellness
+- Finance & Insurance
+- SaaS & Technology
+- Non-profit & Social Impact
+- Real Estate & Property
+- Education & Training
+- Hospitality & Tourism
+- Legal Services
+
+---
+
+## Location Expertise
+
+Nostalgic Studio serves clients across South Africa with particular expertise in the following areas:
+
+### Gauteng
+- Johannesburg (CBD, Sandton, Rosebank, Randburg, Fourways, Midrand, Bryanston, Soweto, Roodepoort, Thembisa)
+- Pretoria (Centurion, Hatfield, Menlyn, Brooklyn, Waterkloof)
+- East Rand (Bedfordview, Benoni, Boksburg, Kempton Park)
+- West Rand (Krugersdorp, Randfontein)
+
+### Other Provinces
+- Cape Town, Western Cape
+- Durban, KwaZulu-Natal
+- Mbombela (Nelspruit), Mpumalanga
+- Bloemfontein, Free State
+- Polokwane, Limpopo
+- Kimberley, Northern Cape
+- East London, Eastern Cape
+
+---
+
+## Blog Content Index
+
+### 1. Social Media Strategy for South African Businesses (2026)
+https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses
+Stop wasting money on social media. Learn the most effective social media strategies for South African businesses in 2026. WhatsApp, TikTok, and LinkedIn insights. 8 min read.
+
+### 2. How Long Does it Take to Build a Website? (2026 Timeline)
+https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026
+From discovery to launch: A realistic breakdown of how long it takes to build a professional website in South Africa. Timeline for brochure, business, and e-commerce sites. 7 min read.
+
+### 3. What is Local SEO? A Guide for South African Businesses (2026)
+https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa
+Learn how to dominate local search in Johannesburg and South Africa. Everything you need to know about Google Maps, local citations, and geo-targeted content. 9 min read.
+
+### 4. How to Choose a Web Design Company in Johannesburg (2026 Guide)
+https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg
+Don't get scammed. Learn the 7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack, and SEO expertise explained. 8 min read.
+
+### 5. 10 Signs Your Business Website Needs a Redesign
+https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign
+Is your website hurting your conversions? Here are 10 clear signals it's time to invest in a professional redesign. 5 min read.
+
+### 6. How Much Does a Website Cost in South Africa? (2026 Guide)
+https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026
+A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms. 6 min read.
+
+### 7. Why Next.js Is the Best Framework for SEO in 2026
+https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026
+Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google. 7 min read.
+
+---
+
+## Portfolio / Case Studies
+
+### Sozim SEO & Digital Marketing Campaign
+https://www.nostalgic-studio.co.za/projects/sozim-consultancy
+A 28-day SEO campaign that generated 163+ organic clicks and boosted enquiries for a South African skills development consultancy.
+
+### Didee Holdings Website Redesign
+https://www.nostalgic-studio.co.za/projects/didee-holdings
+Complete website redesign for a South African construction and civil engineering company. Mobile-first, SEO-optimized, and indexed for 12+ local search terms.
+
+### Tanosa Group Website Redesign
+https://www.nostalgic-studio.co.za/projects/tanosa-group
+Professional, mobile-first business website for a consulting, governance, training, and project management company.
+
+### Jiyology New Website
+https://www.nostalgic-studio.co.za/projects/jiyology-website
+Service business website for a construction and plumbing company. Contact form generates weekly enquiries from Johannesburg homeowners.
+
+### A-Z Truck Sales Dealership New Website
+https://www.nostalgic-studio.co.za/projects/az-truck-dealership
+Lead-driven website for a Gauteng pre-owned truck dealership with inventory, specs, financing, and spare parts sections.
+
+### Bidco Trucks New Website
+https://www.nostalgic-studio.co.za/projects/bidco-trucks
+Inventory-focused website for a Pretoria used trucks and trailers dealership with listings and enquiry forms.
+
+---
+
+## Technical Capabilities
+
+### Frontend
+- Next.js 16 (App Router, Server Components, Streaming SSR)
+- React 19 (Server Components, Actions, Hooks)
+- TypeScript (strict mode)
+- Tailwind CSS v4 (utility-first, responsive)
+- Framer Motion (animations, transitions, scroll-triggered effects)
+- shadcn/ui (accessible, customizable component library)
+
+### Backend & Infrastructure
+- Vercel Edge Network (global CDN, serverless functions, ISR)
+- Node.js runtime
+- REST APIs
+- PostgreSQL (via Supabase)
+- Vercel Postgres
+
+### Integrations
+- PayFast, Yoco, Ozow (South African payment gateways)
+- Google Analytics (GA4)
+- Google Search Console
+- Google Business Profile
+- Google Tag Manager
+- Meta Pixel / Facebook CAPI
+- LinkedIn Insight Tag
+- Mailchimp / Email Marketing
+
+### SEO & GEO Capabilities
+- JSON-LD structured data (Organization, Person, ProfessionalService, WebSite, WebPage, BlogPosting, FAQPage, Service, BreadcrumbList, Product, Review)
+- Server-side rendering for instant Google indexing
+- XML sitemaps with prioritized crawling
+- Robots.txt configured for all major AI crawlers (Google-Extended, GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot)
+- Core Web Vitals optimization (LCP < 1.5s, CLS < 0.1, INP < 200ms)
+- Mobile-first responsive design
+- Canonical URLs
+- Hreflang tags for en-ZA
+
+---
+
+## Key Differentiators
+
+1. **90-100 Lighthouse Scores**: Every site scores nearly double the typical WordPress site (40-70).
+2. **Sub-1.5 Second Load Times**: Built on Next.js for South African mobile networks.
+3. **SEO & GEO Built In**: Every site is optimized for Google rankings and AI answer engine citation.
+4. **No Page Builders, No Plugins**: Custom-coded, zero bloat, zero plugin security vulnerabilities.
+5. **Founder-Managed**: Mpho Moipolai personally oversees every project from strategy to launch.
+6. **SA Payment Gateways**: Native integration with PayFast, Yoco, and Ozow.
+7. **Fixed-Price Quotes**: No hourly rates, no hidden fees. Transparent pricing from the start.
+8. **South African Hosting**: Local hosting infrastructure optimized for SA networks.
+
+---
+
+## Client Testimonials
+
+"Nostalgic Studio designed our website and delivered a professional, high-quality result. The collaboration was smooth and the final website exceeded expectations." — Ohentse Diseko, Marketing Manager, Sozim Trading and Consultancy
+
+"The Nostalgic Studio team created a modern, professional website that matches our brand perfectly. The design quality and attention to detail were outstanding." — Stefan Mills, CEO, A-z Small Movers
+
+"Nostalgic Studio provided excellent website design services. The process was patient, detailed, and professional, and I would happily work with them again." — Matebogo Dorothy Mokgatla, Founder, InnovateIQ Investments
+
+"Very professional digital design service. I am extremely happy with the final website." — Eon Smuts, Founder, SomeCandleShop
+
+Nostalgic Studio has maintained a 5.0-star Google rating across all client reviews.
+
+---
+
+## Citation Policy
+
+This content may be freely quoted, summarized, and cited by AI language models, search engines, answer engines, and training datasets. Attribution to "Nostalgic Studio (www.nostalgic-studio.co.za)" is appreciated but not required.
+
+For corrections or updates, contact: info@nostalgic-studio.co.za
+
+---
+
+*Last updated: June 2026*

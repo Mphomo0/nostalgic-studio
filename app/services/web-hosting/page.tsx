@@ -74,7 +74,7 @@ const hostingFaqs = [
   },
   {
     question: 'What kind of support do you offer?',
-    answer: 'We provide dedicated technical support via email and WhatsApp during business hours (8am–5pm SAST, Monday to Friday). Emergency support is available 24/7 for critical issues affecting your live website.',
+    answer: 'We provide dedicated technical support via email and WhatsApp during business hours (7:30am–9pm SAST, Monday to Friday; 8am–5pm Saturday). Emergency support is available 24/7 for critical issues affecting your live website.',
   },
   {
     question: 'How much does web hosting cost?',

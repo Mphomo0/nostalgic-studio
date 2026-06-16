@@ -96,6 +96,38 @@ const posts = [
     date: '2026-03-20',
     category: 'Web Development',
   },
+  {
+    slug: 'what-is-generative-engine-optimization',
+    title: 'What is Generative Engine Optimization (GEO)?',
+    excerpt: 'Learn how GEO helps your website rank in AI-powered search engines like Google AI Overviews, Perplexity, ChatGPT Search, and Claude. Actionable guide for South African businesses.',
+    readTime: '9 min read',
+    date: '2026-06-16',
+    category: 'AI / GEO',
+  },
+  {
+    slug: 'seo-for-startups-south-africa',
+    title: 'SEO for Startups in South Africa — A Growth Strategy Guide',
+    excerpt: 'Practical SEO strategy for South African startups looking to generate leads on a budget. Learn how to compete with established players using smart SEO and Next.js.',
+    readTime: '7 min read',
+    date: '2026-06-16',
+    category: 'SEO',
+  },
+  {
+    slug: 'small-business-website-guide-johannesburg',
+    title: 'Small Business Website Guide: Johannesburg 2026',
+    excerpt: 'A complete guide for Jozi small business owners on getting a website that generates leads, ranks on Google, and competes with big brands — without overspending.',
+    readTime: '8 min read',
+    date: '2026-06-16',
+    category: 'Guide',
+  },
+  {
+    slug: 'web-design-cost-south-africa-2026-guide',
+    title: 'Web Design Cost South Africa 2026 — Full Pricing Guide',
+    excerpt: 'Complete pricing guide for web design in South Africa. Compare costs by type — brochure, e-commerce, custom — with real ZAR pricing from R3,500 to R50,000+.',
+    readTime: '7 min read',
+    date: '2026-06-16',
+    category: 'Pricing',
+  },
 ]
 
 const blogFaqs = [
