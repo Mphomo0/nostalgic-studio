@@ -9,7 +9,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import AuthorBio from '@/components/geo/AuthorBio'
-import { serviceSchema, breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
+import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
   title: 'Branding Design Johannesburg | Brand Identity Agency',
@@ -104,7 +104,6 @@ export default function BrandingDesign() {
       { name: 'Services', url: '/services' },
       { name: 'Branding Design', url: '/services/branding-design' },
     ]),
-    faqPageSchema(faqs),
   ]
 
   const businessOutcomes = [

@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
@@ -59,6 +61,7 @@ export default function TimelineArticle() {
     headline: 'How Long Does it Take to Build a Website? (2026 Timeline)',
     description: 'A realistic guide to website development timelines in South Africa, covering everything from discovery to deployment.',
     datePublished: '2026-05-20',
+    dateModified: '2026-06-13',
     wordCount: 1350,
     articleSection: 'Process',
   })
@@ -100,6 +103,21 @@ export default function TimelineArticle() {
             here is a realistic roadmap for building a high-performance website in 2026.
           </p>
         </header>
+
+        <AboutThisPage
+          summary="A professional website in South Africa takes 2–12 weeks to build depending on complexity. Brochure sites take 2–4 weeks, business websites 4–8 weeks, and e-commerce stores 8–12 weeks. Content gathering is the most common cause of delays, adding weeks to any project."
+          covers={['Website Timeline', 'Web Development Process', 'South Africa 2026', 'Project Planning', 'E-commerce Development']}
+          lastUpdated="May 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Brochure sites (3–5 pages) take 2–4 weeks from kickoff to launch', detail: 'Assuming content, copy, and branding assets are ready before development begins' },
+            { point: 'Business websites with custom features take 4–8 weeks', detail: 'Includes discovery, design, development, SEO setup, and user acceptance testing phases' },
+            { point: 'E-commerce stores typically require 8–12 weeks', detail: 'Payment gateway integration, product loading, and security testing add significant time' },
+            { point: 'Having content ready before kickoff can reduce your timeline by 2–3 weeks', detail: 'Content gathering is the #1 cause of project delays in South African web development' },
+          ]}
+        />
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           

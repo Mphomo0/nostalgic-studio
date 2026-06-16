@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
@@ -59,6 +61,7 @@ export default function SocialMediaArticle() {
     headline: 'Social Media Strategy for South African Businesses (2026)',
     description: 'A data-driven guide to social media marketing success in the unique South African digital landscape.',
     datePublished: '2026-05-28',
+    dateModified: '2026-06-13',
     wordCount: 1500,
     articleSection: 'Marketing',
   })
@@ -100,6 +103,21 @@ export default function SocialMediaArticle() {
             your strategy needs to be tailored to the local context to be effective.
           </p>
         </header>
+
+        <AboutThisPage
+          summary="South Africa has 25.8 million social media users, with Facebook and Instagram leading engagement. This guide covers which platforms deliver the best ROI for SA businesses, the optimal posting frequency, and why WhatsApp Business is non-negotiable for local customer engagement in 2026."
+          covers={['Social Media Strategy', 'South Africa', 'WhatsApp Business', 'Facebook Marketing', 'Instagram', 'TikTok', 'LinkedIn']}
+          lastUpdated="May 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'South Africa has 25.8 million social media users as of 2026', detail: 'Facebook and Instagram dominate across all demographics; TikTok is the fastest-growing platform under 35' },
+            { point: 'WhatsApp Business is non-negotiable for South African customer engagement', detail: 'SA is a WhatsApp-first country — using it for support and lead generation delivers the highest local ROI' },
+            { point: 'Posting 3–5 times per week consistently beats daily sporadic content', detail: 'Quality and consistency drive more growth than posting frequency on all major South African platforms' },
+            { point: 'Video content generates 3× more engagement than static posts in South Africa', detail: 'Instagram Reels and TikTok short-form video drive the highest organic reach for SA brands in 2026' },
+          ]}
+        />
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           

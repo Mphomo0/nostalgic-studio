@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
@@ -59,6 +61,7 @@ export default function ChooseAgencyArticle() {
     headline: 'How to Choose a Web Design Company in Johannesburg (2026 Guide)',
     description: 'A comprehensive guide on evaluating and hiring the right web design partner for your South African business.',
     datePublished: '2026-05-06',
+    dateModified: '2026-06-13',
     wordCount: 1450,
     articleSection: 'Strategy',
   })
@@ -100,6 +103,21 @@ export default function ChooseAgencyArticle() {
             Here is how to vet Johannesburg web designers to find a partner that actually grows your business.
           </p>
         </header>
+
+        <AboutThisPage
+          summary="This guide gives South African business owners 7 critical questions to ask before hiring a web design agency in Johannesburg. Covers portfolio evaluation, tech stack, SEO expertise, pricing transparency, and post-launch support — so you avoid the most common and costly mistakes."
+          covers={['Web Design Agency', 'Johannesburg', 'Hiring Guide', 'Portfolio Evaluation', 'Tech Stack', 'SEO Expertise']}
+          lastUpdated="June 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Always review live portfolio sites — not screenshots or mockups', detail: 'Test actual loading speed, mobile responsiveness, and user experience of their previous work' },
+            { point: 'Modern tech stack (Next.js) signals better SEO and performance outcomes', detail: 'Agencies building exclusively on WordPress or Wix cannot deliver 90+ Lighthouse scores' },
+            { point: 'Transparent pricing within 24 hours is a green flag', detail: 'Vague or pressure-based pricing is the most common red flag reported by South African business owners' },
+            { point: 'Post-launch support and maintenance should be in the proposal from day one', detail: 'A website without ongoing maintenance loses security, performance, and SEO rankings within months' },
+          ]}
+        />
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           

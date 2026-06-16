@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const dynamic = 'force-static'
@@ -162,6 +164,21 @@ export default function WebsiteCostSAArticle() {
             and development costs in South Africa.
           </p>
         </header>
+
+        <AboutThisPage
+          summary="This guide breaks down website design costs in South Africa for 2026. A basic brochure site starts at R5,000, a business website at R15,000, and e-commerce from R25,000. Hosting, maintenance, and hidden fees are also explained transparently."
+          covers={['Website Pricing', 'E-commerce Costs', 'Web Design Budget', 'Monthly Maintenance', 'South Africa 2026']}
+          lastUpdated="April 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Basic brochure websites cost R5,000–R12,000', detail: 'Includes 3–5 pages, responsive design, contact form, and basic SEO setup' },
+            { point: 'Business websites range R15,000–R35,000', detail: 'Includes custom UI/UX, blog or CMS integration, and advanced SEO package' },
+            { point: 'E-commerce stores start at R25,000', detail: 'Includes PayFast/Yoco/Ozow integration, inventory management, and customer accounts' },
+            { point: 'Monthly maintenance costs R500–R3,000/month', detail: 'Covers hosting, security patches, performance monitoring, and content updates' },
+          ]}
+        />
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           <h2>2026 South Africa Website Pricing Overview</h2>

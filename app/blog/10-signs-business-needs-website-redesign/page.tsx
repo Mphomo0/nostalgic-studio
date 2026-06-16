@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { AlertTriangle, CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
@@ -182,6 +184,21 @@ export default function RedesignSignsArticle() {
             any of these 10 warning signs apply, it is costing you business.
           </p>
         </header>
+
+        <AboutThisPage
+          summary="This article outlines 10 clear warning signs that your business website needs a redesign in 2026. Slow load times, poor mobile experience, low conversion rates, and poor SEO rankings are all costing South African businesses leads every day."
+          covers={['Website Redesign', 'Business Website', 'Mobile Optimisation', 'Conversion Rate', 'South Africa SEO']}
+          lastUpdated="April 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Websites taking more than 3 seconds to load lose rankings and customers', detail: 'Google penalises slow sites; South African mobile users abandon pages that take too long' },
+            { point: 'Over 60% of SA web traffic is mobile — poor mobile UX is fatal', detail: 'Google uses mobile-first indexing; a non-responsive site ranks below the fold in every category' },
+            { point: 'A bounce rate above 70% signals a fundamental UX or performance problem', detail: 'Visitors land and leave without engaging — a redesign addresses the root cause, not the symptom' },
+            { point: 'A professional redesign with SEO focus can recover Google rankings within 6 months', detail: 'Addressing technical debt, Core Web Vitals, and on-page SEO together has a compounding effect' },
+          ]}
+        />
 
         <div className="my-8 p-6 bg-amber-500/10 border border-amber-500/30 rounded-2xl flex gap-4 items-start">
           <AlertTriangle

@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
@@ -59,6 +61,7 @@ export default function LocalSEOArticle() {
     headline: 'What is Local SEO? A Guide for South African Businesses (2026)',
     description: 'Master local search engine optimization to attract more customers in your specific South African city or suburb.',
     datePublished: '2026-05-13',
+    dateModified: '2026-06-13',
     wordCount: 1600,
     articleSection: 'SEO',
   })
@@ -100,6 +103,21 @@ export default function LocalSEOArticle() {
             You need Local SEO to ensure your business appears when people search for "services near me."
           </p>
         </header>
+
+        <AboutThisPage
+          summary="Local SEO helps South African businesses appear in Google's Map Pack — the top 3 results for searches like 'web design Johannesburg'. This guide covers the three pillars: Google Business Profile optimisation, on-page local optimisation, and building local citations. Results typically take 3–6 months."
+          covers={['Local SEO', 'Google Business Profile', 'Google Maps', 'Johannesburg', 'Local Citations', 'Map Pack']}
+          lastUpdated="May 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: '46% of all Google searches have local intent', detail: "If you're not in the Map Pack, you're invisible to nearly half of all potential customers searching in your area" },
+            { point: 'Google Business Profile is the strongest single local ranking signal', detail: 'Businesses with 50+ reviews and regular posts rank significantly higher in the Map Pack than competitors' },
+            { point: 'NAP consistency across all platforms is non-negotiable', detail: 'Name, Address, and Phone must be identical on your website, GBP, directories, and social media profiles' },
+            { point: 'SA local citations on Brabys, Hotfrog, and Yellow Pages build local authority', detail: 'Each citation confirms to Google that your business is legitimate and physically present in your area' },
+          ]}
+        />
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           

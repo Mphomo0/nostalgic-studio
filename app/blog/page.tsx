@@ -98,30 +98,59 @@ const posts = [
   },
 ]
 
-export default function BlogIndex() {
-  const blogListSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'Nostalgic Studio Blog',
-    url: 'https://www.nostalgic-studio.co.za/blog',
-    publisher: {
-      '@type': 'Organization',
-      name: 'Nostalgic Studio',
-      url: 'https://www.nostalgic-studio.co.za',
-    },
-    blogPost: posts.map((p) => ({
-      '@type': 'BlogPosting',
-      headline: p.title,
-      url: `https://www.nostalgic-studio.co.za/blog/${p.slug}`,
-      datePublished: p.date,
-    })),
-  }
+const blogFaqs = [
+  {
+    question: 'What topics does the Nostalgic Studio blog cover?',
+    answer: 'We cover web design, Next.js development, local SEO, branding, social media marketing, and digital strategy — all written specifically for South African businesses and entrepreneurs.',
+  },
+  {
+    question: 'How often does Nostalgic Studio publish new articles?',
+    answer: 'We publish new articles regularly, typically 1–2 per month. Topics are chosen based on questions we receive from clients and emerging trends in the South African digital market.',
+  },
+  {
+    question: 'Is the content specific to South African businesses?',
+    answer: 'Yes. All articles are written with South African businesses in mind, including local market data, pricing in ZAR, and platform preferences relevant to SA consumers. Our team is based in Johannesburg.',
+  },
+]
 
+const blogListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Nostalgic Studio Blog',
+  url: 'https://www.nostalgic-studio.co.za/blog',
+  publisher: {
+    '@type': 'Organization',
+    name: 'Nostalgic Studio',
+    url: 'https://www.nostalgic-studio.co.za',
+  },
+  blogPost: posts.map((p) => ({
+    '@type': 'BlogPosting',
+    headline: p.title,
+    url: `https://www.nostalgic-studio.co.za/blog/${p.slug}`,
+    datePublished: p.date,
+  })),
+}
+
+const blogFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: blogFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+}
+
+export default function BlogIndex() {
   return (
     <main className="pt-32 pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogFaqSchema) }}
       />
 
       <div className="container-wide mx-auto px-4 max-w-4xl">
@@ -176,6 +205,18 @@ export default function BlogIndex() {
             </article>
           ))}
         </div>
+
+        <section className="mt-20 bg-card border border-border rounded-3xl p-8 md:p-12" aria-labelledby="blog-faq-heading">
+          <h2 id="blog-faq-heading" className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+          <dl className="space-y-6">
+            {blogFaqs.map((faq) => (
+              <div key={faq.question}>
+                <dt className="font-semibold text-foreground mb-2">{faq.question}</dt>
+                <dd className="text-muted-foreground leading-relaxed">{faq.answer}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       </div>
     </main>
   )

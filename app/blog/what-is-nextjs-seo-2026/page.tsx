@@ -4,6 +4,8 @@ import { CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
+import AboutThisPage from '@/components/geo/AboutThisPage'
+import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const dynamic = 'force-static'
@@ -126,6 +128,21 @@ export default function NextjsSeoArticle() {
             that want to rank on Google.
           </p>
         </header>
+
+        <AboutThisPage
+          summary="Next.js consistently outperforms WordPress for SEO in South Africa. With server-side rendering, automatic image optimisation, and Lighthouse scores of 90–100, Next.js gives your website a measurable ranking advantage on Google that WordPress cannot match."
+          covers={['Next.js SEO', 'Core Web Vitals', 'WordPress Alternative', 'Server-Side Rendering', 'Google Rankings']}
+          lastUpdated="April 2026"
+        />
+
+        <KeyTakeaways
+          takeaways={[
+            { point: 'Next.js sites score 90–100 on Google Lighthouse', detail: 'Compared to 40–70 for equivalent WordPress sites — a direct, measurable ranking advantage' },
+            { point: 'Server-Side Rendering ensures Googlebot indexes full content immediately', detail: 'No JavaScript execution required — faster discovery and indexing for all pages' },
+            { point: 'next/image automatically optimises for LCP (Largest Contentful Paint)', detail: 'Serves WebP/AVIF formats and lazy-loads below-the-fold images with zero configuration' },
+            { point: 'React Server Components reduce client JavaScript bundles', detail: 'Less client-side JS means faster interactivity (INP) — a confirmed Google Core Web Vitals signal' },
+          ]}
+        />
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           <h2>What Is Next.js?</h2>
