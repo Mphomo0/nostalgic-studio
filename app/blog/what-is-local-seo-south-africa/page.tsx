@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import Link from 'next/link'
@@ -9,7 +8,7 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Local SEO Guide SA 2026',
+  title: 'What is Local SEO? South Africa 2026 Guide',
   description:
     'Dominate local search results in South Africa. Learn Google Maps optimisation, local citations, and geo-targeted content strategies for 2026.',
   alternates: {
@@ -20,13 +19,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Local SEO Guide SA 2026',
+    title: 'What is Local SEO? A Complete Guide for South Africa 2026',
     description:
-      'How to rank on Google Maps and capture local customers in South Africa. Local SEO strategies that work.',
+      'How to rank on Google Maps and capture local customers in South Africa. Local SEO strategies that work in 2026.',
     url: 'https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Local SEO Guide South Africa 2026 — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'What is Local SEO? A Complete Guide for South Africa 2026',
+    description: 'How to rank on Google Maps and capture local customers in South Africa. Local SEO strategies that work in 2026.',
   },
 }
 
@@ -66,11 +71,11 @@ export default function LocalSEOArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />

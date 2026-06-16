@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import Link from 'next/link'
@@ -9,7 +8,7 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Strategy SA 2026',
+  title: 'Social Media Strategy South Africa 2026',
   description:
     'Effective social media strategies for South African businesses. WhatsApp, TikTok & LinkedIn insights for 2026. Grow your brand online today.',
   alternates: {
@@ -20,13 +19,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Social Media Strategy SA 2026',
+    title: 'Social Media Strategy for South African Businesses (2026)',
     description:
-      'The guide to social media marketing in South Africa. Which platforms matter most for your business.',
+      'The complete guide to social media marketing in South Africa. Which platforms matter most and how to grow your brand.',
     url: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Social Media Strategy South Africa 2026 — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Social Media Strategy for South African Businesses (2026)',
+    description: 'The complete guide to social media marketing in South Africa. Which platforms matter most and how to grow your brand.',
   },
 }
 
@@ -53,7 +58,7 @@ export default function SocialMediaArticle() {
     url: '/blog/social-media-strategy-south-african-businesses',
     headline: 'Social Media Strategy for South African Businesses (2026)',
     description: 'A data-driven guide to social media marketing success in the unique South African digital landscape.',
-    datePublished: '2026-05-13',
+    datePublished: '2026-05-28',
     wordCount: 1500,
     articleSection: 'Marketing',
   })
@@ -66,11 +71,11 @@ export default function SocialMediaArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
@@ -85,7 +90,7 @@ export default function SocialMediaArticle() {
         <header className="mb-12">
           <div className="flex gap-3 mb-4">
             <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Marketing</span>
-            <time dateTime="2026-05-13" className="text-xs text-muted-foreground self-center">May 13, 2026</time>
+            <time dateTime="2026-05-28" className="text-xs text-muted-foreground self-center">May 28, 2026</time>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Social Media Strategy for South African Businesses (2026)

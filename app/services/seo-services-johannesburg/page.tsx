@@ -6,7 +6,6 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import lazyLoad from 'next/dynamic'
 const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
-import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
@@ -168,7 +167,7 @@ export default function SEOServicesJohannesburg() {
   return (
     <main className="pt-32 pb-20">
       {seoSchemas.map((s, i) => (
-        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+        <script type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
 

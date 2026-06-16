@@ -21,8 +21,10 @@ export function bizRef() {
 export function joziAddress() {
   return {
     '@type': 'PostalAddress',
+    streetAddress: 'Midrand',
     addressLocality: 'Johannesburg',
     addressRegion: 'Gauteng',
+    postalCode: '1685',
     addressCountry: 'ZA',
   }
 }

@@ -4,7 +4,6 @@ export const dynamic = 'force-static'
 
 import ContactForm from '@/components/pages/contact/ContactForm'
 import ContactInfo from '@/components/pages/contact/ContactInfo'
-import Script from 'next/script'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2, Clock, MapPin, Phone, Mail, Shield } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -101,7 +100,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <main className="pt-24 pb-12 md:pt-32 md:pb-20 container mx-auto px-4 md:px-8">
         {contactSchemas.map((s, i) => (
-          <Script key={i} id={`schema-contact-${i}`} type="application/ld+json"
+          <script type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
         ))}
 

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 
@@ -84,8 +83,7 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background">
       <>
-        <Script
-          id="schema-portfolio"
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
         />

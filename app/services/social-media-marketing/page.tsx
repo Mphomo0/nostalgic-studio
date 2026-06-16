@@ -7,14 +7,13 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import lazyLoad from 'next/dynamic'
 const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
-import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Social Media Marketing JHB',
+  title: 'Social Media Marketing Johannesburg',
   description:
     'Social media marketing for startups in Johannesburg. Instagram, Facebook & LinkedIn management. Content creation from R3,000/month.',
   keywords: ['Social Media Marketing Johannesburg', 'SMM Agency South Africa', 'Social Media Management Johannesburg', 'Content Marketing South Africa', 'Digital Marketing Agency', 'Instagram Marketing SA', 'Facebook Marketing Johannesburg'],
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Social Media Marketing JHB',
+    title: 'Social Media Marketing Johannesburg',
     description:
       'Strategic social media marketing for SA startups. Instagram, Facebook & LinkedIn. From R3,000/month.',
     url: 'https://www.nostalgic-studio.co.za/services/social-media-marketing',
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Social Media Marketing JHB',
+    title: 'Social Media Marketing Johannesburg',
     description: 'Strategic social media marketing for SA startups. Instagram, Facebook & LinkedIn. From R3,000/month.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
@@ -94,7 +93,7 @@ export default function SocialMediaMarketing() {
   return (
     <main className="pt-32 pb-20">
       {smmSchemas.map((s, i) => (
-        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+        <script type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       

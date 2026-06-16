@@ -1,32 +1,41 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
-
-export const dynamic = 'force-static'
 import Link from 'next/link'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
 import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
-  title: 'Website Cost SA 2026 Guide',
+  title: 'Website Cost South Africa 2026 Guide',
   description:
     'Transparent web design pricing guide for South Africa 2026. Compare costs from R5,000 for basic sites to R50,000+ for custom e-commerce platforms.',
   alternates: {
-    canonical: 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
+    canonical:
+      'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
     languages: {
-      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
-      'x-default': 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
+      'en-ZA':
+        'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
+      'x-default':
+        'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
     },
   },
   openGraph: {
-    title: 'Website Cost SA 2026 Guide',
+    title: 'Website Cost South Africa 2026: Web Design Pricing Guide',
     description:
-      'Transparent web design pricing in SA. Compare packages from R5,000 to R50,000+ e-commerce platforms.',
+      'Transparent web design pricing in South Africa. Compare packages from R5,000 brochure sites to R50,000+ e-commerce platforms.',
     url: 'https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Website Cost South Africa 2026 — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Website Cost South Africa 2026: Web Design Pricing Guide',
+    description:
+      'Transparent web design pricing in South Africa. Compare packages from R5,000 brochure sites to R50,000+ e-commerce platforms.',
   },
 }
 
@@ -57,75 +66,109 @@ const pricingTiers = [
   {
     name: 'Brochure / Starter Site',
     price: 'R5,000 – R12,000',
-    includes: ['3–5 pages', 'Responsive design', 'Contact form', 'Basic SEO setup', 'Once-off payment'],
+    includes: [
+      '3–5 pages',
+      'Responsive design',
+      'Contact form',
+      'Basic SEO setup',
+      'Once-off payment',
+    ],
   },
   {
     name: 'Business / Corporate Site',
     price: 'R15,000 – R35,000',
-    includes: ['8–15 pages', 'Custom UI/UX design', 'Blog / CMS integration', 'Advanced SEO package', 'Google Analytics setup'],
+    includes: [
+      '8–15 pages',
+      'Custom UI/UX design',
+      'Blog / CMS integration',
+      'Advanced SEO package',
+      'Google Analytics setup',
+    ],
   },
   {
     name: 'E-commerce Store',
     price: 'R25,000 – R60,000+',
-    includes: ['Unlimited products', 'Payment gateway integration', 'Inventory management', 'Customer accounts', 'Email marketing integration'],
+    includes: [
+      'Unlimited products',
+      'Payment gateway integration',
+      'Inventory management',
+      'Customer accounts',
+      'Email marketing integration',
+    ],
   },
 ]
 
+const schema = articleSchema({
+  url: '/blog/website-cost-south-africa-2026',
+  headline: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
+  description:
+    'A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms.',
+  datePublished: '2026-03-22',
+  dateModified: '2026-04-06',
+  wordCount: 1550,
+  articleSection: 'Pricing',
+})
+
+const breadcrumb = breadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Blog', url: '/blog' },
+  { name: 'Website Cost South Africa 2026', url: '/blog/website-cost-south-africa-2026' },
+])
+
 export default function WebsiteCostSAArticle() {
-  const schema = articleSchema({
-    url: '/blog/website-cost-south-africa-2026',
-    headline: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
-    description: 'A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms.',
-    datePublished: '2026-03-22',
-    dateModified: '2026-04-06',
-    wordCount: 1550,
-    articleSection: 'Pricing',
-  })
-
-  const breadcrumb = breadcrumbSchema([
-    { name: 'Home', url: '/' },
-    { name: 'Blog', url: '/blog' },
-    { name: 'Website Cost South Africa 2026', url: '/blog/website-cost-south-africa-2026' },
-  ])
-
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       <article className="container-wide mx-auto px-4 max-w-3xl">
-        <nav className="mb-8 text-sm text-muted-foreground" aria-label="Breadcrumb">
-          <Link href="/blog" className="hover:underline">Blog</Link>
-          <span className="mx-2" aria-hidden="true">›</span>
+        <nav
+          className="mb-8 text-sm text-muted-foreground"
+          aria-label="Breadcrumb"
+        >
+          <Link href="/blog" className="hover:underline">
+            Blog
+          </Link>
+          <span className="mx-2" aria-hidden="true">
+            ›
+          </span>
           <span>Website Cost South Africa 2026</span>
         </nav>
 
         <header className="mb-12">
           <div className="flex gap-3 mb-4">
-            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Pricing</span>
-            <time dateTime="2026-03-22" className="text-xs text-muted-foreground self-center">March 22, 2026</time>
+            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">
+              Pricing
+            </span>
+            <time
+              dateTime="2026-03-22"
+              className="text-xs text-muted-foreground self-center"
+            >
+              March 22, 2026
+            </time>
           </div>
-<h1 className="text-4xl md:text-5xl font-bold mb-6">
-      How Much Does a Website Cost in South Africa? (2026 Guide)
-      </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            How Much Does a Website Cost in South Africa? (2026 Guide)
+          </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Whether you need a simple brochure site or a full e-commerce platform, here is a transparent, 
-            current breakdown of website design and development costs in South Africa.
+            Whether you need a simple brochure site or a full e-commerce
+            platform, here is a transparent, current breakdown of website design
+            and development costs in South Africa.
           </p>
         </header>
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
-
           <h2>2026 South Africa Website Pricing Overview</h2>
           <p>
-            Website costs in South Africa vary significantly based on complexity, the agency you choose, 
-            and whether you need custom functionality. Here is an honest breakdown from our experience 
+            Website costs in South Africa vary significantly based on
+            complexity, the agency you choose, and whether you need custom
+            functionality. Here is an honest breakdown from our experience
             building 70+ websites for South African businesses.
           </p>
 
@@ -138,15 +181,28 @@ export default function WebsiteCostSAArticle() {
           {/* Pricing Table */}
           <div className="my-8 space-y-4 not-prose">
             {pricingTiers.map((tier) => (
-              <div key={tier.name} className="border border-border rounded-2xl p-6 bg-card">
+              <div
+                key={tier.name}
+                className="border border-border rounded-2xl p-6 bg-card"
+              >
                 <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
-                  <h3 className="text-lg font-bold text-foreground">{tier.name}</h3>
-                  <span className="text-primary font-bold text-lg">{tier.price}</span>
+                  <h3 className="text-lg font-bold text-foreground">
+                    {tier.name}
+                  </h3>
+                  <span className="text-primary font-bold text-lg">
+                    {tier.price}
+                  </span>
                 </div>
                 <ul className="space-y-2">
                   {tier.includes.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
+                    <li
+                      key={item}
+                      className="flex items-center gap-2 text-sm text-muted-foreground"
+                    >
+                      <span
+                        className="w-1.5 h-1.5 rounded-full bg-primary shrink-0"
+                        aria-hidden="true"
+                      />
                       {item}
                     </li>
                   ))}
@@ -157,27 +213,32 @@ export default function WebsiteCostSAArticle() {
 
           <h2>What Factors Affect Website Cost?</h2>
           <p>
-            <strong>Complexity and number of pages</strong> — A 5-page brochure site costs significantly less than 
-            a 20-page corporate site with custom animations and integrations.
+            <strong>Complexity and number of pages</strong> — A 5-page brochure
+            site costs significantly less than a 20-page corporate site with
+            custom animations and integrations.
           </p>
           <p>
-            <strong>Design approach</strong> — Template-based designs are cheaper. Custom bespoke UI/UX designed 
-            from scratch costs more but delivers a unique brand experience.
+            <strong>Design approach</strong> — Template-based designs are
+            cheaper. Custom bespoke UI/UX designed from scratch costs more but
+            delivers a unique brand experience.
           </p>
           <p>
-            <strong>Functionality</strong> — Booking systems, e-commerce, membership portals, API integrations, 
-            and custom forms all add to the cost.
+            <strong>Functionality</strong> — Booking systems, e-commerce,
+            membership portals, API integrations, and custom forms all add to
+            the cost.
           </p>
           <p>
-            <strong>SEO and content</strong> — Basic technical SEO setup is usually included. 
-            Advanced keyword research, content writing, and ongoing SEO strategies are additional.
+            <strong>SEO and content</strong> — Basic technical SEO setup is
+            usually included. Advanced keyword research, content writing, and
+            ongoing SEO strategies are additional.
           </p>
 
           <h2>Hidden Costs to Watch For</h2>
           <p>
-            Some agencies quote a low upfront price but charge separately for hosting, domain renewal, 
-            SSL certificates, and maintenance. At Nostalgic Studio, we provide transparent pricing 
-            with all standard inclusions stated upfront.
+            Some agencies quote a low upfront price but charge separately for
+            hosting, domain renewal, SSL certificates, and maintenance. At
+            Nostalgic Studio, we provide transparent pricing with all standard
+            inclusions stated upfront.
           </p>
 
           <CitationBlock
@@ -188,10 +249,14 @@ export default function WebsiteCostSAArticle() {
 
           <h2>Ready to Get a Quote?</h2>
           <p>
-            Tell us about your project and we will send you a detailed, no-obligation quote within 24 hours.
+            Tell us about your project and we will send you a detailed,
+            no-obligation quote within 24 hours.
           </p>
           <p>
-            <Link href="/contact" className="text-primary font-medium hover:underline">
+            <Link
+              href="/contact"
+              className="text-primary font-medium hover:underline"
+            >
               Get a free website quote from Nostalgic Studio →
             </Link>
           </p>
@@ -202,8 +267,22 @@ export default function WebsiteCostSAArticle() {
         <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
           <h2 className="text-xl font-bold mb-4">Related Articles</h2>
           <ul className="space-y-2 list-disc list-inside text-muted-foreground">
-            <li><Link href="/blog/how-long-to-build-website-2026" className="text-primary hover:underline">How Long Does it Take to Build a Website? (2026 Timeline)</Link></li>
-            <li><Link href="/blog/10-signs-business-needs-website-redesign" className="text-primary hover:underline">10 Signs Your Business Website Needs a Redesign</Link></li>
+            <li>
+              <Link
+                href="/blog/how-long-to-build-website-2026"
+                className="text-primary hover:underline"
+              >
+                How Long Does it Take to Build a Website? (2026 Timeline)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog/10-signs-business-needs-website-redesign"
+                className="text-primary hover:underline"
+              >
+                10 Signs Your Business Website Needs a Redesign
+              </Link>
+            </li>
           </ul>
         </section>
 

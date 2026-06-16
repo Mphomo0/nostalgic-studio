@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Script from 'next/script'
 import { CheckCircle2 } from 'lucide-react'
 import { FaqSection } from '@/components/geo/FaqSection'
 import { CitationBlock } from '@/components/geo/CitationBlock'
@@ -14,20 +13,30 @@ export const metadata: Metadata = {
   description:
     'Next.js outperforms WordPress on Google with SSR, static generation, and superior Core Web Vitals. A framework guide for South African businesses.',
   alternates: {
-    canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
+    canonical:
+      'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
     languages: {
-      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
-      'x-default': 'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
+      'en-ZA':
+        'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
+      'x-default':
+        'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
     },
   },
   openGraph: {
-    title: 'Why Next.js Is the Best Framework for SEO in 2026 | Nostalgic Studio',
+    title: 'Why Next.js Is the Best Framework for SEO in 2026',
     description:
       'Next.js SSR, SSG, and Core Web Vitals explained with real performance comparisons against WordPress.',
     url: 'https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Why Next.js Wins for SEO Rankings in 2026 — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Why Next.js Is the Best Framework for SEO in 2026',
+    description:
+      'Next.js SSR, SSG, and Core Web Vitals explained with real performance comparisons against WordPress.',
   },
 }
 
@@ -35,7 +44,7 @@ const faqs = [
   {
     question: 'Is Next.js better than WordPress for SEO?',
     answer:
-      'Yes. Next.js delivers faster page loads, better Core Web Vitals scores, and more control over metadata than WordPress. Google\'s ranking algorithm rewards fast pages — Next.js sites consistently score higher in Lighthouse audits than equivalent WordPress sites.',
+      "Yes. Next.js delivers faster page loads, better Core Web Vitals scores, and more control over metadata than WordPress. Google's ranking algorithm rewards fast pages — Next.js sites consistently score higher in Lighthouse audits than equivalent WordPress sites.",
   },
   {
     question: 'Does Next.js support Server-Side Rendering?',
@@ -64,52 +73,72 @@ export default function NextjsSeoArticle() {
   const breadcrumb = breadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Blog', url: '/blog' },
-    { name: 'Why Next.js Is Best for SEO', url: '/blog/what-is-nextjs-seo-2026' },
+    {
+      name: 'Why Next.js Is Best for SEO',
+      url: '/blog/what-is-nextjs-seo-2026',
+    },
   ])
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
 
       <article className="container-wide mx-auto px-4 max-w-3xl">
         {/* Breadcrumb */}
-        <nav className="mb-8 text-sm text-muted-foreground" aria-label="Breadcrumb">
-          <Link href="/blog" className="hover:underline">Blog</Link>
-          <span className="mx-2" aria-hidden="true">›</span>
+        <nav
+          className="mb-8 text-sm text-muted-foreground"
+          aria-label="Breadcrumb"
+        >
+          <Link href="/blog" className="hover:underline">
+            Blog
+          </Link>
+          <span className="mx-2" aria-hidden="true">
+            ›
+          </span>
           <span>Why Next.js Is Best for SEO</span>
         </nav>
 
         <header className="mb-12">
           <div className="flex gap-3 mb-4">
-            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Web Development</span>
-            <time dateTime="2026-03-20" className="text-xs text-muted-foreground self-center">March 20, 2026</time>
+            <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">
+              Web Development
+            </span>
+            <time
+              dateTime="2026-03-20"
+              className="text-xs text-muted-foreground self-center"
+            >
+              March 20, 2026
+            </time>
           </div>
-<h1 className="text-4xl md:text-5xl font-bold mb-6">
-      Why Next.js Is the Best Framework for SEO in 2026
-      </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Why Next.js Is the Best Framework for SEO in 2026
+          </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Server-side rendering, automatic image optimisation, and superior Core Web Vitals scores 
-            make Next.js the go-to choice for businesses that want to rank on Google.
+            Server-side rendering, automatic image optimisation, and superior
+            Core Web Vitals scores make Next.js the go-to choice for businesses
+            that want to rank on Google.
           </p>
         </header>
 
         <div className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
-
           <h2>What Is Next.js?</h2>
           <p>
-            Next.js is an open-source React framework built by Vercel. It extends React with server-side capabilities, 
-            giving developers full control over how and when pages are rendered — which has enormous implications for SEO.
+            Next.js is an open-source React framework built by Vercel. It
+            extends React with server-side capabilities, giving developers full
+            control over how and when pages are rendered — which has enormous
+            implications for SEO.
           </p>
           <p>
-            At Nostalgic Studio, we build every client website on Next.js because it consistently delivers 
-            the best Lighthouse scores and search engine visibility of any framework we have tested.
+            At Nostalgic Studio, we build every client website on Next.js
+            because it consistently delivers the best Lighthouse scores and
+            search engine visibility of any framework we have tested.
           </p>
 
           <CitationBlock
@@ -120,8 +149,10 @@ export default function NextjsSeoArticle() {
 
           <h2>Why Google Rewards Next.js Websites</h2>
           <p>
-            Google&apos;s ranking algorithm uses <strong>Core Web Vitals</strong> — three metrics that measure real user 
-            experience — as a direct ranking signal. Next.js addresses all three:
+            Google&apos;s ranking algorithm uses{' '}
+            <strong>Core Web Vitals</strong> — three metrics that measure real
+            user experience — as a direct ranking signal. Next.js addresses all
+            three:
           </p>
           <ul className="space-y-3 my-6 list-none pl-0">
             {[
@@ -130,7 +161,10 @@ export default function NextjsSeoArticle() {
               'INP (Interaction to Next Paint): React Server Components reduce JavaScript bundle size, speeding up interactivity',
             ].map((item) => (
               <li key={item} className="flex gap-3 items-start">
-                <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
+                <CheckCircle2
+                  className="w-5 h-5 text-primary shrink-0 mt-1"
+                  aria-hidden="true"
+                />
                 <span className="text-muted-foreground">{item}</span>
               </li>
             ))}
@@ -138,26 +172,30 @@ export default function NextjsSeoArticle() {
 
           <h2>Server-Side Rendering vs Static Generation</h2>
           <p>
-            Next.js offers three rendering strategies, each optimised for different SEO needs:
+            Next.js offers three rendering strategies, each optimised for
+            different SEO needs:
           </p>
           <p>
-            <strong>Static Site Generation (SSG)</strong> pre-renders pages at build time, delivering instant responses 
-            to crawlers and users alike. Ideal for service pages, landing pages, and blog posts.
+            <strong>Static Site Generation (SSG)</strong> pre-renders pages at
+            build time, delivering instant responses to crawlers and users
+            alike. Ideal for service pages, landing pages, and blog posts.
           </p>
           <p>
-            <strong>Server-Side Rendering (SSR)</strong> renders pages on each request. Best for dynamic pages 
-            that need fresh data but must still be crawler-accessible — like product listings or user dashboards.
+            <strong>Server-Side Rendering (SSR)</strong> renders pages on each
+            request. Best for dynamic pages that need fresh data but must still
+            be crawler-accessible — like product listings or user dashboards.
           </p>
           <p>
-            <strong>Incremental Static Regeneration (ISR)</strong> lets you update static pages in the background 
-            without a full rebuild — giving you the speed of SSG with the freshness of SSR.
+            <strong>Incremental Static Regeneration (ISR)</strong> lets you
+            update static pages in the background without a full rebuild —
+            giving you the speed of SSG with the freshness of SSR.
           </p>
 
           <h2>Next.js vs WordPress for SEO</h2>
           <p>
-            WordPress powers 43% of the web, but it is not designed for modern SEO performance. 
-            A typical WordPress site with plugins scores 40–70 on Lighthouse. 
-            A equivalent Next.js site typically scores 90–100.
+            WordPress powers 43% of the web, but it is not designed for modern
+            SEO performance. A typical WordPress site with plugins scores 40–70
+            on Lighthouse. A equivalent Next.js site typically scores 90–100.
           </p>
 
           <CitationBlock
@@ -168,11 +206,15 @@ export default function NextjsSeoArticle() {
 
           <h2>Conclusion</h2>
           <p>
-            If your business wants to compete on Google in 2026, your website needs to be fast, crawlable, and structured correctly. 
-            Next.js is the framework that makes all three achievable without trade-offs.
+            If your business wants to compete on Google in 2026, your website
+            needs to be fast, crawlable, and structured correctly. Next.js is
+            the framework that makes all three achievable without trade-offs.
           </p>
           <p>
-            <Link href="/contact" className="text-primary font-medium hover:underline">
+            <Link
+              href="/contact"
+              className="text-primary font-medium hover:underline"
+            >
               Get in touch with Nostalgic Studio
             </Link>{' '}
             to discuss a Next.js website for your business.
@@ -184,8 +226,23 @@ export default function NextjsSeoArticle() {
         <section className="container-wide mx-auto px-4 pb-8 max-w-3xl">
           <h2 className="text-xl font-bold mb-4">Related Articles</h2>
           <ul className="space-y-2 list-disc list-inside text-muted-foreground">
-            <li><Link href="/blog/how-to-choose-web-design-company-johannesburg" className="text-primary hover:underline">How to Choose a Web Design Company in Johannesburg (2026 Guide)</Link></li>
-            <li><Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">Website Cost South Africa 2026: What to Budget for a Professional Website</Link></li>
+            <li>
+              <Link
+                href="/blog/how-to-choose-web-design-company-johannesburg"
+                className="text-primary hover:underline"
+              >
+                How to Choose a Web Design Company in Johannesburg (2026 Guide)
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog/website-cost-south-africa-2026"
+                className="text-primary hover:underline"
+              >
+                Website Cost South Africa 2026: What to Budget for a
+                Professional Website
+              </Link>
+            </li>
           </ul>
         </section>
 

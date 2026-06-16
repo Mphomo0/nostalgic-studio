@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import Link from 'next/link'
@@ -9,7 +8,7 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: '10 Signs for Website Redesign',
+  title: '10 Signs Your Website Needs a Redesign',
   description:
     'Slow loading, poor mobile experience, low conversions — 10 signs your business website needs a redesign in 2026. Free site audit included.',
   alternates: {
@@ -20,13 +19,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: '10 Signs for Website Redesign',
+    title: '10 Signs Your Business Website Needs a Redesign',
     description:
-      'Slow loading, poor mobile, low conversions — 10 warning signs you need a website redesign.',
+      'Slow loading, poor mobile, low conversions — 10 warning signs your website needs a redesign in 2026.',
     url: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: '10 Signs Your Business Needs a Website Redesign — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: '10 Signs Your Business Website Needs a Redesign',
+    description: 'Slow loading, poor mobile, low conversions — 10 warning signs your website needs a redesign in 2026.',
   },
 }
 
@@ -134,11 +139,11 @@ export default function RedesignSignsArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />

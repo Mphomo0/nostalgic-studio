@@ -7,7 +7,6 @@ import ProcessSection from '@/components/pages/services/ProcessSection'
 import CTASection from '@/components/pages/services/CTASection'
 import ServicesHero from '@/components/pages/services/ServicesHero'
 import { process, services } from '@/components/pages/services/data'
-import Script from 'next/script'
 import Link from 'next/link'
 import { 
   Globe, 
@@ -109,10 +108,8 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* JSON-LD Structured Data for Services */}
-      <Script
-        id="services-jsonld"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
@@ -184,10 +181,8 @@ export default function ServicesPage() {
           }),
         }}
       />
-      <Script
-        id="faq-jsonld"
+      <script
         type="application/ld+json"
-        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',

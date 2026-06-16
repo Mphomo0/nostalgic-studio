@@ -10,11 +10,10 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import lazyLoad from 'next/dynamic'
 const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
-import Script from 'next/script'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Dev South Africa',
+  title: 'Ecommerce Development South Africa',
   description:
     'Custom Next.js ecommerce websites in Johannesburg with SA payment gateways: PayFast, Yoco and Ozow. Fast, secure online stores from R25,000.',
   keywords: ['Ecommerce Website Development Johannesburg', 'Online Store Builder South Africa', 'Next.js Ecommerce Development', 'PayFast Integration South Africa', 'Custom Ecommerce Solutions', 'WooCommerce Alternative South Africa'],
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Ecommerce Dev South Africa',
+    title: 'Ecommerce Development South Africa',
     description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R25,000.',
     url: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
     siteName: 'Nostalgic Studio',
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Ecommerce Dev South Africa',
+    title: 'Ecommerce Development South Africa',
     description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R25,000.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
@@ -88,7 +87,7 @@ export default function EcommerceWebsiteDevelopment() {
   return (
     <main className="pt-32 pb-20">
       {ecommerceSchemas.map((s, i) => (
-        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+        <script type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       <div className="container-wide mx-auto px-4">

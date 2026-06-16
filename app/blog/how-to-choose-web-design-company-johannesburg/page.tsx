@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import Link from 'next/link'
@@ -9,9 +8,9 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Choose a Web Design Co. JHB',
+  title: 'Choose a Web Design Agency in Johannesburg',
   description:
-    '7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack & SEO explained.',
+    '7 critical questions to ask before hiring a web design agency in Johannesburg. Evaluate portfolio, tech stack, SEO expertise, and pricing before you sign.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
     languages: {
@@ -20,13 +19,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Choose a Web Design Co. JHB',
+    title: 'How to Choose a Web Design Agency in Johannesburg (2026 Guide)',
     description:
-      'Learn how to evaluate Johannesburg web design agencies. 7 critical questions to ask before signing.',
+      'Learn how to evaluate Johannesburg web design agencies. 7 critical questions to ask before signing a contract.',
     url: 'https://www.nostalgic-studio.co.za/blog/how-to-choose-web-design-company-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'How to Choose a Web Design Company Johannesburg — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'How to Choose a Web Design Agency in Johannesburg (2026 Guide)',
+    description: 'Learn how to evaluate Johannesburg web design agencies. 7 critical questions to ask before signing a contract.',
   },
 }
 
@@ -53,7 +58,7 @@ export default function ChooseAgencyArticle() {
     url: '/blog/how-to-choose-web-design-company-johannesburg',
     headline: 'How to Choose a Web Design Company in Johannesburg (2026 Guide)',
     description: 'A comprehensive guide on evaluating and hiring the right web design partner for your South African business.',
-    datePublished: '2026-05-13',
+    datePublished: '2026-05-06',
     wordCount: 1450,
     articleSection: 'Strategy',
   })
@@ -66,11 +71,11 @@ export default function ChooseAgencyArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
@@ -85,7 +90,7 @@ export default function ChooseAgencyArticle() {
         <header className="mb-12">
           <div className="flex gap-3 mb-4">
             <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Strategy</span>
-            <time dateTime="2026-05-13" className="text-xs text-muted-foreground self-center">May 13, 2026</time>
+            <time dateTime="2026-05-06" className="text-xs text-muted-foreground self-center">May 6, 2026</time>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             How to Choose a Web Design Company in Johannesburg (2026 Guide)

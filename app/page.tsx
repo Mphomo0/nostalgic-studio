@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import lazyLoad from 'next/dynamic'
 
 export const dynamic = 'force-static'
@@ -115,8 +114,7 @@ const faqs = [
 export default function Home() {
   return (
     <>
-      <Script
-        id="schema-website"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
       />

@@ -72,6 +72,11 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za',
+    types: {
+      'application/rss+xml': [
+        { url: 'https://www.nostalgic-studio.co.za/feed.xml', title: 'Nostalgic Studio Blog RSS Feed' },
+      ],
+    },
   },
 
   openGraph: {
@@ -113,7 +118,7 @@ const SCHEMA_PERSON = {
   jobTitle: 'Founder & Lead Developer',
   worksFor: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
   sameAs: [
-    'https://www.linkedin.com/private/moipolai-mpho-110356396/',
+    'https://www.linkedin.com/in/mpho-moipolai-26b06286/',
     'https://www.instagram.com/studionostalgic',
   ],
   knowsAbout: [
@@ -138,14 +143,6 @@ const SCHEMA_WEBSITE = {
   publisher: {
     '@id': 'https://www.nostalgic-studio.co.za/#organization',
   },
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://www.nostalgic-studio.co.za/search?q={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
 }
 
 const SCHEMA_ORGANIZATION = {
@@ -163,8 +160,10 @@ const SCHEMA_ORGANIZATION = {
   },
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Midrand',
     addressLocality: 'Johannesburg',
     addressRegion: 'Gauteng',
+    postalCode: '1685',
     addressCountry: 'ZA',
   },
   areaServed: [
@@ -205,14 +204,16 @@ const SCHEMA_BUSINESS = {
   priceRange: 'R3,500–R60,000',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Midrand',
     addressLocality: 'Johannesburg',
     addressRegion: 'Gauteng',
+    postalCode: '1685',
     addressCountry: 'ZA',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '-26.2041',
-    longitude: '28.0473',
+    latitude: '-25.9985',
+    longitude: '28.1322',
   },
   areaServed: [
     { '@type': 'City', name: 'Johannesburg, South Africa' },

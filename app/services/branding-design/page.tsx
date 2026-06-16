@@ -5,7 +5,6 @@ import { ArrowRight, CheckCircle2, Palette, PenTool, Sparkles, Star, TrendingUp,
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import MotionWrapper from '@/components/layout/MotionWrapper'
-import Script from 'next/script'
 import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
@@ -127,7 +126,7 @@ export default function BrandingDesign() {
   return (
     <main className="pt-32 pb-20">
       {schemas.map((s, i) => (
-        <Script key={i} id={`schema-${i}`} type="application/ld+json"
+        <script type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
 

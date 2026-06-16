@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Script from 'next/script'
 
 export interface FAQ {
   question: string
@@ -38,8 +37,7 @@ export function FaqSection({
 
   return (
     <section className="py-16 px-4 max-w-3xl mx-auto" aria-label={title}>
-      <Script
-        id="faq-schema"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />

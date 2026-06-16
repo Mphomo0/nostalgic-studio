@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import Link from 'next/link'
@@ -9,9 +8,9 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Website Build Timeline 2026',
+  title: 'Website Build Timeline South Africa 2026',
   description:
-    'Realistic website development timeline in South Africa. Brochure, business & e-commerce sites from 2-12 weeks.',
+    'Realistic website development timeline in South Africa. Brochure, business & e-commerce sites from 2 to 12 weeks. Plan your project launch with confidence.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
     languages: {
@@ -20,13 +19,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Website Build Timeline 2026',
+    title: 'How Long Does It Take to Build a Website in South Africa? (2026)',
     description:
-      'Realistic timelines for building a website in SA. Learn each phase and how to speed up your launch.',
+      'Realistic timelines for building a website in South Africa. Learn each phase and how to speed up your launch.',
     url: 'https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026',
     siteName: 'Nostalgic Studio',
     type: 'article',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Website Build Timeline 2026 — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'How Long Does It Take to Build a Website in South Africa? (2026)',
+    description: 'Realistic timelines for building a website in South Africa. Learn each phase and how to speed up your launch.',
   },
 }
 
@@ -53,7 +58,7 @@ export default function TimelineArticle() {
     url: '/blog/how-long-to-build-website-2026',
     headline: 'How Long Does it Take to Build a Website? (2026 Timeline)',
     description: 'A realistic guide to website development timelines in South Africa, covering everything from discovery to deployment.',
-    datePublished: '2026-05-13',
+    datePublished: '2026-05-20',
     wordCount: 1350,
     articleSection: 'Process',
   })
@@ -66,11 +71,11 @@ export default function TimelineArticle() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-article"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <Script id="schema-breadcrumb"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
@@ -85,7 +90,7 @@ export default function TimelineArticle() {
         <header className="mb-12">
           <div className="flex gap-3 mb-4">
             <span className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">Process</span>
-            <time dateTime="2026-05-13" className="text-xs text-muted-foreground self-center">May 13, 2026</time>
+            <time dateTime="2026-05-20" className="text-xs text-muted-foreground self-center">May 20, 2026</time>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             How Long Does it Take to Build a Website? (2026 Timeline)

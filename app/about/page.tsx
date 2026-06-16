@@ -50,7 +50,6 @@ export const metadata: Metadata = {
 }
 
 import { webPageSchema, orgRef, breadcrumbSchema } from '@/app/structured-data/schemas'
-import Script from 'next/script'
 
 export default function page() {
   const schemas = [
@@ -92,7 +91,7 @@ export default function page() {
     <div className="min-h-screen bg-background">
       <main className="pt-24 md:pt-32">
         {schemas.map((s, i) => (
-          <Script key={i} id={`schema-${i}`} type="application/ld+json"
+          <script type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
         ))}
         <AboutHero />

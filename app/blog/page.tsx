@@ -1,14 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import Script from 'next/script'
 
 export const dynamic = 'force-static'
 import { ArrowRight, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Blog | Web Design & Digital Tips',
+  title: 'Web Design & Digital Marketing Blog',
   description:
-    'Expert articles on web design, Next.js development, SEO, and digital marketing from the Nostalgic Studio team in Johannesburg.',
+    'Expert articles on web design, Next.js development, SEO, and digital marketing from the Nostalgic Studio team in Johannesburg, South Africa.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog',
     languages: {
@@ -17,25 +16,40 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-  title: 'Blog | Web Design & Digital Tips',
+    title: 'Web Design & Digital Marketing Blog | Nostalgic Studio',
     description:
       'Web design, SEO, and digital marketing insights from Johannesburg\'s leading Next.js agency.',
     url: 'https://www.nostalgic-studio.co.za/blog',
     siteName: 'Nostalgic Studio',
     type: 'website',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design & Digital Marketing Blog — Nostalgic Studio' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Web Design & Digital Marketing Blog | Nostalgic Studio',
+    description: 'Web design, SEO, and digital marketing insights from Johannesburg\'s leading Next.js agency.',
   },
 }
 
 const posts = [
   {
-    slug: 'how-to-choose-web-design-company-johannesburg',
-    title: 'How to Choose a Web Design Company in Johannesburg (2026 Guide)',
+    slug: 'social-media-strategy-south-african-businesses',
+    title: 'Social Media Strategy for South African Businesses (2026)',
     excerpt:
-      "Don't get scammed. Learn the 7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack, and SEO expertise explained.",
+      'Stop wasting money on social media. Learn the most effective social media strategies for South African businesses in 2026. WhatsApp, TikTok, and LinkedIn insights.',
     readTime: '8 min read',
-    date: '2026-05-13',
-    category: 'Strategy',
+    date: '2026-05-28',
+    category: 'Marketing',
+  },
+  {
+    slug: 'how-long-to-build-website-2026',
+    title: 'How Long Does it Take to Build a Website? (2026 Timeline)',
+    excerpt:
+      'From discovery to launch: A realistic breakdown of how long it takes to build a professional website in South Africa. Timeline for brochure, business, and e-commerce sites.',
+    readTime: '7 min read',
+    date: '2026-05-20',
+    category: 'Process',
   },
   {
     slug: 'what-is-local-seo-south-africa',
@@ -47,31 +61,22 @@ const posts = [
     category: 'SEO',
   },
   {
-    slug: 'how-long-to-build-website-2026',
-    title: 'How Long Does it Take to Build a Website? (2026 Timeline)',
+    slug: 'how-to-choose-web-design-company-johannesburg',
+    title: 'How to Choose a Web Design Company in Johannesburg (2026 Guide)',
     excerpt:
-      'From discovery to launch: A realistic breakdown of how long it takes to build a professional website in South Africa. Timeline for brochure, business, and e-commerce sites.',
-    readTime: '7 min read',
-    date: '2026-05-13',
-    category: 'Process',
-  },
-  {
-    slug: 'social-media-strategy-south-african-businesses',
-    title: 'Social Media Strategy for South African Businesses (2026)',
-    excerpt:
-      'Stop wasting money on social media. Learn the most effective social media strategies for South African businesses in 2026. WhatsApp, TikTok, and LinkedIn insights.',
+      "Don't get scammed. Learn the 7 critical questions to ask before hiring a web design agency in Johannesburg. Portfolio, tech stack, and SEO expertise explained.",
     readTime: '8 min read',
-    date: '2026-05-13',
-    category: 'Marketing',
+    date: '2026-05-06',
+    category: 'Strategy',
   },
   {
-    slug: 'what-is-nextjs-seo-2026',
-    title: 'Why Next.js Is the Best Framework for SEO in 2026',
+    slug: '10-signs-business-needs-website-redesign',
+    title: '10 Signs Your Business Website Needs a Redesign',
     excerpt:
-      'Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google.',
-    readTime: '7 min read',
-    date: '2026-03-20',
-    category: 'Web Development',
+      "Is your website hurting your conversions? Here are 10 clear signals it's time to invest in a professional redesign.",
+    readTime: '5 min read',
+    date: '2026-03-24',
+    category: 'Strategy',
   },
   {
     slug: 'website-cost-south-africa-2026',
@@ -83,13 +88,13 @@ const posts = [
     category: 'Pricing',
   },
   {
-    slug: '10-signs-business-needs-website-redesign',
-    title: '10 Signs Your Business Website Needs a Redesign',
+    slug: 'what-is-nextjs-seo-2026',
+    title: 'Why Next.js Is the Best Framework for SEO in 2026',
     excerpt:
-      "Is your website hurting your conversions? Here are 10 clear signals it's time to invest in a professional redesign.",
-    readTime: '5 min read',
-    date: '2026-03-24',
-    category: 'Strategy',
+      'Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google.',
+    readTime: '7 min read',
+    date: '2026-03-20',
+    category: 'Web Development',
   },
 ]
 
@@ -114,7 +119,7 @@ export default function BlogIndex() {
 
   return (
     <main className="pt-32 pb-20">
-      <Script id="schema-blog"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
       />
