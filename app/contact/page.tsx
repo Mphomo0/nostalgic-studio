@@ -100,7 +100,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-background">
       <main className="pt-24 pb-12 md:pt-32 md:pb-20 container mx-auto px-4 md:px-8">
         {contactSchemas.map((s, i) => (
-          <script type="application/ld+json"
+          <script key={i} type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
         ))}
 
@@ -256,9 +256,9 @@ export default function ContactPage() {
         </section>
 
         {/* FAQ Section with Schema */}
-        <section className="mt-16" aria-labelledby="contact-faq-heading">
-          <h2 id="contact-faq-heading" className="text-2xl font-bold mb-8">Common Questions</h2>
-          <div className="space-y-6 max-w-3xl">
+        <section className="mt-16 text-center" aria-labelledby="contact-faq-heading">
+          <h2 id="contact-faq-heading" className="text-2xl font-bold mb-8 text-center">Common Questions</h2>
+          <div className="space-y-6 max-w-3xl mx-auto text-left">
             {contactFaqs.map((faq) => (
               <div key={faq.question}>
                 <h3 className="font-semibold mb-2">{faq.question}</h3>

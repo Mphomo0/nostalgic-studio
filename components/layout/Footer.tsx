@@ -21,6 +21,19 @@ const footerLinks = {
     { name: 'Branding', path: '/services/branding-design' },
     { name: 'Ecommerce', path: '/services/ecommerce-website-development' },
   ],
+  locations: [
+    { name: 'Sandton', path: '/locations/sandton' },
+    { name: 'Fourways', path: '/locations/fourways' },
+    { name: 'Rosebank', path: '/locations/rosebank' },
+    { name: 'Midrand', path: '/locations/midrand' },
+    { name: 'Pretoria', path: '/locations/pretoria' },
+    { name: 'Randburg', path: '/locations/randburg' },
+    { name: 'Roodepoort', path: '/locations/roodepoort' },
+    { name: 'Centurion', path: '/locations/centurion' },
+    { name: 'Cape Town', path: '/locations/cape-town' },
+    { name: 'Durban', path: '/locations/durban' },
+    { name: 'Bloemfontein', path: '/locations/bloemfontein' },
+  ],
   specialized: [
     { name: 'Web Design Johannesburg', path: '/services/web-design-johannesburg' },
     { name: 'SEO Services Johannesburg', path: '/services/seo-services-johannesburg' },
@@ -59,7 +72,7 @@ const Footer = () => {
     <footer className="bg-card border-t border-border">
       <div className="container-wide mx-auto px-4 md:px-8">
         {/* Main Footer */}
-        <div className="py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6" aria-label="Nostalgic Studio - Home">
@@ -130,6 +143,23 @@ const Footer = () => {
             <h4 className="text-foreground font-semibold mb-6">Specialized</h4>
             <ul className="space-y-3">
               {footerLinks.specialized.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    href={link.path}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h4 className="text-foreground font-semibold mb-6">Locations</h4>
+            <ul className="space-y-3">
+              {footerLinks.locations.map((link) => (
                 <li key={link.path}>
                   <Link
                     href={link.path}

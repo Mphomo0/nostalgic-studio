@@ -91,7 +91,7 @@ export default function page() {
     <div className="min-h-screen bg-background">
       <main className="pt-24 md:pt-32">
         {schemas.map((s, i) => (
-          <script type="application/ld+json"
+          <script key={i} type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
         ))}
         <AboutHero />

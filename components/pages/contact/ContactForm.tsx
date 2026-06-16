@@ -17,20 +17,17 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { toast } from 'react-toastify'
+import dynamic from 'next/dynamic'
 import { sendContactEmail } from '@/app/actions/sendEmail'
+
+const ToastContainer = dynamic(
+  () => import('react-toastify').then(m => ({ default: m.ToastContainer })),
+  { ssr: false }
+)
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [captchaNums, setCaptchaNums] = useState({ n1: 0, n2: 0 })
-
-  useEffect(() => {
-    // Generate numbers on client to avoid hydration mismatch
-    const n1 = Math.floor(Math.random() * 10) + 1
-    const n2 = Math.floor(Math.random() * 10) + 1
-    setCaptchaNums({ n1, n2 })
-    setValue('num1', n1)
-    setValue('num2', n2)
-  }, [])
 
   const {
     register,
@@ -50,6 +47,14 @@ export default function ContactForm() {
       captchaAnswer: '',
     },
   })
+
+  useEffect(() => {
+    const n1 = Math.floor(Math.random() * 10) + 1
+    const n2 = Math.floor(Math.random() * 10) + 1
+    setCaptchaNums({ n1, n2 })
+    setValue('num1', n1)
+    setValue('num2', n2)
+  }, [setValue])
 
   async function onSubmit(data: ContactFormValues) {
     try {
@@ -89,7 +94,9 @@ export default function ContactForm() {
   }
 
   return (
-    <motion.form
+    <>
+      <ToastContainer />
+      <motion.form
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -203,5 +210,6 @@ export default function ContactForm() {
         regarding your project.
       </p>
     </motion.form>
+    </>
   )
 }
