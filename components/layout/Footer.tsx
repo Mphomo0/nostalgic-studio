@@ -35,16 +35,7 @@ const footerLinks = {
     { name: 'Durban', path: '/locations/durban' },
     { name: 'Bloemfontein', path: '/locations/bloemfontein' },
   ],
-  specialized: [
-    { name: 'Web Design Johannesburg', path: '/services/web-design-johannesburg' },
-    { name: 'SEO Services Johannesburg', path: '/services/seo-services-johannesburg' },
-    { name: 'Next.js Website Design', path: '/services/nextjs-website-design' },
-    { name: 'Ecommerce Development', path: '/services/ecommerce-website-development' },
-    { name: 'Branding Design', path: '/services/branding-design' },
-    { name: 'Social Media Marketing', path: '/services/social-media-marketing' },
-    { name: 'Social Media Ads', path: '/services/social-media-ads' },
-    { name: 'Web Hosting', path: '/services/web-hosting' },
-    { name: 'Web Maintenance', path: '/services/web-maintenance' },
+  industries: [
     { name: 'Healthcare Website Design', path: '/industries/healthcare' },
     { name: 'Construction Website Design', path: '/industries/construction' },
     { name: 'E-commerce Development', path: '/industries/ecommerce' },
@@ -144,11 +135,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Specialized */}
+          {/* Industries */}
           <div>
-            <h4 className="text-foreground font-semibold mb-6">Specialized</h4>
+            <h4 className="text-foreground font-semibold mb-6">Industries</h4>
             <ul className="space-y-3">
-              {footerLinks.specialized.map((link) => (
+              {footerLinks.industries.map((link) => (
                 <li key={link.path}>
                   <Link
                     href={link.path}
