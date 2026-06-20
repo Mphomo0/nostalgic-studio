@@ -13,13 +13,14 @@ export function generateStaticParams() {
 }
 
 function industryMeta(ind: IndustryInfo) {
-  const title = `${ind.name} Website Design | Web Design for ${ind.name} Companies | Nostalgic Studio`
+  const title = `${ind.name} Website Design | Web Design for ${ind.name} Companies`
   const desc = `Professional website design for ${ind.name.toLowerCase()} companies in Johannesburg and South Africa. Custom Next.js websites, SEO, and digital marketing for ${ind.name.toLowerCase()} businesses. Free quote.`
   return { title, desc }
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const ind = industries.find(i => i.slug === params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const ind = industries.find(i => i.slug === slug)
   if (!ind) return {}
   const { title, desc } = industryMeta(ind)
   return {
@@ -30,8 +31,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   }
 }
 
-export default function IndustryPage({ params }: { params: { slug: string } }) {
-  const ind = industries.find(i => i.slug === params.slug)
+export default async function IndustryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const ind = industries.find(i => i.slug === slug)
   if (!ind) notFound()
 
   const { title, desc } = industryMeta(ind)
