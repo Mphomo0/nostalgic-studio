@@ -27,21 +27,29 @@ export async function generateMetadata({
   const loc = locations.find((l) => l.slug === slug)
   if (!loc) return {}
   const { title, desc } = locationMeta(loc)
+  const url = `https://www.nostalgic-studio.co.za/locations/${loc.slug}`
   return {
     title,
     description: desc,
     alternates: {
-      canonical: `https://www.nostalgic-studio.co.za/locations/${loc.slug}`,
+      canonical: url,
       languages: {
-        'en-ZA': `https://www.nostalgic-studio.co.za/locations/${loc.slug}`,
+        'en-ZA': url,
+        'x-default': url,
       },
     },
     openGraph: {
       title: `${title} | Nostalgic Studio`,
       description: desc,
-      url: `https://www.nostalgic-studio.co.za/locations/${loc.slug}`,
+      url,
       siteName: 'Nostalgic Studio',
       type: 'website',
+      images: [{
+        url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: `Web Design ${loc.name} — Nostalgic Studio`,
+      }],
     },
   }
 }

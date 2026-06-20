@@ -9,9 +9,15 @@ export const dynamic = 'force-static'
 const PUB_DATE = '2026-06-16'
 
 export const metadata: Metadata = {
-  title: 'SEO for Startups in South Africa | Growth-Focused Strategy Guide',
-  description: 'A practical SEO strategy guide for South African startups looking to generate leads on a budget. Learn how to compete with established players using smart SEO and Next.js.',
-  alternates: { canonical: 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa', languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa' } },
+  title: 'SEO Strategy Guide for SA Startups',
+  description: 'Practical SEO strategy for South African startups on a budget. Compete with established brands using smart content & Next.js. Free guide with actionable steps.',
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa',
+    },
+  },
   openGraph: { title: 'SEO for Startups in South Africa | Nostalgic Studio', description: 'A practical SEO strategy for SA startups that want leads without a massive budget.', url: 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa', siteName: 'Nostalgic Studio', type: 'article' },
 }
 

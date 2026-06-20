@@ -9,9 +9,15 @@ export const dynamic = 'force-static'
 const PUB_DATE = '2026-06-16'
 
 export const metadata: Metadata = {
-  title: 'What is Generative Engine Optimization (GEO)? | AI Search Guide',
-  description: 'Learn how Generative Engine Optimization (GEO) helps your website rank in AI-powered search engines like Google AI Overviews, Perplexity, ChatGPT Search, and Claude. Actionable guide for South African businesses.',
-  alternates: { canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization', languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization' } },
+  title: 'GEO: AI Search Optimization Guide SA',
+  description: 'Learn how GEO helps your site appear in Google AI Overviews, Perplexity & ChatGPT Search. Practical AI search optimization guide for South African businesses.',
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization',
+    },
+  },
   openGraph: { title: 'What is Generative Engine Optimization (GEO)? | Nostalgic Studio', description: 'Optimize your website for AI-powered search engines like Google AI Overviews, Perplexity, and ChatGPT Search. A complete guide for South African businesses.', url: 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization', siteName: 'Nostalgic Studio', type: 'article' },
 }
 

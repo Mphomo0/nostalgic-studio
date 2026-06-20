@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const locationPages: MetadataRoute.Sitemap = [
     'sandton', 'fourways', 'rosebank', 'midrand', 'pretoria',
-    'randburg', 'roodepoort', 'centurion', 'cape-town', 'durban',
+    'randburg', 'roodepoort', 'centurion', 'cape-town', 'durban', 'bloemfontein',
   ].map((slug) => ({
     url: `${BASE_URL}/locations/${slug}`,
     lastModified: NOW,

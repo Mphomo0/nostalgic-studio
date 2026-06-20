@@ -18,6 +18,7 @@ const footerLinks = {
   services: [
     { name: 'Web Design', path: '/services/web-design-johannesburg' },
     { name: 'SEO Services', path: '/services/seo-services-johannesburg' },
+    { name: 'SEO Pricing', path: '/services/seo-pricing' },
     { name: 'UI/UX Design', path: '/services/ux-ui-design' },
     { name: 'Branding', path: '/services/branding-design' },
     { name: 'Ecommerce', path: '/services/ecommerce-website-development' },

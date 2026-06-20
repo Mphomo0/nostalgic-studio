@@ -9,9 +9,15 @@ export const dynamic = 'force-static'
 const PUB_DATE = '2026-06-16'
 
 export const metadata: Metadata = {
-  title: 'Small Business Website Guide Johannesburg | Get Found Online in 2026',
-  description: 'A complete guide for small business owners in Johannesburg on getting a website that generates leads, ranks on Google, and competes with big brands — without overspending.',
-  alternates: { canonical: 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg', languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg' } },
+  title: 'Small Business Website Guide Johannesburg',
+  description: 'Complete website guide for small businesses in Johannesburg. Rank on Google, generate leads, and compete with big brands — affordably. Free expert advice.',
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg',
+    },
+  },
   openGraph: { title: 'Small Business Website Guide Johannesburg | Nostalgic Studio', description: 'Everything Jozi business owners need to know about getting a website that generates leads.', url: 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg', siteName: 'Nostalgic Studio', type: 'article' },
 }
 

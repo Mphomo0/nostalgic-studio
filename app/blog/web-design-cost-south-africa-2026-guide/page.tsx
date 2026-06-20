@@ -9,9 +9,15 @@ export const dynamic = 'force-static'
 const PUB_DATE = '2026-06-16'
 
 export const metadata: Metadata = {
-  title: 'Web Design Cost South Africa 2026 | Full Pricing Breakdown',
-  description: 'Complete pricing guide for web design in South Africa for 2026. Compare costs by website type — brochure, e-commerce, custom — with real SA rand pricing from R3,500 to R50,000+.',
-  alternates: { canonical: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide', languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide' } },
+  title: 'Web Design Pricing South Africa 2026',
+  description: 'Full pricing guide for web design in South Africa 2026. Compare brochure, e-commerce & custom sites with real rand pricing from R3,500 to R50,000+.',
+  alternates: {
+    canonical: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide',
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide',
+      'x-default': 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide',
+    },
+  },
   openGraph: { title: 'Web Design Cost South Africa 2026 | Nostalgic Studio', description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R3,500 to R50,000+.', url: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide', siteName: 'Nostalgic Studio', type: 'article' },
 }
 

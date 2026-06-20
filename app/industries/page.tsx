@@ -6,13 +6,15 @@ import { industries } from '@/lib/industries-data'
 import { breadcrumbSchema, webPageSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title:
-    'Industries | Web Design for Healthcare, Construction, E-commerce & More',
+  title: 'Web Design by Industry Johannesburg',
   description:
-    'Industry-specific web design and digital services for healthcare, construction, e-commerce, professional services, and startups in Johannesburg and South Africa.',
+    'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/industries',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/industries' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/industries',
+      'x-default': 'https://www.nostalgic-studio.co.za/industries',
+    },
   },
 }
 

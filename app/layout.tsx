@@ -63,6 +63,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.nostalgic-studio.co.za',
     languages: {
       'en-ZA': 'https://www.nostalgic-studio.co.za',
+      'x-default': 'https://www.nostalgic-studio.co.za',
     },
     types: {
       'application/rss+xml': [
