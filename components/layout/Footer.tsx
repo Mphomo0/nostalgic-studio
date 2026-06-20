@@ -12,6 +12,7 @@ const footerLinks = {
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Industries', path: '/industries' },
     { name: 'Contact', path: '/contact' },
   ],
   services: [
@@ -44,6 +45,11 @@ const footerLinks = {
     { name: 'Social Media Ads', path: '/services/social-media-ads' },
     { name: 'Web Hosting', path: '/services/web-hosting' },
     { name: 'Web Maintenance', path: '/services/web-maintenance' },
+    { name: 'Healthcare Website Design', path: '/industries/healthcare' },
+    { name: 'Construction Website Design', path: '/industries/construction' },
+    { name: 'E-commerce Development', path: '/industries/ecommerce' },
+    { name: 'Professional Services', path: '/industries/professional-services' },
+    { name: 'Startup Website Design', path: '/industries/startups' },
   ],
 }
 
