@@ -6,7 +6,7 @@ import { breadcrumbSchema, webPageSchema, faqPageSchema } from '@/app/structured
 
 export const metadata: Metadata = {
   title: 'Free SEO Audit Johannesburg',
-  description: 'Get a free SEO audit for your Johannesburg business. We analyse your website, identify ranking issues, and provide a detailed report with actionable fixes. No obligation.',
+  description: 'Free SEO audit for your Johannesburg business. We identify ranking issues and deliver an actionable report with prioritised fixes. No obligation.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/free-seo-audit',
     languages: {

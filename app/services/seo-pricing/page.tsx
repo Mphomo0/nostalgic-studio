@@ -21,7 +21,7 @@ import {
 export const metadata: Metadata = {
   title: 'SEO Pricing Johannesburg | Packages',
   description:
-    'Transparent SEO pricing in Johannesburg. Starter SEO from R1,500/month, Growth SEO from R5,000/month, Enterprise from R10,000/month. Includes GEO & AI search optimization. Free audit.',
+    'Transparent SEO pricing in Johannesburg. Starter R1,500/mo, Growth R5,000/mo, Enterprise R10,000/mo. Includes GEO & AI search optimization. Free audit.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/seo-pricing',
     languages: {

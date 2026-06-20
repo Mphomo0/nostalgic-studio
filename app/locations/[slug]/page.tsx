@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 function locationMeta(loc: LocationInfo) {
   const title = `Web Design ${loc.name} | Digital Agency`
-  const desc = `Professional web design and digital services in ${loc.name}, ${loc.province}. Custom Next.js websites, SEO, branding, and e-commerce development. 5-star Google rated. Free quote.`
+  const desc = `Custom Next.js web design in ${loc.name}, ${loc.province}. SEO, branding & digital marketing. 5-star Google rated. Free quote.`
   return { title, desc }
 }
 
