@@ -13,7 +13,7 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Design Johannesburg | Performance Websites for Startups',
+  title: 'Web Design Johannesburg | For Startups',
   description:
     'Web design in Johannesburg that actually performs. Custom Next.js websites with 90+ Lighthouse scores. Rated 5 stars on Google. From R3,500. Free quote.',
   keywords: [

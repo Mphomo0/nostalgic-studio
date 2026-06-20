@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import { breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Get a Free Quote | Web Design & SEO Agency Johannesburg',
+  title: 'Get a Free Quote | Johannesburg',
 
   description:
     'Free consultation for web design, SEO & branding in Johannesburg. Fast 24h response. Startups from R3,500. Get your project started today.',

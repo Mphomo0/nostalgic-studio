@@ -69,19 +69,6 @@ export const metadata: Metadata = {
   },
 }
 
-const homepageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  '@id': 'https://www.nostalgic-studio.co.za/#website',
-  inLanguage: 'en-ZA',
-  name: 'Nostalgic Studio',
-  url: 'https://www.nostalgic-studio.co.za',
-  description:
-    'Top-rated web design agency in Johannesburg offering Next.js development, UI/UX, and branding services.',
-  publisher: {
-    '@id': 'https://www.nostalgic-studio.co.za/#organization',
-  },
-}
 
 const faqs = [
   {
@@ -114,10 +101,6 @@ const faqs = [
 export default function Home() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
-      />
       <Hero />
 
       {/* Featured Snippet Answer - GEO Optimization */}

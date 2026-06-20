@@ -12,7 +12,7 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Branding Design Johannesburg | Brand Identity Agency',
+  title: 'Branding & Identity Design Johannesburg',
 
   description:
     'Professional branding design in Johannesburg. Logo design, brand identity, visual systems & strategy. Full ownership from R5,000. Free brand audit.',

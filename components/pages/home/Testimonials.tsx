@@ -55,71 +55,18 @@ const testimonials = [
 export default function Testimonials() {
   const reviewSchema = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'LocalBusiness',
-        '@id': 'https://www.nostalgic-studio.co.za/#business',
-        name: 'Nostalgic Studio',
-        url: 'https://www.nostalgic-studio.co.za',
-        logo: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-        image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
-        description:
-          'Nostalgic Studio is a Johannesburg-based digital design agency crafting high-performing websites, branding, and UI/UX design for startups and growing businesses across South Africa.',
-        telephone: '+27-82-448-3273',
-        priceRange: '$$',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Johannesburg',
-          addressRegion: 'Gauteng',
-          addressCountry: 'ZA',
-        },
-        areaServed: [
-          {
-            '@type': 'City',
-            name: 'Johannesburg',
-          },
-          {
-            '@type': 'City',
-            name: 'Bloemfontein',
-          },
-          {
-            '@type': 'Country',
-            name: 'South Africa',
-          },
-        ],
-        sameAs: [
-          'https://www.facebook.com/webengineers',
-          'https://www.linkedin.com/company/110356396',
-          'https://www.instagram.com/studionostalgic',
-        ],
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '5',
-          reviewCount: testimonials.length.toString(),
-          bestRating: '5',
-          worstRating: '1',
-        },
+    '@graph': testimonials.map((t, index) => ({
+      '@type': 'Review',
+      '@id': `https://www.nostalgic-studio.co.za/#review-${index + 1}`,
+      itemReviewed: { '@id': 'https://www.nostalgic-studio.co.za/#business' },
+      author: { '@type': 'Person', name: t.name },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: t.rating,
+        bestRating: 5,
       },
-
-      ...testimonials.map((t, index) => ({
-        '@type': 'Review',
-        '@id': `https://www.nostalgic-studio.co.za/#review-${index + 1}`,
-        itemReviewed: {
-          '@id': 'https://www.nostalgic-studio.co.za/#business',
-        },
-        author: {
-          '@type': 'Person',
-          name: t.name,
-        },
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: t.rating.toString(),
-          bestRating: '5',
-          worstRating: '1',
-        },
-        reviewBody: t.content,
-      })),
-    ],
+      reviewBody: t.content,
+    })),
   }
 
   return (

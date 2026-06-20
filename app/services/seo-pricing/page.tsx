@@ -19,7 +19,7 @@ import {
 } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Pricing Johannesburg | SEO Packages & Costs South Africa',
+  title: 'SEO Pricing Johannesburg | Packages',
   description:
     'Transparent SEO pricing in Johannesburg. Starter SEO from R1,500/month, Growth SEO from R5,000/month, Enterprise from R10,000/month. Includes GEO & AI search optimization. Free audit.',
   alternates: {
