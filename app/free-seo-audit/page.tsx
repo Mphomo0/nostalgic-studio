@@ -9,7 +9,10 @@ export const metadata: Metadata = {
   description: 'Get a free SEO audit for your Johannesburg business. We analyse your website, identify ranking issues, and provide a detailed report with actionable fixes. No obligation.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/free-seo-audit',
-    languages: { 'en-ZA': 'https://www.nostalgic-studio.co.za/free-seo-audit' },
+    languages: {
+      'en-ZA': 'https://www.nostalgic-studio.co.za/free-seo-audit',
+      'x-default': 'https://www.nostalgic-studio.co.za/free-seo-audit',
+    },
   },
   openGraph: {
     title: 'Free SEO Audit Johannesburg | Nostalgic Studio',
@@ -17,6 +20,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/free-seo-audit',
     siteName: 'Nostalgic Studio',
     type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Free SEO Audit Johannesburg — Nostalgic Studio' }],
   },
 }
 

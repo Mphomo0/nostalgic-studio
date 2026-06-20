@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       'x-default': 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide',
     },
   },
-  openGraph: { title: 'Web Design Cost South Africa 2026 | Nostalgic Studio', description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R3,500 to R50,000+.', url: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide', siteName: 'Nostalgic Studio', type: 'article' },
+  openGraph: { title: 'Web Design Cost South Africa 2026 | Nostalgic Studio', description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R3,500 to R50,000+.', url: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide', siteName: 'Nostalgic Studio', type: 'article', images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Cost South Africa 2026 Guide — Nostalgic Studio' }] },
 }
 
 const faqs = [

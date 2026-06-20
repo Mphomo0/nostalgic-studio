@@ -576,6 +576,23 @@ export default function SEOServicesJohannesburg() {
           <AuthorBio />
         </div>
 
+        {/* Blog Resources */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 text-center">SEO Guides & Resources</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/blog/what-is-generative-engine-optimization" className="bg-card p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">GEO</p>
+              <h3 className="font-bold mb-1">What is Generative Engine Optimization?</h3>
+              <p className="text-sm text-muted-foreground">How to rank in ChatGPT, Gemini & Google AI Overviews.</p>
+            </Link>
+            <Link href="/blog/seo-for-startups-south-africa" className="bg-card p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+              <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">SEO Strategy</p>
+              <h3 className="font-bold mb-1">SEO for Startups in South Africa</h3>
+              <p className="text-sm text-muted-foreground">Compete with established brands on a lean budget.</p>
+            </Link>
+          </div>
+        </section>
+
         {/* Internal Links */}
         <section className="mb-16" aria-labelledby="related-heading">
           <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">

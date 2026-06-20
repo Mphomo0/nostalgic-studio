@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       'x-default': 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization',
     },
   },
-  openGraph: { title: 'What is Generative Engine Optimization (GEO)? | Nostalgic Studio', description: 'Optimize your website for AI-powered search engines like Google AI Overviews, Perplexity, and ChatGPT Search. A complete guide for South African businesses.', url: 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization', siteName: 'Nostalgic Studio', type: 'article' },
+  openGraph: { title: 'What is Generative Engine Optimization (GEO)? | Nostalgic Studio', description: 'Optimize your website for AI-powered search engines like Google AI Overviews, Perplexity, and ChatGPT Search. A complete guide for South African businesses.', url: 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization', siteName: 'Nostalgic Studio', type: 'article', images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Generative Engine Optimization GEO Guide — Nostalgic Studio' }] },
 }
 
 const faqs = [

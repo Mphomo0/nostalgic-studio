@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/10-signs-business-needs-website-redesign',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: '10 Signs Your Website Needs a Redesign — Nostalgic Studio' }],
   },
   twitter: {
     card: 'summary_large_image',

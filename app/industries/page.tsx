@@ -16,6 +16,14 @@ export const metadata: Metadata = {
       'x-default': 'https://www.nostalgic-studio.co.za/industries',
     },
   },
+  openGraph: {
+    title: 'Web Design by Industry Johannesburg | Nostalgic Studio',
+    description: 'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
+    url: 'https://www.nostalgic-studio.co.za/industries',
+    siteName: 'Nostalgic Studio',
+    type: 'website',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Industry Web Design Johannesburg — Nostalgic Studio' }],
+  },
 }
 
 export default function IndustriesPage() {

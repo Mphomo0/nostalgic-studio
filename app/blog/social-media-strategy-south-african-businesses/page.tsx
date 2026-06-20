@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     url: 'https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses',
     siteName: 'Nostalgic Studio',
     type: 'article',
+    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Social Media Strategy South Africa — Nostalgic Studio' }],
   },
   twitter: {
     card: 'summary_large_image',

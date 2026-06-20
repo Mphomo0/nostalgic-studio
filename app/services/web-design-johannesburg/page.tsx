@@ -475,6 +475,23 @@ export default function WebDesignJohannesburg() {
             </div>
           </section>
 
+          {/* Blog Resources */}
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 text-center">Web Design Guides & Resources</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link href="/blog/web-design-cost-south-africa-2026-guide" className="bg-card p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Pricing</p>
+                <h3 className="font-bold mb-1">Web Design Cost South Africa 2026</h3>
+                <p className="text-sm text-muted-foreground">Full pricing breakdown from R3,500 to R50,000+.</p>
+              </Link>
+              <Link href="/blog/small-business-website-guide-johannesburg" className="bg-card p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Guide</p>
+                <h3 className="font-bold mb-1">Small Business Website Guide Johannesburg</h3>
+                <p className="text-sm text-muted-foreground">Get found online and generate leads without overspending.</p>
+              </Link>
+            </div>
+          </section>
+
           {/* Internal Links */}
           <section className="mb-16" aria-labelledby="related-heading">
             <h2 id="related-heading" className="text-2xl font-bold mb-6 text-center">

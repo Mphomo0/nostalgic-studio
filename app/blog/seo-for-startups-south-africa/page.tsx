@@ -18,7 +18,7 @@ export const metadata: Metadata = {
       'x-default': 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa',
     },
   },
-  openGraph: { title: 'SEO for Startups in South Africa | Nostalgic Studio', description: 'A practical SEO strategy for SA startups that want leads without a massive budget.', url: 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa', siteName: 'Nostalgic Studio', type: 'article' },
+  openGraph: { title: 'SEO for Startups in South Africa | Nostalgic Studio', description: 'A practical SEO strategy for SA startups that want leads without a massive budget.', url: 'https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa', siteName: 'Nostalgic Studio', type: 'article', images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'SEO Strategy Guide for SA Startups — Nostalgic Studio' }] },
 }
 
 export default function SeoForStartupsPage() {
