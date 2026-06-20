@@ -9,9 +9,10 @@ import type { Project } from '@/lib/portfolio-data'
 
 interface PortfolioCardProps {
   project: Project
+  index?: number
 }
 
-const PortfolioCard = memo(function PortfolioCard({ project }: PortfolioCardProps) {
+const PortfolioCard = memo(function PortfolioCard({ project, index = 0 }: PortfolioCardProps) {
   return (
     <motion.div
       layout
@@ -36,7 +37,7 @@ const PortfolioCard = memo(function PortfolioCard({ project }: PortfolioCardProp
             height={900}
             sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.15]"
-            priority
+            priority={index < 3}
           />
 
           {/* Hover gradient */}

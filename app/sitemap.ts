@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 export const revalidate = 86400
 
 const BASE_URL = 'https://www.nostalgic-studio.co.za'
-const NOW = new Date('2026-06-16')
+const NOW = new Date()
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const corePages: MetadataRoute.Sitemap = [

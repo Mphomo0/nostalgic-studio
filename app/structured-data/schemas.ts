@@ -100,6 +100,7 @@ export function articleSchema(opts: {
   wordCount?: number
   authorName?: string
   articleSection?: string
+  image?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -108,6 +109,12 @@ export function articleSchema(opts: {
     url: `${BASE_URL}${opts.url}`,
     headline: opts.headline,
     description: opts.description,
+    image: {
+      '@type': 'ImageObject',
+      url: opts.image ?? `${BASE_URL}/images/og-image.jpg`,
+      width: 1200,
+      height: 630,
+    },
     datePublished: opts.datePublished,
     dateModified: opts.dateModified ?? opts.datePublished,
     wordCount: opts.wordCount ?? 1500,
@@ -118,9 +125,11 @@ export function articleSchema(opts: {
       name: opts.authorName ?? 'Mpho Moipolai',
       url: `${BASE_URL}/about`,
       jobTitle: 'Founder & Lead Developer',
+      image: `${BASE_URL}/images/team/mpho-moipolai.webp`,
       sameAs: [
-        'https://www.linkedin.com/private/moipolai-mpho-110356396/'
-      ]
+        'https://www.linkedin.com/in/mpho-moipolai-26b06286/',
+        'https://www.instagram.com/studionostalgic',
+      ],
     },
     publisher: {
       '@type': 'Organization',

@@ -51,42 +51,42 @@ export const metadata: Metadata = {
 
 import { webPageSchema, orgRef, breadcrumbSchema } from '@/app/structured-data/schemas'
 
-export default function page() {
-  const schemas = [
-    webPageSchema({
-      url: '/about',
-      name: 'About Nostalgic Studio | Johannesburg Digital Agency',
-      description: 'Nostalgic Studio is a Johannesburg digital design agency founded in 2016 by Mpho Moipolai. We blend timeless design with modern Next.js innovation.',
-    }),
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'About', url: '/about' },
-    ]),
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      '@id': 'https://www.nostalgic-studio.co.za/about#person',
-      name: 'Mpho Moipolai',
-      jobTitle: 'Founder & Lead Developer',
-      worksFor: orgRef(),
-      url: 'https://www.nostalgic-studio.co.za/about',
-      sameAs: [
-        'https://www.linkedin.com/private/moipolai-mpho-110356396/',
-        'https://www.instagram.com/studionostalgic',
-      ],
-      knowsAbout: [
-        'Web Design',
-        'UI/UX Design',
-        'Brand Identity',
-        'Next.js Development',
-        'SEO',
-        'Digital Strategy',
-      ],
-      description:
-        'Mpho Moipolai is a Johannesburg-based designer and developer with 13+ years of experience building digital products for startups across South Africa.',
-    }
-  ]
+const schemas = [
+  webPageSchema({
+    url: '/about',
+    name: 'About Nostalgic Studio | Johannesburg Digital Agency',
+    description: 'Nostalgic Studio is a Johannesburg digital design agency founded in 2016 by Mpho Moipolai. We blend timeless design with modern Next.js innovation.',
+  }),
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': 'https://www.nostalgic-studio.co.za/about#person',
+    name: 'Mpho Moipolai',
+    jobTitle: 'Founder & Lead Developer',
+    worksFor: orgRef(),
+    url: 'https://www.nostalgic-studio.co.za/about',
+    sameAs: [
+      'https://www.linkedin.com/private/moipolai-mpho-110356396/',
+      'https://www.instagram.com/studionostalgic',
+    ],
+    knowsAbout: [
+      'Web Design',
+      'UI/UX Design',
+      'Brand Identity',
+      'Next.js Development',
+      'SEO',
+      'Digital Strategy',
+    ],
+    description:
+      'Mpho Moipolai is a Johannesburg-based designer and developer with 13+ years of experience building digital products for startups across South Africa.',
+  },
+]
 
+export default function page() {
   return (
     <div className="min-h-screen bg-background">
       <main className="pt-24 md:pt-32">

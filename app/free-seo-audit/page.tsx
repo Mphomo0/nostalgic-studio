@@ -31,13 +31,13 @@ const faqs = [
   { question: 'Who is this audit for?', answer: 'Our free SEO audit is for any business in Johannesburg or South Africa that wants to understand why their website is not ranking and what specific steps will improve their Google visibility.' },
 ]
 
-export default function FreeSeoAuditPage() {
-  const schemas = [
-    webPageSchema({ url: '/free-seo-audit', name: 'Free SEO Audit Johannesburg', description: 'Get a free SEO audit for your Johannesburg business.', datePublished: '2026-06-01' }),
-    breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Free SEO Audit', url: '/free-seo-audit' }]),
-    faqPageSchema(faqs),
-  ]
+const schemas = [
+  webPageSchema({ url: '/free-seo-audit', name: 'Free SEO Audit Johannesburg', description: 'Get a free SEO audit for your Johannesburg business.', datePublished: '2026-06-01' }),
+  breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Free SEO Audit', url: '/free-seo-audit' }]),
+  faqPageSchema(faqs),
+]
 
+export default function FreeSeoAuditPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }} />

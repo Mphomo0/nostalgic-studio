@@ -31,6 +31,7 @@ export default function AuthorBio({
           alt={`${name} — author photo`}
           width={56}
           height={56}
+          sizes="56px"
           className="h-14 w-14 shrink-0 rounded-full object-cover"
         />
         <div>

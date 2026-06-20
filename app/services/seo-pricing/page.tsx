@@ -132,25 +132,26 @@ const packages = [
   },
 ]
 
+const schemas = [
+  breadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services' },
+    { name: 'SEO Pricing', url: '/services/seo-pricing' },
+  ]),
+  serviceSchema({
+    id: 'seo-pricing',
+    name: 'SEO Services Johannesburg',
+    description:
+      'Transparent SEO packages from R1,500/month. Includes technical SEO, local SEO, content strategy, and GEO / AI search optimization.',
+    url: '/services/seo-pricing',
+    areaServed: 'Johannesburg, South Africa',
+    priceRange: 'R1500-R15000',
+    deliveryTime: 'Ongoing monthly',
+  }),
+  faqPageSchema(faqs),
+]
+
 export default function SeoPricingPage() {
-  const schemas = [
-    breadcrumbSchema([
-      { name: 'Home', url: '/' },
-      { name: 'Services', url: '/services' },
-      { name: 'SEO Pricing', url: '/services/seo-pricing' },
-    ]),
-    serviceSchema({
-      id: 'seo-pricing',
-      name: 'SEO Services Johannesburg',
-      description:
-        'Transparent SEO packages from R1,500/month. Includes technical SEO, local SEO, content strategy, and GEO / AI search optimization.',
-      url: '/services/seo-pricing',
-      areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R1500-R15000',
-      deliveryTime: 'Ongoing monthly',
-    }),
-    faqPageSchema(faqs),
-  ]
 
   return (
     <>

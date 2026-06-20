@@ -55,9 +55,9 @@ export default function PortfolioGrid() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {filteredProjects.map((project, index) => (
               <li key={project.id}>
-                <PortfolioCard project={project} />
+                <PortfolioCard project={project} index={index} />
               </li>
             ))}
           </AnimatePresence>

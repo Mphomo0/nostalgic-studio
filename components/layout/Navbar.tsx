@@ -102,7 +102,7 @@ const Navbar = memo(function Navbar() {
               width={150}
               height={100}
               sizes="150px"
-              loading="eager"
+              priority
               className="w-full h-full object-contain"
             />
           </Link>

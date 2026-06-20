@@ -5,7 +5,7 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans', adjustFontFallback: true })
 
 export const viewport: Viewport = {
   themeColor: [
@@ -256,36 +256,53 @@ const SCHEMA_BUSINESS = {
   review: [
     {
       '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
       author: { '@type': 'Person', name: 'Ohentse Diseko' },
       reviewBody: 'Nostalgic Studio designed our website and delivered a professional, high-quality result. The collaboration was smooth and the final website exceeded expectations.',
     },
     {
       '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
       author: { '@type': 'Person', name: 'Stefan Mills' },
       reviewBody: 'The Nostalgic Studio team created a modern, professional website that matches our brand perfectly. The design quality and attention to detail were outstanding.',
     },
   ],
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    bestRating: '5',
-    ratingCount: '6',
-    reviewCount: '6',
+    ratingValue: 5.0,
+    bestRating: 5,
+    ratingCount: 6,
+    reviewCount: 6,
   },
 }
+
+const SELLER = {
+  '@type': 'Organization',
+  name: 'Nostalgic Studio',
+  url: 'https://www.nostalgic-studio.co.za',
+} as const
+
+const PRODUCT_RATING = {
+  '@type': 'AggregateRating',
+  ratingValue: 5.0,
+  bestRating: 5,
+  ratingCount: 6,
+  reviewCount: 6,
+} as const
 
 const SCHEMA_PRODUCT_WEB = {
   '@context': 'https://schema.org',
   '@type': 'Product',
   name: 'Web Design Services Johannesburg',
   description: 'Custom Next.js websites with 90+ Lighthouse scores, SEO optimization, and mobile-first design. For startups and businesses in South Africa.',
+  image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+  url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
   brand: { '@type': 'Brand', name: 'Nostalgic Studio' },
+  aggregateRating: PRODUCT_RATING,
   offers: [
-    { '@type': 'Offer', name: 'Starter Website', price: '3500', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', name: 'Business Website', price: '15000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', name: 'E-Commerce Store', price: '25000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', name: 'Starter Website', price: 3500, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
+    { '@type': 'Offer', name: 'Business Website', price: 15000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
+    { '@type': 'Offer', name: 'E-Commerce Store', price: 25000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
   ],
 }
 
@@ -294,13 +311,21 @@ const SCHEMA_PRODUCT_SEO = {
   '@type': 'Product',
   name: 'SEO & AI Search Services Johannesburg',
   description: 'Classic SEO combined with Generative Engine Optimization (GEO) for visibility on Google, ChatGPT, Gemini, Claude, and Perplexity.',
+  image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+  url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
   brand: { '@type': 'Brand', name: 'Nostalgic Studio' },
+  aggregateRating: PRODUCT_RATING,
   offers: [
-    { '@type': 'Offer', name: 'Starter SEO', price: '1500', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', name: 'Growth SEO', price: '5000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
-    { '@type': 'Offer', name: 'Enterprise SEO', price: '10000', priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock' },
+    { '@type': 'Offer', name: 'Starter SEO', price: 1500, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
+    { '@type': 'Offer', name: 'Growth SEO', price: 5000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
+    { '@type': 'Offer', name: 'Enterprise SEO', price: 10000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
   ],
 }
+
+const SITE_SCHEMAS_JSON = JSON.stringify([
+  SCHEMA_WEBSITE, SCHEMA_ORGANIZATION, SCHEMA_PERSON,
+  SCHEMA_BUSINESS, SCHEMA_PRODUCT_WEB, SCHEMA_PRODUCT_SEO,
+])
 
 export default function RootLayout({
   children,
@@ -317,12 +342,7 @@ export default function RootLayout({
         />
 
         {/* Site-wide Schema */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_WEBSITE) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_ORGANIZATION) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PERSON) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_BUSINESS) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PRODUCT_WEB) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA_PRODUCT_SEO) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: SITE_SCHEMAS_JSON }} />
 
         {/* Google Analytics */}
         <Script
