@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
 import { breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Get a Web Design Quote in Johannesburg | Nostalgic Studio',
+  title: 'Get a Free Quote | Web Design & SEO Johannesburg',
 
   description:
     'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Get a Web Design Quote in Johannesburg | Nostalgic Studio',
+    title: 'Get a Free Quote | Web Design & SEO Johannesburg',
     description:
       'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
     url: 'https://www.nostalgic-studio.co.za/contact',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Get a Web Design Quote in Johannesburg | Nostalgic Studio',
+    title: 'Get a Free Quote | Web Design & SEO Johannesburg',
     description:
       'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
@@ -107,7 +107,7 @@ const contactSchemas = [
     '@type': 'ContactPage',
     '@id': 'https://www.nostalgic-studio.co.za/contact',
     url: 'https://www.nostalgic-studio.co.za/contact',
-    name: 'Get a Web Design Quote in Johannesburg | Nostalgic Studio',
+    name: 'Get a Free Quote | Web Design & SEO Johannesburg | Nostalgic Studio',
     description:
       'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
     isPartOf: { '@id': 'https://www.nostalgic-studio.co.za/#website' },
@@ -141,8 +141,8 @@ export default function ContactPage() {
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
             Tell us what you need help with — a new website, website refresh,
-            SEO, branding, or digital marketing. We will review your request
-            and respond with practical next steps, pricing guidance, and
+            SEO, branding, or digital marketing. We will review your request and
+            respond with practical next steps, pricing guidance, and
             recommendations for your business.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto text-center">
@@ -245,11 +245,16 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold">WhatsApp</h3>
                     <p className="text-sm text-muted-foreground mb-2">
-                      Send us a quick message with your website link and what you
-                      want to improve. We can review your site and recommend the
-                      best next step.
+                      Send us a quick message with your website link and what
+                      you want to improve. We can review your site and recommend
+                      the best next step.
                     </p>
-                    <Button asChild variant="hero" size="lg" className="h-14 px-8">
+                    <Button
+                      asChild
+                      variant="hero"
+                      size="lg"
+                      className="h-14 px-8"
+                    >
                       <a
                         href="https://wa.me/27824483273?text=Hi%2C%20I%27d%20like%20a%20free%20website%20review"
                         target="_blank"

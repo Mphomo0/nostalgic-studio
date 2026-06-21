@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'SEO for Construction Companies in South Africa | Nostalgic Studio',
+    title: 'SEO for Construction Companies in South Africa',
     description:
       'SEO for construction companies. Improve Google visibility, get more tender enquiries with local SEO, service pages, and website optimisation.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-for-construction-companies',
@@ -71,9 +71,7 @@ export const metadata: Metadata = {
     title: 'SEO for Construction Companies in South Africa',
     description:
       'SEO for construction companies. Improve Google visibility, get more tender enquiries with local SEO, service pages, and website optimisation.',
-    images: [
-      'https://www.nostalgic-studio.co.za/images/og-image.jpg',
-    ],
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
 
@@ -240,8 +238,8 @@ export default function SEOForConstruction() {
                   reputations are invisible online.
                 </p>
                 <p className="text-muted-foreground">
-                  We fix this by rebuilding the SEO foundation of your website
-                  — creating clear service pages, optimising for local search
+                  We fix this by rebuilding the SEO foundation of your website —
+                  creating clear service pages, optimising for local search
                   terms in Gauteng and across South Africa, and ensuring Google
                   can properly index and rank every page.
                 </p>

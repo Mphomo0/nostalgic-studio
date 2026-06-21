@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight, Building2 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Building2 } from 'lucide-react'
 import { industries } from '@/lib/industries-data'
 import { breadcrumbSchema, webPageSchema } from '@/app/structured-data/schemas'
 
@@ -18,11 +17,19 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Web Design by Industry Johannesburg | Nostalgic Studio',
-    description: 'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
+    description:
+      'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
     url: 'https://www.nostalgic-studio.co.za/industries',
     siteName: 'Nostalgic Studio',
     type: 'website',
-    images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Industry Web Design Johannesburg — Nostalgic Studio' }],
+    images: [
+      {
+        url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Industry Web Design Johannesburg — Nostalgic Studio',
+      },
+    ],
   },
 }
 

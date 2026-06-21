@@ -37,7 +37,7 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Company Johannesburg | Local SEO & AI Search Visibility',
+  title: 'SEO Services Johannesburg | Technical & Local SEO Agency',
 
   description:
     'Nostalgic Studio helps Johannesburg businesses improve Google visibility with technical SEO, local SEO, content strategy, Google Business Profile optimisation, and AI search readiness.',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'SEO Company Johannesburg | Local SEO & AI Search Visibility',
+    title: 'SEO Services Johannesburg | Technical & Local SEO Agency',
     description:
       'Nostalgic Studio helps Johannesburg businesses improve Google visibility with technical SEO, local SEO, content strategy, Google Business Profile optimisation, and AI search readiness.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'SEO Company Johannesburg | Local SEO & AI Search Visibility',
+    title: 'SEO Services Johannesburg | Technical & Local SEO Agency',
     description:
       'Nostalgic Studio helps Johannesburg businesses improve Google visibility with technical SEO, local SEO, content strategy, Google Business Profile optimisation, and AI search readiness.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],

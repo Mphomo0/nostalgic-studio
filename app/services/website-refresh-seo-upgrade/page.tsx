@@ -24,7 +24,7 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Website Refresh & SEO Upgrade South Africa | Nostalgic Studio',
+  title: 'Website Refresh & SEO Upgrade South Africa',
   description:
     'Refresh your outdated website and improve Google visibility. Nostalgic Studio helps South African businesses upgrade design, speed, SEO, service pages, and lead generation.',
   keywords: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Website Refresh & SEO Upgrade South Africa | Nostalgic Studio',
+    title: 'Website Refresh & SEO Upgrade South Africa',
     description:
       'Refresh your outdated website and improve Google visibility. Nostalgic Studio helps South African businesses upgrade design, speed, SEO, service pages, and lead generation.',
     url: 'https://www.nostalgic-studio.co.za/services/website-refresh-seo-upgrade',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Website Refresh & SEO Upgrade South Africa | Nostalgic Studio',
+    title: 'Website Refresh & SEO Upgrade South Africa',
     description:
       'Refresh your outdated website and improve Google visibility. Nostalgic Studio helps South African businesses upgrade design, speed, SEO, service pages, and lead generation.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 const refreshSchemas = [
   serviceSchema({
     id: 'website-refresh-seo-upgrade',
-    name: 'Website Refresh & SEO Upgrade South Africa | Nostalgic Studio',
+    name: 'Website Refresh & SEO Upgrade South Africa',
     description:
       'Refresh your outdated website and improve Google visibility. Nostalgic Studio helps South African businesses upgrade design, speed, SEO, service pages, and lead generation.',
     url: '/services/website-refresh-seo-upgrade',
