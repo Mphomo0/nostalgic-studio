@@ -93,7 +93,7 @@ export default function SocialMediaAds() {
   return (
     <main className="pt-32 pb-20">
       {socialAdsSchemas.map((s, i) => (
-        <script type="application/ld+json"
+        <script key={i} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       

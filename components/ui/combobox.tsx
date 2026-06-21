@@ -67,7 +67,7 @@ function ComboboxInput({
         {...props}
       />
       <InputGroupAddon align="inline-end">
-        {showTrigger && (
+        {showTrigger ? (
           <InputGroupButton
             size="icon-xs"
             variant="ghost"
@@ -78,7 +78,7 @@ function ComboboxInput({
           >
             <ComboboxTrigger />
           </InputGroupButton>
-        )}
+        ) : null}
         {showClear ? <ComboboxClear disabled={disabled} /> : null}
       </InputGroupAddon>
       {children}
@@ -241,7 +241,7 @@ function ComboboxChip({
       {...props}
     >
       {children}
-      {showRemove && (
+      {showRemove ? (
         <ComboboxPrimitive.ChipRemove
           render={<Button variant="ghost" size="icon-xs" />}
           className="-ml-1 opacity-50 hover:opacity-100"
@@ -249,7 +249,7 @@ function ComboboxChip({
         >
           <XIcon className="pointer-events-none" />
         </ComboboxPrimitive.ChipRemove>
-      )}
+      ) : null}
     </ComboboxPrimitive.Chip>
   )
 }

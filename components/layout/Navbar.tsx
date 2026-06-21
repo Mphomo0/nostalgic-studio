@@ -18,6 +18,8 @@ import {
   Server,
   Layout,
   Settings,
+  DollarSign,
+  Building2,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -65,6 +67,16 @@ const serviceLinks = [
   },
   { title: 'Web Hosting', href: '/services/web-hosting', icon: Server },
   { title: 'UX/UI Design', href: '/services/ux-ui-design', icon: Layout },
+  {
+    title: 'Affordable Web Design',
+    href: '/services/affordable-web-design-johannesburg',
+    icon: DollarSign,
+  },
+  {
+    title: 'SEO for Construction',
+    href: '/services/seo-for-construction-companies',
+    icon: Building2,
+  },
   {
     title: 'Web Maintenance',
     href: '/services/web-maintenance',
@@ -170,7 +182,7 @@ const Navbar = memo(function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button asChild variant="hero" size="default">
-              <Link href="/contact">Start a Project</Link>
+              <Link href="/contact">Get a Free Website Review</Link>
             </Button>
           </div>
 
@@ -254,7 +266,7 @@ const Navbar = memo(function Navbar() {
           ))}
           <Button asChild variant="hero" size="lg" className="mt-4">
             <Link href="/contact" onClick={() => setIsOpen(false)}>
-              Start a Project
+              Get a Free Website Review
             </Link>
           </Button>
         </div>

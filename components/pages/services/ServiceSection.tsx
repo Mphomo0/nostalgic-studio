@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import { motion } from 'motion/react'
 import { Check, Layout, Sparkles, Palette, Monitor } from 'lucide-react'
 import { Service } from './types'
@@ -16,7 +17,7 @@ const ICON_MAP = {
   monitor: Monitor,
 }
 
-const ServiceSection = ({ service, reverse }: Props) => {
+const ServiceSection = memo(function ServiceSection({ service, reverse }: Props) {
   const Icon = ICON_MAP[service.icon as keyof typeof ICON_MAP] || Layout
 
   return (
@@ -76,6 +77,6 @@ const ServiceSection = ({ service, reverse }: Props) => {
       </div>
     </motion.div>
   )
-}
+})
 
 export default ServiceSection

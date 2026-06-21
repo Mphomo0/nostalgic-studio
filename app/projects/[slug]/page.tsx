@@ -14,6 +14,8 @@ const ProjectCTA = lazyLoad(() =>
 )
 import { breadcrumbSchema } from '@/app/structured-data/schemas'
 
+const projectBySlug = new Map(projects.map((p) => [p.slug, p]))
+
 export function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
@@ -33,7 +35,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const project = projects.find((p) => p.slug === slug)
+  const project = projectBySlug.get(slug)
 
   if (!project) {
     return {
@@ -74,7 +76,7 @@ export default async function ProjectDetailPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const project = projects.find((p) => p.slug === slug)
+  const project = projectBySlug.get(slug)
 
   if (!project) {
     return (
@@ -149,6 +151,78 @@ export default async function ProjectDetailPage({
               <span>{project.client}</span>
             </nav>
 
+            {/* Project Metadata Card */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10 p-6 bg-card border border-border rounded-2xl">
+              <div>
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">
+                  Client
+                </p>
+                <p className="text-sm font-semibold text-foreground">
+                  {project.client}
+                </p>
+              </div>
+              {project.industry ? (
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">
+                    Industry
+                  </p>
+                  <p className="text-sm font-semibold text-foreground">
+                    {project.industry}
+                  </p>
+                </div>
+              ) : null}
+              {project.location ? (
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">
+                    Location
+                  </p>
+                  <p className="text-sm font-semibold text-foreground">
+                    {project.location}
+                  </p>
+                </div>
+              ) : null}
+              <div>
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">
+                  Timeline
+                </p>
+                <p className="text-sm font-semibold text-foreground">
+                  {project.timeline}
+                </p>
+              </div>
+              {project.services && project.services.length > 0 ? (
+                <div className="col-span-2 md:col-span-1">
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">
+                    Services Delivered
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.services.map((s) => (
+                      <span
+                        key={s}
+                        className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+              {project.liveUrl && project.liveUrl !== '#' ? (
+                <div>
+                  <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">
+                    Live Website
+                  </p>
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-primary hover:underline"
+                  >
+                    {project.liveUrl.replace('https://www.', '')}
+                  </a>
+                </div>
+              ) : null}
+            </div>
+
             <h2 className="text-2xl font-bold mb-6 text-foreground">
               Project Overview
             </h2>
@@ -156,7 +230,7 @@ export default async function ProjectDetailPage({
               {project.description}
             </p>
 
-            {project.challenge && (
+            {project.challenge ? (
               <>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   The Challenge
@@ -165,9 +239,9 @@ export default async function ProjectDetailPage({
                   {project.challenge}
                 </p>
               </>
-            )}
+            ) : null}
 
-            {project.approach && (
+            {project.approach ? (
               <>
                 <h3 className="text-xl font-bold mb-4 text-foreground">
                   Our Approach
@@ -176,7 +250,7 @@ export default async function ProjectDetailPage({
                   {project.approach}
                 </p>
               </>
-            )}
+            ) : null}
 
             {project.results && project.results.length > 0 ? (
               <>
@@ -248,12 +322,56 @@ export default async function ProjectDetailPage({
               ))}
             </div>
 
+            {/* SEO Work Completed */}
+            <div className="mt-10 p-6 bg-primary/5 border border-primary/10 rounded-2xl">
+              <h3 className="text-lg font-bold mb-3 text-foreground">
+                SEO Work Completed
+              </h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                For this project, we focused on:
+              </p>
+              <ul className="space-y-1.5">
+                {[
+                  'SEO-friendly page structure',
+                  'Clear service or offer pages',
+                  'Fast mobile performance',
+                  'Metadata for key pages',
+                  'Internal linking',
+                  'Contact and enquiry flow',
+                  'Structured data where relevant',
+                  'Google indexing readiness',
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-primary shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div className="mt-8 p-6 bg-card border border-border rounded-2xl">
               <p className="text-sm text-muted-foreground">
                 <strong className="text-foreground">Timeline:</strong>{' '}
                 {project.timeline} ·{' '}
                 <strong className="text-foreground">Client:</strong>{' '}
                 {project.client}
+                {project.location ? (
+                  <>
+                    {' · '}
+                    <strong className="text-foreground">Location:</strong>{' '}
+                    {project.location}
+                  </>
+                ) : null}
+                {project.industry ? (
+                  <>
+                    {' · '}
+                    <strong className="text-foreground">Industry:</strong>{' '}
+                    {project.industry}
+                  </>
+                ) : null}
               </p>
             </div>
           </div>

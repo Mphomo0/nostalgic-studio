@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import { Star, Quote } from 'lucide-react'
@@ -50,9 +51,27 @@ const testimonials = [
       'Very professional digital design service. I am extremely happy with the final website.',
     rating: 5,
   },
+  {
+    id: 6,
+    name: 'Vusi Jiya',
+    role: 'Founder, Jiyology Construction & Plumbing',
+    avatar: '/images/avatar.webp',
+    content:
+      'Always helpful, always ready to assist, excellent customer services, Keep it up!!.',
+    rating: 5,
+  },
+  {
+    id: 7,
+    name: 'Vormmia Sikaundi',
+    role: 'Founder, Tanosa Group',
+    avatar: '/images/avatar.webp',
+    content:
+      'Nostalgic Studio has handled my social media, marketing material and web design needs, and I have always received excellent service. They are professional, creative, responsive, and genuinely care about delivering quality work. I highly recommend them to anyone looking for reliable and talented digital service providers.',
+    rating: 5,
+  },
 ]
 
-export default function Testimonials() {
+const Testimonials = memo(function Testimonials() {
   const reviewSchema = {
     '@context': 'https://schema.org',
     '@graph': testimonials.map((t, index) => ({
@@ -189,4 +208,6 @@ export default function Testimonials() {
       `}</style>
     </section>
   )
-}
+})
+
+export default Testimonials

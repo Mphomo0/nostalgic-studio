@@ -51,6 +51,7 @@ export async function sendContactEmail(data: ContactFormValues) {
         <p><strong>Name:</strong> ${data.name}</p>
         <p><strong>Email:</strong> ${data.email}</p>
         <p><strong>Company:</strong> ${data.company || 'N/A'}</p>
+        <p><strong>Service Needed:</strong> ${data.service || 'Not specified'}</p>
         <p><strong>Budget Range:</strong> ${data.budget || 'Not specified'}</p>
         <hr />
         <p><strong>Message:</strong></p>

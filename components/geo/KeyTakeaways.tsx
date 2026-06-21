@@ -41,9 +41,9 @@ export default function KeyTakeaways({
             </span>
             <span>
               <strong className="font-semibold">{t.point}</strong>
-              {t.detail && (
+              {t.detail ? (
                 <span className="text-muted-foreground"> — {t.detail}</span>
-              )}
+              ) : null}
             </span>
           </li>
         ))}

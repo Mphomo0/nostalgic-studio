@@ -3,6 +3,8 @@ export interface Project {
   title: string
   category: string
   client: string
+  industry?: string
+  location?: string
   timeline: string
   role: string
   description: string
@@ -13,6 +15,7 @@ export interface Project {
   approach?: string
   results?: string[]
   technologies?: string[]
+  services?: string[]
 }
 
 export const projects: Project[] = [
@@ -21,6 +24,8 @@ export const projects: Project[] = [
     title: 'Sozim SEO & Digital Marketing Campaign',
     category: 'SEO & Digital Marketing',
     client: 'Sozim Trading & Consultancy',
+    industry: 'Education & Training',
+    location: 'Bloemfontein, Free State',
     timeline: '8 weeks',
     role: 'SEO Specialist',
     description:
@@ -33,10 +38,20 @@ export const projects: Project[] = [
     approach:
       'We implemented a comprehensive digital strategy focused on search visibility and conversion optimization. This included technical SEO improvements using Next.js for server-side rendering and fast load times, on-page SEO with targeted keywords for Bloemfontein and South Africa training markets, clear messaging for prospective students, optimized landing pages with strong calls-to-action, mobile-first design for students on the go, and structured data markup to improve AI search visibility. Every element was designed for both traditional search engines and AI-powered answer engines.',
     results: [
-      '163 clicks in 28 days',
-      'Improved organic search visibility for training-related keywords in Bloemfontein',
+      '163+ organic clicks in 28 days',
+      '0 to 946 impressions for new keywords (e.g. "library assistant") in 28 days',
+      'Average CTR of 3.95% on targeted keywords',
+      '3 enquiries per day from organic traffic',
       'Optimized landing pages driving more corporate enquiries',
       'Mobile-friendly experience reaching students on all devices',
+    ],
+    services: [
+      'Technical SEO & site audit',
+      'Keyword research & strategy',
+      'On-page SEO optimization',
+      'Content strategy & landing page design',
+      'Structured data markup',
+      'Performance optimization',
     ],
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
   },
@@ -45,12 +60,14 @@ export const projects: Project[] = [
     title: 'Didee Holdings Website Redesign',
     category: 'Web Design',
     client: 'Didee Holdings',
+    industry: 'Construction & Civil Engineering',
+    location: 'Centurion, Gauteng',
     timeline: '2 weeks',
     role: 'Web Developer',
     description:
       'Didee Holdings is a South African construction and civil engineering company offering building, infrastructure, roads, and earthworks, showcasing projects.',
     image: '/images/projects/didee.webp',
-    liveUrl: '#',
+    liveUrl: 'https://www.dideeholdings.co.za',
     slug: 'didee-holdings',
     challenge:
       'Didee Holdings needed a website that could position them as a credible, established player in South African construction while showcasing their civil engineering portfolio. Their previous site failed to communicate safety standards or project experience, which hurt their tender applications.',
@@ -61,6 +78,13 @@ export const projects: Project[] = [
       'Indexed for 12+ construction-related search terms in Gauteng',
       'Professional image supports tender and RFP submissions',
       '90+ Lighthouse performance score from launch',
+    ],
+    services: [
+      'Website redesign & UX',
+      'Local SEO optimization',
+      'Project gallery & portfolio layout',
+      'Mobile-first responsive design',
+      'Performance optimization',
     ],
     technologies: [
       'Next.js',
@@ -75,6 +99,8 @@ export const projects: Project[] = [
     title: 'Tanosa Group Website Redesign',
     category: 'Web Design',
     client: 'Tanosa Group',
+    industry: 'Consulting & Professional Services',
+    location: 'Bloemfontein, Free State',
     timeline: '1 week',
     role: 'Web Developer',
     description:
@@ -92,6 +118,13 @@ export const projects: Project[] = [
       'Site loads in under 1.5 seconds on mobile networks',
       'Google-indexed for consulting services in Johannesburg',
     ],
+    services: [
+      'Information architecture & UX design',
+      'Website redesign',
+      'Mobile-first responsive design',
+      'Performance optimization',
+      'Local SEO setup',
+    ],
     technologies: [
       'Next.js',
       'React',
@@ -105,6 +138,8 @@ export const projects: Project[] = [
     title: 'Jiyology New Website',
     category: 'Web Design',
     client: 'Jiyology Building & Construction',
+    industry: 'Construction & Plumbing',
+    location: 'Johannesburg, Gauteng',
     timeline: '1 week',
     role: 'Web Developer',
     description:
@@ -119,8 +154,16 @@ export const projects: Project[] = [
     results: [
       'Visible online presence for residential construction services',
       'Service-specific pages rank for local search queries',
-      'Contact form generates weekly enquiry submissions',
+      'Contact form generates 2 enquiry submissions per week',
+      '5 organic clicks with 178 impressions on mobile',
       'Mobile-first design serves 65% of their traffic',
+    ],
+    services: [
+      'Website design & development',
+      'Service-specific landing pages',
+      'Local SEO optimization',
+      'Before/after project gallery',
+      'Contact & enquiry flow setup',
     ],
     technologies: [
       'Next.js',
@@ -135,6 +178,8 @@ export const projects: Project[] = [
     title: 'A-Z Truck Sales Dealership New Website',
     category: 'Web Design',
     client: 'AZ Truck Sales',
+    industry: 'Automotive & Truck Sales',
+    location: 'Gauteng',
     timeline: '6 weeks',
     role: 'Web Developer',
     description:
@@ -148,9 +193,17 @@ export const projects: Project[] = [
       'We built a feature-rich dealership platform with individual vehicle listing pages, filterable inventory, financing calculator integration, and WhatsApp quick-enquiry buttons. Each truck listing is optimised for search terms like "used trucks Gauteng" and "pre-owned [brand] trucks South Africa".',
     results: [
       '30+ vehicle listings with detailed specifications and photos',
-      'WhatsApp enquiries increased by 3x compared to previous process',
+      '308 mobile clicks with 14,618 impressions from organic search',
       'Individual truck pages rank for brand-specific search queries',
       'Site handles 500+ monthly visitors with sub-2-second load times',
+    ],
+    services: [
+      'Website design & development',
+      'Inventory management system',
+      'Vehicle listing pages with SEO',
+      'Financing calculator integration',
+      'WhatsApp enquiry integration',
+      'Performance optimization',
     ],
     technologies: [
       'Next.js',
@@ -165,6 +218,8 @@ export const projects: Project[] = [
     title: 'Bidco Trucks New Website',
     category: 'Web Design',
     client: 'Bidco Trucks',
+    industry: 'Automotive & Truck Sales',
+    location: 'Pretoria, Gauteng',
     timeline: '8 weeks',
     role: 'Web Developer',
     description:
@@ -181,6 +236,13 @@ export const projects: Project[] = [
       'Enquiry system streamlined buyer communication',
       'Pan-African search visibility for truck and equipment queries',
       'Scalable architecture handles growing inventory needs',
+    ],
+    services: [
+      'Website design & development',
+      'Inventory management system',
+      'Equipment listing pages with SEO',
+      'Multi-language & pan-African SEO readiness',
+      'Enquiry system integration',
     ],
     technologies: [
       'Next.js',

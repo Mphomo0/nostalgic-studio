@@ -40,6 +40,7 @@ export default function ContactForm() {
       name: '',
       email: '',
       company: '',
+      service: '',
       budget: '',
       message: '',
       num1: 0,
@@ -160,6 +161,26 @@ export default function ContactForm() {
             </SelectContent>
           </Select>
         </div>
+      </div>
+
+      <div>
+        <label htmlFor="service" className="block text-sm font-medium mb-2">
+          What Do You Need Help With? *
+        </label>
+        <Select onValueChange={(value) => setValue('service', value)}>
+          <SelectTrigger id="service">
+            <SelectValue placeholder="Select a service" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="new-website">I need a new website</SelectItem>
+            <SelectItem value="website-refresh">I need to refresh my current website</SelectItem>
+            <SelectItem value="seo">I need SEO / Google ranking help</SelectItem>
+            <SelectItem value="gbp">I need Google Business Profile optimisation</SelectItem>
+            <SelectItem value="branding">I need branding / logo design</SelectItem>
+            <SelectItem value="social-media">I need social media marketing</SelectItem>
+            <SelectItem value="not-sure">I am not sure — please advise</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
 
       <div>

@@ -173,7 +173,7 @@ const Footer = () => {
           {/* CTA */}
           <div>
             <h4 className="text-foreground font-semibold mb-6">
-              Start a Project
+              Get a Free Website Review
             </h4>
             <p className="text-muted-foreground text-sm mb-6">
               Ready to bring your vision to life? Let&apos;s create something

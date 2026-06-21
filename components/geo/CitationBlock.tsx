@@ -19,11 +19,11 @@ export function CitationBlock({ stat, context, source }: CitationBlockProps) {
     >
       <p className="text-2xl font-bold text-foreground">{stat}</p>
       <p className="mt-1 text-base text-muted-foreground">{context}</p>
-      {source && (
+      {source ? (
         <p className="mt-1 text-xs text-muted-foreground opacity-60">
           Source: {source}
         </p>
-      )}
+      ) : null}
     </div>
   )
 }

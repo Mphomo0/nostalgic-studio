@@ -196,11 +196,11 @@ export default function SeoPricingPage() {
                   key={pkg.name}
                   className={`border rounded-2xl p-8 bg-card relative ${pkg.popular ? 'ring-2 ring-primary shadow-lg scale-105 md:scale-105' : ''}`}
                 >
-                  {pkg.popular && (
+                  {pkg.popular ? (
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-semibold px-4 py-1 rounded-full">
                       Most Popular
                     </div>
-                  )}
+                  ) : null}
                   <h3 className="text-xl font-bold mb-1">{pkg.name}</h3>
                   <div className="mb-4">
                     <span className="text-4xl font-bold">{pkg.price}</span>

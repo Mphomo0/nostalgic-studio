@@ -1,14 +1,18 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle2, Briefcase } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowRight, CheckCircle2, Briefcase, Building2, TrendingUp, Shield, Zap, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   industries,
   industrySlugs,
   type IndustryInfo,
 } from '@/lib/industries-data'
+import { projects } from '@/lib/portfolio-data'
 import { breadcrumbSchema, serviceSchema } from '@/app/structured-data/schemas'
+
+const industryBySlug = new Map(industries.map((i) => [i.slug, i]))
 
 export const dynamic = 'force-static'
 
@@ -17,9 +21,8 @@ export function generateStaticParams() {
 }
 
 function industryMeta(ind: IndustryInfo) {
-  const loc = ind.name.length <= 13 ? ' Johannesburg' : ''
-  const title = `${ind.name} Website Design${loc}`
-  const desc = `Custom website design for ${ind.name.toLowerCase()} businesses in Johannesburg & South Africa. Next.js, SEO, branding & digital marketing. Free quote.`
+  const title = `${ind.heroTagline} | Nostalgic Studio`
+  const desc = ind.description.slice(0, 160)
   return { title, desc }
 }
 
@@ -29,7 +32,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const ind = industries.find((i) => i.slug === slug)
+  const ind = industryBySlug.get(slug)
   if (!ind) return {}
   const { title, desc } = industryMeta(ind)
   const url = `https://www.nostalgic-studio.co.za/industries/${ind.slug}`
@@ -44,7 +47,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: `${title} | Nostalgic Studio`,
+      title,
       description: desc,
       url,
       siteName: 'Nostalgic Studio',
@@ -54,11 +57,82 @@ export async function generateMetadata({
           url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: `${title} — Nostalgic Studio`,
+          alt: `${ind.heroTagline} — Nostalgic Studio`,
         },
       ],
     },
   }
+}
+
+const industryIcons: Record<string, typeof Building2> = {
+  construction: Building2,
+  'professional-services': Briefcase,
+  healthcare: Shield,
+  ecommerce: TrendingUp,
+  startups: Zap,
+}
+
+function RelatedProjects({ slug }: { slug: string }) {
+  const related = projects.filter((p) => {
+    if (slug === 'construction')
+      return p.industry?.toLowerCase().includes('construction')
+    if (slug === 'professional-services')
+      return p.industry?.toLowerCase().includes('consult')
+    if (slug === 'healthcare') return false
+    if (slug === 'ecommerce') return false
+    if (slug === 'startups') return false
+    return false
+  })
+
+  if (related.length === 0) return null
+
+  return (
+    <section className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-4">
+          Related Case Studies
+        </h2>
+        <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
+          Real projects we have delivered for {indName(slug)} businesses.
+        </p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {related.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/projects/${p.slug}`}
+              className="group block overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/50 transition-colors"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-4">
+                <p className="text-xs text-primary font-medium mb-1">
+                  {p.category}
+                </p>
+                <h3 className="font-semibold text-sm text-foreground leading-snug">
+                  {p.title}
+                </h3>
+                <p className="text-xs text-muted-foreground mt-2 line-clamp-2">
+                  {p.description}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function indName(slug: string) {
+  const ind = industryBySlug.get(slug)
+  return ind?.name.toLowerCase() || slug
 }
 
 export default async function IndustryPage({
@@ -67,10 +141,11 @@ export default async function IndustryPage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const ind = industries.find((i) => i.slug === slug)
+  const ind = industryBySlug.get(slug)
   if (!ind) notFound()
 
   const { title, desc } = industryMeta(ind)
+  const Icon = industryIcons[slug] || Building2
 
   return (
     <>
@@ -100,11 +175,14 @@ export default async function IndustryPage({
         <section className="relative py-24 md:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-background to-primary/10" />
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <Icon className="w-8 h-8 text-primary" />
+            </div>
             <p className="text-sm font-semibold text-primary tracking-wide uppercase mb-4">
-              Industry Specialization — {ind.name}
+              Industry Specialization
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              {ind.name} Website Design
+              {ind.heroTagline}
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               {ind.description}
@@ -121,15 +199,15 @@ export default async function IndustryPage({
         {/* Challenges */}
         <section className="py-20 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <h2 className="text-3xl font-bold mb-6">
-                  Challenges {ind.name} Companies Face Online
+                  {ind.challengeHeader}
                 </h2>
                 <ul className="space-y-4">
                   {ind.challenges.map((c) => (
                     <li key={c} className="flex items-start gap-3">
-                      <div className="p-1 rounded-full bg-destructive/10 mt-1">
+                      <div className="p-1 rounded-full bg-destructive/10 mt-1 shrink-0">
                         <Briefcase className="h-4 w-4 text-destructive" />
                       </div>
                       <span className="text-lg">{c}</span>
@@ -139,7 +217,7 @@ export default async function IndustryPage({
               </div>
               <div>
                 <h2 className="text-3xl font-bold mb-6">
-                  How We Help {ind.name} Businesses
+                  How We Solve Them
                 </h2>
                 <ul className="space-y-4">
                   {ind.services.map((s) => (
@@ -154,11 +232,11 @@ export default async function IndustryPage({
           </div>
         </section>
 
-        {/* We Serve */}
+        {/* Who We Serve */}
         <section className="py-20">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-4">
-              Who We Serve
+              Who We Work With
             </h2>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
               We build websites for a wide range of {ind.name.toLowerCase()}{' '}
@@ -168,7 +246,7 @@ export default async function IndustryPage({
               {ind.examples.map((ex) => (
                 <div
                   key={ex}
-                  className="border rounded-xl p-4 bg-card text-center font-medium"
+                  className="border rounded-xl p-5 bg-card text-center font-medium hover:border-primary/30 transition-colors"
                 >
                   {ex}
                 </div>
@@ -177,19 +255,76 @@ export default async function IndustryPage({
           </div>
         </section>
 
-        {/* Why Us */}
+        {/* What a Construction Website Needs - only for construction */}
+        {ind.websiteNeeds && ind.websiteNeeds.length > 0 ? (
+          <section className="py-20">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-3xl font-bold text-center mb-4">
+                What a Construction Website Needs
+              </h2>
+              <p className="text-lg text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+                A strong construction website should include:
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-3xl mx-auto">
+                {ind.websiteNeeds.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              {ind.servicePageIdeas && ind.servicePageIdeas.length > 0 ? (
+                <>
+                  <h3 className="text-xl font-bold text-center mt-12 mb-6">
+                    Service Page Ideas for Construction Clients
+                  </h3>
+                  <div className="flex flex-wrap justify-center gap-3">
+                    {ind.servicePageIdeas.map((idea) => (
+                      <span
+                        key={idea}
+                        className="px-4 py-2 bg-card border border-border rounded-full text-sm font-medium"
+                      >
+                        {idea}
+                      </span>
+                    ))}
+                  </div>
+                </>
+              ) : null}
+            </div>
+          </section>
+        ) : null}
+
+        {/* Why Choose Us - Industry Specific */}
         <section className="py-20 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Why {ind.name} Businesses Choose Nostalgic Studio
+            <h2 className="text-3xl font-bold mb-4">
+              Why {ind.name} Businesses Choose Us
             </h2>
-            <div className="grid sm:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-3 gap-6 mt-10">
+              {ind.whyUsPoints.map((point, i) => (
+                <div
+                  key={i}
+                  className="border rounded-xl p-6 bg-card text-left"
+                >
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-3 gap-6 mt-10 max-w-lg mx-auto">
               {[
                 { stat: '70+', label: 'Projects Delivered' },
                 { stat: '5.0★', label: 'Google Rating' },
-                { stat: '13+ yrs', label: 'Industry Experience' },
+                { stat: '13+ yrs', label: 'Experience' },
               ].map((s) => (
-                <div key={s.stat} className="border rounded-xl p-6 bg-card">
+                <div key={s.stat}>
                   <div className="text-3xl font-bold text-primary">
                     {s.stat}
                   </div>
@@ -199,14 +334,11 @@ export default async function IndustryPage({
                 </div>
               ))}
             </div>
-            <p className="text-lg text-muted-foreground mt-8 max-w-xl mx-auto">
-              We build on Next.js for 90+ Lighthouse scores, sub-1.5s load
-              times, and SEO that works from day one — giving{' '}
-              {ind.name.toLowerCase()} businesses a real competitive advantage
-              online.
-            </p>
           </div>
         </section>
+
+        {/* Related Projects */}
+        <RelatedProjects slug={slug} />
 
         {/* CTA */}
         <section className="py-20">

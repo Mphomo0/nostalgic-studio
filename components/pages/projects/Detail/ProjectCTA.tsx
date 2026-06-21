@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button'
 export function ProjectCTA() {
   return (
     <section className="relative py-16 sm:py-20 lg:py-28">
-      {/* Background */}
       <div className="absolute inset-0 bg-secondary/20" />
       <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
 
@@ -22,7 +21,7 @@ export function ProjectCTA() {
             font-bold tracking-tight text-foreground
           "
         >
-          Like What You See?
+          Want Results Like This for Your Business?
         </motion.h2>
 
         <motion.p
@@ -32,14 +31,12 @@ export function ProjectCTA() {
           transition={{ delay: 0.1 }}
           className="
             mx-auto mb-10 sm:mb-12
-            
             text-base sm:text-lg md:text-xl
-            leading-relaxed text-muted-foreground
+            leading-relaxed text-muted-foreground max-w-2xl
           "
         >
-          Let&apos;s create something amazing together.
-          <br className="hidden sm:block" />
-          Reach out to start your project.
+          If your website is not bringing enquiries, we can review it and show
+          you what to improve first.
         </motion.p>
 
         <motion.div
@@ -53,7 +50,7 @@ export function ProjectCTA() {
             asChild
             className="w-full sm:w-auto min-w-50 px-10 h-14 text-lg font-semibold rounded-full hover-glow"
           >
-            <Link href="/contact">Start a Project</Link>
+            <Link href="/contact">Get a Free Website Review</Link>
           </Button>
         </motion.div>
       </div>

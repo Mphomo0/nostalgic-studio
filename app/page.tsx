@@ -4,6 +4,7 @@ import lazyLoad from 'next/dynamic'
 export const dynamic = 'force-static'
 import Hero from '@/components/pages/home/Hero'
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 
 // Dynamically import below-the-fold components to defer JS execution and improve TTI
 const PortfolioPreview = lazyLoad(() =>
@@ -21,8 +22,6 @@ const CTA = lazyLoad(() => import('@/components/pages/home/CTA'))
 const FaqSection = lazyLoad(() =>
   import('@/components/geo/FaqSection').then((mod) => mod.FaqSection),
 )
-const AuthorBio = lazyLoad(() => import('@/components/geo/AuthorBio'))
-
 export const metadata: Metadata = {
   title: 'Johannesburg SEO, Branding & Web Design',
 
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Johannesburg SEO, Branding & Web Design | Nostalgic Studio',
+    title: 'Johannesburg SEO, Branding & Web Design',
     description:
       'Johannesburg web design, SEO and branding studio. Fast websites, higher Google rankings and brands people remember. See our work and get a quote.',
     url: 'https://www.nostalgic-studio.co.za',
@@ -68,7 +67,6 @@ export const metadata: Metadata = {
     ],
   },
 }
-
 
 const faqs = [
   {
@@ -103,6 +101,55 @@ export default function Home() {
     <>
       <Hero />
 
+      {/* Enquiries Section */}
+      <section className="py-16 bg-card border-y border-border">
+        <div className="container-wide mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">
+              Is Your Website Helping You Get Enquiries?
+            </h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              Many South African businesses have websites that look fine but do
+              not bring in leads. The common problems are slow loading, weak
+              service pages, unclear messaging, poor Google setup, and no strong
+              call-to-action.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              At Nostalgic Studio, we build websites that are designed to help
+              people find you, trust you, and contact you. Every website is
+              planned around your services, your location, your ideal customer,
+              and the actions you want visitors to take.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Help */}
+      <section className="py-16 bg-primary/5">
+        <div className="container-wide mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-4">Who We Help</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              We work with South African businesses that need a stronger online
+              presence, including:
+            </p>
+            <ul className="grid gap-3 text-muted-foreground list-disc list-inside marker:text-primary">
+              <li>Construction companies</li>
+              <li>Local service businesses</li>
+              <li>Consultants and professional services</li>
+              <li>Startups and small businesses</li>
+              <li>E-commerce brands</li>
+              <li>Businesses with outdated WordPress websites</li>
+              <li>Companies that need SEO and Google visibility</li>
+            </ul>
+            <p className="text-lg text-muted-foreground mt-6">
+              Whether you need a new website, a website refresh, or better local
+              SEO, we help you build a stronger foundation for online enquiries.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Snippet Answer - GEO Optimization */}
       <section
         className="py-16 bg-card border-y border-border"
@@ -111,12 +158,16 @@ export default function Home() {
         <div className="container-wide mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 id="snippet-heading" className="text-2xl font-bold mb-4">
-              What is the Best Web Design Agency in Johannesburg?
+              What Makes a Good Web Design Agency in Johannesburg?
             </h2>
             <p className="text-lg text-muted-foreground">
-              <strong>Nostalgic Studio is Johannesburg&apos;s top-rated web design agency</strong>,
-              specialising in custom Next.js websites for startups — delivering sub-2-second
-              load times, full SEO setup, and conversion-focused design from R3,500.
+              A good web design agency in Johannesburg should build more than a
+              good-looking website. Your site should load fast, explain your
+              services clearly, work properly on mobile, include local SEO
+              foundations, and make it easy for visitors to call, WhatsApp, or
+              request a quote. <strong>Nostalgic Studio</strong> focuses on
+              performance, SEO structure, and lead generation for South African
+              businesses.
             </p>
           </div>
         </div>
@@ -168,9 +219,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="container-wide mx-auto px-4 max-w-3xl">
-        <AuthorBio />
-      </div>
       <section className="py-12">
         <div className="container-wide mx-auto px-4 max-w-3xl">
           <h2 className="text-xl font-bold mb-4">
@@ -298,6 +346,57 @@ export default function Home() {
             from <strong>R200/month</strong> · Maintenance from{' '}
             <strong>R500/month</strong>
           </p>
+        </div>
+      </section>
+
+      {/* Popular Services */}
+      <section className="section-padding bg-background">
+        <div className="container-wide mx-auto max-w-3xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+            Popular Services
+          </h2>
+          <div className="grid gap-4">
+            {[
+              {
+                name: 'Web Design Johannesburg',
+                href: '/services/web-design-johannesburg',
+              },
+              {
+                name: 'SEO Services Johannesburg',
+                href: '/services/seo-services-johannesburg',
+              },
+              {
+                name: 'Website Refresh & SEO Upgrade',
+                href: '/services/website-refresh-seo-upgrade',
+              },
+              {
+                name: 'Construction Website Design',
+                href: '/services/web-design-johannesburg',
+              },
+              {
+                name: 'Small Business Website Design',
+                href: '/services/web-design-johannesburg',
+              },
+              {
+                name: 'Next.js Website Design',
+                href: '/services/nextjs-website-design',
+              },
+            ].map((service) => (
+              <Link
+                key={service.name}
+                href={service.href}
+                className="group flex items-center justify-between p-5 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+              >
+                <span className="font-medium group-hover:text-primary transition-colors">
+                  {service.name}
+                </span>
+                <ArrowRight
+                  size={18}
+                  className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all"
+                />
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

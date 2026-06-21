@@ -32,7 +32,7 @@ export default function AboutThisPage({
       </p>
       <p className="text-sm leading-relaxed text-foreground">{summary}</p>
 
-      {covers && covers.length > 0 && (
+      {covers && covers.length > 0 ? (
         <ul
           aria-label="Topics covered"
           className="mt-3 flex flex-wrap gap-2"
@@ -46,13 +46,13 @@ export default function AboutThisPage({
             </li>
           ))}
         </ul>
-      )}
+      ) : null}
 
-      {lastUpdated && (
+      {lastUpdated ? (
         <p className="mt-3 text-[11px] text-muted-foreground">
           Last updated: {lastUpdated}
         </p>
-      )}
+      ) : null}
     </section>
   )
 }

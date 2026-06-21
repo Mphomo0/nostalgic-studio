@@ -73,9 +73,9 @@ export default function ProjectHero({ slug }: { slug: string }) {
             />
             <MetaItem icon={Tag} label="Category" value={project.category} />
 
-            {project.role && (
+            {project.role ? (
               <MetaItem icon={Briefcase} label="Role" value={project.role} />
-            )}
+            ) : null}
           </aside>
         </div>
       </div>

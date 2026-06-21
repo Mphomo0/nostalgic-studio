@@ -10,28 +10,28 @@ const services = [
     title: 'Web Design Johannesburg',
     description:
       'Custom Next.js websites built for performance, speed, and high conversion rates in the South African market.',
-    link: '/services#web-design',
+    link: '/services/web-design-johannesburg',
   },
   {
     icon: Sparkles,
     title: 'UI/UX Design Agency',
     description:
       'User-centric interfaces and seamless digital experiences that drive engagement and business growth.',
-    link: '/services#ui-ux',
+    link: '/services/ux-ui-design',
   },
   {
     icon: Palette,
     title: 'Branding & Identity',
     description:
       'Iconic brand identities, logos, and visual systems that make your business memorable and trustworthy.',
-    link: '/services#branding',
+    link: '/services/branding-design',
   },
   {
     icon: Monitor,
     title: 'Digital Marketing & SEO',
     description:
       'Dominating search results in Johannesburg with technical SEO, content strategy, and social media ads.',
-    link: '/services#digital',
+    link: '/services/social-media-marketing',
   },
 ]
 

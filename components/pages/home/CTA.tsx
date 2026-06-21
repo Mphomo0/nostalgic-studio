@@ -65,7 +65,7 @@ export default function CTA() {
               size="xl"
               className="w-full sm:w-auto"
             >
-              <Link href="/projects">View Our Work</Link>
+              <Link href="/services/web-design-johannesburg">View Website Packages</Link>
             </Button>
           </div>
         </motion.div>

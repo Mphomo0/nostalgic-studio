@@ -87,7 +87,7 @@ export default function EcommerceWebsiteDevelopment() {
   return (
     <main className="pt-32 pb-20">
       {ecommerceSchemas.map((s, i) => (
-        <script type="application/ld+json"
+        <script key={i} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       <div className="container-wide mx-auto px-4">

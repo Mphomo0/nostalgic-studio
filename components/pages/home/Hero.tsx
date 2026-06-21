@@ -29,18 +29,17 @@ export default function Hero() {
             id="hero-heading"
             className="animate-fade-up animate-delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            Expert{' '}
             <span className="text-gradient">Web Design Johannesburg</span>
             <br />
-            for Ambitious Startups
+            for Small Businesses That Need More Leads
           </h1>
 
           {/* Direct Answer Paragraph - GEO Definition Pattern */}
           <p className="animate-fade-up animate-delay-200 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
-            Nostalgic Studio is a custom web development and web design agency
-            in Johannesburg. We specialize in building high-performance Next.js
-            websites that are SEO-optimized and conversion-focused for startups
-            and growing businesses in South Africa.
+            Nostalgic Studio builds fast, SEO-ready websites for South African
+            small businesses, startups, and service companies. We help you turn
+            your website into a 24/7 lead-generation tool with clear messaging,
+            fast loading, local SEO, and conversion-focused design.
           </p>
 
           {/* CTAs */}
@@ -52,7 +51,7 @@ export default function Hero() {
               className="w-full sm:w-auto md:h-14 md:px-8"
             >
               <Link href="/contact" className="flex items-center gap-2">
-                Start a Project <ArrowRight size={20} />
+                Get a Free Website Review <ArrowRight size={20} />
               </Link>
             </Button>
 
@@ -62,7 +61,7 @@ export default function Hero() {
               size="lg"
               className="w-full sm:w-auto md:h-14 md:px-8"
             >
-              <Link href="/projects">View Our Work</Link>
+              <Link href="/services/web-design-johannesburg">View Website Packages</Link>
             </Button>
           </div>
 

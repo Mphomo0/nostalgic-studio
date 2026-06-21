@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowRight, MapPin, Building2, Users, Globe } from 'lucide-react'
+import { ArrowRight, MapPin, Building2, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { locations, suburbSlugs, type LocationInfo } from '@/lib/locations-data'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+
+const locationBySlug = new Map(locations.map((l) => [l.slug, l]))
 
 export const dynamic = 'force-static'
 
@@ -24,7 +26,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const { slug } = await params
-  const loc = locations.find((l) => l.slug === slug)
+  const loc = locationBySlug.get(slug)
   if (!loc) return {}
   const { title, desc } = locationMeta(loc)
   const url = `https://www.nostalgic-studio.co.za/locations/${loc.slug}`
@@ -56,7 +58,7 @@ export async function generateMetadata({
 
 export default async function LocationPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const loc = locations.find((l) => l.slug === slug)
+  const loc = locationBySlug.get(slug)
   if (!loc) notFound()
 
   const { title, desc } = locationMeta(loc)
@@ -110,7 +112,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="/projects">View Our Work</Link>
+                  <Link href="/services/web-design-johannesburg">View Website Packages</Link>
                 </Button>
               </div>
               <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
@@ -131,54 +133,17 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
 
-        {/* About */}
+        {/* About — Unique content per location */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-start">
               <div>
                 <h2 className="text-3xl font-bold mb-6">
-                  Digital Services in {loc.name}
+                  Web Design for {loc.name} Businesses
                 </h2>
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  {loc.description}
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {loc.uniqueContent}
                 </p>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span>
-                      <strong>Custom Web Design</strong> — Next.js websites
-                      built for speed, SEO, and conversions
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span>
-                      <strong>SEO & AI Search Visibility</strong> — Rank on
-                      Google and get cited by ChatGPT, Gemini, and Perplexity
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span>
-                      <strong>Branding & Identity</strong> — Complete brand
-                      design including logos, guidelines, and collateral
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span>
-                      <strong>E-commerce Development</strong> — Online stores
-                      with PayFast, Yoco, and Ozow integration
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                    <span>
-                      <strong>Social Media Marketing</strong> — Instagram,
-                      Facebook, and LinkedIn management and paid ads
-                    </span>
-                  </li>
-                </ul>
               </div>
               <div className="bg-card border rounded-xl p-8">
                 <h3 className="text-xl font-semibold mb-4">Quick Facts</h3>
@@ -190,27 +155,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-sm text-muted-foreground">
-                      Population
-                    </dt>
+                    <dt className="text-sm text-muted-foreground">Population</dt>
                     <dd className="font-medium">{loc.population}</dd>
                   </div>
                   <div>
-                    <dt className="text-sm text-muted-foreground">
-                      Key Business Areas
-                    </dt>
+                    <dt className="text-sm text-muted-foreground">Key Business Areas</dt>
                     <dd className="font-medium">{loc.businessHub}</dd>
                   </div>
                   <div>
-                    <dt className="text-sm text-muted-foreground">
-                      Nearby Suburbs
-                    </dt>
+                    <dt className="text-sm text-muted-foreground">Nearby Suburbs</dt>
                     <dd className="font-medium">{loc.nearby.join(', ')}</dd>
                   </div>
                   <div>
-                    <dt className="text-sm text-muted-foreground">
-                      Starting Price
-                    </dt>
+                    <dt className="text-sm text-muted-foreground">Starting Price</dt>
                     <dd className="font-medium text-primary">From R3,500</dd>
                   </div>
                 </dl>
@@ -218,6 +175,54 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </div>
           </div>
         </section>
+
+        {/* Local Businesses */}
+        <section className="py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-4">
+              Local Businesses We Serve in {loc.name}
+            </h2>
+            <p className="text-lg text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
+              We build websites for a wide range of businesses in {loc.name}
+              {' '}and the surrounding {loc.province} area.
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {loc.localBusinesses.map((b) => (
+                <div
+                  key={b}
+                  className="border rounded-xl p-5 bg-card text-center font-medium hover:border-primary/30 transition-colors"
+                >
+                  {b}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Local Case Study */}
+        {loc.localCaseStudy ? (
+          <section className="py-16 bg-muted/30">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="bg-card border border-border rounded-2xl p-8 md:p-10">
+                <p className="text-xs text-primary font-semibold tracking-wide uppercase mb-2">
+                  Local Case Study
+                </p>
+                <h2 className="text-2xl font-bold mb-3">
+                  {loc.localCaseStudy.title}
+                </h2>
+                <p className="text-muted-foreground mb-6">
+                  {loc.localCaseStudy.description}
+                </p>
+                <Button asChild variant="outline">
+                  <Link href={`/projects/${loc.localCaseStudy.slug}`}>
+                    Read the Full Case Study
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         {/* Services Grid */}
         <section className="py-16">
@@ -382,8 +387,29 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
 
+        {/* FAQ */}
+        {loc.faq.length > 0 ? (
+          <section className="py-16 bg-muted/30">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold mb-8 text-center">
+                Frequently Asked Questions About Web Design in {loc.name}
+              </h2>
+              <div className="space-y-6">
+                {loc.faq.map((item, i) => (
+                  <div key={i} className="bg-card border border-border rounded-xl p-6">
+                    <h3 className="font-semibold mb-2">{item.q}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {/* Related Locations */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold mb-8 text-center">
               More Locations

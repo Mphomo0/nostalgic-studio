@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, memo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import PortfolioCard from './PortfolioCard'
 import { projects } from '@/lib/portfolio-data'
@@ -13,7 +13,7 @@ const categories = [
   'Digital Design',
 ]
 
-export default function PortfolioGrid() {
+const PortfolioGrid = memo(function PortfolioGrid() {
   const [activeCategory, setActiveCategory] = useState('All')
 
   const filteredProjects =
@@ -65,4 +65,6 @@ export default function PortfolioGrid() {
       </div>
     </section>
   )
-}
+})
+
+export default PortfolioGrid

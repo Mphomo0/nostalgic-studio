@@ -6,6 +6,8 @@
 const BASE_URL = 'https://www.nostalgic-studio.co.za'
 const ORG_ID = `${BASE_URL}/#organization`
 const BIZ_ID = `${BASE_URL}/#business`
+const NON_DIGIT_RE = /[^0-9]/g
+const BUILD_DATE = new Date().toISOString().split('T')[0]
 
 /** Core organisation reference (use in subpage schemas to link back) */
 export function orgRef() {
@@ -56,7 +58,7 @@ export function serviceSchema(opts: {
       priceCurrency: 'ZAR',
       priceSpecification: {
         '@type': 'PriceSpecification',
-        price: opts.priceRange?.split('-')[0].replace(/[^0-9]/g, '') || '5000',
+        price: opts.priceRange?.split('-')[0].replace(NON_DIGIT_RE, '') || '5000',
         priceCurrency: 'ZAR',
         description: `Pricing starting from ${opts.priceRange || 'R5,000'}`
       }
@@ -84,7 +86,7 @@ export function webPageSchema(opts: {
     isPartOf: { '@id': `${BASE_URL}/#website` },
     publisher: orgRef(),
     datePublished: opts.datePublished ?? '2026-01-01',
-    dateModified: opts.dateModified ?? new Date().toISOString().split('T')[0],
+    dateModified: opts.dateModified ?? BUILD_DATE,
   }
 }
 

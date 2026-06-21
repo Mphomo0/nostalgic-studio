@@ -2,6 +2,11 @@
  * Heuristic-based bot detection utilities.
  */
 
+const WORD_SPLIT_RE = /\s+/
+const REPETITION_RE = /(.)\1{4,}/
+const NON_ALPHA_RE = /[^a-zA-Z]/g
+const VOWEL_RE = /[aeiou]/g
+
 /**
  * Checks if a string looks like gibberish or random bot-generated text.
  * Heuristics used:
@@ -12,7 +17,7 @@
 export function isGibberish(text: string): boolean {
   if (!text) return false;
 
-  const words = text.split(/\s+/);
+  const words = text.split(WORD_SPLIT_RE);
   
   // 1. Check for excessively long words (typical in random strings)
   for (const word of words) {
@@ -20,13 +25,12 @@ export function isGibberish(text: string): boolean {
   }
 
   // 2. Check for character repetition (e.g., "aaaaa" or "ababababab")
-  const repetitionRegex = /(.)\1{4,}/; // 5 or more same characters in a row
-  if (repetitionRegex.test(text)) return true;
+  if (REPETITION_RE.test(text)) return true;
 
   // 3. Vowel-to-consonant ratio (only for alphabetical words)
-  const alphaText = text.replace(/[^a-zA-Z]/g, '').toLowerCase();
+  const alphaText = text.replace(NON_ALPHA_RE, '').toLowerCase();
   if (alphaText.length > 10) {
-    const vowels = alphaText.match(/[aeiou]/g) || [];
+    const vowels = alphaText.match(VOWEL_RE) || [];
     const consonants = alphaText.length - vowels.length;
     
     // Very low vowel count usually indicates random strings

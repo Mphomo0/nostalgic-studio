@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import { motion } from 'motion/react'
 import { ProcessStep } from './types'
 
@@ -7,7 +8,7 @@ interface Props {
   steps: ProcessStep[]
 }
 
-const ProcessSection = ({ steps }: Props) => {
+const ProcessSection = memo(function ProcessSection({ steps }: Props) {
   return (
     <section
       className="section-padding"
@@ -58,6 +59,6 @@ const ProcessSection = ({ steps }: Props) => {
       </div>
     </section>
   )
-}
+})
 
 export default ProcessSection

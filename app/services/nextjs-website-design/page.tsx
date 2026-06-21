@@ -83,7 +83,7 @@ export default function NextjsWebsiteDesign() {
   return (
     <main className="pt-32 pb-20">
       {nextjsSchemas.map((s, i) => (
-        <script type="application/ld+json"
+        <script key={i} type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
       <div className="container-wide mx-auto px-4">

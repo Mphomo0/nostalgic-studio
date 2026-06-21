@@ -17,8 +17,10 @@ import {
   Share2, 
   Megaphone, 
   Server, 
-  Layout, 
-  Settings 
+  Layout,
+  Settings,
+  DollarSign,
+  Building2,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -101,6 +103,16 @@ const specializedSolutions = [
     title: 'Web Maintenance',
     href: '/services/web-maintenance',
     icon: Settings,
+  },
+  {
+    title: 'Affordable Web Design',
+    href: '/services/affordable-web-design-johannesburg',
+    icon: DollarSign,
+  },
+  {
+    title: 'SEO for Construction Companies',
+    href: '/services/seo-for-construction-companies',
+    icon: Building2,
   },
 ]
 

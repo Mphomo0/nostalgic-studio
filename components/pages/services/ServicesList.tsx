@@ -1,5 +1,6 @@
 'use client'
 
+import { memo } from 'react'
 import ServiceSection from './ServiceSection'
 import { Service } from './types'
 
@@ -7,7 +8,7 @@ interface Props {
   services: Service[]
 }
 
-const ServicesList = ({ services }: Props) => {
+const ServicesList = memo(function ServicesList({ services }: Props) {
   return (
     <section
       className="section-padding bg-card"
@@ -24,6 +25,6 @@ const ServicesList = ({ services }: Props) => {
       </div>
     </section>
   )
-}
+})
 
 export default ServicesList
