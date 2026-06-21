@@ -32,10 +32,10 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Branding Design Johannesburg | Brand Identity Agency',
+  title: 'Brand Identity Agency Johannesburg',
 
   description:
-    'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, typography, and visual identity for South African businesses.',
+    'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
 
   keywords: [
     'Branding Design Johannesburg',
@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Branding Design Johannesburg | Brand Identity Agency',
+    title: 'Brand Identity Agency Johannesburg',
     description:
-      'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, typography, and visual identity for South African businesses.',
+      'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
     url: 'https://www.nostalgic-studio.co.za/services/branding-design',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -80,9 +80,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Branding Design Johannesburg | Brand Identity Agency',
+    title: 'Brand Identity Agency Johannesburg',
     description:
-      'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, typography, and visual identity for South African businesses.',
+      'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -129,9 +129,9 @@ export default function BrandingDesign() {
   const schemas = [
     serviceSchema({
       id: 'branding-design',
-      name: 'Branding Design Johannesburg | Brand Identity Agency',
+      name: 'Brand Identity Agency Johannesburg',
       description:
-        'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, typography, and visual identity for South African businesses.',
+        'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
       url: '/services/branding-design',
       areaServed: 'Johannesburg, South Africa',
       priceRange: 'R5000-R25000',

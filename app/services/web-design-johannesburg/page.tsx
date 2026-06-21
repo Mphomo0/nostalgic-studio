@@ -27,7 +27,7 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Design Johannesburg | Fast SEO Websites from R3,500',
+  title: 'Web Design Johannesburg | From R3,500',
   description:
     'Need web design in Johannesburg? Nostalgic Studio builds fast, mobile-friendly, SEO-ready websites for small businesses, startups, and service companies.',
   keywords: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Web Design Johannesburg | Fast SEO Websites from R3,500',
+    title: 'Web Design Johannesburg | From R3,500',
     description:
       'Need web design in Johannesburg? Nostalgic Studio builds fast, mobile-friendly, SEO-ready websites for small businesses, startups, and service companies.',
     url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Web Design Johannesburg | Fast SEO Websites from R3,500',
+    title: 'Web Design Johannesburg | From R3,500',
     description:
       'Need web design in Johannesburg? Nostalgic Studio builds fast, mobile-friendly, SEO-ready websites for small businesses, startups, and service companies.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],

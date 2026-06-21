@@ -27,7 +27,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'SEO for Construction Companies in South Africa',
   description:
-    'SEO for construction companies in South Africa. Improve Google visibility, get more tender enquiries, and attract local clients with SEO-optimised website structure and local search strategy.',
+    'SEO for construction companies in South Africa. Improve Google visibility, get more tender enquiries, and attract local clients with local search strategy.',
   keywords: [
     'SEO for Construction Companies',
     'Construction SEO South Africa',

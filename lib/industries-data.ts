@@ -8,6 +8,7 @@ export interface IndustryInfo {
   cta: string
   challengeHeader: string
   heroTagline: string
+  metaTitle?: string
   whyUsPoints: string[]
   websiteNeeds?: string[]
   servicePageIdeas?: string[]
@@ -102,6 +103,7 @@ export const industries: IndustryInfo[] = [
     challengeHeader:
       'You Only Get One Chance to Make a First Impression Online',
     heroTagline: 'Authority Websites for Professional Service Firms',
+    metaTitle: 'Websites for Professional Services',
     whyUsPoints: [
       'Built Tanosa Group — a consulting website that communicates multi-disciplinary expertise',
       'Under 1.5-second load times keep high-value prospects engaged',
@@ -139,6 +141,7 @@ export const industries: IndustryInfo[] = [
     challengeHeader:
       'Patients Judge Your Practice Online Before They Walk Through Your Door',
     heroTagline: 'Healthcare Websites That Build Patient Trust',
+    metaTitle: 'Healthcare Websites That Build Trust',
     whyUsPoints: [
       'POPIA-compliant forms and data handling built into every site',
       'Mobile-first design for the 70%+ of patients browsing on phones',
@@ -176,6 +179,7 @@ export const industries: IndustryInfo[] = [
     challengeHeader:
       'Most South African E-commerce Stores Lose Sales on Slow Load Times',
     heroTagline: 'Fast E-commerce Stores That Convert on SA Networks',
+    metaTitle: 'E-commerce Websites for SA Networks',
     whyUsPoints: [
       'Next.js stores score 90+ Lighthouse on desktop and mobile',
       'Built-in PayFast, Yoco, and Ozow integration',
@@ -212,6 +216,7 @@ export const industries: IndustryInfo[] = [
     cta: 'Launch fast with a scalable website built for startup growth.',
     challengeHeader: 'Startup Website Challenges (and How We Solve Them)',
     heroTagline: 'Startup Websites Built for Speed and Growth',
+    metaTitle: 'Startup Websites for Speed and Growth',
     whyUsPoints: [
       'Launch in days, not months — Next.js gets you to market fast',
       '90+ Lighthouse scores impress investors and users alike',

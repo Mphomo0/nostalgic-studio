@@ -21,7 +21,7 @@ export function generateStaticParams() {
 }
 
 function industryMeta(ind: IndustryInfo) {
-  const title = `${ind.heroTagline} | Nostalgic Studio`
+  const title = ind.metaTitle ?? ind.heroTagline
   const desc = ind.description.slice(0, 160)
   return { title, desc }
 }

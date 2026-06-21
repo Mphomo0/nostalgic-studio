@@ -28,7 +28,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Affordable Web Design Johannesburg',
   description:
-    'Professional, affordable web design in Johannesburg starting from R3,500. Custom Next.js websites with SEO, mobile-first design, and free hosting. 5.0-star rated.',
+    'Affordable web design in Johannesburg from R3,500. Custom Next.js websites with SEO, mobile-first design, and free hosting. 5.0-star rated.',
   keywords: [
     'Affordable Web Design Johannesburg',
     'Cheap Website Design South Africa',
