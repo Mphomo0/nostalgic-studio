@@ -4,6 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import FloatingContact from '@/components/layout/FloatingContact'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', adjustFontFallback: true })
 
@@ -144,7 +145,7 @@ const SCHEMA_ORGANIZATION = {
   '@id': 'https://www.nostalgic-studio.co.za/#organization',
   name: 'Nostalgic Studio',
   url: 'https://www.nostalgic-studio.co.za',
-  foundingDate: '2016',
+  foundingDate: '2013',
   logo: {
     '@type': 'ImageObject',
     url: 'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
@@ -166,10 +167,12 @@ const SCHEMA_ORGANIZATION = {
     { '@type': 'City', name: 'Pretoria' },
     { '@type': 'Country', name: 'South Africa' },
   ],
+  email: 'info@nostalgic-studio.co.za',
   sameAs: [
     'https://www.facebook.com/webengineers',
     'https://www.linkedin.com/company/110356396',
     'https://www.instagram.com/studionostalgic',
+    'https://clutch.co/profile/nostalgic-studio',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
@@ -190,7 +193,7 @@ const SCHEMA_BUSINESS = {
     'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
   url: 'https://www.nostalgic-studio.co.za',
   telephone: '+27-82-448-3273',
-  foundingDate: '2016',
+  foundingDate: '2013',
   currenciesAccepted: 'ZAR',
   paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
   openingHoursSpecification: [
@@ -365,6 +368,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingContact />
       </body>
     </html>
   )
