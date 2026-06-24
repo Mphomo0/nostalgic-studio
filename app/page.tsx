@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Johannesburg SEO, Branding & Web Design',
+    title: 'Web Design & SEO Johannesburg | Nostalgic Studio',
     description:
       'Johannesburg web design, SEO and branding studio. Fast websites, higher Google rankings and brands people remember. See our work and get a quote.',
     url: 'https://www.nostalgic-studio.co.za',

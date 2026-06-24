@@ -13,3 +13,16 @@ export const contactSchema = z.object({
 })
 
 export type ContactFormValues = z.infer<typeof contactSchema>
+
+export const seoAuditSchema = z.object({
+  fullName: z.string().min(2, 'Full name must be at least 2 characters'),
+  email: z.email('Invalid email address'),
+  phone: z.string().optional(),
+  websiteUrl: z
+    .string()
+    .min(1, 'Website URL is required')
+    .url('Please enter a valid URL (e.g. https://yourwebsite.co.za)'),
+  businessGoal: z.string().min(1, 'Please select a business goal'),
+})
+
+export type SeoAuditFormValues = z.infer<typeof seoAuditSchema>

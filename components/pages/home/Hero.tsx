@@ -50,8 +50,8 @@ export default function Hero() {
               size="lg"
               className="w-full sm:w-auto md:h-14 md:px-8"
             >
-              <Link href="/contact" className="flex items-center gap-2">
-                Get a Free Website Review <ArrowRight size={20} />
+              <Link href="/free-seo-audit" className="flex items-center gap-2">
+                Get a Free SEO Audit <ArrowRight size={20} />
               </Link>
             </Button>
 

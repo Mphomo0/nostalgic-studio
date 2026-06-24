@@ -182,7 +182,7 @@ const Navbar = memo(function Navbar() {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button asChild variant="hero" size="default">
-              <Link href="/contact">Get a Free Website Review</Link>
+              <Link href="/free-seo-audit">Get a Free SEO Audit</Link>
             </Button>
           </div>
 
@@ -265,8 +265,8 @@ const Navbar = memo(function Navbar() {
             </div>
           ))}
           <Button asChild variant="hero" size="lg" className="mt-4">
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
-              Get a Free Website Review
+            <Link href="/free-seo-audit" onClick={() => setIsOpen(false)}>
+              Get a Free SEO Audit
             </Link>
           </Button>
         </div>

@@ -2,7 +2,7 @@
 
 import nodemailer from 'nodemailer'
 import { headers } from 'next/headers'
-import { ContactFormValues } from '@/lib/validations'
+import { ContactFormValues, SeoAuditFormValues } from '@/lib/validations'
 import { checkRateLimit } from '@/lib/rate-limit'
 import { isGibberish, validateMathCaptcha } from '@/lib/bot-detection'
 
@@ -66,5 +66,54 @@ export async function sendContactEmail(data: ContactFormValues) {
   } catch (error) {
     console.error('Email Error:', error)
     throw new Error('Failed to send email')
+  }
+}
+
+export async function sendSeoAuditEmail(data: SeoAuditFormValues) {
+  const headersList = await headers()
+  const ip = headersList.get('x-forwarded-for') || 'anonymous'
+  const { success, reset } = checkRateLimit(ip)
+
+  if (!success) {
+    const minutesLeft = Math.ceil((reset - Date.now()) / (60 * 1000))
+    return {
+      success: false,
+      error: `Too many requests. Please try again in ${minutesLeft} minutes.`,
+    }
+  }
+
+  if (isGibberish(data.fullName)) {
+    return { success: false, error: 'Your name was flagged as spam. Please use your real name.' }
+  }
+
+  const mailOptions = {
+    from: `"${data.fullName}" <${process.env.EMAIL_USER}>`,
+    to: 'info@nostalgic-studio.co.za',
+    replyTo: data.email,
+    subject: `Free SEO Audit Request from ${data.fullName}`,
+    html: `
+      <div style="font-family: sans-serif; padding: 20px; border: 1px solid #eee; max-width: 600px;">
+        <h2 style="color: #333; border-bottom: 2px solid #25D366; padding-bottom: 10px;">
+          🔍 New Free SEO Audit Request
+        </h2>
+        <p><strong>Full Name:</strong> ${data.fullName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Phone:</strong> ${data.phone || 'Not provided'}</p>
+        <p><strong>Website URL:</strong> <a href="${data.websiteUrl}">${data.websiteUrl}</a></p>
+        <p><strong>Main Business Goal:</strong> ${data.businessGoal}</p>
+        <hr style="margin: 20px 0;" />
+        <p style="color: #666; font-size: 13px;">
+          Reply directly to this email to respond to ${data.fullName}.
+        </p>
+      </div>
+    `,
+  }
+
+  try {
+    await transporter.sendMail(mailOptions)
+    return { success: true }
+  } catch (error) {
+    console.error('SEO Audit Email Error:', error)
+    throw new Error('Failed to send audit request email')
   }
 }
