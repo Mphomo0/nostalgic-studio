@@ -10,14 +10,14 @@ export default function Hero() {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.7_0.25_145/0.08)_0%,transparent_70%)]" />
-      <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 -left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl hidden sm:block" />
+      <div className="absolute bottom-1/4 -right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl hidden sm:block" />
       <div className="absolute inset-0 bg-[linear-gradient(oklch(1_0_0/0.02)_1px,transparent_1px),linear-gradient(90deg,oklch(1_0_0/0.02)_1px,transparent_1px)] bg-size-[60px_60px]" />
 
       <div className="container-wide mx-auto px-4 md:px-8 relative z-10 py-12">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
-          <div className="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
             <Sparkles size={16} className="text-primary" />
             <span className="text-sm font-medium text-primary">
               Digital Design Agency for Startups
@@ -27,7 +27,7 @@ export default function Hero() {
           {/* AEO-First H1 */}
           <h1
             id="hero-heading"
-            className="animate-fade-up animate-delay-100 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
             <span className="text-gradient">Web Design Johannesburg</span>
             <br />
@@ -35,7 +35,7 @@ export default function Hero() {
           </h1>
 
           {/* Direct Answer Paragraph - GEO Definition Pattern */}
-          <p className="animate-fade-up animate-delay-200 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10">
             Nostalgic Studio builds fast, SEO-ready websites for South African
             small businesses, startups, and service companies. We help you turn
             your website into a 24/7 lead-generation tool with clear messaging,

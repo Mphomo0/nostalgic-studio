@@ -149,7 +149,7 @@ export const industries: IndustryInfo[] = [
     ],
   },
   {
-    slug: 'ecommerce',
+    slug: 'e-commerce',
     name: 'E-commerce',
     description:
       'South African e-commerce is growing fast, but most online stores lose sales on slow load times, clunky mobile checkout, and poor product pages. We build Next.js-powered stores with local payment gateways that convert visitors into customers.',

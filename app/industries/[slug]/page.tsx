@@ -68,7 +68,7 @@ const industryIcons: Record<string, typeof Building2> = {
   construction: Building2,
   'professional-services': Briefcase,
   healthcare: Shield,
-  ecommerce: TrendingUp,
+  'e-commerce': TrendingUp,
   startups: Zap,
 }
 
@@ -79,7 +79,7 @@ function RelatedProjects({ slug }: { slug: string }) {
     if (slug === 'professional-services')
       return p.industry?.toLowerCase().includes('consult')
     if (slug === 'healthcare') return false
-    if (slug === 'ecommerce') return false
+    if (slug === 'e-commerce') return false
     if (slug === 'startups') return false
     return false
   })

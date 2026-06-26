@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'branding-design', 'ux-ui-design', 'seo-services-johannesburg',
     'social-media-marketing', 'social-media-ads', 'web-hosting', 'web-maintenance',
     'seo-pricing', 'affordable-web-design-johannesburg', 'seo-for-construction-companies',
+    'website-refresh-seo-upgrade',
   ].map((slug) => ({
     url: `${BASE_URL}/services/${slug}`,
     lastModified: NOW,
@@ -75,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const industryPages: MetadataRoute.Sitemap = [
-    'healthcare', 'construction', 'ecommerce', 'professional-services', 'startups',
+    'healthcare', 'construction', 'e-commerce', 'professional-services', 'startups',
   ].map((slug) => ({
     url: `${BASE_URL}/industries/${slug}`,
     lastModified: NOW,
