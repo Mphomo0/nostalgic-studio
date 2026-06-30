@@ -49,7 +49,7 @@ export const locations: LocationInfo[] = [
     ],
     localCaseStudy: {
       title: 'Sozim SEO & Digital Marketing Campaign',
-      slug: 'sozim-consultancy',
+      slug: 'sozim-consultancy-case-study',
       description:
         'An 8-week SEO campaign for a consultancy that generated 163+ organic clicks in 28 days with a 3.95% CTR.',
     },
@@ -372,8 +372,8 @@ export const locations: LocationInfo[] = [
       },
     ],
     localCaseStudy: {
-      title: 'Tanosa Group Website Redesign',
-      slug: 'tanosa-group',
+      title: 'Tanosa Group Case Study',
+      slug: 'tanosa-group-case-study',
       description:
         'A 1-week website redesign for a Bloemfontein-based consulting firm, delivering a professional mobile-first site that loads in under 1.5 seconds.',
     },

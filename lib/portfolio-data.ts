@@ -21,7 +21,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Sozim SEO & Digital Marketing Campaign',
+    title: 'Sozim Consultancy Case Study',
     category: 'SEO & Digital Marketing',
     client: 'Sozim Trading & Consultancy',
     industry: 'Education & Training',
@@ -29,10 +29,10 @@ export const projects: Project[] = [
     timeline: '8 weeks',
     role: 'SEO Specialist',
     description:
-      'Sozim delivers accredited skills development across South Africa. A 28-day SEO campaign we managed generated 163+ organic clicks and boosted enquiries.',
+      'See how Nostalgic Studio delivered branding and digital strategy for Sozim Consultancy in Johannesburg — real project results, real process, real outcome.',
     image: '/images/projects/sozim.webp',
     liveUrl: 'https://www.sozim.co.za',
-    slug: 'sozim-consultancy',
+    slug: 'sozim-consultancy-case-study',
     challenge:
       'Sozim needed to increase their online visibility and generate more interest from prospective students and corporate clients seeking accredited training programmes. Their previous online presence lacked search engine visibility, clear conversion paths, and failed to connect with their target audience effectively.',
     approach:
@@ -96,27 +96,28 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Tanosa Group Website Redesign',
+    title: 'Tanosa Group Case Study',
     category: 'Web Design',
     client: 'Tanosa Group',
     industry: 'Consulting & Professional Services',
     location: 'Bloemfontein, Free State',
     timeline: '1 week',
-    role: 'Web Developer',
+    role: 'Full-Stack Developer & SEO Strategist',
     description:
-      'Tanosa Group offers consulting, governance, training, and project management across South Africa. We built their professional, mobile-first business website.',
+      'Tanosa Group is a Bloemfontein-based accounting and business consulting firm. We transformed their digital presence from a basic website into a trusted authority platform that actively vets and converts high-intent clients.',
     image: '/images/projects/tanosa.webp',
     liveUrl: 'https://www.tanosagroup.com',
-    slug: 'tanosa-group',
+    slug: 'tanosa-group-case-study',
     challenge:
-      'Tanosa Group needed a website that could clearly communicate their diverse range of consulting services without overwhelming visitors. Their multidisciplinary approach required careful information architecture.',
+      'Tanosa Group needed more than visibility — they needed digital authority in the Bloemfontein financial services market. In an industry where trust is the primary purchase driver, the challenge was to move beyond generic traffic and cultivate long-term credibility through high-value content: detailed tax guides, service-specific information, and a site that signals the same professional meticulousness their clients expect from an accounting firm.',
     approach:
-      'We created a streamlined site architecture with dedicated service sections, a professional leadership page, and clear navigation pathways. The design uses a sophisticated colour palette that conveys trust and expertise.',
+      "We implemented an authority-building content and SEO strategy, optimising deep-content pages — including tax guides and service descriptions — to capture high-intent traffic from users actively researching financial and consulting services. A technical audit eliminated 404 errors and resolved crawlability issues, ensuring the site reflects the firm's professional standards. We also restructured the user journey to bridge the gap between educational reading and client consultation, creating a clear path from content to conversion.",
     results: [
-      'Clear service categorisation improved user navigation by 60%',
-      'Professional design enhanced corporate credibility',
-      'Site loads in under 1.5 seconds on mobile networks',
-      'Google-indexed for consulting services in Johannesburg',
+      '127 total views from 44 unique users in June 2026',
+      'Average engagement time of 1 minute 9 seconds — well above industry benchmarks for professional services',
+      'Accounting, Tax & Business Services page achieved a 2-minute average engagement time, confirming the content strategy is effectively vetting high-intent leads',
+      'About page held a 52-second engagement time, reinforcing brand trust and reliability',
+      'Technical audit resolved 404 errors and improved site crawlability',
     ],
     services: [
       'Information architecture & UX design',
@@ -135,7 +136,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: 'Jiyology SEO & Digital Marketing Campaign',
+    title: 'Jiyology Construction, Plumbing SEO Optimization Case Study',
     category: 'SEO & Digital Marketing',
     client: 'Jiyology Building & Construction',
     industry: 'Construction & Plumbing',
@@ -143,14 +144,14 @@ export const projects: Project[] = [
     timeline: '1 week',
     role: 'Full-Stack Developer & SEO Strategist',
     description:
-      'Jiyology is a Soweto-based construction and plumbing company. I built their website and implemented a service-led SEO strategy that turned it into a high-intent lead generation asset.',
+      'Jiyology is a Soweto-based construction and plumbing company. We built their website and implemented a service-led SEO strategy that turned it into a high-intent lead generation asset.',
     image: '/images/projects/jiyology.webp',
     liveUrl: 'https://www.jiyology.co.za',
-    slug: 'jiyology-website',
+    slug: 'jiyology-construction-plumbing-seo-optimization-case-study',
     challenge:
       'Jiyology Construction & Plumbing needed to increase local visibility in Soweto for specific construction and plumbing services. Generic traffic was not enough — the goal was to attract high-intent leads actively searching for their services, not just passive visitors.',
     approach:
-      'I implemented a service-led SEO and AEO strategy, building and optimising dedicated landing pages for the specific services local homeowners search for. A full technical audit identified and resolved broken paths causing 404 errors, and I restructured the user journey to create a clear path from each service landing page directly to the Contact Us page — reducing friction and improving conversion.',
+      'We implemented a service-led SEO and AEO strategy, building and optimising dedicated landing pages for the specific services local homeowners search for. A full technical audit identified and resolved broken paths causing 404 errors, and we restructured the user journey to create a clear path from each service landing page directly to the Contact Us page — reducing friction and improving conversion.',
     results: [
       '145 total views and 46 unique active users in June 2026',
       'Construction & Plumbing Services page drove 36.5% of all site traffic — the top-performing asset',

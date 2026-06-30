@@ -49,8 +49,8 @@ export default function ProjectsPage() {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Sozim Trading & Consultancy Website Redesign',
-          url: 'https://www.nostalgic-studio.co.za/projects/sozim-consultancy',
+          name: 'Sozim Consultancy Case Study',
+          url: 'https://www.nostalgic-studio.co.za/projects/sozim-consultancy-case-study',
         },
         {
           '@type': 'ListItem',
@@ -61,8 +61,8 @@ export default function ProjectsPage() {
         {
           '@type': 'ListItem',
           position: 3,
-          name: 'Jiyology Building & Construction Website',
-          url: 'https://www.nostalgic-studio.co.za/projects/jiyology-website',
+          name: 'Jiyology Construction, Plumbing SEO Optimization Case Study',
+          url: 'https://www.nostalgic-studio.co.za/projects/jiyology-construction-plumbing-seo-optimization-case-study',
         },
         {
           '@type': 'ListItem',

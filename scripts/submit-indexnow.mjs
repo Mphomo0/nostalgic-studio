@@ -26,12 +26,12 @@ const urls = [
 )
 
 const projectUrls = [
-  'sozim-consultancy',
+  'sozim-consultancy-case-study',
   'didee-holdings',
-  'jiyology-website',
+  'jiyology-construction-plumbing-seo-optimization-case-study',
   'az-truck-dealership',
   'bidco-trucks',
-  'tanosa-group',
+  'tanosa-group-case-study',
 ].map((slug) => `${BASE_URL}/projects/${slug}`)
 
 const blogUrls = [

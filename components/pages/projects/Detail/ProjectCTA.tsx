@@ -21,7 +21,7 @@ export function ProjectCTA() {
             font-bold tracking-tight text-foreground
           "
         >
-          Want Results Like This for Your Business?
+          Your digital transformation starts here.
         </motion.h2>
 
         <motion.p
@@ -35,8 +35,9 @@ export function ProjectCTA() {
             leading-relaxed text-muted-foreground max-w-2xl
           "
         >
-          If your website is not bringing enquiries, we can review it and show
-          you what to improve first.
+          From technical SEO audits to high-engagement content strategy, we help
+          professional service firms bridge the gap between their expertise and
+          their target audience.
         </motion.p>
 
         <motion.div
@@ -50,7 +51,7 @@ export function ProjectCTA() {
             asChild
             className="w-full sm:w-auto min-w-50 px-10 h-14 text-lg font-semibold rounded-full hover-glow"
           >
-            <Link href="/contact">Get a Free Website Review</Link>
+            <Link href="/contact">Let&apos;s Discuss Your Next Project</Link>
           </Button>
         </motion.div>
       </div>

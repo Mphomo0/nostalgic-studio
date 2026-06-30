@@ -64,7 +64,9 @@ const socialLinks = [
 ]
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const now = new Date()
+  const currentYear = now.getFullYear()
+  const lastUpdated = now.toLocaleDateString('en-ZA', { day: 'numeric', month: 'long', year: 'numeric' })
 
   return (
     <footer className="bg-card border-t border-border">
@@ -194,7 +196,7 @@ const Footer = () => {
             © {currentYear} Nostalgic Studio. All rights reserved.
             <span className="mx-2 hidden md:inline opacity-30">|</span>
             <span className="block md:inline mt-1 md:mt-0 font-medium opacity-80 uppercase tracking-tighter text-[10px]">
-              Last Updated: April 15, 2026
+              Last Updated: {lastUpdated}
             </span>
           </p>
           <div className="flex gap-6">

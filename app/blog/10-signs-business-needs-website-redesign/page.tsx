@@ -241,7 +241,7 @@ export default function RedesignSignsArticle() {
           </h2>
           <p className="text-muted-foreground mb-5">
             Nostalgic Studio specialises in rebuilding underperforming websites
-            into high-converting, SEO-optimised platforms built on Next.js.
+            into high-converting, SEO-optimised platforms built on Next.js. If your rankings are suffering, our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services</Link> can diagnose and fix what&apos;s holding your site back.
           </p>
           <Link
             href="/contact"

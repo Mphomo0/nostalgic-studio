@@ -54,7 +54,7 @@ export default function SmallBizGuidePage() {
           <p>Many small business owners focus on how their website looks. Visual design matters, but a beautiful site with no leads is a billboard in the desert. Every page should guide visitors toward a specific action: call, email, book, or buy.</p>
 
           <h2>3. Local SEO is Non-Negotiable</h2>
-          <p>When someone searches &quot;plumber Fourways&quot; or &quot;web designer Sandton&quot;, they are ready to buy. Local SEO ensures you appear in those searches. This means optimizing for Johannesburg suburbs, maintaining a Google Business Profile, and getting listed in SA business directories.</p>
+          <p>When someone searches &quot;plumber Fourways&quot; or &quot;web designer Sandton&quot;, they are ready to buy. Local SEO ensures you appear in those searches. This means optimizing for Johannesburg suburbs, maintaining a Google Business Profile, and getting listed in SA business directories. Our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> are built specifically for this — helping small businesses capture high-intent local traffic.</p>
 
           <h2>4. Speed = Revenue</h2>
           <p>Google research shows that 53% of mobile users leave a page that takes longer than 3 seconds to load. Most small business websites load in 5-8 seconds because they are built on slow platforms with heavy plugins. A fast website (under 2 seconds) ranks higher and converts better.</p>

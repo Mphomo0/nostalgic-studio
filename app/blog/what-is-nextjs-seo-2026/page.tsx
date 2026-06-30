@@ -235,7 +235,7 @@ export default function NextjsSeoArticle() {
             >
               Get in touch with Nostalgic Studio
             </Link>{' '}
-            to discuss a Next.js website for your business.
+            to discuss a Next.js website for your business. You can also explore our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> to see how we pair Next.js performance with a full search optimisation strategy.
           </p>
         </div>
 

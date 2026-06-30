@@ -8,6 +8,21 @@ const nextConfig: NextConfig = {
         destination: '/industries/e-commerce',
         permanent: true,
       },
+      {
+        source: '/projects/sozim-consultancy',
+        destination: '/projects/sozim-consultancy-case-study',
+        permanent: true,
+      },
+      {
+        source: '/projects/tanosa-group',
+        destination: '/projects/tanosa-group-case-study',
+        permanent: true,
+      },
+      {
+        source: '/projects/jiyology-website',
+        destination: '/projects/jiyology-construction-plumbing-seo-optimization-case-study',
+        permanent: true,
+      },
     ]
   },
   experimental: {

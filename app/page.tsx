@@ -143,8 +143,11 @@ export default function Home() {
               <li>Companies that need SEO and Google visibility</li>
             </ul>
             <p className="text-lg text-muted-foreground mt-6">
-              Whether you need a new website, a website refresh, or better local
-              SEO, we help you build a stronger foundation for online enquiries.
+              Whether you need a new website, a website refresh, or better{' '}
+              <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">
+                local SEO
+              </Link>
+              , we help you build a stronger foundation for online enquiries.
             </p>
           </div>
         </div>

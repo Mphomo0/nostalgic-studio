@@ -19,10 +19,10 @@ import { Button } from '@/components/ui/button'
 import { breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Free Quote | Web Design Johannesburg',
+  title: 'Contact Nostalgic Studio | Johannesburg SEO Agency',
 
   description:
-    'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
+    'Reach out to Nostalgic Studio for SEO, branding, and web design in Johannesburg. Fast response, free initial consultation, no obligation.',
 
   keywords: [
     'web design quote Johannesburg',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Free Quote | Web Design Johannesburg | Nostalgic Studio',
+    title: 'Contact Nostalgic Studio | Johannesburg SEO Agency',
     description:
-      'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
+      'Reach out to Nostalgic Studio for SEO, branding, and web design in Johannesburg. Fast response, free initial consultation, no obligation.',
     url: 'https://www.nostalgic-studio.co.za/contact',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Free Quote | Web Design Johannesburg | Nostalgic Studio',
+    title: 'Contact Nostalgic Studio | Johannesburg SEO Agency',
     description:
       'Contact Nostalgic Studio for web design, SEO, website refreshes, branding, and digital marketing in Johannesburg and across South Africa.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],

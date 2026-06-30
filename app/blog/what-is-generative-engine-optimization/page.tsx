@@ -84,7 +84,7 @@ export default function GeoGuidePage() {
           <p>Businesses that implement GEO are seeing 3-5x more visibility in AI-generated responses compared to those relying solely on traditional SEO. In South Africa, where AI adoption is accelerating rapidly, early adopters of GEO are capturing market share while competitors remain invisible in AI search.</p>
 
           <h2>Ready to Get Started?</h2>
-          <p>GEO is not a replacement for SEO — it's an essential complement. We help South African businesses implement comprehensive GEO strategies including llms.txt files, structured data, and AI-optimized content.</p>
+          <p>GEO is not a replacement for SEO — it&apos;s an essential complement. We help South African businesses implement comprehensive GEO strategies including llms.txt files, structured data, and AI-optimized content. <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">View our SEO and GEO services</Link> to see how we can help your business get cited by AI search engines.</p>
         </div>
 
         <div className="mt-12 p-6 bg-muted rounded-xl">

@@ -51,6 +51,9 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - Web Hosting: https://www.nostalgic-studio.co.za/services/web-hosting — Managed hosting services
 - Web Maintenance: https://www.nostalgic-studio.co.za/services/web-maintenance — Ongoing website support
 - Portfolio: https://www.nostalgic-studio.co.za/projects — Case studies and portfolio
+- Case Study - Sozim: https://www.nostalgic-studio.co.za/projects/sozim-consultancy-case-study — SEO campaign, 163+ clicks in 28 days
+- Case Study - Tanosa Group: https://www.nostalgic-studio.co.za/projects/tanosa-group-case-study — Authority SEO for accounting firm, 1m 9s avg engagement
+- Case Study - Jiyology: https://www.nostalgic-studio.co.za/projects/jiyology-construction-plumbing-seo-optimization-case-study — Local SEO for construction & plumbing company
 - Blog: https://www.nostalgic-studio.co.za/blog — Web design and digital marketing articles
 - Blog - Next.js SEO: https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026 — Why Next.js is best for SEO in 2026
 - Blog - Website Cost: https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026 — 2026 website pricing guide for South Africa

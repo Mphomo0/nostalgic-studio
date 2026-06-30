@@ -123,6 +123,16 @@ const faqs = [
       'SEO services in South Africa typically range from R3,000–R15,000 per month depending on competitiveness, scope, and goals. Nostalgic Studio offers tailored packages starting from R1,500/month for basic SEO and R5,000–R15,000/month for comprehensive SEO campaigns.',
   },
   {
+    question: 'What SEO packages do you offer in Johannesburg?',
+    answer:
+      'We offer three SEO packages in Johannesburg: Starter SEO (R1,500/mo) covering keyword research, on-page optimisation for 5 pages, and a monthly report — ideal for new businesses. Growth SEO (R5,000/mo) adds content strategy, link building, GBP management, and GEO/AI search optimisation. Enterprise SEO (R10,000+/mo) includes unlimited keyword tracking, a dedicated SEO manager, weekly strategy calls, and a full GEO/AI search strategy. All packages include a technical audit and monthly reporting.',
+  },
+  {
+    question: 'Do you offer once-off SEO audits?',
+    answer:
+      'Yes. If you are not ready for a monthly retainer, we offer a once-off SEO audit that identifies your biggest ranking opportunities, technical issues, and content gaps. The audit includes a prioritised action plan you can implement yourself or hand to our team.',
+  },
+  {
     question: 'Do you focus on local Johannesburg search?',
     answer:
       'Yes, our local SEO strategies are specifically designed to help businesses in Johannesburg, Sandton, Midrand, Pretoria, and surrounding areas rank for location-based search terms. We optimize Google Business Profiles and build local citations specific to Gauteng.',
@@ -515,6 +525,41 @@ export default function SEOServicesJohannesburg() {
                 </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Case Study Section */}
+        <section className="mb-16" aria-labelledby="case-study-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <p className="text-xs font-semibold text-primary uppercase tracking-widest mb-3">Real Results</p>
+            <h2 id="case-study-heading" className="text-2xl font-bold mb-4">
+              From 0 to 946 Impressions in 28 Days
+            </h2>
+            <p className="text-muted-foreground mb-8 max-w-2xl">
+              Sozim Consultancy needed to move from invisible to discoverable — fast. Here is what a focused SEO strategy delivered inside one month.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {[
+                { number: '163+', label: 'Organic clicks in 28 days' },
+                { number: '946', label: 'New keyword impressions' },
+                { number: '3.95%', label: 'Average CTR on targeted keywords' },
+                { number: '3/day', label: 'Enquiries from organic traffic' },
+              ].map((stat) => (
+                <div key={stat.label} className="bg-background border border-border rounded-2xl p-5 text-center">
+                  <div className="text-3xl font-bold text-primary mb-1">{stat.number}</div>
+                  <div className="text-xs text-muted-foreground">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground mb-6">
+              The strategy combined technical SEO on a Next.js build, targeted landing pages for Bloemfontein training searches, structured data markup, and GEO optimisation for AI answer engines — all delivered in 8 weeks.
+            </p>
+            <Link
+              href="/projects/sozim-consultancy-case-study"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+            >
+              Read the full Sozim case study <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </section>
 
@@ -1152,6 +1197,42 @@ export default function SEOServicesJohannesburg() {
                 Build a brand that customers trust and remember.
               </p>
             </Link>
+          </div>
+        </section>
+
+        {/* Suburb / Region Section */}
+        <section className="mb-16" aria-labelledby="suburb-heading">
+          <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+            <h2 id="suburb-heading" className="text-2xl font-bold mb-4">
+              SEO Services Across Gauteng — By Suburb & City
+            </h2>
+            <p className="text-muted-foreground mb-8">
+              We provide SEO services to businesses across the Gauteng province, including suburbs and cities that most SEO agencies overlook. Whether you are searching for <strong>SEO services in Germiston</strong>, <strong>SEO services in Alberton</strong>, or an <strong>SEO agency in Gauteng</strong> that understands your local market, we target the specific suburb-level keywords your customers use.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+              {[
+                { area: 'Johannesburg CBD', query: 'SEO company Johannesburg' },
+                { area: 'Sandton', query: 'SEO agency Sandton' },
+                { area: 'Midrand', query: 'SEO services Midrand' },
+                { area: 'Germiston', query: 'SEO services Germiston' },
+                { area: 'Alberton', query: 'SEO services Alberton' },
+                { area: 'Soweto', query: 'SEO Soweto' },
+                { area: 'Randburg', query: 'SEO Randburg' },
+                { area: 'Fourways', query: 'SEO Fourways' },
+                { area: 'Pretoria', query: 'SEO company Pretoria' },
+                { area: 'Centurion', query: 'SEO services Centurion' },
+                { area: 'Boksburg', query: 'SEO agency Boksburg' },
+                { area: 'Roodepoort', query: 'SEO Roodepoort' },
+              ].map((item) => (
+                <div key={item.area} className="p-4 bg-background border border-border rounded-xl">
+                  <p className="font-semibold text-sm mb-1">{item.area}</p>
+                  <p className="text-xs text-muted-foreground">{item.query}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Our suburb-level SEO strategy means your business ranks for the exact location searches your customers use — not just broad city terms. This is especially powerful for trades, professional services, and healthcare providers whose clients search by neighbourhood.
+            </p>
           </div>
         </section>
 

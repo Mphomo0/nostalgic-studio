@@ -81,6 +81,7 @@ export default function SeoForStartupsPage() {
           </ol>
 
           <p>Follow this plan consistently for 6 months, and you will outrank competitors who have been optimizing for years — simply because they are optimizing for the wrong things.</p>
+          <p>If you need a specialist to execute this for you, our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> cover everything from technical audits to ongoing content strategy.</p>
         </div>
 
         <div className="mt-12 text-center">
