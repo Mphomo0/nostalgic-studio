@@ -141,22 +141,22 @@ export const projects: Project[] = [
     industry: 'Construction & Plumbing',
     location: 'Johannesburg, Gauteng',
     timeline: '1 week',
-    role: 'Web Developer',
+    role: 'Full-Stack Developer & SEO Strategist',
     description:
-      'Jiyology is a South African construction and plumbing company offering roofing, tiling, painting, and renovations, showcasing services and projects.',
+      'Jiyology is a Soweto-based construction and plumbing company. I built their website and implemented a service-led SEO strategy that turned it into a high-intent lead generation asset.',
     image: '/images/projects/jiyology.webp',
     liveUrl: 'https://www.jiyology.co.za',
     slug: 'jiyology-website',
     challenge:
-      'Jiyology Building & Construction needed a website to reach homeowners searching for renovation and plumbing services online. They wanted a site that felt approachable and professional for residential clients.',
+      'Jiyology Construction & Plumbing needed to increase local visibility in Soweto for specific construction and plumbing services. Generic traffic was not enough — the goal was to attract high-intent leads actively searching for their services, not just passive visitors.',
     approach:
-      'We designed a bold, visually-driven website with prominent before-and-after project imagery. Each service category has its own dedicated page optimised for local search terms like "plumber Johannesburg" and "home renovation Gauteng".',
+      'I implemented a service-led SEO and AEO strategy, building and optimising dedicated landing pages for the specific services local homeowners search for. A full technical audit identified and resolved broken paths causing 404 errors, and I restructured the user journey to create a clear path from each service landing page directly to the Contact Us page — reducing friction and improving conversion.',
     results: [
-      'Visible online presence for residential construction services',
-      'Service-specific pages rank for local search queries',
-      'Contact form generates 2 enquiry submissions per week',
-      '5 organic clicks with 178 impressions on mobile',
-      'Mobile-first design serves 65% of their traffic',
+      '145 total views and 46 unique active users in June 2026',
+      'Construction & Plumbing Services page drove 36.5% of all site traffic — the top-performing asset',
+      'Contact Us ranked as the second most visited page, confirming strong user intent and a working conversion funnel',
+      'Technical audit resolved 404 errors and improved crawlability',
+      'Service-led SEO strategy shifted traffic from generic to high-intent local searches',
     ],
     services: [
       'Website design & development',
