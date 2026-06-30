@@ -26,7 +26,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Website Refresh & SEO Upgrade South Africa',
   description:
-    'Refresh your website and improve Google visibility. We help SA businesses upgrade design, speed, SEO, service pages, and lead generation.',
+    'Upgrade your website with improved design, speed, SEO, and lead generation. Helping SA businesses refresh and optimize their online presence.',
   keywords: [
     'Website Refresh South Africa',
     'SEO Upgrade Johannesburg',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Website Refresh & SEO Upgrade South Africa',
     description:
-      'Refresh your website and improve Google visibility. We help SA businesses upgrade design, speed, SEO, service pages, and lead generation.',
+      'Upgrade your website with improved design, speed, SEO, and lead generation. Helping SA businesses refresh and optimize their online presence.',
     url: 'https://www.nostalgic-studio.co.za/services/website-refresh-seo-upgrade',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     creator: '@studionostalgic',
     title: 'Website Refresh & SEO Upgrade South Africa',
     description:
-      'Refresh your website and improve Google visibility. We help SA businesses upgrade design, speed, SEO, service pages, and lead generation.',
+      'Upgrade your website with improved design, speed, SEO, and lead generation. Helping SA businesses refresh and optimize their online presence.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -77,7 +77,7 @@ const refreshSchemas = [
     id: 'website-refresh-seo-upgrade',
     name: 'Website Refresh & SEO Upgrade South Africa',
     description:
-      'Refresh your website and improve Google visibility. We help SA businesses upgrade design, speed, SEO, service pages, and lead generation.',
+      'Upgrade your website with improved design, speed, SEO, and lead generation. Helping SA businesses refresh and optimize their online presence.',
     url: '/services/website-refresh-seo-upgrade',
     areaServed: 'South Africa',
     priceRange: 'R3,500-R8,500',

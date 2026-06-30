@@ -14,7 +14,10 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', 'motion/react'],
   },
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/webp'],
+    deviceSizes: [640, 1080, 1920],
+    imageSizes: [64, 256],
+    minimumCacheTTL: 31536000,
     remotePatterns: [
       {
         protocol: 'https',

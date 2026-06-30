@@ -6,7 +6,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingContact from '@/components/layout/FloatingContact'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-sans', adjustFontFallback: true })
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans', adjustFontFallback: true, display: 'swap' })
 
 export const viewport: Viewport = {
   themeColor: [
