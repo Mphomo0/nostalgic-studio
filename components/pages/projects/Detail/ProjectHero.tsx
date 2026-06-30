@@ -57,6 +57,7 @@ export default function ProjectHero({ slug }: { slug: string }) {
               alt={project.title}
               fill
               priority
+              unoptimized
               sizes="(min-width: 1024px) 70vw, 100vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />

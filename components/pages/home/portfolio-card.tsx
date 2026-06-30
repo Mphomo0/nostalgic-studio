@@ -33,6 +33,7 @@ export function PortfolioCard({ project, index }: PortfolioCardProps) {
             src={project.image}
             alt={project.title}
             fill
+            unoptimized
             sizes="(min-width: 768px) 50vw, 100vw"
             priority={index < 2}
             className="object-cover transition-transform duration-500 group-hover:scale-105"
