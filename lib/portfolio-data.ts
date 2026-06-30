@@ -135,8 +135,8 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: 'Jiyology New Website',
-    category: 'Web Design',
+    title: 'Jiyology SEO & Digital Marketing Campaign',
+    category: 'SEO & Digital Marketing',
     client: 'Jiyology Building & Construction',
     industry: 'Construction & Plumbing',
     location: 'Johannesburg, Gauteng',

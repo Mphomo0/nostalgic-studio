@@ -11,6 +11,7 @@ const categories = [
   'UI/UX Design',
   'Branding',
   'Digital Design',
+  'SEO & Digital Marketing',
 ]
 
 const PortfolioGrid = memo(function PortfolioGrid() {
