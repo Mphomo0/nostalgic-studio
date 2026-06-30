@@ -439,8 +439,7 @@ export default function WebDesignJohannesburg() {
             </p>
             <p className="text-muted-foreground mb-6">
               Google research shows that 53% of mobile users leave a page that
-              takes longer than 3 seconds to load [verify before publishing —
-              source: thinkwithgoogle.com]. In South Africa, where 60%+ of web
+              takes longer than 3 seconds to load. In South Africa, where 60%+ of web
               traffic is mobile and data costs are high, this problem is
               amplified. A slow WordPress site on cheap hosting is actively
               damaging your business.
@@ -761,8 +760,7 @@ export default function WebDesignJohannesburg() {
                 Johannesburg businesses that invest in GEO today gain a
                 significant advantage. Most local competitors are still
                 optimizing only for Google blue-link rankings, missing the
-                fastest-growing discovery channel. [verify before publishing —
-                source: webprox.co.za GEO statistics]
+                fastest-growing discovery channel.
               </p>
             </div>
           </section>
