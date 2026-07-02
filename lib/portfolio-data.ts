@@ -136,7 +136,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: 'Jiyology Construction, Plumbing SEO Optimization Case Study',
+    title: 'Jiyology Construction & Plumbing SEO Case Study',
     category: 'SEO & Digital Marketing',
     client: 'Jiyology Building & Construction',
     industry: 'Construction & Plumbing',

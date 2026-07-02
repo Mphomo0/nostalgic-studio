@@ -61,7 +61,7 @@ export default function ProjectsPage() {
         {
           '@type': 'ListItem',
           position: 3,
-          name: 'Jiyology Construction, Plumbing SEO Optimization Case Study',
+          name: 'Jiyology Construction & Plumbing SEO Case Study',
           url: 'https://www.nostalgic-studio.co.za/projects/jiyology-construction-plumbing-seo-optimization-case-study',
         },
         {
