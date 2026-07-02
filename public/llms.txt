@@ -1,6 +1,6 @@
 # Nostalgic Studio — LLM/AI Agent Index
 
-> This file follows the llms.txt standard (https://llmstxtorg/).
+> This file follows the llms.txt standard (https://llmstxt.org/).
 > Content is freely quotable and citeable by AI engines.
 
 ## Who We Are

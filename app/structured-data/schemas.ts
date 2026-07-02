@@ -32,6 +32,81 @@ export function joziAddress() {
 }
 
 /**
+ * ProfessionalService entity for the business. Rendered on the homepage only;
+ * other pages link to it via bizRef(). Review/AggregateRating markup is
+ * intentionally omitted — self-serving reviews violate Google's guidelines.
+ */
+export function businessSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': BIZ_ID,
+    name: 'Nostalgic Studio',
+    parentOrganization: orgRef(),
+    description:
+      'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
+    url: BASE_URL,
+    telephone: '+27-82-448-3273',
+    foundingDate: '2013',
+    currenciesAccepted: 'ZAR',
+    paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:30', closes: '21:00' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '17:00' },
+    ],
+    priceRange: 'R3,500–R60,000',
+    address: joziAddress(),
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '-25.9985',
+      longitude: '28.1322',
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Johannesburg, South Africa' },
+      { '@type': 'City', name: 'Sandton, South Africa' },
+      { '@type': 'City', name: 'Soweto, South Africa' },
+      { '@type': 'City', name: 'Midrand, South Africa' },
+      { '@type': 'City', name: 'Mbombela, South Africa' },
+      { '@type': 'City', name: 'Pretoria, South Africa' },
+      { '@type': 'City', name: 'Randburg, South Africa' },
+      { '@type': 'City', name: 'Fourways, South Africa' },
+      { '@type': 'City', name: 'Rosebank, South Africa' },
+      { '@type': 'City', name: 'Bryanston, South Africa' },
+      { '@type': 'City', name: 'Thembisa, South Africa' },
+      { '@type': 'City', name: 'Cape Town, South Africa' },
+      { '@type': 'City', name: 'Centurion, South Africa' },
+      { '@type': 'City', name: 'Kimberley, South Africa' },
+      { '@type': 'City', name: 'Polokwane, South Africa' },
+      { '@type': 'City', name: 'Roodepoort, South Africa' },
+      { '@type': 'City', name: 'Randfontein, South Africa' },
+      { '@type': 'City', name: 'Bloemfontein, South Africa' },
+      { '@type': 'City', name: 'Durban, South Africa' },
+      { '@type': 'Place', name: 'Century City, Cape Town, 7441, South Africa' },
+      { '@type': 'AdministrativeArea', name: 'Gauteng, South Africa' },
+      { '@type': 'Country', name: 'South Africa' },
+    ],
+    image: [
+      `${BASE_URL}/images/og-image.jpg`,
+      `${BASE_URL}/images/logo/Logo.webp`,
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Web Design & Digital Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Johannesburg' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services Johannesburg' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Next.js Website Design' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Graphic Design' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ecommerce Development' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Hosting South Africa' } },
+      ],
+    },
+  }
+}
+
+/**
  * Build a Service schema for a specific service page.
  */
 export function serviceSchema(opts: {

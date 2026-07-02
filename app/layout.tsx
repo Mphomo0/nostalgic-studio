@@ -103,28 +103,6 @@ export const metadata: Metadata = {
   },
 }
 
-const SCHEMA_PERSON = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  '@id': 'https://www.nostalgic-studio.co.za/about#person',
-  name: 'Mpho Moipolai',
-  url: 'https://www.nostalgic-studio.co.za/about',
-  jobTitle: 'Founder & Lead Developer',
-  worksFor: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
-  sameAs: [
-    'https://www.linkedin.com/in/mpho-moipolai-26b06286/',
-    'https://www.instagram.com/studionostalgic',
-  ],
-  knowsAbout: [
-    'Web Design',
-    'UI/UX Design',
-    'Brand Identity',
-    'Next.js Development',
-    'SEO',
-    'Digital Strategy',
-  ],
-}
-
 const SCHEMA_WEBSITE = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
@@ -183,151 +161,8 @@ const SCHEMA_ORGANIZATION = {
   },
 }
 
-const SCHEMA_BUSINESS = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  '@id': 'https://www.nostalgic-studio.co.za/#business',
-  name: 'Nostalgic Studio',
-  parentOrganization: { '@id': 'https://www.nostalgic-studio.co.za/#organization' },
-  description:
-    'Nostalgic Studio is a web design and development agency in Johannesburg, South Africa, specialising in custom Next.js websites, UI/UX design, branding, SEO, and social media marketing for startups and small businesses.',
-  url: 'https://www.nostalgic-studio.co.za',
-  telephone: '+27-82-448-3273',
-  foundingDate: '2013',
-  currenciesAccepted: 'ZAR',
-  paymentAccepted: 'Cash, Credit Card, Bank Transfer, EFT',
-  openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:30', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '17:00' },
-  ],
-  priceRange: 'R3,500–R60,000',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'Midrand',
-    addressLocality: 'Johannesburg',
-    addressRegion: 'Gauteng',
-    postalCode: '1685',
-    addressCountry: 'ZA',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: '-25.9985',
-    longitude: '28.1322',
-  },
-  areaServed: [
-    { '@type': 'City', name: 'Johannesburg, South Africa' },
-    { '@type': 'City', name: 'Sandton, South Africa' },
-    { '@type': 'City', name: 'Soweto, South Africa' },
-    { '@type': 'City', name: 'Midrand, South Africa' },
-    { '@type': 'City', name: 'Mbombela, South Africa' },
-    { '@type': 'City', name: 'Pretoria, South Africa' },
-    { '@type': 'City', name: 'Randburg, South Africa' },
-    { '@type': 'City', name: 'Fourways, South Africa' },
-    { '@type': 'City', name: 'Rosebank, South Africa' },
-    { '@type': 'City', name: 'Bryanston, South Africa' },
-    { '@type': 'City', name: 'Thembisa, South Africa' },
-    { '@type': 'City', name: 'Cape Town, South Africa' },
-    { '@type': 'City', name: 'Centurion, South Africa' },
-    { '@type': 'City', name: 'Kimberley, South Africa' },
-    { '@type': 'City', name: 'Polokwane, South Africa' },
-    { '@type': 'City', name: 'Roodepoort, South Africa' },
-    { '@type': 'City', name: 'Randfontein, South Africa' },
-    { '@type': 'City', name: 'Bloemfontein, South Africa' },
-    { '@type': 'City', name: 'Durban, South Africa' },
-    { '@type': 'Place', name: 'Century City, Cape Town, 7441, South Africa' },
-    { '@type': 'AdministrativeArea', name: 'Gauteng, South Africa' },
-    { '@type': 'Country', name: 'South Africa' },
-  ],
-  image: [
-    'https://www.nostalgic-studio.co.za/images/og-image.jpg',
-    'https://www.nostalgic-studio.co.za/images/logo/Logo.webp',
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Web Design & Digital Services',
-    itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Johannesburg' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services Johannesburg' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Next.js Website Design' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI/UX Design' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Branding & Graphic Design' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Marketing' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ecommerce Development' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Hosting South Africa' } },
-    ],
-  },
-  review: [
-    {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      author: { '@type': 'Person', name: 'Ohentse Diseko' },
-      reviewBody: 'Nostalgic Studio designed our website and delivered a professional, high-quality result. The collaboration was smooth and the final website exceeded expectations.',
-    },
-    {
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      author: { '@type': 'Person', name: 'Stefan Mills' },
-      reviewBody: 'The Nostalgic Studio team created a modern, professional website that matches our brand perfectly. The design quality and attention to detail were outstanding.',
-    },
-  ],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: 5.0,
-    bestRating: 5,
-    ratingCount: 6,
-    reviewCount: 6,
-  },
-}
-
-const SELLER = {
-  '@type': 'Organization',
-  name: 'Nostalgic Studio',
-  url: 'https://www.nostalgic-studio.co.za',
-} as const
-
-const PRODUCT_RATING = {
-  '@type': 'AggregateRating',
-  ratingValue: 5.0,
-  bestRating: 5,
-  ratingCount: 6,
-  reviewCount: 6,
-} as const
-
-const SCHEMA_PRODUCT_WEB = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'Web Design Services Johannesburg',
-  description: 'Custom Next.js websites with 90+ Lighthouse scores, SEO optimization, and mobile-first design. For startups and businesses in South Africa.',
-  image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
-  url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
-  brand: { '@type': 'Brand', name: 'Nostalgic Studio' },
-  aggregateRating: PRODUCT_RATING,
-  offers: [
-    { '@type': 'Offer', name: 'Starter Website', price: 3500, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
-    { '@type': 'Offer', name: 'Business Website', price: 15000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
-    { '@type': 'Offer', name: 'E-Commerce Store', price: 25000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
-  ],
-}
-
-const SCHEMA_PRODUCT_SEO = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'SEO & AI Search Services Johannesburg',
-  description: 'Classic SEO combined with Generative Engine Optimization (GEO) for visibility on Google, ChatGPT, Gemini, Claude, and Perplexity.',
-  image: 'https://www.nostalgic-studio.co.za/images/og-image.jpg',
-  url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
-  brand: { '@type': 'Brand', name: 'Nostalgic Studio' },
-  aggregateRating: PRODUCT_RATING,
-  offers: [
-    { '@type': 'Offer', name: 'Starter SEO', price: 1500, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
-    { '@type': 'Offer', name: 'Growth SEO', price: 5000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
-    { '@type': 'Offer', name: 'Enterprise SEO', price: 10000, priceCurrency: 'ZAR', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', seller: SELLER },
-  ],
-}
-
 const SITE_SCHEMAS_JSON = JSON.stringify([
-  SCHEMA_WEBSITE, SCHEMA_ORGANIZATION, SCHEMA_PERSON,
-  SCHEMA_BUSINESS, SCHEMA_PRODUCT_WEB, SCHEMA_PRODUCT_SEO,
+  SCHEMA_WEBSITE, SCHEMA_ORGANIZATION,
 ])
 
 export default function RootLayout({
@@ -348,7 +183,7 @@ export default function RootLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: SITE_SCHEMAS_JSON }} />
 
         {/* Meta Pixel */}
-        <Script id="meta-pixel" strategy="afterInteractive">
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -373,9 +208,9 @@ export default function RootLayout({
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-BYEL2HLX78"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

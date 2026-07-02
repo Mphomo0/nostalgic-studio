@@ -72,33 +72,13 @@ const testimonials = [
 ]
 
 const Testimonials = memo(function Testimonials() {
-  const reviewSchema = {
-    '@context': 'https://schema.org',
-    '@graph': testimonials.map((t, index) => ({
-      '@type': 'Review',
-      '@id': `https://www.nostalgic-studio.co.za/#review-${index + 1}`,
-      itemReviewed: { '@id': 'https://www.nostalgic-studio.co.za/#business' },
-      author: { '@type': 'Person', name: t.name },
-      reviewRating: {
-        '@type': 'Rating',
-        ratingValue: t.rating,
-        bestRating: 5,
-      },
-      reviewBody: t.content,
-    })),
-  }
-
+  // No Review JSON-LD here: self-serving reviews (itemReviewed = own business,
+  // hosted on own site) violate Google's review rich-result guidelines.
   return (
     <section
       aria-labelledby="testimonials-heading"
       className="section-padding bg-card overflow-hidden"
     >
-      {/* JSON-LD Reviews Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
-      />
-
       <div className="container-wide mx-auto mb-12 text-center">
         <motion.span
           initial={{ opacity: 0, y: 20 }}

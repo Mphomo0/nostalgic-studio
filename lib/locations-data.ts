@@ -2,6 +2,12 @@ export interface LocationInfo {
   slug: string
   name: string
   province: string
+  /** Unique title tag (≤60 chars) — avoids the templated "Web Design {City} | Digital Agency" pattern */
+  titleTag: string
+  /** Unique meta description per city */
+  metaDescription: string
+  /** For cities outside Gauteng: honest disclosure that we serve them remotely from Johannesburg */
+  remoteNote?: string
   description: string
   population: string
   businessHub: string
@@ -22,6 +28,9 @@ export const locations: LocationInfo[] = [
     slug: 'sandton',
     name: 'Sandton',
     province: 'Gauteng',
+    titleTag: 'Web Design Sandton | Corporate Sites',
+    metaDescription:
+      'Web design for Sandton firms — law, finance, consulting and property. Authoritative Next.js sites that rank for competitive keywords. Fixed quotes.',
     description:
       'Sandton is the financial and business hub of South Africa, home to the Johannesburg Stock Exchange and headquarters of most major corporations. Businesses in Sandton need websites that project authority, load instantly, and convert high-value corporate clients.',
     population: '222,000+',
@@ -58,6 +67,9 @@ export const locations: LocationInfo[] = [
     slug: 'fourways',
     name: 'Fourways',
     province: 'Gauteng',
+    titleTag: 'Web Design Fourways | Local SEO Sites',
+    metaDescription:
+      'Mobile-first websites for Fourways, Douglasdale, Sunninghill & Lonehill businesses. Local SEO built in, delivered in 2–4 weeks. Free quote.',
     description:
       'Fourways is one of Johannesburg\'s fastest-growing residential and commercial nodes. With a mix of established businesses and ambitious startups, Fourways companies need modern digital experiences that stand out in a competitive northern suburbs market.',
     population: '100,000+',
@@ -88,6 +100,9 @@ export const locations: LocationInfo[] = [
     slug: 'rosebank',
     name: 'Rosebank',
     province: 'Gauteng',
+    titleTag: 'Web Design Rosebank | Brand-Led Sites',
+    metaDescription:
+      'Design-forward websites for Rosebank galleries, boutiques, restaurants and studios. Visual storytelling without sacrificing speed or SEO.',
     description:
       'Rosebank is Johannesburg\'s creative and cultural district, known for its art galleries, media companies, and fashion boutiques. Businesses here need websites with stunning visual design that match the area\'s sophisticated, trendsetting character.',
     population: '30,000+',
@@ -118,6 +133,9 @@ export const locations: LocationInfo[] = [
     slug: 'midrand',
     name: 'Midrand',
     province: 'Gauteng',
+    titleTag: 'Web Design Midrand & Waterfall City',
+    metaDescription:
+      'Websites for Midrand tech firms, dealerships and logistics companies. Our home base — meet us in person. Next.js speed, Gauteng-wide SEO reach.',
     description:
       'Midrand sits strategically between Johannesburg and Pretoria, hosting a growing number of tech companies, automotive dealerships, and logistics businesses. Midrand-based businesses benefit from websites optimized for lead generation across the broader Gauteng region.',
     population: '200,000+',
@@ -154,6 +172,9 @@ export const locations: LocationInfo[] = [
     slug: 'pretoria',
     name: 'Pretoria',
     province: 'Gauteng',
+    titleTag: 'Web Design Pretoria | Trusted Sites',
+    metaDescription:
+      'Credible, authoritative websites for Pretoria firms serving government and corporate clients. Local SEO for Hatfield, Menlyn, Brooklyn & Waterkloof.',
     description:
       'Pretoria is South Africa\'s administrative capital, home to government departments, embassies, and established professional services firms. Pretoria businesses need professional, trustworthy websites that appeal to both government and corporate clients.',
     population: '2.9 million',
@@ -190,6 +211,9 @@ export const locations: LocationInfo[] = [
     slug: 'randburg',
     name: 'Randburg',
     province: 'Gauteng',
+    titleTag: 'Affordable Web Design Randburg',
+    metaDescription:
+      'Affordable, professional websites for Randburg small businesses — plumbers, accountants, salons and more. WhatsApp integration and local SEO included.',
     description:
       'Randburg is a major residential and commercial area in Johannesburg\'s northern suburbs, home to a diverse range of small and medium businesses. Randburg companies need affordable yet professional websites that drive local customer enquiries.',
     population: '500,000+',
@@ -220,6 +244,9 @@ export const locations: LocationInfo[] = [
     slug: 'roodepoort',
     name: 'Roodepoort',
     province: 'Gauteng',
+    titleTag: 'Web Design Roodepoort & West Rand',
+    metaDescription:
+      'Websites for West Rand businesses — construction, retail, healthcare and property. Fast on mobile networks, tuned for local Roodepoort searches.',
     description:
       'Roodepoort is a rapidly developing area on Johannesburg\'s West Rand, with growing residential estates and commercial centres. Roodepoort businesses are increasingly investing in digital presence to capture local market share.',
     population: '300,000+',
@@ -250,6 +277,9 @@ export const locations: LocationInfo[] = [
     slug: 'centurion',
     name: 'Centurion',
     province: 'Gauteng',
+    titleTag: 'Web Design Centurion | Fast Websites',
+    metaDescription:
+      'High-performance Next.js websites for Centurion tech firms and professional services. 90+ Lighthouse scores, AI-search-ready structured data.',
     description:
       'Centurion is a key economic hub between Johannesburg and Pretoria, hosting major corporate headquarters, shopping centres, and a growing tech sector. Centurion businesses need high-performance websites that compete for attention in one of Gauteng\'s most competitive markets.',
     population: '250,000+',
@@ -286,6 +316,11 @@ export const locations: LocationInfo[] = [
     slug: 'cape-town',
     name: 'Cape Town',
     province: 'Western Cape',
+    titleTag: 'Web Design Cape Town | Remote Studio',
+    metaDescription:
+      'Johannesburg studio working remotely with Cape Town startups, agencies and DTC brands. Custom Next.js builds with 90+ Lighthouse scores.',
+    remoteNote:
+      'We are a Johannesburg-based studio and work with Cape Town clients fully remotely — video calls, screen-share design reviews, and the same fixed pricing as our Gauteng projects.',
     description:
       'Cape Town is South Africa\'s tech and creative capital, with the highest concentration of startups, digital agencies, and design studios in the country. Cape Town businesses need websites that are as innovative and visually stunning as the city itself.',
     population: '4.8 million',
@@ -316,6 +351,11 @@ export const locations: LocationInfo[] = [
     slug: 'durban',
     name: 'Durban',
     province: 'KwaZulu-Natal',
+    titleTag: 'Web Design Durban | Tourism & B2B',
+    metaDescription:
+      'Websites for Durban tourism, logistics and manufacturing businesses — built remotely from Johannesburg with booking systems and KZN local SEO.',
+    remoteNote:
+      'We are a Johannesburg-based studio and serve Durban clients remotely — video calls, screen-share design reviews, and the same fixed pricing as our Gauteng projects.',
     description:
       'Durban is South Africa\'s premier port city and a major tourism and manufacturing hub. Durban businesses need websites that connect with both local customers and international visitors across the tourism, logistics, and retail sectors.',
     population: '3.7 million',
@@ -346,6 +386,11 @@ export const locations: LocationInfo[] = [
     slug: 'bloemfontein',
     name: 'Bloemfontein',
     province: 'Free State',
+    titleTag: 'Web Design Bloemfontein | Free State',
+    metaDescription:
+      'Professional websites for Bloemfontein legal, education and agri businesses — built remotely from Johannesburg with Free State local SEO.',
+    remoteNote:
+      'We are a Johannesburg-based studio and serve Bloemfontein clients remotely — video calls, screen-share design reviews, and the same fixed pricing as our Gauteng projects.',
     description:
       'Bloemfontein is the judicial capital of South Africa and the economic heart of the Free State. Home to the Supreme Court of Appeal, major educational institutions, and a growing small business community. Bloemfontein businesses need professional websites that build trust and attract local customers across the central region.',
     population: '520,000+',

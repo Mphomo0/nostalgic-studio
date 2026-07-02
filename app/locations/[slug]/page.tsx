@@ -15,9 +15,7 @@ export function generateStaticParams() {
 }
 
 function locationMeta(loc: LocationInfo) {
-  const title = `Web Design ${loc.name} | Digital Agency`
-  const desc = `Custom Next.js web design in ${loc.name}, ${loc.province}. SEO, branding & digital marketing. 5-star Google rated. Free quote.`
-  return { title, desc }
+  return { title: loc.titleTag, desc: loc.metaDescription }
 }
 
 export async function generateMetadata({
@@ -104,6 +102,11 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 build custom Next.js websites that load fast, rank on Google,
                 and convert visitors into customers.
               </p>
+              {loc.remoteNote && (
+                <p className="text-sm text-muted-foreground border-l-2 border-primary/40 pl-4 mb-8">
+                  {loc.remoteNote}
+                </p>
+              )}
               <div className="flex flex-wrap gap-4 mb-10">
                 <Button asChild size="lg">
                   <Link href="/contact">

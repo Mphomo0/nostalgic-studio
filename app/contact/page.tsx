@@ -19,7 +19,7 @@ import { Button } from '@/components/ui/button'
 import { breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Contact Nostalgic Studio | Johannesburg SEO Agency',
+  title: { absolute: 'Contact Nostalgic Studio | Johannesburg SEO Agency' },
 
   description:
     'Reach out to Nostalgic Studio for SEO, branding, and web design in Johannesburg. Fast response, free initial consultation, no obligation.',

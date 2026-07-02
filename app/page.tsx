@@ -3,6 +3,7 @@ import lazyLoad from 'next/dynamic'
 
 export const dynamic = 'force-static'
 import Hero from '@/components/pages/home/Hero'
+import { businessSchema } from '@/app/structured-data/schemas'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
@@ -23,7 +24,7 @@ const FaqSection = lazyLoad(() =>
   import('@/components/geo/FaqSection').then((mod) => mod.FaqSection),
 )
 export const metadata: Metadata = {
-  title: 'Johannesburg SEO, Branding & Web Design',
+  title: { absolute: 'Johannesburg SEO, Branding & Web Design | Nostalgic Studio' },
 
   description:
     'Johannesburg web design, SEO and branding studio. Fast websites, higher Google rankings and brands people remember. See our work and get a quote.',
@@ -99,6 +100,10 @@ const faqs = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema()) }}
+      />
       <Hero />
 
       {/* Enquiries Section */}

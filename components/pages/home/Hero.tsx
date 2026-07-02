@@ -29,7 +29,7 @@ export default function Hero() {
             id="hero-heading"
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
           >
-            <span className="text-gradient">Web Design Johannesburg</span>
+            <span className="text-gradient">Web Design Johannesburg</span>{' '}
             <br />
             for Small Businesses That Need More Leads
           </h1>
