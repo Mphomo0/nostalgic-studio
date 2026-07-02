@@ -258,7 +258,7 @@ export default function ContactPage() {
                       <a
                         href="https://wa.me/27824483273?text=Hi%2C%20I%27d%20like%20a%20free%20website%20review"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer nofollow"
                       >
                         WhatsApp Us for a Free Website Review
                       </a>

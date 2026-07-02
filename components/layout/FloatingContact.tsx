@@ -42,7 +42,7 @@ export default function FloatingContact() {
         <a
           href={WHATSAPP_URL}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
           aria-label="Chat with us on WhatsApp"
           onClick={() => trackEvent('whatsapp_click', 'floating_whatsapp')}
           onMouseEnter={() => setWaHovered(true)}
