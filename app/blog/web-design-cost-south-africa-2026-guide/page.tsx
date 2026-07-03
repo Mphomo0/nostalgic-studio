@@ -33,7 +33,7 @@ export default function WebDesignCostGuidePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
-          articleSchema({ url: '/blog/web-design-cost-south-africa-2026-guide', headline: 'Web Design Cost South Africa 2026', description: metadata.description ?? '', datePublished: PUB_DATE, articleSection: 'Pricing' }),
+          articleSchema({ url: '/blog/web-design-cost-south-africa-2026-guide', headline: 'Web Design Cost South Africa 2026', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: '2026-07-03', articleSection: 'Pricing' }),
           breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }, { name: 'Web Design Cost SA 2026', url: '/blog/web-design-cost-south-africa-2026-guide' }]),
           faqPageSchema(faqs),
         ])
@@ -93,7 +93,9 @@ export default function WebDesignCostGuidePage() {
             <li>1 hour of post-launch training</li>
           </ul>
 
-          <p>At Nostalgic Studio, our standard business website packages start at R8,500 and include all of the above plus Next.js development for superior speed, structured data implementation, and ongoing SEO support.</p>
+          <p>At Nostalgic Studio, our standard business website packages start at R8,000 and include all of the above plus Next.js development for superior speed, structured data implementation, and ongoing SEO support.</p>
+
+          <p>Want a package-by-package breakdown of what each tier includes? See our detailed <Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">website cost guide for South Africa</Link>.</p>
         </div>
 
         <div className="mt-12 p-6 bg-muted rounded-xl">

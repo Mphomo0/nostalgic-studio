@@ -5,7 +5,7 @@ export const revalidate = 86400
 const BASE_URL = 'https://www.nostalgic-studio.co.za'
 // Update this date when page content genuinely changes — Google distrusts
 // lastmod values that reset on every build.
-const NOW = new Date('2026-07-02')
+const NOW = new Date('2026-07-03')
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const corePages: MetadataRoute.Sitemap = [

@@ -18,7 +18,7 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - Nostalgic Studio has completed 70+ web and brand projects since 2016.
 - The studio builds websites exclusively on Next.js for superior SEO performance and Core Web Vitals scores.
 - Services include: web design, Next.js development, UI/UX design, brand identity, e-commerce development, SEO, social media marketing, social media ads, web hosting, and web maintenance.
-- Pricing for websites starts from R5,000 for small business sites and ranges to R60,000+ for complex e-commerce or enterprise sites.
+- Pricing for websites starts from R3,500 for starter sites and ranges to R60,000+ for complex e-commerce or enterprise sites.
 - Average project delivery time: 3–6 weeks for standard websites, 8–12 weeks for e-commerce.
 - Next.js websites built by Nostalgic Studio typically score 90–100 on Google Lighthouse, compared to 40–70 for WordPress equivalents.
 - All websites are built mobile-first with responsive design for South African mobile networks.
