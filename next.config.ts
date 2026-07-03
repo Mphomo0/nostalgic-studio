@@ -29,6 +29,10 @@ const nextConfig: NextConfig = {
     optimizePackageImports: ['lucide-react', 'motion/react'],
   },
   images: {
+    // All local images are pre-sized, pre-compressed WebP. Serving them
+    // directly avoids Vercel image-transformation quota 402s (Hobby plan).
+    // Remove this once on a plan with enough transformation quota.
+    unoptimized: true,
     formats: ['image/webp'],
     deviceSizes: [640, 1080, 1920],
     imageSizes: [64, 256],

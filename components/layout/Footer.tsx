@@ -39,7 +39,7 @@ const footerLinks = {
   industries: [
     { name: 'Healthcare Website Design', path: '/industries/healthcare' },
     { name: 'Construction Website Design', path: '/industries/construction' },
-    { name: 'E-commerce Development', path: '/industries/ecommerce' },
+    { name: 'E-commerce Development', path: '/industries/e-commerce' },
     { name: 'Professional Services', path: '/industries/professional-services' },
     { name: 'Startup Website Design', path: '/industries/startups' },
   ],

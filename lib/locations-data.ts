@@ -12,7 +12,6 @@ export interface LocationInfo {
   population: string
   businessHub: string
   nearby: string[]
-  image: string
   localBusinesses: string[]
   uniqueContent: string
   faq: { q: string; a: string }[]
@@ -36,7 +35,6 @@ export const locations: LocationInfo[] = [
     population: '222,000+',
     businessHub: 'Sandton CBD, Alice Lane, Rivonia Road',
     nearby: ['Morningside', 'Bryanston', 'Rivonia', 'Illovo', 'Melrose Arch'],
-    image: '/images/locations/sandton.webp',
     localBusinesses: [
       'Corporate head offices and financial services',
       'Law firms and legal practices',
@@ -75,7 +73,6 @@ export const locations: LocationInfo[] = [
     population: '100,000+',
     businessHub: 'Fourways Crossing, Broadacres, Cedar Square',
     nearby: ['Douglasdale', 'Sunninghill', 'Lonehill', 'Chartwell', 'Kyalami'],
-    image: '/images/locations/fourways.webp',
     localBusinesses: [
       'Real estate agencies and property developers',
       'Retail and FMCG brands',
@@ -108,7 +105,6 @@ export const locations: LocationInfo[] = [
     population: '30,000+',
     businessHub: 'Rosebank Mall, The Zone, Keyes Art Mile',
     nearby: ['Melrose', 'Hyde Park', 'Dunkeld', 'Parktown North', 'Saxonwold'],
-    image: '/images/locations/rosebank.webp',
     localBusinesses: [
       'Art galleries and creative studios',
       'Media and publishing companies',
@@ -141,7 +137,6 @@ export const locations: LocationInfo[] = [
     population: '200,000+',
     businessHub: 'Midrand CBD, Waterfall City, Carlswald',
     nearby: ['Centurion', 'Kyalami', 'Halfway House', 'Vorna Valley', 'Noordwyk'],
-    image: '/images/locations/midrand.webp',
     localBusinesses: [
       'Tech companies and software firms',
       'Automotive dealerships and fleet services',
@@ -180,7 +175,6 @@ export const locations: LocationInfo[] = [
     population: '2.9 million',
     businessHub: 'Hatfield, Menlyn, Brooklyn, Waterkloof, Centurion',
     nearby: ['Hatfield', 'Menlyn', 'Brooklyn', 'Waterkloof', 'Centurion', 'Lynnwood'],
-    image: '/images/locations/pretoria.webp',
     localBusinesses: [
       'Professional services firms (legal, accounting, consulting)',
       'Government-adjacent contractors and suppliers',
@@ -219,7 +213,6 @@ export const locations: LocationInfo[] = [
     population: '500,000+',
     businessHub: 'Randburg CBD, Cresta Shopping Centre, Ferndale',
     nearby: ['Ferndale', 'Blairgowrie', 'Kensington B', 'Bryanston', 'Northcliff'],
-    image: '/images/locations/randburg.webp',
     localBusinesses: [
       'Small and medium retail businesses',
       'Professional services (accountants, lawyers, consultants)',
@@ -252,7 +245,6 @@ export const locations: LocationInfo[] = [
     population: '300,000+',
     businessHub: 'Constantia Kloof, Clearwater Mall, Key West',
     nearby: ['Honeydew', 'Constantia Kloof', 'Wilropark', 'Ruimsig', 'Florida'],
-    image: '/images/locations/roodepoort.webp',
     localBusinesses: [
       'Residential construction and renovation',
       'Retail stores and shopping centre tenants',
@@ -285,7 +277,6 @@ export const locations: LocationInfo[] = [
     population: '250,000+',
     businessHub: 'Centurion CBD, Irene, Centurion Mall, Highveld',
     nearby: ['Irene', 'Midrand', 'Highveld', 'Zwartkop', 'Monument Park'],
-    image: '/images/locations/centurion.webp',
     localBusinesses: [
       'Corporate and regional head offices',
       'Tech and software development firms',
@@ -326,7 +317,6 @@ export const locations: LocationInfo[] = [
     population: '4.8 million',
     businessHub: 'City Bowl, Century City, Claremont, Stellies, Tygervalley',
     nearby: ['Century City', 'Claremont', 'Rondebosch', 'Bellville', 'Stellenbosch'],
-    image: '/images/locations/cape-town.webp',
     localBusinesses: [
       'Tech startups and SaaS companies',
       'Creative agencies and design studios',
@@ -361,7 +351,6 @@ export const locations: LocationInfo[] = [
     population: '3.7 million',
     businessHub: 'Umhlanga Ridge, Durban CBD, La Lucia, Ballito',
     nearby: ['Umhlanga', 'La Lucia', 'Ballito', 'Westville', 'Berea'],
-    image: '/images/locations/durban.webp',
     localBusinesses: [
       'Tourism and hospitality (hotels, lodges, tour operators)',
       'Logistics, shipping, and freight companies',
@@ -396,7 +385,6 @@ export const locations: LocationInfo[] = [
     population: '520,000+',
     businessHub: 'Bloemfontein CBD, Langenhoven Park, Brandwag',
     nearby: ['Langenhoven Park', 'Brandwag', 'Fichardt Park', 'Baysvalley', 'Heuwelsig'],
-    image: '/images/locations/bloemfontein.webp',
     localBusinesses: [
       'Legal and professional services',
       'Educational institutions and training providers',
