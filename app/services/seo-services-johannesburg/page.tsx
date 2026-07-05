@@ -37,10 +37,10 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO Services Johannesburg',
+  title: 'SEO & AI Search Optimisation Services Johannesburg',
 
   description:
-    'Improve Google visibility with technical SEO, local SEO, content strategy, Google Business Profile optimisation, and AI search readiness.',
+    'Johannesburg SEO agency for Google rankings & AI search visibility (ChatGPT, Gemini, AI Overviews). Technical SEO, local SEO & GEO from R1,500/mo. Free audit.',
 
   keywords: [
     'SEO Services Johannesburg',
@@ -69,9 +69,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'SEO Services Johannesburg',
+    title: 'SEO & AI Search Optimisation Services Johannesburg',
     description:
-      'Improve Google visibility with technical SEO, local SEO, content strategy, Google Business Profile optimisation, and AI search readiness.',
+      'Johannesburg SEO agency for Google rankings & AI search visibility (ChatGPT, Gemini, AI Overviews). Technical SEO, local SEO & GEO from R1,500/mo. Free audit.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -89,9 +89,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'SEO Services Johannesburg',
+    title: 'SEO & AI Search Optimisation Services Johannesburg',
     description:
-      'Improve Google visibility with technical SEO, local SEO, content strategy, Google Business Profile optimisation, and AI search readiness.',
+      'Johannesburg SEO agency for Google rankings & AI search visibility (ChatGPT, Gemini, AI Overviews). Technical SEO, local SEO & GEO from R1,500/mo. Free audit.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -305,12 +305,13 @@ export default function SEOServicesJohannesburg() {
           <div className="max-w-4xl mx-auto text-center mb-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="text-gradient">
-                SEO Company Johannesburg for{' '}
+                SEO & AI Search Optimisation
               </span>{' '}
-              Local Businesses
+              Services in Johannesburg
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Nostalgic Studio helps Johannesburg businesses improve visibility
+              Nostalgic Studio is an SEO and AI search ranking optimisation
+              provider in Johannesburg. We help businesses improve visibility
               on Google, Google Maps, and AI-powered search results. We focus on
               practical SEO work that helps real customers find your business:
               technical fixes, service page optimisation, local SEO, Google
