@@ -115,7 +115,7 @@ const Navbar = memo(function Navbar() {
               height={100}
               sizes="150px"
               priority
-              className="w-full h-full object-contain"
+              className="w-60 h-auto object-contain"
             />
           </Link>
 
