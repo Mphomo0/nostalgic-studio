@@ -59,8 +59,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   const loc = locationBySlug.get(slug)
   if (!loc) notFound()
 
-  const { title, desc } = locationMeta(loc)
-
   const schemas = [
     breadcrumbSchema([
       { name: 'Home', url: '/' },
@@ -316,77 +314,23 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
         {/* Pricing Summary */}
         <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-4 text-center">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold mb-4">
               Web Design Pricing in {loc.name}
             </h2>
-            <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
-              Transparent, fixed pricing — no hidden fees. All packages include
-              hosting setup, SSL, and post-launch support.
+            <p className="text-lg text-muted-foreground mb-8">
+              Transparent, fixed pricing from{' '}
+              <span className="font-semibold text-primary">R3,500</span> — no
+              hidden fees. Every package includes hosting setup, SSL, and
+              post-launch support, whether your {loc.name} project is a
+              starter site, a full business build, or an e-commerce store.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                {
-                  name: 'Starter',
-                  price: 'R3,500',
-                  desc: 'Perfect for freelancers, service providers, and landing pages.',
-                  features: [
-                    '3-5 pages',
-                    'Mobile responsive',
-                    'Contact form',
-                    'Basic SEO',
-                    'Google Analytics',
-                  ],
-                },
-                {
-                  name: 'Business',
-                  price: 'R15,000',
-                  desc: 'For startups and SMEs that need a professional online presence.',
-                  features: [
-                    '8-15 pages',
-                    'Custom UI/UX',
-                    'Blog/CMS',
-                    'Advanced SEO',
-                    'Speed optimization',
-                  ],
-                },
-                {
-                  name: 'E-Commerce',
-                  price: 'R25,000',
-                  desc: 'Full online stores with SA payment gateways and inventory management.',
-                  features: [
-                    'Unlimited products',
-                    'PayFast/Yoco/Ozow',
-                    'Mobile checkout',
-                    'SEO product pages',
-                    'Inventory management',
-                  ],
-                },
-              ].map((pkg) => (
-                <div
-                  key={pkg.name}
-                  className="border rounded-xl p-8 bg-card flex flex-col"
-                >
-                  <h3 className="text-2xl font-bold mb-1">{pkg.name}</h3>
-                  <p className="text-3xl font-bold text-primary mb-2">
-                    {pkg.price}
-                  </p>
-                  <p className="text-sm text-muted-foreground mb-6">
-                    {pkg.desc}
-                  </p>
-                  <ul className="space-y-2 mb-8 flex-1">
-                    {pkg.features.map((f) => (
-                      <li key={f} className="flex items-center gap-2 text-sm">
-                        <CheckCircle className="h-4 w-4 text-primary" /> {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button asChild className="w-full">
-                    <Link href="/contact">Get a Free Quote</Link>
-                  </Button>
-                </div>
-              ))}
-            </div>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/#pricing">
+                See Full Pricing Breakdown
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </section>
 
@@ -457,23 +401,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </section>
       </main>
     </>
-  )
-}
-
-function CheckCircle({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
-    </svg>
   )
 }
 

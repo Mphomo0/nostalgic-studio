@@ -120,7 +120,7 @@ const Testimonials = memo(function Testimonials() {
             (testimonial, index) => (
               <article
                 key={`${testimonial.id}-${index}`}
-                className="w-87.5 md:w-112.5 p-8 rounded-2xl bg-background border border-border shrink-0"
+                className="marquee-card w-87.5 md:w-112.5 p-8 rounded-2xl bg-background border border-border shrink-0"
               >
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
 
@@ -159,33 +159,6 @@ const Testimonials = memo(function Testimonials() {
           )}
         </div>
       </div>
-
-      {/* Marquee CSS */}
-      <style jsx global>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-marquee {
-          animation: marquee 50s linear infinite;
-        }
-        .hover\\:pause-animation:hover {
-          animation-play-state: paused;
-        }
-        .mask-linear-fade {
-          mask-image: linear-gradient(
-            to right,
-            transparent,
-            black 10%,
-            black 90%,
-            transparent
-          );
-        }
-      `}</style>
     </section>
   )
 })

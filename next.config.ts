@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
         destination: '/projects/jiyology-construction-plumbing-seo-optimization-case-study',
         permanent: true,
       },
+      {
+        source: '/request-a-quote',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/web-hosting-security',
+        destination: '/services/web-hosting',
+        permanent: true,
+      },
     ]
   },
   experimental: {

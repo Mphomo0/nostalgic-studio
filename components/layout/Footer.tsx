@@ -157,7 +157,11 @@ const Footer = () => {
 
           {/* Locations */}
           <div>
-            <h4 className="text-foreground font-semibold mb-6">Locations</h4>
+            <h4 className="text-foreground font-semibold mb-6">
+              <Link href="/locations" className="hover:text-primary transition-colors">
+                Locations
+              </Link>
+            </h4>
             <ul className="space-y-3">
               {footerLinks.locations.map((link) => (
                 <li key={link.path}>
