@@ -98,7 +98,7 @@ export default function ProjectsPage() {
             <h2 id="expertise-heading" className="text-3xl font-bold mb-8">Specialized Web Design Expertise</h2>
             <div className="prose prose-lg max-w-none text-muted-foreground mb-16">
               <p>
-                At Nostalgic Studio, we don't just build websites; we create digital assets that drive growth. Our portfolio showcases a diverse range of projects, from high-performance startup landing pages to complex corporate platforms. Every project in our Johannesburg studio is approached with a focus on <strong>speed, SEO, and user experience</strong>.
+                At Nostalgic Studio, we don&apos;t just build websites; we create digital assets that drive growth. Our portfolio showcases a diverse range of projects, from high-performance startup landing pages to complex corporate platforms. Every project in our Johannesburg studio is approached with a focus on <strong>speed, SEO, and user experience</strong>.
               </p>
               <p>
                 We specialize in using modern technologies like <strong>Next.js and React</strong> to deliver websites that outrank traditional CMS-based sites. This technical edge allows our clients to achieve superior search engine visibility and conversion rates from day one.
@@ -135,7 +135,7 @@ export default function ProjectsPage() {
             <div className="mt-20 p-8 md:p-12 bg-card border border-border rounded-3xl text-center">
               <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to see your business here?</h2>
               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Join the 70+ successful projects we've delivered. Let's build a high-performance website that truly represents your brand.
+                Join the 70+ successful projects we&apos;ve delivered. Let&apos;s build a high-performance website that truly represents your brand.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 

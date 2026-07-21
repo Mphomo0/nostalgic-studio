@@ -253,4 +253,39 @@ export const projects: Project[] = [
       'Framer Motion',
     ],
   },
+  {
+    id: 7,
+    title: 'Ribbons Collection Website Rebuild & AI-SEO Overhaul',
+    category: 'Web Design',
+    client: 'Ribbons Collection',
+    industry: 'E-commerce & Footwear',
+    location: 'South Africa',
+    timeline: '3 weeks',
+    role: 'Web Developer & SEO Strategist',
+    description:
+      'Ribbons Collection sells handcrafted, genuine leather footwear made in South Africa. We rebuilt their broken WordPress store and optimised it for search engines and AI discoverability.',
+    image: '/images/projects/ribbonscollection.webp',
+    liveUrl: 'https://ribbonscollection.co.za',
+    slug: 'ribbons-collection-website-redesign',
+    challenge:
+      "Ribbons Collection's WordPress store had become unusable. The page builder was broken, the theme was throwing errors across key pages, and — critically — customers could not remove items from their shopping cart, a checkout-blocking bug that was actively costing sales. On top of the technical failures, the site had no meaningful SEO foundation and zero presence in AI-driven search tools, leaving a genuine South African leather goods brand invisible to the customers actively searching for exactly what they sell.",
+    approach:
+      "We rebuilt the site from the ground up rather than patch a failing page builder and theme, fixing the broken cart flow so customers could add, edit, and remove items without errors. Alongside the rebuild, we ran a full SEO overhaul — clean on-page structure, optimised product and category pages, technical fixes for crawlability, and structured data to help search engines understand the catalogue. We also optimised the site for AI discoverability (GEO), ensuring product and brand content is structured so AI answer engines like ChatGPT, Perplexity, and Google AI Overviews can accurately surface and cite Ribbons Collection when users ask about South African leather shoes.",
+    results: [
+      'Resolved the cart bug preventing customers from removing items — restoring a working checkout flow',
+      'Replaced a broken page builder and theme with a stable, fast-loading storefront',
+      'Full technical and on-page SEO implementation across products and categories',
+      'Structured data and content optimisation to improve visibility in AI search tools',
+      'Site now fully functional and positioned for organic and AI-driven discovery',
+    ],
+    services: [
+      'WordPress website rebuild & bug fixes',
+      'E-commerce cart & checkout repair',
+      'Technical SEO & on-page optimization',
+      'Structured data implementation',
+      'AI search / GEO optimization',
+      'Performance optimization',
+    ],
+    technologies: ['WordPress', 'WooCommerce', 'PHP', 'JavaScript', 'CSS'],
+  },
 ]

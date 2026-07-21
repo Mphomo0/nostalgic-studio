@@ -135,10 +135,10 @@ export default function SocialMediaMarketing() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">Content Strategy and Local Relevance</h3>
             <p className="text-muted-foreground mb-6">
-              Successful social media marketing in Johannesburg goes beyond global trends; it's about localized storytelling. We understand that a LinkedIn audience in Sandton requires a different tone and aesthetic than an Instagram community in Rosebank. At Nostalgic Studio, we help you navigate these nuances by crafting <strong>platform-specific content</strong> that resonates with the South African cultural context.
+              Successful social media marketing in Johannesburg goes beyond global trends; it&apos;s about localized storytelling. We understand that a LinkedIn audience in Sandton requires a different tone and aesthetic than an Instagram community in Rosebank. At Nostalgic Studio, we help you navigate these nuances by crafting <strong>platform-specific content</strong> that resonates with the South African cultural context.
             </p>
             <p className="text-muted-foreground">
-              Social media is no longer just a broadcast channel; it's a <strong>conversion catalyst</strong>. By integrating your social strategy with your high-performance Next.js website, we create a seamless journey from "Like" to "Buy". Whether we are managing your daily community engagement or collaborating with local influencers, our focus remains on building a digital community that translates into tangible business results and long-term brand loyalty.
+              Social media is no longer just a broadcast channel; it&apos;s a <strong>conversion catalyst</strong>. By integrating your social strategy with your high-performance Next.js website, we create a seamless journey from &quot;Like&quot; to &quot;Buy&quot;. Whether we are managing your daily community engagement or collaborating with local influencers, our focus remains on building a digital community that translates into tangible business results and long-term brand loyalty.
             </p>
           </div>
         </section>
@@ -231,7 +231,7 @@ export default function SocialMediaMarketing() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Get Social?</h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Let's create a social media strategy that works as hard as you do.
+            Let&apos;s create a social media strategy that works as hard as you do.
           </p>
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Start Your Social Strategy</Link>

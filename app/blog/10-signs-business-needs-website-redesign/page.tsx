@@ -255,7 +255,7 @@ export default function RedesignSignsArticle() {
         <section className="prose prose-lg max-w-none text-foreground [&_h2]:text-2xl [&_h2]:font-bold [&_h2]:mt-12 [&_h2]:mb-4 [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-4">
           <h2>The Website Redesign Process & Timeline</h2>
           <p>
-            A professional website redesign is more than just a "face-lift". At
+            A professional website redesign is more than just a &quot;face-lift&quot;. At
             Nostalgic Studio, we follow a data-driven 5-phase process to ensure
             your new site delivers measurable business results.
           </p>

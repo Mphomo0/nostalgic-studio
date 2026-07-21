@@ -44,7 +44,7 @@ export default function SmallBizGuidePage() {
         <p className="text-lg text-muted-foreground mb-8">How Jozi small business owners can compete with big brands online</p>
 
         <div className="prose prose-lg max-w-none">
-          <p>Johannesburg's small business economy is thriving. From Fourways to Rosebank, Sandton to Soweto, entrepreneurs are launching every day. But most small business websites fail at the one thing that matters: generating leads.</p>
+          <p>Johannesburg&apos;s small business economy is thriving. From <Link href="/locations/fourways" className="text-primary hover:underline">Fourways</Link> to <Link href="/locations/rosebank" className="text-primary hover:underline">Rosebank</Link>, <Link href="/locations/sandton" className="text-primary hover:underline">Sandton</Link> to Soweto, entrepreneurs are launching every day. But most small business websites fail at the one thing that matters: generating leads.</p>
           <p>This guide covers exactly what Johannesburg small business owners need to know about getting a website that actually works.</p>
 
           <h2>1. Your Website is Your Best Salesperson</h2>

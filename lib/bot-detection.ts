@@ -31,8 +31,7 @@ export function isGibberish(text: string): boolean {
   const alphaText = text.replace(NON_ALPHA_RE, '').toLowerCase();
   if (alphaText.length > 10) {
     const vowels = alphaText.match(VOWEL_RE) || [];
-    const consonants = alphaText.length - vowels.length;
-    
+
     // Very low vowel count usually indicates random strings
     // Threshold: less than 10% vowels or less than 10% consonants (for very long random strings)
     const ratio = vowels.length / alphaText.length;

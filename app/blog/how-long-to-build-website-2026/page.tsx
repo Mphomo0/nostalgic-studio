@@ -100,7 +100,7 @@ export default function TimelineArticle() {
             How Long Does it Take to Build a Website? (2026 Timeline)
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            "When will it be ready?" is the first question every client asks. While every project is unique, 
+            &quot;When will it be ready?&quot; is the first question every client asks. While every project is unique, 
             here is a realistic roadmap for building a high-performance website in 2026.
           </p>
         </header>
@@ -161,7 +161,7 @@ export default function TimelineArticle() {
 
           <h2>Phase 1: Discovery & Strategy (1 Week)</h2>
           <p>
-            We don't start with code; we start with questions. This phase involves understanding your target 
+            We don&apos;t start with code; we start with questions. This phase involves understanding your target 
             audience, defining your unique selling proposition (USP), and planning the sitemap. This is the 
             foundation that ensures your site actually converts.
           </p>
@@ -175,7 +175,7 @@ export default function TimelineArticle() {
 
           <h2>Phase 3: Development & SEO (2-4 Weeks)</h2>
           <p>
-            This is the "engine room" phase. We build your site using Next.js, ensuring it is blazing fast 
+            This is the &quot;engine room&quot; phase. We build your site using Next.js, ensuring it is blazing fast 
             and technically perfect for search engines. We also implement all the GEO-ready features like 
             schema markup and FAQ sections.
           </p>
@@ -184,7 +184,7 @@ export default function TimelineArticle() {
           <p>
             We test your site on all devices (iPhone, Android, Desktop) and browsers. We check for broken 
             links, optimize images for speed, and ensure your contact forms are working perfectly across 
-            South Africa's different network speeds.
+            South Africa&apos;s different network speeds.
           </p>
 
           <CitationBlock
@@ -195,7 +195,7 @@ export default function TimelineArticle() {
 
           <h2>Phase 5: Launch & Support</h2>
           <p>
-            Once you're happy, we go live! We also provide a training session on how to manage your 
+            Once you&apos;re happy, we go live! We also provide a training session on how to manage your 
             content and offer ongoing maintenance to keep your site secure and up to date.
           </p>
           

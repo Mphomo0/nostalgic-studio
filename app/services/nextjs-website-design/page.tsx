@@ -124,10 +124,10 @@ export default function NextjsWebsiteDesign() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">The Next.js Advantage for South African Businesses</h3>
             <p className="text-muted-foreground mb-6">
-              In a digital landscape where every millisecond counts, Next.js provides a technical moat for your business. In Johannesburg, where mobile data costs are high and network speeds can vary from high-speed fiber in Sandton to 3G in outlying areas, having a website that is <strong>statically pre-rendered</strong> ensures your customers aren't left waiting for a blank screen. It's the difference between capturing a lead and losing them to a faster competitor.
+              In a digital landscape where every millisecond counts, Next.js provides a technical moat for your business. In Johannesburg, where mobile data costs are high and network speeds can vary from high-speed fiber in Sandton to 3G in outlying areas, having a website that is <strong>statically pre-rendered</strong> ensures your customers aren&apos;t left waiting for a blank screen. It&apos;s the difference between capturing a lead and losing them to a faster competitor.
             </p>
             <p className="text-muted-foreground">
-              Beyond speed, the SEO benefits are built directly into the core of how we develop. Unlike traditional React apps that can be difficult for search engines to crawl, Next.js provides <strong>server-side rendering (SSR)</strong>. This means that Google's bots see your full content immediately, leading to better indexing and higher organic rankings for your target keywords in the Gauteng region.
+              Beyond speed, the SEO benefits are built directly into the core of how we develop. Unlike traditional React apps that can be difficult for search engines to crawl, Next.js provides <strong>server-side rendering (SSR)</strong>. This means that Google&apos;s bots see your full content immediately, leading to better indexing and higher organic rankings for your target keywords in the Gauteng region.
             </p>
           </div>
         </section>
@@ -227,7 +227,7 @@ export default function NextjsWebsiteDesign() {
             Ready to upgrade your online presence with the latest in web technology?
           </p>
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
-            <Link href="/contact">Let's Talk Tech</Link>
+            <Link href="/contact">Let&apos;s Talk Tech</Link>
           </Button>
         </div>
 

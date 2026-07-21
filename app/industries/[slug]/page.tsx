@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, CheckCircle2, Briefcase, Building2, TrendingUp, Shield, Zap, Users } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Briefcase, Building2, TrendingUp, Shield, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
   industries,
@@ -144,7 +144,7 @@ export default async function IndustryPage({
   const ind = industryBySlug.get(slug)
   if (!ind) notFound()
 
-  const { title, desc } = industryMeta(ind)
+  const { desc } = industryMeta(ind)
   const Icon = industryIcons[slug] || Building2
 
   return (

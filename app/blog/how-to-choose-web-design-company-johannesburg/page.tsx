@@ -125,7 +125,7 @@ export default function ChooseAgencyArticle() {
           <h2>1. Review Their Own Technical Performance</h2>
           <p>
             Before looking at their portfolio, look at their own website. Run it through Google PageSpeed Insights. 
-            If a web design agency can't get a 90+ score on their own site, they won't do it for yours.
+            If a web design agency can&apos;t get a 90+ score on their own site, they won&apos;t do it for yours.
           </p>
           
           <CitationBlock
@@ -136,15 +136,15 @@ export default function ChooseAgencyArticle() {
 
           <h2>2. Ask About Their Tech Stack</h2>
           <p>
-            In 2026, "just WordPress" isn't enough for high-growth startups. Ask if they offer modern headless 
+            In 2026, &quot;just WordPress&quot; isn&apos;t enough for high-growth startups. Ask if they offer modern headless 
             frameworks like Next.js or Astro. These technologies provide sub-second load times and native security 
-            benefits that traditional builders simply can't match.
+            benefits that traditional builders simply can&apos;t match.
           </p>
 
           <h2>3. Verify SEO Expertise Beyond Keywords</h2>
           <p>
-            SEO is no longer just about meta tags. It's about schema markup, Core Web Vitals, and AI-readiness (GEO). 
-            Ask the agency how they optimize for answer engines like Perplexity or ChatGPT. If they don't mention 
+            SEO is no longer just about meta tags. It&apos;s about schema markup, Core Web Vitals, and AI-readiness (GEO). 
+            Ask the agency how they optimize for answer engines like Perplexity or ChatGPT. If they don&apos;t mention 
             structured data (JSON-LD), keep looking.
           </p>
 
@@ -157,9 +157,9 @@ export default function ChooseAgencyArticle() {
 
           <h2>5. Do They Understand Your Business Goals?</h2>
           <p>
-            A good designer asks about your "brand identity." A great designer asks about your "customer 
-            acquisition cost" and "conversion goals." Look for a partner that prioritizes ROI over just 
-            making things look "pretty."
+            A good designer asks about your &quot;brand identity.&quot; A great designer asks about your &quot;customer 
+            acquisition cost&quot; and &quot;conversion goals.&quot; Look for a partner that prioritizes ROI over just 
+            making things look &quot;pretty.&quot;
           </p>
 
           <CitationBlock
@@ -170,7 +170,7 @@ export default function ChooseAgencyArticle() {
 
           <h2>Conclusion</h2>
           <p>
-            Choosing a web design company in Johannesburg is a long-term investment. Don't rush the decision. 
+            Choosing a web design company in Johannesburg is a long-term investment. Don&apos;t rush the decision. 
             Check references, verify technical skills, and ensure their values align with yours.
           </p>
           

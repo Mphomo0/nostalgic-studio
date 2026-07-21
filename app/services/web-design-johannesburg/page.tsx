@@ -5,7 +5,6 @@ import {
   ArrowRight,
   CheckCircle2,
   Star,
-  Globe,
   Layout,
   Search,
   Zap,

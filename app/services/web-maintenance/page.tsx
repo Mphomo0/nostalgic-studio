@@ -99,7 +99,7 @@ export default function WebMaintenance() {
             <p className="text-xl text-muted-foreground mb-8">
               <strong>Nostalgic Studio offers website maintenance plans for South African businesses — keeping your site secure, updated, and performing with monthly reports from R500/month.</strong>{' '}
               Focus on your business while we handle your website. Our proactive maintenance plans
-              ensure your South African startup's online presence is always secure, fast, and functional.
+              ensure your South African startup&apos;s online presence is always secure, fast, and functional.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
               <Link href="/contact">Get Peace of Mind <ArrowRight className="ml-2" /></Link>
@@ -128,10 +128,10 @@ export default function WebMaintenance() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">Proactive Care: Protecting Your Digital Equity</h3>
             <p className="text-muted-foreground mb-6">
-              A website is a living digital asset, not a static brochure. In the fast-moving tech environment of Johannesburg, staying relevant means staying updated. At Nostalgic Studio, we view maintenance as <strong>proactive value preservation</strong>. We don't just wait for things to break; we actively monitor your Next.js application for dependency vulnerabilities, performance regressions, and SEO health. Our goal is to ensure that the high-performance site we built for you continues to deliver ROI years after launch.
+              A website is a living digital asset, not a static brochure. In the fast-moving tech environment of Johannesburg, staying relevant means staying updated. At Nostalgic Studio, we view maintenance as <strong>proactive value preservation</strong>. We don&apos;t just wait for things to break; we actively monitor your Next.js application for dependency vulnerabilities, performance regressions, and SEO health. Our goal is to ensure that the high-performance site we built for you continues to deliver ROI years after launch.
             </p>
             <p className="text-muted-foreground">
-              Our maintenance plans are more than just a safety net—they are a <strong>competitive advantage</strong>. By ensuring your Core Web Vitals remain in the "green" and your security patches are always current, we keep your business ahead of competitors who neglect their digital presence. We understand the South African business landscape, where reliability and trust are paramount. With our team handling the technical heavy lifting, you can focus on scaling your operations, confident that your digital foundation is solid, secure, and performing at its peak.
+              Our maintenance plans are more than just a safety net—they are a <strong>competitive advantage</strong>. By ensuring your Core Web Vitals remain in the &quot;green&quot; and your security patches are always current, we keep your business ahead of competitors who neglect their digital presence. We understand the South African business landscape, where reliability and trust are paramount. With our team handling the technical heavy lifting, you can focus on scaling your operations, confident that your digital foundation is solid, secure, and performing at its peak.
             </p>
           </div>
         </section>
@@ -140,7 +140,7 @@ export default function WebMaintenance() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Proactive Care for Your Digital Asset</h2>
             <p className="text-muted-foreground mb-6">
-              A website is never truly "finished". It requires ongoing care to perform at its best.
+              A website is never truly &quot;finished&quot;. It requires ongoing care to perform at its best.
               We offer comprehensive support packages tailored to your needs.
               Our <strong>web maintenance</strong> services include:
             </p>
@@ -184,7 +184,7 @@ export default function WebMaintenance() {
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Ongoing Optimization</h3>
-                <p className="text-muted-foreground text-sm">We regularly audit your site's performance and SEO to ensure it continues to rank well.</p>
+                <p className="text-muted-foreground text-sm">We regularly audit your site&apos;s performance and SEO to ensure it continues to rank well.</p>
               </div>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function WebMaintenance() {
         </section>
 
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-6">Secure Your Website's Future</h2>
+          <h2 className="text-3xl font-bold mb-6">Secure Your Website&apos;s Future</h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
             Ready to stop worrying about your website? Let the experts at Nostalgic Studio handle it.
           </p>

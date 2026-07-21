@@ -138,7 +138,7 @@ export default function SocialMediaArticle() {
           <h2>Platform Strategy: Where to Focus</h2>
           <h3>1. WhatsApp: The Hidden Marketing Giant</h3>
           <p>
-            In South Africa, WhatsApp isn't just a messaging app; it's a business tool. From customer 
+            In South Africa, WhatsApp isn&apos;t just a messaging app; it&apos;s a business tool. From customer 
             support to order placement, businesses that leverage WhatsApp Business see much higher 
             engagement and conversion rates than those relying solely on email.
           </p>
@@ -146,21 +146,21 @@ export default function SocialMediaArticle() {
           <h3>2. Facebook & Instagram: Still Vital</h3>
           <p>
             Facebook remains the king of reach in SA, especially for B2C businesses. Instagram is the 
-            visual storefront for lifestyle, fashion, and food brands. The key here is "Local Content" — 
+            visual storefront for lifestyle, fashion, and food brands. The key here is &quot;Local Content&quot; — 
             showing South African faces and South African contexts.
           </p>
 
           <h3>3. TikTok: The High-Growth Opportunity</h3>
           <p>
-            TikTok's growth in South Africa has been explosive. It's the best platform for reaching 
-            Gen Z and Millennials through authentic, unpolished video content. It's also becoming 
+            TikTok&apos;s growth in South Africa has been explosive. It&apos;s the best platform for reaching 
+            Gen Z and Millennials through authentic, unpolished video content. It&apos;s also becoming 
             a powerful search engine in its own right.
           </p>
 
           <h3>4. LinkedIn: The B2B Standard</h3>
           <p>
-            For Johannesburg's professional services and B2B sectors, LinkedIn is non-negotiable. 
-            It's about thought leadership and networking, not just job hunting.
+            For Johannesburg&apos;s professional services and B2B sectors, LinkedIn is non-negotiable. 
+            It&apos;s about thought leadership and networking, not just job hunting.
           </p>
 
           <CitationBlock
@@ -179,7 +179,7 @@ export default function SocialMediaArticle() {
             be understandable even without sound, as many users browse in public places.
           </p>
           <p>
-            <strong>Consistent Engagement</strong> — Don't just post and ghost. Reply to comments, 
+            <strong>Consistent Engagement</strong> — Don&apos;t just post and ghost. Reply to comments, 
             answer questions, and build a community around your brand.
           </p>
 

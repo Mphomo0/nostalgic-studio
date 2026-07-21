@@ -55,7 +55,7 @@ export default function TermsAndConditions() {
             </li>
             <li>Adhere to the payment schedule and all agreed deadlines.</li>
             <li>
-              Mark any sensitive data as <strong>"Confidential"</strong> in the
+              Mark any sensitive data as <strong>&quot;Confidential&quot;</strong> in the
               subject line or document body.
             </li>
             <li>

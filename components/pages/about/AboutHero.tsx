@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -70,11 +71,13 @@ export default function AboutHero() {
             transition={{ delay: 0.2 }}
             className="relative"
           >
-            <div className="aspect-square rounded-3xl overflow-hidden">
-              <img
+            <div className="aspect-square rounded-3xl overflow-hidden relative">
+              <Image
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
                 alt="Nostalgic Studio digital design team collaborating on a project"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
               />
             </div>
 

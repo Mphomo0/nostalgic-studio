@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Building2, CheckCircle2 } from 'lucide-react'
 import { industries } from '@/lib/industries-data'
-import { breadcrumbSchema, webPageSchema } from '@/app/structured-data/schemas'
+import { breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
   title: 'Web Design by Industry Johannesburg',
@@ -166,7 +166,7 @@ export default function IndustriesPage() {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Each website launches with technical SEO, structured data, and
                   location-specific content built in. We target the search terms
-                  your clients use and optimise for Google's local pack in
+                  your clients use and optimise for Google&apos;s local pack in
                   Johannesburg and Gauteng.
                 </p>
               </div>

@@ -100,8 +100,8 @@ export default function LocalSEOArticle() {
             What is Local SEO? A Guide for South African Businesses
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            If your customers are in Johannesburg, Pretoria, or Cape Town, general SEO isn't enough. 
-            You need Local SEO to ensure your business appears when people search for "services near me."
+            If your customers are in Johannesburg, <Link href="/locations/pretoria" className="text-primary hover:underline">Pretoria</Link>, or <Link href="/locations/cape-town" className="text-primary hover:underline">Cape Town</Link>, general SEO isn&apos;t enough.
+            You need Local SEO to ensure your business appears when people search for &quot;services near me.&quot;
           </p>
         </header>
 
@@ -126,7 +126,7 @@ export default function LocalSEOArticle() {
           <p>
             Local SEO is the practice of optimizing your online presence to attract more business from 
             relevant local searches. These searches take place on Google and other search engines, 
-            but critically, they often trigger the "Map Pack" — the top three local business listings 
+            but critically, they often trigger the &quot;Map Pack&quot; — the top three local business listings 
             on the search results page.
           </p>
           
@@ -139,8 +139,8 @@ export default function LocalSEOArticle() {
           <h2>Why Local SEO Matters in South Africa</h2>
           <p>
             In South Africa, mobile penetration is exceptionally high. Most people search for services 
-            on their smartphones while on the go. If your "Web Design Sandton" page isn't optimized, 
-            you're handing customers to your competitors on a silver platter.
+            on their smartphones while on the go. If your &quot;<Link href="/locations/sandton" className="text-primary hover:underline">Web Design Sandton</Link>&quot; page isn&apos;t optimized,
+            you&apos;re handing customers to your competitors on a silver platter.
           </p>
 
           <h2>The 3 Pillars of Local SEO Success</h2>
@@ -148,7 +148,7 @@ export default function LocalSEOArticle() {
           <p>
             Your GBP is your digital storefront. It needs high-quality photos, accurate opening hours, 
             and most importantly, consistent reviews. Encourage your happy customers in Johannesburg 
-             to leave feedback — it's the strongest signal for local rankings.
+             to leave feedback — it&apos;s the strongest signal for local rankings.
           </p>
 
           <h3>2. On-Page Local Optimization</h3>
@@ -161,7 +161,7 @@ export default function LocalSEOArticle() {
           <h3>3. Local Citations and Backlinks</h3>
           <p>
             Getting mentioned on South African directories like Brabys, Hotfrog, or local news sites 
-            builds your "Local Authority." These citations confirm to Google that your business is 
+            builds your &quot;Local Authority.&quot; These citations confirm to Google that your business is 
             legitimate and physically present in the area you claim.
           </p>
 

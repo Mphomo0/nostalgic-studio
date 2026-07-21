@@ -261,7 +261,7 @@ export default function ServicesPage() {
                   Every project we undertake in our Johannesburg studio begins with a deep dive into your business objectives. Whether we are crafting a new brand identity from scratch or engineering a complex e-commerce platform, our focus remains on delivering <strong>measurable ROI</strong>. We leverage the power of Next.js to ensure that your digital assets are ahead of the technical curve, providing you with a competitive advantage that lasts for years.
                 </p>
                 <p>
-                  Our services are integrated. We understand that great UI/UX design is ineffective without proper SEO optimization, and a fast website is meaningless if it doesn't resonate with your brand's unique story. That's why we offer a 360-degree digital service suite tailored specifically for the unique challenges of startups and established businesses in the South African market.
+                  Our services are integrated. We understand that great UI/UX design is ineffective without proper SEO optimization, and a fast website is meaningless if it doesn&apos;t resonate with your brand&apos;s unique story. That&apos;s why we offer a 360-degree digital service suite tailored specifically for the unique challenges of startups and established businesses in the South African market.
                 </p>
               </div>
             </div>

@@ -7,7 +7,6 @@ import ContactInfo from '@/components/pages/contact/ContactInfo'
 import Link from 'next/link'
 import { WhatsAppIcon } from '@/components/ui/whatsapp'
 import {
-  ArrowRight,
   CheckCircle2,
   Clock,
   MapPin,

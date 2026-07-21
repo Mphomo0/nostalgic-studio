@@ -131,7 +131,7 @@ export default function EcommerceWebsiteDevelopment() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Custom Online Stores That Convert</h2>
             <p className="text-muted-foreground mb-6">
-              Don't settle for a generic template. We build bespoke ecommerce experiences that reflect your brand
+              Don&apos;t settle for a generic template. We build bespoke ecommerce experiences that reflect your brand
               and make shopping easy for your customers. Our <strong>ecommerce website development</strong> features:
             </p>
             <ul className="space-y-4">
@@ -225,7 +225,7 @@ export default function EcommerceWebsiteDevelopment() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Start Selling Online Today</h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Ready to take your retail business to the digital world? Let's build something great together.
+            Ready to take your retail business to the digital world? Let&apos;s build something great together.
           </p>
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Get an Ecommerce Quote</Link>

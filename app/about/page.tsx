@@ -6,7 +6,6 @@ import AboutCTA from '@/components/pages/about/AboutCTA'
 import AboutHero from '@/components/pages/about/AboutHero'
 import AboutStory from '@/components/pages/about/AboutStory'
 import AboutValues from '@/components/pages/about/AboutValues'
-import AboutTeam from '@/components/pages/about/AboutTeam'
 import Testimonials from '@/components/pages/home/Testimonials'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 
@@ -117,7 +116,7 @@ export default function page() {
                   Since 2016, Nostalgic Studio has been at the intersection of artisanal design and technical precision. We believe that every business, regardless of size, deserves a digital presence that is as professional as it is powerful. In an era where <strong>web vitals and search engine visibility</strong> determine business success, we provide the technical edge needed to dominate the Johannesburg market.
                 </p>
                 <p>
-                  Our foundation is built on the philosophy of "Nostalgia meet Innovation" — combining the timeless principles of graphic design with the cutting-edge capabilities of modern web frameworks like <strong>Next.js</strong>. This approach ensures that our websites are not just beautiful, but also incredibly fast, secure, and built to scale.
+                  Our foundation is built on the philosophy of &quot;Nostalgia meet Innovation&quot; — combining the timeless principles of graphic design with the cutting-edge capabilities of modern web frameworks like <strong>Next.js</strong>. This approach ensures that our websites are not just beautiful, but also incredibly fast, secure, and built to scale.
                 </p>
               </div>
 
@@ -137,13 +136,13 @@ export default function page() {
                 <div>
                   <h3 className="text-xl font-bold mb-4 text-foreground">A Focus on Results</h3>
                   <p className="text-sm leading-relaxed mb-4">
-                    Design without strategy is just art. We focus on conversion rates and user journeys. Every button placement, every heading, and every image is optimized to guide your customers toward your business goals. We've helped over 50 startups transform their digital presence into a reliable customer-generation machine.
+                    Design without strategy is just art. We focus on conversion rates and user journeys. Every button placement, every heading, and every image is optimized to guide your customers toward your business goals. We&apos;ve helped over 50 startups transform their digital presence into a reliable customer-generation machine.
                   </p>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-4 text-foreground">Sustainable Partnerships</h3>
                   <p className="text-sm leading-relaxed mb-4">
-                    We don't just deliver a project and disappear. We build long-term partnerships. Our maintenance and hosting services ensure that your site remains secure and high-performing long after launch. We grow as our clients grow, providing the digital infrastructure needed for every stage of your business journey.
+                    We don&apos;t just deliver a project and disappear. We build long-term partnerships. Our maintenance and hosting services ensure that your site remains secure and high-performing long after launch. We grow as our clients grow, providing the digital infrastructure needed for every stage of your business journey.
                   </p>
                 </div>
               </div>

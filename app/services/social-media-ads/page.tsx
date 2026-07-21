@@ -105,7 +105,7 @@ export default function SocialMediaAds() {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               <strong>Nostalgic Studio runs paid social media ad campaigns for South African businesses — targeting the right audience on Facebook and Instagram to generate measurable leads and sales.</strong>{' '}
-              Stop wasting money on ads that don't convert. We create highly-targeted social media advertising
+              Stop wasting money on ads that don&apos;t convert. We create highly-targeted social media advertising
               campaigns that reach your ideal customers and drive measurable growth for your South African startup.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -135,10 +135,10 @@ export default function SocialMediaAds() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">Maximizing Ad Performance for South African Growth</h3>
             <p className="text-muted-foreground mb-6">
-              In Johannesburg's highly competitive digital landscape, successful advertising isn't just about showing up; it's about <strong>relevance and technical precision</strong>. We understand that your ad spend is an investment, not an expense. That's why we focus on high-conversion creative and sophisticated A/B testing. We analyze the cultural nuances of the Gauteng market to ensure your messaging resonates deeply with local consumers, whether they are in the heart of Sandton or the growing hubs of Midrand.
+              In Johannesburg&apos;s highly competitive digital landscape, successful advertising isn&apos;t just about showing up; it&apos;s about <strong>relevance and technical precision</strong>. We understand that your ad spend is an investment, not an expense. That&apos;s why we focus on high-conversion creative and sophisticated A/B testing. We analyze the cultural nuances of the Gauteng market to ensure your messaging resonates deeply with local consumers, whether they are in the heart of Sandton or the growing hubs of Midrand.
             </p>
             <p className="text-muted-foreground">
-              By leverage the <strong>Meta Pixel and LinkedIn Insight Tag</strong>, we create a data loop that constantly improves your performance. This isn't just about driving traffic; it's about driving the <em>right</em> traffic to your high-performance Next.js website. We specialize in retargeting strategies that capture users who have previously shown interest, ensuring that your brand stays top-of-mind and moves potential customers through your sales funnel with maximum efficiency.
+              By leverage the <strong>Meta Pixel and LinkedIn Insight Tag</strong>, we create a data loop that constantly improves your performance. This isn&apos;t just about driving traffic; it&apos;s about driving the <em>right</em> traffic to your high-performance Next.js website. We specialize in retargeting strategies that capture users who have previously shown interest, ensuring that your brand stays top-of-mind and moves potential customers through your sales funnel with maximum efficiency.
             </p>
           </div>
         </section>
@@ -147,7 +147,7 @@ export default function SocialMediaAds() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">Precision Advertising for Real Results</h2>
             <p className="text-muted-foreground mb-6">
-              In Johannesburg's competitive digital landscape, you need more than just "likes".
+              In Johannesburg&apos;s competitive digital landscape, you need more than just &quot;likes&quot;.
               Our ad campaigns are built on deep audience research and continuous optimization.
               Our <strong>social media ads</strong> services include:
             </p>
@@ -242,7 +242,7 @@ export default function SocialMediaAds() {
         <div className="text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Scale Your Ads?</h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Get your brand in front of the people who matter most. Let's build a high-performance ad strategy.
+            Get your brand in front of the people who matter most. Let&apos;s build a high-performance ad strategy.
           </p>
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <Link href="/contact">Book an Ad Strategy Session</Link>

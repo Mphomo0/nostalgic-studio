@@ -2,6 +2,7 @@
 
 import { memo } from 'react'
 import { motion } from 'motion/react'
+import Image from 'next/image'
 import { Check, Layout, Sparkles, Palette, Monitor } from 'lucide-react'
 import { Service } from './types'
 
@@ -66,11 +67,13 @@ const ServiceSection = memo(function ServiceSection({ service, reverse }: Props)
 
       {/* Image */}
       <div className={`relative ${reverse ? 'lg:col-start-1' : ''}`}>
-        <div className="aspect-3/2 rounded-2xl overflow-hidden">
-          <img
+        <div className="aspect-3/2 rounded-2xl overflow-hidden relative">
+          <Image
             src={service.image}
             alt={service.title}
-            className="w-full h-full object-cover"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
           />
         </div>
         <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />

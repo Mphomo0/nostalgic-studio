@@ -98,7 +98,7 @@ export default function WebHosting() {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               <strong>Nostalgic Studio provides managed web hosting for South African businesses — including SSL certificates, daily backups, uptime monitoring, and local servers from R200/month.</strong>{' '}
-              Don't let a slow host hold your business back. Our hosting solutions are optimized for
+              Don&apos;t let a slow host hold your business back. Our hosting solutions are optimized for
               Next.js and high-performance applications, ensuring your site stays fast, secure, and always online.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -128,10 +128,10 @@ export default function WebHosting() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">Reliability at the Edge: Why Hosting Location Matters</h3>
             <p className="text-muted-foreground mb-6">
-              In the world of high-performance web design, your choice of hosting is your foundation. At Nostalgic Studio, we don't just provide server space; we provide a <strong>globally distributed infrastructure</strong> optimized specifically for the frameworks we use. By utilizing Edge computing and local CDN nodes, we ensure that your website loads instantly for users in Johannesburg, Cape Town, and beyond. This reduction in latency isn't just a luxury—it's a critical factor in your Core Web Vitals and overall SEO performance.
+              In the world of high-performance web design, your choice of hosting is your foundation. At Nostalgic Studio, we don&apos;t just provide server space; we provide a <strong>globally distributed infrastructure</strong> optimized specifically for the frameworks we use. By utilizing Edge computing and local CDN nodes, we ensure that your website loads instantly for users in Johannesburg, Cape Town, and beyond. This reduction in latency isn&apos;t just a luxury—it&apos;s a critical factor in your Core Web Vitals and overall SEO performance.
             </p>
             <p className="text-muted-foreground">
-              Our managed hosting solutions are designed for <strong>zero-friction growth</strong>. As your South African startup scales, our infrastructure automatically adjusts to your traffic needs without manual intervention. We prioritize deep security, from automated SSL provisioning to pro-active DDoS mitigation, ensuring that your digital asset is protected against the unique threats of the modern web. When you host with us, you're not just buying a service; you're securing peace of mind and technical excellence.
+              Our managed hosting solutions are designed for <strong>zero-friction growth</strong>. As your South African startup scales, our infrastructure automatically adjusts to your traffic needs without manual intervention. We prioritize deep security, from automated SSL provisioning to pro-active DDoS mitigation, ensuring that your digital asset is protected against the unique threats of the modern web. When you host with us, you&apos;re not just buying a service; you&apos;re securing peace of mind and technical excellence.
             </p>
           </div>
         </section>

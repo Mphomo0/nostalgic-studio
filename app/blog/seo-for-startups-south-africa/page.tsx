@@ -40,7 +40,7 @@ export default function SeoForStartupsPage() {
           <p>The good news? Modern search engines reward relevance and speed over sheer authority. Here is exactly how South African startups can compete.</p>
 
           <h2>1. Build on a Fast Tech Stack</h2>
-          <p>Google's Core Web Vitals are ranking factors. Most startups build on WordPress, which adds 2-3 seconds of load time from plugins alone. Next.js (or equivalent static frameworks) consistently delivers 90+ Lighthouse scores — a significant ranking advantage.</p>
+          <p>Google&apos;s Core Web Vitals are ranking factors. Most startups build on WordPress, which adds 2-3 seconds of load time from plugins alone. Next.js (or equivalent static frameworks) consistently delivers 90+ Lighthouse scores — a significant ranking advantage.</p>
           <p>Faster sites rank higher, convert better, and cost less to host. For a startup, the tech choice is the single highest-ROI SEO decision.</p>
 
           <h2>2. Target Low-Competition Keywords First</h2>
@@ -64,10 +64,10 @@ export default function SeoForStartupsPage() {
           </ul>
 
           <h2>5. Optimize for Local Search</h2>
-          <p>Even digital startups should optimize for local SEO. Google Business Profile, local citations, and location pages help you show up in &quot;near me&quot; searches. For SA startups, this means appearing when corporates search for your service type in Johannesburg, Cape Town, or Sandton.</p>
+          <p>Even digital startups should optimize for local SEO. Google Business Profile, local citations, and location pages help you show up in &quot;near me&quot; searches. For SA startups, this means appearing when corporates search for your service type in Johannesburg, <Link href="/locations/cape-town" className="text-primary hover:underline">Cape Town</Link>, or <Link href="/locations/sandton" className="text-primary hover:underline">Sandton</Link>.</p>
 
           <h2>6. Leverage AI Search (GEO)</h2>
-          <p>Startups have an advantage in Generative Engine Optimization: you can launch with an llms.txt file, structured data, and AI-optimized content from day one. Established competitors are slow to adapt. GEO is the startup's shortcut to visibility in AI-powered search results.</p>
+          <p>Startups have an advantage in Generative Engine Optimization: you can launch with an llms.txt file, structured data, and AI-optimized content from day one. Established competitors are slow to adapt. GEO is the startup&apos;s shortcut to visibility in AI-powered search results.</p>
 
           <h2>The Startup SEO Action Plan</h2>
           <ol>

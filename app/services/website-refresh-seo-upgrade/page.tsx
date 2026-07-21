@@ -8,7 +8,6 @@ import {
   Search,
   Zap,
   Globe,
-  Layout,
   TrendingUp,
 } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'

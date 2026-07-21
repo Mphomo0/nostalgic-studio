@@ -125,7 +125,7 @@ export default function UXUIDesign() {
 
             <h3 className="text-xl font-bold mb-4 text-foreground">Designing for the South African Audience</h3>
             <p className="text-muted-foreground mb-6">
-              UX/UI design in South Africa requires a unique understanding of our local digital habits. With a significant portion of our population accessing the internet via mobile devices and often on high-cost data plans, "good design" means <strong>efficiency</strong>. At Nostalgic Studio, we prioritize light-weight interfaces and intuitive navigation that doesn't waste user time or bandwidth.
+              UX/UI design in South Africa requires a unique understanding of our local digital habits. With a significant portion of our population accessing the internet via mobile devices and often on high-cost data plans, &quot;good design&quot; means <strong>efficiency</strong>. At Nostalgic Studio, we prioritize light-weight interfaces and intuitive navigation that doesn&apos;t waste user time or bandwidth.
             </p>
             <p className="text-muted-foreground">
               By applying <strong>accessibility standards (WCAG)</strong> and cultural design principles, we ensure that your digital products are usable by every South African, regardless of their device or location. From high-speed fiber users in Sandton to mobile users on-the-go, we design interfaces that feel secondary to the task at hand — making the journey from discovery to conversion as seamless as possible.
@@ -137,7 +137,7 @@ export default function UXUIDesign() {
           <MotionWrapper delay={0.2}>
             <h2 className="text-3xl font-bold mb-6">User-First Design Philosophy</h2>
             <p className="text-muted-foreground mb-6">
-              We don't just make things look pretty. We use research and testing to ensure
+              We don&apos;t just make things look pretty. We use research and testing to ensure
               your digital product is easy to use and meets your business goals.
               Our <strong>UX/UI design</strong> process includes:
             </p>
