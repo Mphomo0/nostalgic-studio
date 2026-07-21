@@ -116,7 +116,7 @@ const Testimonials = memo(function Testimonials() {
       {/* Marquee */}
       <div className="relative w-full overflow-hidden mask-linear-fade">
         <div className="flex gap-6 w-max animate-marquee hover:pause-animation">
-          {[...testimonials, ...testimonials, ...testimonials].map(
+          {[...testimonials, ...testimonials].map(
             (testimonial, index) => (
               <article
                 key={`${testimonial.id}-${index}`}

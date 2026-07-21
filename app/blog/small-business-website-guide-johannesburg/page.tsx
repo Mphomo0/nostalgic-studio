@@ -33,7 +33,7 @@ export default function SmallBizGuidePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
-          articleSchema({ url: '/blog/small-business-website-guide-johannesburg', headline: 'Small Business Website Guide Johannesburg', description: metadata.description ?? '', datePublished: PUB_DATE, articleSection: 'Guide' }),
+          articleSchema({ url: '/blog/small-business-website-guide-johannesburg', headline: 'Small Business Website Guide Johannesburg', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: '2026-07-21', articleSection: 'Guide' }),
           breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }, { name: 'Small Business Website Guide', url: '/blog/small-business-website-guide-johannesburg' }]),
           faqPageSchema(faqs),
         ])

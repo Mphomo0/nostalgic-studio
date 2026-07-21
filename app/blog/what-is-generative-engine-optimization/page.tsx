@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import AuthorBio from '@/components/geo/AuthorBio'
 import { articleSchema, breadcrumbSchema, faqPageSchema } from '@/app/structured-data/schemas'
 
 export const dynamic = 'force-static'
 
 const PUB_DATE = '2026-06-16'
+const MODIFIED_DATE = '2026-07-21'
 
 export const metadata: Metadata = {
   title: 'GEO: AI Search Optimization Guide SA',
@@ -23,9 +25,9 @@ export const metadata: Metadata = {
 
 const faqs = [
   { question: 'What is Generative Engine Optimization (GEO)?', answer: 'GEO is the practice of optimizing website content so AI-powered search engines (like Google AI Overviews, Perplexity, ChatGPT Search, and Claude) accurately cite and recommend your business in their generated answers.' },
-  { question: 'How is GEO different from traditional SEO?', answer: 'Traditional SEO optimizes for search result links. GEO optimizes for AI-generated answers. While SEO focuses on keywords and backlinks, GEO emphasizes structured data, authoritative citations, clear formatting, and direct answers to questions.' },
-  { question: 'Do I need GEO if I already do SEO?', answer: 'Yes. GEO complements SEO. Even if you rank #1 in traditional search, AI engines may not cite you unless your content is optimized for extraction. GEO ensures your business appears in AI-generated answers.' },
-  { question: 'How do I optimize for GEO?', answer: 'Key tactics include implementing llms.txt files, adding structured data, creating authoritative FAQ sections, publishing original research, maintaining consistent NAP citations, and ensuring your content is easy for AI to parse and cite.' },
+  { question: 'How is GEO different from traditional SEO?', answer: 'Google has stated that optimizing for AI search is still SEO — GEO is largely the same fundamentals (quality content, structured data, authority) applied to a new surface, not a separate discipline. The main shift is toward citable, well-structured passages and brand presence beyond your own site.' },
+  { question: 'Do I need GEO if I already do SEO?', answer: 'Yes. GEO complements SEO. Even if you rank #1 in traditional search, AI engines may not cite you unless your content is structured for extraction and your brand is mentioned elsewhere online. GEO ensures your business appears in AI-generated answers.' },
+  { question: 'How do I optimize for GEO?', answer: 'Key tactics include earning brand mentions on platforms like Reddit and YouTube, implementing structured data (LocalBusiness, Service, FAQ), publishing original research and statistics, keeping content updated, and structuring answers in clear, self-contained passages that AI engines can extract and cite.' },
 ]
 
 export default function GeoGuidePage() {
@@ -33,7 +35,7 @@ export default function GeoGuidePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
-          articleSchema({ url: '/blog/what-is-generative-engine-optimization', headline: 'What is Generative Engine Optimization (GEO)?', description: metadata.description ?? '', datePublished: PUB_DATE, articleSection: 'SEO' }),
+          articleSchema({ url: '/blog/what-is-generative-engine-optimization', headline: 'What is Generative Engine Optimization (GEO)?', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: MODIFIED_DATE, articleSection: 'SEO' }),
           breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }, { name: 'What is GEO?', url: '/blog/what-is-generative-engine-optimization' }]),
           faqPageSchema(faqs),
         ])
@@ -41,7 +43,10 @@ export default function GeoGuidePage() {
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <p className="text-sm font-semibold text-primary tracking-wide uppercase mb-2">GEO — Generative Engine Optimization</p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">What is Generative Engine Optimization (GEO)?</h1>
-        <p className="text-lg text-muted-foreground mb-8">A practical guide for South African businesses to appear in AI-generated search results</p>
+        <p className="text-lg text-muted-foreground mb-2">A practical guide for South African businesses to appear in AI-generated search results</p>
+        <p className="text-xs text-muted-foreground mb-8">
+          Published <time dateTime={PUB_DATE}>June 16, 2026</time> · Last updated <time dateTime={MODIFIED_DATE}>July 21, 2026</time>
+        </p>
 
         <div className="prose prose-lg max-w-none">
           <h2>The Shift from Search Links to AI Answers</h2>
@@ -54,38 +59,46 @@ export default function GeoGuidePage() {
           <p>For local businesses, this means a new battleground for visibility. GEO gives you a first-mover advantage in a space where most competitors haven&apos;t started optimizing.</p>
 
           <h2>GEO vs Traditional SEO: Key Differences</h2>
+          <p>Google&apos;s own Search Central guidance states that optimizing for generative AI search is <strong>still SEO</strong> — GEO and AEO are largely rebranded labels for the same fundamentals, not a separate discipline with its own rulebook.</p>
           <table className="w-full border-collapse border">
             <thead><tr><th className="border p-2 font-semibold">Aspect</th><th className="border p-2 font-semibold">Traditional SEO</th><th className="border p-2 font-semibold">Generative Engine Optimization</th></tr></thead>
             <tbody>
               <tr><td className="border p-2">Goal</td><td className="border p-2">Rank #1 in search results</td><td className="border p-2">Be cited in AI-generated answers</td></tr>
               <tr><td className="border p-2">Format</td><td className="border p-2">Links, titles, meta descriptions</td><td className="border p-2">Structured data, direct answers, citations</td></tr>
-              <tr><td className="border p-2">Key Tactic</td><td className="border p-2">Backlinks + keywords</td><td className="border p-2">llms.txt + schema + authoritative content</td></tr>
+              <tr><td className="border p-2">Key Tactic</td><td className="border p-2">Backlinks + keywords</td><td className="border p-2">Brand mentions + structured data + fresh, citable content</td></tr>
               <tr><td className="border p-2">Target Audience</td><td className="border p-2">Human clickers</td><td className="border p-2">AI parsers + human readers</td></tr>
             </tbody>
           </table>
 
           <h2>How to Optimize for GEO in 2026</h2>
-          <h3>1. Create an llms.txt File</h3>
-          <p>An <code>llms.txt</code> file acts as a sitemap for AI engines. It tells crawlers like GPTBot, ClaudeBot, and PerplexityBot which pages are most important and how to navigate your site. Every South African business should have one at <code>yourdomain.com/llms.txt</code>.</p>
+          <h3>1. Earn Brand Mentions, Not Just Backlinks</h3>
+          <p>A December 2025 Ahrefs study of 75,000 brands found that brand mentions correlate roughly 3x more strongly with AI citation than backlinks do. YouTube mentions had the strongest correlation of any signal measured, followed by Reddit and Wikipedia presence. If your business isn&apos;t mentioned in relevant Reddit discussions or has no video presence, that matters more to AI visibility than another backlink.</p>
 
           <h3>2. Implement Comprehensive Structured Data</h3>
-          <p>AI engines heavily rely on schema markup to understand your content. Implement LocalBusiness, Service, Product, FAQ, and Review schemas. Structured data is the single highest-impact GEO tactic — it directly feeds AI models with structured information about your business.</p>
+          <p>AI engines rely on schema markup to understand your content unambiguously. Implement LocalBusiness, Service, FAQ, and Article schemas with consistent entity IDs across pages. This remains one of the highest-impact, lowest-effort GEO tactics available to any business.</p>
 
           <h3>3. Authoritative, Well-Structured Content</h3>
-          <p>AI engines prefer content that is clear, well-organized, and directly answers questions. Use heading hierarchies (H1 {'>'} H2 {'>'} H3), bullet points, tables, and short paragraphs. Include original data, statistics, and expert opinions — these are more likely to be cited.</p>
+          <p>AI engines prefer content that is clear, well-organized, and directly answers questions. Use heading hierarchies (H1 {'>'} H2 {'>'} H3), bullet points, tables, and short paragraphs. Front-load your most citable answer — roughly 44% of AI Overview citations come from the first 30% of a page, so don&apos;t bury your conclusion. Include original data, statistics, and expert opinions with clear attribution.</p>
 
-          <h3>4. Maintain Consistent NAP Citations</h3>
-          <p>Name, Address, Phone number consistency across the web is critical. AI engines cross-reference your business information across multiple sources. Any inconsistency reduces trust and lowers the likelihood of citation.</p>
+          <h3>4. Keep Content Fresh</h3>
+          <p>A large-scale SE Ranking study of 1.3 million AI citations found that content under 3 months old is roughly 3x more likely to be cited than older content, and pages left stale for 6+ months tend to lose citation eligibility entirely. A scheduled content refresh — updating stats, examples, and dates — is one of the highest-leverage GEO investments available.</p>
 
           <h3>5. Optimize for Question-Based Search</h3>
-          <p>AI engines generate answers to specific questions. Create dedicated FAQ sections on your pages, write blog posts that answer common customer questions, and use the FAQ schema to mark them up.</p>
+          <p>AI engines generate answers to specific questions. Create dedicated FAQ sections on your pages, write blog posts that answer common customer questions, and use FAQ schema to mark them up clearly.</p>
+
+          <p className="text-sm text-muted-foreground">Note: <code>llms.txt</code> files are sometimes recommended as a GEO tactic, but Google&apos;s own engineers and independent studies (SE Ranking&apos;s 300,000-domain analysis, OtterlyAI&apos;s AI-crawler server-log audit) have found no evidence that major AI search systems currently use it as a citation-ranking signal. It costs little to publish for documentation purposes, but it is not a substitute for the fundamentals above.</p>
+
+          <h2>Two Google AI Surfaces, Not One</h2>
+          <p>Google actually runs two distinct AI citation engines: AI Overviews and AI Mode (powered by Gemini 3.5 Flash). An Ahrefs study of 540,000 query pairs found the two reach the same conclusion about 86% of the time, but cite the exact same URLs only 13.7% of the time. AI Overviews stays closely tied to traditional rankings, while AI Mode draws from a broader pool of roughly 9 domains per query, where freshness and entity authority outweigh raw position. Treat them as two surfaces to optimize for, not one.</p>
 
           <h2>Real Results: GEO in Action</h2>
-          <p>Businesses that implement GEO are seeing 3-5x more visibility in AI-generated responses compared to those relying solely on traditional SEO. In South Africa, where AI adoption is accelerating rapidly, early adopters of GEO are capturing market share while competitors remain invisible in AI search.</p>
+          <p>AI Overviews alone now reach an estimated 1.5 billion users per month across 200+ countries and appear on more than half of all Google queries. Businesses that combine strong structured data, fresh content, and real brand mentions elsewhere online are the ones showing up in these answers — while competitors relying only on backlinks and keyword-stuffed pages remain invisible in AI search.</p>
 
           <h2>Ready to Get Started?</h2>
-          <p>GEO is not a replacement for SEO — it&apos;s an essential complement. We help South African businesses implement comprehensive GEO strategies including llms.txt files, structured data, and AI-optimized content. <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">View our SEO and GEO services</Link> to see how we can help your business get cited by AI search engines.</p>
+          <p>GEO is not a replacement for SEO — it&apos;s an essential complement. We help South African businesses implement comprehensive GEO strategies including structured data, brand mention building, and AI-optimized content. <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">View our SEO and GEO services</Link> to see how we can help your business get cited by AI search engines.</p>
         </div>
+
+        <AuthorBio />
 
         <div className="mt-12 p-6 bg-muted rounded-xl">
           <h3 className="text-xl font-bold mb-2">Frequently Asked Questions</h3>

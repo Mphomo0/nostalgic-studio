@@ -38,6 +38,28 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react', 'motion/react'],
   },
+  async headers() {
+    // Static assets under /public bypass Next's image-optimization cache
+    // (see images.unoptimized below) and otherwise default to
+    // max-age=0, must-revalidate. These files are pre-sized/pre-compressed
+    // and don't change in place — if an image is ever replaced at the same
+    // path, rename the file (or add a query hash) so cached clients pick up
+    // the new version instead of serving the stale copy for up to a year.
+    return [
+      {
+        source: '/images/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/favicon.ico',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+        ],
+      },
+    ]
+  },
   images: {
     // All local images are pre-sized, pre-compressed WebP. Serving them
     // directly avoids Vercel image-transformation quota 402s (Hobby plan).

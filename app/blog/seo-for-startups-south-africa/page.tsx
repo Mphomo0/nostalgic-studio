@@ -26,7 +26,7 @@ export default function SeoForStartupsPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
-          articleSchema({ url: '/blog/seo-for-startups-south-africa', headline: 'SEO for Startups in South Africa', description: metadata.description ?? '', datePublished: PUB_DATE, articleSection: 'SEO' }),
+          articleSchema({ url: '/blog/seo-for-startups-south-africa', headline: 'SEO for Startups in South Africa', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: '2026-07-21', articleSection: 'SEO' }),
           breadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Blog', url: '/blog' }, { name: 'SEO for Startups', url: '/blog/seo-for-startups-south-africa' }]),
         ])
       }} />
