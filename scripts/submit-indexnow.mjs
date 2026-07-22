@@ -32,6 +32,7 @@ const projectUrls = [
   'az-truck-dealership',
   'bidco-trucks',
   'tanosa-group-case-study',
+  'ribbons-collection-website-redesign',
 ].map((slug) => `${BASE_URL}/projects/${slug}`)
 
 const blogUrls = [
