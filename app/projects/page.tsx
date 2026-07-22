@@ -44,7 +44,7 @@ export default function ProjectsPage() {
     url: 'https://www.nostalgic-studio.co.za/projects',
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: 6,
+      numberOfItems: 7,
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -61,20 +61,32 @@ export default function ProjectsPage() {
         {
           '@type': 'ListItem',
           position: 3,
+          name: 'Tanosa Group Website Redesign',
+          url: 'https://www.nostalgic-studio.co.za/projects/tanosa-group-case-study',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
           name: 'Jiyology Construction SEO Case Study',
           url: 'https://www.nostalgic-studio.co.za/projects/jiyology-construction-plumbing-seo-optimization-case-study',
         },
         {
           '@type': 'ListItem',
-          position: 4,
+          position: 5,
           name: 'A-Z Truck Sales Dealership Website',
           url: 'https://www.nostalgic-studio.co.za/projects/az-truck-dealership',
         },
         {
           '@type': 'ListItem',
-          position: 5,
+          position: 6,
           name: 'Bidco Trucks Website',
           url: 'https://www.nostalgic-studio.co.za/projects/bidco-trucks',
+        },
+        {
+          '@type': 'ListItem',
+          position: 7,
+          name: 'Ribbons Collection Website Rebuild & SEO',
+          url: 'https://www.nostalgic-studio.co.za/projects/ribbons-collection-website-redesign',
         },
       ],
     },

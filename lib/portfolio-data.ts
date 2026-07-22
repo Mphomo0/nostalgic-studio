@@ -255,7 +255,7 @@ export const projects: Project[] = [
   },
   {
     id: 7,
-    title: 'Ribbons Collection Website Rebuild & AI-SEO Overhaul',
+    title: 'Ribbons Collection Website Rebuild & SEO',
     category: 'Web Design',
     client: 'Ribbons Collection',
     industry: 'E-commerce & Footwear',

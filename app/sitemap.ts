@@ -42,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'az-truck-dealership', date: '2024-01-28' },
     { slug: 'bidco-trucks', date: '2024-01-30' },
     { slug: 'tanosa-group-case-study', date: '2024-02-01' },
+    { slug: 'ribbons-collection-website-redesign', date: '2026-07-21' },
   ].map(({ slug, date }) => ({
     url: `${BASE_URL}/projects/${slug}`,
     lastModified: new Date(date),

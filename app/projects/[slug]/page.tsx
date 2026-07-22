@@ -77,6 +77,14 @@ export default async function ProjectDetailPage({
 }) {
   const { slug } = await params
   const project = projectBySlug.get(slug)
+  const currentIndex = projects.findIndex((p) => p.slug === slug)
+  const otherProjects = projects.filter((p) => p.slug !== slug)
+  const relatedProjects = otherProjects.length
+    ? Array.from(
+        { length: Math.min(3, otherProjects.length) },
+        (_, i) => otherProjects[(currentIndex + i) % otherProjects.length],
+      )
+    : []
 
   if (!project) {
     return (
@@ -434,10 +442,7 @@ export default async function ProjectDetailPage({
         <div className="container-wide mx-auto px-4 md:px-8">
           <h2 className="text-2xl font-bold mb-8 text-center">More Projects</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects
-              .filter((p) => p.slug !== slug)
-              .slice(0, 3)
-              .map((p) => (
+            {relatedProjects.map((p) => (
                 <li key={p.slug}>
                   <Link
                     href={`/projects/${p.slug}`}
