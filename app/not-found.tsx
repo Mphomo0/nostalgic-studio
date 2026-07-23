@@ -29,7 +29,7 @@ export default function NotFound() {
           </Button>
           <Button asChild size="lg" variant="heroOutline" className="h-12 px-8">
             <Link href="/contact">
-              Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
+              Get a Free Quote <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
         </div>

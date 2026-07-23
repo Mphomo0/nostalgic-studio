@@ -154,7 +154,7 @@ export default function ProjectsPage() {
                   href="/contact" 
                   className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold transition-all hover:scale-105 shadow-[0_0_30px_rgba(var(--primary),0.3)]"
                 >
-                  Start Your Project
+                  Get a Free Quote
                 </a>
                 <a 
                   href="/services" 

@@ -174,7 +174,7 @@ export default function AffordableWebDesign() {
             </div>
             <Button asChild size="lg" className="h-14 px-8">
               <Link href="/contact">
-                Get Your Free Quote <ArrowRight className="ml-2" />
+                Get a Free Quote <ArrowRight className="ml-2" />
               </Link>
             </Button>
           </div>
@@ -456,7 +456,7 @@ export default function AffordableWebDesign() {
             Get a free, no-obligation quote. We respond within 24 hours.
           </p>
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
-            <Link href="/contact">Get Your Free Quote</Link>
+            <Link href="/contact">Get a Free Quote</Link>
           </Button>
         </div>
 

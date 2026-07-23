@@ -98,7 +98,7 @@ export default function NextjsWebsiteDesign() {
               SEO-optimized digital experiences that give your South African startup a competitive advantage.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
-              <Link href="/contact">Start Your Project <ArrowRight className="ml-2" /></Link>
+              <Link href="/contact">Get a Free Quote <ArrowRight className="ml-2" /></Link>
             </Button>
           </div>
         </MotionWrapper>

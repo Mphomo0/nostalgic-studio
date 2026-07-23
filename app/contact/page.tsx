@@ -71,7 +71,7 @@ const contactFaqs = [
   {
     question: 'How much does a website cost in South Africa?',
     answer:
-      'Our web design projects start from R3,500 for simple brochure sites and range to R35,000+ for custom e-commerce platforms. During your free consultation, we provide a fixed quote based on your specific requirements. There are no hourly rates — you get a clear, upfront price.',
+      'Our web design projects start from R3,500 for simple brochure sites, R8,000–R15,000 for business websites, and R10,000–R25,000+ for e-commerce platforms. During your free consultation, we provide a fixed quote based on your specific requirements. There are no hourly rates — you get a clear, upfront price.',
   },
   {
     question: 'How long does it take to build a website?',

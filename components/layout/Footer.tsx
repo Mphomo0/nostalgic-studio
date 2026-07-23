@@ -189,7 +189,7 @@ const Footer = () => {
               href="/contact"
               className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
             >
-              Get in Touch <ArrowUpRight size={18} />
+              Get a Free Quote <ArrowUpRight size={18} />
             </Link>
           </div>
         </div>

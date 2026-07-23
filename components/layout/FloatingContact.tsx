@@ -8,8 +8,8 @@ declare global {
   }
 }
 
-const PHONE = '+27646806519'
-const WHATSAPP_URL = `https://wa.me/27646806519?text=Hi%20Nostalgic%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.`
+const PHONE = '+27824483273'
+const WHATSAPP_URL = `https://wa.me/27824483273?text=Hi%20Nostalgic%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.`
 const TEL_URL = `tel:${PHONE}`
 
 function trackEvent(action: string, label: string) {
@@ -75,7 +75,7 @@ export default function FloatingContact() {
             transform: phHovered ? 'translateX(0) scale(1)' : 'translateX(8px) scale(0.95)',
           }}
         >
-          Call +27 64 680 6519
+          Call 082 448 3273
         </span>
 
         {/* Button */}

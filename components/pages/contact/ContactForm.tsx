@@ -67,7 +67,7 @@ export default function ContactForm() {
       if (response.success) {
         setIsSubmitted(true)
         toast.success(
-          'Your message was sent! Nostalgic Studio will respond within 24 hours.',
+          "Got it! We'll send your fixed quote within 24 hours.",
         )
       } else {
         toast.error(response.error || 'Unable to send message.')
@@ -83,10 +83,10 @@ export default function ContactForm() {
     return (
       <div className="text-center py-12">
         <CheckCircle className="w-16 h-16 text-primary mx-auto mb-6" />
-        <h3 className="text-2xl font-bold mb-3">Thank You for Reaching Out!</h3>
+        <h3 className="text-2xl font-bold mb-3">Got It — We&apos;re On It!</h3>
         <p className="text-muted-foreground mb-6">
-          Nostalgic Studio will review your project and respond within 24 hours.
-          If you have urgent inquiries, email us at{' '}
+          We&apos;ll review your project and send your fixed quote within 24
+          hours. If you have urgent inquiries, email us at{' '}
           <strong>info@nostalgic-studio.co.za</strong>.
         </p>
         <Button onClick={() => setIsSubmitted(false)} variant="outline">

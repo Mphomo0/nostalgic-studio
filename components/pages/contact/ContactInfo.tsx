@@ -6,6 +6,8 @@ import { motion } from 'motion/react'
 import { FacebookIcon } from '@/components/ui/facebook'
 import { InstagramIcon } from '@/components/ui/instagram'
 import { LinkedinIcon } from '@/components/ui/linkedin'
+import { WhatsAppIcon } from '@/components/ui/whatsapp'
+import { Button } from '@/components/ui/button'
 
 const infoItems = [
   {
@@ -23,8 +25,8 @@ const infoItems = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    value: 'Location available upon request',
-    link: '#',
+    value: 'Serving Johannesburg & Gauteng',
+    link: null,
   },
 ]
 
@@ -54,17 +56,8 @@ export default function ContactInfo() {
     >
       <h2 className="sr-only">Contact Nostalgic Studio</h2>
 
-      {infoItems.map((info, index) => (
-        <motion.a
-          key={info.title}
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: index * 0.1 }}
-          href={info.link}
-          aria-label={info.title}
-          className="block p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all group"
-        >
+      {infoItems.map((info, index) => {
+        const content = (
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
               <info.icon className="w-5 h-5 text-primary" aria-hidden="true" />
@@ -74,8 +67,66 @@ export default function ContactInfo() {
               <p className="text-muted-foreground text-sm">{info.value}</p>
             </div>
           </div>
-        </motion.a>
-      ))}
+        )
+
+        return info.link ? (
+          <motion.a
+            key={info.title}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            href={info.link}
+            aria-label={info.title}
+            className="block p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all group"
+          >
+            {content}
+          </motion.a>
+        ) : (
+          <motion.div
+            key={info.title}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.1 }}
+            aria-label={info.title}
+            className="block p-6 rounded-2xl bg-card border border-border"
+          >
+            {content}
+          </motion.div>
+        )
+      })}
+
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: infoItems.length * 0.1 }}
+        className="p-6 rounded-2xl bg-primary/5 border border-primary/20"
+      >
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <WhatsAppIcon className="w-5 h-5 text-primary" aria-hidden="true" />
+          </div>
+          <div className="flex-1">
+            <h3 className="font-semibold text-foreground mb-1">
+              Prefer WhatsApp?
+            </h3>
+            <p className="text-muted-foreground text-sm mb-3">
+              Message us directly for a faster reply.
+            </p>
+            <Button asChild size="sm" variant="hero">
+              <a
+                href="https://wa.me/27824483273?text=Hi%2C%20I%27d%20like%20a%20free%20website%20review"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                Message Us on WhatsApp
+              </a>
+            </Button>
+          </div>
+        </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -55,7 +55,7 @@ export default function CTA() {
               className="animate-pulse-glow w-full sm:w-auto"
             >
               <Link href="/contact" className="flex items-center gap-2">
-                Start Your Project <ArrowRight size={20} />
+                Get a Free Quote <ArrowRight size={20} />
               </Link>
             </Button>
 

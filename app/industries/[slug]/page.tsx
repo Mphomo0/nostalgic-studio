@@ -347,7 +347,7 @@ export default async function IndustryPage({
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
                 <Link href="/contact">
-                  Start Your Project
+                  Get a Free Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
