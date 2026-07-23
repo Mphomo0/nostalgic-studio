@@ -76,6 +76,7 @@ export default function AboutHero() {
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=800&fit=crop"
                 alt="Nostalgic Studio digital design team collaborating on a project"
                 fill
+                priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />

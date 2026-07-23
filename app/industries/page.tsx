@@ -4,6 +4,8 @@ import { Building2, CheckCircle2 } from 'lucide-react'
 import { industries } from '@/lib/industries-data'
 import { breadcrumbSchema } from '@/app/structured-data/schemas'
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: 'Web Design by Industry Johannesburg',
   description:
