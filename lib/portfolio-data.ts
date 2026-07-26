@@ -21,7 +21,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Sozim Consultancy Case Study',
+    title: 'Sozim Trading & Consultancy — Web Design Case Study',
     category: 'SEO & Digital Marketing',
     client: 'Sozim Trading & Consultancy',
     industry: 'Education & Training',

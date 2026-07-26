@@ -23,6 +23,7 @@ import {
   Settings,
   Palette,
   Megaphone,
+  Sparkles,
 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -150,7 +151,12 @@ const faqs = [
   {
     question: 'What is Generative Engine Optimization (GEO)?',
     answer:
-      'Generative Engine Optimization (GEO) is the practice of optimizing content for AI-powered search engines like ChatGPT, Gemini, Claude, and Perplexity. It involves structuring content with clear definitions, entity signals, data points, and semantic HTML that AI engines can easily parse and cite. When combined with classic SEO, GEO ensures your business is visible in both traditional search results and AI-generated answers.',
+      'Generative Engine Optimization (GEO) is the practice of optimizing content for AI-powered search engines like ChatGPT, Gemini, Claude, Grok, and Perplexity. It involves structuring content with clear definitions, entity signals, data points, and semantic HTML that AI engines can easily parse and cite. When combined with classic SEO, GEO ensures your business is visible in both traditional search results and AI-generated answers.',
+  },
+  {
+    question: 'Do you optimise for Grok and other AI platforms specifically?',
+    answer:
+      'Yes. We optimise for Grok alongside ChatGPT, Gemini, Claude, and Perplexity — each platform weighs entity signals, structured data, and citation-worthy content a little differently, so we tailor GEO work to each rather than treating "AI search" as one generic target.',
   },
   {
     question: 'How is GEO different from traditional SEO?',
@@ -270,6 +276,12 @@ const geoFeatures = [
       'Create authoritative, citation-worthy content that Perplexity surfaces in AI-generated answers.',
   },
   {
+    icon: Sparkles,
+    title: 'Grok Ready',
+    description:
+      'Structure entity data and real-time content signals so Grok surfaces and cites your business in its answers.',
+  },
+  {
     icon: Layers,
     title: 'Entity Signals',
     description:
@@ -286,7 +298,7 @@ const commonMistakes = [
   'Not tracking or measuring SEO performance properly',
   'Expecting overnight results and abandoning strategy too early',
   'Copying competitor strategies without understanding context',
-  'Ignoring AI search — no structured data or GEO optimisation for ChatGPT and Gemini',
+  'Ignoring AI search — no structured data or GEO optimisation for ChatGPT, Grok, and Gemini',
 ]
 
 export default function SEOServicesJohannesburg() {
@@ -338,7 +350,7 @@ export default function SEOServicesJohannesburg() {
 
         {/* AboutThisPage - GEO */}
         <AboutThisPage
-          summary="Nostalgic Studio provides classic SEO + AI search visibility services in Johannesburg, South Africa — combining technical SEO, local SEO, content strategy, and Generative Engine Optimization (GEO). We help businesses rank on Google and get cited by ChatGPT, Gemini, Claude, and Perplexity."
+          summary="Nostalgic Studio provides classic SEO + AI search visibility services in Johannesburg, South Africa — combining technical SEO, local SEO, content strategy, and Generative Engine Optimization (GEO). We help businesses rank on Google and get cited by ChatGPT, Gemini, Claude, Grok, and Perplexity."
           covers={[
             'Technical SEO Johannesburg',
             'Local SEO',
@@ -388,7 +400,7 @@ export default function SEOServicesJohannesburg() {
                 Search today means two things:{' '}
                 <strong>classic search engine optimisation</strong> (ranking on
                 Google, Bing, Yahoo) and <strong>AI search visibility</strong>{' '}
-                (being cited by ChatGPT, Gemini, Claude and Perplexity). Both
+                (being cited by ChatGPT, Gemini, Claude, Grok and Perplexity). Both
                 matter, and both require deliberate strategy.
               </p>
               <p>
@@ -426,7 +438,7 @@ export default function SEOServicesJohannesburg() {
             </h2>
             <p className="text-muted-foreground mb-6">
               Search is evolving beyond blue links. AI-powered answer engines
-              like ChatGPT, Google Gemini, Anthropic Claude, and Perplexity are
+              like ChatGPT, Google Gemini, Anthropic Claude, Grok, and Perplexity are
               changing how people find information — while Google remains the
               dominant traffic source. Your business needs to be optimised for
               both channels through a combined SEO + GEO strategy.
@@ -578,7 +590,7 @@ export default function SEOServicesJohannesburg() {
                 icon: Search,
                 title: 'Organic + AI Traffic',
                 description:
-                  'Classic SEO drives sustainable Google traffic. GEO adds AI answer engine visibility. Together they capture customers across every search surface — from traditional SERPs to ChatGPT, Gemini and Perplexity.',
+                  'Classic SEO drives sustainable Google traffic. GEO adds AI answer engine visibility. Together they capture customers across every search surface — from traditional SERPs to ChatGPT, Gemini, Grok and Perplexity.',
               },
               {
                 icon: Target,
@@ -608,7 +620,7 @@ export default function SEOServicesJohannesburg() {
                 icon: BarChart3,
                 title: 'Measurable Results',
                 description:
-                  'Track classic metrics — keyword rankings, organic traffic, conversions — alongside AI citation frequency and visibility in ChatGPT, Gemini, and Perplexity responses.',
+                  'Track classic metrics — keyword rankings, organic traffic, conversions — alongside AI citation frequency and visibility in ChatGPT, Gemini, Grok, and Perplexity responses.',
               },
             ].map((item) => (
               <div
@@ -820,7 +832,7 @@ export default function SEOServicesJohannesburg() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Get a free SEO + GEO audit and discover exactly what your website
               needs to rank higher in Google and appear in AI answers across
-              ChatGPT, Gemini, and Perplexity.
+              ChatGPT, Gemini, Grok, and Perplexity.
             </p>
             <Button asChild size="lg" className="h-14 px-10">
               <Link href="/contact">
@@ -1042,7 +1054,7 @@ export default function SEOServicesJohannesburg() {
                 <p className="text-sm text-muted-foreground">
                   We don&apos;t just optimise for Google. Our GEO strategies
                   ensure your business is visible in ChatGPT, Gemini, Claude,
-                  and Perplexity — the fastest-growing search surfaces.
+                  Grok, and Perplexity — the fastest-growing search surfaces.
                 </p>
               </div>
               <div className="p-4">
@@ -1079,7 +1091,7 @@ export default function SEOServicesJohannesburg() {
             {
               point: 'Classic SEO + AI Search',
               detail:
-                'optimised for Google, ChatGPT, Gemini, Claude and Perplexity — dual visibility across every search surface',
+                'optimised for Google, ChatGPT, Gemini, Claude, Grok and Perplexity — dual visibility across every search surface',
             },
             {
               point: 'Technical SEO first',
@@ -1244,7 +1256,7 @@ export default function SEOServicesJohannesburg() {
           </h2>
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
             Get a tailored SEO + GEO strategy that drives real business growth
-            across Google, ChatGPT, Gemini, and Perplexity. Free, no-obligation
+            across Google, ChatGPT, Gemini, Grok, and Perplexity. Free, no-obligation
             consultation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
