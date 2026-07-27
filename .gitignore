@@ -48,3 +48,6 @@ seo.md/
 
 /memory
 /docs
+
+# Claude Code local tooling
+.claude/
