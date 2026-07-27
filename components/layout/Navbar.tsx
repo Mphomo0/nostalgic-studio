@@ -20,6 +20,7 @@ import {
   Settings,
   DollarSign,
   Building2,
+  RefreshCw,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -81,6 +82,11 @@ const serviceLinks = [
     title: 'Web Maintenance',
     href: '/services/web-maintenance',
     icon: Settings,
+  },
+  {
+    title: 'Website Refresh & SEO Upgrade',
+    href: '/services/website-refresh-seo-upgrade',
+    icon: RefreshCw,
   },
 ]
 

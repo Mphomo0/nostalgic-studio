@@ -124,7 +124,7 @@ const posts = [
   {
     slug: 'web-design-cost-south-africa-2026-guide',
     title: 'Web Design Cost South Africa 2026 — Full Pricing Guide',
-    excerpt: 'Complete pricing guide for web design in South Africa. Compare costs by type — brochure, e-commerce, custom — with real ZAR pricing from R3,500 to R50,000+.',
+    excerpt: 'Complete pricing guide for web design in South Africa. Compare costs by type — brochure, e-commerce, custom — with real ZAR pricing from R1,500 to R50,000+.',
     readTime: '7 min read',
     date: '2026-06-16',
     category: 'Pricing',

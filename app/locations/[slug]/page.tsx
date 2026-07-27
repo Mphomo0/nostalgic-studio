@@ -71,7 +71,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       description: `Professional web design and development services in ${loc.name}, ${loc.province}. Custom Next.js websites, SEO, branding, and e-commerce.`,
       url: `/locations/${loc.slug}`,
       areaServed: `${loc.name}, South Africa`,
-      priceRange: 'R3500-R50000',
+      priceRange: 'R1500-R50000',
       deliveryTime: '4-8 weeks',
     }),
   ]
@@ -169,7 +169,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   </div>
                   <div>
                     <dt className="text-sm text-muted-foreground">Starting Price</dt>
-                    <dd className="font-medium text-primary">From R3,500</dd>
+                    <dd className="font-medium text-primary">From R1,500</dd>
                   </div>
                 </dl>
               </div>
@@ -320,7 +320,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Transparent, fixed pricing from{' '}
-              <span className="font-semibold text-primary">R3,500</span> — no
+              <span className="font-semibold text-primary">R1,500</span> — no
               hidden fees. Every package includes hosting setup, SSL, and
               post-launch support, whether your {loc.name} project is a
               starter site, a full business build, or an e-commerce store.

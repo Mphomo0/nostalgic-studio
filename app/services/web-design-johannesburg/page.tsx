@@ -26,7 +26,7 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Web Design Johannesburg | From R3,500',
+  title: 'Web Design Johannesburg | From R1,500',
   description:
     'Need web design in Johannesburg? Nostalgic Studio builds fast, mobile-friendly, SEO-ready websites for small businesses, startups, and service companies.',
   keywords: [
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Web Design Johannesburg | From R3,500',
+    title: 'Web Design Johannesburg | From R1,500',
     description:
       'Need web design in Johannesburg? Nostalgic Studio builds fast, mobile-friendly, SEO-ready websites for small businesses, startups, and service companies.',
     url: 'https://www.nostalgic-studio.co.za/services/web-design-johannesburg',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Web Design Johannesburg | From R3,500',
+    title: 'Web Design Johannesburg | From R1,500',
     description:
       'Need web design in Johannesburg? Nostalgic Studio builds fast, mobile-friendly, SEO-ready websites for small businesses, startups, and service companies.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
@@ -106,7 +106,7 @@ const webDesignFaqs = [
   {
     question: 'How much does web design cost in Johannesburg in 2026?',
     answer:
-      'Professional web design in Johannesburg ranges from R3,500 for a basic starter site to R50,000+ for custom e-commerce platforms. A custom Next.js business website typically costs R15,000–R35,000 and includes SEO, mobile responsiveness, and performance optimization. Get a free quote.',
+      'Professional web design in Johannesburg ranges from R1,500 for a basic starter site to R50,000+ for custom e-commerce platforms. A custom Next.js business website typically costs R15,000–R35,000 and includes SEO, mobile responsiveness, and performance optimization. Get a free quote.',
   },
   {
     question: 'Which web design agency is best in Johannesburg?',
@@ -145,7 +145,7 @@ const webDesignFaqs = [
 const pricingPackages = [
   {
     name: 'Starter',
-    price: 'R3,500',
+    price: 'R1,500',
     desc: 'A professional 5-page website for startups and freelancers who need a credible online presence fast.',
     features: [
       '5 custom pages',
@@ -230,7 +230,7 @@ export default function WebDesignJohannesburg() {
                 startups using Next.js — scoring 90–100 on Google Lighthouse
                 compared to 40–70 for typical WordPress sites. Rated 5 stars on
                 Google with 70+ projects delivered since 2016. Starter sites
-                from R3,500; most business projects cost R15,000–R35,000.
+                from R1,500; most business projects cost R15,000–R35,000.
               </p>
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function WebDesignJohannesburg() {
           </div>
 
           <AboutThisPage
-            summary="Nostalgic Studio provides professional web design services in Johannesburg, South Africa. We specialise in fast, SEO-optimised Next.js websites for startups and growing businesses. Rated 5 stars on Google. Projects typically cost R3,500–R50,000 and take 4–8 weeks."
+            summary="Nostalgic Studio provides professional web design services in Johannesburg, South Africa. We specialise in fast, SEO-optimised Next.js websites for startups and growing businesses. Rated 5 stars on Google. Projects typically cost R1,500–R50,000 and take 4–8 weeks."
             covers={[
               'Web Design Johannesburg',
               'Website Design Cost',
@@ -292,9 +292,9 @@ export default function WebDesignJohannesburg() {
                 How Much Does Web Design Cost in Johannesburg in 2026?
               </h2>
               <p className="text-xl font-semibold text-foreground mb-6 leading-relaxed">
-                Professional web design in Johannesburg ranges from R3,500 for a
+                Professional web design in Johannesburg ranges from R1,500 for a
                 basic starter site to R50,000+ for custom e-commerce platforms.
-                Most small business websites cost R3,500–R15,000.
+                Most small business websites cost R1,500–R15,000.
               </p>
               <p className="text-muted-foreground mb-6">
                 Price depends on pages, features, and whether you need a custom
@@ -409,7 +409,7 @@ export default function WebDesignJohannesburg() {
                   'delivering 90–100 Lighthouse scores vs 40–70 for WordPress',
               },
               {
-                point: 'Projects from R3,500',
+                point: 'Projects from R1,500',
                 detail: 'with transparent, once-off pricing — no hidden fees',
               },
               {
@@ -843,7 +843,7 @@ export default function WebDesignJohannesburg() {
                   Web Design Cost South Africa 2026
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Full pricing breakdown from R3,500 to R50,000+.
+                  Full pricing breakdown from R1,500 to R50,000+.
                 </p>
               </Link>
               <Link

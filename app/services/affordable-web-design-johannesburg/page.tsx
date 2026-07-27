@@ -28,7 +28,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Affordable Web Design Johannesburg',
   description:
-    'Affordable web design in Johannesburg from R3,500. Custom Next.js websites with SEO, mobile-first design, and free hosting. 5.0-star rated.',
+    'Affordable web design in Johannesburg from R1,500. Custom Next.js websites with SEO, mobile-first design, and free hosting. 5.0-star rated.',
   keywords: [
     'Affordable Web Design Johannesburg',
     'Cheap Website Design South Africa',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Affordable Web Design Johannesburg | Nostalgic Studio',
     description:
-      'Professional websites from R3,500. Custom Next.js, SEO, mobile-first design. 5.0 Google rating. Free quote.',
+      'Professional websites from R1,500. Custom Next.js, SEO, mobile-first design. 5.0 Google rating. Free quote.',
     url: 'https://www.nostalgic-studio.co.za/services/affordable-web-design-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     creator: '@studionostalgic',
     title: 'Affordable Web Design Johannesburg',
     description:
-      'Professional websites from R3,500. Custom Next.js, SEO, mobile-first design. 5.0 Google rating.',
+      'Professional websites from R1,500. Custom Next.js, SEO, mobile-first design. 5.0 Google rating.',
     images: [
       'https://www.nostalgic-studio.co.za/images/og-image.jpg',
     ],
@@ -86,7 +86,7 @@ const schemas = [
       'Professional affordable web design in Johannesburg, South Africa. Custom Next.js websites with SEO, mobile-first design, and conversion optimisation.',
     url: '/services/affordable-web-design-johannesburg',
     areaServed: 'South Africa',
-    priceRange: 'R3500-R25000',
+    priceRange: 'R1500-R25000',
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -102,12 +102,12 @@ const faqs = [
   {
     question: 'How much does a professional website cost in South Africa?',
     answer:
-      'Our prices start from R3,500 for a starter website and range up to R25,000 for a full e-commerce store. Most small business websites cost between R3,500 and R15,000. We provide a fixed quote — no hourly rates or hidden fees.',
+      'Our prices start from R1,500 for a starter website and range up to R25,000 for a full e-commerce store. Most small business websites cost between R1,500 and R15,000. We provide a fixed quote — no hourly rates or hidden fees.',
   },
   {
     question: 'Is affordable web design still good quality?',
     answer:
-      'Yes. We use Next.js — the same technology used by Nike, TikTok, and Netflix — to build fast, secure websites at a fraction of the cost of traditional agencies. Our starter package at R3,500 includes a mobile-responsive design, contact form, basic SEO, and Google Analytics setup.',
+      'Yes. We use Next.js — the same technology used by Nike, TikTok, and Netflix — to build fast, secure websites at a fraction of the cost of traditional agencies. Our starter package at R1,500 includes a mobile-responsive design, contact form, basic SEO, and Google Analytics setup.',
   },
   {
     question: 'How long does it take to build an affordable website?',
@@ -120,7 +120,7 @@ const faqs = [
       'Yes. We require a 50% deposit to start and the balance on completion. For larger projects above R15,000, we can structure a payment plan that works for your budget.',
   },
   {
-    question: 'What is included in the R3,500 starter package?',
+    question: 'What is included in the R1,500 starter package?',
     answer:
       'The starter package includes 3–5 pages, mobile-responsive design, contact form, basic SEO setup, Google Analytics integration, and free hosting for the first year. You can add more pages or features at any time.',
   },
@@ -146,7 +146,7 @@ export default function AffordableWebDesign() {
         <MotionWrapper>
           <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="text-primary font-medium text-sm uppercase tracking-tighter mb-4 block">
-              From R3,500 — Fixed Price
+              From R1,500 — Fixed Price
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Affordable Web Design Johannesburg
@@ -193,7 +193,7 @@ export default function AffordableWebDesign() {
             {[
               {
                 name: 'Starter',
-                price: 'R3,500',
+                price: 'R1,500',
                 desc: 'Perfect for freelancers, service providers, and landing pages.',
                 features: [
                   '3–5 pages',
@@ -273,7 +273,7 @@ export default function AffordableWebDesign() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <p className="text-muted-foreground mb-4">
-                  When you see a website for R1,500 or R2,000, it is almost
+                  When you see a website for R500 or R900, it is almost
                   certainly built with a drag-and-drop builder or a WordPress
                   template that hundreds of other businesses already use. Those
                   sites load slowly, rank poorly on Google, and break on mobile
@@ -282,7 +282,7 @@ export default function AffordableWebDesign() {
                 <p className="text-muted-foreground mb-4">
                   We build on Next.js — a modern framework used by Nike, TikTok,
                   and Netflix — because it delivers sub-second load times, 90+
-                  Lighthouse scores, and SEO that works from day one. Our R3,500
+                  Lighthouse scores, and SEO that works from day one. Our R1,500
                   starter package outperforms most R10,000 WordPress sites on
                   speed, security, and Google rankings.
                 </p>
@@ -370,7 +370,7 @@ export default function AffordableWebDesign() {
         <KeyTakeaways
           takeaways={[
             {
-              point: 'Professional websites from R3,500',
+              point: 'Professional websites from R1,500',
               detail: 'fixed price, no hourly rates',
             },
             {
@@ -393,7 +393,7 @@ export default function AffordableWebDesign() {
         />
 
         <AboutThisPage
-          summary="This page covers Nostalgic Studio's affordable web design services in Johannesburg, South Africa. Professional, custom-coded websites starting from R3,500 with SEO, mobile-first design, and free hosting."
+          summary="This page covers Nostalgic Studio's affordable web design services in Johannesburg, South Africa. Professional, custom-coded websites starting from R1,500 with SEO, mobile-first design, and free hosting."
           covers={[
             'Affordable Web Design Johannesburg',
             'Cheap Website Design South Africa',

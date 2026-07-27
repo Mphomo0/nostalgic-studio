@@ -54,7 +54,7 @@ export function businessSchema() {
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:30', closes: '21:00' },
       { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '17:00' },
     ],
-    priceRange: 'R3,500–R60,000',
+    priceRange: 'R1,500–R60,000',
     address: joziAddress(),
     geo: {
       '@type': 'GeoCoordinates',

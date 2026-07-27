@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'How much does web design cost in Johannesburg?',
     answer:
-      'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R3,500, business sites R8,000–R15,000, and e-commerce R10,000–R25,000+.',
+      'Web design costs in Johannesburg range from R5,000 for basic sites to R50,000+ for complex e-commerce platforms. Nostalgic Studio offers transparent pricing: starter sites from R1,500, business sites R8,000–R15,000, and e-commerce R10,000–R25,000+.',
   },
   {
     question: 'What is Next.js and why is it good for SEO?',
@@ -271,7 +271,7 @@ export default function Home() {
             {[
               {
                 name: 'Starter Website',
-                price: 'From R3,500',
+                price: 'From R1,500',
                 note: 'Once-off',
                 desc: 'Perfect for freelancers, service providers, and landing pages.',
                 features: [

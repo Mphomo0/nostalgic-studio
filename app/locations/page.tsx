@@ -81,7 +81,7 @@ export default function LocationsPage() {
                 'Local SEO targeting your city and surrounding suburbs',
                 'South African hosting and mobile-network-optimised performance',
                 'Local payment gateways (PayFast, Yoco, Ozow) built in',
-                'Fixed pricing from R3,500 — no hidden fees',
+                'Fixed pricing from R1,500 — no hidden fees',
                 'AI search (GEO) optimisation for ChatGPT, Gemini and Perplexity',
                 'Case studies from real clients in your region',
               ].map((point) => (

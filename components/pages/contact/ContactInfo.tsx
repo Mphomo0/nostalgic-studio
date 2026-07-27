@@ -33,7 +33,7 @@ const infoItems = [
 const socialLinks = [
   {
     icon: FacebookIcon,
-    href: 'https://www.facebook.com/webengineers',
+    href: 'https://www.facebook.com/nostalgicstudiowebdesign/',
     label: 'Facebook page of Nostalgic Studio',
   },
   {

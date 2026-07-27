@@ -51,7 +51,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'How much does a business website cost in Sandton?',
-        a: 'Our pricing starts from R3,500 for a simple landing page and ranges to R25,000+ for full corporate websites with multiple service pages, team profiles, blog, and advanced SEO. We provide a fixed quote — no hourly rates.',
+        a: 'Our pricing starts from R1,500 for a simple landing page and ranges to R25,000+ for full corporate websites with multiple service pages, team profiles, blog, and advanced SEO. We provide a fixed quote — no hourly rates.',
       },
     ],
     localCaseStudy: {
@@ -153,7 +153,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'What is the typical cost for a Midrand business website?',
-        a: 'Prices start from R3,500 for a starter site and range to R15,000–R25,000 for a full business website with multiple service pages, blog, SEO, and enquiry forms. We always provide a fixed, transparent quote.',
+        a: 'Prices start from R1,500 for a starter site and range to R15,000–R25,000 for a full business website with multiple service pages, blog, SEO, and enquiry forms. We always provide a fixed, transparent quote.',
       },
     ],
     localCaseStudy: {
@@ -221,7 +221,7 @@ export const locations: LocationInfo[] = [
       'Home service providers (plumbers, electricians, cleaners)',
     ],
     uniqueContent:
-      'Randburg is one of Johannesburg\'s largest and most diverse commercial areas, home to thousands of small and medium businesses serving a population of over 500,000. The challenge for Randburg businesses is standing out in a crowded market where customers compare options online before deciding who to call. We build affordable, professional websites for Randburg businesses that focus on generating enquiries — not just looking good. Every site includes clear service pages, contact forms, WhatsApp integration, and local SEO targeting your specific suburb. Whether you are a plumber in Ferndale, an accountant in Blairgowrie, or a salon in Cresta, we make sure customers find you when they search online. Our starter packages from R3,500 make professional web design accessible for any Randburg business.',
+      'Randburg is one of Johannesburg\'s largest and most diverse commercial areas, home to thousands of small and medium businesses serving a population of over 500,000. The challenge for Randburg businesses is standing out in a crowded market where customers compare options online before deciding who to call. We build affordable, professional websites for Randburg businesses that focus on generating enquiries — not just looking good. Every site includes clear service pages, contact forms, WhatsApp integration, and local SEO targeting your specific suburb. Whether you are a plumber in Ferndale, an accountant in Blairgowrie, or a salon in Cresta, we make sure customers find you when they search online. Our starter packages from R1,500 make professional web design accessible for any Randburg business.',
     faq: [
       {
         q: 'Do you work with businesses in Ferndale, Blairgowrie, and Northcliff?',
@@ -229,7 +229,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'I run a small business — do you offer affordable website packages?',
-        a: 'Absolutely. Our starter package from R3,500 is designed for small businesses. It includes 3–5 pages, mobile responsive design, a contact form, and basic SEO — everything you need to start getting enquiries online.',
+        a: 'Absolutely. Our starter package from R1,500 is designed for small businesses. It includes 3–5 pages, mobile responsive design, a contact form, and basic SEO — everything you need to start getting enquiries online.',
       },
     ],
   },

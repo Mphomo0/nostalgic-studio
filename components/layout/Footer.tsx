@@ -48,7 +48,7 @@ const footerLinks = {
 const socialLinks = [
   {
     icon: FacebookIcon,
-    href: 'https://www.facebook.com/webengineers',
+    href: 'https://www.facebook.com/nostalgicstudiowebdesign/',
     label: 'facebook',
   },
   {

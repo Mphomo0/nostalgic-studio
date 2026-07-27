@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = {
   title: 'Web Design Services Johannesburg',
   description:
-    'Expert web design, UI/UX, branding & SEO services in Johannesburg for startups. Custom Next.js development from R3,500. Free consultation.',
+    'Expert web design, UI/UX, branding & SEO services in Johannesburg for startups. Custom Next.js development from R1,500. Free consultation.',
   keywords: [
     'web design services',
     'web design Johannesburg',
@@ -135,7 +135,7 @@ export default function ServicesPage() {
               url: 'https://www.nostalgic-studio.co.za',
               logo: 'https://www.nostalgic-studio.co.za/logo.png',
               sameAs: [
-                'https://www.facebook.com/webengineers',
+                'https://www.facebook.com/nostalgicstudiowebdesign/',
                 'https://www.linkedin.com/company/110356396/',
                 'https://www.instagram.com/studionostalgic',
               ],
@@ -150,7 +150,7 @@ export default function ServicesPage() {
                     '@type': 'Service',
                     name: 'Web Design Johannesburg',
                     description: 'Custom web design solutions in Johannesburg focused on conversion.',
-                    offers: { '@type': 'Offer', 'price': '3500', 'priceCurrency': 'ZAR' }
+                    offers: { '@type': 'Offer', 'price': '1500', 'priceCurrency': 'ZAR' }
                   },
                 },
                 {
@@ -213,7 +213,7 @@ export default function ServicesPage() {
                 name: 'How much does a website cost in South Africa?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Website costs vary based on complexity. Basic brochure websites start at R3,500, while custom Next.js sites range from R8,000-R15,000. E-commerce platforms typically cost R10,000-R25,000+.'
+                  text: 'Website costs vary based on complexity. Basic brochure websites start at R1,500, while custom Next.js sites range from R8,000-R15,000. E-commerce platforms typically cost R10,000-R25,000+.'
                 }
               },
               {
@@ -323,7 +323,7 @@ export default function ServicesPage() {
               <div className="p-6 rounded-xl bg-background border border-border">
                 <h3 className="text-xl font-bold mb-3">How much does a website cost in South Africa?</h3>
                 <p className="text-muted-foreground">
-                  Website costs vary based on complexity. Basic brochure websites start at R3,500,
+                  Website costs vary based on complexity. Basic brochure websites start at R1,500,
                   while custom Next.js sites range from R8,000-R15,000. E-commerce platforms
                   typically cost R10,000-R25,000+. All projects include SEO optimization and 
                   mobile responsiveness.

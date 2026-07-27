@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { question: 'How much does a small business website cost in Johannesburg?', answer: 'A professional small business website in Johannesburg typically costs between R3,500 and R15,000 upfront, with ongoing hosting and maintenance from R250-R500 per month. The exact cost depends on complexity, number of pages, and whether e-commerce functionality is needed.' },
+  { question: 'How much does a small business website cost in Johannesburg?', answer: 'A professional small business website in Johannesburg typically costs between R1,500 and R15,000 upfront, with ongoing hosting and maintenance from R250-R500 per month. The exact cost depends on complexity, number of pages, and whether e-commerce functionality is needed.' },
   { question: 'How long does it take to build a small business website?', answer: 'A standard 5-10 page small business website takes 2-4 weeks from design to launch. This includes strategy, design, development, content population, and SEO setup.' },
   { question: 'Do I need e-commerce for my small business?', answer: 'Only if you sell products directly online. For service-based businesses (plumbers, lawyers, consultants), a well-designed service website with contact forms and booking is more effective than e-commerce.' },
   { question: 'Can I build my own website with Wix or Squarespace?', answer: 'Yes, but DIY platforms have limitations: poor SEO performance, slow load times, and difficulty scaling. For a business that needs to generate leads, a professionally built website on Next.js or WordPress delivers significantly better results.' },
