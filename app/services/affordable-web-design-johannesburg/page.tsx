@@ -102,7 +102,7 @@ const faqs = [
   {
     question: 'How much does a professional website cost in South Africa?',
     answer:
-      'Our prices start from R1,500 for a starter website and range up to R25,000 for a full e-commerce store. Most small business websites cost between R1,500 and R15,000. We provide a fixed quote — no hourly rates or hidden fees.',
+      'Our prices start from R1,500 for a starter website and range up to R25,000+ for a full e-commerce store. Most business websites cost between R8,000 and R15,000. We provide a fixed quote — no hourly rates or hidden fees.',
   },
   {
     question: 'Is affordable web design still good quality?',
@@ -207,7 +207,7 @@ export default function AffordableWebDesign() {
               },
               {
                 name: 'Business',
-                price: 'R15,000',
+                price: 'R8,000 – R15,000',
                 desc: 'For SMEs that need a professional online presence.',
                 features: [
                   '8–15 pages',
@@ -221,7 +221,7 @@ export default function AffordableWebDesign() {
               },
               {
                 name: 'E-Commerce',
-                price: 'R25,000',
+                price: 'R10,000 – R25,000+',
                 desc: 'Full online stores with SA payment gateways.',
                 features: [
                   'Unlimited products',

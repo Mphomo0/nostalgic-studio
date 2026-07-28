@@ -83,7 +83,7 @@ const schemas = [
       'SEO services for construction companies in South Africa. Improve Google visibility, attract tender enquiries, and rank for local construction search terms.',
     url: '/services/seo-for-construction-companies',
     areaServed: 'South Africa',
-    priceRange: 'R3500-R15000',
+    priceRange: 'R1500-R15000',
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -119,7 +119,7 @@ const faqs = [
   {
     question: 'How much does SEO for a construction company cost?',
     answer:
-      'Our SEO services start from R3,500 for a one-time SEO audit and optimisation package, with ongoing monthly SEO from R2,500 per month. We also include SEO as part of our website design packages at no extra cost.',
+      'Our SEO services for construction companies follow the same tiered packages as our standard SEO plans: Starter SEO from R1,500/month, Growth SEO from R5,000/month, and Enterprise SEO from R10,000+/month. We also include SEO as part of our website design packages at no extra cost.',
   },
 ]
 

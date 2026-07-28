@@ -109,7 +109,7 @@ const faqs = [
   {
     question: 'How much does branding design cost in Johannesburg?',
     answer:
-      'Branding design in Johannesburg typically ranges from R5,000 for essential brand packages to R25,000+ for comprehensive brand identity systems with full strategy and guidelines.',
+      'Branding design in Johannesburg typically ranges from R1,500 for essential brand packages to R8,000+ for comprehensive brand identity systems with full strategy and guidelines.',
   },
   {
     question: 'Why is branding important for my business?',
@@ -132,7 +132,7 @@ export default function BrandingDesign() {
         'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
       url: '/services/branding-design',
       areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R5000-R25000',
+      priceRange: 'R1500-R8000',
       deliveryTime: '3-6 weeks',
     }),
     breadcrumbSchema([
@@ -624,7 +624,7 @@ export default function BrandingDesign() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-card p-8 rounded-2xl border border-border">
               <h3 className="text-xl font-bold mb-2">Essential Brand</h3>
-              <div className="text-3xl font-bold text-primary mb-4">R5,000</div>
+              <div className="text-3xl font-bold text-primary mb-4">R1,500</div>
               <p className="text-sm text-muted-foreground mb-6">
                 Perfect for startups and freelancers needing a professional
                 identity.
@@ -653,7 +653,7 @@ export default function BrandingDesign() {
               </div>
               <h3 className="text-xl font-bold mb-2">Business Brand</h3>
               <div className="text-3xl font-bold text-primary mb-4">
-                R12,000
+                R3,500
               </div>
               <p className="text-sm text-muted-foreground mb-6">
                 For growing businesses ready to establish a strong brand
@@ -682,7 +682,7 @@ export default function BrandingDesign() {
             <div className="bg-card p-8 rounded-2xl border border-border">
               <h3 className="text-xl font-bold mb-2">Enterprise Brand</h3>
               <div className="text-3xl font-bold text-primary mb-4">
-                R25,000+
+                R8,000+
               </div>
               <p className="text-sm text-muted-foreground mb-6">
                 Comprehensive brand identity for established businesses and
@@ -747,7 +747,7 @@ export default function BrandingDesign() {
                 icon: DollarSign,
                 title: 'Affordable Excellence',
                 description:
-                  'Premium branding at prices that respect startup budgets. From R5,000 for a complete brand identity.',
+                  'Premium branding at prices that respect startup budgets. From R1,500 for a complete brand identity.',
               },
               {
                 icon: Zap,

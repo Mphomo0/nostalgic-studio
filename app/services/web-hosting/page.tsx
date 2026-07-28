@@ -15,7 +15,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Web Hosting South Africa',
   description:
-    'Managed Next.js web hosting in South Africa. 99.9% uptime, free SSL, global CDN, and daily backups included. Secure, fast websites from R500/month.',
+    'Managed Next.js web hosting in South Africa. 99.9% uptime, free SSL, global CDN, and daily backups included. Secure, fast websites from R200/month.',
   keywords: ['Web Hosting South Africa', 'Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-hosting',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Web Hosting South Africa',
-    description: 'Fast managed Next.js hosting in SA. SSL, CDN, 99.9% uptime. From R500/month.',
+    description: 'Fast managed Next.js hosting in SA. SSL, CDN, 99.9% uptime. From R200/month.',
     url: 'https://www.nostalgic-studio.co.za/services/web-hosting',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     site: '@studionostalgic',
     creator: '@studionostalgic',
     title: 'Web Hosting South Africa',
-    description: 'Fast managed Next.js hosting in SA. SSL, CDN, 99.9% uptime. From R500/month.',
+    description: 'Fast managed Next.js hosting in SA. SSL, CDN, 99.9% uptime. From R200/month.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -50,7 +50,7 @@ const hostingSchemas = [
     description: 'Managed web hosting in South Africa optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
     url: '/services/web-hosting',
     areaServed: 'South Africa',
-    priceRange: 'R500-R3000',
+    priceRange: 'R200-R3000',
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -78,7 +78,7 @@ const hostingFaqs = [
   },
   {
     question: 'How much does web hosting cost?',
-    answer: 'Our managed hosting packages start from R500 per month for basic sites and scale up to R3,000+ per month for high-traffic ecommerce stores. All plans include SSL, CDN, daily backups, and security monitoring.',
+    answer: 'Our managed hosting packages start from R200 per month for basic sites and scale up to R3,000+ per month for high-traffic ecommerce stores. All plans include SSL, CDN, daily backups, and security monitoring.',
   },
 ]
 

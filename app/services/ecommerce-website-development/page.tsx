@@ -15,7 +15,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 export const metadata: Metadata = {
   title: 'Ecommerce Development South Africa',
   description:
-    'Custom Next.js ecommerce websites in Johannesburg with SA payment gateways: PayFast, Yoco and Ozow. Fast, secure online stores from R25,000.',
+    'Custom Next.js ecommerce websites in Johannesburg with SA payment gateways: PayFast, Yoco and Ozow. Fast, secure online stores from R10,000.',
   keywords: ['Ecommerce Website Development Johannesburg', 'Online Store Builder South Africa', 'Next.js Ecommerce Development', 'PayFast Integration South Africa', 'Custom Ecommerce Solutions', 'WooCommerce Alternative South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Ecommerce Development South Africa',
-    description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R25,000.',
+    description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R10,000.',
     url: 'https://www.nostalgic-studio.co.za/services/ecommerce-website-development',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     site: '@studionostalgic',
     creator: '@studionostalgic',
     title: 'Ecommerce Development South Africa',
-    description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R25,000.',
+    description: 'Custom Next.js online stores with SA payment gateways. PayFast, Yoco & Ozow. From R10,000.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -50,7 +50,7 @@ const ecommerceSchemas = [
     description: 'Custom Next.js ecommerce development in Johannesburg with South African payment gateways including PayFast, Yoco, and Ozow.',
     url: '/services/ecommerce-website-development',
     areaServed: 'South Africa',
-    priceRange: 'R25000-R60000',
+    priceRange: 'R10000-R25000',
     deliveryTime: '8-12 weeks',
   }),
   breadcrumbSchema([

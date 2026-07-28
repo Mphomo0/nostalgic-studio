@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 
 const faqs = [
   { question: 'What is the cheapest way to get a website in South Africa?', answer: 'DIY platforms like Wix or Shopify cost as little as R150-R500/month, but you get what you pay for — poor SEO, slow load times, and difficulty scaling. For a business website, a professionally built 5-page brochure site starting at R1,500 delivers far better ROI.' },
-  { question: 'How much does an e-commerce website cost in SA?', answer: 'E-commerce websites in South Africa typically cost between R12,000 and R40,000 depending on product count, payment gateway integration (PayFast, Yoco, Ozow), and custom features.' },
+  { question: 'How much does an e-commerce website cost in SA?', answer: 'E-commerce websites in South Africa typically cost between R10,000 and R25,000+ depending on product count, payment gateway integration (PayFast, Yoco, Ozow), and custom features.' },
   { question: 'Are there hidden costs in web design?', answer: 'Common ongoing costs include hosting (R150-R500/month), domain renewal (R100-R200/year), SSL certificates (often included), email hosting, and maintenance fees. Always ask what is included in the quoted price.' },
   { question: 'Is a R5,000 website good enough?', answer: 'For a small service-based business, a well-built R5,000 website can absolutely generate leads. The key is investing in good SEO, fast hosting, and quality copywriting rather than expensive visual design.' },
 ]
@@ -51,9 +51,9 @@ export default function WebDesignCostGuidePage() {
           <table className="w-full border-collapse border">
             <thead><tr><th className="border p-2 font-semibold">Website Type</th><th className="border p-2 font-semibold">Price Range (ZAR)</th><th className="border p-2 font-semibold">Best For</th></tr></thead>
             <tbody>
-              <tr><td className="border p-2">Basic Brochure Site</td><td className="border p-2">R1,500 - R8,000</td><td className="border p-2">Small local businesses, freelancers</td></tr>
-              <tr><td className="border p-2">Standard Business Site</td><td className="border p-2">R8,000 - R18,000</td><td className="border p-2">SMEs, professional services</td></tr>
-              <tr><td className="border p-2">E-commerce Store</td><td className="border p-2">R12,000 - R40,000</td><td className="border p-2">Retail, online stores</td></tr>
+              <tr><td className="border p-2">Basic Brochure Site</td><td className="border p-2">R1,500</td><td className="border p-2">Small local businesses, freelancers</td></tr>
+              <tr><td className="border p-2">Standard Business Site</td><td className="border p-2">R8,000 - R15,000</td><td className="border p-2">SMEs, professional services</td></tr>
+              <tr><td className="border p-2">E-commerce Store</td><td className="border p-2">R10,000 - R25,000+</td><td className="border p-2">Retail, online stores</td></tr>
               <tr><td className="border p-2">Custom Web Application</td><td className="border p-2">R30,000 - R80,000+</td><td className="border p-2">Startups, SaaS, platforms</td></tr>
             </tbody>
           </table>
@@ -73,7 +73,7 @@ export default function WebDesignCostGuidePage() {
             <li><strong>Hosting:</strong> R150 - R500 per month</li>
             <li><strong>Domain renewal:</strong> R100 - R200 per year</li>
             <li><strong>SSL certificate:</strong> Often included, else R500 - R1,500/year</li>
-            <li><strong>Maintenance:</strong> R500 - R2,000 per month (updates, backups, security)</li>
+            <li><strong>Maintenance:</strong> R500 - R3,000 per month (updates, backups, security)</li>
             <li><strong>SEO & content:</strong> R1,500 - R5,000 per month for ongoing optimization</li>
           </ul>
 

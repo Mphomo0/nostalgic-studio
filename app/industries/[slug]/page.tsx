@@ -164,7 +164,7 @@ export default async function IndustryPage({
               description: desc,
               url: `/industries/${ind.slug}`,
               areaServed: 'South Africa',
-              priceRange: 'R1500-R50000',
+              priceRange: 'R1500-R25000',
             }),
           ]),
         }}

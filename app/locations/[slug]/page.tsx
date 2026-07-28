@@ -71,7 +71,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       description: `Professional web design and development services in ${loc.name}, ${loc.province}. Custom Next.js websites, SEO, branding, and e-commerce.`,
       url: `/locations/${loc.slug}`,
       areaServed: `${loc.name}, South Africa`,
-      priceRange: 'R1500-R50000',
+      priceRange: 'R1500-R25000',
       deliveryTime: '4-8 weeks',
     }),
   ]

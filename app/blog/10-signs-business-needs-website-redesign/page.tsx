@@ -295,7 +295,7 @@ export default function RedesignSignsArticle() {
           <h2>Specific Deliverables You Should Expect</h2>
           <p>
             When investing in a redesign (typically ranging from{' '}
-            <strong>R15,000 to R35,000</strong> for business sites), you should
+            <strong>R8,000 to R15,000</strong> for business sites), you should
             receive the following concrete deliverables:
           </p>
           <ul className="space-y-2 text-muted-foreground">

@@ -15,7 +15,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Next.js Development South Africa',
   description:
-    'Next.js development in South Africa. SSR, SSG, 90-100 Lighthouse scores. Fast, modern WordPress alternative from R8,500.',
+    'Next.js development in South Africa. SSR, SSG, 90-100 Lighthouse scores. Fast, modern WordPress alternative from R8,000.',
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites South Africa', 'Next.js Agency Johannesburg', 'Modern Web Design South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     site: '@studionostalgic',
     creator: '@studionostalgic',
     title: 'Next.js Development South Africa',
-    description: 'Next.js websites for SA businesses. 90-100 Lighthouse scores, sub-1.5s load times. Modern WordPress alternative from R8,500.',
+    description: 'Next.js websites for SA businesses. 90-100 Lighthouse scores, sub-1.5s load times. Modern WordPress alternative from R8,000.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -50,7 +50,7 @@ const nextjsSchemas = [
     description: 'Expert Next.js website design and development in Johannesburg, South Africa. Server-side rendering, static site generation, and 90-100 Lighthouse scores.',
     url: '/services/nextjs-website-design',
     areaServed: 'South Africa',
-    priceRange: 'R8000-R50000',
+    priceRange: 'R8000-R15000',
     deliveryTime: '4-8 weeks',
   }),
   breadcrumbSchema([
@@ -93,7 +93,7 @@ export default function NextjsWebsiteDesign() {
               Modern <span className="text-gradient">Next.js Website Design</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              <strong>Nostalgic Studio builds Next.js websites for South African businesses — delivering 90–100 Lighthouse scores, server-side rendering, and sub-1.5-second load times from R8,500.</strong>{' '}
+              <strong>Nostalgic Studio builds Next.js websites for South African businesses — delivering 90–100 Lighthouse scores, server-side rendering, and sub-1.5-second load times from R8,000.</strong>{' '}
               Build the future of your business with Next.js development. We create ultra-fast,
               SEO-optimized digital experiences that give your South African startup a competitive advantage.
             </p>
