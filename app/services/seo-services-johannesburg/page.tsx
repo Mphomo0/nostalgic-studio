@@ -38,10 +38,10 @@ import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'SEO & AI Search Optimisation Services Johannesburg',
+  title: 'AI Search Ranking & SEO Johannesburg',
 
   description:
-    'Johannesburg SEO agency for Google rankings & AI search visibility (ChatGPT, Gemini, AI Overviews). Technical SEO, local SEO & GEO from R1,500/mo. Free audit.',
+    "Get recommended by ChatGPT, Grok, Claude & Google AI Overviews - plus higher Google rankings. Johannesburg's dedicated AI search + SEO agency. Free audit.",
 
   keywords: [
     'SEO Services Johannesburg',
@@ -70,9 +70,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'SEO & AI Search Optimisation Services Johannesburg',
+    title: 'AI Search Ranking & SEO Johannesburg',
     description:
-      'Johannesburg SEO agency for Google rankings & AI search visibility (ChatGPT, Gemini, AI Overviews). Technical SEO, local SEO & GEO from R1,500/mo. Free audit.',
+      "Get recommended by ChatGPT, Grok, Claude & Google AI Overviews - plus higher Google rankings. Johannesburg's dedicated AI search + SEO agency. Free audit.",
     url: 'https://www.nostalgic-studio.co.za/services/seo-services-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -90,9 +90,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'SEO & AI Search Optimisation Services Johannesburg',
+    title: 'AI Search Ranking & SEO Johannesburg',
     description:
-      'Johannesburg SEO agency for Google rankings & AI search visibility (ChatGPT, Gemini, AI Overviews). Technical SEO, local SEO & GEO from R1,500/mo. Free audit.',
+      "Get recommended by ChatGPT, Grok, Claude & Google AI Overviews - plus higher Google rankings. Johannesburg's dedicated AI search + SEO agency. Free audit.",
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
