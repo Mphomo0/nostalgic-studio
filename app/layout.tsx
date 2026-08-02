@@ -5,6 +5,7 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingContact from '@/components/layout/FloatingContact'
+import PixelPageView from '@/components/analytics/PixelPageView'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', adjustFontFallback: true, display: 'swap' })
 
@@ -230,6 +231,7 @@ export default function RootLayout({
       <body
         className="antialiased"
       >
+        <PixelPageView />
         <Navbar />
         {children}
         <Footer />
