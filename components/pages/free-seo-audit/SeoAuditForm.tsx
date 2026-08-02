@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { CheckCircle, Loader2, Send } from 'lucide-react'
 import { seoAuditSchema, type SeoAuditFormValues } from '@/lib/validations'
 import { sendSeoAuditEmail } from '@/app/actions/sendEmail'
+import { trackLead } from '@/lib/tracking'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
@@ -55,6 +56,7 @@ export default function SeoAuditForm() {
     try {
       const response = await sendSeoAuditEmail(data)
       if (response.success) {
+        trackLead('Free SEO Audit')
         setIsSubmitted(true)
       } else {
         toast.error(response.error || 'Unable to send request. Please try again.')

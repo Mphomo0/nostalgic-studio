@@ -19,6 +19,7 @@ import {
 import { toast } from 'react-toastify'
 import dynamic from 'next/dynamic'
 import { sendContactEmail } from '@/app/actions/sendEmail'
+import { trackLead } from '@/lib/tracking'
 
 const ToastContainer = dynamic(
   () => import('react-toastify').then((m) => ({ default: m.ToastContainer })),
@@ -65,6 +66,7 @@ export default function ContactForm() {
       const response = await sendContactEmail(data)
 
       if (response.success) {
+        trackLead('Contact Form')
         setIsSubmitted(true)
         toast.success(
           "Got it! We'll send your fixed quote within 24 hours.",
