@@ -1,10 +1,12 @@
 /**
  * Client-side conversion tracking helpers.
  *
- * The Meta Pixel is initialised in app/layout.tsx. It loads with Next's
- * `lazyOnload` strategy, so `window.fbq` only exists after the window load
- * event — by the time a user submits a form it is there, but the guard below
- * keeps a blocked or still-loading pixel from throwing.
+ * The Meta Pixel is initialised in app/layout.tsx with Next's
+ * `afterInteractive` strategy, so `window.fbq` exists shortly after hydration.
+ * A form can still be submitted before the snippet has run — on a slow
+ * connection, or with the pixel blocked entirely — so `trackLead` retries
+ * briefly rather than dropping the event, and gives up quietly if the pixel
+ * never arrives.
  */
 
 declare global {
@@ -20,10 +22,30 @@ declare global {
  * so a Facebook custom conversion can target a single form if needed.
  */
 export function trackLead(source: string) {
-  if (typeof window === 'undefined' || typeof window.fbq !== 'function') return
+  if (typeof window === 'undefined') return
 
-  window.fbq('track', 'Lead', {
-    content_name: source,
-    content_category: 'Lead Generation',
-  })
+  const fire = () => {
+    window.fbq?.('track', 'Lead', {
+      content_name: source,
+      content_category: 'Lead Generation',
+    })
+  }
+
+  if (typeof window.fbq === 'function') {
+    fire()
+    return
+  }
+
+  // fbq not ready yet — retry briefly instead of dropping the event.
+  let attempts = 0
+  const interval = setInterval(() => {
+    attempts++
+
+    if (typeof window.fbq === 'function') {
+      fire()
+      clearInterval(interval)
+    } else if (attempts > 20) {
+      clearInterval(interval) // ~10s, give up quietly
+    }
+  }, 500)
 }
