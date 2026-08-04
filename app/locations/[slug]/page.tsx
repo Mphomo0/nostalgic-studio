@@ -4,7 +4,16 @@ import Link from 'next/link'
 import { ArrowRight, MapPin, Building2, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { locations, suburbSlugs, type LocationInfo } from '@/lib/locations-data'
-import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import {
+  serviceSchema,
+  breadcrumbSchema,
+  faqPageSchema,
+} from '@/app/structured-data/schemas'
+import {
+  WEBSITE_PRICE_RANGE,
+  formatRand,
+  getPackage,
+} from '@/lib/pricing-data'
 
 const locationBySlug = new Map(locations.map((l) => [l.slug, l]))
 
@@ -71,9 +80,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       description: `Professional web design and development services in ${loc.name}, ${loc.province}. Custom Next.js websites, SEO, branding, and e-commerce.`,
       url: `/locations/${loc.slug}`,
       areaServed: `${loc.name}, South Africa`,
-      priceRange: 'R1500-R25000',
+      priceRange: WEBSITE_PRICE_RANGE,
       deliveryTime: '4-8 weeks',
     }),
+    // FAQs render as always-visible cards below, so the answers are already in
+    // the HTML — this makes the same Q&A pairs machine-readable for AI engines
+    // and Google's FAQ rich results.
+    ...(loc.faq.length > 0
+      ? [faqPageSchema(loc.faq.map(({ q, a }) => ({ question: q, answer: a })))]
+      : []),
   ]
 
   return (
@@ -169,7 +184,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   </div>
                   <div>
                     <dt className="text-sm text-muted-foreground">Starting Price</dt>
-                    <dd className="font-medium text-primary">From R1,500</dd>
+                    <dd className="font-medium text-primary">
+                      From {formatRand(getPackage('starter-website').min)}
+                    </dd>
                   </div>
                 </dl>
               </div>

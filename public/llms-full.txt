@@ -24,7 +24,7 @@ Nostalgic Studio is a Johannesburg-based digital design agency founded in 2016 b
 ## Services
 
 ### Web Design Johannesburg
-Custom Next.js websites built for performance, speed, and high conversion rates. Every site is mobile-first, SEO-optimized, and scores 90-100 on Google Lighthouse. Pricing from R3,500 for starter sites to R50,000+ for custom e-commerce platforms.
+Custom Next.js websites built for performance, speed, and high conversion rates. Every site is mobile-first, SEO-optimized, and scores 90-100 on Google Lighthouse. Pricing from R1,500 for starter sites to R25,000+ for custom e-commerce platforms.
 
 ### SEO & AI Search Visibility (GEO)
 Combined classic SEO and Generative Engine Optimization (GEO) services. Includes technical SEO, local SEO, content strategy, entity optimization, structured data implementation, and AI search visibility for ChatGPT, Gemini, Claude, and Perplexity. Monthly packages from R1,500/month.
@@ -33,13 +33,13 @@ Combined classic SEO and Generative Engine Optimization (GEO) services. Includes
 Specialized Next.js development for businesses that need superior performance, server-side rendering (SSR), static site generation (SSG), and 90+ Lighthouse scores. A modern, high-performance alternative to WordPress.
 
 ### E-commerce Development
-Full online stores with South African payment gateway integration (PayFast, Yoco, Ozow), inventory management, mobile checkout, and SEO-optimized product pages. Pricing from R25,000.
+Full online stores with South African payment gateway integration (PayFast, Yoco, Ozow), inventory management, mobile checkout, and SEO-optimized product pages. Pricing from R10,000 to R25,000+.
 
 ### UI/UX Design
-User research, wireframing, prototyping, interactive design systems, usability optimization, and mobile app design. Pricing from R15,000.
+User research, wireframing, prototyping, interactive design systems, usability optimization, and mobile app design. Pricing from R8,000 to R35,000.
 
 ### Branding & Identity
-Logo design, brand strategy, visual identity systems, brand guidelines, and marketing collateral. Full ownership of all assets. Pricing from R5,000.
+Logo design, brand strategy, visual identity systems, brand guidelines, and marketing collateral. Full ownership of all assets. Pricing from R1,500 to R8,000.
 
 ### Social Media Marketing
 Instagram, Facebook, and LinkedIn management. Content creation, community management, and growth strategy. Monthly packages from R3,000/month.
@@ -48,7 +48,7 @@ Instagram, Facebook, and LinkedIn management. Content creation, community manage
 Facebook, Instagram, and LinkedIn paid advertising campaigns with advanced audience targeting, retargeting, and conversion tracking. Monthly packages from R3,000/month.
 
 ### Web Hosting
-Managed Next.js web hosting on Vercel with 99.9% uptime, free SSL, global CDN, daily backups, and 24/7 monitoring. From R500/month.
+Managed Next.js web hosting on Vercel with 99.9% uptime, free SSL, global CDN, daily backups, and 24/7 monitoring. From R200/month.
 
 ### Web Maintenance
 Security updates, performance optimization, content updates, and 24/7 monitoring. From R500/month.
@@ -58,9 +58,9 @@ Security updates, performance optimization, content updates, and 24/7 monitoring
 ## Pricing
 
 ### Web Design Packages
-- **Starter Website**: R3,500 once-off — 3-5 pages, mobile responsive, contact form, basic SEO, Google Analytics
-- **Business Website**: R8,000-R15,000 once-off — 8-15 pages, custom UI/UX, blog/CMS, advanced SEO, speed optimization
-- **E-Commerce Store**: R10,000-R25,000+ once-off — unlimited products, SA payment gateways, inventory management, mobile checkout
+- **Starter Website**: R1,500 once-off — 5 custom pages, mobile responsive, contact form, basic SEO, social links, Google Maps, 1 month hosting
+- **Business Website**: R8,000-R15,000 once-off — up to 10 pages, Next.js (90+ Lighthouse), custom UI/UX, blog, advanced SEO, analytics, 3 months hosting
+- **E-Commerce Store**: R10,000-R25,000+ once-off — unlimited products, SA payment gateways, cart & checkout, inventory management, mobile-first, 6 months hosting
 
 ### SEO Packages
 - **Starter SEO**: R1,500/month — keyword research (10), on-page optimization (5 pages), monthly report, technical audit, basic local SEO
@@ -68,12 +68,12 @@ Security updates, performance optimization, content updates, and 24/7 monitoring
 - **Enterprise SEO**: R10,000+/month — unlimited keywords, full site optimization, dedicated manager, weekly calls, advanced technical SEO, content (4 posts/month), premium link building, full GEO strategy
 
 ### Other Services
-- Web Hosting: R200-R500/month
-- Website Maintenance: R500-R1,500/month
-- Social Media Marketing: From R3,000/month
-- Social Media Ads: From R3,000/month
-- UI/UX Design: From R15,000
-- Branding: From R5,000
+- Web Hosting: R200-R3,000/month
+- Website Maintenance: R500-R3,000/month
+- Social Media Marketing: R3,000-R15,000/month
+- Social Media Ads: R3,000-R20,000/month (excludes ad spend)
+- UI/UX Design: R8,000-R35,000
+- Branding: R1,500-R8,000
 
 ---
 
@@ -139,11 +139,27 @@ Is your website hurting your conversions? Here are 10 clear signals it's time to
 
 ### 6. How Much Does a Website Cost in South Africa? (2026 Guide)
 https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026
-A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R50,000+ e-commerce platforms. 6 min read.
+A transparent breakdown of web design pricing in South Africa — from R1,500 starter sites to R25,000+ e-commerce platforms. 6 min read.
 
 ### 7. Why Next.js Is the Best Framework for SEO in 2026
 https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026
 Server-side rendering, static generation, and Core Web Vitals — learn why Next.js websites consistently outrank traditional CMS sites on Google. 7 min read.
+
+### 8. What is Generative Engine Optimization (GEO)?
+https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization
+Learn how GEO helps your site appear in Google AI Overviews, Perplexity, and ChatGPT Search. A practical AI search optimization guide for South African businesses.
+
+### 9. Web Design Pricing South Africa (2026 Guide)
+https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide
+Full pricing guide for web design in South Africa in 2026. Compares brochure, e-commerce, and custom sites with real rand pricing from R1,500 to R50,000+.
+
+### 10. Small Business Website Guide — Johannesburg
+https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg
+Complete website guide for small businesses in Johannesburg. How to rank on Google, generate leads, and compete with big brands affordably.
+
+### 11. SEO Strategy Guide for South African Startups
+https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa
+Practical SEO strategy for South African startups on a budget. How to compete with established brands using smart content and Next.js.
 
 ---
 
@@ -249,4 +265,4 @@ For corrections or updates, contact: info@nostalgic-studio.co.za
 
 ---
 
-*Last updated: June 2026*
+*Last updated: 4 August 2026*

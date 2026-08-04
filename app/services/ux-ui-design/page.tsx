@@ -11,6 +11,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'UX/UI Design Johannesburg',
@@ -50,7 +51,7 @@ const uxSchemas = [
     description: 'Research-driven user experience and interface design services in Johannesburg. Figma prototyping, user research, and mobile-first design for startups.',
     url: '/services/ux-ui-design',
     areaServed: 'Johannesburg, South Africa',
-    priceRange: 'R8000-R35000',
+    priceRange: priceRange('ux-ui'),
     deliveryTime: '3-8 weeks',
   }),
   breadcrumbSchema([

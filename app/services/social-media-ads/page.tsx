@@ -11,6 +11,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Social Media & Paid Ads Johannesburg',
@@ -57,7 +58,7 @@ const socialAdsSchemas = [
       'Professional social media advertising services in Johannesburg. Facebook, Instagram and LinkedIn paid campaigns for startups and SMEs across South Africa.',
     url: '/services/social-media-ads',
     areaServed: 'Johannesburg, South Africa',
-    priceRange: 'R3000-R20000',
+    priceRange: priceRange('social-ads'),
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },

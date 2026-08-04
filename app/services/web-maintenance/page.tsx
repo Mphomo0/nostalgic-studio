@@ -11,6 +11,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Web Maintenance South Africa',
@@ -50,7 +51,7 @@ const maintenanceSchemas = [
     description: 'Proactive website maintenance and support in Johannesburg. Security monitoring, Next.js updates, performance optimisation, and daily backups.',
     url: '/services/web-maintenance',
     areaServed: 'South Africa',
-    priceRange: 'R500-R3000',
+    priceRange: priceRange('web-maintenance'),
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },

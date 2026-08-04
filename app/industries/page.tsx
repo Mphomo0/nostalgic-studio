@@ -114,7 +114,7 @@ export default function IndustriesPage() {
                     <Building2 className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
-                    {ind.name} Website Design
+                    {ind.shortName} Website Design
                   </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {ind.description.slice(0, 150)}...

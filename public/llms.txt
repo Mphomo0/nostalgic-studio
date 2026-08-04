@@ -18,7 +18,7 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - Nostalgic Studio has completed 70+ web and brand projects since 2016.
 - The studio builds websites exclusively on Next.js for superior SEO performance and Core Web Vitals scores.
 - Services include: web design, Next.js development, UI/UX design, brand identity, e-commerce development, SEO, social media marketing, social media ads, web hosting, and web maintenance.
-- Pricing for websites starts from R3,500 for starter sites and ranges to R60,000+ for complex e-commerce or enterprise sites.
+- Pricing for websites starts from R1,500 for starter sites, R8,000–R15,000 for business websites, and R10,000–R25,000+ for e-commerce stores.
 - Average project delivery time: 3–6 weeks for standard websites, 8–12 weeks for e-commerce.
 - Next.js websites built by Nostalgic Studio typically score 90–100 on Google Lighthouse, compared to 40–70 for WordPress equivalents.
 - All websites are built mobile-first with responsive design for South African mobile networks.
@@ -50,6 +50,11 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - UX/UI Design: https://www.nostalgic-studio.co.za/services/ux-ui-design — User experience and interface design
 - Web Hosting: https://www.nostalgic-studio.co.za/services/web-hosting — Managed hosting services
 - Web Maintenance: https://www.nostalgic-studio.co.za/services/web-maintenance — Ongoing website support
+- SEO Pricing: https://www.nostalgic-studio.co.za/services/seo-pricing — SEO package pricing, Starter R1,500/mo to Enterprise R10,000+/mo
+- Affordable Web Design Johannesburg: https://www.nostalgic-studio.co.za/services/affordable-web-design-johannesburg — Budget web design packages from R1,500
+- SEO for Construction Companies: https://www.nostalgic-studio.co.za/services/seo-for-construction-companies — Industry-specific SEO for contractors and construction firms
+- Website Refresh & SEO Upgrade: https://www.nostalgic-studio.co.za/services/website-refresh-seo-upgrade — Redesign and SEO retrofit for existing websites
+- Free SEO Audit: https://www.nostalgic-studio.co.za/free-seo-audit — Free website SEO and AI-search visibility audit
 - Portfolio: https://www.nostalgic-studio.co.za/projects — Case studies and portfolio
 - Case Study - Sozim: https://www.nostalgic-studio.co.za/projects/sozim-consultancy-case-study — SEO campaign, 163+ clicks in 28 days
 - Case Study - Tanosa Group: https://www.nostalgic-studio.co.za/projects/tanosa-group-case-study — Authority SEO for accounting firm, 1m 9s avg engagement
@@ -62,7 +67,40 @@ Nostalgic Studio is a digital design and web development agency founded in 2016 
 - Blog - How Long to Build a Website: https://www.nostalgic-studio.co.za/blog/how-long-to-build-website-2026 — Realistic website development timelines in South Africa for 2026
 - Blog - Social Media Strategy: https://www.nostalgic-studio.co.za/blog/social-media-strategy-south-african-businesses — Social media strategies for South African businesses in 2026
 - Blog - Local SEO South Africa: https://www.nostalgic-studio.co.za/blog/what-is-local-seo-south-africa — Guide to local SEO and Google Maps optimisation for South African businesses
+- Blog - What is Generative Engine Optimization (GEO): https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization — How to get cited by ChatGPT, Gemini, Claude, and Perplexity in South Africa
+- Blog - Web Design Pricing South Africa 2026: https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide — Detailed 2026 web design pricing breakdown for South Africa
+- Blog - Small Business Website Guide Johannesburg: https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg — What Johannesburg small businesses need from a website
+- Blog - SEO for Startups South Africa: https://www.nostalgic-studio.co.za/blog/seo-for-startups-south-africa — SEO strategy guide for South African startups
+
+## Location Pages (Web Design & SEO by Area)
+
+- Locations Index: https://www.nostalgic-studio.co.za/locations — All service areas
+- Sandton: https://www.nostalgic-studio.co.za/locations/sandton — Web design and SEO in Sandton, Gauteng
+- Fourways: https://www.nostalgic-studio.co.za/locations/fourways — Web design and SEO in Fourways, Gauteng
+- Rosebank: https://www.nostalgic-studio.co.za/locations/rosebank — Web design and SEO in Rosebank, Gauteng
+- Midrand: https://www.nostalgic-studio.co.za/locations/midrand — Web design and SEO in Midrand, Gauteng
+- Pretoria: https://www.nostalgic-studio.co.za/locations/pretoria — Web design and SEO in Pretoria, Gauteng
+- Randburg: https://www.nostalgic-studio.co.za/locations/randburg — Web design and SEO in Randburg, Gauteng
+- Roodepoort: https://www.nostalgic-studio.co.za/locations/roodepoort — Web design and SEO in Roodepoort, Gauteng
+- Centurion: https://www.nostalgic-studio.co.za/locations/centurion — Web design and SEO in Centurion, Gauteng
+- Cape Town: https://www.nostalgic-studio.co.za/locations/cape-town — Web design and SEO in Cape Town, Western Cape
+- Durban: https://www.nostalgic-studio.co.za/locations/durban — Web design and SEO in Durban, KwaZulu-Natal
+- Bloemfontein: https://www.nostalgic-studio.co.za/locations/bloemfontein — Web design and SEO in Bloemfontein, Free State
+
+## Industry Pages
+
+- Industries Index: https://www.nostalgic-studio.co.za/industries — All industries served
+- Construction: https://www.nostalgic-studio.co.za/industries/construction — Websites and SEO for construction and contracting firms
+- Professional Services: https://www.nostalgic-studio.co.za/industries/professional-services — Websites for consultancies, accounting, and legal firms
+- Healthcare: https://www.nostalgic-studio.co.za/industries/healthcare — Websites for medical practices and healthcare providers
+- E-commerce: https://www.nostalgic-studio.co.za/industries/e-commerce — Online stores with South African payment gateways
+- Startups: https://www.nostalgic-studio.co.za/industries/startups — Launch websites and SEO for South African startups
+
+## Contact
+
 - Contact: https://www.nostalgic-studio.co.za/contact — Get a quote
+- Pricing (machine-readable): https://www.nostalgic-studio.co.za/pricing.md — Structured pricing data for AI agents
+- Full corpus: https://www.nostalgic-studio.co.za/llms-full.txt — Complete content corpus
 
 ## Citation Policy
 

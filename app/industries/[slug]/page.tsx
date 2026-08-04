@@ -10,7 +10,12 @@ import {
   type IndustryInfo,
 } from '@/lib/industries-data'
 import { projects } from '@/lib/portfolio-data'
-import { breadcrumbSchema, serviceSchema } from '@/app/structured-data/schemas'
+import {
+  breadcrumbSchema,
+  serviceSchema,
+  faqPageSchema,
+} from '@/app/structured-data/schemas'
+import { WEBSITE_PRICE_RANGE } from '@/lib/pricing-data'
 
 const industryBySlug = new Map(industries.map((i) => [i.slug, i]))
 
@@ -132,7 +137,7 @@ function RelatedProjects({ slug }: { slug: string }) {
 
 function indName(slug: string) {
   const ind = industryBySlug.get(slug)
-  return ind?.name.toLowerCase() || slug
+  return ind?.shortName.toLowerCase() || slug
 }
 
 export default async function IndustryPage({
@@ -156,16 +161,26 @@ export default async function IndustryPage({
             breadcrumbSchema([
               { name: 'Home', url: '/' },
               { name: 'Industries', url: '/industries' },
-              { name: ind.name, url: `/industries/${ind.slug}` },
+              { name: ind.shortName, url: `/industries/${ind.slug}` },
             ]),
             serviceSchema({
               id: `website-design-${ind.slug}`,
-              name: `${ind.name} Website Design`,
+              name: `${ind.shortName} Website Design`,
               description: desc,
               url: `/industries/${ind.slug}`,
               areaServed: 'South Africa',
-              priceRange: 'R1500-R25000',
+              priceRange: WEBSITE_PRICE_RANGE,
             }),
+            // FAQs render as always-visible cards below, so the answers are
+            // already in the HTML — this makes the same Q&A pairs
+            // machine-readable for AI engines and Google's FAQ rich results.
+            ...(ind.faq.length > 0
+              ? [
+                  faqPageSchema(
+                    ind.faq.map(({ q, a }) => ({ question: q, answer: a }))
+                  ),
+                ]
+              : []),
           ]),
         }}
       />
@@ -239,7 +254,7 @@ export default async function IndustryPage({
               Who We Work With
             </h2>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-              We build websites for a wide range of {ind.name.toLowerCase()}{' '}
+              We build websites for a wide range of {ind.shortName.toLowerCase()}{' '}
               businesses across Johannesburg and South Africa.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -301,7 +316,7 @@ export default async function IndustryPage({
         <section className="py-20 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Why {ind.name} Businesses Choose Us
+              Why {ind.shortName} Businesses Choose Us
             </h2>
             <div className="grid sm:grid-cols-3 gap-6 mt-10">
               {ind.whyUsPoints.map((point, i) => (
@@ -340,6 +355,31 @@ export default async function IndustryPage({
         {/* Related Projects */}
         <RelatedProjects slug={slug} />
 
+        {/* FAQ — answers stay expanded so both readers and AI crawlers get
+            the full text without an interaction. */}
+        {ind.faq.length > 0 ? (
+          <section className="py-16 bg-muted/30">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                {ind.faq.map((item) => (
+                  <div
+                    key={item.q}
+                    className="bg-card border border-border rounded-xl p-6"
+                  >
+                    <h3 className="font-semibold mb-2">{item.q}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
         {/* CTA */}
         <section className="py-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -370,7 +410,7 @@ export default async function IndustryPage({
                 .map((i) => (
                   <Button key={i.slug} asChild variant="outline">
                     <Link href={`/industries/${i.slug}`}>
-                      {i.name} Website Design
+                      {i.shortName} Website Design
                     </Link>
                   </Button>
                 ))}

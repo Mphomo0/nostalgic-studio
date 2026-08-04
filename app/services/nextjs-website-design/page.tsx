@@ -9,6 +9,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const dynamic = 'force-static'
 
@@ -50,7 +51,7 @@ const nextjsSchemas = [
     description: 'Expert Next.js website design and development in Johannesburg, South Africa. Server-side rendering, static site generation, and 90-100 Lighthouse scores.',
     url: '/services/nextjs-website-design',
     areaServed: 'South Africa',
-    priceRange: 'R8000-R15000',
+    priceRange: priceRange('business-website'),
     deliveryTime: '4-8 weeks',
   }),
   breadcrumbSchema([

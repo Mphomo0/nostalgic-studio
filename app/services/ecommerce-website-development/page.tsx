@@ -11,6 +11,7 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 import lazyLoad from 'next/dynamic'
 const MotionWrapper = lazyLoad(() => import('@/components/layout/MotionWrapper'))
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Ecommerce Development South Africa',
@@ -50,7 +51,7 @@ const ecommerceSchemas = [
     description: 'Custom Next.js ecommerce development in Johannesburg with South African payment gateways including PayFast, Yoco, and Ozow.',
     url: '/services/ecommerce-website-development',
     areaServed: 'South Africa',
-    priceRange: 'R10000-R25000',
+    priceRange: priceRange('ecommerce-store'),
     deliveryTime: '8-12 weeks',
   }),
   breadcrumbSchema([

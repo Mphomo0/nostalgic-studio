@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-pricing-drift.mjs",
     "build": "next build",
     "postbuild": "node scripts/submit-indexnow.mjs",
     "start": "next start",
     "lint": "eslint",
+    "check:pricing": "node scripts/check-pricing-drift.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
