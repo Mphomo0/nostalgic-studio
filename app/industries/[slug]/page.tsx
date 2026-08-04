@@ -137,7 +137,7 @@ function RelatedProjects({ slug }: { slug: string }) {
 
 function indName(slug: string) {
   const ind = industryBySlug.get(slug)
-  return ind?.name.toLowerCase() || slug
+  return ind?.shortName.toLowerCase() || slug
 }
 
 export default async function IndustryPage({
@@ -161,11 +161,11 @@ export default async function IndustryPage({
             breadcrumbSchema([
               { name: 'Home', url: '/' },
               { name: 'Industries', url: '/industries' },
-              { name: ind.name, url: `/industries/${ind.slug}` },
+              { name: ind.shortName, url: `/industries/${ind.slug}` },
             ]),
             serviceSchema({
               id: `website-design-${ind.slug}`,
-              name: `${ind.name} Website Design`,
+              name: `${ind.shortName} Website Design`,
               description: desc,
               url: `/industries/${ind.slug}`,
               areaServed: 'South Africa',
@@ -254,7 +254,7 @@ export default async function IndustryPage({
               Who We Work With
             </h2>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-              We build websites for a wide range of {ind.name.toLowerCase()}{' '}
+              We build websites for a wide range of {ind.shortName.toLowerCase()}{' '}
               businesses across Johannesburg and South Africa.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -316,7 +316,7 @@ export default async function IndustryPage({
         <section className="py-20 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Why {ind.name} Businesses Choose Us
+              Why {ind.shortName} Businesses Choose Us
             </h2>
             <div className="grid sm:grid-cols-3 gap-6 mt-10">
               {ind.whyUsPoints.map((point, i) => (
@@ -410,7 +410,7 @@ export default async function IndustryPage({
                 .map((i) => (
                   <Button key={i.slug} asChild variant="outline">
                     <Link href={`/industries/${i.slug}`}>
-                      {i.name} Website Design
+                      {i.shortName} Website Design
                     </Link>
                   </Button>
                 ))}

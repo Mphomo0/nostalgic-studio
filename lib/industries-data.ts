@@ -1,6 +1,14 @@
 export interface IndustryInfo {
   slug: string
+  /**
+   * Long-form SEO label. Not used for page titles (those come from
+   * `metaTitle ?? heroTagline`) and never render it as UI text — the
+   * construction entry is a full keyword string that overflows on mobile.
+   * Use `shortName` for anything a person reads.
+   */
   name: string
+  /** Display label used in headings, links, and schema. Keep it to 1-3 words. */
+  shortName: string
   description: string
   challenges: string[]
   services: string[]
@@ -19,6 +27,7 @@ export const industries: IndustryInfo[] = [
   {
     slug: 'construction',
     name: 'Construction Website Design Johannesburg | Contractor Websites',
+    shortName: 'Construction',
     description:
       'Website design for construction companies in Johannesburg and South Africa. Showcase projects, services, certifications, and generate quote enquiries.',
     challenges: [
@@ -98,6 +107,7 @@ export const industries: IndustryInfo[] = [
   {
     slug: 'professional-services',
     name: 'Professional Services',
+    shortName: 'Professional Services',
     description:
       'Lawyers, accountants, consultants, and financial advisors in South Africa are judged by their website before a prospect ever picks up the phone. We build authoritative, trust-driven sites that position your firm as the obvious choice for high-value clients.',
     challenges: [
@@ -158,6 +168,7 @@ export const industries: IndustryInfo[] = [
   {
     slug: 'healthcare',
     name: 'Healthcare',
+    shortName: 'Healthcare',
     description:
       'South African patients research healthcare providers online before booking. We build compliant, trustworthy websites for private practices, clinics, and wellness centres — with online booking, practitioner profiles, and local SEO that helps patients find you first.',
     challenges: [
@@ -218,6 +229,7 @@ export const industries: IndustryInfo[] = [
   {
     slug: 'e-commerce',
     name: 'E-commerce',
+    shortName: 'E-commerce',
     description:
       'South African e-commerce is growing fast, but most online stores lose sales on slow load times, clunky mobile checkout, and poor product pages. We build Next.js-powered stores with local payment gateways that convert visitors into customers.',
     challenges: [
@@ -278,6 +290,7 @@ export const industries: IndustryInfo[] = [
   {
     slug: 'startups',
     name: 'Startups',
+    shortName: 'Startups',
     description:
       'South African startups need a website that launches fast, impresses investors, and starts generating leads from day one — without the bloat of traditional CMS platforms. We build on Next.js for maximum performance, scalability, and SEO from launch.',
     challenges: [
