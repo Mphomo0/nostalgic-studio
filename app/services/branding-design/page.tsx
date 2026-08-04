@@ -28,6 +28,7 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Brand Identity Agency Johannesburg',
@@ -132,7 +133,7 @@ export default function BrandingDesign() {
         'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
       url: '/services/branding-design',
       areaServed: 'Johannesburg, South Africa',
-      priceRange: 'R1500-R8000',
+      priceRange: priceRange('branding'),
       deliveryTime: '3-6 weeks',
     }),
     breadcrumbSchema([

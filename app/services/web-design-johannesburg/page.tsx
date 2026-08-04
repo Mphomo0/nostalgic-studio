@@ -24,6 +24,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { WEBSITE_PRICE_RANGE } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Web Design Johannesburg | From R1,500',
@@ -89,7 +90,7 @@ const webDesignSchemas = [
       'Performance-first web design and development in Johannesburg, South Africa. Custom Next.js websites built for speed, SEO, and high conversion rates. 5-star Google rated.',
     url: '/services/web-design-johannesburg',
     areaServed: 'Johannesburg, South Africa',
-    priceRange: 'R1500-R25000',
+    priceRange: WEBSITE_PRICE_RANGE,
     deliveryTime: '4-8 weeks',
   }),
   breadcrumbSchema([

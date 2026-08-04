@@ -18,6 +18,7 @@ import {
   serviceSchema,
   faqPageSchema,
 } from '@/app/structured-data/schemas'
+import { SEO_PRICE_RANGE } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'SEO Pricing Johannesburg | Packages',
@@ -146,7 +147,7 @@ const schemas = [
       'Transparent SEO packages from R1,500/month. Includes technical SEO, local SEO, content strategy, and GEO / AI search optimization.',
     url: '/services/seo-pricing',
     areaServed: 'Johannesburg, South Africa',
-    priceRange: 'R1500-R15000',
+    priceRange: SEO_PRICE_RANGE,
     deliveryTime: 'Ongoing monthly',
   }),
   faqPageSchema(faqs),

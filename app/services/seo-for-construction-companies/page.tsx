@@ -23,6 +23,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { SEO_PRICE_RANGE } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'SEO for Construction Companies in South Africa',
@@ -83,7 +84,7 @@ const schemas = [
       'SEO services for construction companies in South Africa. Improve Google visibility, attract tender enquiries, and rank for local construction search terms.',
     url: '/services/seo-for-construction-companies',
     areaServed: 'South Africa',
-    priceRange: 'R1500-R15000',
+    priceRange: SEO_PRICE_RANGE,
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },

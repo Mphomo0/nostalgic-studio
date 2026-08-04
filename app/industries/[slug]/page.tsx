@@ -10,7 +10,12 @@ import {
   type IndustryInfo,
 } from '@/lib/industries-data'
 import { projects } from '@/lib/portfolio-data'
-import { breadcrumbSchema, serviceSchema } from '@/app/structured-data/schemas'
+import {
+  breadcrumbSchema,
+  serviceSchema,
+  faqPageSchema,
+} from '@/app/structured-data/schemas'
+import { WEBSITE_PRICE_RANGE } from '@/lib/pricing-data'
 
 const industryBySlug = new Map(industries.map((i) => [i.slug, i]))
 
@@ -164,8 +169,18 @@ export default async function IndustryPage({
               description: desc,
               url: `/industries/${ind.slug}`,
               areaServed: 'South Africa',
-              priceRange: 'R1500-R25000',
+              priceRange: WEBSITE_PRICE_RANGE,
             }),
+            // FAQs render as always-visible cards below, so the answers are
+            // already in the HTML — this makes the same Q&A pairs
+            // machine-readable for AI engines and Google's FAQ rich results.
+            ...(ind.faq.length > 0
+              ? [
+                  faqPageSchema(
+                    ind.faq.map(({ q, a }) => ({ question: q, answer: a }))
+                  ),
+                ]
+              : []),
           ]),
         }}
       />
@@ -339,6 +354,31 @@ export default async function IndustryPage({
 
         {/* Related Projects */}
         <RelatedProjects slug={slug} />
+
+        {/* FAQ — answers stay expanded so both readers and AI crawlers get
+            the full text without an interaction. */}
+        {ind.faq.length > 0 ? (
+          <section className="py-16 bg-muted/30">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold mb-8 text-center">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-6">
+                {ind.faq.map((item) => (
+                  <div
+                    key={item.q}
+                    className="bg-card border border-border rounded-xl p-6"
+                  >
+                    <h3 className="font-semibold mb-2">{item.q}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         {/* CTA */}
         <section className="py-20">

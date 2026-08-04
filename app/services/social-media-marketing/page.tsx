@@ -11,6 +11,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Social Media Marketing Johannesburg',
@@ -57,7 +58,7 @@ const smmSchemas = [
       'Strategic social media marketing services in Johannesburg, South Africa. Content creation, community management, and influencer partnerships for startups and SMEs.',
     url: '/services/social-media-marketing',
     areaServed: 'Johannesburg, South Africa',
-    priceRange: 'R3000-R15000',
+    priceRange: priceRange('social-marketing'),
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },

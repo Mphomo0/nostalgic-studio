@@ -36,6 +36,7 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import AuthorBio from '@/components/geo/AuthorBio'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { SEO_PRICE_RANGE } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'AI Search Ranking & SEO Johannesburg',
@@ -178,7 +179,7 @@ const seoSchemas = [
       'Expert search engine optimisation services in Johannesburg, South Africa. Technical SEO, local SEO, keyword research, generative engine optimization, and content strategy for startups and SMEs.',
     url: '/services/seo-services-johannesburg',
     areaServed: 'Johannesburg, South Africa',
-    priceRange: 'R1500-R15000',
+    priceRange: SEO_PRICE_RANGE,
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },

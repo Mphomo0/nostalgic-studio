@@ -21,6 +21,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Website Refresh & SEO Upgrade South Africa',
@@ -79,7 +80,7 @@ const refreshSchemas = [
       'Upgrade your website with improved design, speed, SEO, and lead generation. Helping SA businesses refresh and optimize their online presence.',
     url: '/services/website-refresh-seo-upgrade',
     areaServed: 'South Africa',
-    priceRange: 'R3,500-R8,500',
+    priceRange: priceRange('website-refresh'),
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },

@@ -11,6 +11,7 @@ import { FaqSection } from '@/components/geo/FaqSection'
 import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import AboutThisPage from '@/components/geo/AboutThisPage'
 import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
+import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
   title: 'Web Hosting South Africa',
@@ -50,7 +51,7 @@ const hostingSchemas = [
     description: 'Managed web hosting in South Africa optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
     url: '/services/web-hosting',
     areaServed: 'South Africa',
-    priceRange: 'R200-R3000',
+    priceRange: priceRange('web-hosting'),
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },
