@@ -9,7 +9,7 @@ declare global {
 }
 
 const PHONE = '+27824483273'
-const WHATSAPP_URL = `https://wa.me/27824483273?text=Hi%20Nostalgic%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.`
+const WHATSAPP_URL = `https://wa.me/27646806519?text=Hi%20Nostalgic%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.`
 const TEL_URL = `tel:${PHONE}`
 
 function trackEvent(action: string, label: string) {

@@ -255,7 +255,7 @@ export default function ContactPage() {
                       className="h-14 px-8"
                     >
                       <a
-                        href="https://wa.me/27824483273?text=Hi%2C%20I%27d%20like%20a%20free%20website%20review"
+                        href="https://wa.me/27646806519?text=Hi%2C%20I%27d%20like%20a%20free%20website%20review"
                         target="_blank"
                         rel="noopener noreferrer nofollow"
                       >
