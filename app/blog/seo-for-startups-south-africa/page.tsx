@@ -64,7 +64,7 @@ export default function SeoForStartupsPage() {
           </ul>
 
           <h2>5. Optimize for Local Search</h2>
-          <p>Even digital startups should optimize for local SEO. Google Business Profile, local citations, and location pages help you show up in &quot;near me&quot; searches. For SA startups, this means appearing when corporates search for your service type in Johannesburg, <Link href="/locations/cape-town" className="text-primary hover:underline">Cape Town</Link>, or <Link href="/locations/sandton" className="text-primary hover:underline">Sandton</Link>.</p>
+          <p>Even digital startups should optimize for local SEO. Google Business Profile, local citations, and location pages help you show up in &quot;near me&quot; searches. For SA startups, this means appearing when corporates search for your service type in Johannesburg, <Link href="/locations/sandton" className="text-primary hover:underline">Sandton</Link>, or <Link href="/locations/south-africa" className="text-primary hover:underline">further afield</Link>.</p>
 
           <h2>6. Leverage AI Search (GEO)</h2>
           <p>Startups have an advantage in Generative Engine Optimization: you can launch with an llms.txt file, structured data, and AI-optimized content from day one. Established competitors are slow to adapt. GEO is the startup&apos;s shortcut to visibility in AI-powered search results.</p>

@@ -9,7 +9,7 @@ export const dynamic = 'force-static'
 export const metadata: Metadata = {
   title: 'Web Design Locations Johannesburg & South Africa',
   description:
-    'Web design and SEO services across Johannesburg, Pretoria, Cape Town, Durban and Bloemfontein. Local expertise, fixed pricing, Next.js websites.',
+    'Web design and SEO across Johannesburg, Sandton, Pretoria and Centurion, plus remote work nationwide. Local expertise, fixed pricing, Next.js websites.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/locations',
     languages: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Design Locations Johannesburg & South Africa | Nostalgic Studio',
     description:
-      'Web design and SEO services across Johannesburg, Pretoria, Cape Town, Durban and Bloemfontein. Local expertise, fixed pricing, Next.js websites.',
+      'Web design and SEO across Johannesburg, Sandton, Pretoria and Centurion, plus remote work nationwide. Local expertise, fixed pricing, Next.js websites.',
     url: 'https://www.nostalgic-studio.co.za/locations',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -136,16 +136,24 @@ export default function LocationsPage() {
               Don&apos;t See Your City?
             </h2>
             <p className="text-muted-foreground mb-8">
-              We work with clients across all of South Africa, remotely or
-              in person. Contact us for a free consultation and fixed quote,
-              wherever you are based.
+              The pages above cover Gauteng, where we work in person. Everywhere
+              else in South Africa — Cape Town, Durban, Bloemfontein and beyond
+              — we work remotely, at the same fixed pricing.
             </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold hover:bg-primary/90 transition-colors"
-            >
-              Get a Free Consultation
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/locations/south-africa"
+                className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-8 py-4 text-sm font-semibold hover:bg-primary/90 transition-colors"
+              >
+                How We Work Remotely
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-lg border border-border px-8 py-4 text-sm font-semibold hover:border-primary/50 transition-colors"
+              >
+                Get a Free Consultation
+              </Link>
+            </div>
           </div>
         </section>
       </main>

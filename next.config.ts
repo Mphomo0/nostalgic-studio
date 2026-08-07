@@ -33,6 +33,25 @@ const nextConfig: NextConfig = {
         destination: '/services/web-hosting',
         permanent: true,
       },
+      // Consolidated 2026-08: the Cape Town, Durban and Bloemfontein pages
+      // disclosed that we serve those cities remotely and then argued for
+      // hiring a local agency. Replaced by one honest nationwide page rather
+      // than three self-contradicting ones.
+      {
+        source: '/locations/cape-town',
+        destination: '/locations/south-africa',
+        permanent: true,
+      },
+      {
+        source: '/locations/durban',
+        destination: '/locations/south-africa',
+        permanent: true,
+      },
+      {
+        source: '/locations/bloemfontein',
+        destination: '/locations/south-africa',
+        permanent: true,
+      },
     ]
   },
   experimental: {

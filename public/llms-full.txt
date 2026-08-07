@@ -15,7 +15,7 @@ Nostalgic Studio is a Johannesburg-based digital design agency founded in 2013 b
 - **Projects Completed**: 70+
 - **Primary Tech Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion, shadcn/ui
 - **Hosting**: Vercel (Edge Network, Global CDN)
-- **Service Area**: Johannesburg, Sandton, Midrand, Pretoria, Cape Town, Durban, and nationwide remote across South Africa
+- **Service Area**: In person across Gauteng (Johannesburg, Sandton, Midrand, Pretoria, Centurion); remote everywhere else in South Africa, including Cape Town, Durban and Bloemfontein
 
 ---
 
@@ -103,10 +103,10 @@ Nostalgic Studio serves clients across South Africa with particular expertise in
 - West Rand (Krugersdorp, Randfontein)
 
 ### Other Provinces
-- Cape Town, Western Cape
-- Durban, KwaZulu-Natal
+- Cape Town, Western Cape (remote)
+- Durban, KwaZulu-Natal (remote)
 - Mbombela (Nelspruit), Mpumalanga
-- Bloemfontein, Free State
+- Bloemfontein, Free State (remote)
 - Polokwane, Limpopo
 - Kimberley, Northern Cape
 - East London, Eastern Cape

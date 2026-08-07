@@ -32,9 +32,7 @@ const footerLinks = {
     { name: 'Randburg', path: '/locations/randburg' },
     { name: 'Roodepoort', path: '/locations/roodepoort' },
     { name: 'Centurion', path: '/locations/centurion' },
-    { name: 'Cape Town', path: '/locations/cape-town' },
-    { name: 'Durban', path: '/locations/durban' },
-    { name: 'Bloemfontein', path: '/locations/bloemfontein' },
+    { name: 'Rest of South Africa', path: '/locations/south-africa' },
   ],
   industries: [
     { name: 'Healthcare Website Design', path: '/industries/healthcare' },

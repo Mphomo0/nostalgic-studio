@@ -100,7 +100,7 @@ export default function LocalSEOArticle() {
             What is Local SEO? A Guide for South African Businesses
           </h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            If your customers are in Johannesburg, <Link href="/locations/pretoria" className="text-primary hover:underline">Pretoria</Link>, or <Link href="/locations/cape-town" className="text-primary hover:underline">Cape Town</Link>, general SEO isn&apos;t enough.
+            If your customers are in Johannesburg, <Link href="/locations/pretoria" className="text-primary hover:underline">Pretoria</Link>, or <Link href="/locations/south-africa" className="text-primary hover:underline">anywhere else in South Africa</Link>, general SEO isn&apos;t enough.
             You need Local SEO to ensure your business appears when people search for &quot;services near me.&quot;
           </p>
         </header>
