@@ -78,7 +78,7 @@ export default function GeoGuidePage() {
           <p>AI engines rely on schema markup to understand your content unambiguously. Implement LocalBusiness, Service, FAQ, and Article schemas with consistent entity IDs across pages. This remains one of the highest-impact, lowest-effort GEO tactics available to any business.</p>
 
           <h3>3. Authoritative, Well-Structured Content</h3>
-          <p>AI engines prefer content that is clear, well-organized, and directly answers questions. Use heading hierarchies (H1 {'>'} H2 {'>'} H3), bullet points, tables, and short paragraphs. Front-load your most citable answer — roughly 44% of AI Overview citations come from the first 30% of a page, so don&apos;t bury your conclusion. Include original data, statistics, and expert opinions with clear attribution.</p>
+          <p>AI engines prefer content that is clear, well-organized, and directly answers questions. Use heading hierarchies (H1 {'>'} H2 {'>'} H3), bullet points, tables, and short paragraphs. Front-load your most citable answer — citations skew heavily toward passages near the top of a page, so don&apos;t bury your conclusion. Include original data, statistics, and expert opinions with clear attribution.</p>
 
           <h3>4. Keep Content Fresh</h3>
           <p>A large-scale SE Ranking study of 1.3 million AI citations found that content under 3 months old is roughly 3x more likely to be cited than older content, and pages left stale for 6+ months tend to lose citation eligibility entirely. A scheduled content refresh — updating stats, examples, and dates — is one of the highest-leverage GEO investments available.</p>

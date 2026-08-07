@@ -115,7 +115,7 @@ const faqs = [
   {
     question: 'Why is branding important for my business?',
     answer:
-      'Professional branding increases customer trust, justifies premium pricing, improves brand recognition, and creates emotional connections with your audience. Consistent branding can increase revenue by up to 23%.',
+      'Professional branding increases customer trust, justifies premium pricing, improves brand recognition, and creates emotional connections with your audience. Consistent presentation across every touchpoint is what makes a small business look established.',
   },
   {
     question: 'What is the difference between branding and logo design?',
@@ -148,25 +148,25 @@ export default function BrandingDesign() {
       icon: TrendingUp,
       title: 'Increased Trust',
       description:
-        'Professional branding signals credibility and reliability. 75% of consumers judge a company&apos;s credibility based on its website and brand design.',
+        'Professional branding signals credibility and reliability. For most first-time visitors, your website and brand design are the only evidence they have to judge you on.',
     },
     {
       icon: DollarSign,
       title: 'Higher Conversion Rates',
       description:
-        'Consistent brand presentation across all platforms can increase revenue by up to 23%. Strong brands command higher prices.',
+        'Consistent brand presentation across every platform removes the hesitation that costs you conversions. Strong brands command higher prices.',
     },
     {
       icon: Eye,
       title: 'Better Customer Perception',
       description:
-        'Well-branded businesses are perceived as more professional, trustworthy, and valuable. First impressions are formed within 50 milliseconds.',
+        'Well-branded businesses are perceived as more professional, trustworthy, and valuable. Research by Lindgaard et al. found visitors form a first impression of a website in about 50 milliseconds.',
     },
     {
       icon: Shield,
       title: 'Pricing Power',
       description:
-        'Strong brands can charge 20%+ more than unbranded competitors. Brand equity directly impacts your ability to command premium pricing.',
+        'Recognisable brands can charge more than unbranded competitors for comparable work. Brand equity directly impacts your ability to command premium pricing.',
     },
     {
       icon: Target,
@@ -178,7 +178,7 @@ export default function BrandingDesign() {
       icon: Users,
       title: 'Customer Loyalty',
       description:
-        'Emotionally connected customers are 52% more valuable than highly satisfied customers. Strong brands create emotional bonds.',
+        'Customers who feel an emotional connection to a brand are worth more over their lifetime than merely satisfied ones. Strong brands create those bonds.',
     },
   ]
 
@@ -862,7 +862,7 @@ export default function BrandingDesign() {
             {
               point: 'Business impact',
               detail:
-                'professional branding can increase revenue by up to 23% and justify premium pricing',
+                'consistent professional branding builds recognition and helps justify premium pricing',
             },
           ]}
         />

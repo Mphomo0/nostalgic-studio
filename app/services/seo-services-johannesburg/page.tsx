@@ -101,7 +101,7 @@ const faqs = [
   {
     question: 'What are the benefits of SEO for my Johannesburg business?',
     answer:
-      'SEO increases your visibility in local search results, driving more organic traffic to your website and helping you reach potential customers in Johannesburg and across South Africa. 75% of users never scroll past the first page of Google results, and 46% of all Google searches have local intent.',
+      'SEO increases your visibility in local search results, driving more organic traffic to your website and helping you reach potential customers in Johannesburg and across South Africa. Most people never look past the first page of Google, and a large share of searches carry local intent — so ranking on page one for the terms your customers actually use is what generates enquiries.',
   },
   {
     question: 'How does Next.js improve SEO?',
@@ -590,7 +590,7 @@ export default function SEOServicesJohannesburg() {
                 icon: Target,
                 title: 'Local Visibility',
                 description:
-                  '46% of Google searches have local intent. Johannesburg customers searching for "near me" services are ready to buy. Local SEO puts your business in front of them in both maps and AI answers.',
+                  'A large share of Google searches carry local intent. Johannesburg customers searching for "near me" services are ready to buy. Local SEO puts your business in front of them in both maps and AI answers.',
               },
               {
                 icon: TrendingUp,
@@ -602,7 +602,7 @@ export default function SEOServicesJohannesburg() {
                 icon: DollarSign,
                 title: 'Cost-Effective Growth',
                 description:
-                  'SEO delivers 5:1 ROI on average. Organic traffic costs 80% less per acquisition than PPC over 12 months. GEO amplifies this by earning AI citations at no extra ad cost.',
+                  'Organic traffic keeps working after the spend stops, which is what makes its cost per acquisition fall over time while paid traffic resets to zero the day you pause the ads. GEO amplifies this by earning AI citations at no extra ad cost.',
               },
               {
                 icon: Globe,

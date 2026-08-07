@@ -68,7 +68,7 @@ const ecommerceFaqs = [
   },
   {
     question: 'Why use Next.js for an ecommerce store?',
-    answer: 'Next.js is ideal for ecommerce because it delivers sub-2-second load times, which directly increases conversion rates. Studies show a 1-second delay in page load reduces conversions by 7%. Next.js also provides superior SEO through server-side rendering, helping your products rank higher on Google.',
+    answer: 'Next.js is ideal for ecommerce because it delivers sub-2-second load times, which directly increases conversion rates — every extra second of load time costs you shoppers who abandon before the page renders. Next.js also provides superior SEO through server-side rendering, helping your products rank higher on Google.',
   },
   {
     question: 'Can I manage my own products?',
@@ -120,10 +120,11 @@ export default function EcommerceWebsiteDevelopment() {
               payment gateway integration, and order management systems.
             </p>
             <p className="text-muted-foreground">
-              In South Africa, ecommerce grew by 66% between 2020 and 2025, with online retail reaching R71 billion in 2025. 
-              A professionally built ecommerce website on Next.js loads 2–3x faster than traditional platforms, 
-              which directly impacts conversion rates — studies show every 1-second improvement in load time 
-              increases conversions by 7%.
+              South African online retail has grown steadily over the past five years, and shoppers now
+              expect the same speed from local stores that they get from international ones.
+              A professionally built ecommerce website on Next.js loads 2–3x faster than traditional platforms,
+              which directly impacts conversion rates — every second shaved off load time is fewer shoppers
+              abandoning their cart before the page finishes rendering.
             </p>
           </div>
         </section>

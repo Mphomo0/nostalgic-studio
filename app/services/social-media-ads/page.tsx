@@ -128,9 +128,10 @@ export default function SocialMediaAds() {
                 It provides measurable ROI and faster results than organic marketing.
               </p>
               <p>
-                The average cost-per-click for Facebook ads in South Africa is R2–R8, significantly lower than 
-                Google Ads at R10–R30. Social media advertising delivers an average ROI of 200–400% 
-                when campaigns are properly targeted and optimised.
+                Cost-per-click on Facebook in South Africa typically runs well below Google Ads for the
+                same audience, which is why social is usually the cheaper place to test creative before
+                committing budget to search. Returns depend entirely on targeting and offer — properly
+                optimised campaigns pay for themselves, poorly targeted ones burn budget quickly.
               </p>
             </div>
 

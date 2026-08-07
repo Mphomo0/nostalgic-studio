@@ -121,9 +121,10 @@ export default function WebMaintenance() {
                 monitoring, performance optimisation, content updates, and regular backups.
               </p>
               <p>
-                According to industry data, 60% of small business websites have at least one critical vulnerability. 
-                Regular maintenance reduces security risks by 95% and ensures websites maintain their Google rankings. 
-                The average cost of a website hack for a South African small business is R15,000–R75,000 in recovery costs.
+                Unmaintained websites accumulate known vulnerabilities — outdated plugins, unpatched
+                dependencies, and expired certificates are the usual entry points. Regular maintenance
+                closes them before they are exploited, and keeps the site fast enough to hold its Google
+                rankings. Recovering from a compromise almost always costs more than preventing one.
               </p>
             </div>
 
