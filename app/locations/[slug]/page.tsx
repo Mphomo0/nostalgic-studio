@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowRight, MapPin, Building2, Users } from 'lucide-react'
+import { ArrowRight, MapPin, Building2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { locations, suburbSlugs, type LocationInfo } from '@/lib/locations-data'
 import {
@@ -137,12 +137,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 </span>
                 <span className="flex items-center gap-2">
                   <Building2 className="h-4 w-4" /> Serving {loc.population}
-                </span>
-                <span className="flex items-center gap-2">
-                  <Users className="h-4 w-4" /> 50+ Happy Clients
-                </span>
-                <span className="flex items-center gap-2">
-                  <Star className="h-4 w-4" /> 5.0 Google Rating
                 </span>
               </div>
             </div>
@@ -302,29 +296,64 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
 
-        {/* Why Local */}
+        {/* Why us — the "local agency" argument only holds where we are
+            actually local. For cities we serve remotely (loc.remoteNote), we
+            make the honest case for a remote studio instead of claiming a
+            presence we do not have. */}
         <section className="py-16 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6">
-                Why Choose a Local Web Design Agency for {loc.name}?
-              </h2>
-              <div className="space-y-6 text-lg text-muted-foreground">
-                <p>
-                  A local agency understands the {loc.name} market, consumer
-                  behaviour in {loc.province}, and what it takes to rank in
-                  local search results. We build with South African hosting,
-                  optimize for local mobile networks (where 60%+ of traffic
-                  comes from), and know which payment gateways {loc.name}{' '}
-                  businesses actually need.
-                </p>
-                <p>
-                  Nostalgic Studio serves {loc.name} and surrounding areas
-                  including {loc.nearby.slice(0, 3).join(', ')}. We deliver the
-                  same high-performance Next.js websites, SEO, and branding that
-                  have earned us a 5.0-star Google rating across 70+ projects.
-                </p>
-              </div>
+              {loc.remoteNote ? (
+                <>
+                  <h2 className="text-3xl font-bold mb-6">
+                    Working with a Johannesburg Studio from {loc.name}
+                  </h2>
+                  <div className="space-y-6 text-lg text-muted-foreground">
+                    <p>
+                      We do not have an office in {loc.name}. We are based in
+                      Johannesburg and run {loc.name} projects remotely — over
+                      email, video calls, and shared design reviews. In
+                      practice most clients never need an in-person meeting,
+                      and the ones who do are usually better served by a studio
+                      down the road from them. We would rather say that plainly
+                      than imply a {loc.province} presence we do not have.
+                    </p>
+                    <p>
+                      What being remote does not change: your site is still
+                      built for the {loc.name} market. That means local SEO
+                      targeting {loc.name} and nearby areas like{' '}
+                      {loc.nearby.slice(0, 3).join(', ')}, South African
+                      hosting, the payment gateways {loc.province} customers
+                      actually use, and pages tuned for local mobile networks —
+                      where most South African traffic comes from. Pricing and
+                      timelines are identical to our Gauteng projects.
+                    </p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-3xl font-bold mb-6">
+                    Why Choose a Local Web Design Agency for {loc.name}?
+                  </h2>
+                  <div className="space-y-6 text-lg text-muted-foreground">
+                    <p>
+                      A local agency understands the {loc.name} market, consumer
+                      behaviour in {loc.province}, and what it takes to rank in
+                      local search results. We build with South African hosting,
+                      optimize for local mobile networks (where most South
+                      African traffic comes from), and know which payment
+                      gateways {loc.name} businesses actually need.
+                    </p>
+                    <p>
+                      Nostalgic Studio is based in Gauteng and works with
+                      businesses in {loc.name} and surrounding areas including{' '}
+                      {loc.nearby.slice(0, 3).join(', ')}. You get the same
+                      high-performance Next.js websites, SEO, and branding we
+                      build for every client.
+                    </p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </section>
@@ -418,21 +447,5 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </section>
       </main>
     </>
-  )
-}
-
-function Star({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-    </svg>
   )
 }

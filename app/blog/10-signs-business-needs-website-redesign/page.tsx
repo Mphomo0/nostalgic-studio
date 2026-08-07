@@ -49,7 +49,7 @@ const signs = [
     number: '02',
     title: 'It Is Not Mobile-Friendly',
     description:
-      'Over 60% of web traffic in South Africa is mobile. If your site does not adapt to small screens, visitors leave immediately.',
+      'Most web traffic in South Africa is mobile. If your site does not adapt to small screens, visitors leave immediately.',
   },
   {
     number: '03',
@@ -195,7 +195,7 @@ export default function RedesignSignsArticle() {
         <KeyTakeaways
           takeaways={[
             { point: 'Websites taking more than 3 seconds to load lose rankings and customers', detail: 'Google penalises slow sites; South African mobile users abandon pages that take too long' },
-            { point: 'Over 60% of SA web traffic is mobile — poor mobile UX is fatal', detail: 'Google uses mobile-first indexing; a non-responsive site ranks below the fold in every category' },
+            { point: 'Most SA web traffic is mobile — poor mobile UX is fatal', detail: 'Google uses mobile-first indexing; a non-responsive site ranks below the fold in every category' },
             { point: 'A bounce rate above 70% signals a fundamental UX or performance problem', detail: 'Visitors land and leave without engaging — a redesign addresses the root cause, not the symptom' },
             { point: 'A professional redesign with SEO focus can recover Google rankings within 6 months', detail: 'Addressing technical debt, Core Web Vitals, and on-page SEO together has a compounding effect' },
           ]}

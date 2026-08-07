@@ -12,12 +12,12 @@ import AboutThisPage from '@/components/geo/AboutThisPage'
 export const metadata: Metadata = {
   title: 'About Us | Web Design Agency Johannesburg',
   description:
-    'Nostalgic Studio is a Johannesburg web design agency founded in 2016. We build fast, SEO-optimized Next.js websites for startups across South Africa.',
+    'Nostalgic Studio is a Johannesburg web design agency founded in 2013. We build fast, SEO-optimized Next.js websites for startups across South Africa.',
   keywords: [
     'about Nostalgic Studio',
     'digital design agency Johannesburg',
     'web design company South Africa',
-    'creative studio founded 2016',
+    'creative studio founded 2013',
     'Mpho Moipolai designer',
     'Johannesburg web design agency',
   ],
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Nostalgic Studio | Johannesburg Web Design Agency',
     description:
-      'Founded in 2016 by Mpho Moipolai, Nostalgic Studio builds fast Next.js websites and brand identities for startups across South Africa.',
+      'Founded in 2013 by Mpho Moipolai, Nostalgic Studio builds fast Next.js websites and brand identities for startups across South Africa.',
     url: 'https://www.nostalgic-studio.co.za/about',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     site: '@studionostalgic',
     creator: '@studionostalgic',
     title: 'About Nostalgic Studio | Johannesburg Web Design Agency',
-    description: 'Founded in 2016 by Mpho Moipolai, Nostalgic Studio builds fast Next.js websites and brand identities for startups across South Africa.',
+    description: 'Founded in 2013 by Mpho Moipolai, Nostalgic Studio builds fast Next.js websites and brand identities for startups across South Africa.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -54,7 +54,7 @@ const schemas = [
   webPageSchema({
     url: '/about',
     name: 'About Nostalgic Studio | Johannesburg Digital Agency',
-    description: 'Nostalgic Studio is a Johannesburg digital design agency founded in 2016 by Mpho Moipolai. We blend timeless design with modern Next.js innovation.',
+    description: 'Nostalgic Studio is a Johannesburg digital design agency founded in 2013 by Mpho Moipolai. We blend timeless design with modern Next.js innovation.',
   }),
   breadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -95,7 +95,7 @@ export default function page() {
         ))}
         <AboutHero />
         <AboutThisPage
-          summary="Nostalgic Studio is a Johannesburg digital design agency founded in 2016 by Mpho Moipolai. We build fast, modern websites and brand identities for startups and growing businesses across South Africa using Next.js and Tailwind CSS."
+          summary="Nostalgic Studio is a Johannesburg digital design agency founded in 2013 by Mpho Moipolai. We build fast, modern websites and brand identities for startups and growing businesses across South Africa using Next.js and Tailwind CSS."
           covers={[
             'Johannesburg Web Design',
             'Brand Identity',
@@ -113,7 +113,7 @@ export default function page() {
               <h2 id="foundation-heading" className="text-3xl font-bold mb-8">Built on Vision and Innovation</h2>
               <div className="prose prose-lg max-w-none text-muted-foreground mb-12">
                 <p>
-                  Since 2016, Nostalgic Studio has been at the intersection of artisanal design and technical precision. We believe that every business, regardless of size, deserves a digital presence that is as professional as it is powerful. In an era where <strong>web vitals and search engine visibility</strong> determine business success, we provide the technical edge needed to dominate the Johannesburg market.
+                  Since 2013, Nostalgic Studio has been at the intersection of artisanal design and technical precision. We believe that every business, regardless of size, deserves a digital presence that is as professional as it is powerful. In an era where <strong>web vitals and search engine visibility</strong> determine business success, we provide the technical edge needed to dominate the Johannesburg market.
                 </p>
                 <p>
                   Our foundation is built on the philosophy of &quot;Nostalgia meet Innovation&quot; — combining the timeless principles of graphic design with the cutting-edge capabilities of modern web frameworks like <strong>Next.js</strong>. This approach ensures that our websites are not just beautiful, but also incredibly fast, secure, and built to scale.

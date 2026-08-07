@@ -11,7 +11,6 @@ import {
   MapPin,
   Clock,
   Award,
-  Users,
 } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
@@ -87,7 +86,7 @@ const webDesignSchemas = [
     id: 'web-design-johannesburg',
     name: 'Web Design Johannesburg',
     description:
-      'Performance-first web design and development in Johannesburg, South Africa. Custom Next.js websites built for speed, SEO, and high conversion rates. 5-star Google rated.',
+      'Performance-first web design and development in Johannesburg, South Africa. Custom Next.js websites built for speed, SEO, and high conversion rates.',
     url: '/services/web-design-johannesburg',
     areaServed: 'Johannesburg, South Africa',
     priceRange: WEBSITE_PRICE_RANGE,
@@ -112,7 +111,7 @@ const webDesignFaqs = [
   {
     question: 'Which web design agency is best in Johannesburg?',
     answer:
-      'The best web design agency in Johannesburg depends on your needs. Nostalgic Studio is a 5-star Google rated agency specializing in high-performance Next.js websites for startups. We combine 13+ years of experience with modern technology to deliver sites that load fast and convert visitors. See our portfolio.',
+      'The best web design agency in Johannesburg depends on your needs. Nostalgic Studio specialises in high-performance Next.js websites for startups, combining modern technology with a focus on sites that load fast and convert visitors. See our portfolio.',
   },
   {
     question: 'How long does it take to build a website in Johannesburg?',
@@ -129,7 +128,7 @@ const webDesignFaqs = [
     question:
       'Do small businesses in Johannesburg really need a custom website?',
     answer:
-      'Yes. A custom website built for performance gives Johannesburg small businesses a competitive advantage. With 60%+ of South African web traffic coming from mobile devices, a fast, mobile-optimized site directly impacts how many visitors become paying customers. Template sites rarely deliver this.',
+      'Yes. A custom website built for performance gives Johannesburg small businesses a competitive advantage. With most South African web traffic coming from mobile devices, a fast, mobile-optimized site directly impacts how many visitors become paying customers. Template sites rarely deliver this.',
   },
   {
     question: 'Can you redesign my existing WordPress website?',
@@ -229,9 +228,9 @@ export default function WebDesignJohannesburg() {
               <p className="text-lg md:text-xl font-semibold text-foreground leading-relaxed">
                 Nostalgic Studio builds custom websites for Johannesburg
                 startups using Next.js — scoring 90–100 on Google Lighthouse
-                compared to 40–70 for typical WordPress sites. Rated 5 stars on
-                Google with 70+ projects delivered since 2016. Starter sites
-                from R1,500; most business projects cost R8,000–R15,000.
+                compared to 40–70 for typical WordPress sites. 70+ projects
+                delivered since 2013. Starter sites from R1,500; most business
+                projects cost R8,000–R15,000.
               </p>
             </div>
           </div>
@@ -254,14 +253,7 @@ export default function WebDesignJohannesburg() {
           {/* Trust Bar */}
           <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
-              <Star className="w-4 h-4 fill-yellow-500 text-yellow-500" /> 5.0
-              Google Rating
-            </span>
-            <span className="flex items-center gap-2">
               <Award className="w-4 h-4 text-primary" /> 70+ Projects Delivered
-            </span>
-            <span className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-primary" /> 50+ Happy Clients
             </span>
             <span className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-primary" /> 13+ Years Experience
@@ -272,7 +264,7 @@ export default function WebDesignJohannesburg() {
           </div>
 
           <AboutThisPage
-            summary="Nostalgic Studio provides professional web design services in Johannesburg, South Africa. We specialise in fast, SEO-optimised Next.js websites for startups and growing businesses. Rated 5 stars on Google. Projects typically cost R1,500–R25,000 and take 4–8 weeks."
+            summary="Nostalgic Studio provides professional web design services in Johannesburg, South Africa. We specialise in fast, SEO-optimised Next.js websites for startups and growing businesses. Projects typically cost R1,500–R25,000 and take 4–8 weeks."
             covers={[
               'Web Design Johannesburg',
               'Website Design Cost',
@@ -401,8 +393,9 @@ export default function WebDesignJohannesburg() {
           <KeyTakeaways
             takeaways={[
               {
-                point: 'Rated 5 stars on Google',
-                detail: 'with real client reviews from Johannesburg businesses',
+                point: 'Built for South African users',
+                detail:
+                  'local hosting, SA payment gateways, and pages tuned for mobile data',
               },
               {
                 point: 'Next.js specialists',
@@ -420,7 +413,7 @@ export default function WebDesignJohannesburg() {
               {
                 point: 'Founder-managed',
                 detail:
-                  'Mpho Moipolai oversees every project personally since 2016',
+                  'Mpho Moipolai oversees every project personally since 2013',
               },
             ]}
           />
@@ -439,8 +432,8 @@ export default function WebDesignJohannesburg() {
             </p>
             <p className="text-muted-foreground mb-6">
               Google research shows that 53% of mobile users leave a page that
-              takes longer than 3 seconds to load. In South Africa, where 60%+ of web
-              traffic is mobile and data costs are high, this problem is
+              takes longer than 3 seconds to load. In South Africa, where most
+              web traffic is mobile and data costs are high, this problem is
               amplified. A slow WordPress site on cheap hosting is actively
               damaging your business.
             </p>
@@ -684,7 +677,7 @@ export default function WebDesignJohannesburg() {
               <p className="text-muted-foreground">
                 Nostalgic Studio is based in Johannesburg, serves clients across
                 Gauteng, and has delivered 70+ projects for South African
-                businesses since 2016. Every site is built locally, hosted on
+                businesses since 2013. Every site is built locally, hosted on
                 local infrastructure, and optimised for the Johannesburg market.
               </p>
             </div>
@@ -777,10 +770,12 @@ export default function WebDesignJohannesburg() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-card p-6 rounded-2xl border border-border">
-                <h4 className="font-bold text-lg mb-2">5-Star Google Rated</h4>
+                <h4 className="font-bold text-lg mb-2">
+                  Fixed Quotes, No Hourly Billing
+                </h4>
                 <p className="text-muted-foreground">
-                  Every client rates us 5/5. Read our reviews from Johannesburg
-                  businesses on Google.
+                  You get one price agreed upfront before work starts, so the
+                  scope cannot quietly grow into a bigger invoice.
                 </p>
               </div>
               <div className="bg-card p-6 rounded-2xl border border-border">
@@ -797,7 +792,7 @@ export default function WebDesignJohannesburg() {
                   13+ Years, 70+ Projects
                 </h4>
                 <p className="text-muted-foreground">
-                  Founded in 2016 by Mpho Moipolai. We have delivered 70+
+                  Founded in 2013 by Mpho Moipolai. We have delivered 70+
                   projects across Johannesburg.
                 </p>
               </div>
@@ -914,7 +909,7 @@ export default function WebDesignJohannesburg() {
               Ready to Build a Website That Actually Performs?
             </h2>
             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Join 50+ Johannesburg businesses that trust Nostalgic Studio for
+              Join the Johannesburg businesses that trust Nostalgic Studio for
               web design that drives results. Free quote, no obligation.
             </p>
             <Button

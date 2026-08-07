@@ -46,19 +46,15 @@ export default function PortfolioHeader() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-center"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto text-center"
         >
           <div className="p-4">
             <p className="text-3xl font-bold text-foreground">70+</p>
             <p className="text-sm text-muted-foreground">Projects Delivered</p>
           </div>
           <div className="p-4">
-            <p className="text-3xl font-bold text-foreground">8+</p>
+            <p className="text-3xl font-bold text-foreground">13+</p>
             <p className="text-sm text-muted-foreground">Years Experience</p>
-          </div>
-          <div className="p-4">
-            <p className="text-3xl font-bold text-foreground">50+</p>
-            <p className="text-sm text-muted-foreground">Happy Clients</p>
           </div>
         </motion.div>
         </motion.div>

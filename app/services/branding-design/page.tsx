@@ -381,11 +381,10 @@ export default function BrandingDesign() {
 
         {/* Statistics/Trust */}
         <section className="mb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { number: '70+', label: 'Brands Created', icon: Star },
+              { number: '70+', label: 'Projects Delivered', icon: Star },
               { number: '13+', label: 'Years Experience', icon: Clock },
-              { number: '50+', label: 'Happy Clients', icon: Users },
               { number: '100%', label: 'Asset Ownership', icon: Shield },
             ].map((stat) => (
               <div
@@ -471,7 +470,7 @@ export default function BrandingDesign() {
                 </li>
                 <li>
                   Mobile-first brand assets for South Africa&apos;s high mobile
-                  usage (60%+ of web traffic)
+                  usage (most web traffic)
                 </li>
                 <li>
                   Affordable branding packages that respect startup budgets
@@ -724,7 +723,7 @@ export default function BrandingDesign() {
                 icon: Star,
                 title: 'Experienced Design Team',
                 description:
-                  '13+ years of branding experience across South African and international markets. 70+ brand identities delivered.',
+                  '13+ years of design experience across South African and international markets, spanning brand identity, web, and SEO.',
               },
               {
                 icon: Shield,
@@ -853,7 +852,7 @@ export default function BrandingDesign() {
             {
               point: 'Nostalgic Studio',
               detail:
-                'has designed brands for 70+ Johannesburg startups since 2016',
+                'has delivered 70+ projects for South African businesses since 2013, spanning brand identity, web, and SEO',
             },
             {
               point: 'Full ownership',
@@ -869,7 +868,7 @@ export default function BrandingDesign() {
         />
 
         <AboutThisPage
-          summary="Nostalgic Studio is a branding agency in Johannesburg, South Africa, specialising in logo design, brand identity, visual systems, and brand strategy for startups and SMEs. We have delivered 70+ brand projects since 2016."
+          summary="Nostalgic Studio is a branding agency in Johannesburg, South Africa, specialising in logo design, brand identity, visual systems, and brand strategy for startups and SMEs. We have delivered 70+ projects since 2013, spanning brand identity, web, and SEO."
           covers={[
             'Logo Design',
             'Visual Identity',

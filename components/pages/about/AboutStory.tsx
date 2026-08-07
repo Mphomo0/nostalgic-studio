@@ -16,7 +16,7 @@ export default function AboutStory() {
             className="space-y-6 text-xl text-muted-foreground"
           >
             <p>
-              Founded in 2016 and based in Johannesburg, South Africa, Nostalgic
+              Founded in 2013 and based in Johannesburg, South Africa, Nostalgic
               Studio started with a simple belief: exceptional digital design
               should be accessible to startups and growing businesses.
             </p>
@@ -29,10 +29,10 @@ export default function AboutStory() {
             </p>
 
             <p>
-              Since our founding, we have partnered with over 50+ businesses,
-              helping them craft memorable brands, user-friendly websites, and
-              engaging digital experiences. Today, we continue to serve clients
-              locally and worldwide.
+              Since our founding, we have partnered with businesses across a
+              range of industries, helping them craft memorable brands,
+              user-friendly websites, and engaging digital experiences. Today,
+              we continue to serve clients locally and worldwide.
             </p>
           </MotionWrapper>
         </div>
