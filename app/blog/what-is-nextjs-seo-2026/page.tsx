@@ -211,7 +211,7 @@ export default function NextjsSeoArticle() {
 
           <h2>Next.js vs WordPress for SEO</h2>
           <p>
-            WordPress powers 43% of the web, but it is not designed for modern
+            WordPress powers roughly 40% of the web (W3Techs), but it is not designed for modern
             SEO performance. A typical WordPress site with plugins scores 40–70
             on Lighthouse. A equivalent Next.js site typically scores 90–100.
           </p>

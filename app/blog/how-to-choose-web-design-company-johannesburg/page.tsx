@@ -162,11 +162,6 @@ export default function ChooseAgencyArticle() {
             making things look &quot;pretty.&quot;
           </p>
 
-          <CitationBlock
-            stat="40%"
-            context="The average reduction in bounce rate when moving from a generic template to a custom-designed UX optimized for conversion."
-            source="Nostalgic Studio Case Studies (2025)"
-          />
 
           <h2>Conclusion</h2>
           <p>

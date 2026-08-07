@@ -736,9 +736,9 @@ export default function WebDesignJohannesburg() {
               </h2>
               <p className="text-xl font-semibold text-foreground mb-6 leading-relaxed">
                 AI search engines like ChatGPT, Gemini, and Perplexity now
-                answer over 40% of local search queries directly. Websites not
-                optimised for AI citation are losing visibility, not just
-                rankings.
+                answer a growing share of local search queries directly.
+                Websites not optimised for AI citation are losing visibility,
+                not just rankings.
               </p>
               <p className="text-muted-foreground mb-6">
                 Generative Engine Optimization (GEO) is the practice of

@@ -118,9 +118,10 @@ export default function UXUIDesign() {
                 accessible, and visually compelling for users.
               </p>
               <p>
-                Studies show that every R1 invested in UX returns R100 — a 9,900% ROI. For South African startups, 
-                professional UX/UI design reduces user abandonment by up to 40% and increases conversion rates 
-                by 200–400% compared to poorly designed interfaces.
+                Good UX pays for itself. For South African startups, professional UX/UI design reduces
+                user abandonment and lifts conversion rates by removing the friction that makes people
+                give up — unclear navigation, slow forms, and interfaces that fight the user instead of
+                guiding them.
               </p>
             </div>
 

@@ -60,7 +60,7 @@ export default function SmallBizGuidePage() {
           <p>Google research shows that 53% of mobile users leave a page that takes longer than 3 seconds to load. Most small business websites load in 5-8 seconds because they are built on slow platforms with heavy plugins. A fast website (under 2 seconds) ranks higher and converts better.</p>
 
           <h2>5. Choose the Right Platform</h2>
-          <p>WordPress powers 43% of the web, but comes with performance and security overhead. Next.js (what Nostalgic Studio uses) delivers 90+ Lighthouse scores out of the box. For small businesses on a tight budget, a well-optimized WordPress site can also work — as long as it is built lean.</p>
+          <p>WordPress powers roughly 40% of the web (W3Techs), but comes with performance and security overhead. Next.js (what Nostalgic Studio uses) delivers 90+ Lighthouse scores out of the box. For small businesses on a tight budget, a well-optimized WordPress site can also work — as long as it is built lean.</p>
 
           <h2>6. Content That Ranks</h2>
           <p>Google ranks websites that answer questions. Blog posts, service pages, FAQs, and guides all build topical authority. A small business with 20+ pages of quality content will outrank a bigger competitor with 5 thin pages.</p>
