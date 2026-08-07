@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { suburbSlugs } from '@/lib/locations-data'
 
 export const revalidate = 86400
 
@@ -69,9 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  // Derived from locations-data so the sitemap cannot drift out of sync with
+  // the pages that actually exist. 'south-africa' is a static route covering
+  // everywhere we serve remotely, so it is appended rather than data-driven.
   const locationPages: MetadataRoute.Sitemap = [
-    'sandton', 'fourways', 'rosebank', 'midrand', 'pretoria',
-    'randburg', 'roodepoort', 'centurion', 'cape-town', 'durban', 'bloemfontein',
+    ...suburbSlugs,
+    'south-africa',
   ].map((slug) => ({
     url: `${BASE_URL}/locations/${slug}`,
     lastModified: NOW,

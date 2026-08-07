@@ -83,9 +83,7 @@ Nostalgic Studio is a digital design and web development agency founded in 2013 
 - Randburg: https://www.nostalgic-studio.co.za/locations/randburg — Web design and SEO in Randburg, Gauteng
 - Roodepoort: https://www.nostalgic-studio.co.za/locations/roodepoort — Web design and SEO in Roodepoort, Gauteng
 - Centurion: https://www.nostalgic-studio.co.za/locations/centurion — Web design and SEO in Centurion, Gauteng
-- Cape Town: https://www.nostalgic-studio.co.za/locations/cape-town — Web design and SEO in Cape Town, Western Cape
-- Durban: https://www.nostalgic-studio.co.za/locations/durban — Web design and SEO in Durban, KwaZulu-Natal
-- Bloemfontein: https://www.nostalgic-studio.co.za/locations/bloemfontein — Web design and SEO in Bloemfontein, Free State
+- Rest of South Africa: https://www.nostalgic-studio.co.za/locations/south-africa — Remote web design and SEO nationwide, including Cape Town, Durban and Bloemfontein
 
 ## Industry Pages
 
