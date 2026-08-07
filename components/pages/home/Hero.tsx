@@ -66,10 +66,9 @@ export default function Hero() {
           </div>
 
           {/* Credibility Signals */}
-          <div className="animate-fade-up animate-delay-400 mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
+          <div className="animate-fade-up animate-delay-400 mt-16 md:mt-20 grid grid-cols-3 gap-6 md:gap-8 lg:gap-12">
             {[
               { value: '70+', label: 'Projects Completed' },
-              { value: '50+', label: 'Clients Worldwide' },
               { value: '13+', label: 'Years of Experience' },
               { value: '3+', label: 'Team Members' },
             ].map((stat) => (

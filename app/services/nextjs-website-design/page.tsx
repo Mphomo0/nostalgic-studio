@@ -119,7 +119,7 @@ export default function NextjsWebsiteDesign() {
               <p>
                 Next.js websites typically achieve 90–100 Lighthouse performance scores, compared to 40–70 for WordPress. 
                 For South African businesses, this means faster load times on mobile networks — a critical advantage 
-                given that 60%+ of web traffic in South Africa comes from mobile devices.
+                given that most web traffic in South Africa comes from mobile devices.
               </p>
             </div>
 

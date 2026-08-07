@@ -161,7 +161,7 @@ export default function NextjsSeoArticle() {
 
           <CitationBlock
             stat="70+ projects"
-            context="built on Next.js by Nostalgic Studio since 2016, all achieving 90+ Lighthouse performance scores."
+            context="built on Next.js by Nostalgic Studio since 2013, all achieving 90+ Lighthouse performance scores."
             source="Nostalgic Studio client records (2026)"
           />
 

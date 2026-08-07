@@ -11,7 +11,6 @@ import {
   Target,
   Zap,
   Clock,
-  Users,
   Shield,
   Layers,
   FileText,
@@ -515,16 +514,10 @@ export default function SEOServicesJohannesburg() {
 
         {/* Trust Signals / Stats */}
         <section className="mb-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { number: '70+', label: 'Projects Delivered', icon: Star },
               { number: '13+', label: 'Years Experience', icon: Clock },
-              { number: '50+', label: 'Happy Clients', icon: Users },
-              {
-                number: '100%',
-                label: 'Client Satisfaction',
-                icon: TrendingUp,
-              },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -1021,7 +1014,7 @@ export default function SEOServicesJohannesburg() {
               <div className="p-4">
                 <h3 className="font-bold mb-2">Experience & Expertise</h3>
                 <p className="text-sm text-muted-foreground">
-                  Since 2016, we&apos;ve delivered 70+ web projects. Our team
+                  Since 2013, we&apos;ve delivered 70+ web projects. Our team
                   combines technical SEO expertise with deep knowledge of the
                   Johannesburg market.
                 </p>

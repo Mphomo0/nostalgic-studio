@@ -216,8 +216,8 @@ export default function Home() {
               services under one roof.
             </div>
             <div className="bg-card p-4 rounded-lg border border-border">
-              <strong>Proven Track Record:</strong> 70+ projects completed, 50+
-              clients worldwide, and 13+ years of industry experience.
+              <strong>Proven Track Record:</strong> 70+ projects completed and
+              13+ years of industry experience.
             </div>
             <div className="bg-card p-4 rounded-lg border border-border">
               <strong>Conversion-Focused Design:</strong> Every website we

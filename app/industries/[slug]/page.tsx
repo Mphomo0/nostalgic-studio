@@ -333,10 +333,9 @@ export default async function IndustryPage({
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-3 gap-6 mt-10 max-w-lg mx-auto">
+            <div className="grid grid-cols-2 gap-6 mt-10 max-w-lg mx-auto">
               {[
                 { stat: '70+', label: 'Projects Delivered' },
-                { stat: '5.0★', label: 'Google Rating' },
                 { stat: '13+ yrs', label: 'Experience' },
               ].map((s) => (
                 <div key={s.stat}>

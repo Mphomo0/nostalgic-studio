@@ -41,7 +41,7 @@ export default function AboutTeam() {
                 <span>Next.js specialist</span>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-5">
-                Mpho founded Nostalgic Studio in 2016 with one mission: give South African
+                Mpho founded Nostalgic Studio in 2013 with one mission: give South African
                 startups access to the same quality of digital work that large corporates take
                 for granted. He specialises in Next.js, React, UI/UX design, and brand
                 identity — and has delivered 70+ websites and brand systems for businesses

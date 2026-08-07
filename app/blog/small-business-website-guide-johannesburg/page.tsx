@@ -69,7 +69,7 @@ export default function SmallBizGuidePage() {
           <ul>
             <li>Clear headline explaining what you do (within 3 seconds)</li>
             <li>Prominent call-to-action above the fold</li>
-            <li>Mobile-responsive design (60%+ of traffic is mobile)</li>
+            <li>Mobile-responsive design (most traffic is mobile)</li>
             <li>Fast loading (under 2 seconds)</li>
             <li>Contact form + phone number + WhatsApp link</li>
             <li>Google Business Profile (verified and complete)</li>

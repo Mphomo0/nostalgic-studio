@@ -367,7 +367,7 @@ export default function ServicesPage() {
               <div className="bg-card p-5 rounded-xl border border-border">
                 <strong className="text-lg">13+ Years Industry Experience:</strong>
                 <p className="text-muted-foreground mt-1">
-                  Since 2016, we have been delivering high-quality web design and digital solutions to South African businesses.
+                  Since 2013, we have been delivering high-quality web design and digital solutions to South African businesses.
                 </p>
               </div>
               <div className="bg-card p-5 rounded-xl border border-border">

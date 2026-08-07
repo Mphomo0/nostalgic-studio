@@ -9,7 +9,6 @@ import {
   MapPin,
   FileText,
   Smartphone,
-  Star,
 } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
 import Link from 'next/link'
@@ -151,10 +150,6 @@ export default function SEOForConstruction() {
               request quotes.
             </p>
             <div className="flex flex-wrap justify-center gap-3 text-sm text-muted-foreground mb-8">
-              <span className="flex items-center gap-1">
-                <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" /> 5.0
-                Google Rating
-              </span>
               <span className="flex items-center gap-1">
                 <CheckCircle2 className="w-4 h-4 text-primary" /> 70+ Projects
               </span>

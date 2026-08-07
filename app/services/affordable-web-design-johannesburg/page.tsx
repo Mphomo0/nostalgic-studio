@@ -9,7 +9,6 @@ import {
   BarChart3,
   Smartphone,
   Search,
-  Star,
   Shield,
 } from 'lucide-react'
 import AuthorBio from '@/components/geo/AuthorBio'
@@ -29,7 +28,7 @@ import { WEBSITE_PRICE_RANGE } from '@/lib/pricing-data'
 export const metadata: Metadata = {
   title: 'Affordable Web Design Johannesburg',
   description:
-    'Affordable web design in Johannesburg from R1,500. Custom Next.js websites with SEO, mobile-first design, and free hosting. 5.0-star rated.',
+    'Affordable web design in Johannesburg from R1,500. Custom Next.js websites with SEO, mobile-first design, and free hosting. Fixed quotes.',
   keywords: [
     'Affordable Web Design Johannesburg',
     'Cheap Website Design South Africa',
@@ -52,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Affordable Web Design Johannesburg | Nostalgic Studio',
     description:
-      'Professional websites from R1,500. Custom Next.js, SEO, mobile-first design. 5.0 Google rating. Free quote.',
+      'Professional websites from R1,500. Custom Next.js, SEO, mobile-first design. Free quote.',
     url: 'https://www.nostalgic-studio.co.za/services/affordable-web-design-johannesburg',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -72,7 +71,7 @@ export const metadata: Metadata = {
     creator: '@studionostalgic',
     title: 'Affordable Web Design Johannesburg',
     description:
-      'Professional websites from R1,500. Custom Next.js, SEO, mobile-first design. 5.0 Google rating.',
+      'Professional websites from R1,500. Custom Next.js, SEO, mobile-first design. Fixed quotes.',
     images: [
       'https://www.nostalgic-studio.co.za/images/og-image.jpg',
     ],
@@ -161,10 +160,6 @@ export default function AffordableWebDesign() {
               design, contact forms, basic SEO, and fast loading.
             </p>
             <div className="flex flex-wrap justify-center gap-3 text-sm text-muted-foreground mb-8">
-              <span className="flex items-center gap-1">
-                <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" /> 5.0
-                Google Rating
-              </span>
               <span className="flex items-center gap-1">
                 <CheckCircle2 className="w-4 h-4 text-primary" /> 70+ Projects
               </span>
