@@ -110,10 +110,11 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
                 Web Design {loc.name}
               </h1>
+              {/* loc.description rather than a generic line — the same
+                  sentence on eight pages is boilerplate, and each location
+                  already has copy written about its own market. */}
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Professional web design and digital services in {loc.name}. We
-                build custom Next.js websites that load fast, rank on Google,
-                and convert visitors into customers.
+                {loc.description}
               </p>
               {loc.remoteNote && (
                 <p className="text-sm text-muted-foreground border-l-2 border-primary/40 pl-4 mb-8">
@@ -236,60 +237,29 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </section>
         ) : null}
 
-        {/* Services Grid */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-4 text-center">
-              Our Services in {loc.name}
+        {/* Service links. Deliberately links only — the descriptions here
+            were identical on every location page and duplicated the service
+            pages they point at. The internal links are the part with value. */}
+        <section className="py-12">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl font-bold mb-6">
+              What we do for {loc.name} businesses
             </h2>
-            <p className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto">
-              Everything your business needs to dominate the {loc.name} market —
-              from stunning websites to full digital marketing strategies.
-            </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="flex flex-wrap justify-center gap-3">
               {[
-                {
-                  title: 'Web Design',
-                  href: '/services/web-design-johannesburg',
-                  desc: `Custom Next.js websites for ${loc.name} businesses. 90+ Lighthouse scores, mobile-first, SEO-optimized.`,
-                },
-                {
-                  title: 'SEO & AI Search',
-                  href: '/services/seo-services-johannesburg',
-                  desc: `Rank on Google and get cited by AI engines. ${loc.name} local SEO, entity optimization, and GEO strategy.`,
-                },
-                {
-                  title: 'E-commerce',
-                  href: '/services/ecommerce-website-development',
-                  desc: `Online stores with SA payment gateways. Unlimited products, mobile checkout, SEO product pages.`,
-                },
-                {
-                  title: 'Branding',
-                  href: '/services/branding-design',
-                  desc: `Complete brand identity design for ${loc.name} businesses. Logos, guidelines, and marketing collateral.`,
-                },
-                {
-                  title: 'UI/UX Design',
-                  href: '/services/ux-ui-design',
-                  desc: `User-centered interfaces that convert. Research, wireframing, prototyping, and usability testing.`,
-                },
-                {
-                  title: 'Social Media',
-                  href: '/services/social-media-marketing',
-                  desc: `Instagram, Facebook, and LinkedIn management and ad campaigns for ${loc.name} brands.`,
-                },
-              ].map((service) => (
+                ['Web Design', '/services/web-design-johannesburg'],
+                ['SEO & AI Search', '/services/seo-services-johannesburg'],
+                ['E-commerce', '/services/ecommerce-website-development'],
+                ['Branding', '/services/branding-design'],
+                ['UI/UX Design', '/services/ux-ui-design'],
+                ['Social Media', '/services/social-media-marketing'],
+              ].map(([title, href]) => (
                 <Link
-                  key={service.title}
-                  href={service.href}
-                  className="group block p-6 border rounded-xl hover:border-primary/50 transition-colors bg-card"
+                  key={title}
+                  href={href}
+                  className="rounded-full border px-5 py-2.5 text-sm font-medium bg-card hover:border-primary/50 hover:text-primary transition-colors"
                 >
-                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {service.desc}
-                  </p>
+                  {title}
                 </Link>
               ))}
             </div>
@@ -333,23 +303,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               ) : (
                 <>
                   <h2 className="text-3xl font-bold mb-6">
-                    Why Choose a Local Web Design Agency for {loc.name}?
+                    Working with us in {loc.name}
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground">
                     <p>
-                      A local agency understands the {loc.name} market, consumer
-                      behaviour in {loc.province}, and what it takes to rank in
-                      local search results. We build with South African hosting,
-                      optimize for local mobile networks (where most South
-                      African traffic comes from), and know which payment
-                      gateways {loc.name} businesses actually need.
-                    </p>
-                    <p>
-                      Nostalgic Studio is based in Gauteng and works with
-                      businesses in {loc.name} and surrounding areas including{' '}
-                      {loc.nearby.slice(0, 3).join(', ')}. You get the same
-                      high-performance Next.js websites, SEO, and branding we
-                      build for every client.
+                      We are based in Gauteng, so {loc.name} is a drive away
+                      rather than a video call. Every build targets{' '}
+                      {loc.name} and the suburbs around it —{' '}
+                      {loc.nearby.slice(0, 3).join(', ')} — on South African
+                      hosting, with the payment gateways your customers already
+                      use.
                     </p>
                   </div>
                 </>
@@ -358,27 +321,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           </div>
         </section>
 
-        {/* Pricing Summary */}
-        <section className="py-16">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">
-              Web Design Pricing in {loc.name}
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Transparent, fixed pricing from{' '}
-              <span className="font-semibold text-primary">R1,500</span> — no
-              hidden fees. Every package includes hosting setup, SSL, and
-              post-launch support, whether your {loc.name} project is a
-              starter site, a full business build, or an e-commerce store.
-            </p>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/#pricing">
-                See Full Pricing Breakdown
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </section>
+        {/* Pricing has its own section on the homepage, the starting price is
+            in Quick Facts above, and every location FAQ answers the cost
+            question — a fourth restatement here was pure boilerplate. */}
 
         {/* FAQ */}
         {loc.faq.length > 0 ? (
@@ -438,6 +383,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   Get a Free Quote
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg">
+                <Link href="/#pricing">See Pricing</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="tel:+27824483273">Call 082 448 3273</Link>
