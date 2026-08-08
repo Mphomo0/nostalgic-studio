@@ -92,7 +92,7 @@ export const process: ProcessStep[] = [
     step: '03',
     title: 'Design',
     description:
-      'Our team crafts stunning visuals and intuitive experiences that align with your brand.',
+      'I craft stunning visuals and intuitive experiences that align with your brand.',
   },
   {
     step: '04',

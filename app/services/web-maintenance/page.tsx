@@ -71,7 +71,7 @@ const maintenanceFaqs = [
   },
   {
     question: 'What happens if my site goes down?',
-    answer: 'With our 24/7 monitoring, we are often aware of issues before you are. Our team will work immediately to restore your site as quickly as possible. Critical downtime issues are escalated to senior developers within 30 minutes.',
+    answer: 'With 24/7 monitoring, I am often aware of issues before you are, and I start restoring your site immediately. There is no ticket queue and no escalation chain — downtime comes straight to me, which is usually faster than an agency handoff.',
   },
   {
     question: 'Can I cancel my plan at any time?',
@@ -133,7 +133,7 @@ export default function WebMaintenance() {
               A website is a living digital asset, not a static brochure. In the fast-moving tech environment of Johannesburg, staying relevant means staying updated. At Nostalgic Studio, we view maintenance as <strong>proactive value preservation</strong>. We don&apos;t just wait for things to break; we actively monitor your Next.js application for dependency vulnerabilities, performance regressions, and SEO health. Our goal is to ensure that the high-performance site we built for you continues to deliver ROI years after launch.
             </p>
             <p className="text-muted-foreground">
-              Our maintenance plans are more than just a safety net—they are a <strong>competitive advantage</strong>. By ensuring your Core Web Vitals remain in the &quot;green&quot; and your security patches are always current, we keep your business ahead of competitors who neglect their digital presence. We understand the South African business landscape, where reliability and trust are paramount. With our team handling the technical heavy lifting, you can focus on scaling your operations, confident that your digital foundation is solid, secure, and performing at its peak.
+              Our maintenance plans are more than just a safety net—they are a <strong>competitive advantage</strong>. By ensuring your Core Web Vitals remain in the &quot;green&quot; and your security patches are always current, we keep your business ahead of competitors who neglect their digital presence. We understand the South African business landscape, where reliability and trust are paramount. With me handling the technical heavy lifting, you can focus on scaling your operations, confident that your digital foundation is solid, secure, and performing at its peak.
             </p>
           </div>
         </section>

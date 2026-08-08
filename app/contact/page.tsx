@@ -183,9 +183,9 @@ export default function ContactPage() {
                 Our Service Areas
               </h2>
               <p className="text-muted-foreground mb-6">
-                Based in Johannesburg, we serve clients across South Africa. Our
-                team works remotely with clients throughout Gauteng and beyond
-                via video calls, email, and project management tools.
+                Based in Johannesburg, I serve clients across South Africa —
+                in person across Gauteng, and remotely everywhere else via
+                video calls, email, and shared project tools.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {[
@@ -399,8 +399,8 @@ export default function ContactPage() {
         <section className="mt-20 text-center">
           <h2 className="text-3xl font-bold mb-4">Prefer to Call?</h2>
           <p className="text-muted-foreground mb-6">
-            Speak directly with our team. We&apos;re available Monday–Friday,
-            08:00–17:00.
+            Speak to me directly — no account managers, no call queue. I am
+            available Monday–Friday, 08:00–17:00.
           </p>
           <Button asChild size="lg" variant="heroOutline" className="h-14 px-8">
             <a href="tel:+27824483273">Call 082 448 3273</a>

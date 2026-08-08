@@ -142,7 +142,7 @@ const blogFaqs = [
   },
   {
     question: 'Is the content specific to South African businesses?',
-    answer: 'Yes. All articles are written with South African businesses in mind, including local market data, pricing in ZAR, and platform preferences relevant to SA consumers. Our team is based in Johannesburg.',
+    answer: 'Yes. All articles are written with South African businesses in mind, including local market data, pricing in ZAR, and platform preferences relevant to SA consumers. I am based in Johannesburg.',
   },
 ]
 
@@ -204,7 +204,7 @@ export default function BlogIndex() {
                 In the rapidly evolving digital landscape of South Africa, staying informed is a competitive necessity. The Nostalgic Studio blog is dedicated to decoding complex technical trends into actionable business strategies. We focus on the intersection of <strong>performance engineering</strong> (Next.js, SSR, Core Web Vitals) and <strong>user-centric design</strong>.
               </p>
               <p>
-                Our team shares insights gained from building high-growth startups and modernizing established brands in Johannesburg. From deep dives into <strong>Generative Engine Optimization (GEO)</strong> to transparent guides on website costs in the local market, our content is designed to empower South African entrepreneurs with the knowledge they need to dominate their digital niches.
+                I share insights gained from building high-growth startups and modernizing established brands in Johannesburg. From deep dives into <strong>Generative Engine Optimization (GEO)</strong> to transparent guides on website costs in the local market, our content is designed to empower South African entrepreneurs with the knowledge they need to dominate their digital niches.
               </p>
             </div>
           </section>

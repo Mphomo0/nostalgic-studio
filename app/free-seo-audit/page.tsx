@@ -257,7 +257,7 @@ export default function FreeSeoAuditPage() {
                 {
                   step: '02',
                   title: 'We Analyse Your Site',
-                  desc: 'Our team runs a comprehensive audit across technical SEO, on-page, content, local, and AI search readiness.',
+                  desc: 'I run a comprehensive audit across technical SEO, on-page, content, local, and AI search readiness.',
                 },
                 {
                   step: '03',

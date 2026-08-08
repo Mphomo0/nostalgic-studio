@@ -71,7 +71,7 @@ const hostingFaqs = [
   },
   {
     question: 'Will you migrate my site for me?',
-    answer: 'Yes, we offer free migration services for all new hosting clients. Our team handles the entire process, ensuring a smooth transition from your old provider with zero downtime.',
+    answer: 'Yes, migration is free for all new hosting clients. I handle the entire process myself, ensuring a smooth transition from your old provider with zero downtime.',
   },
   {
     question: 'What kind of support do you offer?',

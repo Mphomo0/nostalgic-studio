@@ -131,7 +131,7 @@ const faqs = [
   {
     question: 'Do you offer once-off SEO audits?',
     answer:
-      'Yes. If you are not ready for a monthly retainer, we offer a once-off SEO audit that identifies your biggest ranking opportunities, technical issues, and content gaps. The audit includes a prioritised action plan you can implement yourself or hand to our team.',
+      'Yes. If you are not ready for a monthly retainer, we offer a once-off SEO audit that identifies your biggest ranking opportunities, technical issues, and content gaps. The audit includes a prioritised action plan you can implement yourself or hand back to me.',
   },
   {
     question: 'Do you focus on local Johannesburg search?',
@@ -1014,8 +1014,8 @@ export default function SEOServicesJohannesburg() {
               <div className="p-4">
                 <h3 className="font-bold mb-2">Experience & Expertise</h3>
                 <p className="text-sm text-muted-foreground">
-                  Since 2013, we&apos;ve delivered 70+ web projects. Our team
-                  combines technical SEO expertise with deep knowledge of the
+                  Since 2013, I&apos;ve delivered 70+ web projects, combining
+                  technical SEO expertise with deep knowledge of the
                   Johannesburg market.
                 </p>
               </div>
