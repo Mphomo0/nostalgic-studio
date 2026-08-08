@@ -147,11 +147,17 @@ const SCHEMA_ORGANIZATION = {
     { '@type': 'Country', name: 'South Africa' },
   ],
   email: 'info@nostalgic-studio.co.za',
+  // sameAs is an ownership claim — only add profiles that are verified ours,
+  // since declaring one we do not control weakens entity resolution rather
+  // than helping it. Directory citations only consolidate into a single entity
+  // if we actually declare them here.
   sameAs: [
     'https://www.facebook.com/nostalgicstudiowebdesign/',
     'https://www.linkedin.com/company/110356396',
     'https://www.instagram.com/studionostalgic',
     'https://clutch.co/profile/nostalgic-studio',
+    'https://www.sortlist.com/agency/nostalgic-studio-web-design',
+    'https://techbehemoths.com/company/nostalgic-studio-web-design',
   ],
   contactPoint: {
     '@type': 'ContactPoint',
