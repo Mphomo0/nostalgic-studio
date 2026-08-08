@@ -11,7 +11,7 @@ Nostalgic Studio is a Johannesburg-based digital design agency founded in 2013 b
 - **Founded**: 2013
 - **Location**: Midrand, Johannesburg, Gauteng, South Africa
 - **Founder & Creative Director**: Mpho Moipolai
-- **Team Size**: 3+
+- **Team Size**: 1 — founder-led studio, every project handled directly by Mpho Moipolai
 - **Projects Completed**: 70+
 - **Primary Tech Stack**: Next.js 16, React 19, TypeScript, Tailwind CSS v4, Framer Motion, shadcn/ui
 - **Hosting**: Vercel (Edge Network, Global CDN)

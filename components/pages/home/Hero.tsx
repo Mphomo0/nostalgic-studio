@@ -70,7 +70,10 @@ export default function Hero() {
             {[
               { value: '70+', label: 'Projects Completed' },
               { value: '13+', label: 'Years of Experience' },
-              { value: '3+', label: 'Team Members' },
+              // Replaces a "3+ Team Members" claim — the studio is founder-led
+              // and a solo operation. Lighthouse score is verifiable and is the
+              // actual technical differentiator.
+              { value: '90+', label: 'Lighthouse Score' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">

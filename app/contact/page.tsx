@@ -280,13 +280,16 @@ export default function ContactPage() {
                   <Shield className="w-5 h-5 text-primary mt-0.5" />
                   <div>
                     <h3 className="font-semibold">Google Business Profile</h3>
+                    {/* Points at the actual listing. This was previously a
+                        google.com/search?q= URL, which is just a search and
+                        does not open the profile or allow a review. */}
                     <a
-                      href="https://www.google.com/search?q=Nostalgic+Studio+Johannesburg"
+                      href="https://share.google/2fvy2ZBIG93YGAW7S"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
-                      Find us on Google
+                      View our profile &amp; leave a review
                     </a>
                   </div>
                 </div>
