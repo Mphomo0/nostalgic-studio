@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     'Next.js Development Johannesburg',
     'SEO Website Design',
     'Affordable Web Design Johannesburg',
+    'Cheap Website Design South Africa',
+    'Budget Website Design Johannesburg',
     'Responsive Web Design South Africa',
     'Website Design Cost South Africa',
     'Web Design Agency Sandton',
@@ -139,6 +141,11 @@ const webDesignFaqs = [
     question: 'Do you offer affordable website design in Johannesburg?',
     answer:
       'Yes. Our starter websites are designed for small businesses that need a professional online presence without overspending. The goal is to give you the essentials first: clear pages, mobile-friendly design, contact form, basic SEO, and analytics.',
+  },
+  {
+    question: 'Do you offer payment plans?',
+    answer:
+      'Yes. We require a 50% deposit to start and the balance on completion. For larger projects above R15,000, we can structure a payment plan that works for your budget.',
   },
 ]
 
@@ -354,6 +361,87 @@ export default function WebDesignJohannesburg() {
                   </Button>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* Affordable Does Not Mean Cheap */}
+          <section className="mb-16" aria-labelledby="affordable-heading">
+            <div className="bg-card border border-border rounded-3xl p-8 md:p-12">
+              <h2 id="affordable-heading" className="text-2xl font-bold mb-4">
+                Affordable Does Not Mean Cheap
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <p className="text-muted-foreground mb-4">
+                    When you see a website for R500 or R900, it is almost
+                    certainly built with a drag-and-drop builder or a
+                    WordPress template that hundreds of other businesses
+                    already use. Those sites load slowly, rank poorly on
+                    Google, and break on mobile devices.
+                  </p>
+                  <p className="text-muted-foreground mb-4">
+                    We build on Next.js — a modern framework used by Nike,
+                    TikTok, and Netflix — because it delivers sub-second load
+                    times, 90+ Lighthouse scores, and SEO that works from day
+                    one. Our R1,500 starter package outperforms most R10,000
+                    WordPress sites on speed, security, and Google rankings.
+                  </p>
+                  <p className="text-muted-foreground">
+                    You are not paying for a template. You are paying for
+                    custom development, proper SEO foundations, mobile-first
+                    design, and a website that actually brings in enquiries.
+                  </p>
+                </div>
+                <div className="bg-muted/30 rounded-xl p-6">
+                  <h3 className="font-bold mb-4">
+                    What You Get vs DIY Builders
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      {
+                        label: 'Custom-coded, not templated',
+                        diy: 'Templated (hundreds of users)',
+                      },
+                      {
+                        label: 'Sub-second load times',
+                        diy: '2–5 second load times',
+                      },
+                      {
+                        label: 'SEO foundation from day one',
+                        diy: 'Requires paid plugins',
+                      },
+                      {
+                        label: 'Mobile-first design',
+                        diy: 'Responsive afterthought',
+                      },
+                      {
+                        label: 'Structured data for AI search',
+                        diy: 'Not included',
+                      },
+                      {
+                        label: 'Free hosting for first year',
+                        diy: 'Monthly hosting fees',
+                      },
+                      {
+                        label: 'Google Analytics and Search Console',
+                        diy: 'Requires plugins',
+                      },
+                    ].map((row) => (
+                      <div
+                        key={row.label}
+                        className="grid grid-cols-2 gap-4 text-sm"
+                      >
+                        <span className="font-medium text-foreground">
+                          {row.label}
+                        </span>
+                        <span className="text-muted-foreground">
+                          {row.diy}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

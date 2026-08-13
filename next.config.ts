@@ -33,6 +33,14 @@ const nextConfig: NextConfig = {
         destination: '/services/web-hosting',
         permanent: true,
       },
+      // Merged 2026-08: near-duplicate of /services/web-design-johannesburg
+      // (identical pricing tiers, same Next.js-vs-WordPress pitch). Google was
+      // not indexing this one; content folded into the surviving page.
+      {
+        source: '/services/affordable-web-design-johannesburg',
+        destination: '/services/web-design-johannesburg',
+        permanent: true,
+      },
       // Consolidated 2026-08: the Cape Town, Durban and Bloemfontein pages
       // disclosed that we serve those cities remotely and then argued for
       // hiring a local agency. Replaced by one honest nationwide page rather

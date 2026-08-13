@@ -18,7 +18,6 @@ import {
   Server,
   Layout,
   Settings,
-  DollarSign,
   Building2,
   RefreshCw,
 } from 'lucide-react'
@@ -68,11 +67,6 @@ const serviceLinks = [
   },
   { title: 'Web Hosting', href: '/services/web-hosting', icon: Server },
   { title: 'UX/UI Design', href: '/services/ux-ui-design', icon: Layout },
-  {
-    title: 'Affordable Web Design',
-    href: '/services/affordable-web-design-johannesburg',
-    icon: DollarSign,
-  },
   {
     title: 'SEO for Construction',
     href: '/services/seo-for-construction-companies',

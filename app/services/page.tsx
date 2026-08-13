@@ -19,7 +19,6 @@ import {
   Server, 
   Layout,
   Settings,
-  DollarSign,
   Building2,
 } from 'lucide-react'
 
@@ -103,11 +102,6 @@ const specializedSolutions = [
     title: 'Web Maintenance',
     href: '/services/web-maintenance',
     icon: Settings,
-  },
-  {
-    title: 'Affordable Web Design',
-    href: '/services/affordable-web-design-johannesburg',
-    icon: DollarSign,
   },
   {
     title: 'SEO for Construction Companies',

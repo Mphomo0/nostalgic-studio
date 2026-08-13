@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'web-design-johannesburg', 'nextjs-website-design', 'ecommerce-website-development',
     'branding-design', 'ux-ui-design', 'seo-services-johannesburg',
     'social-media-marketing', 'social-media-ads', 'web-hosting', 'web-maintenance',
-    'seo-pricing', 'affordable-web-design-johannesburg', 'seo-for-construction-companies',
+    'seo-pricing', 'seo-for-construction-companies',
     'website-refresh-seo-upgrade',
   ].map((slug) => ({
     url: `${BASE_URL}/services/${slug}`,
