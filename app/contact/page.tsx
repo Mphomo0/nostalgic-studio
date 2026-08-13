@@ -284,7 +284,7 @@ export default function ContactPage() {
                         google.com/search?q= URL, which is just a search and
                         does not open the profile or allow a review. */}
                     <a
-                      href="https://share.google/2fvy2ZBIG93YGAW7S"
+                      href="https://share.google/94HGUo2omoKOi9kLJ"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-muted-foreground hover:text-primary transition-colors"

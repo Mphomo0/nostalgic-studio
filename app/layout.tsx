@@ -152,6 +152,7 @@ const SCHEMA_ORGANIZATION = {
   // than helping it. Directory citations only consolidate into a single entity
   // if we actually declare them here.
   sameAs: [
+    'https://share.google/94HGUo2omoKOi9kLJ',
     'https://www.facebook.com/nostalgicstudiowebdesign/',
     'https://www.linkedin.com/company/110356396',
     'https://www.instagram.com/studionostalgic',
