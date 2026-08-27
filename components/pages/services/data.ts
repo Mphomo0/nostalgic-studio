@@ -1,4 +1,5 @@
 import { Service, ProcessStep } from './types'
+import { formatRand, getPackage } from '@/lib/pricing-data'
 
 export const services: Service[] = [
   {
@@ -15,7 +16,7 @@ export const services: Service[] = [
       'API integration',
       'Analytics setup',
     ],
-    pricing: 'From R8,000',
+    pricing: `From ${formatRand(getPackage('starter-website').min)}`,
     timeline: '2-4 weeks',
     image: '/images/web-design.webp',
   },
@@ -33,7 +34,7 @@ export const services: Service[] = [
       'Mobile app design',
       'Design handoff',
     ],
-    pricing: 'From R15,000',
+    pricing: `From ${formatRand(getPackage('ux-ui').min)}`,
     timeline: '4-6 weeks',
     image: '/images/ui-ux-design.webp',
   },
@@ -51,7 +52,7 @@ export const services: Service[] = [
       'Marketing collateral',
       'Brand positioning',
     ],
-    pricing: 'From R5,000',
+    pricing: `From ${formatRand(getPackage('branding').min)}`,
     timeline: '1-3 weeks',
     image: '/images/branding.webp',
   },

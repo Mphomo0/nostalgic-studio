@@ -68,9 +68,7 @@ export default function ContactForm() {
       if (response.success) {
         trackLead('Contact Form')
         setIsSubmitted(true)
-        toast.success(
-          "Got it! We'll send your fixed quote within 24 hours.",
-        )
+        toast.success("Got it! We'll send your fixed quote within 24 hours.")
       } else {
         toast.error(response.error || 'Unable to send message.')
       }
@@ -158,7 +156,7 @@ export default function ContactForm() {
                 <SelectValue placeholder="Select a budget range" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="3k-5k">R3k - R5k</SelectItem>
+                <SelectItem value="1.5k-5k">R1.5k - R5k</SelectItem>
                 <SelectItem value="5k-10k">R5k - R10k</SelectItem>
                 <SelectItem value="10k-20k">R10k - R20k</SelectItem>
                 <SelectItem value="20k+">R20k+</SelectItem>
