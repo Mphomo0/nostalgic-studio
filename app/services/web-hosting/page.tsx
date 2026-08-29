@@ -16,8 +16,8 @@ import { priceRange } from '@/lib/pricing-data'
 export const metadata: Metadata = {
   title: 'Web Hosting South Africa',
   description:
-    'Managed Next.js web hosting in South Africa. 99.9% uptime, free SSL, global CDN, and daily backups included. Secure, fast websites from R200/month.',
-  keywords: ['Web Hosting South Africa', 'Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting SA'],
+    'Managed web hosting, website hosting and domain hosting in South Africa. 99.9% uptime, free SSL, global CDN, and daily backups included. From R200/month.',
+  keywords: ['Web Hosting South Africa', 'Website Hosting South Africa', 'Domain Hosting South Africa', 'Web Hosting Johannesburg', 'Next.js Hosting South Africa', 'Managed Web Hosting Johannesburg', 'Fast Hosting South Africa', 'Secure Website Hosting SA'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/web-hosting',
     languages: {
@@ -48,7 +48,7 @@ const hostingSchemas = [
   serviceSchema({
     id: 'web-hosting',
     name: 'Web Hosting South Africa',
-    description: 'Managed web hosting in South Africa optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
+    description: 'Managed web hosting, website hosting and domain hosting in South Africa, optimised for Next.js applications. 99.9% uptime, SSL, global CDN, and daily backups.',
     url: '/services/web-hosting',
     areaServed: 'South Africa',
     priceRange: priceRange('web-hosting'),
@@ -81,6 +81,10 @@ const hostingFaqs = [
     question: 'How much does web hosting cost?',
     answer: 'Our managed hosting packages start from R200 per month for basic sites and scale up to R3,000+ per month for high-traffic ecommerce stores. All plans include SSL, CDN, daily backups, and security monitoring.',
   },
+  {
+    question: 'Do you offer domain hosting as well as website hosting?',
+    answer: 'Yes. We manage both your domain and website hosting together, so your DNS, SSL, and site all live under one point of contact instead of being split across a separate domain registrar and hosting provider. If you already own a domain elsewhere, we point it to your new hosting as part of the free migration.',
+  },
 ]
 
 export default function WebHosting() {
@@ -95,11 +99,12 @@ export default function WebHosting() {
         <MotionWrapper>
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Blazing-Fast <span className="text-gradient">Web Hosting Johannesburg</span>
+              Blazing-Fast <span className="text-gradient">Web Hosting South Africa</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              <strong>Nostalgic Studio provides managed web hosting for South African businesses — including SSL certificates, daily backups, uptime monitoring, and local servers from R200/month.</strong>{' '}
-              Don&apos;t let a slow host hold your business back. Our hosting solutions are optimized for
+              <strong>Nostalgic Studio provides managed web hosting and domain hosting for South African businesses — including SSL certificates, daily backups, uptime monitoring, and local servers from R200/month.</strong>{' '}
+              Don&apos;t let a slow host hold your business back. Whether you need website hosting for a new
+              build or are migrating your domain hosting from another provider, our solutions are optimized for
               Next.js and high-performance applications, ensuring your site stays fast, secure, and always online.
             </p>
             <Button asChild size="lg" className="h-14 px-8">
@@ -116,9 +121,10 @@ export default function WebHosting() {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground mb-8">
               <p>
-                Managed web hosting is a service where the hosting provider handles all technical aspects 
-                of running a website — including server maintenance, security updates, backups, and performance 
-                optimisation — so the business owner can focus on their core operations.
+                Managed web hosting (also called website hosting or domain hosting) is a service where the
+                provider handles all technical aspects of running a website — including server maintenance,
+                security updates, backups, and performance optimisation — so the business owner can focus on
+                their core operations.
               </p>
               <p>
                 Website downtime costs South African businesses an average of R5,000–R50,000 per hour depending on 
@@ -203,9 +209,9 @@ export default function WebHosting() {
         />
 
         <AboutThisPage
-          summary="This page covers Nostalgic Studio's web hosting services in Johannesburg, South Africa. We provide fast, secure, and scalable hosting optimized for Next.js applications."
-          covers={['Web Hosting Johannesburg', 'Next.js Hosting', 'Managed Hosting', 'SSL Certificates', 'Site Migration']}
-          lastUpdated="March 2026"
+          summary="This page covers Nostalgic Studio's web hosting and domain hosting services across South Africa. We provide fast, secure, and scalable hosting optimized for Next.js applications."
+          covers={['Web Hosting South Africa', 'Website Hosting', 'Domain Hosting', 'Next.js Hosting', 'Managed Hosting', 'SSL Certificates', 'Site Migration']}
+          lastUpdated="August 2026"
         />
 
         {/* Internal Links */}
