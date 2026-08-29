@@ -45,15 +45,16 @@ export async function generateMetadata({
   }
 
   const metaDesc = truncateMeta(project.description)
+  const metaTitle = project.metaTitle ?? project.title
 
   return {
-    title: project.title,
+    title: metaTitle,
     description: metaDesc,
     alternates: {
       canonical: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
     },
     openGraph: {
-      title: project.title,
+      title: metaTitle,
       description: metaDesc,
       url: `https://www.nostalgic-studio.co.za/projects/${project.slug}`,
       siteName: 'Nostalgic Studio',

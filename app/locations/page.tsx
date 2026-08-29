@@ -7,7 +7,7 @@ import { breadcrumbSchema } from '@/app/structured-data/schemas'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Web Design Locations Johannesburg & South Africa',
+  title: 'Our Web Design Locations in Johannesburg',
   description:
     'Web design and SEO across Johannesburg, Sandton, Pretoria and Centurion, plus remote work nationwide. Local expertise, fixed pricing, Next.js websites.',
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Web Design Locations Johannesburg & South Africa | Nostalgic Studio',
+    title: 'Our Web Design Locations in Johannesburg | Nostalgic Studio',
     description:
       'Web design and SEO across Johannesburg, Sandton, Pretoria and Centurion, plus remote work nationwide. Local expertise, fixed pricing, Next.js websites.',
     url: 'https://www.nostalgic-studio.co.za/locations',

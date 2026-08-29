@@ -1,6 +1,8 @@
 export interface Project {
   id: number
   title: string
+  /** Shorter <title> tag override (≤40 chars, so it fits the 60-char gate with the " | Nostalgic Studio" suffix). Falls back to `title` when unset. */
+  metaTitle?: string
   category: string
   client: string
   industry?: string
@@ -22,6 +24,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: 'Sozim Trading & Consultancy — Web Design Case Study',
+    metaTitle: 'Sozim Consultancy Web Design Case Study',
     category: 'SEO & Digital Marketing',
     client: 'Sozim Trading & Consultancy',
     industry: 'Education & Training',
