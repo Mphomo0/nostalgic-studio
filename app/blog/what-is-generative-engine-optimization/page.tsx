@@ -11,7 +11,7 @@ const PUB_DATE = '2026-06-16'
 const MODIFIED_DATE = '2026-07-21'
 
 export const metadata: Metadata = {
-  title: 'GEO: AI Search Optimization Guide SA',
+  title: 'What Is Generative Engine Optimization?',
   description: 'Learn how GEO helps your site appear in Google AI Overviews, Perplexity & ChatGPT Search. Practical AI search optimization guide for South African businesses.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/what-is-generative-engine-optimization',

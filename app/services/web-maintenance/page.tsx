@@ -81,6 +81,10 @@ const maintenanceFaqs = [
     question: 'How much does website maintenance cost in South Africa?',
     answer: 'Website maintenance in South Africa typically costs R500–R3,000 per month depending on the complexity of your site and the level of support required. Nostalgic Studio offers three tiers: Starter (R500/month), Professional (R1,500/month), and Enterprise (R3,000/month).',
   },
+  {
+    question: 'Does a Johannesburg web design agency offer ongoing website maintenance, not just one-off builds?',
+    answer: 'Yes. Nostalgic Studio is a Johannesburg-based web design agency that offers ongoing maintenance plans alongside new website builds, from R500/month. Plans cover security scans, software updates, performance monitoring, monthly backups, and content updates, so the same team that builds your site keeps it running afterward.',
+  },
 ]
 
 export default function WebMaintenance() {

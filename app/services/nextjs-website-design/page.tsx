@@ -14,9 +14,9 @@ import { priceRange } from '@/lib/pricing-data'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Next.js Development South Africa',
+  title: 'Next.js Website Design South Africa',
   description:
-    'Next.js development in South Africa. SSR, SSG, 90-100 Lighthouse scores. Fast, modern WordPress alternative from R8,000.',
+    'Next.js website design in South Africa. SSR, SSG, 90-100 Lighthouse scores. Fast, modern WordPress alternative from R8,000.',
   keywords: ['Next.js Website Design', 'Next.js Development Johannesburg', 'React Web Development South Africa', 'High Performance Websites South Africa', 'Next.js Agency Johannesburg', 'Modern Web Design South Africa'],
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Next.js Development South Africa',
+    title: 'Next.js Website Design South Africa',
     description: 'Next.js websites for SA businesses. 90-100 Lighthouse scores, sub-1.5s load times. Modern WordPress alt.',
     url: 'https://www.nostalgic-studio.co.za/services/nextjs-website-design',
     siteName: 'Nostalgic Studio',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Next.js Development South Africa',
+    title: 'Next.js Website Design South Africa',
     description: 'Next.js websites for SA businesses. 90-100 Lighthouse scores, sub-1.5s load times. Modern WordPress alternative from R8,000.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },

@@ -7,7 +7,7 @@ import { breadcrumbSchema } from '@/app/structured-data/schemas'
 export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
-  title: 'Web Design by Industry Johannesburg',
+  title: 'Industries We Serve in Johannesburg',
   description:
     'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
   alternates: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Web Design by Industry Johannesburg | Nostalgic Studio',
+    title: 'Industries We Serve in Johannesburg | Nostalgic Studio',
     description:
       'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
     url: 'https://www.nostalgic-studio.co.za/industries',

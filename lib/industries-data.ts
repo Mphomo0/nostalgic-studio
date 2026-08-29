@@ -311,7 +311,7 @@ export const industries: IndustryInfo[] = [
     cta: 'Launch fast with a scalable website built for startup growth.',
     challengeHeader: 'Startup Website Challenges (and How We Solve Them)',
     heroTagline: 'Startup Websites Built for Speed and Growth',
-    metaTitle: 'Startup Websites for Speed and Growth',
+    metaTitle: 'Web Design for Startups in Johannesburg',
     whyUsPoints: [
       'Launch in days, not months — Next.js gets you to market fast',
       '90+ Lighthouse scores impress investors and users alike',

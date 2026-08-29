@@ -147,6 +147,26 @@ const webDesignFaqs = [
     answer:
       'Yes. We require a 50% deposit to start and the balance on completion. For larger projects above R15,000, we can structure a payment plan that works for your budget.',
   },
+  {
+    question: 'Do you specialise in responsive web design for Johannesburg businesses?',
+    answer:
+      'Yes. Every website we build is mobile-first and fully responsive by default, not an afterthought bolted onto a desktop layout. Since most South African web traffic is mobile, we design and test for phones and tablets first, then scale up — which is also why our Next.js sites score 90+ on Google Lighthouse for mobile performance.',
+  },
+  {
+    question: 'Is Nostalgic Studio a good web design studio for startups in Johannesburg?',
+    answer:
+      'Yes. Nostalgic Studio is built around startups and small businesses that need to launch fast on a limited budget. With 70+ projects delivered and starter sites from R1,500, we focus on getting a credible, SEO-ready site live quickly without the overhead a larger agency adds.',
+  },
+  {
+    question: 'How fast is your website project turnaround in Johannesburg?',
+    answer:
+      'Most websites take 4–8 weeks from strategy to launch, with simple brochure sites ready in 2–3 weeks. As a founder-led studio, there is no internal handoff between sales, design, and development teams, which keeps projects moving without the delays larger agencies add.',
+  },
+  {
+    question: 'Should I choose a custom website or a template-based website in Johannesburg?',
+    answer:
+      'For most Johannesburg businesses, a custom-coded website outperforms a template. Templates are shared with hundreds of other sites, load slower, and treat mobile responsiveness as an afterthought. A custom Next.js build costs more upfront but loads in under 2 seconds, is built around your specific services and audience, and gives a real SEO advantage over template-based competitors.',
+  },
 ]
 
 const pricingPackages = [

@@ -31,7 +31,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
-  title: 'Brand Identity Agency Johannesburg',
+  title: 'Branding & Design Agency Johannesburg',
 
   description:
     'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: 'Brand Identity Agency Johannesburg',
+    title: 'Branding & Design Agency Johannesburg',
     description:
       'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
     url: 'https://www.nostalgic-studio.co.za/services/branding-design',
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
-    title: 'Brand Identity Agency Johannesburg',
+    title: 'Branding & Design Agency Johannesburg',
     description:
       'Build a professional brand identity with Nostalgic Studio. Logo design, brand guidelines, colour systems, and visual identity for SA businesses.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
