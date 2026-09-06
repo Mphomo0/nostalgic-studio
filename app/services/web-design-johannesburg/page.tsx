@@ -116,6 +116,12 @@ const webDesignFaqs = [
       'The best web design agency in Johannesburg depends on your needs. Nostalgic Studio specialises in high-performance Next.js websites for startups, combining modern technology with a focus on sites that load fast and convert visitors. See our portfolio.',
   },
   {
+    question:
+      "What's the difference between a website designer and a website developer in Johannesburg?",
+    answer:
+      'A website designer focuses on layout, branding, and user experience — how the site looks and feels. A website developer builds the actual code that makes it work, including performance, forms, and integrations. Most Johannesburg web design companies split these into separate roles or outsource one of them. Nostalgic Studio handles both in-house: the same team designs the interface and writes the Next.js code, so nothing is lost in handoff between a designer and a developer.',
+  },
+  {
     question: 'How long does it take to build a website in Johannesburg?',
     answer:
       'Most professional websites take 4–8 weeks from strategy to launch. Simple brochure sites can be ready in 2–3 weeks, while complex e-commerce platforms may take 8–12 weeks. The timeline depends on content readiness, design complexity, and how quickly feedback is provided.',
@@ -477,7 +483,9 @@ export default function WebDesignJohannesburg() {
                 it easy for visitors to take action.
               </p>
               <p className="text-muted-foreground mb-6">
-                For service businesses, we focus on:
+                Whether you're looking for website designers in Johannesburg to
+                rework how the site looks, or website developers in Johannesburg
+                to fix how it performs, for service businesses we focus on:
               </p>
               <ul className="grid gap-3 text-muted-foreground list-disc list-inside marker:text-primary">
                 <li>Clear service pages for each main offer</li>
