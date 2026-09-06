@@ -122,6 +122,11 @@ const webDesignFaqs = [
       'A website designer focuses on layout, branding, and user experience — how the site looks and feels. A website developer builds the actual code that makes it work, including performance, forms, and integrations. Most Johannesburg web design companies split these into separate roles or outsource one of them. Nostalgic Studio handles both in-house: the same team designs the interface and writes the Next.js code, so nothing is lost in handoff between a designer and a developer.',
   },
   {
+    question: 'How do I choose a web design company in Johannesburg?',
+    answer:
+      'Ask three things: can they show live sites they built (not just mockups), do they test on mobile before launch, and what happens after launch if something breaks. Many web design companies in Johannesburg outsource development to freelancers you never speak to, which makes support slow once the invoice is paid. Whether you call it a web design agency, a website design company, or web developers in Johannesburg, the studio should be able to point to real, working sites for South African businesses — not just a portfolio of screenshots.',
+  },
+  {
     question: 'How long does it take to build a website in Johannesburg?',
     answer:
       'Most professional websites take 4–8 weeks from strategy to launch. Simple brochure sites can be ready in 2–3 weeks, while complex e-commerce platforms may take 8–12 weeks. The timeline depends on content readiness, design complexity, and how quickly feedback is provided.',
@@ -147,6 +152,11 @@ const webDesignFaqs = [
     question: 'Do you offer affordable website design in Johannesburg?',
     answer:
       'Yes. Our starter websites are designed for small businesses that need a professional online presence without overspending. The goal is to give you the essentials first: clear pages, mobile-friendly design, contact form, basic SEO, and analytics.',
+  },
+  {
+    question: 'Is cheap website design in Johannesburg worth it?',
+    answer:
+      "It depends on what you mean by cheap. A R500–R900 drag-and-drop site is rarely worth it — it will load slowly, look generic, and give you nothing to update once you outgrow it. Our R1,500 starter package is priced for the same budget, but it's custom-coded, mobile-tested, and includes basic SEO from day one. If the price is the main constraint, ask what's excluded, not just what the price is — hosting, SEO setup, and mobile testing are the first things cheap website design in Johannesburg leaves out.",
   },
   {
     question: 'Do you offer payment plans?',
