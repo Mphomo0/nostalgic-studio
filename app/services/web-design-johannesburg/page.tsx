@@ -493,7 +493,7 @@ export default function WebDesignJohannesburg() {
                 it easy for visitors to take action.
               </p>
               <p className="text-muted-foreground mb-6">
-                Whether you're looking for website designers in Johannesburg to
+                Whether you&apos;re looking for website designers in Johannesburg to
                 rework how the site looks, or website developers in Johannesburg
                 to fix how it performs, for service businesses we focus on:
               </p>
