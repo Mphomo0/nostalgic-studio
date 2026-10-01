@@ -60,6 +60,14 @@ export async function generateMetadata({
         alt: `Web Design ${loc.name} — Nostalgic Studio`,
       }],
     },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@studionostalgic',
+      creator: '@studionostalgic',
+      title: `${title} | Nostalgic Studio`,
+      description: desc,
+      images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+    },
   }
 }
 

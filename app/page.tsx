@@ -67,6 +67,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Web Design & SEO Johannesburg | Nostalgic Studio',
+    description:
+      'Johannesburg web design, SEO and branding studio. Fast websites, higher Google rankings and brands people remember. See our work and get a quote.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 const faqs = [

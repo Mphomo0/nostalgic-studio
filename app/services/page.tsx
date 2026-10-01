@@ -50,6 +50,15 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Services Johannesburg — Nostalgic Studio' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Web Design Services Johannesburg',
+    description:
+      'Expert web design, UI/UX, branding, and digital services. Next.js development and SEO for South African businesses.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 const specializedSolutions = [

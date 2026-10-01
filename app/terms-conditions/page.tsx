@@ -23,6 +23,14 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Terms and Conditions — Nostalgic Studio' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Terms and Conditions',
+    description: 'Terms and conditions for Nostalgic Studio digital design services.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function TermsConditionsPage() {

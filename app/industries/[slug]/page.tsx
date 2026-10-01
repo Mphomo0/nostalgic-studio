@@ -66,6 +66,14 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@studionostalgic',
+      creator: '@studionostalgic',
+      title,
+      description: desc,
+      images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+    },
   }
 }
 

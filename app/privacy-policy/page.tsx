@@ -23,6 +23,14 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Privacy Policy — Nostalgic Studio' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Privacy Policy',
+    description: 'Privacy policy for Nostalgic Studio. Learn how we collect, use, and protect your personal information.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function PrivacyPolicy() {

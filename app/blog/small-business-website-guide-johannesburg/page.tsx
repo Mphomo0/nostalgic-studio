@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     },
   },
   openGraph: { title: 'Small Business Website Guide Johannesburg | Nostalgic Studio', description: 'Everything Jozi business owners need to know about getting a website that generates leads.', url: 'https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg', siteName: 'Nostalgic Studio', type: 'article', images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Small Business Website Guide Johannesburg — Nostalgic Studio' }] },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Small Business Website Guide Johannesburg | Nostalgic Studio',
+    description: 'Everything Jozi business owners need to know about getting a website that generates leads.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 const faqs = [

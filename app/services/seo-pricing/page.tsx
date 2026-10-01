@@ -48,6 +48,16 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title:
+      'SEO Pricing Johannesburg | SEO Packages & Costs South Africa | Nostalgic Studio',
+    description:
+      'Transparent SEO pricing. Starter R1,500/mo, Growth R5,000/mo, Enterprise R10k+/mo. Includes GEO & AI search optimization.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 const faqs = [

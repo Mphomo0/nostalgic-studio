@@ -68,6 +68,14 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@studionostalgic',
+      creator: '@studionostalgic',
+      title: metaTitle,
+      description: metaDesc,
+      images: [project.image],
+    },
   }
 }
 

@@ -33,6 +33,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Our Web Design Locations in Johannesburg | Nostalgic Studio',
+    description:
+      'Web design and SEO across Johannesburg, Sandton, Pretoria and Centurion, plus remote work nationwide. Local expertise, fixed pricing, Next.js websites.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function LocationsPage() {

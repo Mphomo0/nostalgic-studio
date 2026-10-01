@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     type: 'website',
     images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Portfolio Johannesburg — Nostalgic Studio' }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Our Projects & Portfolio | Nostalgic Studio',
+    description: 'Explore our portfolio of stunning websites, brands, and digital products from Johannesburg.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function ProjectsPage() {

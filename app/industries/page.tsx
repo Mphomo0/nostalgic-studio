@@ -33,6 +33,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Industries We Serve in Johannesburg | Nostalgic Studio',
+    description:
+      'Industry-specific web design for healthcare, construction, e-commerce, professional services & startups in Johannesburg and South Africa.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 export default function IndustriesPage() {

@@ -46,6 +46,15 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@studionostalgic',
+    creator: '@studionostalgic',
+    title: 'Free SEO Audit Johannesburg | Nostalgic Studio',
+    description:
+      'Get a free SEO audit for your Johannesburg business. Detailed analysis, actionable fixes, no obligation.',
+    images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
+  },
 }
 
 const faqs = [
