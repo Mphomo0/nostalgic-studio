@@ -163,19 +163,19 @@ export default function TimelineArticle() {
           <p>
             We don&apos;t start with code; we start with questions. This phase involves understanding your target 
             audience, defining your unique selling proposition (USP), and planning the sitemap. This is the 
-            foundation that ensures your site actually converts.
+            foundation that ensures your site actually converts. It is the first step of every <Link href="/services/web-design-johannesburg" className="text-primary hover:underline">web design project</Link> we run.
           </p>
 
           <h2>Phase 2: UI/UX Design (2 Weeks)</h2>
           <p>
-            This is where we create the visual identity of your site. We design high-fidelity prototypes in 
+            This is where we create the visual identity of your site, guided by our <Link href="/services/ux-ui-design" className="text-primary hover:underline">UX/UI design</Link> process. We design high-fidelity prototypes in 
             Figma, allowing you to see exactly how your site will look and feel before a single line of 
             code is written.
           </p>
 
           <h2>Phase 3: Development & SEO (2-4 Weeks)</h2>
           <p>
-            This is the &quot;engine room&quot; phase. We build your site using Next.js, ensuring it is blazing fast 
+            This is the &quot;engine room&quot; phase. We build your site using <Link href="/services/nextjs-website-design" className="text-primary hover:underline">Next.js</Link>, ensuring it is blazing fast 
             and technically perfect for search engines. We also implement all the GEO-ready features like 
             schema markup and FAQ sections.
           </p>
@@ -196,7 +196,7 @@ export default function TimelineArticle() {
           <h2>Phase 5: Launch & Support</h2>
           <p>
             Once you&apos;re happy, we go live! We also provide a training session on how to manage your 
-            content and offer ongoing maintenance to keep your site secure and up to date.
+            content and offer <Link href="/services/web-maintenance" className="text-primary hover:underline">ongoing maintenance</Link> to keep your site secure and up to date.
           </p>
           
           <p>

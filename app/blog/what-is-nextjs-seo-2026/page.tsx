@@ -156,7 +156,14 @@ export default function NextjsSeoArticle() {
           <p>
             At Nostalgic Studio, we build every client website on Next.js
             because it consistently delivers the best Lighthouse scores and
-            search engine visibility of any framework we have tested.
+            search engine visibility of any framework we have tested. You can see what a build involves on our{' '}
+            <Link
+              href="/services/nextjs-website-design"
+              className="text-primary font-medium hover:underline"
+            >
+              Next.js website design
+            </Link>{' '}
+            page.
           </p>
 
           <CitationBlock
@@ -213,7 +220,14 @@ export default function NextjsSeoArticle() {
           <p>
             WordPress powers roughly 40% of the web (W3Techs), but it is not designed for modern
             SEO performance. A typical WordPress site with plugins scores 40–70
-            on Lighthouse. A equivalent Next.js site typically scores 90–100.
+            on Lighthouse. A equivalent Next.js site typically scores 90–100. If you already have a WordPress site, a{' '}
+            <Link
+              href="/services/website-refresh-seo-upgrade"
+              className="text-primary font-medium hover:underline"
+            >
+              website refresh and SEO upgrade
+            </Link>{' '}
+            can improve its speed, design and SEO without starting from scratch.
           </p>
 
           <CitationBlock
@@ -235,7 +249,7 @@ export default function NextjsSeoArticle() {
             >
               Get in touch with Nostalgic Studio
             </Link>{' '}
-            to discuss a Next.js website for your business. You can also explore our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> to see how we pair Next.js performance with a full search optimisation strategy.
+            to discuss a Next.js website for your business, or see our <Link href="/services/web-design-johannesburg" className="text-primary font-medium hover:underline">web design services in Johannesburg</Link>. You can also explore our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> to see how we pair Next.js performance with a full search optimisation strategy.
           </p>
         </div>
 

@@ -241,7 +241,7 @@ export default function RedesignSignsArticle() {
           </h2>
           <p className="text-muted-foreground mb-5">
             Nostalgic Studio specialises in rebuilding underperforming websites
-            into high-converting, SEO-optimised platforms built on Next.js. If your rankings are suffering, our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services</Link> can diagnose and fix what&apos;s holding your site back.
+            into high-converting, SEO-optimised platforms built on Next.js. If your rankings are suffering, our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services</Link> can diagnose and fix what&apos;s holding your site back. If a full rebuild is more than you need, a <Link href="/services/website-refresh-seo-upgrade" className="text-primary font-medium hover:underline">website refresh and SEO upgrade</Link> targets the design, speed and lead-generation problems on your existing site.
           </p>
           <Link
             href="/contact"
@@ -279,7 +279,7 @@ export default function RedesignSignsArticle() {
             <div className="p-6 bg-card border border-border rounded-xl">
               <h3 className="font-bold mb-2">Phase 3: Design (Week 3-4)</h3>
               <p className="text-sm text-muted-foreground">
-                UI design, custom prototyping, and brand integration.
+                <Link href="/services/ux-ui-design" className="text-primary hover:underline">UI design</Link>, custom prototyping, and brand integration.
               </p>
             </div>
             <div className="p-6 bg-card border border-border rounded-xl">

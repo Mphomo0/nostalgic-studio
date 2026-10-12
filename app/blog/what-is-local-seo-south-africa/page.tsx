@@ -155,7 +155,7 @@ export default function LocalSEOArticle() {
           <p>
             This involves including your city and suburb names naturally in your content, titles, and 
             meta descriptions. Using structured data (JSON-LD) to tell search engines exactly where 
-            you are located and what areas you serve is non-negotiable in 2026.
+            you are located and what areas you serve is non-negotiable in 2026. We apply this on our location pages for <Link href="/locations/fourways" className="text-primary hover:underline">Fourways</Link>, <Link href="/locations/randburg" className="text-primary hover:underline">Randburg</Link>, <Link href="/locations/roodepoort" className="text-primary hover:underline">Roodepoort</Link> and <Link href="/locations/centurion" className="text-primary hover:underline">Centurion</Link>.
           </p>
 
           <h3>3. Local Citations and Backlinks</h3>
@@ -175,7 +175,7 @@ export default function LocalSEOArticle() {
           <p>
             Local SEO is the most cost-effective way for small businesses in South Africa to compete 
             with larger national brands. By winning the local search battle, you capture high-intent 
-            leads right when they are ready to buy.
+            leads right when they are ready to buy. Industry-specific guidance is available too, for example our <Link href="/services/seo-for-construction-companies" className="text-primary hover:underline">SEO for construction companies</Link> service, and our <Link href="/services/seo-pricing" className="text-primary hover:underline">SEO pricing</Link> page lists what each package costs.
           </p>
           
           <p>

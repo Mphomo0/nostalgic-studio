@@ -187,7 +187,22 @@ export default function WebsiteCostSAArticle() {
             Website costs in South Africa vary significantly based on
             complexity, the agency you choose, and whether you need custom
             functionality. Here is an honest breakdown from our experience
-            building 70+ websites for South African businesses.
+            building 70+ websites for South African businesses. If you are
+            comparing quotes, our{' '}
+            <Link
+              href="/services/web-design-johannesburg"
+              className="text-primary font-medium hover:underline"
+            >
+              web design service in Johannesburg
+            </Link>{' '}
+            page shows what a typical project includes, and{' '}
+            <Link
+              href="/services/ecommerce-website-development"
+              className="text-primary font-medium hover:underline"
+            >
+              e-commerce website development
+            </Link>{' '}
+            covers online stores.
           </p>
 
           <CitationBlock
@@ -256,7 +271,21 @@ export default function WebsiteCostSAArticle() {
             Some agencies quote a low upfront price but charge separately for
             hosting, domain renewal, SSL certificates, and maintenance. At
             Nostalgic Studio, we provide transparent pricing with all standard
-            inclusions stated upfront.
+            inclusions stated upfront. Our{' '}
+            <Link
+              href="/services/web-hosting"
+              className="text-primary font-medium hover:underline"
+            >
+              web hosting
+            </Link>{' '}
+            and{' '}
+            <Link
+              href="/services/web-maintenance"
+              className="text-primary font-medium hover:underline"
+            >
+              website maintenance
+            </Link>{' '}
+            pages explain what is included and what each costs per month.
           </p>
 
           <CitationBlock

@@ -49,7 +49,7 @@ export default function SeoForStartupsPage() {
 
           <h2>1. Build on a Fast Tech Stack</h2>
           <p>Google&apos;s Core Web Vitals are ranking factors. Most startups build on WordPress, which adds 2-3 seconds of load time from plugins alone. Next.js (or equivalent static frameworks) consistently delivers 90+ Lighthouse scores — a significant ranking advantage.</p>
-          <p>Faster sites rank higher, convert better, and cost less to host. For a startup, the tech choice is the single highest-ROI SEO decision.</p>
+          <p>Faster sites rank higher, convert better, and cost less to host. For a startup, the tech choice is the single highest-ROI SEO decision. Our <Link href="/services/nextjs-website-design" className="text-primary font-medium hover:underline">Next.js website design</Link> service is built around exactly this.</p>
 
           <h2>2. Target Low-Competition Keywords First</h2>
           <p>You cannot rank for &quot;web design&quot; (high competition) in month one. You can rank for &quot;web designer for fintech startups Johannesburg&quot; (low competition, high intent). Build a keyword list targeting:</p>
@@ -89,7 +89,7 @@ export default function SeoForStartupsPage() {
           </ol>
 
           <p>Follow this plan consistently for 6 months, and you will outrank competitors who have been optimizing for years — simply because they are optimizing for the wrong things.</p>
-          <p>If you need a specialist to execute this for you, our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> cover everything from technical audits to ongoing content strategy.</p>
+          <p>If you need a specialist to execute this for you, our <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">SEO services in Johannesburg</Link> cover everything from technical audits to ongoing content strategy. Package costs are on our <Link href="/services/seo-pricing" className="text-primary font-medium hover:underline">SEO pricing</Link> page.</p>
         </div>
 
         <div className="mt-12 text-center">

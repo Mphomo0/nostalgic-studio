@@ -103,7 +103,7 @@ export default function GeoGuidePage() {
           <p>AI Overviews alone now reach an estimated 1.5 billion users per month across 200+ countries and appear on more than half of all Google queries. Businesses that combine strong structured data, fresh content, and real brand mentions elsewhere online are the ones showing up in these answers — while competitors relying only on backlinks and keyword-stuffed pages remain invisible in AI search.</p>
 
           <h2>Ready to Get Started?</h2>
-          <p>GEO is not a replacement for SEO — it&apos;s an essential complement. We help South African businesses implement comprehensive GEO strategies including structured data, brand mention building, and AI-optimized content. <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">View our SEO and GEO services</Link> to see how we can help your business get cited by AI search engines.</p>
+          <p>GEO is not a replacement for SEO — it&apos;s an essential complement. We help South African businesses implement comprehensive GEO strategies including structured data, brand mention building, and AI-optimized content. <Link href="/services/seo-services-johannesburg" className="text-primary font-medium hover:underline">View our SEO and GEO services</Link> to see how we can help your business get cited by AI search engines. Costs for both are on our <Link href="/services/seo-pricing" className="text-primary font-medium hover:underline">SEO pricing</Link> page, and a <Link href="/free-seo-audit" className="text-primary font-medium hover:underline">free SEO audit</Link> is the quickest way to see where you stand.</p>
         </div>
 
         <AuthorBio />

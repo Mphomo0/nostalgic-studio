@@ -73,16 +73,16 @@ export default function WebDesignCostGuidePage() {
             <li><strong>Functionality:</strong> E-commerce, booking systems, member areas all add complexity</li>
             <li><strong>Content creation:</strong> Professional copywriting and photography cost extra</li>
             <li><strong>SEO setup:</strong> On-page SEO, structured data, and technical optimization</li>
-            <li><strong>Platform choice:</strong> Next.js costs more upfront but delivers better performance than WordPress</li>
+            <li><strong>Platform choice:</strong> <Link href="/services/nextjs-website-design" className="text-primary hover:underline">Next.js</Link> costs more upfront but delivers better performance than WordPress</li>
           </ul>
 
           <h2>Ongoing Costs to Budget For</h2>
           <ul>
-            <li><strong>Hosting:</strong> R150 - R500 per month</li>
+            <li><strong>Hosting:</strong> R150 - R500 per month (see our <Link href="/services/web-hosting" className="text-primary hover:underline">managed web hosting</Link>)</li>
             <li><strong>Domain renewal:</strong> R100 - R200 per year</li>
             <li><strong>SSL certificate:</strong> Often included, else R500 - R1,500/year</li>
-            <li><strong>Maintenance:</strong> R500 - R3,000 per month (updates, backups, security)</li>
-            <li><strong>SEO & content:</strong> R1,500 - R5,000 per month for ongoing optimization</li>
+            <li><strong>Maintenance:</strong> R500 - R3,000 per month (updates, backups, security; see our <Link href="/services/web-maintenance" className="text-primary hover:underline">website maintenance plans</Link>)</li>
+            <li><strong>SEO & content:</strong> R1,500 - R5,000 per month for ongoing optimization (our <Link href="/services/seo-pricing" className="text-primary hover:underline">SEO pricing</Link> shows each package)</li>
           </ul>
 
           <h2>Common Pricing Mistakes</h2>
@@ -101,7 +101,7 @@ export default function WebDesignCostGuidePage() {
             <li>1 hour of post-launch training</li>
           </ul>
 
-          <p>At Nostalgic Studio, our standard business website packages start at R8,000 and include all of the above plus Next.js development for superior speed, structured data implementation, and ongoing SEO support.</p>
+          <p>At Nostalgic Studio, our standard business website packages start at R8,000 and include all of the above plus Next.js development for superior speed, structured data implementation, and ongoing SEO support. You can see what a project involves on our <Link href="/services/web-design-johannesburg" className="text-primary hover:underline">web design in Johannesburg</Link> page.</p>
 
           <p>Want a package-by-package breakdown of what each tier includes? See our detailed <Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">website cost guide for South Africa</Link>.</p>
         </div>

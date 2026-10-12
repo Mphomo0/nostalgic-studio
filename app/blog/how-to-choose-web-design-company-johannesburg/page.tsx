@@ -138,14 +138,14 @@ export default function ChooseAgencyArticle() {
           <p>
             In 2026, &quot;just WordPress&quot; isn&apos;t enough for high-growth startups. Ask if they offer modern headless 
             frameworks like Next.js or Astro. These technologies provide sub-second load times and native security 
-            benefits that traditional builders simply can&apos;t match.
+            benefits that traditional builders simply can&apos;t match. To see what that looks like in practice, read about our <Link href="/services/nextjs-website-design" className="text-primary font-medium hover:underline">Next.js website design</Link> service.
           </p>
 
           <h2>3. Verify SEO Expertise Beyond Keywords</h2>
           <p>
             SEO is no longer just about meta tags. It&apos;s about schema markup, Core Web Vitals, and AI-readiness (GEO). 
             Ask the agency how they optimize for answer engines like Perplexity or ChatGPT. If they don&apos;t mention 
-            structured data (JSON-LD), keep looking.
+            structured data (JSON-LD), keep looking. Pricing is another thing to compare: our own <Link href="/services/seo-pricing" className="text-primary font-medium hover:underline">SEO packages and pricing</Link> are published openly, which is the level of transparency to expect from any agency.
           </p>
 
           <h2>4. Content Ownership and Lock-in</h2>
@@ -166,7 +166,7 @@ export default function ChooseAgencyArticle() {
           <h2>Conclusion</h2>
           <p>
             Choosing a web design company in Johannesburg is a long-term investment. Don&apos;t rush the decision. 
-            Check references, verify technical skills, and ensure their values align with yours.
+            Check references, verify technical skills, and ensure their values align with yours. If you are weighing up options, you can see how we approach <Link href="/services/web-design-johannesburg" className="text-primary font-medium hover:underline">web design in Johannesburg</Link>.
           </p>
           
           <p>
