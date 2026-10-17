@@ -25,7 +25,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 import { SEO_PRICE_RANGE } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
-  title: 'SEO for Construction Companies in South Africa',
+  title: 'Construction Company SEO South Africa',
   description:
     'SEO for construction companies in South Africa. Improve Google visibility, get more tender enquiries, and attract local clients with local search strategy.',
   keywords: [

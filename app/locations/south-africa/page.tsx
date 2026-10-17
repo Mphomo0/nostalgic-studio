@@ -13,7 +13,7 @@ export const dynamic = 'force-static'
 
 const TITLE = 'Remote Web Design Across South Africa'
 const DESC =
-  'Johannesburg studio working remotely with businesses in Cape Town, Durban, Bloemfontein and the rest of South Africa. Same fixed pricing, same local SEO targeting.'
+  'Johannesburg studio working remotely with businesses in Cape Town, Durban, Bloemfontein and beyond. Same fixed pricing, same local SEO targeting.'
 const URL = 'https://www.nostalgic-studio.co.za/locations/south-africa'
 
 export const metadata: Metadata = {

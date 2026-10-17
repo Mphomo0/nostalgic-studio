@@ -10,7 +10,7 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'What is Local SEO? South Africa 2026 Guide',
+  title: 'What is Local SEO? South Africa Guide',
   description:
     'Dominate local search results in South Africa. Learn Google Maps optimisation, local citations, and geo-targeted content strategies for 2026.',
   alternates: {

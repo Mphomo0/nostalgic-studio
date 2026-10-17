@@ -10,7 +10,7 @@ import KeyTakeaways from '@/components/geo/KeyTakeaways'
 import { articleSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 
 export const metadata: Metadata = {
-  title: 'Choose a Web Design Agency in Johannesburg',
+  title: 'Choose a Johannesburg Web Design Agency',
   description:
     '7 critical questions to ask before hiring a web design agency in Johannesburg. Evaluate portfolio, tech stack, SEO expertise, and pricing before you sign.',
   alternates: {

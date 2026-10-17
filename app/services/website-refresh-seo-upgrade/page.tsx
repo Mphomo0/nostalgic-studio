@@ -24,7 +24,7 @@ import { serviceSchema, breadcrumbSchema } from '@/app/structured-data/schemas'
 import { priceRange } from '@/lib/pricing-data'
 
 export const metadata: Metadata = {
-  title: 'Website Refresh & SEO Upgrade South Africa',
+  title: 'Website Refresh & SEO Upgrade SA',
   description:
     'Upgrade your website with improved design, speed, SEO, and lead generation. Helping SA businesses refresh and optimize their online presence.',
   keywords: [
