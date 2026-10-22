@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -17,13 +17,13 @@ export default function CTA() {
       <div className="absolute bottom-0 right-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
 
       <div className="container-wide mx-auto relative z-10">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.h2
+          <m.h2
             id="cta-heading"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,9 +33,9 @@ export default function CTA() {
             How Do You Start a Project
             <br />
             <span className="text-gradient">With Nostalgic Studio?</span>
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,7 +45,7 @@ export default function CTA() {
             your website, branding, or UI/UX design needs. We work with startups
             and growing businesses to plan, design, and launch high-quality
             digital products.
-          </motion.p>
+          </m.p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
@@ -68,7 +68,7 @@ export default function CTA() {
               <Link href="/services/web-design-johannesburg">View Website Packages</Link>
             </Button>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

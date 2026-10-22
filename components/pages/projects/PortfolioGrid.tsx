@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, memo } from 'react'
-import { motion, AnimatePresence } from 'motion/react'
+import { m, AnimatePresence } from 'motion/react'
 import PortfolioCard from './PortfolioCard'
 import { projects } from '@/lib/portfolio-data'
 
@@ -51,7 +51,7 @@ const PortfolioGrid = memo(function PortfolioGrid() {
         </div>
 
         {/* Projects Grid */}
-        <motion.ul
+        <m.ul
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -62,7 +62,7 @@ const PortfolioGrid = memo(function PortfolioGrid() {
               </li>
             ))}
           </AnimatePresence>
-        </motion.ul>
+        </m.ul>
       </div>
     </section>
   )

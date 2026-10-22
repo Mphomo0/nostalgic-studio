@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { useForm, useWatch } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Send, CheckCircle, Loader2 } from 'lucide-react'
@@ -99,7 +99,7 @@ export default function ContactForm() {
   return (
     <>
       <ToastContainer />
-      <motion.form
+      <m.form
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -254,7 +254,7 @@ export default function ContactForm() {
           By submitting this form, you agree to have Nostalgic Studio contact
           you regarding your project.
         </p>
-      </motion.form>
+      </m.form>
     </>
   )
 }

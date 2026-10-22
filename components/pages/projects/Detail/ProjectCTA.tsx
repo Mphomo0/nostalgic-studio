@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
@@ -11,7 +11,7 @@ export function ProjectCTA() {
       <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
 
       <div className="relative px-4 sm:px-6 lg:px-8 text-center">
-        <motion.h2
+        <m.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -22,9 +22,9 @@ export function ProjectCTA() {
           "
         >
           Your digital transformation starts here.
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -38,9 +38,9 @@ export function ProjectCTA() {
           From technical SEO audits to high-engagement content strategy, we help
           professional service firms bridge the gap between their expertise and
           their target audience.
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -53,7 +53,7 @@ export function ProjectCTA() {
           >
             <Link href="/contact">Let&apos;s Discuss Your Next Project</Link>
           </Button>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

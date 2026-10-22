@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { ReactNode } from 'react'
 
 interface MotionWrapperProps {
@@ -15,7 +15,7 @@ export default function MotionWrapper({
   className,
 }: MotionWrapperProps) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -23,6 +23,6 @@ export default function MotionWrapper({
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   )
 }

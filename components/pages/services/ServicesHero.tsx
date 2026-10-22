@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 
 export default function ServicesHero() {
   return (
@@ -9,15 +9,15 @@ export default function ServicesHero() {
       aria-label="Hero section introducing Nostalgic Studio services and design solutions"
     >
       <div className="container-wide mx-auto text-center">
-        <motion.span
+        <m.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
         >
           Our Services
-        </motion.span>
+        </m.span>
 
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -26,9 +26,9 @@ export default function ServicesHero() {
           Design Solutions That
           <br />
           <span className="text-gradient">Drive Growth</span>
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -36,7 +36,7 @@ export default function ServicesHero() {
         >
           We offer comprehensive digital solutions tailored for startups and
           growing businesses. Every service is designed to help you succeed.
-        </motion.p>
+        </m.p>
       </div>
     </section>
   )

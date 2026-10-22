@@ -1,7 +1,7 @@
 "use client";
 
 import type { Variants } from "motion/react";
-import { motion, useAnimation } from "motion/react";
+import { m, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
@@ -150,7 +150,7 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.rect
+          <m.rect
             animate={rectControls}
             height="20"
             initial="normal"
@@ -161,13 +161,13 @@ const InstagramIcon = forwardRef<InstagramIconHandle, InstagramIconProps>(
             x="2"
             y="2"
           />
-          <motion.path
+          <m.path
             animate={pathControls}
             d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
             initial="normal"
             variants={PATH_VARIANTS}
           />
-          <motion.line
+          <m.line
             animate={lineControls}
             initial="normal"
             variants={LINE_VARIANTS}

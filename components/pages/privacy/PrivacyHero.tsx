@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 
 export default function PrivacyHero() {
   return (
@@ -9,24 +9,24 @@ export default function PrivacyHero() {
       aria-label="Terms and Conditions introduction"
     >
       <div className="container-wide mx-auto text-center">
-        <motion.span
+        <m.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
         >
           Legal Information
-        </motion.span>
+        </m.span>
 
-        <motion.h1
+        <m.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6"
         >
           Privacy Policy
-        </motion.h1>
+        </m.h1>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -35,7 +35,7 @@ export default function PrivacyHero() {
           These Terms and Conditions govern the use of Nostalgic Studio Web
           Design&lsquo;s services and outline the rights, responsibilities, and
           obligations of both the Company and the Client.
-        </motion.p>
+        </m.p>
       </div>
     </section>
   )

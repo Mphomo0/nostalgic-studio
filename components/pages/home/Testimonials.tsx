@@ -1,7 +1,7 @@
 'use client'
 
 import { memo } from 'react'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Image from 'next/image'
 import { Star, Quote } from 'lucide-react'
 
@@ -80,16 +80,16 @@ const Testimonials = memo(function Testimonials() {
       className="section-padding bg-card overflow-hidden"
     >
       <div className="container-wide mx-auto mb-12 text-center">
-        <motion.span
+        <m.span
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
         >
           Client Reviews
-        </motion.span>
+        </m.span>
 
-        <motion.h2
+        <m.h2
           id="testimonials-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -98,9 +98,9 @@ const Testimonials = memo(function Testimonials() {
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
         >
           Do Clients Trust Nostalgic Studio?
-        </motion.h2>
+        </m.h2>
 
-        <motion.p
+        <m.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -110,7 +110,7 @@ const Testimonials = memo(function Testimonials() {
           Startups and growing businesses trust Nostalgic Studio for web design,
           branding, and UI/UX design. Here’s what our clients say about working
           with us.
-        </motion.p>
+        </m.p>
       </div>
 
       {/* Marquee */}

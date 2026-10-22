@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 
 export default function PortfolioHeader() {
   return (
@@ -9,30 +9,30 @@ export default function PortfolioHeader() {
       aria-label="Portfolio header section showcasing featured projects of Nostalgic Studio"
     >
       <div className="container-wide mx-auto px-4 md:px-8">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <motion.span
+          <m.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
             className="text-primary text-sm uppercase tracking-wider block mb-4"
           >
             Our Work
-          </motion.span>
+          </m.span>
 
-          <motion.h1
+          <m.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
           >
             Featured Projects
-          </motion.h1>
+          </m.h1>
 
-<motion.p
+<m.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -40,9 +40,9 @@ export default function PortfolioHeader() {
         >
           Explore our portfolio of innovative designs and digital solutions
           that help businesses thrive in the modern world.
-        </motion.p>
+        </m.p>
 
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -56,8 +56,8 @@ export default function PortfolioHeader() {
             <p className="text-3xl font-bold text-foreground">13+</p>
             <p className="text-sm text-muted-foreground">Years Experience</p>
           </div>
-        </motion.div>
-        </motion.div>
+        </m.div>
+        </m.div>
       </div>
     </section>
   )

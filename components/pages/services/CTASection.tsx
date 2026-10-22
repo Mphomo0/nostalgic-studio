@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -12,7 +12,7 @@ const CTASection = () => {
       aria-label="Call to action section to get a free quote from Nostalgic Studio"
     >
       <div className="container-wide mx-auto">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -45,7 +45,7 @@ const CTASection = () => {
               </Link>
             </Button>
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

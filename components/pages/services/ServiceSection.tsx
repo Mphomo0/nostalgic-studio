@@ -1,7 +1,7 @@
 'use client'
 
 import { memo } from 'react'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Image from 'next/image'
 import { Check, Layout, Sparkles, Palette, Monitor } from 'lucide-react'
 import { Service } from './types'
@@ -22,7 +22,7 @@ const ServiceSection = memo(function ServiceSection({ service, reverse }: Props)
   const Icon = ICON_MAP[service.icon as keyof typeof ICON_MAP] || Layout
 
   return (
-    <motion.div
+    <m.div
       id={service.id}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const ServiceSection = memo(function ServiceSection({ service, reverse }: Props)
         </div>
         <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
       </div>
-    </motion.div>
+    </m.div>
   )
 })
 

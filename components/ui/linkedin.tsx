@@ -1,7 +1,7 @@
 "use client";
 
 import type { Variants } from "motion/react";
-import { motion, useAnimation } from "motion/react";
+import { m, useAnimation } from "motion/react";
 import type { HTMLAttributes } from "react";
 import { forwardRef, useCallback, useImperativeHandle, useRef } from "react";
 
@@ -151,13 +151,13 @@ const LinkedinIcon = forwardRef<LinkedinIconHandle, LinkedinIconProps>(
           width={size}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <motion.path
+          <m.path
             animate={pathControls}
             d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
             initial="normal"
             variants={PATH_VARIANTS}
           />
-          <motion.rect
+          <m.rect
             animate={rectControls}
             height="12"
             initial="normal"
@@ -166,7 +166,7 @@ const LinkedinIcon = forwardRef<LinkedinIconHandle, LinkedinIconProps>(
             x="2"
             y="9"
           />
-          <motion.circle
+          <m.circle
             animate={circleControls}
             cx="4"
             cy="4"

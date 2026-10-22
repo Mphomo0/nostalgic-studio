@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowUpRight } from 'lucide-react'
@@ -17,7 +17,7 @@ interface PortfolioCardProps {
 
 export function PortfolioCard({ project, index }: PortfolioCardProps) {
   return (
-    <motion.div
+    <m.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -61,6 +61,6 @@ export function PortfolioCard({ project, index }: PortfolioCardProps) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </m.div>
   )
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
@@ -16,15 +16,15 @@ export default function AboutHero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <div>
-            <motion.span
+            <m.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
             >
               About Nostalgic Studio
-            </motion.span>
+            </m.span>
 
-            <motion.h1
+            <m.h1
               id="about-heading"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -32,9 +32,9 @@ export default function AboutHero() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
               What Is <span className="text-gradient">Nostalgic Studio?</span>
-            </motion.h1>
+            </m.h1>
 
-            <motion.p
+            <m.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -44,9 +44,9 @@ export default function AboutHero() {
               that helps startups and growing businesses design websites, build
               strong brand identities, and create user-focused digital products
               through web design, UI/UX design, and branding services.
-            </motion.p>
+            </m.p>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -61,11 +61,11 @@ export default function AboutHero() {
                   Work With Us <ArrowRight size={18} />
                 </Link>
               </Button>
-            </motion.div>
+            </m.div>
           </div>
 
           {/* Image */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
@@ -84,7 +84,7 @@ export default function AboutHero() {
 
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/30 rounded-full blur-3xl" />
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

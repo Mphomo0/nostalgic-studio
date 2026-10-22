@@ -3,7 +3,7 @@
 import { memo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { ArrowUpRight } from 'lucide-react'
 import type { Project } from '@/lib/portfolio-data'
 
@@ -14,7 +14,7 @@ interface PortfolioCardProps {
 
 const PortfolioCard = memo(function PortfolioCard({ project, index = 0 }: PortfolioCardProps) {
   return (
-    <motion.div
+    <m.div
       layout
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -73,7 +73,7 @@ const PortfolioCard = memo(function PortfolioCard({ project, index = 0 }: Portfo
           </div>
         </div>
       </Link>
-    </motion.div>
+    </m.div>
   )
 })
 

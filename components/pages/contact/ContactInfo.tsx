@@ -1,7 +1,7 @@
 'use client'
 
 import { Mail, Phone, MapPin } from 'lucide-react'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 
 import { FacebookIcon } from '@/components/ui/facebook'
 import { InstagramIcon } from '@/components/ui/instagram'
@@ -70,7 +70,7 @@ export default function ContactInfo() {
         )
 
         return info.link ? (
-          <motion.a
+          <m.a
             key={info.title}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -81,9 +81,9 @@ export default function ContactInfo() {
             className="block p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-[color,background-color,border-color,box-shadow,transform,opacity] group"
           >
             {content}
-          </motion.a>
+          </m.a>
         ) : (
-          <motion.div
+          <m.div
             key={info.title}
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -93,11 +93,11 @@ export default function ContactInfo() {
             className="block p-6 rounded-2xl bg-card border border-border"
           >
             {content}
-          </motion.div>
+          </m.div>
         )
       })}
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -126,9 +126,9 @@ export default function ContactInfo() {
             </Button>
           </div>
         </div>
-      </motion.div>
+      </m.div>
 
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -152,7 +152,7 @@ export default function ContactInfo() {
             </li>
           ))}
         </ul>
-      </motion.div>
+      </m.div>
     </section>
   )
 }

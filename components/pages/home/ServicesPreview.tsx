@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import Link from 'next/link'
 import { ArrowUpRight, Palette, Layout, Sparkles, Monitor } from 'lucide-react'
 
@@ -41,16 +41,16 @@ export default function ServicesPreview() {
       <div className="container-wide mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <motion.span
+          <m.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block"
           >
             Our Expertise
-          </motion.span>
+          </m.span>
 
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -58,9 +58,9 @@ export default function ServicesPreview() {
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
           >
             Digital Services That Drive Growth in South Africa
-          </motion.h2>
+          </m.h2>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -69,13 +69,13 @@ export default function ServicesPreview() {
           >
             We offer premium digital solutions tailored for startups and established businesses 
             looking to scale in Johannesburg and beyond.
-          </motion.p>
+          </m.p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service, index) => (
-            <motion.div
+            <m.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -101,12 +101,12 @@ export default function ServicesPreview() {
                   {service.description}
                 </p>
               </Link>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -118,7 +118,7 @@ export default function ServicesPreview() {
           >
             Explore All Services <ArrowUpRight size={18} />
           </Link>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   )

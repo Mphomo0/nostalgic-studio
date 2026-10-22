@@ -1,7 +1,7 @@
 'use client'
 
 import { memo } from 'react'
-import { motion } from 'motion/react'
+import { m } from 'motion/react'
 import { ProcessStep } from './types'
 
 interface Props {
@@ -16,28 +16,28 @@ const ProcessSection = memo(function ProcessSection({ steps }: Props) {
     >
       <div className="container-wide mx-auto">
         <div className="text-center mb-16">
-          <motion.span
+          <m.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-primary text-sm uppercase tracking-wider mb-4 block"
           >
             Our Process
-          </motion.span>
+          </m.span>
 
-          <motion.h2
+          <m.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold"
           >
             How We Work
-          </motion.h2>
+          </m.h2>
         </div>
 
         <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <motion.li
+            <m.li
               key={step.step}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const ProcessSection = memo(function ProcessSection({ steps }: Props) {
               </div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-muted-foreground">{step.description}</p>
-            </motion.li>
+            </m.li>
           ))}
         </ol>
       </div>
