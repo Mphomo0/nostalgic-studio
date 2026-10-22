@@ -41,7 +41,7 @@ const EXPECTATIONS = [
   {
     file: 'public/llms.txt',
     label: 'web design tiers (Key Facts)',
-    phrase: `starts from ${rand(byId['starter-website'].min)} for starter sites, ${rand(byId['business-website'].min)}–${rand(byId['business-website'].max)} for business websites, and ${rand(byId['ecommerce-store'].min)}–${rand(byId['ecommerce-store'].max)}+ for e-commerce stores`,
+    phrase: `starts from ${rand(byId['starter-website'].min)} for starter sites, ${rand(byId['business-website'].min)}–${rand(byId['business-website'].max)} for business websites, and ${rand(byId['ecommerce-store'].min)}–${rand(byId['ecommerce-store'].max)} for e-commerce stores`,
   },
   {
     file: 'public/llms.txt',
@@ -62,7 +62,7 @@ const EXPECTATIONS = [
   {
     file: 'public/llms-full.txt',
     label: 'e-commerce store',
-    phrase: `**E-Commerce Store**: ${rand(byId['ecommerce-store'].min)}-${rand(byId['ecommerce-store'].max)}+ once-off`,
+    phrase: `**E-Commerce Store**: ${rand(byId['ecommerce-store'].min)}-${rand(byId['ecommerce-store'].max)} once-off`,
   },
   {
     file: 'public/llms-full.txt',

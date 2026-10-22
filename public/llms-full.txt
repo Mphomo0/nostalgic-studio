@@ -22,16 +22,16 @@ Nostalgic Studio is a Johannesburg-based digital design agency founded in 2013 b
 ## Services
 
 ### Web Design Johannesburg
-Custom Next.js websites built for performance, speed, and high conversion rates. Every site is mobile-first, SEO-optimized, and scores 90-100 on Google Lighthouse. Pricing from R1,500 for starter sites to R25,000+ for custom e-commerce platforms.
+Custom Next.js websites built for performance, speed, and high conversion rates. Every site is mobile-first, SEO-optimized, and scores 90-100 on Google Lighthouse. Pricing from R3,500 for starter sites to R50,000 for custom e-commerce platforms.
 
 ### SEO & AI Search Visibility (GEO)
-Combined classic SEO and Generative Engine Optimization (GEO) services. Includes technical SEO, local SEO, content strategy, entity optimization, structured data implementation, and AI search visibility for ChatGPT, Gemini, Claude, and Perplexity. Monthly packages from R1,500/month.
+Combined classic SEO and Generative Engine Optimization (GEO) services. Includes technical SEO, local SEO, content strategy, entity optimization, structured data implementation, and AI search visibility for ChatGPT, Gemini, Claude, and Perplexity. Monthly packages from R1,800/month.
 
 ### Next.js Website Design
 Specialized Next.js development for businesses that need superior performance, server-side rendering (SSR), static site generation (SSG), and 90+ Lighthouse scores. A modern, high-performance alternative to WordPress.
 
 ### E-commerce Development
-Full online stores with South African payment gateway integration (PayFast, Yoco, Ozow), inventory management, mobile checkout, and SEO-optimized product pages. Pricing from R10,000 to R25,000+.
+Full online stores with South African payment gateway integration (PayFast, Yoco, Ozow), inventory management, mobile checkout, and SEO-optimized product pages. Pricing from R15,000 to R50,000.
 
 ### UI/UX Design
 User research, wireframing, prototyping, interactive design systems, usability optimization, and mobile app design. Pricing from R8,000 to R35,000.
@@ -56,12 +56,12 @@ Security updates, performance optimization, content updates, and 24/7 monitoring
 ## Pricing
 
 ### Web Design Packages
-- **Starter Website**: R1,500 once-off — 5 custom pages, mobile responsive, contact form, basic SEO, social links, Google Maps, 1 month hosting
-- **Business Website**: R8,000-R15,000 once-off — up to 10 pages, Next.js (90+ Lighthouse), custom UI/UX, blog, advanced SEO, analytics, 3 months hosting
-- **E-Commerce Store**: R10,000-R25,000+ once-off — unlimited products, SA payment gateways, cart & checkout, inventory management, mobile-first, 6 months hosting
+- **Starter Website**: R3,500 once-off — 3-5 pages, mobile responsive, contact form, basic SEO, social links, Google Maps, 1 month hosting
+- **Business Website**: R10,000-R25,000 once-off — 8-15 pages, Next.js (90+ Lighthouse), custom UI/UX, blog, advanced SEO, analytics, 3 months hosting
+- **E-Commerce Store**: R15,000-R50,000 once-off — unlimited products, SA payment gateways, cart & checkout, inventory management, mobile-first, 6 months hosting
 
 ### SEO Packages
-- **Starter SEO**: R1,500/month — keyword research (10), on-page optimization (5 pages), monthly report, technical audit, basic local SEO
+- **Starter SEO**: R1,800/month — keyword research (10), on-page optimization (5 pages), monthly report, technical audit, basic local SEO
 - **Growth SEO**: R5,000/month — keyword research (30), on-page (15 pages), weekly reports, technical fixes, local SEO + GBP, content strategy (2 posts/month), link building, GEO/AI optimization
 - **Enterprise SEO**: R10,000+/month — unlimited keywords, full site optimization, dedicated manager, weekly calls, advanced technical SEO, content (4 posts/month), premium link building, full GEO strategy
 
@@ -137,7 +137,7 @@ Is your website hurting your conversions? Here are 10 clear signals it's time to
 
 ### 6. How Much Does a Website Cost in South Africa? (2026 Guide)
 https://www.nostalgic-studio.co.za/blog/website-cost-south-africa-2026
-A transparent breakdown of web design pricing in South Africa — from R1,500 starter sites to R25,000+ e-commerce platforms. 6 min read.
+A transparent breakdown of web design pricing in South Africa — from R3,500 starter sites to R50,000 e-commerce platforms. 6 min read.
 
 ### 7. Why Next.js Is the Best Framework for SEO in 2026
 https://www.nostalgic-studio.co.za/blog/what-is-nextjs-seo-2026
@@ -149,7 +149,7 @@ Learn how GEO helps your site appear in Google AI Overviews, Perplexity, and Cha
 
 ### 9. Web Design Pricing South Africa (2026 Guide)
 https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide
-Full pricing guide for web design in South Africa in 2026. Compares brochure, e-commerce, and custom sites with real rand pricing from R1,500 to R50,000+.
+Full pricing guide for web design in South Africa in 2026. Compares brochure, e-commerce, and custom sites with real rand pricing from R3,500 to R50,000.
 
 ### 10. Small Business Website Guide — Johannesburg
 https://www.nostalgic-studio.co.za/blog/small-business-website-guide-johannesburg

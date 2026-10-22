@@ -135,9 +135,9 @@ export function serviceSchema(opts: {
       priceCurrency: 'ZAR',
       priceSpecification: {
         '@type': 'PriceSpecification',
-        price: opts.priceRange?.split('-')[0].replace(NON_DIGIT_RE, '') || '5000',
+        price: opts.priceRange?.split('-')[0].replace(NON_DIGIT_RE, '') || '3500',
         priceCurrency: 'ZAR',
-        description: `Pricing starting from ${opts.priceRange || 'R5,000'}`
+        description: `Pricing starting from ${opts.priceRange || 'R3,500'}`
       }
     }
   }

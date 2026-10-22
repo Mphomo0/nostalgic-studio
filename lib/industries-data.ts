@@ -81,7 +81,7 @@ export const industries: IndustryInfo[] = [
     faq: [
       {
         q: 'How much does a construction company website cost in South Africa?',
-        a: 'Starter sites begin at R1,500. Most construction and contracting firms choose the R8,000–R15,000 business package, which covers service pages for each trade, a project gallery, and certification badges. Larger firms with extensive portfolios run higher. Every quote is fixed, with no hourly billing.',
+        a: 'Starter sites begin at R3,500. Most construction and contracting firms choose the R10,000–R25,000 business package, which covers service pages for each trade, a project gallery, and certification badges. Larger firms with extensive portfolios run higher. Every quote is fixed, with no hourly billing.',
       },
       {
         q: 'Can a website actually help us win more tenders?',
@@ -141,7 +141,7 @@ export const industries: IndustryInfo[] = [
     faq: [
       {
         q: 'How much does a website cost for a law or accounting firm?',
-        a: 'Starter sites begin at R1,500. Most professional practices choose the R8,000–R15,000 business package, which covers individual practice-area pages, attorney or partner profiles, and enquiry forms. Larger firms with extensive content run higher. Quotes are fixed before work begins.',
+        a: 'Starter sites begin at R3,500. Most professional practices choose the R10,000–R25,000 business package, which covers individual practice-area pages, attorney or partner profiles, and enquiry forms. Larger firms with extensive content run higher. Quotes are fixed before work begins.',
       },
       {
         q: 'How do we explain complex services without overwhelming visitors?',
@@ -201,7 +201,7 @@ export const industries: IndustryInfo[] = [
     faq: [
       {
         q: 'How much does a medical practice website cost?',
-        a: 'Starter sites begin at R1,500. Most practices — GP surgeries, dental clinics, and physiotherapy centres — choose the R8,000–R15,000 business package, which covers service pages, practitioner profiles, and online booking. Multi-practitioner clinics run higher. Every quote is fixed upfront.',
+        a: 'Starter sites begin at R3,500. Most practices — GP surgeries, dental clinics, and physiotherapy centres — choose the R10,000–R25,000 business package, which covers service pages, practitioner profiles, and online booking. Multi-practitioner clinics run higher. Every quote is fixed upfront.',
       },
       {
         q: 'How do you handle POPIA compliance and patient data?',
@@ -261,7 +261,7 @@ export const industries: IndustryInfo[] = [
     faq: [
       {
         q: 'How much does an e-commerce store cost in South Africa?',
-        a: 'Online stores run R10,000–R25,000+ depending on catalogue size and complexity. That includes South African payment gateway integration, cart and checkout, inventory management, SEO-optimised product pages, and 6 months hosting. Quotes are fixed, so the number does not move mid-project.',
+        a: 'Online stores run R15,000–R50,000 depending on catalogue size and complexity. That includes South African payment gateway integration, cart and checkout, inventory management, SEO-optimised product pages, and 6 months hosting. Quotes are fixed, so the number does not move mid-project.',
       },
       {
         q: 'Which South African payment gateways do you integrate?',
@@ -320,7 +320,7 @@ export const industries: IndustryInfo[] = [
     faq: [
       {
         q: 'What does a startup website cost?',
-        a: 'Starter sites begin at R1,500, which is often enough to validate an idea or support a launch. Most funded startups choose the R8,000–R15,000 business package. Marketplaces and SaaS platforms with custom functionality run higher. Fixed quotes, so you can budget against a real number.',
+        a: 'Starter sites begin at R3,500, which is often enough to validate an idea or support a launch. Most funded startups choose the R10,000–R25,000 business package. Marketplaces and SaaS platforms with custom functionality run higher. Fixed quotes, so you can budget against a real number.',
       },
       {
         q: 'How fast can you launch a startup website?',
@@ -336,7 +336,7 @@ export const industries: IndustryInfo[] = [
       },
       {
         q: 'Should we invest in SEO this early?',
-        a: 'The foundations, yes — the campaign, maybe not. Getting site structure, page speed, and schema right during the build costs nothing extra and compounds. Ongoing SEO from R1,500/month makes sense once you know which customers convert; before that, spend on validation instead.',
+        a: 'The foundations, yes — the campaign, maybe not. Getting site structure, page speed, and schema right during the build costs nothing extra and compounds. Ongoing SEO from R1,800/month makes sense once you know which customers convert; before that, spend on validation instead.',
       },
     ],
   },

@@ -6,7 +6,7 @@
  * llms.txt / llms-full.txt drift check (scripts/check-pricing-drift.mjs).
  *
  * These figures previously lived in ~20 places and drifted apart — the LLM
- * files advertised a R3,500 starter site while every page said R1,500, and
+ * files advertised a R3,500 starter site while every page said R3,500, and
  * quoted e-commerce "from R25,000" when R25,000 is the ceiling. Change a
  * number here and every consumer follows.
  *
@@ -44,32 +44,31 @@ export const WEB_DESIGN_PACKAGES: Package[] = [
   {
     id: 'starter-website',
     name: 'Starter Website',
-    min: 1500,
-    max: 1500,
+    min: 3500,
+    max: 3500,
     unit: 'once-off',
     bestFor:
       'Startups, freelancers, and small businesses needing a credible online presence',
     includes:
-      '5 custom pages, mobile-responsive design, contact form, basic SEO setup, social media links, Google Maps integration, 1 month hosting',
+      '3–5 pages, mobile-responsive design, contact form, basic SEO setup, social media links, Google Maps integration, 1 month hosting',
     delivery: '1–2 weeks',
   },
   {
     id: 'business-website',
     name: 'Business Website',
-    min: 8000,
-    max: 15000,
+    min: 10000,
+    max: 25000,
     unit: 'once-off',
     bestFor: 'Growing businesses needing speed, SEO, and a strong brand presence',
     includes:
-      'Up to 10 custom pages, Next.js framework (90+ Lighthouse score), advanced SEO optimization, blog setup, analytics integration, custom UI/UX design, 3 months hosting',
+      '8–15 pages, Next.js framework (90+ Lighthouse score), advanced SEO optimization, blog setup, analytics integration, custom UI/UX design, 3 months hosting',
     delivery: '3–6 weeks',
   },
   {
     id: 'ecommerce-store',
     name: 'E-Commerce Store',
-    min: 10000,
-    max: 25000,
-    openEnded: true,
+    min: 15000,
+    max: 50000,
     unit: 'once-off',
     bestFor: 'Businesses selling online in South Africa',
     includes:
@@ -93,8 +92,8 @@ export const SEO_PACKAGES: Package[] = [
   {
     id: 'starter-seo',
     name: 'Starter SEO',
-    min: 1500,
-    max: 1500,
+    min: 1800,
+    max: 1800,
     unit: 'month',
     bestFor: '10 keywords, 5 pages optimized',
     includes:
@@ -196,7 +195,7 @@ export function getPackage(id: string): Package {
 }
 
 /**
- * "R1,500" — comma-separated, matching how every page on the site writes it.
+ * "R3,500" — comma-separated, matching how every page on the site writes it.
  * Deliberately not `toLocaleString('en-ZA')`, which uses a space separator.
  */
 export function formatRand(amount: number): string {
@@ -205,7 +204,7 @@ export function formatRand(amount: number): string {
 
 /**
  * Human-readable price for a package.
- * "R1,500" | "R8,000 – R15,000" | "R10,000 – R25,000+" | "R200 – R3,000/month"
+ * "R3,500" | "R10,000 – R25,000" | "R15,000 – R50,000" | "R200 – R3,000/month"
  */
 export function formatPrice(pkg: Package): string {
   const suffix = pkg.unit === 'month' ? '/month' : ''

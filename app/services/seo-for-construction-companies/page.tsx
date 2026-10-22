@@ -119,7 +119,7 @@ const faqs = [
   {
     question: 'How much does SEO for a construction company cost?',
     answer:
-      'Our SEO services for construction companies follow the same tiered packages as our standard SEO plans: Starter SEO from R1,500/month, Growth SEO from R5,000/month, and Enterprise SEO from R10,000+/month. We also include SEO as part of our website design packages at no extra cost.',
+      'Our SEO services for construction companies follow the same tiered packages as our standard SEO plans: Starter SEO from R1,800/month, Growth SEO from R5,000/month, and Enterprise SEO from R10,000+/month. We also include SEO as part of our website design packages at no extra cost.',
   },
 ]
 

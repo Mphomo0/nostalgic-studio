@@ -73,7 +73,7 @@ const regions = [
 const faqs = [
   {
     q: 'You are in Johannesburg — why would I hire you instead of a local agency?',
-    a: 'Sometimes you should not. If in-person workshops matter to how you work, hire someone in your city. What we offer is a specific build: custom Next.js sites that load in under two seconds, with SEO and AI-search structure included, at fixed prices from R1,500. If that is what you need and nobody nearby is offering it, distance is not the deciding factor.',
+    a: 'Sometimes you should not. If in-person workshops matter to how you work, hire someone in your city. What we offer is a specific build: custom Next.js sites that load in under two seconds, with SEO and AI-search structure included, at fixed prices from R3,500. If that is what you need and nobody nearby is offering it, distance is not the deciding factor.',
   },
   {
     q: 'How does a remote project actually run?',
@@ -85,7 +85,7 @@ const faqs = [
   },
   {
     q: 'Is remote work more expensive or slower?',
-    a: 'Neither. Pricing is identical to our Gauteng projects — starter sites from R1,500, most business websites R8,000–R15,000, e-commerce R10,000–R25,000+. Timelines are the same too: 1–2 weeks for a starter site, 3–6 weeks for a full business build.',
+    a: 'Neither. Pricing is identical to our Gauteng projects — starter sites from R3,500, most business websites R10,000–R25,000, e-commerce R15,000–R50,000. Timelines are the same too: 1–2 weeks for a starter site, 3–6 weeks for a full business build.',
   },
   {
     q: 'Which parts of South Africa do you work with?',

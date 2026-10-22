@@ -23,7 +23,7 @@ import { SEO_PRICE_RANGE } from '@/lib/pricing-data'
 export const metadata: Metadata = {
   title: 'SEO Pricing Johannesburg | Packages',
   description:
-    'Transparent SEO pricing in Johannesburg. Starter R1,500/mo, Growth R5,000/mo, Enterprise R10,000/mo. Includes GEO & AI search optimization. Free audit.',
+    'Transparent SEO pricing in Johannesburg. Starter R1,800/mo, Growth R5,000/mo, Enterprise R10,000/mo. Growth and Enterprise include GEO & AI search optimization. Free audit.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/services/seo-pricing',
     languages: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title:
       'SEO Pricing Johannesburg | SEO Packages & Costs South Africa | Nostalgic Studio',
     description:
-      'Transparent SEO pricing. Starter R1,500/mo, Growth R5,000/mo, Enterprise R10k+/mo. Includes GEO & AI search optimization.',
+      'Transparent SEO pricing. Starter R1,800/mo, Growth R5,000/mo, Enterprise R10k+/mo. Growth and Enterprise include GEO & AI search optimization.',
     url: 'https://www.nostalgic-studio.co.za/services/seo-pricing',
     siteName: 'Nostalgic Studio',
     type: 'website',
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title:
       'SEO Pricing Johannesburg | SEO Packages & Costs South Africa | Nostalgic Studio',
     description:
-      'Transparent SEO pricing. Starter R1,500/mo, Growth R5,000/mo, Enterprise R10k+/mo. Includes GEO & AI search optimization.',
+      'Transparent SEO pricing. Starter R1,800/mo, Growth R5,000/mo, Enterprise R10k+/mo. Growth and Enterprise include GEO & AI search optimization.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
@@ -64,7 +64,7 @@ const faqs = [
   {
     question: 'How much does SEO cost in South Africa?',
     answer:
-      'SEO services in South Africa typically range from R1,500–R15,000 per month. Nostalgic Studio offers transparent packages: Starter SEO from R1,500/month for basic optimization, Growth SEO from R5,000/month for comprehensive campaigns, and Enterprise SEO from R10,000/month for competitive markets.',
+      'SEO services in South Africa typically range from R1,800–R15,000 per month. Nostalgic Studio offers transparent packages: Starter SEO from R1,800/month for basic optimization, Growth SEO from R5,000/month for comprehensive campaigns, and Enterprise SEO from R10,000/month for competitive markets.',
   },
   {
     question: 'How long does SEO take to show results?',
@@ -91,7 +91,7 @@ const faqs = [
 const packages = [
   {
     name: 'Starter SEO',
-    price: 'R1,500',
+    price: 'R1,800',
     period: '/month',
     desc: 'Perfect for startups and small businesses building their online presence.',
     popular: false,
@@ -154,7 +154,7 @@ const schemas = [
     id: 'seo-pricing',
     name: 'SEO Services Johannesburg',
     description:
-      'Transparent SEO packages from R1,500/month. Includes technical SEO, local SEO, content strategy, and GEO / AI search optimization.',
+      'Transparent SEO packages from R1,800/month. Includes technical SEO, local SEO, content strategy, and (on Growth and Enterprise) GEO / AI search optimization.',
     url: '/services/seo-pricing',
     areaServed: 'Johannesburg, South Africa',
     priceRange: SEO_PRICE_RANGE,
@@ -187,8 +187,9 @@ export default function SeoPricingPage() {
               hidden fees, month-to-month contracts.
             </p>
             <p className="text-sm text-muted-foreground mb-4">
-              All packages include GEO (Generative Engine Optimization) for AI
-              search visibility on ChatGPT, Gemini, Claude, and Perplexity.
+              Growth and Enterprise packages include GEO (Generative Engine
+              Optimization) for AI search visibility on ChatGPT, Gemini,
+              Claude, and Perplexity.
             </p>
             <Button asChild size="lg">
               <Link href="/free-seo-audit">
@@ -246,11 +247,11 @@ export default function SeoPricingPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-4">
-              What Every SEO Package Includes
+              What Our SEO Packages Cover
             </h2>
             <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
-              Every package combines classic SEO fundamentals with cutting-edge
-              AI search optimization.
+              Every package starts with classic SEO fundamentals. Growth and
+              Enterprise add AI search optimization (GEO).
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[

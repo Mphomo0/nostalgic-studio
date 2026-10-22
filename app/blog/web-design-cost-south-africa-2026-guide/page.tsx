@@ -10,7 +10,7 @@ const PUB_DATE = '2026-06-16'
 
 export const metadata: Metadata = {
   title: 'Web Design Pricing South Africa 2026',
-  description: 'Full pricing guide for web design in South Africa 2026. Compare brochure, e-commerce & custom sites with real rand pricing from R1,500 to R50,000+.',
+  description: 'Full pricing guide for web design in South Africa 2026. Compare brochure, e-commerce & custom sites with real rand pricing from R3,500 to R50,000.',
   alternates: {
     canonical: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide',
     languages: {
@@ -18,22 +18,22 @@ export const metadata: Metadata = {
       'x-default': 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide',
     },
   },
-  openGraph: { title: 'Web Design Cost South Africa 2026 | Nostalgic Studio', description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R1,500 to R50,000+.', url: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide', siteName: 'Nostalgic Studio', type: 'article', images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Cost South Africa 2026 Guide — Nostalgic Studio' }] },
+  openGraph: { title: 'Web Design Cost South Africa 2026 | Nostalgic Studio', description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R3,500 to R50,000.', url: 'https://www.nostalgic-studio.co.za/blog/web-design-cost-south-africa-2026-guide', siteName: 'Nostalgic Studio', type: 'article', images: [{ url: 'https://www.nostalgic-studio.co.za/images/og-image.jpg', width: 1200, height: 630, alt: 'Web Design Cost South Africa 2026 Guide — Nostalgic Studio' }] },
   twitter: {
     card: 'summary_large_image',
     site: '@studionostalgic',
     creator: '@studionostalgic',
     title: 'Web Design Cost South Africa 2026 | Nostalgic Studio',
-    description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R1,500 to R50,000+.',
+    description: 'How much does a website cost in SA in 2026? Full pricing breakdown from R3,500 to R50,000.',
     images: ['https://www.nostalgic-studio.co.za/images/og-image.jpg'],
   },
 }
 
 const faqs = [
-  { question: 'What is the cheapest way to get a website in South Africa?', answer: 'DIY platforms like Wix or Shopify cost as little as R150-R500/month, but you get what you pay for — poor SEO, slow load times, and difficulty scaling. For a business website, a professionally built 5-page brochure site starting at R1,500 delivers far better ROI.' },
-  { question: 'How much does an e-commerce website cost in SA?', answer: 'E-commerce websites in South Africa typically cost between R10,000 and R25,000+ depending on product count, payment gateway integration (PayFast, Yoco, Ozow), and custom features.' },
+  { question: 'What is the cheapest way to get a website in South Africa?', answer: 'DIY platforms like Wix or Shopify cost as little as R150-R500/month, but you get what you pay for — poor SEO, slow load times, and difficulty scaling. For a business website, a professionally built 3–5 page brochure site starting at R3,500 delivers far better ROI.' },
+  { question: 'How much does an e-commerce website cost in SA?', answer: 'E-commerce websites in South Africa typically cost between R15,000 and R50,000 depending on product count, payment gateway integration (PayFast, Yoco, Ozow), and custom features.' },
   { question: 'Are there hidden costs in web design?', answer: 'Common ongoing costs include hosting (R150-R500/month), domain renewal (R100-R200/year), SSL certificates (often included), email hosting, and maintenance fees. Always ask what is included in the quoted price.' },
-  { question: 'Is a R5,000 website good enough?', answer: 'For a small service-based business, a well-built R5,000 website can absolutely generate leads. The key is investing in good SEO, fast hosting, and quality copywriting rather than expensive visual design.' },
+  { question: 'Is a R3,500 website good enough?', answer: 'For a small service-based business, a well-built R3,500 website can absolutely generate leads. The key is investing in good SEO, fast hosting, and quality copywriting rather than expensive visual design.' },
 ]
 
 export default function WebDesignCostGuidePage() {
@@ -59,9 +59,9 @@ export default function WebDesignCostGuidePage() {
           <table className="w-full border-collapse border">
             <thead><tr><th className="border p-2 font-semibold">Website Type</th><th className="border p-2 font-semibold">Price Range (ZAR)</th><th className="border p-2 font-semibold">Best For</th></tr></thead>
             <tbody>
-              <tr><td className="border p-2">Basic Brochure Site</td><td className="border p-2">R1,500</td><td className="border p-2">Small local businesses, freelancers</td></tr>
-              <tr><td className="border p-2">Standard Business Site</td><td className="border p-2">R8,000 - R15,000</td><td className="border p-2">SMEs, professional services</td></tr>
-              <tr><td className="border p-2">E-commerce Store</td><td className="border p-2">R10,000 - R25,000+</td><td className="border p-2">Retail, online stores</td></tr>
+              <tr><td className="border p-2">Basic Brochure Site</td><td className="border p-2">R3,500</td><td className="border p-2">Small local businesses, freelancers</td></tr>
+              <tr><td className="border p-2">Standard Business Site</td><td className="border p-2">R10,000 - R25,000</td><td className="border p-2">SMEs, professional services</td></tr>
+              <tr><td className="border p-2">E-commerce Store</td><td className="border p-2">R15,000 - R50,000</td><td className="border p-2">Retail, online stores</td></tr>
               <tr><td className="border p-2">Custom Web Application</td><td className="border p-2">R30,000 - R80,000+</td><td className="border p-2">Startups, SaaS, platforms</td></tr>
             </tbody>
           </table>
@@ -82,26 +82,26 @@ export default function WebDesignCostGuidePage() {
             <li><strong>Domain renewal:</strong> R100 - R200 per year</li>
             <li><strong>SSL certificate:</strong> Often included, else R500 - R1,500/year</li>
             <li><strong>Maintenance:</strong> R500 - R3,000 per month (updates, backups, security; see our <Link href="/services/web-maintenance" className="text-primary hover:underline">website maintenance plans</Link>)</li>
-            <li><strong>SEO & content:</strong> R1,500 - R5,000 per month for ongoing optimization (our <Link href="/services/seo-pricing" className="text-primary hover:underline">SEO pricing</Link> shows each package)</li>
+            <li><strong>SEO & content:</strong> R1,800 - R5,000 per month for ongoing optimization (our <Link href="/services/seo-pricing" className="text-primary hover:underline">SEO pricing</Link> shows each package)</li>
           </ul>
 
           <h2>Common Pricing Mistakes</h2>
-          <p><strong>Mistake 1: Choosing the cheapest option.</strong> A R1,000 website built on a free template will cost you more in lost leads than a R8,000 professional site.</p>
+          <p><strong>Mistake 1: Choosing the cheapest option.</strong> A R1,000 website built on a free template will cost you more in lost leads than a R10,000 professional site.</p>
           <p><strong>Mistake 2: Overpaying for flashy design.</strong> A beautiful site with poor SEO and slow load times cannot generate leads. Invest in performance and search visibility first.</p>
           <p><strong>Mistake 3: Hidden costs.</strong> Always ask: &quot;What is included in this price?&quot; Some agencies charge extra for hosting, SEO setup, content, and even basic revisions.</p>
 
-          <h2>What R8,000 Gets You (Professional Standard)</h2>
+          <h2>What R10,000 Gets You (Professional Standard)</h2>
           <ul>
             <li>5-10 custom-designed pages</li>
             <li>Mobile-responsive design</li>
             <li>Basic on-page SEO</li>
             <li>Contact form with email integration</li>
             <li>Google Business Profile setup</li>
-            <li>1 year of hosting (often included)</li>
+            <li>1–6 months of hosting (included, depending on package)</li>
             <li>1 hour of post-launch training</li>
           </ul>
 
-          <p>At Nostalgic Studio, our standard business website packages start at R8,000 and include all of the above plus Next.js development for superior speed, structured data implementation, and ongoing SEO support. You can see what a project involves on our <Link href="/services/web-design-johannesburg" className="text-primary hover:underline">web design in Johannesburg</Link> page.</p>
+          <p>At Nostalgic Studio, our standard business website packages start at R10,000 and include all of the above plus Next.js development for superior speed, structured data implementation, and ongoing SEO support. You can see what a project involves on our <Link href="/services/web-design-johannesburg" className="text-primary hover:underline">web design in Johannesburg</Link> page.</p>
 
           <p>Want a package-by-package breakdown of what each tier includes? See our detailed <Link href="/blog/website-cost-south-africa-2026" className="text-primary hover:underline">website cost guide for South Africa</Link>.</p>
         </div>

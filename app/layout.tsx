@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Web design agency for startups in Johannesburg. Custom Next.js websites, branding & SEO. 70+ projects delivered. From R1,500.',
+    'Web design agency for startups in Johannesburg. Custom Next.js websites, branding & SEO. 70+ projects delivered. From R3,500.',
 
   keywords: [
     'Web Design Johannesburg',
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     siteName: 'Nostalgic Studio',
     title: 'Web Design for Startups Johannesburg | Nostalgic Studio',
     description:
-      'Web design agency for startups in Johannesburg. Custom Next.js websites, branding & SEO. 70+ projects delivered. From R1,500.',
+      'Web design agency for startups in Johannesburg. Custom Next.js websites, branding & SEO. 70+ projects delivered. From R3,500.',
 
     images: [
       {

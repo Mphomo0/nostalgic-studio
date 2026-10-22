@@ -83,7 +83,7 @@ const posts = [
     slug: 'website-cost-south-africa-2026',
     title: 'How Much Does a Website Cost in South Africa? (2026 Guide)',
     excerpt:
-      'A transparent breakdown of web design pricing in South Africa — from R5,000 brochure sites to R25,000+ e-commerce platforms.',
+      'A transparent breakdown of web design pricing in South Africa — from R3,500 starter sites to R50,000 e-commerce platforms.',
     readTime: '6 min read',
     date: '2026-03-22',
     category: 'Pricing',
@@ -124,7 +124,7 @@ const posts = [
   {
     slug: 'web-design-cost-south-africa-2026-guide',
     title: 'Web Design Cost South Africa 2026 — Full Pricing Guide',
-    excerpt: 'Complete pricing guide for web design in South Africa. Compare costs by type — brochure, e-commerce, custom — with real ZAR pricing from R1,500 to R50,000+.',
+    excerpt: 'Complete pricing guide for web design in South Africa. Compare costs by type — brochure, e-commerce, custom — with real ZAR pricing from R3,500 to R50,000.',
     readTime: '7 min read',
     date: '2026-06-16',
     category: 'Pricing',

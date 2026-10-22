@@ -121,12 +121,12 @@ const faqs = [
   {
     question: 'How much does SEO cost in South Africa?',
     answer:
-      'SEO services in South Africa typically range from R3,000–R15,000 per month depending on competitiveness, scope, and goals. Nostalgic Studio offers tailored packages starting from R1,500/month for basic SEO and R5,000–R15,000/month for comprehensive SEO campaigns.',
+      'SEO services in South Africa typically range from R3,000–R15,000 per month depending on competitiveness, scope, and goals. Nostalgic Studio offers tailored packages starting from R1,800/month for basic SEO and R5,000–R15,000/month for comprehensive SEO campaigns.',
   },
   {
     question: 'What SEO packages do you offer in Johannesburg?',
     answer:
-      'We offer three SEO packages in Johannesburg: Starter SEO (R1,500/mo) covering keyword research, on-page optimisation for 5 pages, and a monthly report — ideal for new businesses. Growth SEO (R5,000/mo) adds content strategy, link building, GBP management, and GEO/AI search optimisation. Enterprise SEO (R10,000+/mo) includes unlimited keyword tracking, a dedicated SEO manager, weekly strategy calls, and a full GEO/AI search strategy. All packages include a technical audit and monthly reporting.',
+      'We offer three SEO packages in Johannesburg: Starter SEO (R1,800/mo) covering keyword research, on-page optimisation for 5 pages, and a monthly report — ideal for new businesses. Growth SEO (R5,000/mo) adds content strategy, link building, GBP management, and GEO/AI search optimisation. Enterprise SEO (R10,000+/mo) includes unlimited keyword tracking, a dedicated SEO manager, weekly strategy calls, and a full GEO/AI search strategy. All packages include a technical audit and monthly reporting.',
   },
   {
     question: 'Do you offer once-off SEO audits?',
@@ -852,7 +852,7 @@ export default function SEOServicesJohannesburg() {
             <div className="bg-card p-8 rounded-2xl border border-border">
               <h3 className="text-xl font-bold mb-2">Starter SEO</h3>
               <div className="text-3xl font-bold text-primary mb-4">
-                R1,500<span className="text-sm text-muted-foreground">/mo</span>
+                R1,800<span className="text-sm text-muted-foreground">/mo</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">
                 Perfect for startups and small businesses looking to establish

@@ -51,7 +51,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'How much does a business website cost in Sandton?',
-        a: 'Our pricing starts from R1,500 for a simple landing page and ranges to R25,000+ for full corporate websites with multiple service pages, team profiles, blog, and advanced SEO. We provide a fixed quote — no hourly rates.',
+        a: 'Our pricing starts from R3,500 for a simple landing page and ranges to R50,000 for full corporate websites with multiple service pages, team profiles, blog, and advanced SEO. We provide a fixed quote — no hourly rates.',
       },
           {
         q: 'How long does it take to build a corporate website in Sandton?',
@@ -59,7 +59,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'Can you help my firm rank for competitive Sandton search terms?',
-        a: 'Yes. Sandton is one of the most contested local search markets in South Africa. We target terms like "financial advisor Sandton" and "corporate law firm Johannesburg" through technical SEO, Google Business Profile optimisation, and content built around your practice areas. SEO packages start at R1,500/month.',
+        a: 'Yes. Sandton is one of the most contested local search markets in South Africa. We target terms like "financial advisor Sandton" and "corporate law firm Johannesburg" through technical SEO, Google Business Profile optimisation, and content built around your practice areas. SEO packages start at R1,800/month.',
       },
       {
         q: 'Do we need to meet in person at your offices?',
@@ -105,7 +105,7 @@ export const locations: LocationInfo[] = [
       },
           {
         q: 'How much does a website cost for a Fourways business?',
-        a: 'Starter websites begin at R1,500 for a 5-page site with mobile-responsive design and basic SEO. Most Fourways businesses — estate agencies, restaurants, and retail brands — choose the R8,000–R15,000 business package. Online stores run R10,000–R25,000+. Every quote is fixed, with no hourly billing.',
+        a: 'Starter websites begin at R3,500 for a 5-page site with mobile-responsive design and basic SEO. Most Fourways businesses — estate agencies, restaurants, and retail brands — choose the R10,000–R25,000 business package. Online stores run R15,000–R50,000. Every quote is fixed, with no hourly billing.',
       },
       {
         q: 'Can you get my Fourways business showing on Google Maps?',
@@ -149,7 +149,7 @@ export const locations: LocationInfo[] = [
       },
           {
         q: 'How much does a website cost for a Rosebank business?',
-        a: 'Starter sites begin at R1,500. Most Rosebank studios, galleries, and boutiques choose the R8,000–R15,000 business package, which includes custom design and a portfolio or lookbook. E-commerce for fashion and retail brands runs R10,000–R25,000+. Quotes are fixed upfront.',
+        a: 'Starter sites begin at R3,500. Most Rosebank studios, galleries, and boutiques choose the R10,000–R25,000 business package, which includes custom design and a portfolio or lookbook. E-commerce for fashion and retail brands runs R15,000–R50,000. Quotes are fixed upfront.',
       },
       {
         q: 'Can you build a portfolio site that does justice to visual work?',
@@ -189,7 +189,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'What is the typical cost for a Midrand business website?',
-        a: 'Prices start from R1,500 for a starter site and run R8,000–R15,000 for a full business website with multiple service pages, blog, SEO, and enquiry forms. E-commerce stores range R10,000–R25,000+. We always provide a fixed, transparent quote.',
+        a: 'Prices start from R3,500 for a starter site and run R10,000–R25,000 for a full business website with multiple service pages, blog, SEO, and enquiry forms. E-commerce stores range R15,000–R50,000. We always provide a fixed, transparent quote.',
       },
           {
         q: 'How long does it take to build a Midrand business website?',
@@ -197,7 +197,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'Can you help my business rank for Waterfall City and Midrand searches?',
-        a: 'Yes. We target Midrand-specific search terms through Google Business Profile optimisation and location content covering Midrand CBD, Waterfall City, and Carlswald. For logistics and tech firms competing across Gauteng, we also build service pages that rank beyond the immediate suburb. SEO from R1,500/month.',
+        a: 'Yes. We target Midrand-specific search terms through Google Business Profile optimisation and location content covering Midrand CBD, Waterfall City, and Carlswald. For logistics and tech firms competing across Gauteng, we also build service pages that rank beyond the immediate suburb. SEO from R1,800/month.',
       },
       {
         q: 'Do you build websites for logistics and automotive businesses?',
@@ -243,7 +243,7 @@ export const locations: LocationInfo[] = [
       },
           {
         q: 'How much does a website cost for a Pretoria business?',
-        a: 'Starter sites begin at R1,500. Most Pretoria professional practices — legal, accounting, medical, and consulting — choose the R8,000–R15,000 business package with service pages, team profiles, and enquiry forms. E-commerce runs R10,000–R25,000+. Every quote is fixed, with no hidden fees.',
+        a: 'Starter sites begin at R3,500. Most Pretoria professional practices — legal, accounting, medical, and consulting — choose the R10,000–R25,000 business package with service pages, team profiles, and enquiry forms. E-commerce runs R15,000–R50,000. Every quote is fixed, with no hidden fees.',
       },
       {
         q: 'How long does a Pretoria website project take?',
@@ -281,7 +281,7 @@ export const locations: LocationInfo[] = [
       'Home service providers (plumbers, electricians, cleaners)',
     ],
     uniqueContent:
-      'Randburg is one of Johannesburg\'s largest and most diverse commercial areas, home to thousands of small and medium businesses serving a population of over 500,000. The challenge for Randburg businesses is standing out in a crowded market where customers compare options online before deciding who to call. We build affordable, professional websites for Randburg businesses that focus on generating enquiries — not just looking good. Every site includes clear service pages, contact forms, WhatsApp integration, and local SEO targeting your specific suburb. Whether you are a plumber in Ferndale, an accountant in Blairgowrie, or a salon in Cresta, we make sure customers find you when they search online. Our starter packages from R1,500 make professional web design accessible for any Randburg business.',
+      'Randburg is one of Johannesburg\'s largest and most diverse commercial areas, home to thousands of small and medium businesses serving a population of over 500,000. The challenge for Randburg businesses is standing out in a crowded market where customers compare options online before deciding who to call. We build affordable, professional websites for Randburg businesses that focus on generating enquiries — not just looking good. Every site includes clear service pages, contact forms, WhatsApp integration, and local SEO targeting your specific suburb. Whether you are a plumber in Ferndale, an accountant in Blairgowrie, or a salon in Cresta, we make sure customers find you when they search online. Our starter packages from R3,500 make professional web design accessible for any Randburg business.',
     faq: [
       {
         q: 'Do you work with businesses in Ferndale, Blairgowrie, and Northcliff?',
@@ -289,7 +289,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'I run a small business — do you offer affordable website packages?',
-        a: 'Absolutely. Our starter package from R1,500 is designed for small businesses. It includes 3–5 pages, mobile responsive design, a contact form, and basic SEO — everything you need to start getting enquiries online.',
+        a: 'Absolutely. Our starter package from R3,500 is designed for small businesses. It includes 3–5 pages, mobile responsive design, a contact form, and basic SEO — everything you need to start getting enquiries online.',
       },
           {
         q: 'How long does it take to get my Randburg website live?',
@@ -297,7 +297,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'How do I get my Randburg business found on Google?',
-        a: 'Local SEO is the fastest route. We set up and optimise your Google Business Profile, keep your contact details consistent across directories, and build content targeting Randburg CBD, Ferndale, and Cresta. For home-service businesses, this is usually what drives the first enquiries. From R1,500/month.',
+        a: 'Local SEO is the fastest route. We set up and optimise your Google Business Profile, keep your contact details consistent across directories, and build content targeting Randburg CBD, Ferndale, and Cresta. For home-service businesses, this is usually what drives the first enquiries. From R1,800/month.',
       },
       {
         q: 'Do you build websites for plumbers, electricians, and cleaners?',
@@ -337,11 +337,11 @@ export const locations: LocationInfo[] = [
       },
           {
         q: 'How much does a website cost in Roodepoort?',
-        a: 'Starter websites begin at R1,500 for 5 pages with mobile-responsive design and basic SEO. Most Roodepoort businesses — trades, healthcare practices, and estate agencies — choose the R8,000–R15,000 business package. Online stores run R10,000–R25,000+. All quotes are fixed upfront.',
+        a: 'Starter websites begin at R3,500 for 5 pages with mobile-responsive design and basic SEO. Most Roodepoort businesses — trades, healthcare practices, and estate agencies — choose the R10,000–R25,000 business package. Online stores run R15,000–R50,000. All quotes are fixed upfront.',
       },
       {
         q: 'Can you help my Roodepoort business show up in local searches?',
-        a: 'Yes. We optimise your Google Business Profile and build location content targeting Constantia Kloof, Honeydew, Ruimsig, and the Clearwater area. For trades and healthcare practices, appearing in the local map pack is usually what generates enquiries. SEO packages start at R1,500/month.',
+        a: 'Yes. We optimise your Google Business Profile and build location content targeting Constantia Kloof, Honeydew, Ruimsig, and the Clearwater area. For trades and healthcare practices, appearing in the local map pack is usually what generates enquiries. SEO packages start at R1,800/month.',
       },
       {
         q: 'Do you build websites for builders and renovation companies?',
@@ -381,7 +381,7 @@ export const locations: LocationInfo[] = [
       },
           {
         q: 'How much does a website cost for a Centurion business?',
-        a: 'Starter sites begin at R1,500. Most Centurion businesses — professional services, tech firms, and regional head offices — choose the R8,000–R15,000 business package with custom design and advanced SEO. Larger platforms and e-commerce run R10,000–R25,000+. Quotes are fixed, never hourly.',
+        a: 'Starter sites begin at R3,500. Most Centurion businesses — professional services, tech firms, and regional head offices — choose the R10,000–R25,000 business package with custom design and advanced SEO. Larger platforms and e-commerce run R15,000–R50,000. Quotes are fixed, never hourly.',
       },
       {
         q: 'How long does a Centurion website take to build?',
@@ -389,7 +389,7 @@ export const locations: LocationInfo[] = [
       },
       {
         q: 'Can you help my Centurion business rank locally on Google?',
-        a: 'Yes. We optimise your Google Business Profile and build content targeting Centurion CBD, Irene, Highveld, and Zwartkop. Because Centurion sits between Johannesburg and Pretoria, we usually target both metros where it makes commercial sense. SEO packages start at R1,500/month.',
+        a: 'Yes. We optimise your Google Business Profile and build content targeting Centurion CBD, Irene, Highveld, and Zwartkop. Because Centurion sits between Johannesburg and Pretoria, we usually target both metros where it makes commercial sense. SEO packages start at R1,800/month.',
       },
     ],
     localCaseStudy: {
