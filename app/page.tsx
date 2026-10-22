@@ -108,7 +108,7 @@ const faqs = [
 
 export default function Home() {
   return (
-    <>
+    <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema()) }}
@@ -328,7 +328,7 @@ export default function Home() {
                   {tier.desc}
                 </p>
                 <div className="mb-6">
-                  <span className="text-2xl font-bold text-primary">
+                  <span className="text-2xl font-bold text-primary whitespace-nowrap tabular-nums">
                     {tier.price}
                   </span>
                   <span className="text-xs text-muted-foreground ml-2">
@@ -402,14 +402,14 @@ export default function Home() {
               <Link
                 key={service.name}
                 href={service.href}
-                className="group flex items-center justify-between p-5 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+                className="group flex items-center justify-between p-5 rounded-xl bg-card border border-border hover:border-primary/50 hover:bg-primary/5 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300"
               >
                 <span className="font-medium group-hover:text-primary transition-colors">
                   {service.name}
                 </span>
                 <ArrowRight
                   size={18}
-                  className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all"
+                  className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-[color,background-color,border-color,box-shadow,transform,opacity]"
                 />
               </Link>
             ))}
@@ -425,6 +425,6 @@ export default function Home() {
         faqs={faqs}
         title="Web Design Johannesburg — Common Questions"
       />
-    </>
+    </main>
   )
 }

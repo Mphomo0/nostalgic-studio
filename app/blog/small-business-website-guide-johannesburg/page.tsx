@@ -38,7 +38,7 @@ const faqs = [
 
 export default function SmallBizGuidePage() {
   return (
-    <>
+    <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
           articleSchema({ url: '/blog/small-business-website-guide-johannesburg', headline: 'Small Business Website Guide Johannesburg', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: '2026-07-21', articleSection: 'Guide' }),
@@ -108,6 +108,6 @@ export default function SmallBizGuidePage() {
           </Button>
         </div>
       </article>
-    </>
+    </main>
   )
 }

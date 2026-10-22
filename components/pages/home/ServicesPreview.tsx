@@ -84,13 +84,13 @@ export default function ServicesPreview() {
             >
               <Link
                 href={service.link}
-                className="group block p-8 md:p-10 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover-glow"
+                className="group block p-8 md:p-10 rounded-2xl bg-background border border-border hover:border-primary/50 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300 hover-glow"
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <service.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                  <ArrowUpRight className="w-6 h-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300" />
                 </div>
 
                 <h3 className="text-xl md:text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
@@ -114,7 +114,7 @@ export default function ServicesPreview() {
         >
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
+            className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300"
           >
             Explore All Services <ArrowUpRight size={18} />
           </Link>

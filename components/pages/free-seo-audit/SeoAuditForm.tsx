@@ -70,7 +70,7 @@ export default function SeoAuditForm() {
 
   if (isSubmitted) {
     return (
-      <div className="text-center py-12">
+      <div className="text-center py-12" role="status" aria-live="polite">
         <CheckCircle className="w-16 h-16 text-primary mx-auto mb-6" />
         <h3 className="text-2xl font-bold mb-3">Audit Request Received!</h3>
         <p className="text-muted-foreground max-w-md mx-auto">
@@ -97,6 +97,7 @@ export default function SeoAuditForm() {
           </label>
           <Input
             id="fullName"
+            autoComplete="name"
             placeholder="Jane Smith"
             aria-required="true"
             aria-invalid={!!errors.fullName}
@@ -115,6 +116,8 @@ export default function SeoAuditForm() {
           <Input
             id="email"
             type="email"
+            autoComplete="email"
+            spellCheck={false}
             placeholder="jane@yourcompany.co.za"
             aria-required="true"
             aria-invalid={!!errors.email}
@@ -133,6 +136,7 @@ export default function SeoAuditForm() {
           <Input
             id="phone"
             type="tel"
+            autoComplete="tel"
             placeholder="+27 64 680 6519"
             {...register('phone')}
           />
@@ -146,6 +150,8 @@ export default function SeoAuditForm() {
           <Input
             id="websiteUrl"
             type="url"
+            autoComplete="url"
+            spellCheck={false}
             placeholder="https://yourwebsite.co.za"
             aria-required="true"
             aria-invalid={!!errors.websiteUrl}
@@ -167,7 +173,7 @@ export default function SeoAuditForm() {
             }
           >
             <SelectTrigger id="businessGoal" aria-invalid={!!errors.businessGoal}>
-              <SelectValue placeholder="Select a goal..." />
+              <SelectValue placeholder="Select a goal…" />
             </SelectTrigger>
             <SelectContent>
               {GOALS.map((goal) => (
@@ -186,7 +192,7 @@ export default function SeoAuditForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending your request...
+              Sending your request…
             </>
           ) : (
             <>

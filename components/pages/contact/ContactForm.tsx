@@ -115,6 +115,7 @@ export default function ContactForm() {
             </label>
             <Input
               id="name"
+              autoComplete="name"
               placeholder="John Doe"
               {...register('name')}
               aria-required="true"
@@ -128,6 +129,8 @@ export default function ContactForm() {
             <Input
               id="email"
               type="email"
+              autoComplete="email"
+              spellCheck={false}
               placeholder="john@company.com"
               {...register('email')}
               aria-required="true"
@@ -142,6 +145,7 @@ export default function ContactForm() {
             </label>
             <Input
               id="company"
+              autoComplete="organization"
               placeholder="Your Company"
               {...register('company')}
             />
@@ -153,7 +157,7 @@ export default function ContactForm() {
             </label>
             <Select onValueChange={(value) => setValue('budget', value)}>
               <SelectTrigger id="budget">
-                <SelectValue placeholder="Select a budget range" />
+                <SelectValue placeholder="Select a budget range…" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="3.5k-10k">R3.5k – R10k</SelectItem>
@@ -204,7 +208,8 @@ export default function ContactForm() {
           <Textarea
             id="message"
             rows={6}
-            placeholder="Tell us what you want to build..."
+            autoComplete="off"
+            placeholder="Tell us what you want to build…"
             {...register('message')}
             aria-required="true"
           />
@@ -219,6 +224,8 @@ export default function ContactForm() {
           </label>
           <Input
             id="captchaAnswer"
+            autoComplete="off"
+            inputMode="numeric"
             placeholder="Enter the result"
             {...register('captchaAnswer')}
             className="max-w-50"
@@ -233,7 +240,7 @@ export default function ContactForm() {
           {isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Sending...
+              Sending…
             </>
           ) : (
             <>

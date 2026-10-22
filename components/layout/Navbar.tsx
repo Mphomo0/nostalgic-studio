@@ -125,7 +125,7 @@ const Navbar = memo(function Navbar() {
               link.dropdown ? (
                 <DropdownMenu key={link.path}>
                   <DropdownMenuTrigger
-                    className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none ${
+                    className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm ${
                       pathname.startsWith('/services')
                         ? 'text-primary'
                         : 'text-muted-foreground hover:text-foreground'
@@ -191,6 +191,7 @@ const Navbar = memo(function Navbar() {
             className="lg:hidden text-foreground p-2"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -199,7 +200,7 @@ const Navbar = memo(function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden bg-background border-b border-border overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`lg:hidden bg-background border-b border-border overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
           isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
@@ -224,7 +225,7 @@ const Navbar = memo(function Navbar() {
                   </button>
 
                   <div
-                    className={`flex flex-col gap-2 pl-4 border-l border-border overflow-hidden transition-all duration-300 ease-in-out ${
+                    className={`flex flex-col gap-2 pl-4 border-l border-border overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
                       isServicesOpen
                         ? 'max-h-125 opacity-100'
                         : 'max-h-0 opacity-0'

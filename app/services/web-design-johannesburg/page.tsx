@@ -370,8 +370,8 @@ export default function WebDesignJohannesburg() {
                     </span>
                   ) : null}
                   <h3 className="text-2xl font-bold mb-1">{pkg.name}</h3>
-                  <div className="text-3xl font-bold text-primary mb-4">
-                    {pkg.price}
+                  <div className="text-3xl font-bold text-primary mb-4 tabular-nums">
+                    <span className="whitespace-nowrap">{pkg.price}</span>
                     <span className="text-sm font-normal text-muted-foreground">
                       {' '}
                       once-off

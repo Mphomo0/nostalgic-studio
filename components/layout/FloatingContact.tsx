@@ -29,7 +29,7 @@ export default function FloatingContact() {
       <div className="flex items-center gap-3">
         {/* Label */}
         <span
-          className="text-xs font-medium text-foreground/80 bg-card border border-border px-3 py-1.5 rounded-full shadow-lg pointer-events-none select-none transition-all duration-300"
+          className="text-xs font-medium text-foreground/80 bg-card border border-border px-3 py-1.5 rounded-full shadow-lg pointer-events-none select-none transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300"
           style={{
             opacity: waHovered ? 1 : 0,
             transform: waHovered ? 'translateX(0) scale(1)' : 'translateX(8px) scale(0.95)',
@@ -47,7 +47,7 @@ export default function FloatingContact() {
           onClick={() => trackEvent('whatsapp_click', 'floating_whatsapp')}
           onMouseEnter={() => setWaHovered(true)}
           onMouseLeave={() => setWaHovered(false)}
-          className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
+          className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
           style={{
             background: '#25D366',
             boxShadow: waHovered
@@ -69,7 +69,7 @@ export default function FloatingContact() {
       <div className="flex items-center gap-3">
         {/* Label */}
         <span
-          className="text-xs font-medium text-foreground/80 bg-card border border-border px-3 py-1.5 rounded-full shadow-lg pointer-events-none select-none transition-all duration-300"
+          className="text-xs font-medium text-foreground/80 bg-card border border-border px-3 py-1.5 rounded-full shadow-lg pointer-events-none select-none transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300"
           style={{
             opacity: phHovered ? 1 : 0,
             transform: phHovered ? 'translateX(0) scale(1)' : 'translateX(8px) scale(0.95)',
@@ -85,7 +85,7 @@ export default function FloatingContact() {
           onClick={() => trackEvent('phone_click', 'floating_phone')}
           onMouseEnter={() => setPhHovered(true)}
           onMouseLeave={() => setPhHovered(false)}
-          className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+          className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
           style={{
             background: 'oklch(0.32 0 0)',
             border: '1px solid oklch(0.42 0 0)',

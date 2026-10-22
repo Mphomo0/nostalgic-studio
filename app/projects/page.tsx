@@ -101,7 +101,7 @@ export default function ProjectsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background">
       <>
         <script
           type="application/ld+json"
@@ -160,13 +160,13 @@ export default function ProjectsPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold transition-all hover:scale-105 shadow-[0_0_30px_rgba(var(--primary),0.3)]"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary text-primary-foreground font-bold transition-[color,background-color,border-color,box-shadow,transform,opacity] hover:scale-105 shadow-[0_0_30px_rgba(var(--primary),0.3)]"
                 >
                   Get a Free Quote
                 </a>
                 <a 
                   href="/services" 
-                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-secondary text-secondary-foreground font-bold transition-all hover:bg-secondary/80"
+                  className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-secondary text-secondary-foreground font-bold transition-[color,background-color,border-color,box-shadow,transform,opacity] hover:bg-secondary/80"
                 >
                   View Services
                 </a>
@@ -175,6 +175,6 @@ export default function ProjectsPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }

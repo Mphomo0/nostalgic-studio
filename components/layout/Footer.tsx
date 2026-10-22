@@ -94,7 +94,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300"
                 >
                   <social.icon size={18} />
                 </a>
@@ -185,7 +185,7 @@ const Footer = () => {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all duration-300"
+              className="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-[gap] duration-300"
             >
               Get a Free Quote <ArrowUpRight size={18} />
             </Link>

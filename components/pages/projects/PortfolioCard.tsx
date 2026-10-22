@@ -24,7 +24,7 @@ const PortfolioCard = memo(function PortfolioCard({ project, index = 0 }: Portfo
     >
       <Link
         href={`/projects/${project.slug}`}
-        className="group relative block h-full overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300
+        className="group relative block h-full overflow-hidden rounded-2xl border border-border bg-card transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300
           hover:border-primary/50
           hover:shadow-[0_0_70px_hsl(122_85%_50%/0.5)]"
       >
@@ -45,7 +45,7 @@ const PortfolioCard = memo(function PortfolioCard({ project, index = 0 }: Portfo
           <div className="absolute inset-0 bg-linear-150-to-t from-background/95 via-background/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
           {/* Floating button (top-right) */}
-          <div className="absolute right-4 top-4 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          <div className="absolute right-4 top-4 opacity-0 translate-y-1.5 group-hover:opacity-100 group-hover:translate-y-0 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300">
             <div className="flex h-11 w-11 items-center justify-center rounded-full transition-transform group-hover:scale-105 bg-primary text-black shadow-[0_0_25px_hsl(122_85%_50%/0.75)]">
               <ArrowUpRight className="h-5 w-5" />
             </div>
@@ -53,7 +53,7 @@ const PortfolioCard = memo(function PortfolioCard({ project, index = 0 }: Portfo
 
           {/* Hover content (Visible on hover for desktop, always visible on mobile/touch) */}
           <div
-            className="absolute inset-x-0 bottom-0 p-6 transition-all duration-300
+            className="absolute inset-x-0 bottom-0 p-6 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300
             opacity-100 translate-y-0
             lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0
             bg-linear-to-t from-background/95 via-background/60 to-transparent lg:bg-none

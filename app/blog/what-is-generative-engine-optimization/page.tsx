@@ -40,7 +40,7 @@ const faqs = [
 
 export default function GeoGuidePage() {
   return (
-    <>
+    <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
           articleSchema({ url: '/blog/what-is-generative-engine-optimization', headline: 'What is Generative Engine Optimization (GEO)?', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: MODIFIED_DATE, articleSection: 'SEO' }),
@@ -126,6 +126,6 @@ export default function GeoGuidePage() {
           </Button>
         </div>
       </article>
-    </>
+    </main>
   )
 }

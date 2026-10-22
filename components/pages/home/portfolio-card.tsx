@@ -55,7 +55,7 @@ export function PortfolioCard({ project, index }: PortfolioCardProps) {
               </h3>
             </div>
 
-            <div className="flex items-center justify-center w-12 h-12 scale-75 rounded-full bg-primary opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
+            <div className="flex items-center justify-center w-12 h-12 scale-75 rounded-full bg-primary opacity-0 transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300 group-hover:scale-100 group-hover:opacity-100">
               <ArrowUpRight className="w-5 h-5 text-primary-foreground" />
             </div>
           </div>

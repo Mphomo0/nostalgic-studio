@@ -288,7 +288,7 @@ export default function ServicesPage() {
                 <Link
                   key={solution.href}
                   href={solution.href}
-                  className="group flex flex-col p-8 rounded-3xl border border-border bg-card hover:border-primary/50 transition-all hover:shadow-xl hover:-translate-y-1"
+                  className="group flex flex-col p-8 rounded-3xl border border-border bg-card hover:border-primary/50 transition-[color,background-color,border-color,box-shadow,transform,opacity] hover:shadow-xl hover:-translate-y-1"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                     <solution.icon className="w-6 h-6" />

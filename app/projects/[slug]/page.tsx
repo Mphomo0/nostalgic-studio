@@ -97,10 +97,10 @@ export default async function ProjectDetailPage({
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background">
         <ProjectHero slug={slug} />
         <ProjectCTA />
-      </div>
+      </main>
     )
   }
 
@@ -138,7 +138,7 @@ export default async function ProjectDetailPage({
   ])
 
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background">
       <>
         <script
           type="application/ld+json"
@@ -492,6 +492,6 @@ export default async function ProjectDetailPage({
       </section>
 
       <ProjectCTA />
-    </div>
+    </main>
   )
 }

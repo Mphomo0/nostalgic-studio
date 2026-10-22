@@ -39,7 +39,7 @@ const PortfolioGrid = memo(function PortfolioGrid() {
               key={category}
               onClick={() => setActiveCategory(category)}
               aria-pressed={activeCategory === category}
-              className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
+              className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-medium transition-[color,background-color,border-color,box-shadow,transform,opacity] ${
                 activeCategory === category
                   ? 'bg-primary text-primary-foreground shadow-[0_0_20px_hsl(122_85%_50%/0.3)]'
                   : 'bg-secondary hover:bg-secondary/80'

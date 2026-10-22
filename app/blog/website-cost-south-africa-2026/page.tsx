@@ -222,7 +222,7 @@ export default function WebsiteCostSAArticle() {
                   <h3 className="text-lg font-bold text-foreground">
                     {tier.name}
                   </h3>
-                  <span className="text-primary font-bold text-lg">
+                  <span className="text-primary font-bold text-lg whitespace-nowrap tabular-nums">
                     {tier.price}
                   </span>
                 </div>

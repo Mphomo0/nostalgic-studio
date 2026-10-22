@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, Calendar, User, Tag, Briefcase } from 'lucide-react'
 
@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button'
 import { projects } from '@/lib/portfolio-data'
 
 export default function ProjectHero({ slug }: { slug: string }) {
-  const router = useRouter()
   const project = projects.find((p) => p.slug === slug)
 
   useEffect(() => {
@@ -24,12 +23,14 @@ export default function ProjectHero({ slug }: { slug: string }) {
         {/* Back */}
         <div className="animate-fade-up mb-6 mt-16">
           <Button
+            asChild
             variant="ghost"
-            onClick={() => router.push('/projects')}
             className="px-4 text-muted-foreground hover:text-primary"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Projects
+            <Link href="/projects">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to Projects
+            </Link>
           </Button>
         </div>
 
@@ -51,7 +52,7 @@ export default function ProjectHero({ slug }: { slug: string }) {
         {/* Main content */}
         <div className="grid gap-8 lg:grid-cols-[1fr_320px] lg:gap-12 mb-20">
           {/* Media */}
-          <div className="animate-fade-up animate-delay-200 group relative aspect-16/10 sm:aspect-video w-full overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl transition-all hover:border-primary/50">
+          <div className="animate-fade-up animate-delay-200 group relative aspect-16/10 sm:aspect-video w-full overflow-hidden rounded-2xl border bg-muted/30 shadow-2xl transition-[color,background-color,border-color,box-shadow,transform,opacity] hover:border-primary/50">
             <Image
               src={project.image}
               alt={project.title}

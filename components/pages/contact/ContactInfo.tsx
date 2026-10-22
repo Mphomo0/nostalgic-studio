@@ -78,7 +78,7 @@ export default function ContactInfo() {
             transition={{ delay: index * 0.1 }}
             href={info.link}
             aria-label={info.title}
-            className="block p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all group"
+            className="block p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-[color,background-color,border-color,box-shadow,transform,opacity] group"
           >
             {content}
           </motion.a>
@@ -145,7 +145,7 @@ export default function ContactInfo() {
                 target="_blank"
                 rel="noopener noreferrer nofollow"
                 aria-label={social.label}
-                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-all"
+                className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-white transition-[color,background-color,border-color,box-shadow,transform,opacity]"
               >
                 <social.icon size={18} aria-hidden="true" />
               </a>

@@ -38,7 +38,7 @@ const faqs = [
 
 export default function WebDesignCostGuidePage() {
   return (
-    <>
+    <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify([
           articleSchema({ url: '/blog/web-design-cost-south-africa-2026-guide', headline: 'Web Design Cost South Africa 2026', description: metadata.description ?? '', datePublished: PUB_DATE, dateModified: '2026-07-03', articleSection: 'Pricing' }),
@@ -124,6 +124,6 @@ export default function WebDesignCostGuidePage() {
           </Button>
         </div>
       </article>
-    </>
+    </main>
   )
 }
