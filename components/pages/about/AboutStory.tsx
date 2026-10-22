@@ -1,5 +1,3 @@
-'use client'
-
 import MotionWrapper from '@/components/layout/MotionWrapper'
 
 export default function AboutStory() {

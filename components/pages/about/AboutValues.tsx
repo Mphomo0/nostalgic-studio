@@ -1,5 +1,3 @@
-'use client'
-
 import { Target, Heart, Zap, Users } from 'lucide-react'
 import MotionWrapper from '@/components/layout/MotionWrapper'
 

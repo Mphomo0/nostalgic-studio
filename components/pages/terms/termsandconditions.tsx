@@ -1,5 +1,3 @@
-'use client'
-
 export default function TermsAndConditions() {
   return (
     <section className="container px-6 py-12 bg-card">

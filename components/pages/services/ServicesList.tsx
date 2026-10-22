@@ -1,5 +1,3 @@
-'use client'
-
 import { memo } from 'react'
 import ServiceSection from './ServiceSection'
 import { Service } from './types'
