@@ -4,85 +4,10 @@ import { useState, memo } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Globe,
-  Search,
-  Zap,
-  ShoppingBag,
-  Palette,
-  Share2,
-  Megaphone,
-  Server,
-  Layout,
-  Settings,
-  Building2,
-  RefreshCw,
-} from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu'
-
-const serviceLinks = [
-  {
-    title: 'Web Design Johannesburg',
-    href: '/services/web-design-johannesburg',
-    icon: Globe,
-  },
-  {
-    title: 'SEO Services Johannesburg',
-    href: '/services/seo-services-johannesburg',
-    icon: Search,
-  },
-  {
-    title: 'Next.js Website Design',
-    href: '/services/nextjs-website-design',
-    icon: Zap,
-  },
-  {
-    title: 'Ecommerce Development',
-    href: '/services/ecommerce-website-development',
-    icon: ShoppingBag,
-  },
-  {
-    title: 'Branding Design',
-    href: '/services/branding-design',
-    icon: Palette,
-  },
-  {
-    title: 'Social Media Marketing',
-    href: '/services/social-media-marketing',
-    icon: Share2,
-  },
-  {
-    title: 'Social Media Ads',
-    href: '/services/social-media-ads',
-    icon: Megaphone,
-  },
-  { title: 'Web Hosting', href: '/services/web-hosting', icon: Server },
-  { title: 'UX/UI Design', href: '/services/ux-ui-design', icon: Layout },
-  {
-    title: 'SEO for Construction',
-    href: '/services/seo-for-construction-companies',
-    icon: Building2,
-  },
-  {
-    title: 'Web Maintenance',
-    href: '/services/web-maintenance',
-    icon: Settings,
-  },
-  {
-    title: 'Website Refresh & SEO Upgrade',
-    href: '/services/website-refresh-seo-upgrade',
-    icon: RefreshCw,
-  },
-]
+import ServicesMenu from './ServicesMenu'
+import { serviceLinks } from './nav-services'
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -123,46 +48,15 @@ const Navbar = memo(function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) =>
               link.dropdown ? (
-                <DropdownMenu key={link.path}>
-                  <DropdownMenuTrigger
-                    className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm ${
-                      pathname.startsWith('/services')
-                        ? 'text-primary'
-                        : 'text-muted-foreground hover:text-foreground'
-                    }`}
-                  >
-                    {link.name} <ChevronDown size={14} />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent
-                    align="start"
-                    className="w-64 p-2 bg-background/95 backdrop-blur-xl border-border/50"
-                  >
-                    <DropdownMenuItem asChild className="focus:bg-primary/10">
-                      <Link
-                        href="/services"
-                        className="w-full font-bold text-primary"
-                      >
-                        All Services
-                      </Link>
-                    </DropdownMenuItem>
-                    <div className="h-px bg-border/50 my-1" />
-                    {serviceLinks.map((service) => (
-                      <DropdownMenuItem
-                        key={service.href}
-                        asChild
-                        className="focus:bg-primary/10 cursor-pointer"
-                      >
-                        <Link
-                          href={service.href}
-                          className="flex items-center gap-3 w-full py-2"
-                        >
-                          <service.icon size={16} className="text-primary" />
-                          <span className="text-xs">{service.title}</span>
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                <ServicesMenu
+                  key={link.path}
+                  label={link.name}
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm ${
+                    pathname.startsWith('/services')
+                      ? 'text-primary'
+                      : 'text-muted-foreground hover:text-foreground'
+                  }`}
+                />
               ) : (
                 <Link
                   key={link.path}
