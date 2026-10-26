@@ -1,8 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { suburbSlugs } from '@/lib/locations-data'
 
-export const revalidate = 86400
-
 const BASE_URL = 'https://www.nostalgic-studio.co.za'
 // Per-page lastmod, taken from the last git commit that changed each page's
 // content (dependency bumps and metadata-only sweeps excluded). Update a
