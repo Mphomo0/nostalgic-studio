@@ -102,6 +102,7 @@ export default function ContactForm() {
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
         onSubmit={handleSubmit(onSubmit)}
+        noValidate
         className="space-y-6 p-8 md:p-10 rounded-3xl bg-card border border-border"
         aria-label="Contact Nostalgic Studio form"
       >
@@ -116,7 +117,13 @@ export default function ContactForm() {
               placeholder="John Doe"
               {...register('name')}
               aria-required="true"
+              aria-invalid={!!errors.name}
             />
+            {errors.name && (
+              <p className="mt-1 text-xs text-destructive" role="alert">
+                {errors.name.message}
+              </p>
+            )}
           </div>
 
           <div>
@@ -131,7 +138,13 @@ export default function ContactForm() {
               placeholder="john@company.com"
               {...register('email')}
               aria-required="true"
+              aria-invalid={!!errors.email}
             />
+            {errors.email && (
+              <p className="mt-1 text-xs text-destructive" role="alert">
+                {errors.email.message}
+              </p>
+            )}
           </div>
         </div>
 
@@ -170,8 +183,12 @@ export default function ContactForm() {
           <label htmlFor="service" className="block text-sm font-medium mb-2">
             What Do You Need Help With? *
           </label>
-          <Select onValueChange={(value) => setValue('service', value)}>
-            <SelectTrigger id="service">
+          <Select
+            onValueChange={(value) =>
+              setValue('service', value, { shouldValidate: true })
+            }
+          >
+            <SelectTrigger id="service" aria-invalid={!!errors.service}>
               <SelectValue placeholder="Select a service" />
             </SelectTrigger>
             <SelectContent>
@@ -196,6 +213,11 @@ export default function ContactForm() {
               </SelectItem>
             </SelectContent>
           </Select>
+          {errors.service && (
+            <p className="mt-1 text-xs text-destructive" role="alert">
+              {errors.service.message}
+            </p>
+          )}
         </div>
 
         <div>
@@ -209,7 +231,13 @@ export default function ContactForm() {
             placeholder="Tell us what you want to build…"
             {...register('message')}
             aria-required="true"
+            aria-invalid={!!errors.message}
           />
+          {errors.message && (
+            <p className="mt-1 text-xs text-destructive" role="alert">
+              {errors.message.message}
+            </p>
+          )}
         </div>
 
         <div>
