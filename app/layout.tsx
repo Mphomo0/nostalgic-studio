@@ -6,6 +6,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import FloatingContact from '@/components/layout/FloatingContact'
 import PixelPageView from '@/components/analytics/PixelPageView'
+import ContactLinkTracker from '@/components/analytics/ContactLinkTracker'
 import MotionProvider from '@/components/providers/MotionProvider'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', adjustFontFallback: true, display: 'swap' })
@@ -246,6 +247,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <PixelPageView />
+        <ContactLinkTracker />
         <MotionProvider>
           <Navbar />
           <div id="main-content" tabIndex={-1} className="outline-none">

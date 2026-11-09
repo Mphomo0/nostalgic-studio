@@ -2,19 +2,9 @@
 
 import { useState } from 'react'
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
-
 const PHONE = '+27824483273'
 const WHATSAPP_URL = `https://wa.me/27646806519?text=Hi%20Nostalgic%20Studio%2C%20I%27d%20like%20to%20discuss%20a%20project.`
 const TEL_URL = `tel:${PHONE}`
-
-function trackEvent(action: string, label: string) {
-  window.gtag?.('event', action, { event_category: 'contact', event_label: label })
-}
 
 export default function FloatingContact() {
   const [waHovered, setWaHovered] = useState(false)
@@ -44,7 +34,7 @@ export default function FloatingContact() {
           target="_blank"
           rel="noopener noreferrer nofollow"
           aria-label="Chat with us on WhatsApp"
-          onClick={() => trackEvent('whatsapp_click', 'floating_whatsapp')}
+          data-track-location="floating_whatsapp"
           onMouseEnter={() => setWaHovered(true)}
           onMouseLeave={() => setWaHovered(false)}
           className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]"
@@ -82,7 +72,7 @@ export default function FloatingContact() {
         <a
           href={TEL_URL}
           aria-label="Call Nostalgic Studio"
-          onClick={() => trackEvent('phone_click', 'floating_phone')}
+          data-track-location="floating_phone"
           onMouseEnter={() => setPhHovered(true)}
           onMouseLeave={() => setPhHovered(false)}
           className="relative flex items-center justify-center w-14 h-14 rounded-full shadow-xl transition-[color,background-color,border-color,box-shadow,transform,opacity] duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
