@@ -4,7 +4,11 @@ import nodemailer from 'nodemailer'
 import { headers } from 'next/headers'
 import { ContactFormValues, SeoAuditFormValues } from '@/lib/validations'
 import { checkRateLimit } from '@/lib/rate-limit'
-import { isGibberish, validateMathCaptcha } from '@/lib/bot-detection'
+import { isGibberish } from '@/lib/bot-detection'
+import { verifyTurnstile } from '@/lib/turnstile'
+
+const SECURITY_CHECK_ERROR =
+  'Security check failed. Please refresh the check and try again.'
 
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST,
@@ -30,9 +34,9 @@ export async function sendContactEmail(data: ContactFormValues) {
     }
   }
 
-  // 2. Math Captcha Verification
-  if (!validateMathCaptcha(data.num1, data.num2, data.captchaAnswer)) {
-    return { success: false, error: 'Incorrect security answer. Please try again.' }
+  // 2. Cloudflare Turnstile Verification
+  if (!(await verifyTurnstile(data.turnstileToken, ip.split(',')[0].trim()))) {
+    return { success: false, error: SECURITY_CHECK_ERROR }
   }
 
   // 3. Gibberish Detection
@@ -80,6 +84,10 @@ export async function sendSeoAuditEmail(data: SeoAuditFormValues) {
       success: false,
       error: `Too many requests. Please try again in ${minutesLeft} minutes.`,
     }
+  }
+
+  if (!(await verifyTurnstile(data.turnstileToken, ip.split(',')[0].trim()))) {
+    return { success: false, error: SECURITY_CHECK_ERROR }
   }
 
   if (isGibberish(data.fullName)) {

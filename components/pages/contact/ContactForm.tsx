@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { m } from 'motion/react'
-import { useForm, useWatch } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Send, CheckCircle, Loader2 } from 'lucide-react'
 import { contactSchema, type ContactFormValues } from '@/lib/validations'
@@ -20,6 +20,7 @@ import { toast } from 'react-toastify'
 import dynamic from 'next/dynamic'
 import { sendContactEmail } from '@/app/actions/sendEmail'
 import { trackLead } from '@/lib/tracking'
+import TurnstileWidget from '@/components/ui/TurnstileWidget'
 
 const ToastContainer = dynamic(
   () => import('react-toastify').then((m) => ({ default: m.ToastContainer })),
@@ -28,13 +29,14 @@ const ToastContainer = dynamic(
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  // Bumped after a rejected submit so the single-use token is replaced.
+  const [turnstileKey, setTurnstileKey] = useState(0)
 
   const {
     register,
     handleSubmit,
     setValue,
-    control,
-    formState: { isSubmitting },
+    formState: { errors, isSubmitting },
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -44,21 +46,14 @@ export default function ContactForm() {
       service: '',
       budget: '',
       message: '',
-      num1: 0,
-      num2: 0,
-      captchaAnswer: '',
+      turnstileToken: '',
     },
   })
 
-  const num1 = useWatch({ control, name: 'num1' })
-  const num2 = useWatch({ control, name: 'num2' })
-
-  useEffect(() => {
-    const n1 = Math.floor(Math.random() * 10) + 1
-    const n2 = Math.floor(Math.random() * 10) + 1
-    setValue('num1', n1)
-    setValue('num2', n2)
-  }, [setValue])
+  function resetTurnstile() {
+    setValue('turnstileToken', '')
+    setTurnstileKey((k) => k + 1)
+  }
 
   async function onSubmit(data: ContactFormValues) {
     try {
@@ -71,11 +66,13 @@ export default function ContactForm() {
         toast.success("Got it! We'll send your fixed quote within 24 hours.")
       } else {
         toast.error(response.error || 'Unable to send message.')
+        resetTurnstile()
       }
     } catch {
       toast.error(
         'Unable to send message. Please try again or email info@nostalgic-studio.co.za',
       )
+      resetTurnstile()
     }
   }
 
@@ -215,25 +212,18 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="bg-muted/30 p-4 rounded-xl border border-border">
-          <label
-            htmlFor="captchaAnswer"
-            className="block text-sm font-medium mb-2"
-          >
-            Security Check: What is {num1} + {num2}? *
-          </label>
-          <Input
-            id="captchaAnswer"
-            autoComplete="off"
-            inputMode="numeric"
-            placeholder="Enter the result"
-            {...register('captchaAnswer')}
-            className="max-w-50"
-            aria-required="true"
+        <div>
+          <TurnstileWidget
+            key={turnstileKey}
+            onToken={(token) =>
+              setValue('turnstileToken', token, { shouldValidate: !!token })
+            }
           />
-          <p className="mt-1 text-xs text-muted-foreground">
-            Enter the sum of the two numbers to verify you&apos;re human.
-          </p>
+          {errors.turnstileToken && (
+            <p className="mt-1 text-xs text-destructive" role="alert">
+              {errors.turnstileToken.message}
+            </p>
+          )}
         </div>
 
         <Button type="submit" className="w-full h-12" disabled={isSubmitting}>

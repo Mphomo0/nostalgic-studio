@@ -7,6 +7,7 @@ import { CheckCircle, Loader2, Send } from 'lucide-react'
 import { seoAuditSchema, type SeoAuditFormValues } from '@/lib/validations'
 import { sendSeoAuditEmail } from '@/app/actions/sendEmail'
 import { trackLead } from '@/lib/tracking'
+import TurnstileWidget from '@/components/ui/TurnstileWidget'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
@@ -35,6 +36,8 @@ const GOALS = [
 
 export default function SeoAuditForm() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  // Bumped after a rejected submit so the single-use token is replaced.
+  const [turnstileKey, setTurnstileKey] = useState(0)
 
   const {
     register,
@@ -49,8 +52,14 @@ export default function SeoAuditForm() {
       phone: '',
       websiteUrl: '',
       businessGoal: '',
+      turnstileToken: '',
     },
   })
+
+  function resetTurnstile() {
+    setValue('turnstileToken', '')
+    setTurnstileKey((k) => k + 1)
+  }
 
   async function onSubmit(data: SeoAuditFormValues) {
     try {
@@ -60,11 +69,13 @@ export default function SeoAuditForm() {
         setIsSubmitted(true)
       } else {
         toast.error(response.error || 'Unable to send request. Please try again.')
+        resetTurnstile()
       }
     } catch {
       toast.error(
         'Unable to send request. Please try again or email info@nostalgic-studio.co.za',
       )
+      resetTurnstile()
     }
   }
 
@@ -185,6 +196,20 @@ export default function SeoAuditForm() {
           </Select>
           {errors.businessGoal && (
             <p className="mt-1 text-xs text-destructive">{errors.businessGoal.message}</p>
+          )}
+        </div>
+
+        <div>
+          <TurnstileWidget
+            key={turnstileKey}
+            onToken={(token) =>
+              setValue('turnstileToken', token, { shouldValidate: !!token })
+            }
+          />
+          {errors.turnstileToken && (
+            <p className="mt-1 text-xs text-destructive" role="alert">
+              {errors.turnstileToken.message}
+            </p>
           )}
         </div>
 

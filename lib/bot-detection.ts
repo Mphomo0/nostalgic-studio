@@ -40,12 +40,3 @@ export function isGibberish(text: string): boolean {
 
   return false;
 }
-
-/**
- * Validates a math captcha answer.
- */
-export function validateMathCaptcha(num1: number, num2: number, answer: string): boolean {
-  const expected = num1 + num2;
-  const actual = parseInt(answer, 10);
-  return !isNaN(actual) && actual === expected;
-}
